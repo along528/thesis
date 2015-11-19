@@ -1,0 +1,257 @@
+\section{Event selection}
+\label{sec:eventSelection}
+
+\subsection{Event Pre-selection}
+\label{sec:preselection}
+
+The events undergo a first set of event pre-selection cuts to be considered in the analysis. In the rest of this document this minimal selection will be referred to as ``event pre-selection''. Events must pass each of the following cuts:
+
+\begin{itemize}
+	\item Good run list: As stated in Section~\ref{sec:subsection_data}, the data must pass a selection ensuring that the detector and LHC conditions were good enough to introduce no selection bias.
+	\item Event cleaning: The events where the LAr or Tile calorimeters have had functional problems during the data taking are explicitly vetoed. This is done using the following logic:
+	\begin{itemize}
+		\item Noise bursts in LAr calorimeters: reject if \url{larError==2}
+		\item Corrupted events in the tile calorimeter: reject if \url{tileError==2}
+		\item Events where tile drawer were off: reject if \url{TTileTripReader::checkEvent()==1}
+		% \item Events where tile drawer were off: reject if \url{TTileTripReader::checkEvent(unsigned\ int\ run,\ unsigned\ int\ lbn, unsigned int event)}		
+	\end{itemize}
+		
+	\item Primary vertex: The event must contain a primary vertex with 3 tracks.
+	\item \met{} cleaning: If an event contains jets close to a badly behaving calorimeter region, it is vetoed, in order to avoid any bias on the \met{} measurement.
+	\item Trigger: The event must pass one of the lowest un-prescaled single lepton trigger items: EF\_e24vhi\_medium1, EF\_e60\_medium1 or EF\_mu24i\_tight, or EF\_mu36\_tight. Tests were done to add dilepton trigger items with lower \pt\ threshold, but they turned out to increase the signal selection effiency by a minimal amount ($\approx{}5\%$), while this considerbly complicating the analysis. They were therefore not considered further.
+	\item 3 leptons selection: The event selected must contain exactly three leptons with $\pt>20~\GeV$.
+	\item Trigger matching:	At least one of the leptons must have fired the trigger, and it is required that it's transverse momentum is greater than the threshold fired adding $1~\GeV$ if it does. As stated earlier, the events are corrected for trigger efficiencies measured in data.
+\end{itemize}
+
+	
+
+% An event is considered in the analysis if it follows the usual data
+% quality requirements used in the ATLAS analysis.  The event must
+% belong to a run and a luminosity block, where the detector and LHC
+% conditions were found to be good. The events where the LAr or Tile
+% calorimeters are misbehaving are explicitly vetoed.  If an event
+% contains jets close to a badly behaving calorimeter region, it is
+% vetoed, in order to avoid any bias on the \met measurement.
+%
+% The event selected must contain exactly three leptons with a
+% $\pt>15~\GeV$. They must pass one of the lowest prescaled single
+% lepton trigger items: EF\_e24vhi\_medium1, EF\_e60\_medium1 or
+% EF\_mu24i\_tight, or EF\_mu36\_tight. At least one of the leptons must
+% have fired the trigger, and it is required that it has $\pt>25~\GeV$
+% if it does.
+
+% The analysis is further categorized based on the number of Same Flavor
+% Opposite Signal (SFOS) pairs present in the event.
+
+% \subsection{Optimization}
+%
+% \clearpage
+\subsection{Signal regions}
+\label{sec:signal_regions}
+%
+\subsubsection{Same-Flavor Opposite-Sign Lepton pairs}
+\label{sec:sfos}
+The signal regions used in this analysis are separated based on the number of 
+Same-Flavor Opposite-Sign (SFOS) lepton pairs selected in the event.  That is to say,
+the number of lepton pair combinations in the event 
+which could feasibly come from the leptonic decay of a $Z$-boson.
+This results in three separate signal regions listed below with the lepton charge combinations
+which fall in each category:
+\begin{itemize}
+\item \textbf{0 SFOS}: $e^{\pm}e^{\pm}\mu^{\mp}$, $\mu^{\pm}\mu^{\pm}e^{\mp}$ ($e^{\pm}e^{\pm}\mu^{\pm}$, $\mu^{\pm}\mu^{\pm}e^{\pm}$, $e^{\pm}e^{\pm}e^{\pm}$, $\mu^{\pm}\mu^{\pm}\mu^{\pm}$)
+\item \textbf{1 SFOS}: $e^{\pm}e^{\mp}\mu^{\pm}$, $e^{\pm}e^{\mp}\mu^{\mp}$, $\mu^{\pm}\mu^{\mp}e^{\pm}$, $\mu^{\pm}\mu^{\mp}e^{\mp}$
+\item \textbf{2 SFOS}: $e^{\pm}e^{\pm}e^{\mp}$, $\mu^{\pm}\mu^{\pm}\mu^{\mp}$
+\end{itemize}
+Note that in the 2 SFOS region, one lepton is allowed to belong to both pair combinations.
+Those combinations listed in parentheses are not allowed for the signal based on charge conservation (neglecting charge mis-identification).  
+The amount of the $W^{\pm}W^{\mp}W^{\pm}$ signal
+which falls into each category is purely combinatoric.  
+From the above list one can thus see that there are twice as many ways for the signal combinations (again neglecting those in parentheses)
+to fall in the 1 SFOS regions as there to fall in either the 0 SFOS or 2 SFOS regions. 
+Absent possible difference in signal efficiencies based on the leptons in each 
+signal region, one should expect branching fractions of 25\%, 50\% and 25\% for the 0, 1, and 2 SFOS signal regions, respectively.
+
+The advantage of splitting the signal region based on this
+classification comes when looking at the background, specifically the
+electroweak $WZ$ and $ZZ$ backgrounds where SFOS lepton pairs may be
+produced from the decay of the $Z$ boson(s). Consider only the case
+where the $WZ$ and $ZZ$ decay to either $e$ or $\mu$.  The $WZ$ production
+process is thus characterised by 3 leptons with at least 1 SFOS lepton pair
+which comes from the $Z$. If all three leptons from the $WZ$ decay have been
+reconstructed, then the there is a 50~\% chance the third lepton 
+will also be able to form a SFOS pair with one of the leptons from the $Z$ decay.
+Thus, the WZ background will split evenly betweeen the 1 and 2 SFOS classification.
+Something similar occurs for the ZZ background except that the fourth lepton 
+in the decay must be lost (usually due to possesing a low $\pt$).
+The large cross-section for theses processes means that
+they becomes the dominant backgrounds in the 1 and 2 SFOS regions.  
+
+The 0 SFOS signal region is mostly spared from contamination  by 
+these large processes but still
+includes both the $WZ$ and $ZZ$ processes as background due to the
+non-negligible (albeit small) effect of mis-measurement of the lepton
+charge, see section~\ref{sec:chargeMisID}.  The 0 SFOS signal region
+is thus unique in having a small background which is almost entirely
+reducible and dominated instead by events where a jet is mismeasured
+as or overlaps with a lepton, called the fake lepton background, along
+with the aforementioned subdominant effect of lepton charge 
+mis-identification described in Section~\ref{sec:chargeMisID}.  
+From this, one can clearly see that it is
+advantageous to split these signal regions so that the dominant
+backgrounds in each region may be targeted individually.  Furthermore,
+note that while the 1 SFOS region contains more of the signal than the
+0 and 2 SFOS regions, it is the 0 SFOS region which is most likely to
+have the best sensitivity due to the smaller background contribution.
+
+\subsubsection{Signal Region Selections}
+
+The final signal selection cuts are determined using an optimization
+procedure which considers both the signal yield as well as the uncertainty
+on the measurement (including statistical and systematic uncertrainties)
+of the signal strength as taken from the profile likelihood. 
+
+Many different quantities were considered in the optimization.  All three signal 
+regions start from event pre-selection (described above in Section~\ref{sec:preselection}) where 
+we have 3 leptons with a $\pt$ of at least 20~GeV 
+and where at least one of the leptons is matched to one of the single lepton triggers.
+It was considered whether or not to lower the $\pt$ threshold, but this was found to increase
+the fake lepton background contribution without gaining much signal. Tighter cuts on the $\pt$
+were also considered but this was shown to not be a good discriminant. 
+
+In all regions, 
+a veto is applied on events with jets tagged to come from b or b-hadron decays. The highest
+efficiency opearting point that is supported by the b-tagging group is used,
+which has a b-tagging efficiency of 85~\%.  This also increases the mis-identification efficiency, 
+but it remains managable at about 1~\%. Even with some jet mis-identification, the signal has
+a very high efficiency of passing this cut of $> 99$~\% while offering some ofthe strongest 
+reduction in the fake lepton background. On top of the b-jet veto, there is an additional
+cut on the jet multiplicity, regardless of the whether or not the jet is tagged. By only keeping
+events with no more than one jet, the signal efficiency is almost $90$~\% while reducing
+the background by about 50~\%.  Applying a veto on all jets does a very good job at removing the fake lepton
+background, but the signal efficiency is prohibitively small, at about 60~\%. 
+
+A Z-veto is applied in each signal region, 
+each which have slightly different specifications and mass windows
+as chosen by the optimization. In the 1 and 2 SFOS regions, the Z-veto is performed
+by looking at the invariant mass of SFOS pairs. In the 2 SFOS region, both sets of pairs
+are considered and the event is vetoed if either fall within the mass window.  In the 
+1 SFOS region, there is a larger contribution from $Z\gamma$ processes than in the 2 SFOS
+region.  This process mostly shows up in the low shoulder of the Z peak. The optimization
+prefers removing this $Z\gamma$ contribution by setting an asymmetric Z-window in the 1 SFOS
+region, with the boundaries being 35~GeV below the Z-pole and 20~GeV above. In the 2 SFOS region,
+the $Z\gamma$ contribution is not as prominent and the optimization happens to prefer a symmetric
+window of $\pm20$~GeV around the Z-pole.  In the 0 SFOS region there are no SFOS pairs by definition,
+but there is still a peak in the same-sign electron-electron mass distribution due to charge mis-identification.
+The optimization prefers a slightly narrower symmetric window of $\pm15$~GeV around the Z-pole. In all cases
+the mass used for the Z-pole is $m_{Z}=91.1876$~GeV as taken from the PDG~\cite{PDG:2014}. 
+
+The signal is characterized by having a large missing $E_{T}$ component.  Therefore, we also 
+optimized our the threshold for selecting this quantity separately for each signal region. 
+In the 1 and 2 SFOS regions, a missing $E_{T}$ threshold is preferred around $40-60$~GeV.
+The missing $E_{T}$ cut also does a good job of cutting out some of the $Z\gamma$ background in the 1 
+SFOS region.  As a result, the Z-veto and missing $E_{T}$ cuts are correlated.  The optimization
+procedure takes into account this correlation by cutting considering varitions of the Z-veto window
+and missing $E_{T}$ threshold together.  As a result, the optimization prefers to keep the missing $E_{T}$ 
+cut a little loose in the 1 SFOS region, with a threshold of $E_{T}^{Miss} > 45$~GeV,
+while applying the asymmetric Z-veto already discussed as the best 
+way to get rid of the $Z\gamma$ contribution.  In the 2 SFOS region the looser Z-veto allows for a tighter
+missing $E_{T}$ cut with a threshold of $E_{T}^{Miss} > 55$~GeV. The 0 SFOS region is peculiar in that it is 
+dominated by the fake lepton background.  This background turns out to have a similar missing $E_{T}$ distribution
+as the signal. As a result, cutting on the missing $E_{T}$ in this region offers little to no discriminating power
+between the signal and background so we have chosen not to apply any cut here in order to maximize the signal yield.
+
+
+The signal is characterized by having three charged leptons and three neutrinos.  The magnitude and direction
+of the missing $E_{T}$ may be intepreted as coming from the vector sum of the neutrinos.  By agruments of 
+symmetry, one could then compare the azimuthal direction of the missing $E_{T}$ to the azimuthal direction of the vector
+sum of the three charged leptons. When doing so, one finds that in the transverse plane, 
+the direction of the three charged leptons
+tends to be back-to-back with the direction of the three neutrinos (missing $E_{T}$). To some extent, the
+backgrounds also show this behavior, but it is less pronounced than it is for the signal.  As a result, 
+there is some discriminating power when cutting on the difference in the two angles: 
+$|\Delta\phi(3l,E_{T}^{Miss})| = |\phi(3l)-\phi(E_{T}^{Miss})|$. The behavior of this quantity for signal and
+background is similar in all three signal regions so based on the optimization it was chosen to apply the cut
+$|\Delta\phi(3l,E_{T}^{Miss})| > 2.5$ everywhere.  We also considered taking the difference in angle between
+the missing $E_{T}$ and individual leptons (e.g. the highest $\pt$ lepton) but this was shown to be not 
+nearly as effective.  
+
+Finally, the distribution of same-flavor lepton pairs (regardless of sign) was considered in the 0 SFOS 
+region to remove any low-mass contamination from processes like from QCD.  This was shown to offer some
+modest discriminating power and a threshold of $m_{SF} > 20$~GeV was chosen only for the 0 SFOS region.
+
+
+The optimized selection for each signal region is summarized in Table~\ref{tab:signal_selection}.
+More details about the optimization procedure and the cuts used 
+can be found in appendix~\ref{sec:optimization}.
+
+\begin{table}[ht!]
+\centering
+\begin{small}
+\input{tables/optimized_signal_selection.tex}
+\end{small}
+\caption{Optimized signal selection split by number of Same-Flavor Opposite-Sign (SFOS) lepton pairs.}
+\label{tab:signal_selection}
+\end{table}
+
+\clearpage
+\subsubsection{Fiducial Cross-sections}
+\label{sec:fiducial_cross_section}
+
+
+Fiducial regions are defined for each channel which are designed to be close to the reconstruction
+level signal selection from Table~\ref{tab:signal_selection}.  
+The fiducial selections are determined at truth level using Rivet \cite{Buckley:2010ar}.
+%copied from semi-leptonic note since we are using the same code.
+Only prompt leptons (those not originating from hadron decays) are used for lepton selections, and these leptons are dressed with prompt photons within a cone with $\Delta R = 0.1$. Generator-level jets are reconstructed by running the anti-kt algorithm with radius parameter $\Delta R = 0.4$ on all final-state particles after the parton showering and hadronization with the exception of prompt leptons, prompt photons, and neutrinos. The MET variable is calculated using all generator-level neutrinos. 
+Events are removed if $\tau$ leptons are present from the $W$ decays.  Thus, the fiducial cross-section
+does not include the branching fraction to $W\rightarrow\tau\nu$ decay, even though there will be some contamination from this process in the final reconstruction level selection. The final fiducial selection is presented
+for each channel in Table~\ref{tab:fiducial_selection}.
+
+%i could put the actual fiducial cross-sections here
+%put the cutflows in the backup
+
+\begin{table}[ht!]
+\centering
+\begin{footnotesize}
+\input{tables/fiducial_selection.tex}
+\end{footnotesize}
+\caption{Fiducial regions based on optimized selection.}
+\label{tab:fiducial_selection}
+\end{table}
+
+%need to add references to the madgraph samples in the sample section
+The fiducial cross-sections are evaluated in the VBFNLO samples mentioned in Section~\ref{sec:signal} and compared
+to another set of samples generated using MadGraph at NLO in QCD. Unlike the VBFNLO signal samples, which are 
+generated only include the leptonic decays of the W boson, the MadGraph samples include all W boson decays, including hadronic decays. The VBFNLO samples, generated at LO, include interference effects between non-resonant production to three Ws and to resonant production to $WH\rightarrow WWW(*)$ while the NLO MadGraph samples do not, generating the two separately. As measured at truth level from the MadGraph samples, resonant production is observed to contribute about 50-60\% to
+the fiducial cross-section in each channel, even though it contributes about 90\% of the total cross-section.  A summary of the signal sample phase space and cross-sections is
+presented in Table~\ref{tab:signal_sample_summary}.
+
+The derived fiducial cross-sections using the two generators are shown in Table~\ref{tab:fiducial_cross_sections}.  The cross-sections are observed
+to be in good agreement between the two generators. The MadGraph NLO
+fiducial cross-sections are used in the final measurement.
+% it would probably be a good idea to include the fiducial cutflows as well.
+
+
+
+\begin{table}[ht!]
+\centering
+\begin{footnotesize}
+\input{tables/signal_sample_summary.tex}
+\end{footnotesize}
+\caption{Details of signal samples used to study signal fiducial cross-sections.}
+\label{tab:signal_sample_summary}
+\end{table}
+
+
+
+
+
+\begin{table}[ht!]
+\centering
+\begin{footnotesize}
+\input{tables/fiducial_cross_sections.tex}
+\end{footnotesize}
+\caption{Fiducial cross-sections derived in each signal region for the two generators. Production modes are summed together to get one fiducial cross-section per channel per generator. The cross-sections are seen to be in good agreement
+between the two generators.}
+\label{tab:fiducial_cross_sections}
+\end{table}

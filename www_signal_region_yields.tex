@@ -1,0 +1,295 @@
+\section{Event Yield in event Pre-selection and Signal Regions}
+\label{sec:eventYieldSR}
+
+The background estimation described in Section~\ref{sec:backgrounds_estimation}
+and the data are passed through the three-lepton selections described in Section~\ref{sec:eventSelection}.
+
+
+\subsection{Event Pre-selection}
+
+The three lepton event pre-selection region is used as a starting point for all three signal regions
+and follows the selection described in Section~\ref{sec:preselection}. Kinematic distributions
+in this region are shown in Figure~\ref{fig:preselection} while the yields are shown 
+binned by the lepton flavor combinations in Table~\ref{tab:preselection}. The yields in the individual
+signal channels just after pre-selection are shown in Figure~\ref{fig:preselection_nsfos} with systematic uncertainties.
+In general, good agreement is observed.
+%preselection
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.3\columnwidth]{figures/preselection/AllLeptonPt_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/DeltaPhiMET123_Abs_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/InvariantMassSFOS_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/LeadingLeptonPt_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/SubleadingLeptonPt_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/MinimumLeptonPt_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/MET_Et_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/NJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/preselection/NMuons_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/preselection/NSFOS_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/preselection/TotalCharge_histratio.eps}
+\caption{Distributions showing the observed data compared to the background estimate at event pre-selection.}
+\label{fig:preselection}
+\end{figure}
+
+\begin{table}[ht!]
+\centering
+\input{tables/Preselection_Yields.tex}
+\caption{Expected and observed event yields binned by lepton flavor combination at event pre-selection.
+Only statistical uncertainties are shown.
+}
+\label{tab:preselection}
+\end{table}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.5\columnwidth]{figures/preselection/NSFOS_Logy_histratio.png}
+%\includegraphics[width=0.3\columnwidth]{figures/preselection/TotalCharge_histratio.eps}
+\caption{Yields at event pre-selection in the 0, 1 and 2 SFOS regions.  The most important systematic uncertainties 
+(discussed in section~\ref{sec:systematics}) are shown, namely from the fake estimates and the uncertainties on the WZ and ZZ k-factors.}
+\label{fig:preselection_nsfos}
+\end{figure}
+
+\begin{table}[ht!]
+\centering
+\input{tables/Preselection_Yields.tex}
+\caption{Expected and observed event yields binned by lepton flavor combination at event pre-selection.
+Only statistical uncertainties are shown.
+}
+\label{tab:preselection}
+\end{table}
+
+
+\clearpage
+\subsection{Signal Regions}
+\label{sec:signal_region_yields}
+The selection used in the final signal regions is determined as described in Section~\ref{sec:signal_regions} and is summarized in Table~\ref{tab:signal_selection}. Kinematic distributions are shown for the distribution
+that is cut on just before the cut is applied
+for each stage of the selection in Figures~\ref{fig:0sfos}, \ref{fig:1sfos}, and \ref{fig:2sfos} for
+the 0, 1, and 2 SFOS regions, respectively.
+A more detailed set of kinematic distributions at each stage of the selection is 
+shown in appendix~\ref{sec:app_signal_selection}. 
+Cutflows showing the weighted cutflows at each stage of the signal selection are shown for the 0, 1, and 2 SFOS regions
+in Tables ~\ref{tab:cutflow_weighted_0sfos}, ~\ref{tab:cutflow_weighted_1sfos}, ~\ref{tab:cutflow_weighted_2sfos}.
+Unweighted cutflows are shown in appendix~\ref{sec:app_signal_selection}.
+
+%Tables summarizing the event yields after the final
+%selection and binned by the lepton flavor combinations are shown in Tables \ref{tab:0sfos}, \ref{tab:1sfos}, and \ref{tab:2sfos}.
+
+
+
+
+\subsubsection{0 SFOS Signal Region}
+
+The cutflows for the selection in the 0 SFOS region are shown in Table~\ref{tab:cutflow_weighted_0sfos}
+while the distributions at each stage of the selection are shown in Figure~\ref{fig:0sfos}.
+This is the most sensitive channel with an expected signal to background ratio of 56\%.
+The data is observed to agree with the expectation within statstical uncertainties. The background
+is ultimately dominated by fake background contributions, which themselves have a large systematic uncertainty
+that is similar in size to the statistical uncertainty. This is described in more detail in section~\ref{sec:systematics}.
+The poisson probability of observing 5 events with 3.67 events expected from the signal plus background prediction is 14.1\%.
+
+
+\begin{table}[ht!]
+\centering
+\scriptsize
+\input{tables/Cutflow_Weighted_0SFOS.tex}
+\caption{Cutflows showing the event yields and efficiencies for each cut in the 0 SFOS signal region
+starting from event pre-selection and binned by category. 
+Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
+The fake lepton background only includes the matrix method weights.  The data is unweighted.
+Efficiencies show the ratio of the yield with respect
+to the previous cut.  The efficiency is first calculated at the first cut after event pre-selection.  }
+\label{tab:cutflow_weighted_0sfos}
+\end{table}
+
+
+
+%0 SFOS, consolidated
+\begin{figure}[ht!]
+\centering
+%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_charge_sum.png}
+%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet.png}
+%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf.png}
+%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf_mee.png}
+%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf_mee_deltaphi.png}
+%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf_mee_deltaphi_njet.png}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSF_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_physics/weight_all/eps/InvariantMassElEl_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+\caption{Distributions showing data compared to the signal plus background estimate in the 0 SFOS region at each stage 
+of the selection before the cuts are applied to the given distribution. 
+Plots should be read sequentially from left to right
+and from top to bottom. 
+Referring to Table~\ref{tab:cutflow_weighted_0sfos}, the top left
+plot is shown before cut \#4 is applied, top middle is before cut \#5, and
+so on until the bottom right which is after all cuts are applied.
+}
+\label{fig:0sfos}
+\end{figure}
+
+%\begin{table}[ht!]
+%\centering
+%\input{tables/0SFOS_Yields.tex}
+%\caption{ Expected and observed event yields binned by lepton flavor combination for the optimized 0 SFOS signal region selection defined as follows: event pre-selection + 0 SFOS + charge sum $=\pm1$ + b-veto + $m_{SF}$ + Same-Sign Z-veto + $\Delta\phi$ + $N_{jet}$.
+%Only statistical uncertainties are shown.
+%}
+%\label{tab:0sfos}
+%\end{table}
+
+
+\clearpage
+\subsubsection{1 SFOS Signal Region}
+The cutflows for the selection in the 1 SFOS region are shown in Table~\ref{tab:cutflow_weighted_1sfos}
+while the distributions at each stage of the selection are shown in Figure~\ref{fig:1sfos}.
+This region is not as sensitive as the 0 SFOS region with a signal to background ratio of about 9.2\%.
+The background is overwhelmingly dominated by $WZ$ contributions. The observed data is slightly discrepant
+from the overall prediction, but is about 1 sigma if considering systematics, as demonstrated later in Table~\ref{tab:sys_summary}.
+The difference is observed to come almost entirely from the $ee\mu$ region, while the $e\mu\mu$ region shows good agreement, as can
+be seen in the bottom right of Figure~\ref{fig:1sfos}. From Figure~\ref{fig:1sfos} we can also see that the agreement
+is quite good at each stage of the selection until the cut on the jet multiplicity (bottom middle of Figure~\ref{fig:1sfos}) where the 0 and 1 jet
+bins are kept but the 1 jet bin is discrepant.  This suggests that the discrepancy comes from this cut.  This was investigated further
+for the different lepton flavor combinations in appendix~\ref{sec:app_signal_selection}.  The efficiencies for the predictions
+are very similar for the jet multiplicity cut between the two lepton flavor bins. However, there is a smaller efficiency observed
+in the data in the $ee\mu$ bin.  This suggests that the difference is most likely due to a statistical fluctuation.
+The poisson probability of observing 13 events with 16.14 events expected from the signal plus background prediction is 7.9\%.
+
+\begin{table}[ht!]
+\centering
+\scriptsize
+\input{tables/Cutflow_Weighted_1SFOS.tex}
+\caption{Cutflows showing the event yields and efficiencies for each cut in the 1 SFOS signal region
+starting from event pre-selection and binned by category. 
+Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
+The fake lepton background only includes the matrix method weights.  The data is unweighted.
+Efficiencies show the ratio of the yield with respect
+to the previous cut.  The efficiency is first calculated at the first cut after event pre-selection.  }
+\label{tab:cutflow_weighted_1sfos}
+\end{table}
+
+
+
+%1 SFOS consolidated
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_physics/weight_all/eps/MET_Et_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+\caption{Distributions showing data compared to the signal plus background estimate in the 1 SFOS region at each stage 
+of the selection before the cuts are applied to the given distribution. Plots should be read sequentially from left to right
+and from top to bottom. 
+Referring to Table~\ref{tab:cutflow_weighted_1sfos}, the top left
+plot is shown before cut \#3 is applied, top middle is before cut \#4, and
+so on until the bottom right which is after all cuts are applied.}
+\label{fig:1sfos}
+\end{figure}
+
+
+%\begin{table}[ht!]
+%\centering
+%\input{tables/1SFOS_Yields.tex}
+%\caption{ Expected and observed event yields binned by lepton flavor combination for the optimized 1 SFOS signal region selection defined as follows: event pre-selection + 1 SFOS + b-veto + Z-veto + $\Delta\phi$ + $N_{jet}$ requirements.
+%Only statistical uncertainties are shown.
+%}
+%\label{tab:1sfos}
+%\end{table}
+
+\clearpage
+\subsubsection{2 SFOS Signal Region}
+The cutflows for the selection in the 2 SFOS region are shown in Table~\ref{tab:cutflow_weighted_2sfos}
+while the distributions at each stage of the selection are shown in Figure~\ref{fig:2sfos}.
+Even though, the expected background is lower in this region than in the 1 SFOS region, this is the least sensitive signal region 
+due to a similar signal efficiency in this region as compared to the 1 SFOS region.
+The signal to background ratio is 5.8\% with the dominant background being due to $WZ$, similar to the 1 SFOS region.
+There is a fairly large discrepancy observed between the total prediction and the data in this region that is (possibly)
+about 2-3 sigma if considering systematic uncertainties reported in Table~\ref{tab:sys_summary}.
+The discrepancy is similar for both the $eee$ and $\mu\mu\mu$ lepton flavor combinations as can be seen in the bottom
+right of Figure~\ref{fig:2sfos}. If we examine the other distributions of Figure~\ref{fig:2sfos} we see that
+the discrepancy begins to appear at the cut on $E_{T}^{Miss} > 55$~GeV. The $E_{T}^{Miss}$ distribution is shown in the
+top right of Figure~\ref{fig:2sfos} before the cut is applied. Here we can see that the prediction shows reasonably good
+agreement with the data, with only 2 bins showing a discrepancy larger than 1 sigma from the statistical uncertainty. However,
+after the cut on $E_{T}^{Miss}$, one of these discrepant bins ends up being the highest contribution to the overall estimate, thus
+enhancing the disagreement. This suggests that the disagreement may just be due to a statitical fluctuation.
+The poisson probability of observing 6 events with 10.86 events expected from the signal plus background prediction is 5.7\%.
+
+\begin{table}[ht!]
+\centering
+\scriptsize
+\input{tables/Cutflow_Weighted_2SFOS.tex}
+\caption{Cutflows showing the event yields and efficiencies for each cut in the 2 SFOS signal region
+starting from event pre-selection and binned by category. 
+Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
+The fake lepton background only includes the matrix method weights.  The data is unweighted.
+Efficiencies show the ratio of the yield with respect
+to the previous cut.  The efficiency is first calculated at the first cut after event pre-selection.  }
+\label{tab:cutflow_weighted_2sfos}
+\end{table}
+
+
+%2 SFOS consolidated
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_physics/weight_all/eps/MET_Et_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+\caption{Distributions showing data compared to the signal plus background estimate in the 2 SFOS region at each stage 
+of the selection before the cuts are applied to the given distribution. Plots should be read sequentially from left to right
+and from top to bottom. 
+Referring to Table~\ref{tab:cutflow_weighted_2sfos}, the top left
+plot is shown before cut \#3 is applied, the top middle is before cut \#4, and
+so on until the bottom right which is after all cuts are applied.}
+\label{fig:2sfos}
+\end{figure}
+
+
+
+%\begin{table}[ht!]
+%\centering
+%\input{tables/2SFOS_Yields.tex}
+%\caption{ Expected and observed event yields binned by lepton flavor combination for the optimized 2 SFOS signal region selection defined as follows: event pre-selection + 2 SFOS + b-veto + Z-veto + $\Delta\phi$ + $N_{jet}$ requirements.
+%Only statistical uncertainties are shown.
+%}
+%\label{tab:2sfos}
+%\end{table}
+
+\subsubsection{Signal Efficiency }
+\label{sec:signal_efficiency}
+
+The signal efficiency, $\varepsilon_i$, is defined for each channel, $i$,
+as the ratio of the number of expected signal events measured
+at the reconstruction level, $N_i^{\textrm{Signal}}$, over the fiducial cross-section, $\sigma^{\textrm{Fiducial}}_i$, times the integrated luminosity:
+\begin{equation}
+\varepsilon_i = \frac{N_i^{\textrm{Signal}}}{\sigma^{\textrm{Fiducial}}_i\cdot\int\mathscr{L}~\textrm{d}t}
+\end{equation}
+Recall that the fiducial cross-sections are presented in Section~\ref{sec:fiducial_cross_section}. Further, the fiducial cross-section definition
+does not include the branching fraction from $W\rightarrow\tau\nu$ decays.
+We observe by looking at truth information that about 20\% of signal
+events reconstructed at truth level contain at
+least one $W\rightarrow\tau\nu$ decay. Thus, the signal efficiency
+definition includes this level of contamination from these events
+even though they do not belong explicitly to our signal definition.
+Using the reconstructed signal yields listed above and the fiducial
+cross-sections generated using MadGraph
+from Table~\ref{tab:fiducial_cross_sections}, we
+arrive at the signal efficiencies listed in Table~\ref{tab:signal_efficiencies}.
+
+
+\begin{table}[ht!]
+\centering
+\input{tables/signal_efficiencies.tex}
+\caption{Signal efficiencies derived separately for each signal region. Only statistical uncertainties are shown.}
+\label{tab:signal_efficiencies}
+\end{table}
+
+
+
+

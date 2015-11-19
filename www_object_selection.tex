@@ -1,0 +1,169 @@
+\section{Object selection}
+\label{sec:Object_selection}
+\subsection{Muons}
+
+Muons used in this analysis follow the recommendations and treatment
+of the Muon Combined Performance group~\cite{MCP:Guidelines}. STACO
+tight muons are used if they are reconstructed from the combination of
+an Inner Detector track and a Muon spectrometer one.  They must
+satisfy:
+
+\begin{itemize}
+\item $\pt>10~\GeV$.
+\item $|\eta|<2.5$.
+\item The following ID hits criteria must be satisfied:
+   \begin{itemize}
+   \item $N^{\mathrm{pixel}}_{\mathrm{hits}}+N^{\mathrm{pixel}}_{\mathrm{dead}}>0$.
+   \item $N^{\mathrm{SCT}}_{\mathrm{hits}}+N^{\mathrm{SCT}}_{\mathrm{dead}}>4$.
+   \item $N^{\mathrm{pixel}}_{\mathrm{holes}}+N^{\mathrm{SCT}}_{\mathrm{holes}}<3$.
+   \item if the muon is in $0.1<|\eta|<1.9$ then $(N^{\mathrm{TRT}}_{\mathrm{hits}}+N^{\mathrm{TRT}}_{\mathrm{outliers}}>5)$ and $(N^{\mathrm{TRT}}_{\mathrm{outliers}}<0.9\times{}(N^{\mathrm{TRT}}_{\mathrm{hits}}+N^{\mathrm{TRT}}_{\mathrm{outliers}}))$.
+   \item else if the muon is in $|\eta|\leq{}0.1$ or $|\eta|\geq{}1.9$ and $(N^{\mathrm{TRT}}_{\mathrm{hits}}+N^{\mathrm{TRT}}_{\mathrm{outliers}}>5)$ then $(N^{\mathrm{TRT}}_{\mathrm{outliers}}<0.9\times{}(N^{\mathrm{TRT}}_{\mathrm{hits}}+N^{\mathrm{TRT}}_{\mathrm{outliers}}))$.
+   \end{itemize}
+\item The tracking isolation (defined as the scalar sum of all tracks in a cone of $\Delta{}R<0.2$ around the muon trajectory, and excluding the muon $\pt$): $p_{T}^{Iso(R<0.2)}/p_{T}<0.04$.
+% $\pt^{\mathrm{cone20}}/\pt<0.04$.
+\item The calorimeter isolation (defined as the scalar sum of all calorimeter deposition in a cone of $\Delta{}R<0.2$ around the muon trajectory, and excluding the muon $\pt$): 
+   \begin{itemize}
+   \item if $\pt>20~\GeV$ then $E_{T}^{Iso(R<0.2)}/E_{T}<0.1$
+   \item else if $\pt<20~\GeV$ then $E_{T}^{Iso(R<0.2)}/E_{T}<0.07$.
+   \end{itemize}
+    The calorimeter isolation is corrected using the number of primary vertices to account for the occupancy of the event.
+
+\item The transverse impact parameter significance (computed wrt the unbiased Primary Vertex (unbiased-PV)): $\displaystyle
+  \frac{|d_{0}|}{|\sigma_{d_{0}}|}<3$
+\item The longitudinal impact parameter times the $\sin$ of the track $\theta$ (computed wrt the unbiased Primary Vertex (unbiased-PV)): $\displaystyle
+ |z_{0} * \sin{\theta}| < 0.5$~mm
+\item In order to avoid duplicate muons, it is checked to see if any other muons are reconstructed within $\Delta R(\mu,\mu)$  < 0.1.  If so, the higher $p_{T}$ muon is kept while the other is thrown away.
+
+\end{itemize}
+
+The electron energy is corrected to reproduce the muon energy scale measured in the data using $Z\to{}\mu\mu$ events.
+In MC samples, the muon $\pt$ is smeared to take into account differences between the
+simulation and the data. The events are weighted by the product of the reconstruction, identification and trigger efficiency scale factors for each muon. 
+These scale factors are determined from by comparing ratio of the efficiencies between data and MC when tag-and-probes method.
+
+
+\subsection{Electrons}
+\label{sec:Object_selection_electrons}
+
+Electrons used in this analysis follow the recommendations of the
+Egamma Combined Performance group~\cite{Egamma}. Tight++ electrons are
+selected. In order to achieve the best measurement, the electron directions are reconstructed using the
+direction of the track, while the energy used is the one from the calorimeter cluster.  
+
+They must satisfy:
+\begin{itemize}
+\item $\pt>10~\GeV$.
+\item $|\eta|<2.47$ and be outside the EM calorimeter transition
+  region ($1.37<|\eta|<1.52$).
+\item The algorithm (el\_author) used for the electron reconstruction
+  should be 1 or 3.
+\item The electrons must not be reconstructed close to a known badly
+  behaving calorimeter region: ( el\_OQ \& 1446) == 0
+  
+  \item The tracking isolation (defined as the scalar sum of all tracks in a cone of $\Delta{}R<0.2$ around the muon trajectory, and excluding the electron $\pt$): $p_{T}^{Iso(R<0.2)}/p_{T}<0.04$.
+  % $\pt^{\mathrm{cone20}}/\pt<0.04$.
+  \item The calorimeter isolation (defined as the scalar sum of all calorimeter deposition in a cone of $\Delta{}R<0.2$ around the muon trajectory, and excluding the electron $\pt$): 
+     \begin{itemize}
+     \item if $\pt>20~\GeV$ then $E_{T}^{Iso(R<0.2)}/E_{T}<0.1$
+     \item else if $\pt<20~\GeV$ then $E_{T}^{Iso(R<0.2)}/E_{T}<0.07$.
+     \end{itemize}
+      The calorimeter isolation is corrected toward the number of primary vertex to account for the occupancy of the event.
+  
+% \item The calorimeter isolation: if $\pt>20~\GeV$ then
+%   $E_{T}^{\mathrm{cone20}}/\pt<0.1$, else if $\pt<20~\GeV$ then
+%   $E_{T}^{\mathrm{cone20}}/\pt<0.07$. The calorimeter isolation is
+%   corrected toward the the number of primary vertex to account for the
+%   occupancy of the event.
+% \item The tracking isolation: $\pt^{\mathrm{cone20}}/\pt<0.04$.
+
+\item The transverse impact parameter significance (computed wrt the unbiased Primary Vertex (unbiased-PV)): $\displaystyle
+  \frac{|d_{0}|}{|\sigma_{d_{0}}|}<3$
+\item The longitudinal impact parameter times the $\sin$ of the track $\theta$ (computed wrt the unbiased Primary Vertex (unbiased-PV)): $\displaystyle
+  |z_{0} * \sin{\theta}| <0.5$~mm
+\item In order to avoid duplicate electrons, it is checked to see if any other electrons are reconstructed within $\Delta R(e,e)$  < 0.1.  If so, the higher $p_{T}$ electron is kept while the other is thrown away.
+
+
+% \item The transverse impact parameter significance: $\displaystyle
+%   \frac{|d_{0}^{\mathrm{pv-unbiased}}|}{|\sigma_{d_{0}^{\mathrm{pv-unbiased}}}|}<3$
+% \item The longitudinal impact parameter significance: $\displaystyle
+%   \frac{|z_{0}^{\mathrm{pv-unbiased}}|}{|\sigma_{z_{0}^{\mathrm{pv-unbiased}}}|}<0.5mm$
+
+\end{itemize}
+
+The electron energy is corrected to reproduce the electron energy scale measured in the data using $Z\to{}ee$ events. In MC samples, their momentum are also smeared to take into accounts differences recorded on the data with the simulation. The MC events are weighted by the product of the reconstruction, identification and trigger efficiency scale factors for each electron. 
+These scale factors are determined from by comparing ratio of the efficiencies between data and MC when tag-and-probes method.
+
+\subsection{Jets}
+
+Jets used in this analysis must satisfy the following criteria:
+
+\begin{itemize}
+\item Reconstructed with the anti-k$_{\mathrm{T}}$ algorithm, with a parameter $\Delta{}R<0.4$.
+\item Calibrated using the LC Topo schema.	
+\item Calibrated $\pt>25~\GeV$.
+\item $|\eta|<4.5$.
+\item Jet-Vertex Fraction: $|JVF| > 0.5$ for jets with calibrated $\pt
+  < 50~\GeV$ and $|\eta| < 2.4$. This later cut is used to suppress the jets coming from pile-up events.
+
+\item Jets are tagged as $b-$jets using the MV1 classifier and the $85\%$
+  working point.
+\end{itemize}
+
+The jet energy is calibrated using the following
+method: \begin{verbatim}
+  JetCalibrationTool::ApplyJetAreaOffsetEtaJES(...)\end{verbatim}
+  
+In MC the events are weighted by the product of b-tagging efficiency scale factors for jets that have been tagged as b-jets or by a jet tagging inefficiency scale factor otherwise.
+
+\subsection{Missing transverse energy}
+The missing transverse energy ($\MET$) used, when it is used, in this analysis is
+MET$\_$RefFinal. This quantity is reconstructed from calorimeter cells with $|\eta|<4.9$ and from muons. 
+
+Calorimeter cells are calibrated according to the reconstructed physics
+objects to which they are associated. The cells are associated to
+objects in a certain order: electrons, photons, hadronically decaying
+$\tau$-leptons, jets and muons. Cells not associated with any such
+objects are also taken into account in the \MET calculation as the cell-out term.
+% for cells
+%  as a soft term.
+Finally, the muon momenta are added in the \MET{} calculation to take into account their contributions in the events.
+
+The calibrations and corrections (e.g. momentum smearing) mentionned above and applied on electrons, muons and jets are propagated in the \MET{} calculation for MC simulations.
+
+
+\subsection{Overlap removal}
+
+It is possible that the reconstructed electrons, muons, and/or jets
+may overlap with each other inside the detector.  This can occur
+because because of the same physics object being reconstructed as different
+objects in the ATLAS detector.  We handle these occurences using the following
+scheme in order of precedence:
+\begin{itemize}
+	\item Electron-Muon Overlap: If$|\Delta R(e,\mu)| < 0.1$ then the  muon is kept while the electron is thrown away.
+	\item Electron-Jet Overlap: If $|\Delta R(e,j)| < 0.2$ keep the electron and throw away the jet.
+	\item Muon-Jet Overlap: If $|\Delta R(\mu,j)| < 0.2$ keep the muon and throw away the jet
+\end{itemize}
+For electrons, the direction is taken from the only the electron calorimeter
+information.  Muons use the full combined track information while jets
+use the direction taken from the anti-k$_{\mathrm{T}}$  algorithm with
+a constant energy scale. No momentum smearing or calibration corrections
+are applied to the reconstructed object directions. 
+
+Using this scheme means that a precedence is set when 
+reconstructed objects overlap such that $\mu > e > j$ where '$>$' should
+be interpreted to mean 'is kept instead of'. The motivation for this scheme
+is as follows. Muons will frequently radiate photons which then can pair-produce
+to electrons.  If the energy of one of the pair-produced electrons is 
+large enough then this can be reconstructed as well and will likely be collimated
+with the muon.  Since the electron comes from the muon radiation and
+since the reverse process with an electron having pair-produced muons
+is heavily supressed, the muon is kept preferentially.  The reconstruction
+of overlapping electrons and jets
+would rely on much of the same calorimeter energy deposits.  But the electron
+reconstruction also relies on matching with a well defined inner detector
+track.  It is thus assumed that if an electron overlaps with a reconstructed
+jet that this is more likely to be the signature of a high energy electron.
+Finally, if a muon overlaps with a jet, the muon could come from a heavy flavor 
+decay. In this occurs, we choose to keep the event and consider only the muon.
+
+
