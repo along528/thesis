@@ -1,27 +1,49 @@
-\section{Data and background MC}
+\section{Data and Simulation Samples}
 \subsection{Data}
 \label{sec:subsection_data}
 
-This analysis is based on the study of the full 2012 dataset, which after quality
-requirements obtained using the following GRL:
-
-  \begin{footnotesize}
- \url{data12_8TeV.periodAllYear_DetStatus-v61-pro14-02_DQDefects-00-01-00_PHYS_StandardGRL_All_Good.xml}
-  \end{footnotesize}
-
-lead to an integrated luminosity of $\mathcal{L}=20.3~\ifb$. The uncertainty on the luminosity is $2.8\%$ and was derived following the same methodology as in reference~\cite{Aad:2013ucp}, from a preliminary calibration of the luminosity scale derived from Van-der-Meer scans taken throughout 2012.
-
-The analysis explores final states containing 3 leptons, muons and electrons, the data coming from the two physics streams: physics\_Muons and physics\_Egamma are therefore used.  The overlap between these two streams is explicitly vetoed, to make sure that no events is counted twice.
-
-The data and Monte-Carlo (MC) samples used in the analysis are derived from the NTUP\_SMWZ D3PD ntuple produced with the production tag p1328. 
-The data is pre-selected (``skimmed'') to keep only events with\footnote{A dilepton skim was also generated to perform dedicated studies to determine the fake background  and the charge misID rates .} 3 leptons with $\pt>10~\GeV$ and loose identification criteria (for muons: loose, medium or tight; and for electrons: loose++, medium++, tight++, veryLooseLL, looseLL, mediumLL, tightLL, or veryTightLL for electrons). The selected data is also ``slimmed'', in order to remove the objects containers not used in the analysis and thereby save space and calculation time. No trigger requirements are applied at this step. The skimming strategy used in the analysis is detailed in Ref.~\cite{WWWTwiki:Skim}.
 
 
+This analysis is based on the study of the full proton-proton collision
+data from the LHC in 2012. After quality requirements, the amount 
+of data used in this analysis corresponds to \lumi.
+The uncertainty on the luminosity is $2.8\%$ 
+following the same methodology as in \cite{Aad:2013ucp}.
+%from Van-der-Meer scans taken throughout 2012.
+%read this citation.
+The data are selected after requiring that at least one
+of a series of single lepton triggers passed during data taking, 
+specifically, one of the following:
+either an electron trigger 
+requiring at least one isolated
+electron with $\pt>24$~\GeV~, an electron trigger requiring
+at least one electron 
+(with no isolation requirement) with $\pt>60$~\GeV, a muon 
+trigger requiring at least one isolated muon with $\pt>24$~GeV,
+or a muon trigger requiring at least one muon 
+(with no isolation requirement) with $\pt>36$~GeV.
 
-\subsection{Backgrounds samples}
+
+\subsection{Simulation samples}
+%%Do I need to talk about Monte Carlo showering, 
+%%hadronization and reconstruction?
+%%A general discussion of Monte Carlo could go here
+MC is ...
+\input{www_signal}
+
+\subsubsection{Backgrounds samples}
 \label{sec:subsection_datasets_MC}
 
-Only processes containing 3 or more prompt leptons ($WZ$, $ZZ$, $t\bar{t}V$, $VVV$), or 2 leptons and an isolated photon ($Z+\gamma$) are estimated using MC simulation samples in this analysis. The other processes are estimated from data as this will be explained in Section~\ref{sec:backgrounds_estimation}. The samples listed in this section and containing less than 3 prompt leptons have been used for preliminary or dedicated studies, but are not used for the determination of the final results. The MC samples are pass through the GEANT4~\cite{Agostinelli:2002hh} simulation~\cite{Aad:2010ah} of the ATLAS detector and reconstructed in the same way as the data.
+Only processes containing 3 or more prompt
+leptons ($WZ$, $ZZ$, $t\bar{t}V$, $VVV$), or 2 leptons and an 
+isolated photon ($Z+\gamma$) are estimated using MC simulation 
+samples in this analysis. The other processes are estimated from 
+data as this will be explained in Section~\ref{sec:backgrounds_estimation}. 
+The samples listed in this section and containing less than 3 prompt leptons 
+have been used for preliminary or dedicated studies, but are not used for 
+the determination of the final results. The MC samples are pass through the 
+GEANT4~\cite{Agostinelli:2002hh} simulation~\cite{Aad:2010ah} of the ATLAS 
+detector and reconstructed in the same way as the data.
 
 The diboson and triboson samples are listed in Table~\ref{tab:sample_bkg_dibosons}. The triboson samples other than the signal, \textit{ie}: $ZWW^{*}$ and $ZZZ^{*}$ were generated using the MadGraph~\cite{Alwall_madgraph} generator, hadronized through the Pythia6~\cite{PYTHIA} parton shower, with the AUET2B~\cite{ATL-PHYS-PUB-2011-009} tunes and the CTEQ6L1~\cite{Pumplin:2002vw} PDF set. The $Z\gamma$ samples were generated with the Sherpa~\cite{sherpa} generator and the CT10~\cite{Guzzi:2011sv} PDF set. The $W\gamma$ samples were generated with the AlpGen~\cite{ALPGEN} generator, hadronized through JIMMY~\cite{Jimmy}, with the AUET2C~\cite{ATL-PHYS-PUB-2011-009} tunes and the CTEQ6L1 PDF set. Other diboson samples ($WW$, $WZ$, $ZZ$) were obtained using the Powheg~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,Alioli:2010xd} generator, hadronized through the Pythia8~\cite{Sjostrand:2007gs} parton shower, with the AU2~\cite{atlasmctunes} tunes and the CT10 PDF set. Dedicated high-stat $WZ$ and $ZZ$ samples were generated to increase the statistics in all the signal region used in this analysis. They were obtained requesting the presence of 3 leptons with $\pt>7~\GeV$.
 

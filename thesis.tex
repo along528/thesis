@@ -8,6 +8,7 @@
 %put other packages you might need and custom declarations here
 \usepackage{amsmath}
 \usepackage{atlasphysics}
+\usepackage{shorthand}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{subfigure}
@@ -20,6 +21,11 @@
 \usepackage{multirow}
 % \usepackage{caption}
 \usepackage{url}
+%\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{backref,  
+pdfpagemode=FullScreen,  
+colorlinks=false}
 
 
 
@@ -31,7 +37,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %setup commands for the bu thesis style file
 
-\title{Search for $WWW\rightarrow~\ell\nu~\ell\nu~\ell\nu$ using the ATLAS detector at $\sqrt{s}=8$~TeV}
+\title{Search for \wwwlll~using the ATLAS detector at \energy}
 
 \author{Brian Alexander Long}
 
@@ -158,6 +164,7 @@
 \input{introduction}
 \input{theory}
 \input{atlas}
+\input{lhc}
 \input{www}
 \input{results}
 \input{conclusions}

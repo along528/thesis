@@ -2,10 +2,97 @@
 \label{sec:www}
 %this can have all of the details of the analysis
 
-\input{www_signal}
+%1 paragraph (pg) on why this is important
+%1 pg laying out the analysis design
+
+
+
+%I'm assuming these are abbreviated here:
+%MC - Monte Carlo
+%LO - Leading-Order
+%NLO - next-to-leading-order
+
+%Introduction to WWW analysis
+The first measurement of the $WWW$ production process
+is sought by using a dataset containing 20.3 \ifb~of integrated luminosity
+collected from the LHC at an energy of \energy~in 2012.
+In addition to being the first study of this this particular process,
+it is also the first study to search for a final state with more 
+than two massive gauge bosons and one of the first studies
+to be sensitive to QGCs predicted by the SM and by extension, aQGCs.
+%assuming aQGCs will be defined earlier
+The total \xsec for this process is expected
+to be roughly $224$~femtobarns, as determined using 
+\madgraph~\cite{MadGraph}. If measured, it 
+would be one of the smallest \xsec measurements
+within ATLAS. %with about 64\% coming from associated Higgs production.
+For this search, the \www~process is studied in the 
+so-called ``fully leptonic'' decay channel
+where each $W$ boson decays leptonically (excluding $\tau$ lepton decays).
+As can be seen in \fig\ref{fig:branching_fractions},
+this decay channel occurs only about 1\% of the time,
+while the rest of the time
+at least one of the $W$ bosons decays hadronically.
+%due to this jets problem
+While the branching fraction is small,
+this channel should have a smaller background than those decay 
+channels that include hadronic $W$ decays.
+As a result, the fully leptonic channel
+is one of the most sensible channels
+for obtaining sensitivity to this process.
+
+
+The data is studied in a region where the signal is most prominent
+with respect to the background.  This region is primarily characterized
+by having three high \pt~leptons ($e$ or $\mu$), with additional
+requirements determined using an optimization on the expected
+measurement precision.
+The signal is modeled purely using Monte Carlo (MC) simulation 
+while the backgrounds are modeled using a combination of MC
+simulation and data-driven techniques.
+Prior to the measurement, each important background is 
+studied in control regions
+which are either orthogonal to the signal region selection
+or where the signal is supressed.  This is to ensure that all
+backgrounds are described accurately. The agreement of the data 
+with the signal plus background prediction is determined using 
+a ``cut-and-count'' approach where the total number of data 
+events observed in the signal regions is compared to the expected number
+of events from the model.
+A fit to the data is performed using a profile likelihood
+with the relative normalization of the signal as 
+the parameter of interest and with statistical and systematic 
+uncertainties treated as nuisance parameters.
+%more detail? citations?
+From this fit, the measured signal \xsec and uncertainty 
+are extracted. The sensitivity to the signal is also evaluated
+by measuring the p-value under the background only hypothesis.
+In addition to measuring the SM \xsec, limits are set on 
+the sensitivity to new physics in an effective field theory 
+with additional aQGCs. %this aQGC stuff needs to be expanded upon greatly.
+
+
+
+                                                                                
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=.8]{figures/branching_fractions.png}
+\caption{Pie chart showing the different decay modes contributing 
+to the total \xsec for the \www~process. 
+The dotted areas indicate the portion of each decay 
+mode which is due to the production of tau leptons.}
+\label{fig:branching_fractions}
+\end{figure}
+
+
+
+
+
 \input{www_data_simulation_samples}
-\input{www_event_selection}
 \input{www_object_selection}
+\input{www_event_selection}
 %These have trouble with using the slashbox package
 %\input{www_charge_misid}  
 %\input{www_estimate_charge_misid}

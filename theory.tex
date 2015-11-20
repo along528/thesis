@@ -9,13 +9,89 @@
 %- Electroweak physics
 %- W decay
 %- parton distribution functions (maybe with some thorough discussion on this)
-%- WWW production
+%- WWW production (do I actually want to discuss this at all here??)
 %- Effective field theory and anomalous coupling measurements
+
+
+%assuming these will be defined here
+% Quartic Gauge Couplings (QGC) 
+% Standard Model (SM)
+% anomalous Quartic Gauge Couplings (aQGC)
+
+
+We can describe the probability of a given process to be produced by calculating its cross-section, measured in barns ($1~\textrm{barn}=10^{-24}~\textrm{cm}^2$).
+
+
+Since a $W$ boson is too short lived to ever be measured directly, we
+must instead study its decay products. 
+The $W$ boson can decay into two different categories of 
+particles: either
+``leptonically'' into a charged lepton ($\ell$) and a 
+neutrino ($\nu$) or ``hadronically''
+into a pair of quarks.
+Quarks are particles that interact with the Strong force and are 
+usually measured as complicated
+collections of particles called jets.
+The charged leptons include the 
+electrons, $e^{\pm}$, familiar because of their presence in stable matter,
+and the less familiar muons, $\mu^{\pm}$, and taus, $\tau^{\pm}$, 
+which themselves decay before forming stable matter.  
+Muons live long enough to be measured
+in the ATLAS detector while tau leptons do not. Because of this, we 
+only refer to electrons and muons when discussing the charged leptons.
+There are also three different types of neutrinos, named according to which
+charged lepton they pair with 
+during $W$ decay;  these are the electron neutrino ($\nu_e$),
+muon neutrino ($\nu_{\mu}$), and tau neutrino ($\nu_{\tau}$). 
+Neutrinos are peculiar 
+because they are notoriously difficult to measure.  
+As a result, we can only infer their presence after measuring all 
+of the particles in the detector and taking into account
+that the momentum is constrained at the collision point. If the momentum 
+from all of the particles that were measured does not meet this 
+constraint, the imbalance is attributed to the
+presence of neutrinos. We call this ``missing energy''.  Thus, the 
+leptonic $W$  decay channel is measured
+experimentally by the presence of a charged lepton 
+(electron or muon) plus missing energy.
+
 
 
 \section{Standard Model}
 \subsection{The Electroweak Theory}
 \section{Effective Field Theories}
+
+A measurement
+of the production rate can be used to probe the gauge couplings, in
+particular, the process is sensitive to quartic gauge couplings. The
+{\sc VBFNLO } code has implemented a list of higher order operators
+that parameterize the effects of new physics at energy scale beyond
+the reach of current collider experiments.  The effective field theory
+approach is practical and widely used when there is no compelling
+specific model of new physics beyond the SM, see for example,
+discussions in Refs:~\cite{Hagiwara:1993ck}, \cite{Buchmuller:1985jz}
+and \cite{Eboli:2006wa}.  As a benchmark, we choose two gauge
+invariant dimension-8 operators:
+\begin{equation}
+\mathcal{L}_{s,0} = [(\mathrm{D}_\mu\phi)^\dag\mathrm{D}_\nu \phi]\times [(\mathrm{D}^\mu\phi)^\dag\mathrm{D}^\nu \phi]
+\end{equation}
+\begin{equation}
+\mathcal{L}_{s,1} = [(\mathrm{D}_\mu\phi)^\dag\mathrm{D}^\mu \phi]\times [(\mathrm{D}_\nu\phi)^\dag\mathrm{D}^\nu \phi]
+\end{equation}
+where $\phi$ is the Higgs field doublet, and $\mathrm{D}_\mu$ is the covariant derivative. 
+The Lagrangian of the effective field theory is thus: 
+\begin{equation}
+\mathcal{L}_{eff} = \mathcal{L}_{SM} + \frac{f_{s0}}{\Lambda^4}\mathcal{L}_{s,0}+\frac{f_{s1}}{\Lambda^4}\mathcal{L}_{s,1}
+\end{equation}
+The choice of the two operators is introduced to benchmark possible
+deviations from the Standard Model. If a significant excess of events is 
+observed in the data, the parameterization will be changed, to incorporate 
+more operators, to
+investigate the nature of the observed new physics.
+% Once statistically significant
+% deviation is observed, of course, more operators should be considered
+% for investigating the nature of the observed new physics.
+
 
 
 
