@@ -28,7 +28,31 @@ or a muon trigger requiring at least one muon
 %%Do I need to talk about Monte Carlo showering, 
 %%hadronization and reconstruction?
 %%A general discussion of Monte Carlo could go here
-MC is ...
+
+An important tool for the modelling of physics processes
+that are or could be produced at the LHC is Monte Carlo simulation (MC).
+MC relies on random sampling to connect the matrix element formulations
+derived from quantum mechanical pertubation theory into 
+actual predictions of the results of proton-proton collisions.
+The prediction of a single collision from the MC represents
+one possible outcome of the proton-proton collision, with all of the 
+products of the hard-scattering and their four-momenta.
+This result can be passed through additional MC simulation to describe
+hadronization and the soft products of the collision e.g. photon radiation.
+Finally, these products are passed through a detailed 
+simulation of the ATLAS detector built in \geant~\cite{Agostinelli:2002hh}
+and then through the same reconstruction algorithms
+as the data, allowing for a similar treatment.
+This is repeated many times to populate the distribution of possible
+outcomes. Dedicated MC programs are provided by theorists for 
+different processes and to different orders in pertubation theory,
+sometimes with different treatments.
+Details of the different processes simulated from MC and their
+treatment are presented below.
+
+
+
+
 \input{www_signal}
 
 \subsubsection{Backgrounds samples}

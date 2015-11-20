@@ -6,15 +6,29 @@ are  $pp\rightarrow\- \Wp\Wp\Wm+X$ and $pp\rightarrow \Wp\Wm\Wm\allowbreak +X$,
 where $X$ is intended to refer to the fact that
 no requirements are placed on additional particles produced in the hard
 interaction.
-were the $W$ bosons decay to leptons ($e$ or $\mu$) and neutrinos.
 No requirements are placed upon whether or not the $W$ bosons are on-shell.
 The process includes associated Higgs production, 
 or ``Higgsstrahlung'', where a $W$ boson radiates a Higgs boson,
 $pp\rightarrow WH$, and subsequently decays into a $\Wp\Wm$ pair.
 The Higgs decay results in one $W$ boson being produced off-shell,
 $H\rightarrow WW^*$, making this the largest contribution to off-shell
-production.  This process also includes contributions from 
+production.  The resonance from the Higgs can clearly be seen from the 
+distribution of $m_{\Wp\Wm}$ taken from simulation of \www~events
+in \fig\ref{fig:mww_higgs}.
+The \www process also includes contributions from 
 the $WWWW$ quartic coupling. %and...?
+
+%It would be nice to show a plot of the higgs stuff. maybe I can
+%steal this and make my own later...
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\columnwidth]{figures/2l2j/mWW-parton.pdf}
+\caption{ Invariant mass distribution of two opposite-sign $W$ bosons 
+in \www events generated with VBFNLO at LO. The Higgs mass peak is clearly 
+visible at 126~GeV.}
+\label{fig:mww_higgs}
+\end{figure}
+
 
 %%%
 %If I'm going to include this, I better read up on it.
@@ -25,12 +39,76 @@ the $WWWW$ quartic coupling. %and...?
 %correlations of $W$ bosons lepton decay are also available
 %~\cite{Campanario:2008yg}.  
 
-The results are implemented in the Monte
+The SM signal processes are implemented in the Monte
 Carlo program \vbfnlo~\cite{Arnold:2011wj,Arnold:2012xn},
-which can generate partonic events at leading-order (LO) along with the 
-next-to-leading-order (NLO) \xsec 
-as well as in \madgraph~\cite{MadGraph} which can generate
-partonic events at NLO and NLO cross-sections. The results are compared...
+which can generate partonic events at leading-order (LO) with
+next-to-leading-order (NLO) cross-sections, 
+and is also implemented in \madgraph~\cite{MadGraph}, which can generate
+partonic events at NLO with NLO cross-sections. 
+The partonic events are further processed 
+by \pythiaeight\cite{Sjostrand:2007gs} and \photos\cite{Golonka:2005pn} 
+to add effects of beam remnant interactions and initial and 
+final state radiation. 
+The ATLAS tune of AU2\cite{ATLAS:2011zja} is adopted for \pythiaeight.  
+SM parameters must be provided to the MC generator as input. The most 
+relevant input parameters are listed in \tab\ref{tab:signal_sm_parameters}.
+The LO CTEQ6L1~\cite{Pumplin:2002vw} PDF set is used in the 
+LO \vbfnlo~generation while while CT10 NLO~\cite{Guzzi:2011sv}
+is used in the NLO cross-section calculation.
+CTEQ6L1 is used in the NLO \madgraph~generation and
+\xsec~calculation, but this is reweighted to
+CT10 NLO using a k-factor.
+The renormalization and factorization scales are dynamically
+set to the $WWW$ invariant mass in the \vbfnlo~samples, while they 
+are set to a fixed scale equal to the $Z$ mass in \madgraph.
+The \vbfnlo~samples are restricted to leptonic decays of the $W$~bosons
+where each lepton has a \pt~of at least 5~\GeV. Meanwhile, the \madgraph~
+samples include all decays of the $W$~boson, with a requirement 
+that jets have a a \pt~of at least 10~\GeV but with no requirement
+on the \pt~of leptons.
+The \vbfnlo~ and \madgraph~samples handle interference 
+between $WH\rightarrow WWW(*)$ 
+and on-shell $WWW$ production at LO, but \madgraph~is not
+able to do this at NLO. As a result, the NLO \madgraph~samples
+are split by on-shell \www~ and $WH\rightarrow WWW(*)$ production.
+Both sets of samples are further split by the \www charge mode.
+The \xsecs are summarized in \tab\ref{tab:signal_xsec} for each sample
+in their full phase space and in a common fiducial phase space
+defined in \sec...  The fiducial \xsecs are observed to be nearly the same,
+as expected.  This serves as a good check of the understanding of the 
+signal process. The \madgraph~\xsecs are used throughout the remainder of the
+analysis.
+
+%Do I need to describe the k-factors?
+%It would be nice to also add some distributions from Rivet comparing
+%the two at truth level.
+
+
+%Describe the pdf uncertainty calculation.
+%what about renormalization and factorization scales
+
+
+
+
+\begin{table}[ht]
+\centering
+\input{tables/SignalSMParameters.tex}
+\caption{List of the most relevant SM parameters used as input to the 
+signal MC generation.}
+\label{tab:signal_sm_parameters}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
+\input{ tables/combination/signal_xsec.tex}
+\caption{Inclusive and common fiducial cross-sections for \vbfnlo~and 
+\madgraph~samples. The sum of the inclusive \xsecs are different
+because of the different branching fractions in the two cases. However,
+the sum of the fiducial \xsecs are expected to be similar because
+they are computed for the same phase space, as described in \sec...}
+\label{tab:signal_xsec}
+\end{table}
 
 
 %%%%
@@ -55,58 +133,7 @@ partonic events at NLO and NLO cross-sections. The results are compared...
 %get generation parameters from semi-leptonic note
 %report both sets of cross-sections here
 %include updated info on cross-sections and pdfs 
-We use {\sc  VBFNLO} to generate partonic events at LO and to obtain 
-\xsecs at NLO for the signal processes, for both the SM scenario and
-the scenario with anomalous quartic gauge couplings. For LO mode,
-CTEQ6L1 PDF is used. CT10 PDF is used for NLO mode.  The relevant
-parameters are as follows:
-\begin{gather}
-\text{Renormalization and factorization scales as the invariant mass of }WWW:  \mu_R =\mu_F = M(WWW).\\
-\text{Higgs mass:  } m_H = 126 \text{ GeV} \\
-\text{Top mass:  } m_t = 172.4 \text{ GeV} \\
-Z \text{ mass : } m_{Z} = 91.1876 \text{ GeV} \\
-W \text{ mass : } m_W = 80.398 \text{ GeV} \\
-\text{Fermi constant: } G_F = 1.16637\times 10^{-5} \text{ GeV}^{-2}
-\end{gather} 
-The total width of the Higgs is not a free parameter and it is
-derived from the input parameters internally by the code.  For the
-three leptons at final state, the $p_T$ is required to be greater than
-5 GeV. The partonic events are processed by {\sc
-  Pythia8}\cite{Sjostrand:2007gs} and {\sc
-  Photos}\cite{Golonka:2005pn} to add effects of beam remnant
-interactions and initial and final state radiations. The ATLAS tune of
-AU2\cite{ATLAS:2011zja} is adopted for {\sc Pythia8}.  Then the events
-are passed through the standard ATLAS simulation and reconstruction
-chain.
-\subsubsection{Standard Model signal}
 
-\begin{table}[ht!]
-    \centering
-\begin{tabular}{c|c|c}
-\hline
-     			  & $W^+W^+W^-$ & $W^-W^+W^-$ \\
-\hline
-LO Cross section  & $3.56$~fb   & $1.88$~fb \\
-\hline
-NLO Cross section & $4.95$~fb   & $2.56$~fb \\
-\hline
-Average k-factor  & $1.39$      & $1.41$ \\
-\hline
-\end{tabular}
-\caption{The relative variation of the NLO cross sections corresponding 
-to different choices of factorization and renormalization scales for 
-the $W^+W^+W^-$ processes. }
-\label{tab:CrossSectionsSMLONLO}
-\end{table}
-
-With the settings described above, the NLO cross sections for
-$W^+W^+W^-$ and $W^+W^-W^-$ are 4.95 fb and 2.65 fb respectively at a 
-center-of-mass energy of $8~\TeV$. The LO cross sections as well as the 
-NLO ones are summarized in Table~\ref{tab:CrossSectionsSMLONLO}. 
-All the leptonic (e,$\mu$ and ,$\tau$) decay of $W$ are considered in 
-the MC production.
-% All
-% the three lepton generations are included in the MC production.
 The PDF uncertainties are evaluated using the 52 error sets in
 \texttt{CT10} following the prescription of Ref~\cite{Lai:2010vv} and
 are found to be $^{+1.8\%}_{-2.3\%}$ for $W^+W^+W^-$ and
@@ -168,31 +195,6 @@ with three leptons ($e$ or $\mu$) in the final state. The contributions
 from events in which $W$ bosons decay to $\tau$'s, and the $\tau$'s 
 sequentially decay to $e$ or $\mu$ should be included and is expected 
 to be 40\% of total yield of the 3-lepton final state.  
-
-The datasets used in the analysis for determining the signal 
-efficiencies are:\newline
-\begin{footnotesize}
-\texttt{mc12\_8TeV.185302.VBFNLOPythia8\_AU2CTEQ6L1\_WpWpWm.merge.NTUP\_SMWZ.e2366\_s1581\_s1586\_r4485\_r4540\_p1328/} 
-\end{footnotesize}
- and  \newline
- \begin{footnotesize}
-\texttt{mc12\_8TeV.185303.VBFNLOPythia8\_AU2CTEQ6L1\_WmWpWm.merge.NTUP\_SMWZ.e2366\_s1581\_s1586\_r4485\_r4540\_p1328/}.\newline
-\end{footnotesize}
-
-Some additional privately generated samples are produced 
-using \madgraph~\cite{MadGraph} which simulate both the 
-non-resonante and resonate production 
-separately at NLO and with inclusive Higgs and W decays. These are not 
-passed through detector reconstruction but are just
-used for the calculation of fiducial and total cross-sections which 
-may be compared to different $WWW$ channels, namely the semi-leptonic
-$WWW\rightarrow 2l4j$ channel. These samples are produced using CTEQ6L1 
-pdfs, normalization and factorizaton scales
-are set to the Z mass of $91.188$~GeV. Jets are required to 
-have a $p_{T} > 10$~GeV and photons to have a $p_{T}>20$~GeV.  
-No kinematic requirements are placed on 
-leptons. {\sc Pythia8}~\cite{Sjostrand:2007gs}  is used for parton showering.
-
 
 
 \subsubsection{aQGC signal}
