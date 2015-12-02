@@ -6,8 +6,9 @@
 
 This analysis is based on the study of the full proton-proton collision
 data from the LHC in 2012. After quality requirements, the amount 
-of data used in this analysis corresponds to \lumi.
-The uncertainty on the luminosity is $2.8\%$ 
+of data used in this analysis corresponds to 
+an integrated luminosity of \lumi.
+The uncertainty on the integrated luminosity is $2.8\%$ 
 following the same methodology as in \cite{Aad:2013ucp}.
 %from Van-der-Meer scans taken throughout 2012.
 %read this citation.
@@ -17,11 +18,11 @@ specifically, one of the following:
 either an electron trigger 
 requiring at least one isolated
 electron with $\pt>24$~\GeV~, an electron trigger requiring
-at least one electron 
-(with no isolation requirement) with $\pt>60$~\GeV, a muon 
+at least one (possibly non-isolated) electron 
+with $\pt>60$~\GeV, a muon 
 trigger requiring at least one isolated muon with $\pt>24$~GeV,
-or a muon trigger requiring at least one muon 
-(with no isolation requirement) with $\pt>36$~GeV.
+or a muon trigger requiring at least one 
+(possibly non-isolated) muon with $\pt>36$~GeV.
 
 
 \subsection{Simulation samples}
@@ -30,10 +31,11 @@ or a muon trigger requiring at least one muon
 %%A general discussion of Monte Carlo could go here
 
 An important tool for the modelling of physics processes
-that are or could be produced at the LHC is Monte Carlo simulation (MC).
+that are/could be produced at the LHC is Monte Carlo simulation (MC).
 MC relies on random sampling to connect the matrix element formulations
 derived from quantum mechanical pertubation theory into 
-actual predictions of the results of proton-proton collisions.
+actual predictions for the results of proton-proton collisions
+at the LHC.
 The prediction of a single collision from the MC represents
 one possible outcome of the proton-proton collision, with all of the 
 products of the hard-scattering and their four-momenta.
@@ -41,9 +43,10 @@ This result can be passed through additional MC simulation to describe
 hadronization and the soft products of the collision e.g. photon radiation.
 Finally, these products are passed through a detailed 
 simulation of the ATLAS detector built in \geant~\cite{Agostinelli:2002hh}
-and then through the same reconstruction algorithms
-as the data, allowing for a similar treatment.
-This is repeated many times to populate the distribution of possible
+so that the same reconstruction algorithms
+can be applied as in the data.
+This sampling is repeated many times to populate the 
+distribution of possible
 outcomes. Dedicated MC programs are provided by theorists for 
 different processes and to different orders in pertubation theory,
 sometimes with different treatments.
@@ -54,6 +57,7 @@ treatment are presented below.
 
 
 \input{www_signal}
+\newpage
 
 \subsubsection{Backgrounds samples}
 \label{sec:subsection_datasets_MC}
