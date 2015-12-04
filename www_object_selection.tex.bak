@@ -15,7 +15,7 @@ This reconstruction process does not guarantee
 properties. As such, the reconstruction process results in reconstructed
 ``physics objects'' that may or may not map accurately 
 to the underlying particle or physics it is trying to describe. That 
-being said, this mapping is usually very successful due to the high quality
+being said, this mapping is usually very succesful due to the high quality
 of the detector and the design of the reconstruction algorithms used.
 To maximize the success of reconstruction we look at physics
 objects selected only where the reconstruction is well understood.
@@ -45,7 +45,7 @@ The isolation determined using tracks is calculated by adding
 up the scalar sum of the \pt~ of all of the tracks (excluding
 the muon track) in a cone of $\Delta R< 0.2$ from the muon track.
 We ask that the isolation from tracks be less than 4\% of the muon \pt.
-The isolation determined using calorimeter deposits is calculated in
+The isolation determined using calorimeter depsoits is calculated in
 a similar way except that calorimeter deposits are used instead of tracks.
 We then ask that the isolation from calorimeter deposits 
 be less than 7\% of the muon \pt~when $\pt < 20$~GeV and 
@@ -59,7 +59,7 @@ detector that points to an energy deposit in the EM calorimeter.
 The electron at the primary vertex is expected to have $\pt>10$~GeV, similar
 to the muon objects. The direction of the electron energy 
 deposits are also asked to fall within $|\eta| < 2.47$ and outside the 
-transition region between the EM calorimeter barrel and endcap, $1.37 < |\eta| < 1.52$.
+transition region between the EM calromieter barrel and endcap, $1.37 < |\eta| < 1.52$.
 The electron objects are required to be isolated and have additional
 requirements on the track extrapolation the same way as for muon objects.  
 %what about further quality requirements?
@@ -85,16 +85,16 @@ tracks are always kept.
 %what about jet calibration?
 
 It is also possible to identify jets that come from heavy flavor
-decays, namely $b$ quark and $b$-hadron decays. We refer
+decays, namely $b$ quark and $b$-hardon decays. We refer
 to these as $b$-jets. $b$-jets can frequently be identified 
 because of the relatively long lifetime of the $b$ quark, which can 
 result in a decay vertex that is displaced from the original primary vertex.
 This can be taken advantage of to ``tag'' jets as likely coming from
 $b$ quarks. A multivariate $b$-tagging algorithm~\cite{ATLAS-CONF-2014-004}
 is used with working point determined to be 85\% efficient at
-identifying $b$-jets. %what about the mis-tag rate?
+identifiying $b$-jets. %what about the mis-tag rate?
 $b$-jets are associated with physics processes other than the signal
-and are helpful in identifying background processes.
+and are helpful in indentfying background processes.
 As a result, we choose to veto events where 
 $b$-jets are present when looking in the signal regions.
 
@@ -112,7 +112,7 @@ objects are also taken into account in the \MET calculation as the cell-out term
 %  as a soft term.
 Finally, the muon momenta are added in the \MET{} calculation to take into account their contributions in the events.
 
-The calibrations and corrections (e.g. momentum smearing) mentioned above and applied on electrons, muons and jets are propagated in the \MET{} calculation for MC simulations.
+The calibrations and corrections (e.g. momentum smearing) mentionned above and applied on electrons, muons and jets are propagated in the \MET{} calculation for MC simulations.
 
 
 \subsection{Overlap removal}
@@ -120,7 +120,7 @@ The calibrations and corrections (e.g. momentum smearing) mentioned above and ap
 It is possible that the reconstructed electrons, muons, and/or jets
 may overlap with each other inside the detector.  This can occur
 because because of the same physics object being reconstructed as different
-objects in the ATLAS detector.  We handle these occurrences using the following
+objects in the ATLAS detector.  We handle these occurences using the following
 scheme in order of precedence:
 \begin{itemize}
 	\item Electron-Muon Overlap: If$|\Delta R(e,\mu)| < 0.1$ then the  muon is kept while the electron is thrown away.
@@ -141,7 +141,7 @@ to electrons.  If the energy of one of the pair-produced electrons is
 large enough then this can be reconstructed as well and will likely be collimated
 with the muon.  Since the electron comes from the muon radiation and
 since the reverse process with an electron having pair-produced muons
-is heavily suppressed, the muon is kept preferentially.  The reconstruction
+is heavily supressed, the muon is kept preferentially.  The reconstruction
 of overlapping electrons and jets
 would rely on much of the same calorimeter energy deposits.  But the electron
 reconstruction also relies on matching with a well defined inner detector

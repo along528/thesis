@@ -3,19 +3,19 @@
 
 After our final event selection, the events are divided into 0SFOS,
 1SFOS and 2SFOS channels (where SFOS means same flavor opposite sign
-electrons). When an electron charge is mis-measured, a $WZ$ event can
+electrons). When an electron charge is mismeasured, a $WZ$ event can
 be classified as a 0SFOS event. Electrons that have gone through a
 hard bremsstrahlung followed by a photon conversion can have their
-charges mis-measured. The effect is negligible for muons.  To estimate
+charges mismeasured. The effect is negligible for muons.  To estimate
 the background with electron charge misidentification, we need to
 measure the charge misidentification rates first using \Zee\ events
 selected from data. The methods will be described in detail below
-starting with the measurement of the charge mis-ID rate, its
+starting with the measurement of the charge misID rate, its
 uncertainties and its application.
 
 \subsection{Electron charge misidentification}
 
-The electron charge mis-ID rates are measured with data using a
+The electron charge misID rates are measured with data using a
 statistical method based on a likelihood. The method is applied on MC
 samples and the results are compared with the mischarge rate obtained
 using MC truth information. The truth method is applied on \Zee\ MC
@@ -159,7 +159,7 @@ electron identification and isolation cuts reversed.
   \hline
   \texttt{EF\_e24vhi\_medium1} or \texttt{EF\_e60\_medium1} & \texttt{EF\_e24vhi\_medium1} or \texttt{EF\_e60\_medium1} \\
   \hline
-  Exactly two electrons passing electron selection & Choose the leading and sub-leading electrons \\ & and at least one of these 2 electrons \\ & satisfied the background electron selection \\
+  Exactly two electrons passing electron selection & Choose the leading and subleading electrons \\ & and at least one of these 2 electrons \\ & satisfied the background electron selection \\
   \hline
   Trigger Match & \\
   \hline

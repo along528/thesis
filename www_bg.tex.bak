@@ -24,7 +24,7 @@ and results in a final state with exactly three leptons. Another important
 prompt background is the $ZZ$ process,
 which has a similar cross-section to the $WZ$ process, but is typically 
 selected by producing
-four leptons and then not measuring one. Thus, this process is suppressed by the 
+four leptons and then not measuring one. Thus, this process is supressed by the 
 efficiency for not measuring the presence of a lepton. 
 These are collectively referred to as the di-boson processes, sometimes
 indicated as $VV$ where $V=W/Z$ (the $WW$ process is also considered
@@ -35,15 +35,15 @@ with the CT10 NLO PDF set and
 hadronized through \pythiaeight~using the AU2 tune, same as the signal.
 
 Other prompt backgrounds 
-include tri-boson processes like $ZWW$ and $ZZZ$ 
+inlcude tri-boson processes like $ZWW$ and $ZZZ$ 
 (typically referred to collectively as $VVV$)
 and \ttV~production. Tri-boson processes
-have cross-sections of a similar size to the signal but are suppressed 
+have cross-sections of a similar size to the signal but are supressed 
 for a similar reason
 as the $ZZ$, since these can produce either four or six lepton final 
 states. 
 \ttV~production is when a vector
-boson is produced in conjunction with a \tt~pair. 
+boson is produced in conjuction with a \tt~pair. 
 Since the top quark almost always decays
 into a $W$-boson and a $b$-quark, \ttV~production also results in an intermediate
 state of three vector bosons which ultimately results in a three to four lepton
@@ -86,7 +86,7 @@ tunes and the CTEQ6L1 PDF set.
 
 The last category of backgrounds are those with prompt leptons plus
 jets that mimic leptons. These are nominally estimated using the data
-as described in \sec\ref{sec:bg_fake}. However, some of the contributions
+as decribed in \sec\ref{sec:bg_fake}. However, some of the contributions
 to this background can be simulated using MC as a cross-check of 
 the estimate from data and for other studies. The main contributions
 to this are the single boson processes ($V+$jets) and \tt~production.

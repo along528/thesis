@@ -7,6 +7,28 @@
 
 %put other packages you might need and custom declarations here
 \usepackage{amsmath}
+\usepackage{atlasphysics}
+\usepackage{shorthand}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{authblk}
+\usepackage{verbatim}
+\usepackage{changepage}
+\usepackage{morefloats}
+\usepackage{slashbox}
+\usepackage{multirow}
+% \usepackage{caption}
+\usepackage{url}
+%\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{backref,  
+pdfpagemode=FullScreen,  
+colorlinks=false}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -15,20 +37,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %setup commands for the bu thesis style file
 
-\title{Title}
+\title{\www~production: The Hunt Begins}
 
-\author{Author}
+\author{Brian Alexander Long}
 
 % Type of document prepared for this degree:
 %   1 = Master of Science thesis,
-%   2 = Doctor of Philosophy dissertation.
-%   3 = Master of Science thesis and Doctor of Philosophy dissertation.
+%   2 = Doctor of Philisophy dissertation.
+%   3 = Master of Science thesis and Doctor of Philisophy dissertation.
 %   4 = Doctoral Dissertation Prospectus
-\degree=1
+\degree=2
 
-\prevdegrees{Your previous degree, Your university, Year granted}
+\prevdegrees{B.S., The University of North Carolina, 2010 \\ M.A., Boston University, 2015}
 
-\department{Department of Mathematics and Statistics}
+\department{Department of Physics}
 
 \university{Boston University}
 
@@ -39,20 +61,20 @@
 % will be the same, except for January graduation, when your defense
 % will be in the fall of year X, and your graduation will be in
 % January of year X+1
-\defenseyear{2013}
-\degreeyear{2013}
+\defenseyear{2016}
+\degreeyear{2016}
 
 % For each reader, specify appropriate label {First, second, third},
 % then name, then title. Warning: If you have more than five readers
 % you are out of luck, because it will overflow to a new page.
 % Sometimes you may wish to put part of the title in with the name
-\reader{First}{First reader name, PhD}{title}
-\reader{Second}{Second reader name, PhD}{title}
-\reader{Third}{Third reader name, PhD}{title}
+\reader{First}{John M. Butler, PhD}{Professor of Physics}
+\reader{Second}{Kevin M. Black, PhD}{Assistant Professor of Physics}
+%\reader{Third}{Third reader name, PhD}{title}
 
 % The Major Professor is the same as the first reader, but must be
 % specified again for the abstract page
-\majorprof{Advisor name}{title}
+\majorprof{John M. Butler}{Professor of Physics}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,15 +121,7 @@
 % \newpage\section*{Acknowledgments} followed by your text.
 
 \newpage
-\section*{Acknowledgments}
-
-The style file is originally based on an MIT style file by Stephen
-Gildea, modified for BU by Paolo Gaudiano.  Modified for CNS by
-Jonathan Polimeni.  Further modifications by Janusz Konrad, Cameron
-Morland, and Karen Yeats.
-
-This example file takes some comments from a previous example file of
-unknown authorship.
+\input{acknowledgments}
 
 % The abstractpage environment sets up everything on the page except
 % the text itself.  The title and other header material are put at the
@@ -117,11 +131,7 @@ unknown authorship.
 % format of the page, you can use the abstract environment, which puts
 % the word "Abstract" at the beginning and single spaces its text.
 
-\begin{abstractpage}
-This document serves as an example of how to use the BU thesis style
-file.  This document is written from the point of view of a math grad student,
-but the style file is agnostic on department.
-\end{abstractpage}
+\input{abstract}
 
 % Now you can include a preface. Again, use something like
 % \newpage\section*{Preface} followed by your text
@@ -130,10 +140,10 @@ but the style file is agnostic on department.
 \tableofcontents
 
 % If you have tables, uncomment the following line
-%\listoftables
+\listoftables
 
 % If you have figures, uncomment the following line
-%\newpage\listoffigures
+\newpage\listoffigures
 
 % List of Abbrevs is NOT optional (Martha Wellman likes all abbrevs
 % listed)
@@ -143,13 +153,7 @@ but the style file is agnostic on department.
 % Just \usepackage{longtable} and then replace the word ``tabular'' 
 % with ``longtable''.  You may have to download this package from
 % CTAN or another internet source.
-\chapter*{List of Symbols}
-  \begin{tabular}{lp{0.75\textwidth}}
-    1PI \dotfill & 1-particle irreducible, that is, 2-connected \\
-    $\beta$ \dotfill & the physicists' $\beta$-function describing the
-    nonlinearity of a Green function \\
-  \end{tabular}
-
+\input{abbreviations}
 
 % END OF THE PRELIMINARY PAGES
 \newpage
@@ -157,81 +161,16 @@ but the style file is agnostic on department.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % the body of the thesis goes here.
-
-\chapter{Introduction}
-The BU {\LaTeX} thesis style file has been around for some time.  Many
-different versions have evolved.  Collecting together and charting the
-heritage of the disparate versions could probably be a paper in a
-suitable discipline.  This version has been through ECE and CNS and
-has now arrived in math.
-
-This version is an attempt to clean up one version in the hopes that
-some of this fractiousness can be avoided in the future.  I believe it
-to be correct.  Beyond correctness it has three main features.  Due to its
-ECE heritage it has an option to make an unofficial title box page (to
-match with the cut out in a cardboard report cover).  Also from ECE it
-can be used to make prospectuses and other types of theses.  Finally
-it includes some cv-making commands modified from a resume style file
-by Miklos Csuros.
-
-\chapter{Content}
-
-\section{How to compile}
-
-I confess that I don't know how to compile this in all the popular
-programs everyone uses these days, but if you just put the style file
-\verb+bu_math_thesis.sty+ wherever you usually do and the the rest
-of the compilation is plain {\LaTeX} and plain bibtex for the example
-bibliography.  You don't have to use bibtex to use this style file,
-it's merely what this example uses (and a good idea for long or
-complicated documents).
-
-\section{Comments on features}
-
-Chapters have no number on their first page and the numbers on
-subsequent pages are in the middle at the top.  The latter is required
-and the former is acceptable. 
-
-\subsection{Subsections work}
-\subsubsection{Subsubsections work}
-
-The style file is compatible with many other styles and packages.  You
-should have no problem including graphics in your favorite way for
-example.  One should just be careful not to modify the headers or
-margins unless one 
-is sure one knows what one is doing.
-
-Regarding margins, I have simply been able to compile this file (at
-the command line in linux via \texttt{latex}) and then convert the dvi
-to a ps file (at the command line via \texttt{dvips}) and print the ps
-either on the printer \texttt{bott} or on \texttt{canon}.  I brought
-a copy printed on \texttt{canon} to my format review meeting and
-Martha Khan was happy with it though there is a small amount of
-vertical jitter caused by the printer.  People have had problems in
-the past with margins coming out differently than expected.  This may
-partly be due to the fact that sometimes linux systems have A4 as the
-default paper size which can cause problems when the resulting
-document is inevitably printed on letter size paper.  If you are using
-\texttt{dvips} on the command line, the way to make certain the result
-is letter size is \texttt{dvips -t letter}.  That is what I do and it
-works for me.
-
-The bibliographic style can be whatever is standard in one's field.
-For much of math this is the often maligned plain style, eg
-\cite{bkerfc}.
- The style file has also been tested with apalike.  To
-use apalike both set the \verb+\bibliographystyle{apalike}+ and
-include the package \texttt{apalike}.   The bibliography can be single
-spaced as below.  I'm using bibtex, though that's not required.
-
-\chapter{Conclusions}
-Have as many chapters as you like.  Good luck.
+\input{introduction}
+\input{theory}
+\input{lhc}
+\input{atlas}
+\input{www}
+%\input{results}
+\input{conclusions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The back matter
-
-
-
 % If you don't write the journal names out in full in the bibliography
 % then you need a list of journal abbreviations
 % If your list is longer than one page, use the ``longtable'' package
@@ -239,13 +178,7 @@ Have as many chapters as you like.  Good luck.
 % with ``longtable''.  You may have to download this package from
 % CTAN or another internet source.
 
-\chapter*{List of Journal Abbreviations}
-\begin{center}
-\begin{tabular}{lp{0.56\textwidth}}
-  Nucl. Phys. B \dotfill & Nuclear Physics B: Particle physics, field
-  theory and statistical systems, physical mathematics \\
-\end{tabular}
-\end{center}
+\input{journal_abbreviations}
 
 % The bibliography itself can be single spaced
 
@@ -267,5 +200,6 @@ Have as many chapters as you like.  Good luck.
 % in the below example
 
 \chapter*{Curriculum Vitae}
+
 
 \end{document}

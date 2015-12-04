@@ -54,7 +54,7 @@ simulation and data-driven techniques.
 Prior to the measurement, each important background is 
 studied in control regions
 which are either orthogonal to the signal region selection
-or where the signal is suppressed.  This is to ensure that all
+or where the signal is supressed.  This is to ensure that all
 backgrounds are described accurately. The agreement of the data 
 with the signal plus background prediction is determined using 
 a ``cut-and-count'' approach where the total number of data 

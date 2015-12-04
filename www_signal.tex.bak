@@ -14,10 +14,10 @@ $H\rightarrow WW^*$, making this the leading contribution to off-shell
 production.  The resonance from the Higgs can clearly be seen from the 
 distribution of $m_{\Wp\Wm}$ taken from simulation of \www~events
 in \fig\ref{fig:mww_higgs}.
-The \www~process also includes contributions from 
+The \www process also includes contributions from 
 the $WWWW$ quartic coupling. %and...?
 
-%It would be nice to show a plot of the Higgs stuff. maybe I can
+%It would be nice to show a plot of the higgs stuff. maybe I can
 %steal this and make my own later...
 \begin{figure}[ht]
 \centering
@@ -34,7 +34,7 @@ visible at 126~GeV.}
 %If I'm going to include this, I better read up on it.
 %%%
 %The production \xsec without Higgs contribution has been calculated 
-%to $\mathcal{O}(\alpha_s)$  corrections in Ref~\cite{Binoth:2008kt}.
+%to $\mathcal{O}(\alpha_s)$  corrections in ref~\cite{Binoth:2008kt}.
 %$\mathcal{O}(\alpha_s)$ corrections, Higgs boson exchange and spin 
 %correlations of $W$ bosons lepton decay are also available
 %~\cite{Campanario:2008yg}.  
@@ -46,13 +46,13 @@ next-to-leading-order (NLO) cross-sections,
 and in \madgraph~\cite{MadGraph}, which can generate
 partonic events at NLO with NLO cross-sections. 
 The partonic events are further processed 
-by \pythiaeight~\cite{Sjostrand:2007gs} and \photos~\cite{Golonka:2005pn} 
+by \pythiaeight\cite{Sjostrand:2007gs} and \photos\cite{Golonka:2005pn} 
 to add effects of beam remnant interactions and initial and 
 final state radiation. 
 SM parameters must be provided to the MC generators as input. 
 The most relevant input parameters are listed 
 for the generators in \tab\ref{tab:signal_sm_parameters}.
-The parameters are set in \pythiaeight~ using the ATLAS tune 
+The parameters are set in \pythiaeight using the ATLAS tune 
 of AU2\cite{ATLAS:2011zja}.
 The MC generators must also be provided an appropriate PDF.
 The PDF used  in the LO \vbfnlo~generation is
@@ -61,7 +61,7 @@ while CT10 NLO~\cite{Guzzi:2011sv}
 is used in the NLO \vbfnlo~cross-section calculation.
 The PDF used in the NLO \madgraph~generation 
 and \xsec~calculation is CTEQ6L1 
-but this is re-weighted to CT10 NLO using a k-factor.
+but this is reweighted to CT10 NLO using a k-factor.
 Since the MC generators are computed to finite order in perturbation
 theory, renormalization and factorization scales must be chosen.
 The renormalization and factorization scales are dynamically
@@ -70,15 +70,15 @@ are set to a fixed scale equal to the $Z$ mass in \madgraph.
 The \vbfnlo~samples are restricted to leptonic decays of the $W$~bosons
 where each lepton has a \pt~of at least 5~\GeV. Meanwhile, the \madgraph~
 samples include all decays of the $W$~boson, with a requirement 
-that jets have a a \pt~of at least 10~\GeV~ but with no requirement
+that jets have a a \pt~of at least 10~\GeV but with no requirement
 on the \pt~of leptons.
 The \vbfnlo~ and \madgraph~samples handle interference 
 between $WH\rightarrow WWW(*)$ 
 and on-shell $WWW$ production at LO, but \madgraph~is not
 able to do this at NLO. As a result, the NLO \madgraph~samples
 are split by on-shell \www~ and $WH\rightarrow WWW(*)$ production.
-Both sets of samples are further split by the \www~charge mode.
-For each sample, the \xsecs are summarized in \tab\ref{tab:signal_xsec} 
+Both sets of samples are further split by the \www charge mode.
+For each sample, The \xsecs are summarized in \tab\ref{tab:signal_xsec} 
 in their full phase space and in a common fiducial phase space
 defined in \sec...  The fiducial \xsecs are observed to be nearly the same
 between the two generators,
@@ -136,11 +136,11 @@ they are computed for the same phase space, as described in \sec...}
 %As already mentioned, the focus of this analysis is on the final state 
 
 
-%need to also show the MadGraph parameters
-%maybe rephrase so that I can discuss both in parallel
+%need to also show the madgraph parameters
+%maybe repphrase so that I can discuss both in parallel
 %get generation parameters from semi-leptonic note
 %report both sets of cross-sections here
-%include updated info on cross-sections and PDFs 
+%include updated info on cross-sections and pdfs 
 
 \begin{figure}[ht!]
 \centering
@@ -193,11 +193,10 @@ The uncertainty is determined by comparing three different PDFs;
 CT10 NLO~\cite{Lai:2010vv}, MSTW2008 NLO~\cite{Martin:2009iq}, 
 and NNPDF 3.0 NLO~\cite{Ball:2014uwa}. 
 This comparison is presented in Figure~\ref{fig:signal_pdf_unc}.  
-Symmetric 68\% CL uncertainties 
-are determined for CT10 NLO and MSTW 2008 NLO using the 68\% CL 
-set provided for MSTW directly and the 90\%CL set for CT10 after
-scaling down by 
-a factor of 1.645. The uncertainty of the NNPDF 3.0 NLO PDF set is 
+Symmetric 68\%CL uncertainties 
+are determined for CT10 NLO and MSTW 2008 NLO using the 68~\% CL 
+set provided for MSTW and the 90~\%CL for CT10 and scaling down by 
+the factor 1.645. The uncertainty of the NNPDF 3.0 NLO PDF is 
 determined by using the standard deviation of the distribution 
 of 101 MC PDFs provided in the PDF set while the nominal value is taken
 from the mean of the same PDFs.  

@@ -30,10 +30,10 @@ or a muon trigger requiring at least one
 %%hadronization and reconstruction?
 %%A general discussion of Monte Carlo could go here
 
-An important tool for the modeling of physics processes
+An important tool for the modelling of physics processes
 that are/could be produced at the LHC is Monte Carlo simulation (MC).
 MC relies on random sampling to connect the matrix element formulations
-derived from quantum mechanical perturbation theory into 
+derived from quantum mechanical pertubation theory into 
 actual predictions for the results of proton-proton collisions
 at the LHC.
 The prediction of a single collision from the MC represents
@@ -48,7 +48,7 @@ can be applied as in the data.
 This sampling is repeated many times to populate the 
 distribution of possible
 outcomes. Dedicated MC programs are provided by theorists for 
-different processes and to different orders in perturbation theory,
+different processes and to different orders in pertubation theory,
 sometimes with different treatments.
 Details of the different processes simulated from MC and their
 treatment are presented below.

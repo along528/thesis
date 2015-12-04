@@ -13,7 +13,7 @@ in this region are shown in Figure~\ref{fig:preselection} while the yields are s
 binned by the lepton flavor combinations in Table~\ref{tab:preselection}. The yields in the individual
 signal channels just after pre-selection are shown in Figure~\ref{fig:preselection_nsfos} with systematic uncertainties.
 In general, good agreement is observed.
-%pre-selection
+%preselection
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.3\columnwidth]{figures/preselection/AllLeptonPt_histratio.eps}
@@ -69,9 +69,9 @@ for each stage of the selection in Figures~\ref{fig:0sfos}, \ref{fig:1sfos}, and
 the 0, 1, and 2 SFOS regions, respectively.
 A more detailed set of kinematic distributions at each stage of the selection is 
 shown in appendix~\ref{sec:app_signal_selection}. 
-Cut-flows showing the weighted cut-flows at each stage of the signal selection are shown for the 0, 1, and 2 SFOS regions
+Cutflows showing the weighted cutflows at each stage of the signal selection are shown for the 0, 1, and 2 SFOS regions
 in Tables ~\ref{tab:cutflow_weighted_0sfos}, ~\ref{tab:cutflow_weighted_1sfos}, ~\ref{tab:cutflow_weighted_2sfos}.
-Unweighted cut-flows are shown in appendix~\ref{sec:app_signal_selection}.
+Unweighted cutflows are shown in appendix~\ref{sec:app_signal_selection}.
 
 %Tables summarizing the event yields after the final
 %selection and binned by the lepton flavor combinations are shown in Tables \ref{tab:0sfos}, \ref{tab:1sfos}, and \ref{tab:2sfos}.
@@ -81,20 +81,20 @@ Unweighted cut-flows are shown in appendix~\ref{sec:app_signal_selection}.
 
 \subsubsection{0 SFOS Signal Region}
 
-The cut-flows for the selection in the 0 SFOS region are shown in Table~\ref{tab:cutflow_weighted_0sfos}
+The cutflows for the selection in the 0 SFOS region are shown in Table~\ref{tab:cutflow_weighted_0sfos}
 while the distributions at each stage of the selection are shown in Figure~\ref{fig:0sfos}.
 This is the most sensitive channel with an expected signal to background ratio of 56\%.
-The data is observed to agree with the expectation within statistical uncertainties. The background
+The data is observed to agree with the expectation within statstical uncertainties. The background
 is ultimately dominated by fake background contributions, which themselves have a large systematic uncertainty
 that is similar in size to the statistical uncertainty. This is described in more detail in section~\ref{sec:systematics}.
-The Poisson probability of observing 5 events with 3.67 events expected from the signal plus background prediction is 14.1\%.
+The poisson probability of observing 5 events with 3.67 events expected from the signal plus background prediction is 14.1\%.
 
 
 \begin{table}[ht!]
 \centering
 \scriptsize
 \input{tables/Cutflow_Weighted_0SFOS.tex}
-\caption{Cut-flows showing the event yields and efficiencies for each cut in the 0 SFOS signal region
+\caption{Cutflows showing the event yields and efficiencies for each cut in the 0 SFOS signal region
 starting from event pre-selection and binned by category. 
 Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
 The fake lepton background only includes the matrix method weights.  The data is unweighted.
@@ -143,7 +143,7 @@ so on until the bottom right which is after all cuts are applied.
 
 \clearpage
 \subsubsection{1 SFOS Signal Region}
-The cut-flows for the selection in the 1 SFOS region are shown in Table~\ref{tab:cutflow_weighted_1sfos}
+The cutflows for the selection in the 1 SFOS region are shown in Table~\ref{tab:cutflow_weighted_1sfos}
 while the distributions at each stage of the selection are shown in Figure~\ref{fig:1sfos}.
 This region is not as sensitive as the 0 SFOS region with a signal to background ratio of about 9.2\%.
 The background is overwhelmingly dominated by $WZ$ contributions. The observed data is slightly discrepant
@@ -155,13 +155,13 @@ bins are kept but the 1 jet bin is discrepant.  This suggests that the discrepan
 for the different lepton flavor combinations in appendix~\ref{sec:app_signal_selection}.  The efficiencies for the predictions
 are very similar for the jet multiplicity cut between the two lepton flavor bins. However, there is a smaller efficiency observed
 in the data in the $ee\mu$ bin.  This suggests that the difference is most likely due to a statistical fluctuation.
-The Poisson probability of observing 13 events with 16.14 events expected from the signal plus background prediction is 7.9\%.
+The poisson probability of observing 13 events with 16.14 events expected from the signal plus background prediction is 7.9\%.
 
 \begin{table}[ht!]
 \centering
 \scriptsize
 \input{tables/Cutflow_Weighted_1SFOS.tex}
-\caption{Cut-flows showing the event yields and efficiencies for each cut in the 1 SFOS signal region
+\caption{Cutflows showing the event yields and efficiencies for each cut in the 1 SFOS signal region
 starting from event pre-selection and binned by category. 
 Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
 The fake lepton background only includes the matrix method weights.  The data is unweighted.
@@ -202,7 +202,7 @@ so on until the bottom right which is after all cuts are applied.}
 
 \clearpage
 \subsubsection{2 SFOS Signal Region}
-The cut-flows for the selection in the 2 SFOS region are shown in Table~\ref{tab:cutflow_weighted_2sfos}
+The cutflows for the selection in the 2 SFOS region are shown in Table~\ref{tab:cutflow_weighted_2sfos}
 while the distributions at each stage of the selection are shown in Figure~\ref{fig:2sfos}.
 Even though, the expected background is lower in this region than in the 1 SFOS region, this is the least sensitive signal region 
 due to a similar signal efficiency in this region as compared to the 1 SFOS region.
@@ -215,14 +215,14 @@ the discrepancy begins to appear at the cut on $E_{T}^{Miss} > 55$~GeV. The $E_{
 top right of Figure~\ref{fig:2sfos} before the cut is applied. Here we can see that the prediction shows reasonably good
 agreement with the data, with only 2 bins showing a discrepancy larger than 1 sigma from the statistical uncertainty. However,
 after the cut on $E_{T}^{Miss}$, one of these discrepant bins ends up being the highest contribution to the overall estimate, thus
-enhancing the disagreement. This suggests that the disagreement may just be due to a statistical fluctuation.
-The Poisson probability of observing 6 events with 10.86 events expected from the signal plus background prediction is 5.7\%.
+enhancing the disagreement. This suggests that the disagreement may just be due to a statitical fluctuation.
+The poisson probability of observing 6 events with 10.86 events expected from the signal plus background prediction is 5.7\%.
 
 \begin{table}[ht!]
 \centering
 \scriptsize
 \input{tables/Cutflow_Weighted_2SFOS.tex}
-\caption{Cut-flows showing the event yields and efficiencies for each cut in the 2 SFOS signal region
+\caption{Cutflows showing the event yields and efficiencies for each cut in the 2 SFOS signal region
 starting from event pre-selection and binned by category. 
 Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
 The fake lepton background only includes the matrix method weights.  The data is unweighted.

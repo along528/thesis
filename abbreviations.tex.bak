@@ -1,0 +1,19 @@
+\chapter*{List of Symbols}
+  %\begin{tabular}{lp{0.75\textwidth}}
+  \begin{tabular}{lp{0.15\textwidth}p{0.5\textwidth}}
+    aQGC        & \dotfill & anomalous Quartic Gauge Coupling \\
+    ATLAS       & \dotfill & A Toroidal LHC ApparatuS \\
+    EM          & \dotfill & Electromagnetic Calorimeter \\
+    ID          & \dotfill & Inner Detector \\
+    LHC         & \dotfill & Large Hadron Collider \\
+    LO          & \dotfill & Leading-Order \\
+    MC          & \dotfill & Monte Carlo simulation \\
+    MS          & \dotfill & Muon Spectrometer \\
+    NLO         & \dotfill & Next-To-Leading-Order \\
+    QGC         & \dotfill & Quartic Gauge Coupling \\
+    SM          & \dotfill & Standard Model  \\
+    PDF         & \dotfill & Parton Distribution Function \\
+
+
+
+  \end{tabular}

@@ -1,39 +1,39 @@
 \subsection{Background Due to Charge Mis-identification}
 \label{sec:chargeMisID}
 
-As already stated, the events are divided into categories depending on the charge and flavor of the 3 selected leptons: 0SFOS,
-1SFOS and 2SFOS. When a lepton charge is mis-measured, 
+As already stated, the events are divided into categories depending on the charge and flavour of the 3 selected leptons: 0SFOS,
+1SFOS and 2SFOS. When a lepton charge is mismeasured, 
 an event containing 3 real leptons can be mis-classified in one of these categories, this is particularly important for the 0SFOS category, where the $WZ$ and $ZZ$ contamination originates mostly from the lepton charge mis-measurement.
 % as a 0SFOS event.
-The charge mis-identification (or charge mis-ID in the following) is found to be negligible for muons and impacts mostly electrons. For them
+The charge mis-identification (or charge misID in the following) is found to be negligible for muons and impacts mostly electrons. For them
 the effect is due to electrons that have gone through a
-hard bremsstrahlung followed by an asymmetric photon conversion, where only one of the two electrons is recorded: the one with an opposite charge compare to the original electron.
-To estimate the background from electron charge mis-ID, the probability of one electron with fake charge needs to be measured which is also called the charge mis-ID rate,. They are estimated using \Zee\ events
-selected from data. These rates are then applied on the $WZ$ and $ZZ$ MC samples to determine the contribution from charge mis-ID in the different signal regions. The methods will be described in detail below.
+hard bremsstrahlung followed by an asymetric photon conversion, where only one of the two electrons is reccorded: the one with an opposite charge compare to the original electron.
+To estimate the background from electron charge misID, the probability of one electron with fake charge needs to be measured which is also called the charge misID rate,. They are estimated using \Zee\ events
+selected from data. These rates are then applied on the $WZ$ and $ZZ$ MC samples to determine the contribution from charge misID in the different signal regions. The methods will be described in detail below.
 
 
 % (where SFOS means same flavor opposite sign
 % electrons).
-% When an electron charge is mis-measured, a $WZ$ or $ZZ$ event can
+% When an electron charge is mismeasured, a $WZ$ or $ZZ$ event can
 % be mis-classified as a 0SFOS event. Electrons that have gone through a
 % hard bremsstrahlung followed by a photon conversion can have their
-% charges mis-measured. This effect is found to be negligible for muons.
+% charges mismeasured. This effect is found to be negligible for muons.
 % To estimate the background from electron charge misidentification, we need to
 % measure the charge misidentification rates using \Zee\ events
 % selected from data. The methods will be described in detail below.
-% starting with the measurement of the charge mis-ID rate, its
+% starting with the measurement of the charge misID rate, its
 % uncertainties and its application.
 
 \subsubsection{Charge misidentification measurement}
 
 Two methods are used to measure the charge misidentification probability: The likelihood method, used for data and simulation, and the truth matching method, used to cross check the likelihood method in the simulated samples.
 
-% In data, the electron charge mis-ID rates are measured with a likelihood method.
+% In data, the electron charge misID rates are measured with a likelihood method.
 % In order to verify the likelihood method validity, the rates are determined from MC \Zee{}, using both the likelihood method and a truth method.
 % are also determined from MC\Zee\ samples, using both the likelihood method and a truth method.
 
 
-% The electron charge mis-ID rates are measured with data using a
+% The electron charge misID rates are measured with data using a
 % statistical method based on a likelihood. The method is applied on a \Zee\ MC
 % sample and the results are compared with the mischarge rates obtained
 % using MC truth information. The truth method is applied on \Zee\ MC
@@ -147,7 +147,7 @@ This comparison allow to see that the two sets of rates are compatible with stat
 % \includegraphics[width=0.8\textwidth]{figures/ChargeMisID/LL_TR_Com.eps}
 \includegraphics[width=0.8\textwidth]{figures/ChargeMisID/LL_TR_Com_new.eps}
 
-\caption{Comparisons of the charge mis-ID rates obtained with the likelihood method and the truth method. The two sets of rates shown here were both measured with the same \Zee\ MC sample.
+\caption{Comparisons of the charge misID rates obtained with the likelihood method and the truth method. The two sets of rates shown here were both measured with the same \Zee\ MC sample.
 Statistical errors are shown. The $x$ axis label is
   the $|\eta|$, \pt\ bin index, as defined in Table~\ref{tab:Etbin and Etabin of mis-charge rate}.}
   
@@ -163,12 +163,12 @@ Statistical errors are shown. The $x$ axis label is
 % method. The difference between these two sets of rates is taken into account as a systematic in the final measurement.
 %
 
- % \subsubsection{Estimation of the charge mis-ID rates in the data}
+ % \subsubsection{Estimation of the charge misID rates in the data}
 
 
-The mis-ID rates measured in data using the likelihood method are shown in Figure~\ref{fig:LL_Rates_Egamma}.
+The misID rates measured in data using the likelihood method are shown in Figure~\ref{fig:LL_Rates_Egamma}.
 
-% The likelihood method is then applied in the data to measure the charge mis-ID rates.
+% The likelihood method is then applied in the data to measure the charge misID rates.
 %  % using the skimmed data from Egamma stream.
 % % in Egamma stream we measure the data-driven rates with
 % % (\texttt{user.along528.data12\_8TeV.period*.physics\_EGamma.PhysCont.NTUP\_SMWWW.SMN2N\_2\\Lep\_v1\_EXT0}
@@ -180,7 +180,7 @@ The mis-ID rates measured in data using the likelihood method are shown in Figur
 % % veryLooseLL,looseLL,mediumLL,tightLL, or veryTightLL for electrons)
 % % and has a pt of at least 10 GeV.).
 %
-% They are measured using the same selection described above. This estimation is used as the central value for the charge mis-ID rates measurement. Figure~\ref{fig:LL_Rates_Egamma}, show the central value of the rate and their statistical error as a function of the $|\eta|$ and \pt\ bin index defined in Table~\ref{tab:Etbin and Etabin of mis-charge rate}.
+% They are measured using the same selection described above. This estimation is used as the central value for the charge misID rates measurement. Figure~\ref{fig:LL_Rates_Egamma}, show the central value of the rate and their statistical error as a function of the $|\eta|$ and \pt\ bin index defined in Table~\ref{tab:Etbin and Etabin of mis-charge rate}.
 
 % They are shown as a function of the \eta and \pt\ bin index defined in Table~\ref{tab:Etbin and Etabin of mis-charge rate}, in Figure~\ref{fig:LL_Rates_Egamma}.
 
@@ -188,7 +188,7 @@ The mis-ID rates measured in data using the likelihood method are shown in Figur
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/ChargeMisID/Egamma_LLB_new.eps}
-\caption{Electron charge mis-ID rates obtained from data with the likelihood method. Statistical errors are shown. The $x$ axis label is
+\caption{Electron charge misID rates obtained from data with the likelihood method. Statistical errors are shown. The $x$ axis label is
   the $|\eta|$, \pt\ bin index, as defined in Table~\ref{tab:Etbin and Etabin of mis-charge rate}.}
 
 % This is electron mis-charge rates measured from data with likelihood method and its statistic errors. Label on x axis is \eta, \pt\ bin indices.}
@@ -196,7 +196,7 @@ The mis-ID rates measured in data using the likelihood method are shown in Figur
 \end{figure}
 
 
- \subsubsection{Systematic effect on charge mis-ID rates due to background contamination}
+ \subsubsection{Systematic effect on charge misID rates due to background contamination}
 
 The contamination of non-$Z\rightarrow{}ee$ processes in the previous selection is taken into account as a systematic.
 
@@ -245,7 +245,7 @@ The two templates are then used on the invariant mass distribution of the electr
   [120,1000] &5.76 &5.71 &5.54 &5.76 &5.52 &5.61 &5.73 &5.98 &6.14  \\
   \hline
 \end{tabular}
-\caption{Systematic uncertainties on the central value charge mis-ID rates expressed in percent. These uncertainties were obtained considering the impact of the background contamination in the selection.}
+\caption{Systematic uncertainties on the central value charge misID rates expressed in percent. These uncertainties were obtained considering the impact of the background contamination in the selection.}
 % Numbers here are background systematics over central values
 %   in percent.}
 \label{tab:Charge_MisID_Bkg_Sys}
@@ -260,7 +260,7 @@ The rates with the final errors used in the analysis are shown in Figure~\ref{fi
  \begin{figure}[htp]
  \centering
  \includegraphics[width=0.8\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_PTvsEta_FinalRateWithSys.png}
- \caption{Electron charge mis-ID rates obtained from data with the likelihood method. All the errors are now shown. The $x$ axis label is
+ \caption{Electron charge misID rates obtained from data with the likelihood method. All the errors are now shown. The $x$ axis label is
   the $|\eta|$, \pt\ bin index, as defined in Table~\ref{tab:Etbin and Etabin of mis-charge rate}.}
  \label{fig:ChargeMisID_truthRate_finalFig}
  \end{figure}
@@ -326,9 +326,9 @@ are shown as a percent of the MC likelihood method.  These are transported to th
 
 Although the likelihood method, which is used to determined the rates from the data, was validated in MC using the truth method, it is quite important to validate the rates as much as possible, and to verify that if there are remaining differences they are covered within the systematic uncertainties that were assigned.
 
-%As already stated, the charge mis-ID rates are particularly important for the determination of the $WZ$ and $ZZ$ background contamination in the 0SFOS region. Therefore two more tests are conducted to test their validity.
+%As already stated, the charge misID rates are particularely important for the determination of the $WZ$ and $ZZ$ background contamination in the 0SFOS region. Therefore two more tests are conducted to test their validity.
 
-We performed a test to recompute the charge mis-ID rates using the truth method and a $WZ$ MC sample, and compare these new rates to the old one obtained with the $Z\to{}ee$ events. In principle, the charge mis-ID is mostly due to detector effects, and it is therefore not expected to see any differences using one physics process or another one, as long as the GEANT4 geometry of the detector that was used to generate the events is the same. To perform this study, given the lower statistic available in the $WZ$ MC sample a different binning is used, it is summarized in Table~\ref{tab:Etbin and Etabin of mis-charge rate for WZ comparisons}. The new rates obtained are compared in Figure~\ref{fig:ChargeMisID_truthRate_Zee_WZ}. In this figure only the statistical error of each measurement is shown. A very good agreement between the two sets of rates is observed.
+We performed a test to recompute the charge misID rates using the truth method and a $WZ$ MC sample, and compare these new rates to the old one obtained with the $Z\to{}ee$ events. In principle, the charge misID is mostly due to detector effects, and it is therefore not expected to see any differences using one physics process or another one, as long as the GEANT4 geometry of the detector that was used to generate the events is the same. To perform this study, given the lower statistic available in the $WZ$ MC sample a different binning is used, it is summarized in Table~\ref{tab:Etbin and Etabin of mis-charge rate for WZ comparisons}. The new rates obtained are compared in Figure~\ref{fig:ChargeMisID_truthRate_Zee_WZ}. In this figure only the statistical error of each measurement is shown. A very good agreement between the two sets of rates is observed.
 
 
 
@@ -356,14 +356,14 @@ We performed a test to recompute the charge mis-ID rates using the truth method 
  \begin{figure}[htp]
  \centering
  \includegraphics[width=0.8\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_PTvsEta_CompareSSRate.eps}
- \caption{Electron charge mis-ID rates obtained from MC $Z\to{}ee$ with the likelihood method are compared with rates obtained using the truth method in a MC $WZ$ sample. Errors shown here are purely statistics. The $x$ axis label is
+ \caption{Electron charge misID rates obtained from MC $Z\to{}ee$ with the likelihood method are compared with rates obtained using the truth method in a MC $WZ$ sample. Errors shown here are purely statistics. The $x$ axis label is
   the $|\eta|$, \pt\ bin index, as defined in Table~\ref{tab:Etbin and Etabin of mis-charge rate for WZ comparisons}.}
  \label{fig:ChargeMisID_truthRate_Zee_WZ}
  \end{figure}
 
 
 \subsubsection{Application and validation of rates}
-As already stated, the charge mis-ID rates are primarily important for the determination of the $WZ$ and $ZZ$ background contamination in the 0SFOS region. 
+As already stated, the charge misID rates are primarily important for the determination of the $WZ$ and $ZZ$ background contamination in the 0SFOS region. 
 Once derived, the rates are applied to $WZ$ and $ZZ$ MC samples based on whether or not a charge flip could cause the event to appear in the 0 SFOS region.  
 In particular, the following di-boson decays are considered:
 \begin{itemize}
@@ -427,10 +427,10 @@ is negligible which leaves the electron and the positron. Flipping the charge of
 this case $\Theta(\mu^{-}_1)=0$ and $\Theta(e^{+}_2)=\Theta(e^{-}_3)=1$. The event weight will then be the sum of the rates for $e^{+}_2$ and $e^{-}_3$.
 The probability that the electron has its charge flipped is then $\frac{\textrm{Rate}(e^{-}_3) }{ \textrm{Rate}(e^{+}_2)+ \textrm{Rate}(e^{-}_3)}$ and similarly for the positron.
 
-This procedure has been validated on the $WZ$ and $ZZ$ samples by comparing the predictions taken directly from MC to the predictions re-weighted in the 0 SFOS signal region using the procedure just described. This is done in Figure~\ref{fig:ChargeMisID_Validation_WZ} for the $WZ$ samples and on Figure~\ref{fig:ChargeMisID_Validation_ZZ} for the $ZZ$ samples. It can be seen the agreement in the shape looks good for all the distributions. An offset between the two distributions is observed. This difference is covered partially by the systematic uncertainties of the method.  Any remaining difference could be expected from the difference in rates observed at high $\eta$ and high $E_{T}$ as seen in Fig.~\ref{fig:ChargeMisID_truthRate_finalFig} and serves as justification for using the data-driven method.
+This procedure has been validated on the $WZ$ and $ZZ$ samples by comparing the predictions taken directly from MC to the predictions reweighted in the 0 SFOS signal region using the procedure just described. This is done in Figure~\ref{fig:ChargeMisID_Validation_WZ} for the $WZ$ samples and on Figure~\ref{fig:ChargeMisID_Validation_ZZ} for the $ZZ$ samples. It can be seen the agreement in the shape looks good for all the distributions. An offset between the two distributions is observed. This difference is covered partially by the systematic uncertainties of the method.  Any remaining difference could be expected from the difference in rates observed at high $\eta$ and high $E_{T}$ as seen in Fig.~\ref{fig:ChargeMisID_truthRate_finalFig} and serves as justification for using the data-driven method.
 
-There is no special treatment of the charge mis-identification contribution to other background contributions in the 0 SFOS region or to any contributions to the 
-1 and 2 SFOS signal regions, including di-boson processes, as the effect is expected to be very small.  Any charge mis-identification events are thus taken directly 
+There is no special treamtent of the charge mis-identification contribution to other background contributions in the 0 SFOS region or to any contributions to the 
+1 and 2 SFOS signal regions, including diboson processes, as the effect is expected to be very small.  Any charge mis-identification events are thus taken directly 
 from MC in this case.
 
 
@@ -443,7 +443,7 @@ from MC in this case.
  \includegraphics[width=0.4\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_WZ_Mee.png}
  \includegraphics[width=0.4\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_WZ_JetMultiplicity.png}
 
- \caption{Validation of the charge mis-ID rates comparing MC $WZ\rightarrow \ell ee$ ($\ell=e,\mu$) samples re-weighted with the charge mis-ID rates measured in the MC $Z\to{}ee$ 
+ \caption{Validation of the charge mis-ID rates comparing MC $WZ\rightarrow \ell ee$ ($\ell=e,\mu$) samples reweighted with the charge misID rates measured in the MC $Z\to{}ee$ 
  sample to the original MC predictions. Distribution of lepton $p_{T}$, $\eta$, $\Delta \phi(3l,E_{T}^{Miss})$,\met{}, Same-sign di-electron invariant mass, and jet multiplicity.}
  \label{fig:ChargeMisID_Validation_WZ}
  \end{figure}
@@ -458,7 +458,7 @@ from MC in this case.
  \includegraphics[width=0.4\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_ZZ_Mee.png}
  \includegraphics[width=0.4\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_ZZ_JetMultiplicity.png}
 
- \caption{Validation of the charge mis-ID rates comparing MC $ZZ\rightarrow \ell \ell ee$ ($\ell=e,\mu$) samples re-weighted with the charge mis-ID rates measured in the MC $Z\to{}ee$ 
+ \caption{Validation of the charge mis-ID rates comparing MC $ZZ\rightarrow \ell \ell ee$ ($\ell=e,\mu$) samples reweighted with the charge misID rates measured in the MC $Z\to{}ee$ 
  sample to the original MC predictions. Distribution of lepton $p_{T}$, $\eta$, $\Delta \phi(3l,E_{T}^{Miss})$,\met{}, Same-sign di-electron invariant mass, and jet multiplicity.}
  \label{fig:ChargeMisID_Validation_ZZ}
  \end{figure}
