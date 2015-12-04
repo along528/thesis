@@ -99,23 +99,23 @@ As a result, we choose to veto events where
 $b$-jets are present when looking in the signal regions.
 
 
-\subsection{Missing transverse energy}
-The missing transverse energy ($\MET$) used, when it is used, in this analysis is
-MET$\_$RefFinal. This quantity is reconstructed from calorimeter cells with $|\eta|<4.9$ and from muons. 
+The presence of neutrinos are inferred by the presence of a momentum
+imbalance in the transverse plane, referred to as the missing
+transverse energy or $\MET$. The $\MET$ is calclulated by 
+adding up all of 
+the energy deposits from calorimeters cells within $|\eta| < 4.9$
+and then calibrating them based on the the reconstructed
+physics object they are associated with.
+If the association is ambiguous then they are chosen based on the following
+preference (from most preferred to least): electron, photons, 
+hadronically decaying $\tau$-leptons, jets, and muons.
+If the calorimeter deposit is not associated with any physics object
+they are still considered using their own calibration.
+The sum is modified to take into account the momentum of muons,
+which typically leave trace energy deposits
+in the calorimeter without being completely stopped.
 
-Calorimeter cells are calibrated according to the reconstructed physics
-objects to which they are associated. The cells are associated to
-objects in a certain order: electrons, photons, hadronically decaying
-$\tau$-leptons, jets and muons. Cells not associated with any such
-objects are also taken into account in the \MET calculation as the cell-out term.
-% for cells
-%  as a soft term.
-Finally, the muon momenta are added in the \MET{} calculation to take into account their contributions in the events.
 
-The calibrations and corrections (e.g. momentum smearing) mentioned above and applied on electrons, muons and jets are propagated in the \MET{} calculation for MC simulations.
-
-
-\subsection{Overlap removal}
 
 It is possible that the reconstructed electrons, muons, and/or jets
 may overlap with each other inside the detector.  This can occur
@@ -127,12 +127,11 @@ scheme in order of precedence:
 	\item Electron-Jet Overlap: If $|\Delta R(e,j)| < 0.2$ keep the electron and throw away the jet.
 	\item Muon-Jet Overlap: If $|\Delta R(\mu,j)| < 0.2$ keep the muon and throw away the jet
 \end{itemize}
-For electrons, the direction is taken from the only the electron calorimeter
+For electrons, the direction is taken only from the electron calorimeter
 information.  Muons use the full combined track information while jets
-use the direction taken from the anti-k$_{\mathrm{T}}$  algorithm with
-a constant energy scale. No momentum smearing or calibration corrections
+use the direction taken from the anti-k$_{\mathrm{T}}$  algorithm.
+No momentum smearing or calibration corrections
 are applied to the reconstructed object directions. 
-
 Using this scheme means that a precedence is set when 
 reconstructed objects overlap such that $\mu > e > j$ where '$>$' should
 be interpreted to mean 'is kept instead of'. The motivation for this scheme
@@ -148,6 +147,6 @@ reconstruction also relies on matching with a well defined inner detector
 track.  It is thus assumed that if an electron overlaps with a reconstructed
 jet that this is more likely to be the signature of a high energy electron.
 Finally, if a muon overlaps with a jet, the muon could come from a heavy flavor 
-decay. In this occurs, we choose to keep the event and consider only the muon.
+decay. If this occurs, we choose to keep the event and consider only the muon.
 
 
