@@ -1,75 +1,77 @@
-\section{Event selection}
-\label{sec:eventSelection}
+\section{Event Selection}
+\label{sec:event_selection}
 
-\subsection{Event Pre-selection}
+The expected number of signal events in the data is expected
+to be very small compared to the total dataset. %give a number
+Fortunately, the three lepton signature of the signal allows us to
+quickly throw out many events which do not looke like the signal.
+Still, this signature is not unique enough that the background
+is small. Thus, we must devise a clever way to discriminate 
+between the signal and these backgrounds. We select
+events in two stages: first we start
+by selecting events which have the general signature of the signal, 
+this is referred to as the pre-selection stage; then we 
+use more stringent cuts to discriminate between the signal and backgrounds, 
+referred to as our signal region selection.
+The signal region selection is determined starting from the pre-selection
+stage by performing an optimization procedure that minimizes the uncertainty
+on the final measurement.  This is described in \sec....
+The signal region selection is further divided into different
+categories that are each used in the final measurement
+which allows us to specially treat the different backgrounds
+in each category.  
+The selections used are described in more detail below.
+
+
+
+
+\subsection{Pre-selection}
 \label{sec:preselection}
 
-The events undergo a first set of event pre-selection cuts to be considered in the analysis. In the rest of this document this minimal selection will be referred to as ``event pre-selection''. Events must pass each of the following cuts:
+The pre-selection is determined as a broad selection which throws
+away backgrounds that do not at all resemble the signal process.
+It is mainly characterized by requiring the presence of exactly three leptons
+(electron or muon) following the requirements listed above in 
+\sec\ref{sec:object_selection}, each with a $\pt$ of at least $20~\GeV$.
+In addition, the events are required to be of good quality. This means
+that the events were collected under good conditions during data taking,
+both from the LHC operation and ATLAS detector operation. For instance,
+during the 2012 data collection, the LAr component of the EM calorimeter
+was know to occassionally produce artificial bursts of noise. These instances
+were tracked and events where this occured were thrown away. The event is 
+also required to have a primary vertex with at least three associted tracks.
+Finally, the event is required to pass the single lepton trigger
+requirements already listed in \sec\ref{sec:subsection_data} where 
+at least one of the three leptons selected caused the trigger to fire.
 
-\begin{itemize}
-	\item Good run list: As stated in Section~\ref{sec:subsection_data}, the data must pass a selection ensuring that the detector and LHC conditions were good enough to introduce no selection bias.
-	\item Event cleaning: The events where the LAr or Tile calorimeters have had functional problems during the data taking are explicitly vetoed. This is done using the following logic:
-	\begin{itemize}
-		\item Noise bursts in LAr calorimeters: reject if \url{larError==2}
-		\item Corrupted events in the tile calorimeter: reject if \url{tileError==2}
-		\item Events where tile drawer were off: reject if \url{TTileTripReader::checkEvent()==1}
-		% \item Events where tile drawer were off: reject if \url{TTileTripReader::checkEvent(unsigned\ int\ run,\ unsigned\ int\ lbn, unsigned int event)}		
-	\end{itemize}
-		
-	\item Primary vertex: The event must contain a primary vertex with 3 tracks.
-	\item \met{} cleaning: If an event contains jets close to a badly behaving calorimeter region, it is vetoed, in order to avoid any bias on the \met{} measurement.
-	\item Trigger: The event must pass one of the lowest un-prescaled single lepton trigger items: EF\_e24vhi\_medium1, EF\_e60\_medium1 or EF\_mu24i\_tight, or EF\_mu36\_tight. Tests were done to add di-lepton trigger items with lower \pt\ threshold, but they turned out to increase the signal selection efficiency by a minimal amount ($\approx{}5\%$), while this considerably complicating the analysis. They were therefore not considered further.
-	\item 3 leptons selection: The event selected must contain exactly three leptons with $\pt>20~\GeV$.
-	\item Trigger matching:	At least one of the leptons must have fired the trigger, and it is required that it's transverse momentum is greater than the threshold fired adding $1~\GeV$ if it does. As stated earlier, the events are corrected for trigger efficiencies measured in data.
-\end{itemize}
-
-	
-
-% An event is considered in the analysis if it follows the usual data
-% quality requirements used in the ATLAS analysis.  The event must
-% belong to a run and a luminosity block, where the detector and LHC
-% conditions were found to be good. The events where the LAr or Tile
-% calorimeters are misbehaving are explicitly vetoed.  If an event
-% contains jets close to a badly behaving calorimeter region, it is
-% vetoed, in order to avoid any bias on the \met measurement.
-%
-% The event selected must contain exactly three leptons with a
-% $\pt>15~\GeV$. They must pass one of the lowest prescaled single
-% lepton trigger items: EF\_e24vhi\_medium1, EF\_e60\_medium1 or
-% EF\_mu24i\_tight, or EF\_mu36\_tight. At least one of the leptons must
-% have fired the trigger, and it is required that it has $\pt>25~\GeV$
-% if it does.
-
-% The analysis is further categorized based on the number of Same Flavor
-% Opposite Signal (SFOS) pairs present in the event.
-
-% \subsection{Optimization}
-%
-% \clearpage
-\subsection{Signal regions}
+\subsection{Signal Region Selection}
 \label{sec:signal_regions}
-%
-\subsubsection{Same-Flavor Opposite-Sign Lepton pairs}
-\label{sec:sfos}
 The signal regions used in this analysis are separated based on the number of 
 Same-Flavor Opposite-Sign (SFOS) lepton pairs selected in the event.  That is to say,
 the number of lepton pair combinations in the event 
 which could feasibly come from the leptonic decay of a $Z$-boson.
-This results in three separate signal regions listed below with the lepton charge combinations
+This results in three separate signal regions listed 
+below with the lepton charge combinations
 which fall in each category:
 \begin{itemize}
-\item \textbf{0 SFOS}: $e^{\pm}e^{\pm}\mu^{\mp}$, $\mu^{\pm}\mu^{\pm}e^{\mp}$ ($e^{\pm}e^{\pm}\mu^{\pm}$, $\mu^{\pm}\mu^{\pm}e^{\pm}$, $e^{\pm}e^{\pm}e^{\pm}$, $\mu^{\pm}\mu^{\pm}\mu^{\pm}$)
-\item \textbf{1 SFOS}: $e^{\pm}e^{\mp}\mu^{\pm}$, $e^{\pm}e^{\mp}\mu^{\mp}$, $\mu^{\pm}\mu^{\mp}e^{\pm}$, $\mu^{\pm}\mu^{\mp}e^{\mp}$
+\item \textbf{0 SFOS}: $e^{\pm}e^{\pm}\mu^{\mp}$, 
+$\mu^{\pm}\mu^{\pm}e^{\mp}$ ($e^{\pm}e^{\pm}\mu^{\pm}$, 
+$\mu^{\pm}\mu^{\pm}e^{\pm}$, $e^{\pm}e^{\pm}e^{\pm}$, $\mu^{\pm}\mu^{\pm}\mu^{\pm}$)
+\item \textbf{1 SFOS}: $e^{\pm}e^{\mp}\mu^{\pm}$, 
+$e^{\pm}e^{\mp}\mu^{\mp}$, $\mu^{\pm}\mu^{\mp}e^{\pm}$, $\mu^{\pm}\mu^{\mp}e^{\mp}$
 \item \textbf{2 SFOS}: $e^{\pm}e^{\pm}e^{\mp}$, $\mu^{\pm}\mu^{\pm}\mu^{\mp}$
 \end{itemize}
-Note that in the 2 SFOS region, one lepton is allowed to belong to both pair combinations.
+Note that in the 2 SFOS region, one lepton is allowed to belong to both 
+pair combinations.
 Those combinations listed in parentheses are not allowed for the signal based on charge conservation (neglecting charge mis-identification).  
 The amount of the $W^{\pm}W^{\mp}W^{\pm}$ signal
 which falls into each category is purely combinatoric.  
-From the above list one can thus see that there are twice as many ways for the signal combinations (again neglecting those in parentheses)
+From the above list one can thus see that there are twice as many ways 
+for the signal combinations (again neglecting those in parentheses)
 to fall in the 1 SFOS regions as there to fall in either the 0 SFOS or 2 SFOS regions. 
-Absent possible difference in signal efficiencies based on the leptons in each 
-signal region, one should expect branching fractions of 25\%, 50\% and 25\% for the 0, 1, and 2 SFOS signal regions, respectively.
+Absent possible differences in signal efficiencies based on the leptons in each 
+signal region, one should expect branching 
+fractions of 25\%, 50\% and 25\% for the 0, 1, and 2 SFOS signal regions, respectively.
 
 The advantage of splitting the signal region based on this
 classification comes when looking at the background, specifically the
@@ -103,7 +105,7 @@ note that while the 1 SFOS region contains more of the signal than the
 0 and 2 SFOS regions, it is the 0 SFOS region which is most likely to
 have the best sensitivity due to the smaller background contribution.
 
-\subsubsection{Signal Region Selections}
+STOP
 
 The final signal selection cuts are determined using an optimization
 procedure which considers both the signal yield as well as the uncertainty
