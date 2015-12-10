@@ -43,7 +43,6 @@ also required to have a primary vertex with at least three associted tracks.
 Finally, the event is required to pass the single lepton trigger
 requirements already listed in \sec\ref{sec:subsection_data} where 
 at least one of the three leptons selected caused the trigger to fire.
-
 \begin{figure}[ht!]
 \centering
 %\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_physics/weight_all/eps/AllLeptonPt_histratio.eps}
@@ -92,20 +91,20 @@ which has the largest transverse momentum out of all three leptons selected.
 which has the second largest transverse momentum out of all three leptons selected.
 \item Lepton $P_{T}^{3}$:  The momentum of the lepton in the transverse plane
 which has the smallest transverse momentum out of all three leptons selected.
-\item $E_{T}^{Miss}$:  The missing transverse energy
-\item $\Delta\varphi(lll,E_{T}^{Miss})$:  The difference in the polar angle 
+\item \MET:  The missing transverse energy
+\item $\Delta\varphi(lll,\MET)$:  The difference in the polar angle 
 between the three lepton $p_{T}$, 
 $\overrightarrow{p_{T}^{lll}} =  \overrightarrow{p_{T}^{1}}+ 
 \overrightarrow{p_{T}^{2}}+ \overrightarrow{p_{T}^{2}}$, 
-and $E_{T}^{Miss}$. It can be expressed as 
-$\Delta\varphi(lll,E_{T}^{Miss}) = \cos^{-1}\frac{ \overrightarrow{p_{T}^{lll}}\cdot\overrightarrow{E_{T}^{Miss}} }{ p_{T}^{lll}E_{T}^{Miss} } $
+and \MET. It can be expressed as 
+$\Delta\varphi(lll,\MET) = \cos^{-1}\frac{ \overrightarrow{p_{T}^{lll}}\cdot\overrightarrow{\MET} }{ p_{T}^{lll}\MET } $
 \item SFOS Invariant Mass ($m_{\textrm{SFOS}}$): The di-lepton invariant mass
 of each SFOS lepton pair in the event. %do i need to define the invariant mass?
 \item Three Lepton $m_{T}$: The transverse mass of the three lepton system
 and the missing transverse energy, or
-$m_{T}^{lll} = \sqrt{2p_{T}^{lll}E_{T}^{Miss}(1-\cos(\Delta\varphi(lll,E_{T}^{Miss})))}$ 
+$m_{T}^{lll} = \sqrt{2p_{T}^{lll}\MET(1-\cos(\Delta\varphi(lll,\MET)))}$ 
 \item $N_{\textrm{Jet}}$: The number of jets selected in the event.
-\item $N_{b-\textrm{Jet}}$: The number of $b$-jets tagged in the event.
+\item $N_{b-\textrm{Jet}}$: The number of \bee-jets tagged in the event.
 \item $N_{\mu}$: The number of selected leptons that are muons. The maximum
 possible is 3. If the lepton is not a muon it must be an electron.
 \end{itemize}
@@ -228,12 +227,11 @@ earlier:
 %Do I need to add more plots here???
 \begin{itemize}
 \item Lepton $P_{T}$:  Require that exactly three leptons passing tight object quality requirements have a $P_{T} > X$.
-\item Missing $E_{T}$:  Require that $E_{T}^{Miss} > X$.
-\item $\Delta\varphi(lll,E_{T}^{Miss})$:  Require that $\Delta\varphi(lll,E_{T}^{Miss}) = \cos^{-1}\frac{ \overrightarrow{p_{T}^{lll}}\cdot\overrightarrow{E_{T}^{Miss}} }{ p_{T}^{lll}E_{T}^{Miss} } > X$.
+\item Missing $E_{T}$:  Require that $\MET > X$.
+\item $\Delta\varphi(lll,\MET)$:  Require that $\Delta\varphi(lll,\MET) = \cos^{-1}\frac{ \overrightarrow{p_{T}^{lll}}\cdot\overrightarrow{\MET} }{ p_{T}^{lll}\MET } > X$.
 \item Jet Veto: Require that $N_{Jet} \leq X$.
 \item b-Jet Veto: Require that $N_{b-Jet} \leq X$.
-%\item Z Veto: Require that $m_{ll}$ does not fall in the region $m_{Z}-m_{min} < m_{ll} < m_{Z}-m_{max}$ where $m_Z = 91.1876$~GeV and where $m_{min}$ are $m_{max}$ are the boundaries of the Z-window with which to veto.  For the 1 and 2 SFOS regions the pairs used to construct the $m_{ll}$ are SFOS pairs of either electrons or muons.  In the 0 SFOS region there are no SFOS pairs by definition but there is still a Z-peak in the same-sign di-electron mass spectrum due to charge mis-id. Thus, in the 0 SFOS region we consider instead
-same-sign electron pairs.
+%\item Z Veto: Require that $m_{ll}$ does not fall in the region $m_{Z}-m_{min} < m_{ll} < m_{Z}-m_{max}$ where $m_Z = 91.1876$~GeV and where $m_{min}$ are $m_{max}$ are the boundaries of the \z-window with which to veto.  For the 1 and 2 SFOS regions the pairs used to construct the $m_{ll}$ are SFOS pairs of either electrons or muons.  In the 0 SFOS region there are no SFOS pairs by definition but there is still a \z-peak in the same-sign di-electron mass spectrum due to charge mis-id. Thus, in the 0 SFOS region we consider instead
 \item Three Lepton $m_{T}$: Require that $m_{T}^{lll} > X$
 %\item Same-flavor mass: Consider cuts on $m_{SF} > m_{min}$ and/or $m_{SF} < m_{max}$ where $m_{SF}$ is the invariant mass of same-flavor pairs (with no requirement on the sign) %what about this one?
 \end{itemize}
@@ -366,9 +364,30 @@ to find an optimial choice for the selection.
 
 %I should redo the optimization for the specific bin sizes and list them
 
-The shape of the optimization can be seen in \fig\ref{}.
-STOP
+The shape of the optimization can be seen in \fig\ref{fig:optimization}.
+\emph{Figures need to be reproduced. Elaborate...} 
 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
+\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
+\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
+\caption{Signal Yield vs Measurement Uncertainty for optimized points 
+in the 0 SFOS (left), 1 SFOS (middle), and 2 SFOS (right) signal regions.}
+\label{fig:optimization}
+\end{figure}
+
+
+
+\begin{table}[ht!]
+\centering
+\begin{tiny}
+\input{tables/optimized_signal_selection.tex}
+\end{tiny}
+\caption{Optimized signal selection split by number of Same-Flavor Opposite-Sign (SFOS) lepton pairs.}
+\label{tab:signal_selection}
+\end{table}
 
 %other metrics like what?
 
@@ -387,93 +406,162 @@ STOP
 
 
 
-In all regions, 
-a veto is applied on events with jets tagged to come from b or b-hadron decays. The highest
-efficiency operating point that is supported by the b-tagging group is used,
-which has a b-tagging efficiency of 85~\%.  This also increases the mis-identification efficiency, 
-but it remains manageable at about 1~\%. Even with some jet mis-identification, the signal has
-a very high efficiency of passing this cut of $> 99$~\% while offering some of the strongest 
-reduction in the fake lepton background. On top of the b-jet veto, there is an additional
-cut on the jet multiplicity, regardless of the whether or not the jet is tagged. By only keeping
-events with no more than one jet, the signal efficiency is almost $90$~\% while reducing
-the background by about 50~\%.  Applying a veto on all jets does a very good job at removing the fake lepton
+From the optimization, a final selection is chosen separately for each signal
+region.  This selection is presented in \tab\ref{tab:signal_selection}.
+In all regions, a veto is applied on events with jets tagged to come from \bee~
+or \bee-hadron decays. Besides the nominal \bee-tagging operating
+point with an 85~\% \bee-tagging efficiency (mentioned in
+\sec\ref{sec:object_selection}), other 
+\bee-tagging efficiency operating points
+were considered that had a lower efficiency (namely 80\%, 70\%, and 60\%). 
+These other operating points could be useful if the \bee-tagging mis-identification
+was high enough to remove a significant portion of the signal. However,
+even at the 85~\% operating point
+the mis-identification efficiency remains manageable at about 1~\%. 
+Even with some jet mis-identification, the signal has
+a very high efficiency of passing this 
+cut of $> 99$~\% while offering some of the strongest 
+reduction in the fake lepton background. 
+Thus there is no benefit observed by going to a lower efficiency operating point.
+The analysis could potentially benefit from an even more stringent 
+operating point, but the highest
+efficiency operating point that is supported by the ATLAS
+\bee-tagging group is the 85~\% efficiency operating point.
+In addition to the the \bee-jet veto, there is an additional
+cut on the jet multiplicity, regardless of whether or not 
+the jet is tagged. By only keeping
+events with no more than one jet, 
+the signal efficiency is almost $90$~\% while reducing
+the background by about 50~\%.  Applying a veto on 
+all jets does a very good job at removing the fake lepton
 background, but the signal efficiency is prohibitively small, at about 60~\%. 
 
-A Z-veto is applied in each signal region, 
-each which have slightly different specifications and mass windows
-as chosen by the optimization. In the 1 and 2 SFOS regions, the Z-veto is performed
-by looking at the invariant mass of SFOS pairs. In the 2 SFOS region, both sets of pairs
-are considered and the event is vetoed if either fall within the mass window.  In the 
-1 SFOS region, there is a larger contribution from $Z\gamma$ processes than in the 2 SFOS
-region.  This process mostly shows up in the low shoulder of the Z peak. The optimization
-prefers removing this $Z\gamma$ contribution by setting an asymmetric Z-window in the 1 SFOS
-region, with the boundaries being 35~GeV below the Z-pole and 20~GeV above. In the 2 SFOS region,
-the $Z\gamma$ contribution is not as prominent and the optimization happens to prefer a symmetric
-window of $\pm20$~GeV around the Z-pole.  In the 0 SFOS region there are no SFOS pairs by definition,
-but there is still a peak in the same-sign electron-electron mass distribution due to charge mis-identification.
-The optimization prefers a slightly narrower symmetric window of $\pm15$~GeV around the Z-pole. In all cases
-the mass used for the Z-pole is $m_{Z}=91.1876$~GeV as taken from the PDG~\cite{PDG:2014}. 
 
-The signal is characterized by having a large missing $E_{T}$ component.  Therefore, we also 
-optimized our the threshold for selecting this quantity separately for each signal region. 
-In the 1 and 2 SFOS regions, a missing $E_{T}$ threshold is preferred around $40-60$~GeV.
-The missing $E_{T}$ cut also does a good job of cutting out some of the $Z\gamma$ background in the 1 
-SFOS region.  As a result, the Z-veto and missing $E_{T}$ cuts are correlated.  The optimization
-procedure takes into account this correlation by cutting considering variations of the Z-veto window
-and missing $E_{T}$ threshold together.  As a result, the optimization prefers to keep the missing $E_{T}$ 
-cut a little loose in the 1 SFOS region, with a threshold of $E_{T}^{Miss} > 45$~GeV,
-while applying the asymmetric Z-veto already discussed as the best 
-way to get rid of the $Z\gamma$ contribution.  In the 2 SFOS region the looser Z-veto allows for a tighter
-missing $E_{T}$ cut with a threshold of $E_{T}^{Miss} > 55$~GeV. The 0 SFOS region is peculiar in that it is 
-dominated by the fake lepton background.  This background turns out to have a similar missing $E_{T}$ distribution
-as the signal. As a result, cutting on the missing $E_{T}$ in this region offers little to no discriminating power
-between the signal and background so we have chosen not to apply any cut here in order to maximize the signal yield.
+%should this description be moved earlier
+Some of the backgrounds include the production of \z~bosons.
+The invariant mass of the \z-boson can be reconstructed from the SFOS
+pair coming from the \z-boson decay. This will result in a peak from these backgrounds
+in the invariant mass distribution around the $Z$-mass ( $m_{Z}=91.1876$~GeV \cite{PDG:2014}).
+The signal, which does not include $Z$-bosons, will not have the same peak, but instead
+will be relatively flat around the region of the $Z$-peak. 
+This can clearly be seen in the plot of $m_{\textrm{SFOS}}$ in \fig\ref{fig:preselection}.
+As a result, removing events within some window around the peak can do a good job
+of removing these bacgkrounds without having a large effect on the signal.
+In the 0 SFOS region, by definition there are no SFOS pairs that could come 
+from the decay of a \z-boson. However, the effect of elecron charge mis-identification,
+discussed in \sec\ref{}, means that a peak can show up in the background
+of the $m_{ee}$ distribution for same-sign electron/positron pairs. 
+This can clearly be seen in \fig\ref{}.
+Thus, a veto can be performed in this distribution as well.
 
+The presence of neutrinos in the signal mean that the signal should have a 
+relatively large \MET~compared to most of the backgrounds. Thus, 
+cutting on the \MET~distribution such that it is large can remove backgrounds
+expected to have small \MET, like $Z\gamma$ production.
+Still, there are some large backgrounds with neturinos, like $WZ$, 
+and also backgrounds that have contributions to the \MET from objects that have
+missed reconstruction, like $ZZ$, which can also have a moderate to large \MET.
+Thus, some care must be taken to choose a threshold to cut on in the \MET.
 
-The signal is characterized by having three charged leptons and three neutrinos.  The magnitude and direction
-of the missing $E_{T}$ may be interpreted as coming from the vector sum of the neutrinos.  By arguments of 
-symmetry, one could then compare the azimuthal direction of the missing $E_{T}$ to the azimuthal direction of the vector
-sum of the three charged leptons. When doing so, one finds that in the transverse plane, 
-the direction of the three charged leptons
-tends to be back-to-back with the direction of the three neutrinos (missing $E_{T}$). To some extent, the
-backgrounds also show this behavior, but it is less pronounced than it is for the signal.  As a result, 
-there is some discriminating power when cutting on the difference in the two angles: 
-$|\Delta\phi(3l,E_{T}^{Miss})| = |\phi(3l)-\phi(E_{T}^{Miss})|$. The behavior of this quantity for signal and
-background is similar in all three signal regions so based on the optimization it was chosen to apply the cut
-$|\Delta\phi(3l,E_{T}^{Miss})| > 2.5$ everywhere.  We also considered taking the difference in angle between
-the missing $E_{T}$ and individual leptons (e.g. the highest $\pt$ lepton) but this was shown to be not 
-nearly as effective.  
-
-Finally, the distribution of same-flavor lepton pairs (regardless of sign) was considered in the 0 SFOS 
-region to remove any low-mass contamination from processes like from QCD.  This was shown to offer some
-modest discriminating power and a threshold of $m_{SF} > 20$~GeV was chosen only for the 0 SFOS region.
-
-
-The optimized selection for each signal region is summarized in Table~\ref{tab:signal_selection}.
-More details about the optimization procedure and the cuts used 
-can be found in appendix~\ref{sec:optimization}.
-
-\begin{table}[ht!]
+\begin{figure}[ht!]
 \centering
-\begin{small}
-\input{tables/optimized_signal_selection.tex}
-\end{small}
-\caption{Optimized signal selection split by number of Same-Flavor Opposite-Sign (SFOS) lepton pairs.}
-\label{tab:signal_selection}
-\end{table}
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/MET_Et_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/InvariantMassSFOS_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/MET_Et_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/InvariantMassSFOS_histratio.png}
+\caption{Plots of the \MET (left) and $m_{\textrm{SFOS}}$ (right) distributions 
+in the 1 SFOS (top) and 2 SFOS (bottom) regions after pre-selection
+plus the \bee-veto requirement.}
+\label{fig:met_zwindow_optimization}
+\end{figure}
 
-\clearpage
-\subsubsection{Fiducial Cross-sections}
-\label{sec:fiducial_cross_section}
+The $Z\gamma$ background shows up in the low-shoulder of the \z peak
+in the $m_{\textrm{SFOS}}$ distribution and at low MET. This can be
+seen both for the 1 and 2 SFOS regions in \fig\ref{fig:met_zwindow_optimization}.
+As a result, the $Z\gamma$ background can be removed either by tuning 
+the \z-mass window used in the veto above, or by removing events with low \met.
+Thus, the optimization shows that there is some correlation 
+between the \z-veto window and the \met selection threshold. 
+In the 1 SFOS region, there is a larger 
+contribution from $Z\gamma$ processes than in the 2 SFOS
+region.  This process mostly shows up in the low shoulder 
+of the \z~ peak. The optimization
+prefers removing this $Z\gamma$ contribution by setting an 
+asymmetric \z-window in the 1 SFOS
+region, with the boundaries being 35~GeV below the \z-pole 
+and 20~GeV above and then keeping the \MET cut a little loose, with a 
+threshold of $\MET > 45$~GeV.  Meanwhile, in the 2 SFOS region,
+the $Z\gamma$ contribution is not as prominent and the 
+optimization happens to prefer a symmetric
+window of $\pm20$~GeV around the \z-pole.  
+The looser \z-veto then allows for a tighter
+missing $E_{T}$ cut with a threshold of $\MET > 55$~GeV. 
+In the 0 SFOS region there 
+are no SFOS pairs by definition,
+but there is still a peak in the same-sign electron-electron mass 
+distribution due to charge mis-identification.
+The optimization prefers a slightly narrower symmetric window 
+of $\pm15$~GeV around the \z-mass. 
+Further, as already mentioned,
+this background turns out 
+to have a similar missing $E_{T}$ distribution
+as the signal. As a result, cutting on the missing $E_{T}$ in this region 
+offers little to no discriminating power
+between the signal and background so we have chosen not to apply 
+any cut here in order to maximize the signal yield.
 
 
-Fiducial regions are defined for each channel which are designed to be close to the reconstruction
+%this description probably belongs in an earlier section
+The magnitude and direction
+of the missing $E_{T}$ may be interpreted as coming from the 
+vector sum of the neutrinos.  By arguments of 
+symmetry, one could then compare the azimuthal direction 
+of the missing $E_{T}$ to the azimuthal direction of the vector
+sum of the three charged leptons. When doing so, one finds that 
+in the transverse plane, 
+the direction of the three charged leptons
+tends to be back-to-back with the direction of the 
+three neutrinos (missing $E_{T}$). To some extent, the
+backgrounds also show this behavior, but it is less pronounced than 
+it is for the signal.  As a result, 
+there is some discriminating power when cutting on the difference 
+in the two angles: 
+$|\Delta\phi(3l,\MET)| = |\phi(3l)-\phi(\MET)|$. 
+The behavior of this quantity for signal and
+background is similar in all three signal regions so based on the 
+optimization it was chosen to apply the cut
+$|\Delta\phi(3l,\MET)| > 2.5$ everywhere.  
+We also considered taking the difference in angle between
+the missing $E_{T}$ and individual leptons (e.g. the highest $\pt$ lepton) 
+but this was shown to be not nearly as effective.  
+
+Finally, the distribution of the invariant mass
+from same-flavor lepton pairs (regardless of sign) 
+was considered in the 0 SFOS 
+region to remove any low-mass contamination from processes like from QCD.  
+This was shown to offer some
+modest discriminating power and a threshold of $m_{SF} > 20$~GeV 
+was chosen only for the 0 SFOS region.
+
+
+Fiducial regions are defined  for each channel which are designed to 
+be close to the reconstruction
 level signal selection from Table~\ref{tab:signal_selection}.  
-The fiducial selections are determined at truth level using Rivet \cite{Buckley:2010ar}.
+The fiducial selections are determined at truth level using 
+Rivet \cite{Buckley:2010ar}.
 %copied from semi-leptonic note since we are using the same code.
-Only prompt leptons (those not originating from hadron decays) are used for lepton selections, and these leptons are dressed with prompt photons within a cone with $\Delta R = 0.1$. Generator-level jets are reconstructed by running the anti-kt algorithm with radius parameter $\Delta R = 0.4$ on all final-state particles after the parton showering and hadronization with the exception of prompt leptons, prompt photons, and neutrinos. The MET variable is calculated using all generator-level neutrinos. 
-Events are removed if $\tau$ leptons are present from the $W$ decays.  Thus, the fiducial cross-section
-does not include the branching fraction to $W\rightarrow\tau\nu$ decay, even though there will be some contamination from this process in the final reconstruction level selection. The final fiducial selection is presented
+Only prompt leptons (those not originating from hadron decays) are used for 
+lepton selections, and these leptons are dressed with prompt photons within a 
+cone with $\Delta R = 0.1$. Generator-level jets are reconstructed by running the 
+anti-kt algorithm with radius parameter $\Delta R = 0.4$ on all final-state particles 
+after the parton showering and hadronization with the exception of prompt 
+leptons, prompt photons, and neutrinos. The MET variable is calculated using all 
+generator-level neutrinos. 
+Events are removed if $\tau$ leptons are present from the $W$ decays.  
+Thus, the fiducial cross-section
+does not include the branching fraction to $W\rightarrow\tau\nu$ decay, 
+even though there will be some contamination from this process in the final 
+reconstruction level selection. The final fiducial selection is presented
 for each channel in Table~\ref{tab:fiducial_selection}.
 
 %i could put the actual fiducial cross-sections here
@@ -481,21 +569,20 @@ for each channel in Table~\ref{tab:fiducial_selection}.
 
 \begin{table}[ht!]
 \centering
-\begin{footnotesize}
+\begin{tiny}
 \input{tables/fiducial_selection.tex}
-\end{footnotesize}
+\end{tiny}
 \caption{Fiducial regions based on optimized selection.}
 \label{tab:fiducial_selection}
 \end{table}
 
 %need to add references to the MadGraph samples in the sample section
-The fiducial cross-sections are evaluated in the VBFNLO samples mentioned in Section~\ref{sec:signal} and compared
-to another set of samples generated using MadGraph at NLO in QCD. Unlike the VBFNLO signal samples, which are 
-generated only include the leptonic decays of the W boson, the MadGraph samples include all W boson decays, including hadronic decays. The VBFNLO samples, generated at LO, include interference effects between non-resonant production to three Ws and to resonant production to $WH\rightarrow WWW(*)$ while the NLO MadGraph samples do not, generating the two separately. As measured at truth level from the MadGraph samples, resonant production is observed to contribute about 50-60\% to
-the fiducial cross-section in each channel, even though it contributes about 90\% of the total cross-section.  A summary of the signal sample phase space and cross-sections is
+The fiducial cross-sections are evaluated in both the \vbfnlo~and \madgraph~samples mentioned in 
+Section~\ref{sec:signal}.
+A summary of the signal sample phase space and cross-sections is
 presented in Table~\ref{tab:signal_sample_summary}.
-
-The derived fiducial cross-sections using the two generators are shown in Table~\ref{tab:fiducial_cross_sections}.  The cross-sections are observed
+The derived fiducial cross-sections using the two generators are 
+shown in Table~\ref{tab:fiducial_cross_sections}.  The cross-sections are observed
 to be in good agreement between the two generators. The MadGraph NLO
 fiducial cross-sections are used in the final measurement.
 % it would probably be a good idea to include the fiducial cut-flows as well.

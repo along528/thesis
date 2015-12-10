@@ -1,0 +1,20 @@
+
+Thoughts on signal region descriptions:
+-I have some text describing in detail the motiviation for some of these distributions,
+but they are showing up too late. Perhaps I could put them next to the list of 
+cuts, or just replace the list with these descriptions. 
+-The efficiency plots are not shown for all of the distributions considered. In particular
+there is no distribution showing the efficiency on the Z window. I should show this as
+I think I have it lying around. Or I could just recompute them. I could also just
+treat these  plots as examples and not try to make this description so detailed.
+-The fiducial cross-section description is now immediately following the signal
+selection and optimization description. Is that what I want? Regardless, the description
+needs revision.
+-Where should the signal yield plots, tables, and cutflows go? along with the description of these?
+Just after the event selection? In a new section?
+-Could I include more plots to motivate the optimization selection like I did for the 
+zwindow and met cuts?
+
+
+Things to include:
+Plots visualizaing optimization
