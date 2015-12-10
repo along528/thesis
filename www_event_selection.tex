@@ -160,10 +160,17 @@ Indeed, upon splitting the preselection region based on the number of SFOS
 pairs, we end up with signal and background predictions like in 
 \fig\ref{fig:preselection_nsfos}, where we can see difference
 in branching fraction for the signal to each of the three signal regions.
-However, the most striking feature of this plot is the 
+In the 0 and 2 SFOS regions, roughly 2.5 signal events are predicted
+whereas closer to 5 signal events are predicted in the 1 SFOS region. 
+Totalling about 10 signal events predicted at the pre-selection stage.
+Shifting to looking at the background, perhaps the most striking 
+feature of this plot is the 
 clear difference in background yield and background composition
-between the 0 SFOS region and the 1 and 2 SFOS regions, which are similar.
-Apparently, the advantage of splitting the signal region based on this
+between the 0 SFOS region and the 1 and 2 SFOS regions.
+More than 1000 background events are predicted in both the 1 and
+the 2 SFOS regions, while only about 30 background events are
+predicted in the 0 SFOS region.
+Apparently then, the advantage of splitting the signal region based on this
 classification comes when looking at the background, specifically the
 electroweak $WZ$ and $ZZ$ backgrounds where SFOS lepton pairs may be
 produced from the decay of the $Z$ boson(s). Consider only the case
@@ -212,9 +219,10 @@ increase the signal prediction with respect to the background.
 The ratio of events which pass a selection with respect
 to the original number of events is refferred to as the 
 efficiency.
-Thus, we refer to this process 
-as choosing a selection threshold where 
+Thus, we refer to this as choosing a selection threshold where 
 the signal efficiency is larger than the background efficiency.
+Also, because the predicted amount of signal is so precious,
+the signal efficiency should be kept as close to unity as possible.
 Consider the following selection choices using the quantities defined
 earlier:
 %Do I need to add more plots here???
@@ -230,6 +238,20 @@ same-sign electron pairs.
 %\item Same-flavor mass: Consider cuts on $m_{SF} > m_{min}$ and/or $m_{SF} < m_{max}$ where $m_{SF}$ is the invariant mass of same-flavor pairs (with no requirement on the sign) %what about this one?
 \end{itemize}
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/AllLeptonPt_Cumulative.eps}
+\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/MET_Et_STVF_Cumulative.eps}
+\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/DeltaPhiMETSTVF123_Abs_Cumulative.eps}
+\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NBTaggedJets_LeftCumulative.eps}
+\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NJets_LeftCumulative.eps}
+\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/ThreeLeptonMt_Cumulative.eps}
+%\includegraphics[scale=0.25]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/ZWindow_Cumulative.eps}
+\caption{Signal and background efficiencies as a function of various cuts when starting from event pre-selection.}
+\label{fig:optimization_efficiencies_preselection}
+\end{figure}
+
+
 
 \begin{figure}[ht!]
 \centering
@@ -244,32 +266,19 @@ same-sign electron pairs.
 \label{fig:optimization_efficiencies_0sfos}
 \end{figure}
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/AllLeptonPt_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/MET_Et_STVF_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/DeltaPhiMETSTVF123_Abs_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NBTaggedJets_LeftCumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NJets_LeftCumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/ThreeLeptonMt_Cumulative.eps}
-%\includegraphics[scale=0.25]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/ZWindow_Cumulative.eps}
-\caption{Signal and background efficiencies as a function of various cuts when starting from event pre-selection.}
-\label{fig:optimization_efficiencies_preselection}
-\end{figure}
-
 We can plot the efficiency for the signal as well as the background
 as a function of the threshold, $X$, for each of these quantities. 
-The efficiencies are shown in the pre-selection + 0 SFOS region
-in \fig\ref{fig:optimization_efficiencies_0sfos} and for
-just the pre-selection region in 
-\fig\ref{fig:optimization_efficiencies_preselection} (which
-has a similar background composition to the 1 and 2 SFOS regions).
+The efficiencies are shown starting 
+in the pre-selection region in 
+\fig\ref{fig:optimization_efficiencies_preselection} 
+(which has a similar background composition to the 1 and 2 SFOS regions)
+and in the pre-selection + 0 SFOS region
+in \fig\ref{fig:optimization_efficiencies_0sfos}.
 Clearly, the shape of the efficiencies between the signal and
 background is not always the same, which means that we have some
-power to reduce to background with respect to the signal.
+power to reduce the background with respect to the signal.
 Furthermore, these shapes are not the same in the pre-selection 
-+ 0 SFOS region as they are in just the and pre-selection region.
-
++ 0 SFOS region as they are in just the pre-selection region.
 For instance, in the 0 SFOS region, the shape of the efficiencies
 for signal and background are very similar as a function
 of the \MET~threshold, but in the pre-selection stage they are
@@ -277,38 +286,106 @@ very differerent, with the background efficiency dropping much
 more rapidly than the signal efficiency. This suggests that
 a cut on the \MET~distribution could be very useful 
 in the 1 and 2 SFOS regions but not in the 0 SFOS region.
+Something similar may be true for a cut on $m_{T}^{lll}$.
+On the other hand, a cut on \deltaphi~ could prove useful in all 
+signal regions. The lepton \pt~is frequently used as a useful discriminant
+but in this case it seems to rapidly remove the signal at about the
+same rate as the background, so a tighter cut on the lepton \pt~
+is likely to prove unuseful. Cuts on \njet seem to remove a lot of 
+the signal but cut tighter on the background in the pre-selection
++ 0 SFOS region, which could prove useful.  Most impressive is 
+the cut on \nbjet, which leaves the signal efficiency at almost exactly
+one, while having a large impact on the pre-selection + 0 SFOS region
+where the fake contribution is large.
 
-Other insights that can be gained from looking at these distributions
-are that the \deltaphi~...
+This type of heuristic study is useful for obtaining insight into
+the distributions that are useful for discriminating 
+between signal and background.  But using these distributions
+alone to determine a final selection is a little haphazard.
+For one, they do not tell us the impact that cutting on multiple
+distributions will have.  These distributions are likely to be 
+at least partially correlated, so that cutting on one distribution might
+enhance or deflate the impact of another cut. 
+And two, it is not at all clear from these distributions
+what the best choice of cut is. We need a metric that will
+allow us to make decisions about which cuts to choose.
+The metric to use should be one that is 
+related to the final prediction after all selection cuts are applied.
+Thus, the metric cannot be used to make a decision about each 
+cut individually, but instead a decision about some combination of cuts.
 
+To deal with the issues mentioned above, we choose to 
+decide on the final signal region selection using an optimization
+procedure. The optimization takes as input a multi-dimensional 
+space where each dimension is the selection threshold
+for one of the quantities listed above, plus some others not mentioned.
+The range of the multi-dimensinonal space that is 
+interesting in the optimization is restricted so that the 
+predicted signal remains finite i.e. non-zero.
+At an individual point in this space, the optimization computes
+the expected signal and background events after the selection
+along with the size of statistical uncertainties
+and systematic uncertainties on the model. 
+These are then used as input to the measurement extraction framework
+described in \sec\ref{} to determine the width of the precision
+on the final measurement. 
+This width is used as the metric to minimize in the optimization.
+By considering a metric like this, we are optimizing directly
+the quantity of interest to the final measurement, and taking
+into account not just the individual predictions, but also their
+uncertainties. This is important because it can more stringently
+remove backgrounds that have large uncertainties.
 
-Correlations between these cuts mean that we should not make the final
-selection decision based on these arguments alone. 
-Instead, we use an optimization procedure...
+We choose to treat the sample space as being discrete as opposed
+to continuous. For some dimensions of the space, such as 
+the threshold on \njet, this is manifestly true, as there 
+can only be an integer number of observed jets. 
+For other dimensions, such as the threshold on the lepton
+\pt, these quantities are real valued and thus continuous.
+However, looking at \fig\ref{fig:optimization_efficiencies_preselection} 
+and \fig\ref{fig:optimization_efficiencies_0sfos}, the shape
+of the efficiencies tend to change relatively slowly from bin
+to bin. Thus, it should be acceptable to only sample 
+discretely as long as they can capture the shape information of 
+the efficiencies as they do above. Furthermore, 
+this acknowledges the finite  experimental resolution of these 
+quantities. For example,
+the difference between $\pt > 20~\GeV$ and $\pt > 20.5~\GeV$
+should not be taken too seriously because the effects of limited
+track and energy resolution used to derive the muon and electron \pt.
+%expand on this? what would be the typical electron and muon resolution here?
+Treating the sample space as discrete means that the optimization
+function is not smooth and so cannot readily take into account
+derivative information to be used for instance 
+in some sophisticated minimization algorithm.
+Fortunately, the number of points in sample space after discretizing, 
+while large, is small enough that it can be evaluated in its entirety
+using a brute force approach. Thus, we choose to evaluate the 
+optimization in the restricted and discretized sample space in order
+to find an optimial choice for the selection.
 
+%I should redo the optimization for the specific bin sizes and list them
+
+The shape of the optimization can be seen in \fig\ref{}.
 STOP
 
 
-
-It should be said that a more algorithmic way of choosing the type
-of quantities to consider could improve this selection. Deep learning...
+%other metrics like what?
 
 
+%I would like to show some plots demonstrating the effect of the optimization
+%One way is that I could just show all of the different points evaluated
+%with their uncertainty and signal like I have shown before. 
+%It might be nice to as well overlay some isoforms for different
+%constant selections which could give a nice idea of the effect of diff. selections.
+%But perhaps there are even better ways to visualize the effect of a 
+%multi-dimensional optimization function
 
 
+%It should be said that a more algorithmic way of choosing the type 
+%of quantities to consider could improve this selection. Deep learning...
 
-The final signal selection cuts are determined using an optimization
-procedure which considers both the signal yield as well as the uncertainty
-on the measurement (including statistical and systematic uncertainties)
-of the signal strength as taken from the profile likelihood. 
 
-Many different quantities were considered in the optimization.  All three signal 
-regions start from event pre-selection (described above in Section~\ref{sec:preselection}) where 
-we have 3 leptons with a $\pt$ of at least 20~GeV 
-and where at least one of the leptons is matched to one of the single lepton triggers.
-It was considered whether or not to lower the $\pt$ threshold, but this was found to increase
-the fake lepton background contribution without gaining much signal. Tighter cuts on the $\pt$
-were also considered but this was shown to not be a good discriminant. 
 
 In all regions, 
 a veto is applied on events with jets tagged to come from b or b-hadron decays. The highest
