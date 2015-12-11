@@ -15,7 +15,7 @@ use more stringent cuts to discriminate between the signal and backgrounds,
 referred to as our signal region selection.
 The signal region selection is determined starting from the pre-selection
 stage by performing an optimization procedure that minimizes the uncertainty
-on the final measurement.  This is described in \sec....
+on the final measurement.  This is described in \sec\ref{sec:signal_regions}.
 The signal region selection is further divided into different
 categories that are each used in the final measurement
 which allows us to specially treat the different backgrounds
@@ -59,7 +59,9 @@ at least one of the three leptons selected caused the trigger to fire.
 \caption{Distributions showing the observed data compared to the background estimate at event pre-selection.}
 \label{fig:preselection}
 \end{figure}
-The signal plus background model is compared to data at pre-selection
+The signal plus background model 
+(described in detail in \sec\ref{sec:bg_estimates})
+is compared to data at pre-selection
 for a few different kinematic distributions of interest 
 in \fig\ref{fig:preselection}. In the upper plot of each distribution,
 the colored histograms 
@@ -543,29 +545,30 @@ This was shown to offer some
 modest discriminating power and a threshold of $m_{SF} > 20$~GeV 
 was chosen only for the 0 SFOS region.
 
+\subsection{Fiducial Region Selection}
+\label{sec:fiducial}
 
-Fiducial regions are defined  for each channel which are designed to 
-be close to the reconstruction
-level signal selection from Table~\ref{tab:signal_selection}.  
-The fiducial selections are determined at truth level using 
-Rivet \cite{Buckley:2010ar}.
-%copied from semi-leptonic note since we are using the same code.
-Only prompt leptons (those not originating from hadron decays) are used for 
-lepton selections, and these leptons are dressed with prompt photons within a 
-cone with $\Delta R = 0.1$. Generator-level jets are reconstructed by running the 
-anti-kt algorithm with radius parameter $\Delta R = 0.4$ on all final-state particles 
-after the parton showering and hadronization with the exception of prompt 
-leptons, prompt photons, and neutrinos. The MET variable is calculated using all 
-generator-level neutrinos. 
-Events are removed if $\tau$ leptons are present from the $W$ decays.  
-Thus, the fiducial cross-section
-does not include the branching fraction to $W\rightarrow\tau\nu$ decay, 
-even though there will be some contamination from this process in the final 
-reconstruction level selection. The final fiducial selection is presented
-for each channel in Table~\ref{tab:fiducial_selection}.
+A fiducial phase space or fiducial region is defined purely
+using truth information (generator information before
+being passed through ATLAS reconstruction) as the region
+the analysis is sensitive to. We define our fiducial region
+based on the optimized signal selection (defined at the reconstruction level)
+but using only truth information. For instance, the reconstructed
+lepton \pt~ requirement of 
+$\pt^{\textrm{Reco}} > 20~\GeV$
+is taken into account in the fiducial region selection
+by requiring 
+$\pt^{\textrm{Truth}} > 20~\GeV$.
+By applying this for all cuts in the reconstruction selection
+shown earlier in \tab\ref{tab:signal_selection},
+one may compare the predicted signal yields after reconstruction
+using this selection to the one in the fiducial region selection
+using just truth information. Any differences are then attributed solely
+to effects from reconstruction. 
+The fiducial selections are determined at truth level 
+using Rivet~\cite{Buckley:2010ar}, which allows for 
+comparisons between different generators.
 
-%i could put the actual fiducial cross-sections here
-%put the cut-flows in the backup
 
 \begin{table}[ht!]
 \centering
@@ -576,27 +579,49 @@ for each channel in Table~\ref{tab:fiducial_selection}.
 \label{tab:fiducial_selection}
 \end{table}
 
-%need to add references to the MadGraph samples in the sample section
-The fiducial cross-sections are evaluated in both the \vbfnlo~and \madgraph~samples mentioned in 
-Section~\ref{sec:signal}.
+The chosen fiducial region selection 
+is listed in \tab\ref{tab:fiducial_selection}.
+Only prompt leptons (those not originating from hadron decays) are used for 
+lepton selections, and these leptons are dressed with prompt photons 
+within a cone with $\Delta R = 0.1$. Generator-level jets are 
+reconstructed by running the anti-kt algorithm with radius 
+parameter $\Delta R = 0.4$ on all final-state particles 
+after the parton showering and hadronization with the exception of prompt 
+leptons, prompt photons, and neutrinos. The \MET~variable is calculated 
+using all generator-level neutrinos. 
+As can be seen, the selection 
+in \tab\ref{tab:fiducial_selection} looks very similar to that in 
+\tab\ref{tab:signal_selection} except for the object definitions
+using truth information and that 
+events are removed if $\tau$ leptons are present from the $W$ decays.  
+Thus, the fiducial selection
+does not include the branching fraction to $W\rightarrow\tau\nu$ decay, 
+even though there will be some contamination from this process in the final 
+reconstruction level selection. 
+
+
+
+The fiducial cross-sections are evaluated in both 
+the \vbfnlo~and \madgraph~samples mentioned in Section~\ref{sec:signal}.
+The predicted fiducial cross-sections at each stage of the selection
+are listed for both generators in \tab\ref{}.
+The fiducial cross-sections and their
+statistical uncertainties after the entire fiducial selection
+are summarized in each channel for both 
+generators in \tab\ref{tab:fiducial_cross_sections}.
+They are seen to be in good agreement between both generators.
+
+
 A summary of the signal sample phase space and cross-sections is
 presented in Table~\ref{tab:signal_sample_summary}.
 The derived fiducial cross-sections using the two generators are 
 shown in Table~\ref{tab:fiducial_cross_sections}.  The cross-sections are observed
 to be in good agreement between the two generators. The MadGraph NLO
 fiducial cross-sections are used in the final measurement.
+The PDF and scale uncertainties on the fiducial cross-sections
+are determined after summing over all three signal regions 
+as described earlier in \sec\ref{sec:signal}.
 % it would probably be a good idea to include the fiducial cut-flows as well.
-
-
-
-\begin{table}[ht!]
-\centering
-\begin{footnotesize}
-\input{tables/signal_sample_summary.tex}
-\end{footnotesize}
-\caption{Details of signal samples used to study signal fiducial cross-sections.}
-\label{tab:signal_sample_summary}
-\end{table}
 
 
 
