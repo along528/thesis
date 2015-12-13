@@ -1,7 +1,7 @@
 \subsection{Fake lepton background}
 \label{sec:bg_fake}
 
-This background consists of the events with at least one non-prompt lepton denoting the hadrons misidentified as leptons and leptons originating from heavy-flavour decays, such as $b-$meson decays. We refer to these non-prompt leptons as ``fake'' leptons and subsequently refer to prompt leptons as ``real'' leptons. It is estimated using a generalised matrix method \cite{Arguin:1558979,Gillam:2014xua} which is a fully data-driven technique. All leptons are firstly classified as ``loose'' or ``tight'' according to their identification and/or isolation quality. The loose leptons must pass all lepton preselection requirements and fail any of the signal selection criteria defined in Tables \ref{tab:eledef} and \ref{tab:muondef}. Once the efficiencies for real and fake preselected leptons to satisfy the tight lepton selections are measured, the number of events with fake lepton background can be predicted. This measurement is done as a function of $\pt$. %and/or \pt\ bin.
+This background consists of the events with at least one non-prompt lepton denoting the hadrons misidentified as leptons and leptons originating from heavy-flavor decays, such as $b-$meson decays. We refer to these non-prompt leptons as ``fake'' leptons and subsequently refer to prompt leptons as ``real'' leptons. It is estimated using a generalized matrix method \cite{Arguin:1558979,Gillam:2014xua} which is a fully data-driven technique. All leptons are firstly classified as ``loose'' or ``tight'' according to their identification and/or isolation quality. The loose leptons must pass all lepton pre-selection requirements and fail any of the signal selection criteria defined in Tables \ref{tab:eledef} and \ref{tab:muondef}. Once the efficiencies for real and fake preselected leptons to satisfy the tight lepton selections are measured, the number of events with fake lepton background can be predicted. This measurement is done as a function of $\pt$. %and/or \pt\ bin.
 
 
 \tabcolsep=0.11cm
@@ -45,7 +45,7 @@ This background consists of the events with at least one non-prompt lepton denot
 \end{tabular}
 }
 \end{center}
-\caption{Summary of the electron selection criteria used for the global matrix method. The signal requirements defined in Section~\ref{sec:Object_selection} are applied on top of the lepton preselection.}
+\caption{Summary of the electron selection criteria used for the global matrix method. The signal requirements defined in Section~\ref{sec:Object_selection} are applied on top of the lepton pre-selection.}
 \label{tab:eledef}
 \end{table}
 
@@ -84,7 +84,7 @@ This background consists of the events with at least one non-prompt lepton denot
     \end{tabular}
     }
   \end{center}
-   \caption{Summary of the muon selection criteria used for the global matrix method. The signal requirements defined in Section~\ref{sec:Object_selection} are applied on top of the lepton preselection.} 
+   \caption{Summary of the muon selection criteria used for the global matrix method. The signal requirements defined in Section~\ref{sec:Object_selection} are applied on top of the lepton pre-selection.} 
     \label{tab:muondef}
 \end{table}
 
@@ -209,13 +209,13 @@ the following:
   \end{array}
   \right.
 \end{align*}
-If one presumes that trigger matching and other requirements are satisfied, only four of all possible combinations pass the event pre-selection cuts. In addition, each of these ``subevents'' falls into specific channel according to the number of same flavour opposite sign (SFOS) pairs.
+If one presumes that trigger matching and other requirements are satisfied, only four of all possible combinations pass the event pre-selection cuts. In addition, each of these ``sub-events'' falls into specific channel according to the number of same flavor opposite sign (SFOS) pairs.
 
-To propagate uncertainties on the efficiencies, the derivatives of $t'_{\nu_1\cdots\nu_N}$ with respect to $\varepsilon_i$ and $\zeta_i$ for each lepton $i$ need to be calculated. This can be evaluated exactly and efficiently at runtime. Correlations between the real efficiencies $\varepsilon$ measured in different  $\pt$ bins are neglected since the uncertainty on the measurement is small. Correlations between the fake efficiencies $\zeta$ binned in \pt\ are preserved by propagating the systematic variation for each bin separately. Finally, there is a statistical correlation between two output configurations from one input event falling into one signal region which need to be taken into account. Using the previous example, the variance of each subevent in 1SFOS treated as separately is $w^2_{TTLT}$ and $w^2_{LTTT}$. However, it should be in fact $(w_{TTLT} +w_{TTLT})^2$. %for a signal region 1SFOS
+To propagate uncertainties on the efficiencies, the derivatives of $t'_{\nu_1\cdots\nu_N}$ with respect to $\varepsilon_i$ and $\zeta_i$ for each lepton $i$ need to be calculated. This can be evaluated exactly and efficiently at runtime. Correlations between the real efficiencies $\varepsilon$ measured in different  $\pt$ bins are neglected since the uncertainty on the measurement is small. Correlations between the fake efficiencies $\zeta$ binned in \pt\ are preserved by propagating the systematic variation for each bin separately. Finally, there is a statistical correlation between two output configurations from one input event falling into one signal region which need to be taken into account. Using the previous example, the variance of each sub-event in 1SFOS treated as separately is $w^2_{TTLT}$ and $w^2_{LTTT}$. However, it should be in fact $(w_{TTLT} +w_{TTLT})^2$. %for a signal region 1SFOS
 
 \subsubsection{Real lepton efficiency}
 
-The efficiencies for real preselected leptons to pass the tight requirements are measured in data as a function of the lepton $\pt$. The measurement is performed in data samples enriched with real leptons from $Z\rightarrow l^+l^-$ decay with a standard tag-and-probe method. The tag passes all signal lepton selections and is trigger matched, while the requirement imposed to the probe is to satisfy only the lepton preselection cuts. Their invariant mass has to be within $Z$-mass window: $m_{ll}\in[80, 100]$~\GeV{}. If both leptons satisfy the tag requirements, they are alternatively considered as the tag in order to avoid any bias introduced by its selection. The invariant mass for two opposite sign same-flavour leptons is illustrated in Fig. \ref{fig:realEff_CRs}.
+The efficiencies for real preselected leptons to pass the tight requirements are measured in data as a function of the lepton $\pt$. The measurement is performed in data samples enriched with real leptons from $Z\rightarrow l^+l^-$ decay with a standard tag-and-probe method. The tag passes all signal lepton selections and is trigger matched, while the requirement imposed to the probe is to satisfy only the lepton pre-selection cuts. Their invariant mass has to be within $Z$-mass window: $m_{ll}\in[80, 100]$~\GeV{}. If both leptons satisfy the tag requirements, they are alternatively considered as the tag in order to avoid any bias introduced by its selection. The invariant mass for two opposite sign same-flavor leptons is illustrated in Fig. \ref{fig:realEff_CRs}.
 
 The $\pt$ distributions for both the number of probes passing the signal requirements, $n^{\mathrm{Tight}}$, and the total number of probes, $n$, are shown separately in the electron and muon control regions used to derive the rates in Figure~\ref{fig:realEff_CRsPt}.
 The efficiency, $\varepsilon_i$, is calculated in each $\pt$ bin, $i$, by taking the ratio of $n_{i}^{\mathrm{Tight}}$ over $n_i$. That is,
@@ -254,7 +254,7 @@ in Table~\ref{table:realEff_El} and for Muons in Table~\ref{table:realEff_Mu}.
 \includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeElectronPt_histratio.png}
 \includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeMuonPt_histratio.png}
 \caption{Probe lepton \pt\ distributions in SFOS tag and probe control regions used to derive real rates.  Electron (left) and muon (right) are shown
-when the probe lepton is either tight (top) or no additional selection (besides the preselection) is required (bottom)}
+when the probe lepton is either tight (top) or no additional selection (besides the pre-selection) is required (bottom)}
 \label{fig:realEff_CRsPt}
 \end{figure}
 
@@ -263,7 +263,7 @@ when the probe lepton is either tight (top) or no additional selection (besides 
 \centering
 \includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/Efficiencies/ElectronRealRates.png}
 \includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/Efficiencies/MuonRealRates.png}
-\caption{Real lepton efficiency as a fucntion of \pt\ and measured in data (red) and MC (blue) for electrons (left) and muons (right).}
+\caption{Real lepton efficiency as a function of \pt\ and measured in data (red) and MC (blue) for electrons (left) and muons (right).}
 \label{fig:realEff}
 \end{figure}
 
@@ -298,7 +298,7 @@ between the efficiencies measured in data and MC.  The efficiency measured in da
 
 The fake efficiency represents the probability that a fake lepton satisfying the preselected criteria passes also the signal requirements. 
 The measurement, performed separately for each $\pt$ bin, $i$, is performed in fake-enriched samples by looking at the number of probe leptons in data 
-passing preselection, $n_i$, and comparing to the number which only pass also the tight
+passing pre-selection, $n_i$, and comparing to the number which only pass also the tight
 selection, $n^{Tight}_i$. Contamination from real leptons, $n^{\mathrm{Real}}_i$ and $n^{\mathrm{Tight}, \mathrm{Real}}_i$, 
 and from photon converted leptons, $n^{\mathrm{PC}}_i$ and $n^{\mathrm{Tight},\mathrm{PC}}_i$, 
 is corrected using MC by subtracting from the totals.  The rate is then determined as follows:
@@ -311,12 +311,12 @@ is corrected using MC by subtracting from the totals.  The rate is then determin
 Since the rates depend on the fake lepton origin, the derivation is done separately for electrons and muons.     
 
 The classification of leptons in MC as being either real or from photon conversion is performed on an event-by-event basis at truth level using the MCTruthClassifier tool~\cite{MCtruthclassifier:twiki}.  
-Since this is a dilepton control region, the majority of events with a real lepton
+Since this is a di-lepton control region, the majority of events with a real lepton
 tag and a probe lepton due to photon conversion comes from the $W\gamma$ process where the photon converted lepton is an electron.
 As expected, the number of probe muons coming from photon conversion are observed to be negligible.
 
 Efficiencies are measured from a data set enriched with one tight lepton that passes the signal lepton selections with \pt$>40$~\GeV\ and 
-one fake candidate satisfying only the preselection criteria defined in tables~\ref{tab:eledef} and~\ref{tab:muondef}. Events with additional loose or tight leptons are rejected. 
+one fake candidate satisfying only the pre-selection criteria defined in tables~\ref{tab:eledef} and~\ref{tab:muondef}. Events with additional loose or tight leptons are rejected. 
 The QCD background may also enter these control regions, especially in low \met\ . Therefore, an additional \met$>10$~\GeV\ requirement is introduced. 
 In order to reduce the contamination from real processes like $t\bar{t}$, $WW$ and $Z$, the two leptons are required to have the same sign.
 Finally, the control regions are split based on the flavor of the tag and probe leptons.  The muon rates are determined in the region
@@ -339,7 +339,7 @@ to determine a systematic on the composition, described later.
 
 
 A detailed breakdown of the numbers used to compute the fake rates are shown in Appendix~\ref{sec:appendix_fakebg}.
-%would it be useful to show the other dilepton control regions in an appendix?
+%would it be useful to show the other di-lepton control regions in an appendix?
 
 Three systematic uncertainties are considered. First, the subtraction of the processes with 
 two real leptons ($t\bar{t}V$, $VV$ and $VVV$) using MC prediction introduced an uncertainty on 
@@ -349,15 +349,15 @@ Second, given that the extraction regions and the signal regions have different 
 the fake leptons of different origin dominate. This kinematic dependence of fake efficiencies has been estimated 
 by modifying the requirements of the sample used for the measurement. In particular, the cut thresholds 
 on the $E_{T}^{Miss}$ and tag lepton $\pt$ used
-for determining the dilepton control regions are varied. The $E_{T}^{Miss}$ threshold is 
+for determining the di-lepton control regions are varied. The $E_{T}^{Miss}$ threshold is 
 varied in 5~GeV steps scanning a range of $\pm 10$~GeV around the nominal
 threshold of $E_{T}^{Miss} > 10$~GeV while the $\pt$ threshold is varied in 5~GeV steps in a range of $\pm 20$~GeV 
 around the nominal threshold of $\pt > 40$~GeV.  When varying the $E_{T}^{Miss}$ cut, the $\pt$ cut
 is kept at the nominal threshold and vise-versa. This is referred to as the 'uncorrelated' systematic.
-These are determined separtely for electrons and muons, since they use different control regions. The 'uncorrelated' and
+These are determined separately for electrons and muons, since they use different control regions. The 'uncorrelated' and
 'correlated' systematics for electrons and muons are then combined together by adding in quadrature on an event-by-event basis.
 As a result the uncertainty is presented as a single systematic uncertainty on the fake electron
-contribution and a separte single systematic on the fake muon contribution.
+contribution and a separate single systematic on the fake muon contribution.
 The third and final systematic contribution comes from the choice of control region, based on the number of b-tagged
 jets, as described earlier.  The nominal control regions for both the electron and muon cases is when 
 there is at least one b-tagged jet present.  The difference between the rates for the nominal case
@@ -365,7 +365,7 @@ and the region where no requirement is placed on the presence of b-tagged jets i
 We have determined that the difference in the composition in these two regions adequately covers the difference
 in composition that may be present due to the extrapolation from the control regions to the signal regions. This is 
 discussed in more detail in Section~\ref{sec:fakecomposition}.  Another set of control regions was studied
-which vetos any b-tagged jets, but this was observed to give a very large difference in composition which is 
+which vetoes any b-tagged jets, but this was observed to give a very large difference in composition which is 
 probably too conservative of an estimate to be used as a reasonable systematic.
 The rates along with the statistical and systematic uncertainties are summarized in Fig.~\ref{fig:fakeEff} 
 as well as in Tables \ref{table:fakeEff_El} and \ref{table:fakeEff_Mu}.
@@ -532,7 +532,7 @@ relies on the assumption that the
 fake rates derived in the di-lepton control regions may be extrapolated to the three lepton signal regions.  
 The fake rate depends primarily on the source of the fake leptons, thus
 one can check the validity of this assumption by looking at the composition of the
-different fake lepton sources in the dilepton control regions and comparing 
+different fake lepton sources in the di-lepton control regions and comparing 
 them to the
 composition in the three lepton signal regions. 
 
@@ -566,7 +566,7 @@ to identify the fake laptops origin as follows:
 
 \end{itemize}
 
-The composition is shown for electrons in the dilepton control 
+The composition is shown for electrons in the di-lepton control 
 regions in Table~\ref{table:CompositionElectronCR} and in the event pre-selection and in region close to the signal regions in Table~\ref{table:CompositionElectronSR}.
 First, one can see that the PC contribution is roughly half of the fake contribution
 estimate using MC
@@ -580,7 +580,7 @@ in particular after tight selection, one can see that
 the composition is similar for both, 
 with about 50 to 75 \% coming from HF and the rest from LF.
 
-For the muons, one can see the composition in the dilepton control regions in 
+For the muons, one can see the composition in the di-lepton control regions in 
 Table~\ref{table:CompositionMuonCR} and in the event pre-selection
 and region close to the signal regions in Table~\ref{table:CompositionMuonSR}. For the muons the PC
 component is negligible, as expected, and there is no need for subtraction.
@@ -588,7 +588,7 @@ In this case, the composition is dominated by HF, contributing about 90\% with t
 rest coming from LF.  This is true in the region close to the signal regions and in the control regions.
 
 The differences observed in the composition between the inclusive $b-jet$ and $b-jet$ 
-tagged dilepton control regions is observed to be of a similar size
+tagged di-lepton control regions is observed to be of a similar size
 to the difference in the composition for the region close to the signal regions for both the electron 
 and muon cases.
 Thus, comparing the rates derived in the control regions using the two different
@@ -598,10 +598,10 @@ control regions as an additional systematic on the fake rates.
 
 Using this study of the composition, we conclude that the composition appears to be
 consistent between the control regions and the region close to the signal regions.  We have chosen 
-a comparison of two different dilepton control regions to be used a systematic
+a comparison of two different di-lepton control regions to be used a systematic
 which should take into account any remaining differences in the composition.
 
-It should be said that in the dilepton control regions, 
+It should be said that in the di-lepton control regions, 
 the MC estimate strongly underestimates the amount observed
 in data, presumably because of additional sources of fakes 
 not modeled in our MC, such as from QCD. 
@@ -612,7 +612,7 @@ Thus, the composition estimates shown are only reliable
 if these additional sources would have a similar composition to the ones observed
 in this study that we are able to model. This effectively 
 puts a large uncertainty on the composition estimates observed in this study. Also,
-because the additinonal sources are most likely dominated by QCD, the PC 
+because the additional sources are most likely dominated by QCD, the PC 
 contribution to these sources should be small. Thus, the PC component before subtraction
 is likely overstated as shown in 
 Tables~\ref{table:CompositionElectronCR} 
@@ -654,7 +654,7 @@ The amount observed in data (black points) corresponds to $n$ (bottom) and $n_{\
 Meanwhile, the contribution determined in MC to come from real leptons (blue), photon conversion (red), heavy flavor (green) and light
 flavor (orange) are shown stacked on top of each other. 
 The difference between the data and MC does not effect the data-driven
-fake estimate but may have an impact on the composition estiamte.
+fake estimate but may have an impact on the composition estimate.
 }
 \label{fig:fakeEff_CRs_muon_stacked}
 \end{figure}
@@ -690,7 +690,7 @@ The amount observed in data (black points) corresponds to $n$ (bottom) and $n_{\
 Meanwhile, the contribution determined in MC to come from real leptons (blue), photon conversion (red), heavy flavor (green) and light
 flavor (orange) are shown stacked on top of each other.
 The difference between the data and MC does not effect the data-driven
-fake estimate but may have an impact on the composition estiamte.
+fake estimate but may have an impact on the composition estimate.
 }
 \label{fig:fakeEff_CRs_electron_stacked}
 \end{figure}
@@ -719,7 +719,7 @@ fake estimate but may have an impact on the composition estiamte.
 %Meanwhile, the contribution determined in MC to come from real leptons (blue), photon conversion (red), heavy flavor (green) and light
 %flavor (orange) are shown stacked on top of each other. 
 %The difference between the data and MC does not effect the data-driven
-%fake estimate but may have an impact on the composition estiamte.
+%fake estimate but may have an impact on the composition estimate.
 %}
 %\label{fig:fakeEff_CRs_muon_stacked_scaled}
 %\end{figure}
@@ -746,7 +746,7 @@ fake estimate but may have an impact on the composition estiamte.
 %Meanwhile, the contribution determined in MC to come from real leptons (blue), photon conversion (red), heavy flavor (green) and light
 %flavor (orange) are shown stacked on top of each other.
 %The difference between the data and MC does not effect the data-driven
-%fake estimate but may have an impact on the composition estiamte.
+%fake estimate but may have an impact on the composition estimate.
 %}
 %\label{fig:fakeEff_CRs_electron_stacked_scaled}
 %\end{figure}
@@ -756,7 +756,7 @@ fake estimate but may have an impact on the composition estiamte.
 \centering
 \input{tables/ElectronCRComposition.tex}
 \caption{
-Composition of fake electrons taken from  MC events in the same-sign electron-muon dilepton control regions
+Composition of fake electrons taken from  MC events in the same-sign electron-muon di-lepton control regions
 used to extract electron fake rates. The composition is split as either Heavy Flavor (HF), Photon
 Conversion (PC), and Light Flavor (LF) are shown. In the ``PC subtracted'' case, the PC component
 has been explicitly removed.  This corresponds to the scenario ultimately used in the
@@ -792,7 +792,7 @@ is measured to be negligible. No PC subtraction is performed.
 \centering
 \input{tables/MuonSRComposition.tex}
 \caption{
-Composition of fake muons taken from  MC events in the same-sign muon-muon dilepton control regions
+Composition of fake muons taken from  MC events in the same-sign muon-muon di-lepton control regions
 used to extract the muon fake rates. The composition is split into either Heavy Flavor (HF) or Light Flavor (LF). 
 }
 \label{table:CompositionMuonSR}
@@ -801,13 +801,13 @@ used to extract the muon fake rates. The composition is split into either Heavy 
 \clearpage
 \subsubsection{Fake lepton background validation}
 
-A Monte Carlo closure test of the generalized matrix method is performed. The fake rates are computed from MC samples in the dilepton control regions defined in section~\ref{sec:fakecomposition}, and the method is then applied on the most important MC samples contributing to the event pre-selection: $Z$+jets and $t\bar{t}$. The event pre-selection is used for this test, because the statistics available for the MC samples containing fake leptons in the signal region is too small to be able to draw any conclusion. Figure~\ref{fig:MCFakeRatesClosure}, show the MC fake rates obtained from the CR, while figure~\ref{fig:MCClosureCheckMatrixMethod} show the MC agreement with the MC events reweighted using the generalized matrix method in the event pre-selection region, for the third-leading lepton $\pt$ and the $\met$ distribution. As it can be seen the shape agreement and the overall normalization are pretty good, showing that the matrix method is performing well.
+A Monte Carlo closure test of the generalized matrix method is performed. The fake rates are computed from MC samples in the di-lepton control regions defined in section~\ref{sec:fakecomposition}, and the method is then applied on the most important MC samples contributing to the event pre-selection: $Z$+jets and $t\bar{t}$. The event pre-selection is used for this test, because the statistics available for the MC samples containing fake leptons in the signal region is too small to be able to draw any conclusion. Figure~\ref{fig:MCFakeRatesClosure}, show the MC fake rates obtained from the CR, while figure~\ref{fig:MCClosureCheckMatrixMethod} show the MC agreement with the MC events re-weighted using the generalized matrix method in the event pre-selection region, for the third-leading lepton $\pt$ and the $\met$ distribution. As it can be seen the shape agreement and the overall normalization are pretty good, showing that the matrix method is performing well.
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/ElFakeRates_MC_topZjets_new.pdf}
 \includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/MuFakeRates_MC_topZjets_new.pdf}
-\caption{Distribution of the fake rates obtained from MC samples in the dilepton control regions. The errors shown here are statistical only. These rates are used to performed a MC closure check of the global matrix method.}
+\caption{Distribution of the fake rates obtained from MC samples in the di-lepton control regions. The errors shown here are statistical only. These rates are used to performed a MC closure check of the global matrix method.}
 \label{fig:MCFakeRatesClosure}
 \end{figure}
 
@@ -815,7 +815,7 @@ A Monte Carlo closure test of the generalized matrix method is performed. The fa
 \centering
 \includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/PtThirdLepSignal_TTT_total_new.pdf}
 \includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/VR_PMET_lepTTT_total_new.pdf}
-\caption{Distributions of the third leading lepton $\pt$ and $\met$ in the event pre-selection region, for $Z$+jets and $t\bar{t}$, compared to events from these samples reweigthed using the global matrix method and the rates shown in Figure~\ref{fig:MCFakeRatesClosure}. Good agreement is observed}
+\caption{Distributions of the third leading lepton $\pt$ and $\met$ in the event pre-selection region, for $Z$+jets and $t\bar{t}$, compared to events from these samples re-weighted using the global matrix method and the rates shown in Figure~\ref{fig:MCFakeRatesClosure}. Good agreement is observed}
 \label{fig:MCClosureCheckMatrixMethod}
 \end{figure}
 
@@ -824,7 +824,7 @@ A Monte Carlo closure test of the generalized matrix method is performed. The fa
 
 The ability of the generalized matrix method just described to model accurately
 the fake lepton background is tested in a control region designed to be enhanced
-in the fake lepton background while mainitaining orthogonality with the signal
+in the fake lepton background while maintaining orthogonality with the signal
 regions described in Section~\ref{sec:signal_regions}. The control region 
 starts by using the event pre-selection region described in Section~\ref{sec:preselection}. To reduce contamination in the 
 control region from the $WZ$ process, it is required that none

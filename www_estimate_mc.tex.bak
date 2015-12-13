@@ -22,7 +22,7 @@ MC based background estimates used in the analysis.}
 The $WZ$ process constitute an irreducible background for the $WWW$ final state. Studies of this final state have been performed at the LHC by the ATLAS~\cite{Aad:2012twa,Anger:1663539} and CMS~\cite{CMS-PAS-SMP-12-006} collaborations. They have shown that the measured cross-section is systematically found to be higher than the NLO predictions, by a factor of about $\approx{}10-15\%$. The recent cross-sections calculations at NNLO for the $V\gamma$ processes~\cite{Grazzini:2015nwa} have shown that the expectations are corrected by a large factor compared to the one at NLO. Similar conclusions also apply for the $ZZ$ final state~\cite{Cascioli:2014yka}. However these predictions are not yet available for the $WZ$ process. Therefore the NLO predictions for this background, must be checked from the data. In the following a correction factor to MC predictions will be derived from the data using a 2D sideband method. To simplify the explanations, in this section, the $WZ$ process will be considered as the signal process.
 % It is therefore very important to determine the normalization of this background using data.
 
-The normalization of this process is determined from data using a two-dimensional sideband method (2D sideband method or so-called ABCD method~\cite{Aad:2013izg}). Events are requested to pass the event pre-selection and contain exactly one SFOS lepton pair, and one third lepton from a different flavor. In order to supress contributions from fake-lepton backgrounds as much as possible, all leptons must satisfy the following transverse momentum requirement: $p_{T}>25~\GeV$. The two dimensions of the method are defined as the invariant mass of the two SFOS leptons on one axis and the isolation of the non-SFOS lepton as the other one. This leads to 4 regions defined as follows:
+The normalization of this process is determined from data using a two-dimensional sideband method (2D sideband method or so-called ABCD method~\cite{Aad:2013izg}). Events are requested to pass the event pre-selection and contain exactly one SFOS lepton pair, and one third lepton from a different flavor. In order to suppress contributions from fake-lepton backgrounds as much as possible, all leptons must satisfy the following transverse momentum requirement: $p_{T}>25~\GeV$. The two dimensions of the method are defined as the invariant mass of the two SFOS leptons on one axis and the isolation of the non-SFOS lepton as the other one. This leads to 4 regions defined as follows:
 
 \begin{itemize}
 	\item Signal Region (A): Isolated and in Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|<15~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}<0.10$ and $p_{T}^{Iso(R<0.2)}/p_{T}<0.04$.
@@ -40,7 +40,7 @@ The 2D-sideband method is based on the following two assumptions:
   reconstructed leptons falling in one of these regions as coming from a
   background (non $WZ$)event. The number of events $N^{jet}$ with jet faking leptons can then
   be extracted by subtracting from the data the contribution from processes containing 
-  3 real leptons ($ZZ$, $ttV$, triboson) or 2 real lepton and 1 photon ($Z\gamma$)
+  3 real leptons ($ZZ$, $ttV$, tri-boson) or 2 real lepton and 1 photon ($Z\gamma$)
   and noted in the following as $N^{EW}$. These are estimated from Monte Carlo. The total number of
   observed events in each of these three regions can be expressed as:
   \begin{align}
@@ -67,7 +67,7 @@ Where
 \item $R^{jet}=\frac{N^{jet}_B N^{jet}_C}{N^{jet}_A
   N^{jet}_D}$ is defined to account for the bias on the background correlation between region A-B to C-D. These numbers are estimated from MC simulations, they are obtained from summing together samples containing 2 real leptons and a fake lepton ($Z+$jets, $t\bar{t}$ and $WW$). The MC samples used for these processes are summarized in Tables~\ref{tab:sample_bkg_dibosons},~\ref{tab:sample_bkg_dibosons_gg2DPI}, and~\ref{tab:sample_bkg_Zjets} in Section~\ref{sec:subsection_datasets_MC}.
 \item $C_X=\frac{N_X^{WZ}(MC)}{N_A^{WZ}(MC)}$, X=(B,C,D) is defined to account for the signal leakage. These numbers are estimated from MC simulations.
-\item $N_X^{EW}$, X=(A,B,C,D), is evaluated from MC and defined as the number of events containing 3 real leptons ($ZZ$, $t\bar{t}V$, triboson) or 2 real lepton and 1 photon ($Z\gamma$).
+\item $N_X^{EW}$, X=(A,B,C,D), is evaluated from MC and defined as the number of events containing 3 real leptons ($ZZ$, $t\bar{t}V$, tri-boson) or 2 real lepton and 1 photon ($Z\gamma$).
 \end{itemize}
 The signal leakage $C_X$ is estimated using the signal $WZ$ Monte Carlo, whereas, when computing the measurement central value, the $R^{jet}$ factor is fixed to 1. A systematic uncertainty is associated to this assumption. 
 
@@ -88,13 +88,13 @@ Table~\ref{tab:WZ_Nominal_Numbers} summarizes the number of events measured in a
 	    D & $118 \pm 11$ & $1.9 \pm 0.6$ & $103 \pm 7$ & $0.00019 \pm 0.00003$ \\ 
   \hline
 \end{tabular}
-\caption{Number of data and MC events reccorded in each regions, used for the determination of the $WZ$ normalization using the 2D-sideband method.}
+\caption{Number of data and MC events recorded in each regions, used for the determination of the $WZ$ normalization using the 2D-sideband method.}
 \label{tab:WZ_Nominal_Numbers}
 \end{table}
 
 In region A the total predicted number of $WZ$ events is $N_A^{WZ}(MC)=498{}\pm 1$, while the measurement with the 2D-sideband method gives $N_A^{WZ}(measured)=537.\pm{}35$ events, this yield a correction factor of $1.08 \pm 0.07$(stat). This normalization factor is found to agree well with the measurements done by the ATLAS and CMS collaborations. 
 The number of fake leptons events can also be evaluated with this method, subtracting the number of EW and $WZ$ events to the total number of data events in region A. Doing so, one find $N^{jet}_{A}(measured)=8. \pm 23.$, to be compared to the MC expectation of $N^{jet}_{A}(MC)=25 \pm 4.$. The error on this number is large, but since the contamination of fake events in this region A is small, the impact on the correction factor is also small.
-% Due to the high contamination of $WZ$ and EW events in region B, the evaluation of the fake component has a large uncertainty. But this high uncertainty is counterblanced by the small fraction of events expected in th
+% Due to the high contamination of $WZ$ and EW events in region B, the evaluation of the fake component has a large uncertainty. But this high uncertainty is counterbalanced by the small fraction of events expected in th
 % The way the 2d-sideband method is used The number of fake events measured in the data in region A is  $N^{jet}_{A}(measured)=8. \pm 23.$ to be compared with the expectation in MC: $N^{jet}_{A}(MC)=25 \pm 4.$.
 
 Figure~\ref{fig:WZ_CR} shows the $m_{\ell\ell}^{SFOS}$ distribution for the two isolation regions. As it can be seen the backgrounds do not model perfectly the data, especially in the non-isolated region. It is important to notice that the fake backgrounds are here completely determined from Monte Carlo simulations, as well as the $WZ$ normalization.
@@ -257,9 +257,9 @@ Double parton scattering (DPS) backgrounds are also taken into account in the an
 	\sigma^{DPS}_{(A+B)}=\frac{m}{2}\times{}\frac{\sigma^{S}_{A}\times{}\sigma^{S}_{B}}{\sigma_{eff}}
 \end{equation}	
 
-Where $\sigma^{S}_{(A/B)}$ is the single-parton scattering production cross-section of the procss $A/B$, $m$ is a factor which takes the value of 1 when $A=B$ and 2 when $A\ne B$, $\sigma_{eff}$ is the effective cross section of the proton. A measurement of $\sigma_{eff} =15\pm3(stat)^{+5}_{-3}(syst)$ mb for 7~\TeV{} $p-p$ collisions has been recently performed by ATLAS~\cite{Aad:2013bjm}. By factorising the cross-section in this form, the correlation between the two parton interactions are neglected.
+Where $\sigma^{S}_{(A/B)}$ is the single-parton scattering production cross-section of the process $A/B$, $m$ is a factor which takes the value of 1 when $A=B$ and 2 when $A\ne B$, $\sigma_{eff}$ is the effective cross section of the proton. A measurement of $\sigma_{eff} =15\pm3(stat)^{+5}_{-3}(syst)$ mb for 7~\TeV{} $p-p$ collisions has been recently performed by ATLAS~\cite{Aad:2013bjm}. By factorizing the cross-section in this form, the correlation between the two parton interactions are neglected.
 
-The samples and cross section that have been used in this analysis are given in Table~\ref{tab:sample_bkg_dibosons_gg2DPI}. An uncertainty of $50\%$ is applied on the normalization of these processes. Among these processes the one that can give a trilepton final state are: $WZ$, $ZZ$, and $Z\gamma$.
+The samples and cross section that have been used in this analysis are given in Table~\ref{tab:sample_bkg_dibosons_gg2DPI}. An uncertainty of $50\%$ is applied on the normalization of these processes. Among these processes the one that can give a tri-lepton final state are: $WZ$, $ZZ$, and $Z\gamma$.
 	
 Their contributions are found to be negligible.
 
@@ -272,6 +272,6 @@ to be about $30\%$ of their normalization. These processes have been recently me
 An equivalent $30\%$ uncertainty is assigned for the other $VVV$ contributions ($ZWW^{*}$ and $ZZZ^{*}$) that are not coming from our signal.
 
 % Other background contributions are arising from tt¯+V, t+V and VVV processes. They will be estimated
-%  using MC samples and global normalisation uncertainties are associated to these MC predictions. An
+%  using MC samples and global normalization uncertainties are associated to these MC predictions. An
 %  uncertainty of 30\% is assigned to the tt¯+ V contribution, according to [27]. An uncertainty of 30\% is
 %  also assigned to the VVV contribution.

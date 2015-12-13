@@ -21,8 +21,8 @@
 
 % Type of document prepared for this degree:
 %   1 = Master of Science thesis,
-%   2 = Doctor of Philisophy dissertation.
-%   3 = Master of Science thesis and Doctor of Philisophy dissertation.
+%   2 = Doctor of Philosophy dissertation.
+%   3 = Master of Science thesis and Doctor of Philosophy dissertation.
 %   4 = Doctoral Dissertation Prospectus
 \degree=1
 
@@ -101,7 +101,7 @@
 \newpage
 \section*{Acknowledgments}
 
-The style file is originally based on an MIT sytle file by Stephen
+The style file is originally based on an MIT style file by Stephen
 Gildea, modified for BU by Paolo Gaudiano.  Modified for CNS by
 Jonathan Polimeni.  Further modifications by Janusz Konrad, Cameron
 Morland, and Karen Yeats.
@@ -161,12 +161,12 @@ but the style file is agnostic on department.
 \chapter{Introduction}
 The BU {\LaTeX} thesis style file has been around for some time.  Many
 different versions have evolved.  Collecting together and charting the
-heritage of the disperate versions could probably be a paper in a
+heritage of the disparate versions could probably be a paper in a
 suitable discipline.  This version has been through ECE and CNS and
 has now arrived in math.
 
 This version is an attempt to clean up one version in the hopes that
-some of this fractuousness can be avoided in the future.  I believe it
+some of this fractiousness can be avoided in the future.  I believe it
 to be correct.  Beyond correctness it has three main features.  Due to its
 ECE heritage it has an option to make an unofficial title box page (to
 match with the cut out in a cardboard report cover).  Also from ECE it

@@ -2,23 +2,25 @@
 \label{sec:event_selection}
 
 The expected number of signal events in the data is expected
-to be very small compared to the total dataset. %give a number
+to be very small compared to the background. %give a number
 Fortunately, the three lepton signature of the signal allows us to
-quickly throw out many events which do not looke like the signal.
-Still, this signature is not unique enough that the background
-is small. Thus, we must devise a clever way to discriminate 
+quickly throw out many events which do not look like the signal.
+Still, this signature is not so unique that the background
+is small enough to reveal the signal. 
+Thus, we must devise a clever way to discriminate 
 between the signal and these backgrounds. We select
 events in two stages: first we start
 by selecting events which have the general signature of the signal, 
-this is referred to as the pre-selection stage; then we 
+this is referred to as the pre-selection stage; we then 
 use more stringent cuts to discriminate between the signal and backgrounds, 
 referred to as our signal region selection.
-The signal region selection is determined starting from the pre-selection
-stage by performing an optimization procedure that minimizes the uncertainty
+The signal region selection is determined by performing an 
+optimization procedure starting from the pre-selection stage 
+that minimizes the uncertainty
 on the final measurement.  This is described in \sec\ref{sec:signal_regions}.
 The signal region selection is further divided into different
 categories that are each used in the final measurement
-which allows us to specially treat the different backgrounds
+and which allows us to specially treat the different backgrounds
 in each category.  
 The selections used are described in more detail below.
 
@@ -28,21 +30,21 @@ The selections used are described in more detail below.
 \subsection{Pre-selection}
 \label{sec:preselection}
 
-The pre-selection is determined as a broad selection which throws
+The pre-selection is a broad selection which throws
 away backgrounds that do not at all resemble the signal process.
 It is mainly characterized by requiring the presence of exactly three leptons
-(electron or muon) following the requirements listed above in 
+(electron or muon) following the requirements listed in 
 \sec\ref{sec:object_selection}, each with a $\pt$ of at least $20~\GeV$.
 In addition, the events are required to be of good quality. This means
 that the events were collected under good conditions during data taking,
 both from the LHC operation and ATLAS detector operation. For instance,
 during the 2012 data collection, the LAr component of the EM calorimeter
-was know to occassionally produce artificial bursts of noise. These instances
-were tracked and events where this occured were thrown away. The event is 
-also required to have a primary vertex with at least three associted tracks.
+was know to occasionally produce artificial bursts of noise. These instances
+were tracked and events where this occurred were thrown away. The event is 
+also required to have a primary vertex with at least three associated tracks.
 Finally, the event is required to pass the single lepton trigger
-requirements already listed in \sec\ref{sec:subsection_data} where 
-at least one of the three leptons selected caused the trigger to fire.
+requirements listed in \sec\ref{sec:subsection_data} where 
+at least one of the three leptons selected must have caused the trigger to fire.
 \begin{figure}[ht!]
 \centering
 %\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_physics/weight_all/eps/AllLeptonPt_histratio.eps}
@@ -67,22 +69,21 @@ in \fig\ref{fig:preselection}. In the upper plot of each distribution,
 the colored histograms 
 represent the different categories contributing to the signal 
 plus background model and 
-are split by color into differnt categories based on the type of 
-background and if it is the signal.  
+are split by color based on the category. 
 %The colors are...
 Hashed bands are shown on the stacked
 histograms representing the size of the systematic uncertainties 
 on the model, described later in \sec\ref{}.
 The data is shown in the black points where the 
 bars on the points represent the statistical uncertainty on the data.
-The lower plot shows the ratio of the data over the model
+The lower plot shows the ratio of the data over the model.
 In this case, the error bars correspond to the statistical uncertainty
 on the ratio due to both the data and the model. The red band
 shows the size of the systematic uncertainties with respect to the model.
 The model is said to be consistent with the data
 if the ratio is consistent with unity after considering statistical
 and systematic uncertainties.
-The different distributions are chosen primarly because 
+The different distributions are chosen primarily because 
 of their potential to discriminate between signal and background. 
 From top to bottom and left to right,
 these distributions are: 
@@ -124,7 +125,7 @@ the number of lepton pair combinations in the event
 which could feasibly come from the leptonic decay of a $Z$-boson.
 This results in three separate signal regions listed 
 below with the lepton charge combinations
-which fall in each category:
+that fall in each category:
 \begin{itemize}
 \item \textbf{0 SFOS}: $e^{\pm}e^{\pm}\mu^{\mp}$, 
 $\mu^{\pm}\mu^{\pm}e^{\mp}$ ($e^{\pm}e^{\pm}\mu^{\pm}$, 
@@ -157,13 +158,13 @@ namely from the fake estimates and the uncertainties on the WZ and ZZ k-factors.
 \label{fig:preselection_nsfos}
 \end{figure}
 
-Indeed, upon splitting the preselection region based on the number of SFOS
+Indeed, upon splitting the pre-selection region based on the number of SFOS
 pairs, we end up with signal and background predictions like in 
 \fig\ref{fig:preselection_nsfos}, where we can see difference
 in branching fraction for the signal to each of the three signal regions.
 In the 0 and 2 SFOS regions, roughly 2.5 signal events are predicted
 whereas closer to 5 signal events are predicted in the 1 SFOS region. 
-Totalling about 10 signal events predicted at the pre-selection stage.
+Totaling about 10 signal events predicted at the pre-selection stage.
 Shifting to looking at the background, perhaps the most striking 
 feature of this plot is the 
 clear difference in background yield and background composition
@@ -178,13 +179,13 @@ produced from the decay of the $Z$ boson(s). Consider only the case
 where the $WZ$ and $ZZ$ decay to either $e$ or $\mu$.  The $WZ$ production
 process is thus characterized by 3 leptons with at least 1 SFOS lepton pair
 which comes from the $Z$. If all three leptons from the $WZ$ decay have been
-reconstructed, then the there is a 50~\% chance the third lepton 
+reconstructed, then there is a 50~\% chance the third lepton 
 will also be able to form a SFOS pair with one of the leptons from the $Z$ decay.
 Thus, the WZ background will split evenly between the 1 and 2 SFOS classification.
 Something similar occurs for the ZZ background except that the fourth lepton 
 in the decay must be lost (usually due to possessing a low $\pt$).
 The large cross-section for theses processes means that
-they becomes the dominant backgrounds in the 1 and 2 SFOS regions.  
+they become the dominant backgrounds in the 1 and 2 SFOS regions.  
 The 0 SFOS signal region is mostly spared from contamination  by 
 these large processes but still
 includes both the $WZ$ and $ZZ$ processes as background due to the
@@ -205,23 +206,23 @@ have the best sensitivity due to the smaller background contribution.
 
 Within each signal region it may be that we can further reduce the 
 background with respect to the signal region. 
+By restricting to a region of phase space which removes a larger
+fraction of background than it does the signal, we can 
+increase the signal prediction with respect to the background.
+The ratio of events which pass a selection with respect
+to the original number of events is referred to as the 
+efficiency.
+Thus, we refer to this as choosing a selection threshold where 
+the signal efficiency is larger than the background efficiency.
 Because the background composition in the 0 SFOS region
 is so different from the 1 and 2 SFOS regions, it is likely that
 the selection which does this will also differ between them. 
 And even though the
-1 and 2 SFOS regions are resonably similar, we should not rule out
-the possibility that they also have a uniquely optimial selection.
+1 and 2 SFOS regions are reasonably similar, we should not rule out
+the possibility that they also have a uniquely optimal selection.
 Based on heuristic arguments, a list of reasonable physical
-quantities were considered. The most promising of these quantities
+quantities to restrict were considered. The most promising of these quantities
 are those listed previously in \sec\ref{sec:preselection}. 
-By restricting these quantities to a region which removes a larger
-fraction of background than it does the signal, we can 
-increase the signal prediction with respect to the background.
-The ratio of events which pass a selection with respect
-to the original number of events is refferred to as the 
-efficiency.
-Thus, we refer to this as choosing a selection threshold where 
-the signal efficiency is larger than the background efficiency.
 Also, because the predicted amount of signal is so precious,
 the signal efficiency should be kept as close to unity as possible.
 Consider the following selection choices using the quantities defined
@@ -282,7 +283,7 @@ Furthermore, these shapes are not the same in the pre-selection
 For instance, in the 0 SFOS region, the shape of the efficiencies
 for signal and background are very similar as a function
 of the \MET~threshold, but in the pre-selection stage they are
-very differerent, with the background efficiency dropping much
+very different, with the background efficiency dropping much
 more rapidly than the signal efficiency. This suggests that
 a cut on the \MET~distribution could be very useful 
 in the 1 and 2 SFOS regions but not in the 0 SFOS region.
@@ -291,14 +292,14 @@ On the other hand, a cut on \deltaphi~ could prove useful in all
 signal regions. The lepton \pt~is frequently used as a useful discriminant
 but in this case it seems to rapidly remove the signal at about the
 same rate as the background, so a tighter cut on the lepton \pt~
-is likely to prove unuseful. Cuts on \njet seem to remove a lot of 
+is likely to prove to be not useful. Cuts on \njet~seem to remove a lot of 
 the signal but cut tighter on the background in the pre-selection
 + 0 SFOS region, which could prove useful.  Most impressive is 
 the cut on \nbjet, which leaves the signal efficiency at almost exactly
 one, while having a large impact on the pre-selection + 0 SFOS region
 where the fake contribution is large.
 
-This type of heuristic study is useful for obtaining insight into
+This type of heuristic study  can be used to obtain insight into
 the distributions that are useful for discriminating 
 between signal and background.  But using these distributions
 alone to determine a final selection is a little haphazard.
@@ -307,20 +308,20 @@ distributions will have.  These distributions are likely to be
 at least partially correlated, so that cutting on one distribution might
 enhance or deflate the impact of another cut. 
 And two, it is not at all clear from these distributions
-what the best choice of cut is. We need a metric that will
+what is the best choice of cuts. We need a metric that will
 allow us to make decisions about which cuts to choose.
 The metric to use should be one that is 
 related to the final prediction after all selection cuts are applied.
 Thus, the metric cannot be used to make a decision about each 
-cut individually, but instead a decision about some combination of cuts.
+cut individually, but instead about some combination of cuts.
 
-To deal with the issues mentioned above, we choose to 
-decide on the final signal region selection using an optimization
+To deal with the issues mentioned above, we 
+decided on the final signal region selection using an optimization
 procedure. The optimization takes as input a multi-dimensional 
 space where each dimension is the selection threshold
 for one of the quantities listed above, plus some others not mentioned.
-The range of the multi-dimensinonal space that is 
-interesting in the optimization is restricted so that the 
+The range of the multi-dimensional space that is 
+is restricted so that the 
 predicted signal remains finite i.e. non-zero.
 At an individual point in this space, the optimization computes
 the expected signal and background events after the selection
@@ -351,18 +352,18 @@ the efficiencies as they do above. Furthermore,
 this acknowledges the finite  experimental resolution of these 
 quantities. For example,
 the difference between $\pt > 20~\GeV$ and $\pt > 20.5~\GeV$
-should not be taken too seriously because the effects of limited
+should not be taken too seriously because of the effects of limited
 track and energy resolution used to derive the muon and electron \pt.
 %expand on this? what would be the typical electron and muon resolution here?
 Treating the sample space as discrete means that the optimization
 function is not smooth and so cannot readily take into account
 derivative information to be used for instance 
 in some sophisticated minimization algorithm.
-Fortunately, the number of points in sample space after discretizing, 
+Fortunately, the number of points in the sample space after discretizing, 
 while large, is small enough that it can be evaluated in its entirety
 using a brute force approach. Thus, we choose to evaluate the 
 optimization in the restricted and discretized sample space in order
-to find an optimial choice for the selection.
+to find an optimal choice for the selection.
 
 %I should redo the optimization for the specific bin sizes and list them
 
@@ -448,9 +449,9 @@ The signal, which does not include $Z$-bosons, will not have the same peak, but 
 will be relatively flat around the region of the $Z$-peak. 
 This can clearly be seen in the plot of $m_{\textrm{SFOS}}$ in \fig\ref{fig:preselection}.
 As a result, removing events within some window around the peak can do a good job
-of removing these bacgkrounds without having a large effect on the signal.
+of removing these backgrounds without having a large effect on the signal.
 In the 0 SFOS region, by definition there are no SFOS pairs that could come 
-from the decay of a \z-boson. However, the effect of elecron charge mis-identification,
+from the decay of a \z-boson. However, the effect of electron charge mis-identification,
 discussed in \sec\ref{}, means that a peak can show up in the background
 of the $m_{ee}$ distribution for same-sign electron/positron pairs. 
 This can clearly be seen in \fig\ref{}.
@@ -460,10 +461,10 @@ The presence of neutrinos in the signal mean that the signal should have a
 relatively large \MET~compared to most of the backgrounds. Thus, 
 cutting on the \MET~distribution such that it is large can remove backgrounds
 expected to have small \MET, like $Z\gamma$ production.
-Still, there are some large backgrounds with neturinos, like $WZ$, 
+Still, there are some large backgrounds with neutrinos, like $WZ$, 
 and also backgrounds that have contributions to the \MET from objects that have
 missed reconstruction, like $ZZ$, which can also have a moderate to large \MET.
-Thus, some care must be taken to choose a threshold to cut on in the \MET.
+Thus, some care must be taken to choose a threshold to cut on the \MET.
 
 \begin{figure}[ht!]
 \centering
@@ -477,13 +478,13 @@ plus the \bee-veto requirement.}
 \label{fig:met_zwindow_optimization}
 \end{figure}
 
-The $Z\gamma$ background shows up in the low-shoulder of the \z peak
+The $Z\gamma$ background shows up in the low-shoulder of the \z-peak
 in the $m_{\textrm{SFOS}}$ distribution and at low MET. This can be
 seen both for the 1 and 2 SFOS regions in \fig\ref{fig:met_zwindow_optimization}.
 As a result, the $Z\gamma$ background can be removed either by tuning 
 the \z-mass window used in the veto above, or by removing events with low \met.
 Thus, the optimization shows that there is some correlation 
-between the \z-veto window and the \met selection threshold. 
+between the \z-veto window and the \met~selection threshold. 
 In the 1 SFOS region, there is a larger 
 contribution from $Z\gamma$ processes than in the 2 SFOS
 region.  This process mostly shows up in the low shoulder 
@@ -523,7 +524,7 @@ sum of the three charged leptons. When doing so, one finds that
 in the transverse plane, 
 the direction of the three charged leptons
 tends to be back-to-back with the direction of the 
-three neutrinos (missing $E_{T}$). To some extent, the
+three neutrinos (missing $E_{T}$). The
 backgrounds also show this behavior, but it is less pronounced than 
 it is for the signal.  As a result, 
 there is some discriminating power when cutting on the difference 
@@ -548,10 +549,11 @@ was chosen only for the 0 SFOS region.
 \subsection{Fiducial Region Selection}
 \label{sec:fiducial}
 
-A fiducial phase space or fiducial region is defined purely
-using truth information (generator information before
-being passed through ATLAS reconstruction) as the region
-the analysis is sensitive to. We define our fiducial region
+A fiducial phase space or fiducial region is the 
+region the analysis is sensitive to, defined 
+using purely truth information (generator information before
+being passed through ATLAS reconstruction).
+We define our fiducial region
 based on the optimized signal selection (defined at the reconstruction level)
 but using only truth information. For instance, the reconstructed
 lepton \pt~ requirement of 
@@ -606,14 +608,13 @@ the \vbfnlo~and \madgraph~samples mentioned in Section~\ref{sec:signal}.
 The predicted fiducial cross-sections at each stage of the selection
 are listed for both generators in \tab\ref{}.
 The fiducial cross-sections and their
-statistical uncertainties after the entire fiducial selection
-are summarized in each channel for both 
-generators in \tab\ref{tab:fiducial_cross_sections}.
+statistical uncertainties 
+are summarized in each channel for both generators 
+after the entire fiducial selection
+in \tab\ref{tab:fiducial_cross_sections}.
 They are seen to be in good agreement between both generators.
 
 
-A summary of the signal sample phase space and cross-sections is
-presented in Table~\ref{tab:signal_sample_summary}.
 The derived fiducial cross-sections using the two generators are 
 shown in Table~\ref{tab:fiducial_cross_sections}.  The cross-sections are observed
 to be in good agreement between the two generators. The MadGraph NLO
