@@ -1,9 +1,5 @@
-\section{Event Yield in event Pre-selection and Signal Regions}
+\section{Event Yields}
 \label{sec:event_yield}
-
-The background estimation described in Section~\ref{sec:backgrounds_estimation}
-and the data are passed through the 
-three-lepton selections described in Section~\ref{sec:eventSelection}.
 
 
 \subsection{Event Pre-selection}
@@ -27,8 +23,8 @@ three-lepton selections described in Section~\ref{sec:eventSelection}.
 \end{figure}
 The signal plus background model 
 (described in detail in \sec\ref{sec:bg_estimates})
-is compared to data at pre-selection
-for a few different kinematic distributions of interest 
+is compared to data at pre-selection, defined in \sec\ref{sec:preselection},
+for a few different kinematic distributions 
 in \fig\ref{fig:preselection}. In the upper plot of each distribution,
 the colored histograms 
 represent the different categories contributing to the signal 
@@ -37,7 +33,7 @@ are split by color based on the category.
 %The colors are...
 Hashed bands are shown on the stacked
 histograms representing the size of the systematic uncertainties 
-on the model, described later in \sec\ref{}.
+on the model, described in \sec\ref{}.
 The data is shown in the black points where the 
 bars on the points represent the statistical uncertainty on the data.
 The lower plot shows the ratio of the data over the model.
@@ -50,31 +46,8 @@ and systematic uncertainties.
 The different distributions are chosen primarily because 
 of their potential to discriminate between signal and background. 
 From top to bottom and left to right,
-these distributions are: 
-\begin{itemize}
-\item Lepton $P_{T}^{1}$:  The momentum of the lepton in the transverse plane
-which has the largest transverse momentum out of all three leptons selected.
-\item Lepton $P_{T}^{2}$:  The momentum of the lepton in the transverse plane
-which has the second largest transverse momentum out of all three leptons selected.
-\item Lepton $P_{T}^{3}$:  The momentum of the lepton in the transverse plane
-which has the smallest transverse momentum out of all three leptons selected.
-\item \MET:  The missing transverse energy
-\item $\Delta\varphi(lll,\MET)$:  The difference in the polar angle 
-between the three lepton $p_{T}$, 
-$\overrightarrow{p_{T}^{lll}} =  \overrightarrow{p_{T}^{1}}+ 
-\overrightarrow{p_{T}^{2}}+ \overrightarrow{p_{T}^{2}}$, 
-and \MET. It can be expressed as 
-$\Delta\varphi(lll,\MET) = \cos^{-1}\frac{ \overrightarrow{p_{T}^{lll}}\cdot\overrightarrow{\MET} }{ p_{T}^{lll}\MET } $
-\item SFOS Invariant Mass ($m_{\textrm{SFOS}}$): The di-lepton invariant mass
-of each SFOS lepton pair in the event. %do i need to define the invariant mass?
-\item Three Lepton $m_{T}$: The transverse mass of the three lepton system
-and the missing transverse energy, or
-$m_{T}^{lll} = \sqrt{2p_{T}^{lll}\MET(1-\cos(\Delta\varphi(lll,\MET)))}$ 
-\item $N_{\textrm{Jet}}$: The number of jets selected in the event.
-\item $N_{b-\textrm{Jet}}$: The number of \bee-jets tagged in the event.
-\item $N_{\mu}$: The number of selected leptons that are muons. The maximum
-possible is 3. If the lepton is not a muon it must be an electron.
-\end{itemize}
+these distributions are: the leading, subleading, and minimum lepton \pt~(ordered by their \pt),
+\MET, \deltaphi, $m_{\textrm{SFOS}}$, \njet, \nbjet, and $N_{\mu}$.
 In general, the signal plus background model is observed to be consistent
 with the data at the pre-selection, at least for those distributions
 considered here.
@@ -82,64 +55,16 @@ considered here.
 
 
 
-...OLD...
-
-The three lepton event pre-selection region is used as a starting point for all three signal regions
-and follows the selection described in Section~\ref{sec:preselection}. Kinematic distributions
-in this region are shown in Figure~\ref{fig:preselection} while the yields are shown 
-binned by the lepton flavor combinations in Table~\ref{tab:preselection}. The yields in the individual
-signal channels just after pre-selection are shown in Figure~\ref{fig:preselection_nsfos} with systematic uncertainties.
-In general, good agreement is observed.
-%pre-selection
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.3\columnwidth]{figures/preselection/AllLeptonPt_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/DeltaPhiMET123_Abs_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/InvariantMassSFOS_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/LeadingLeptonPt_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/SubleadingLeptonPt_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/MinimumLeptonPt_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/MET_Et_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/NBTaggedJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/NJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/preselection/NMuons_histratio.eps}
-%\includegraphics[width=0.3\columnwidth]{figures/preselection/NSFOS_histratio.eps}
-%\includegraphics[width=0.3\columnwidth]{figures/preselection/TotalCharge_histratio.eps}
-\caption{Distributions showing the observed data compared to the background estimate at event pre-selection.}
-\label{fig:preselection}
-\end{figure}
-
-\begin{table}[ht!]
-\centering
-\input{tables/Preselection_Yields.tex}
-\caption{Expected and observed event yields binned by lepton flavor combination at event pre-selection.
-Only statistical uncertainties are shown.
-}
-\label{tab:preselection}
-\end{table}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.5\columnwidth]{figures/preselection/NSFOS_Logy_histratio.png}
-%\includegraphics[width=0.3\columnwidth]{figures/preselection/TotalCharge_histratio.eps}
-\caption{Yields at event pre-selection in the 0, 1 and 2 SFOS regions.  The most important systematic uncertainties 
-(discussed in section~\ref{sec:systematics}) are shown, namely from the fake estimates and the uncertainties on the WZ and ZZ k-factors.}
-\label{fig:preselection_nsfos}
-\end{figure}
-
-\begin{table}[ht!]
-\centering
-\input{tables/Preselection_Yields.tex}
-\caption{Expected and observed event yields binned by lepton flavor combination at event pre-selection.
-Only statistical uncertainties are shown.
-}
-\label{tab:preselection}
-\end{table}
+%\begin{table}[ht!]
+%\centering
+%\input{tables/Preselection_Yields.tex}
+%\caption{Expected and observed event yields binned by lepton flavor combination at event pre-selection.
+%Only statistical uncertainties are shown.
+%}
+%\label{tab:preselection}
+%\end{table}
 
 
-\clearpage
-\subsection{Signal Regions}
-\label{sec:signal_yield}
 
 \begin{figure}[ht!]
 \centering
@@ -151,7 +76,7 @@ namely from the fake estimates and the uncertainties on the WZ and ZZ k-factors.
 \label{fig:preselection_nsfos}
 \end{figure}
 
-Indeed, upon splitting the pre-selection region based on the number of SFOS
+Upon splitting the pre-selection region based on the number of SFOS
 pairs, we end up with signal and background predictions like in 
 \fig\ref{fig:preselection_nsfos}, where we can see differences
 in the branching fraction for the signal to each of the three signal regions.
@@ -189,7 +114,11 @@ reducible and dominated instead by events where a jet is mis-measured
 as or overlaps with a lepton, called the fake lepton background, along
 with the aforementioned sub-dominant effect of lepton charge 
 mis-identification described in Section~\ref{sec:chargeMisID}.  
-From this, one can clearly see that it is
+
+\subsection{Signal Regions}
+\subsubsection{Optimization}
+\label{sec:optimization}
+From the above discussion, one can clearly see that it is
 advantageous to split these signal regions so that the dominant
 backgrounds in each region may be targeted individually.  Furthermore,
 note that while the 1 SFOS region contains more of the signal than the
@@ -213,8 +142,7 @@ And even though the
 1 and 2 SFOS regions are reasonably similar, we should not rule out
 the possibility that they also have a uniquely optimal selection.
 Based on heuristic arguments, a list of reasonable physical
-quantities to restrict were considered. The most promising of these quantities
-are those listed previously in \sec\ref{sec:preselection}. 
+quantities to restrict were considered. 
 Also, because the predicted amount of signal is so precious,
 the signal efficiency should be kept as close to unity as possible.
 Consider the following selection choices using the quantities defined
@@ -477,16 +405,15 @@ offers little to no discriminating power
 between the signal and background so we have chosen not to apply 
 any cut here in order to maximize the signal yield.
 
+\subsubsection{Signal Region Yields}
+\label{sec:signal_yield}
 
 
-...OLD...
 
 The selection used in the final signal regions is determined as described in Section~\ref{sec:signal_regions} and is summarized in Table~\ref{tab:signal_selection}. Kinematic distributions are shown for the distribution
 that is cut on just before the cut is applied
 for each stage of the selection in Figures~\ref{fig:0sfos}, \ref{fig:1sfos}, and \ref{fig:2sfos} for
 the 0, 1, and 2 SFOS regions, respectively.
-A more detailed set of kinematic distributions at each stage of the selection is 
-shown in appendix~\ref{sec:app_signal_selection}. 
 Cut-flows showing the weighted cut-flows at each stage of the signal selection are shown for the 0, 1, and 2 SFOS regions
 in Tables ~\ref{tab:cutflow_weighted_0sfos}, ~\ref{tab:cutflow_weighted_1sfos}, ~\ref{tab:cutflow_weighted_2sfos}.
 Unweighted cut-flows are shown in appendix~\ref{sec:app_signal_selection}.
@@ -510,10 +437,10 @@ The Poisson probability of observing 5 events with 3.67 events expected from the
 
 \begin{table}[ht!]
 \centering
-\scriptsize
-\input{tables/Cutflow_Weighted_0SFOS.tex}
+\small
+\input{tables/Cutflow_Weighted_0SFOS_Reduced.tex}
 \caption{Cut-flows showing the event yields and efficiencies for each cut in the 0 SFOS signal region
-starting from event pre-selection and binned by category. 
+starting from event pre-selection separately for the total signal and total bacgkround predictions, along with the observed data. 
 Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
 The fake lepton background only includes the matrix method weights.  The data is unweighted.
 Efficiencies show the ratio of the yield with respect
@@ -521,45 +448,47 @@ to the previous cut.  The efficiency is first calculated at the first cut after 
 \label{tab:cutflow_weighted_0sfos}
 \end{table}
 
+\begin{table}[ht!]
+\centering
+\small
+\input{tables/Cutflow_Weighted_0SFOS_BG1.tex}
+\input{tables/Cutflow_Weighted_0SFOS_BG2.tex}
+\caption{Cut-flows showing the event yields and efficiencies for each cut in the 0 SFOS signal region
+starting from event pre-selection and binned by background category. 
+Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
+The fake lepton background only includes the matrix method weights.  The data is unweighted.
+Efficiencies show the ratio of the yield with respect
+to the previous cut.  The efficiency is first calculated at the first cut after event pre-selection.  }
+\label{tab:cutflow_weighted_0sfos_bg}
+\end{table}
 
-
-%0 SFOS, consolidated
 \begin{figure}[ht!]
 \centering
-%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_charge_sum.png}
-%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet.png}
-%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf.png}
-%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf_mee.png}
-%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf_mee_deltaphi.png}
-%\includegraphics[width=0.3\columnwidth]{figures/cuts/0sfos_chargesum_bjet_msf_mee_deltaphi_njet.png}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSF_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_physics/weight_all/eps/InvariantMassElEl_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_0SFOS_physics/weight_all/eps/TotalCharge_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_0SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_0SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSF_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_physics/weight_all/eps/InvariantMassElEl_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSF_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_physics/weight_all/eps/InvariantMassElEl_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_0SFOS_ChargeAbs1_BVeto85_SFMllGt20_SSMeeZVeto15_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
 \caption{Distributions showing data compared to the signal plus background estimate in the 0 SFOS region at each stage 
 of the selection before the cuts are applied to the given distribution. 
 Plots should be read sequentially from left to right
 and from top to bottom. 
 Referring to Table~\ref{tab:cutflow_weighted_0sfos}, the top left
-plot is shown before cut \#4 is applied, top middle is before cut \#5, and
+plot is shown before cut \#3 is applied, top middle is before cut \#5, and
 so on until the bottom right which is after all cuts are applied.
 }
 \label{fig:0sfos}
 \end{figure}
 
-%\begin{table}[ht!]
-%\centering
-%\input{tables/0SFOS_Yields.tex}
-%\caption{ Expected and observed event yields binned by lepton flavor combination for the optimized 0 SFOS signal region selection defined as follows: event pre-selection + 0 SFOS + charge sum $=\pm1$ + b-veto + $m_{SF}$ + Same-Sign Z-veto + $\Delta\phi$ + $N_{jet}$.
-%Only statistical uncertainties are shown.
-%}
-%\label{tab:0sfos}
-%\end{table}
-
-
-\clearpage
 \subsubsection{1 SFOS Signal Region}
 The cut-flows for the selection in the 1 SFOS region are shown in Table~\ref{tab:cutflow_weighted_1sfos}
 while the distributions at each stage of the selection are shown in Figure~\ref{fig:1sfos}.
@@ -576,11 +505,11 @@ in the data in the $ee\mu$ bin.  This suggests that the difference is most likel
 The Poisson probability of observing 13 events with 16.14 events expected from the signal plus background prediction is 7.9\%.
 
 \begin{table}[ht!]
+\small
 \centering
-\scriptsize
-\input{tables/Cutflow_Weighted_1SFOS.tex}
+\input{tables/Cutflow_Weighted_1SFOS_Reduced.tex}
 \caption{Cut-flows showing the event yields and efficiencies for each cut in the 1 SFOS signal region
-starting from event pre-selection and binned by category. 
+starting from event pre-selection separately for the total signal and total background predictions, along with the observed by data. 
 Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
 The fake lepton background only includes the matrix method weights.  The data is unweighted.
 Efficiencies show the ratio of the yield with respect
@@ -588,17 +517,38 @@ to the previous cut.  The efficiency is first calculated at the first cut after 
 \label{tab:cutflow_weighted_1sfos}
 \end{table}
 
+\begin{table}[ht!]
+\small
+\centering
+\input{tables/Cutflow_Weighted_1SFOS_BG1.tex}
+\input{tables/Cutflow_Weighted_1SFOS_BG2.tex}
+\caption{Cut-flows showing the event yields and efficiencies for each cut in the 1 SFOS signal region
+starting from event pre-selection and binned by background category. 
+Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
+The fake lepton background only includes the matrix method weights.  The data is unweighted.
+Efficiencies show the ratio of the yield with respect
+to the previous cut.  The efficiency is first calculated at the first cut after event pre-selection.  }
+\label{tab:cutflow_weighted_1sfos_bg}
+\end{table}
 
 
 %1 SFOS consolidated
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_physics/weight_all/eps/MET_Et_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_ZVetoLow35High25GeV_physics/weight_all/eps/MET_Et_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_ZVetoLow35High25GeV_METGt45GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_ZVetoLow35High25GeV_METGt45GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_ZVetoLow35High25GeV_METGt45GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+
+
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_physics/weight_all/eps/MET_Et_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_1SFOS_ChargeAbs1_ZVetoLow35High25GeV_BVeto85_METGt45GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
 \caption{Distributions showing data compared to the signal plus background estimate in the 1 SFOS region at each stage 
 of the selection before the cuts are applied to the given distribution. Plots should be read sequentially from left to right
 and from top to bottom. 
@@ -607,7 +557,6 @@ plot is shown before cut \#3 is applied, top middle is before cut \#4, and
 so on until the bottom right which is after all cuts are applied.}
 \label{fig:1sfos}
 \end{figure}
-
 
 %\begin{table}[ht!]
 %\centering
@@ -618,7 +567,6 @@ so on until the bottom right which is after all cuts are applied.}
 %\label{tab:1sfos}
 %\end{table}
 
-\clearpage
 \subsubsection{2 SFOS Signal Region}
 The cut-flows for the selection in the 2 SFOS region are shown in Table~\ref{tab:cutflow_weighted_2sfos}
 while the distributions at each stage of the selection are shown in Figure~\ref{fig:2sfos}.
@@ -637,11 +585,12 @@ enhancing the disagreement. This suggests that the disagreement may just be due 
 The Poisson probability of observing 6 events with 10.86 events expected from the signal plus background prediction is 5.7\%.
 
 \begin{table}[ht!]
+\small
 \centering
-\scriptsize
-\input{tables/Cutflow_Weighted_2SFOS.tex}
+%\scriptsize
+\input{tables/Cutflow_Weighted_2SFOS_Reduced.tex}
 \caption{Cut-flows showing the event yields and efficiencies for each cut in the 2 SFOS signal region
-starting from event pre-selection and binned by category. 
+starting from event pre-selection separately for the total signal and total background predictions, along with the observed data.
 Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
 The fake lepton background only includes the matrix method weights.  The data is unweighted.
 Efficiencies show the ratio of the yield with respect
@@ -649,16 +598,40 @@ to the previous cut.  The efficiency is first calculated at the first cut after 
 \label{tab:cutflow_weighted_2sfos}
 \end{table}
 
+\begin{table}[ht!]
+\small
+\centering
+%\scriptsize
+\input{tables/Cutflow_Weighted_2SFOS_BG1.tex}
+\input{tables/Cutflow_Weighted_2SFOS_BG2.tex}
+\caption{Cut-flows showing the event yields and efficiencies for each cut in the 2 SFOS signal region
+starting from event pre-selection and binned by background category. 
+Event yields for MC backgrounds and signal include all weights and are normalized to an integrated luminosity of $20.3~\mathrm{fb}^{-1}$.  
+The fake lepton background only includes the matrix method weights.  The data is unweighted.
+Efficiencies show the ratio of the yield with respect
+to the previous cut.  The efficiency is first calculated at the first cut after event pre-selection.  }
+\label{tab:cutflow_weighted_2sfos_bg}
+\end{table}
+
 
 %2 SFOS consolidated
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_physics/weight_all/eps/MET_Et_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
-\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_physics/weight_all/eps/MET_Et_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LinearY_Rebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
+
+
+
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_physics/weight_all/eps/NBTaggedJets_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/eps/InvariantMassSFOS_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionMay29_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_physics/weight_all/eps/MET_Et_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_physics/weight_all/eps/DeltaPhiMET123_Abs_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_physics/weight_all/eps/NJets_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/appendix_signal_selection/PreselectionJune2_NoSTVF_2SFOS_ChargeAbs1_BVeto85_ZVeto20GeV_METGt55GeV_DeltaPhi2p5_NJetLt2_physics/weight_all/eps/NMuons_histratio.eps}
 \caption{Distributions showing data compared to the signal plus background estimate in the 2 SFOS region at each stage 
 of the selection before the cuts are applied to the given distribution. Plots should be read sequentially from left to right
 and from top to bottom. 
