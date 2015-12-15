@@ -301,62 +301,7 @@ in the 0 SFOS (left), 1 SFOS (middle), and 2 SFOS (right) signal regions.}
 \label{fig:optimization}
 \end{figure}
 
-In all regions, a veto is applied on events with jets tagged to come from \bee~
-or \bee-hadron decays. Besides the nominal \bee-tagging operating
-point with an 85~\% \bee-tagging efficiency (mentioned in
-\sec\ref{sec:object_selection}), other 
-\bee-tagging efficiency operating points
-were considered that had a lower efficiency (namely 80\%, 70\%, and 60\%). 
-These other operating points could be useful if the \bee-tagging mis-identification
-was high enough to remove a significant portion of the signal. However,
-even at the 85~\% operating point
-the mis-identification efficiency remains manageable at about 1~\%. 
-Even with some jet mis-identification, the signal has
-a very high efficiency of passing this 
-cut of $> 99$~\% while offering some of the strongest 
-reduction in the fake lepton background. 
-Thus there is no benefit observed by going to a lower efficiency operating point.
-The analysis could potentially benefit from an even more stringent 
-operating point, but the highest
-efficiency operating point that is supported by the ATLAS
-\bee-tagging group is the 85~\% efficiency operating point.
-In addition to the the \bee-jet veto, there is an additional
-cut on the jet multiplicity, regardless of whether or not 
-the jet is tagged. By only keeping
-events with no more than one jet, 
-the signal efficiency is almost $90$~\% while reducing
-the background by about 50~\%.  Applying a veto on 
-all jets does a very good job at removing the fake lepton
-background, but the signal efficiency is prohibitively small, at about 60~\%. 
 
-
-%should this description be moved earlier
-Some of the backgrounds include the production of \z~bosons.
-The invariant mass of the \z-boson can be reconstructed from the SFOS
-pair coming from the \z-boson decay. This will result in a peak from these backgrounds
-in the invariant mass distribution around 
-the $Z$-mass ( $m_{Z}=91.1876$~GeV \cite{PDG:2014}).
-The signal, which does not include $Z$-bosons, will not have the same peak, but instead
-will be relatively flat around the region of the $Z$-peak. 
-This can clearly be seen in the plot of $m_{\textrm{SFOS}}$ 
-in \fig\ref{fig:preselection}.
-As a result, removing events within some window around the peak can do a good job
-of removing these backgrounds without having a large effect on the signal.
-In the 0 SFOS region, by definition there are no SFOS pairs that could come 
-from the decay of a \z-boson. However, the effect of electron charge mis-identification,
-discussed in \sec\ref{}, means that a peak can show up in the background
-of the $m_{ee}$ distribution for same-sign electron/positron pairs. 
-This can clearly be seen in \fig\ref{}.
-Thus, a veto can be performed in this distribution as well.
-
-The presence of neutrinos in the signal mean that the signal should have a 
-relatively large \MET~compared to most of the backgrounds. Thus, 
-cutting on the \MET~distribution such that it is large can remove backgrounds
-expected to have small \MET, like $Z\gamma$ production.
-Still, there are some large backgrounds with neutrinos, like $WZ$, 
-and also backgrounds that have contributions to the \MET from objects that have
-missed reconstruction, like $ZZ$, which can also have a moderate to large \MET.
-Thus, some care must be taken to choose a threshold to cut on the \MET.
 
 \begin{figure}[ht!]
 \centering
@@ -489,6 +434,7 @@ so on until the bottom right which is after all cuts are applied.
 \label{fig:0sfos}
 \end{figure}
 
+\clearpage
 \subsubsection{1 SFOS Signal Region}
 The cut-flows for the selection in the 1 SFOS region are shown in Table~\ref{tab:cutflow_weighted_1sfos}
 while the distributions at each stage of the selection are shown in Figure~\ref{fig:1sfos}.
@@ -567,6 +513,7 @@ so on until the bottom right which is after all cuts are applied.}
 %\label{tab:1sfos}
 %\end{table}
 
+\clearpage
 \subsubsection{2 SFOS Signal Region}
 The cut-flows for the selection in the 2 SFOS region are shown in Table~\ref{tab:cutflow_weighted_2sfos}
 while the distributions at each stage of the selection are shown in Figure~\ref{fig:2sfos}.
@@ -652,7 +599,8 @@ so on until the bottom right which is after all cuts are applied.}
 %\label{tab:2sfos}
 %\end{table}
 
-\subsubsection{Signal Efficiency }
+\clearpage
+\subsubsection{Signal Efficiency and Fiducial Cross-sections}
 \label{sec:signal_efficiency}
 
 The signal efficiency, $\varepsilon_i$, is defined for each channel, $i$,
@@ -684,3 +632,39 @@ arrive at the signal efficiencies listed in Table~\ref{tab:signal_efficiencies}.
 
 
 
+The fiducial cross-sections are evaluated in both 
+the \vbfnlo~and \madgraph~samples mentioned in Section~\ref{sec:signal}.
+The predicted fiducial cross-sections at each stage of the selection
+are listed for both generators in \tab\ref{}.
+The fiducial cross-sections and their
+statistical uncertainties 
+are summarized in each channel for both generators 
+after the entire fiducial selection
+in \tab\ref{tab:fiducial_cross_sections}.
+They are seen to be in good agreement between both generators.
+
+
+The derived fiducial cross-sections using the two generators are 
+shown in Table~\ref{tab:fiducial_cross_sections}.  The cross-sections are observed
+to be in good agreement between the two generators. The MadGraph NLO
+fiducial cross-sections are used in the final measurement.
+The PDF and scale uncertainties on the fiducial cross-sections
+are determined after summing over all three signal regions 
+as described earlier in \sec\ref{sec:signal}.
+% it would probably be a good idea to include the fiducial cut-flows as well.
+
+
+
+
+
+\begin{table}[ht!]
+\centering
+\begin{footnotesize}
+\input{tables/fiducial_cross_sections.tex}
+\end{footnotesize}
+\caption{Fiducial cross-sections derived in each signal region for the two 
+generators. Production modes are summed together to get one fiducial 
+cross-section per channel per generator. The cross-sections are seen to 
+be in good agreement between the two generators.}
+\label{tab:fiducial_cross_sections}
+\end{table}

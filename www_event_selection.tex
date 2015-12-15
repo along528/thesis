@@ -90,16 +90,17 @@ Opposite-Sign (SFOS) lepton pairs.}
 \label{tab:signal_selection}
 \end{table}
 
-Each signal region has a unique selection determined by an optmizization
+In each signal region, a unique selection is determined by an optmizization
 procedure that minimizes the uncertainty on the expected SM measurement. 
-This optimization procedure is described in detail in \sec\ref{sec:signal_yield}.
+The optimization procedure is described in detail in \sec\ref{sec:signal_yield}.
+The optimization considers many different physical quantities 
+with which to perform a possible selection, comparing different
+thresholds for a given quantity and for different combinations of 
+quantities. After optimization a few different quantities
+are determined to be useful for selection. 
 The final selection determined from the optimization
 is presented in \tab\ref{tab:signal_selection}.
-
-
-
-
-
+All cuts are decided from the optimization, and are motivated below.
 
 %other metrics like what?
 
@@ -116,9 +117,59 @@ is presented in \tab\ref{tab:signal_selection}.
 %It should be said that a more algorithmic way of choosing the type 
 %of quantities to consider could improve this selection. Deep learning...
 
+Since the $WWW$ process is a purely EW process, and since
+we are looking only at the fully leptonic channel, the 
+signal is expected to have very little hadronic 
+activity. Any observed hadronic activity should come exclusively
+from the momentum recoil of the $WWW$ system with the incoming
+partons. Thus, the multijet contribution to the signal
+should be small. As a result, a selection of $\njet \leq 1$
+is applied in all signal regions.
+Further, the signal is 
+expected to have negligible contributions
+from heavy flavor jets. As a result, vetoing events with jets
+tagged to come from \bee~ or \bee-hadron decays has
+little affect on the signal expectation. This is true even with 
+the rate for heavy flavor jet mis-identification for the 
+\bee-tagging algorithms. For the 
+85\% \bee-tagging efficiency operating point described in 
+\sec\ref{sec:object_selection}, the heavy flavor
+mis-identification rate is measured to be about 1\%. %cite?
 
 
+%should this description be moved earlier
+Some of the backgrounds include the production of \z~bosons.
+The invariant mass of the \z-boson can be reconstructed from the SFOS
+pair coming from the \z-boson decay. 
+This will result in a peak from these backgrounds
+in the invariant mass distribution around 
+the $Z$-mass ( $m_{Z}=91.1876$~GeV \cite{PDG:2014}).
+The signal, which does not include $Z$-bosons, 
+will not have the same peak, but instead
+will be relatively flat around the region of the $Z$-peak. 
+As a result, removing events within some window around the peak can do a good job
+of removing these backgrounds without having a large effect on the signal.
+In the 0 SFOS region, by definition there are no SFOS pairs that could come 
+from the decay of a \z-boson. 
+However, the effect of electron charge mis-identification,
+discussed in \sec\ref{}, means that a peak can show up in the background
+of the $m_{ee}$ distribution for same-sign electron/positron pairs. 
+Thus, a veto can be performed in this distribution as well.
 
+
+The presence of neutrinos in the signal mean that the signal should have a 
+relatively large \MET~compared to most of the backgrounds. Thus, 
+cutting on the \MET~distribution such that it is large can remove backgrounds
+expected to have small \MET, like $Z\gamma$ production.
+Still, there are some large backgrounds with neutrinos, like $WZ$, 
+and also backgrounds that have contributions to the \MET from objects that have
+missed reconstruction, like $ZZ$, which can also have a moderate to large \MET.
+Thus, some care must be taken to choose a threshold to cut on the \MET and
+different thresholds are chosen for each signal 
+region.
+In the 1 and 2 SFOS regions the selections are $\MET > 45\GeV$
+and $\MET > 55\GeV$, respectively. Meanwhile, in the 0 SFOS region, 
+the \MET selection is kept inclusive.
 
 %this description probably belongs in an earlier section
 The magnitude and direction
@@ -137,20 +188,12 @@ there is some discriminating power when cutting on the difference
 in the two angles: 
 $|\Delta\phi(3l,\MET)| = |\phi(3l)-\phi(\MET)|$. 
 The behavior of this quantity for signal and
-background is similar in all three signal regions so based on the 
+background is similar in all three signal regions.
+As a result, based on the 
 optimization it was chosen to apply the cut
 $|\Delta\phi(3l,\MET)| > 2.5$ everywhere.  
-We also considered taking the difference in angle between
-the missing $E_{T}$ and individual leptons (e.g. the highest $\pt$ lepton) 
-but this was shown to be not nearly as effective.  
 
-Finally, the distribution of the invariant mass
-from same-flavor lepton pairs (regardless of sign) 
-was considered in the 0 SFOS 
-region to remove any low-mass contamination from processes like from QCD.  
-This was shown to offer some
-modest discriminating power and a threshold of $m_{SF} > 20$~GeV 
-was chosen only for the 0 SFOS region.
+
 
 \subsection{Fiducial Region Selection}
 \label{sec:fiducial}
@@ -209,39 +252,3 @@ reconstruction level selection.
 
 
 
-The fiducial cross-sections are evaluated in both 
-the \vbfnlo~and \madgraph~samples mentioned in Section~\ref{sec:signal}.
-The predicted fiducial cross-sections at each stage of the selection
-are listed for both generators in \tab\ref{}.
-The fiducial cross-sections and their
-statistical uncertainties 
-are summarized in each channel for both generators 
-after the entire fiducial selection
-in \tab\ref{tab:fiducial_cross_sections}.
-They are seen to be in good agreement between both generators.
-
-
-The derived fiducial cross-sections using the two generators are 
-shown in Table~\ref{tab:fiducial_cross_sections}.  The cross-sections are observed
-to be in good agreement between the two generators. The MadGraph NLO
-fiducial cross-sections are used in the final measurement.
-The PDF and scale uncertainties on the fiducial cross-sections
-are determined after summing over all three signal regions 
-as described earlier in \sec\ref{sec:signal}.
-% it would probably be a good idea to include the fiducial cut-flows as well.
-
-
-
-
-
-\begin{table}[ht!]
-\centering
-\begin{footnotesize}
-\input{tables/fiducial_cross_sections.tex}
-\end{footnotesize}
-\caption{Fiducial cross-sections derived in each signal region for the two 
-generators. Production modes are summed together to get one fiducial 
-cross-section per channel per generator. The cross-sections are seen to 
-be in good agreement between the two generators.}
-\label{tab:fiducial_cross_sections}
-\end{table}
