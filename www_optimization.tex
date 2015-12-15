@@ -9,125 +9,12 @@ have the best sensitivity due to the smaller background contribution.
 In \sec\ref{sec:signal_regions} it was already shown
 that a selection was chosen based on an optimization procedure
 designed to further reduce the background with respect to the 
-signal region. The details of the optimization are presented
-here.
+signal region. 
 
-Within each signal region it may be that we can further reduce the 
-background with respect to the signal region. 
-By restricting to a region of phase space which removes a larger
-fraction of background than it does the signal, we can 
-increase the signal prediction with respect to the background.
-The ratio of events which pass a selection with respect
-to the original number of events is referred to as the 
-efficiency.
-Thus, we refer to this as choosing a selection threshold where 
-the signal efficiency is larger than the background efficiency.
-Because the background composition in the 0 SFOS region
-is so different from the 1 and 2 SFOS regions, it is likely that
-the selection which does this will also differ between them. 
-And even though the
-1 and 2 SFOS regions are reasonably similar, we should not rule out
-the possibility that they also have a uniquely optimal selection.
-Based on heuristic arguments, a list of reasonable physical
-quantities to restrict were considered. 
-Also, because the predicted amount of signal is so precious,
-the signal efficiency should be kept as close to unity as possible.
-Consider the following selection choices using the quantities defined
-earlier:
-%Do I need to add more plots here???
-\begin{itemize}
-\item Lepton $P_{T}$:  Require that exactly three leptons passing tight object quality requirements have a $P_{T} > X$.
-\item Missing $E_{T}$:  Require that $\MET > X$.
-\item $\Delta\varphi(lll,\MET)$:  Require that $\Delta\varphi(lll,\MET) = \cos^{-1}\frac{ \overrightarrow{p_{T}^{lll}}\cdot\overrightarrow{\MET} }{ p_{T}^{lll}\MET } > X$.
-\item Jet Veto: Require that $N_{Jet} \leq X$.
-\item b-Jet Veto: Require that $N_{b-Jet} \leq X$.
-%\item Z Veto: Require that $m_{ll}$ does not fall in the region $m_{Z}-m_{min} < m_{ll} < m_{Z}-m_{max}$ where $m_Z = 91.1876$~GeV and where $m_{min}$ are $m_{max}$ are the boundaries of the \z-window with which to veto.  For the 1 and 2 SFOS regions the pairs used to construct the $m_{ll}$ are SFOS pairs of either electrons or muons.  In the 0 SFOS region there are no SFOS pairs by definition but there is still a \z-peak in the same-sign di-electron mass spectrum due to charge mis-id. Thus, in the 0 SFOS region we consider instead
-\item Three Lepton $m_{T}$: Require that $m_{T}^{lll} > X$
-%\item Same-flavor mass: Consider cuts on $m_{SF} > m_{min}$ and/or $m_{SF} < m_{max}$ where $m_{SF}$ is the invariant mass of same-flavor pairs (with no requirement on the sign) %what about this one?
-\end{itemize}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/AllLeptonPt_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/MET_Et_STVF_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/DeltaPhiMETSTVF123_Abs_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NBTaggedJets_LeftCumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NJets_LeftCumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/ThreeLeptonMt_Cumulative.eps}
-%\includegraphics[scale=0.25]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/ZWindow_Cumulative.eps}
-\caption{Signal and background efficiencies as a function of various cuts when starting from event pre-selection.}
-\label{fig:optimization_efficiencies_preselection}
-\end{figure}
-
-
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/AllLeptonPt_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/MET_Et_STVF_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/DeltaPhiMETSTVF123_Abs_Cumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/NBTaggedJets_LeftCumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/NJets_LeftCumulative.eps}
-\includegraphics[width=0.3\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/ThreeLeptonMt_Cumulative.eps}
-%\includegraphics[scale=0.25]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/ZWindow_Cumulative.eps}
-\caption{Signal and background efficiencies as a function of various cuts when starting from event pre-selection + 0 SFOS lepton pairs.}
-\label{fig:optimization_efficiencies_0sfos}
-\end{figure}
-
-We can plot the efficiency for the signal as well as the background
-as a function of the threshold, $X$, for each of these quantities. 
-The efficiencies are shown starting 
-in the pre-selection region in 
-\fig\ref{fig:optimization_efficiencies_preselection} 
-(which has a similar background composition to the 1 and 2 SFOS regions)
-and in the pre-selection + 0 SFOS region
-in \fig\ref{fig:optimization_efficiencies_0sfos}.
-Clearly, the shape of the efficiencies between the signal and
-background is not always the same, which means that we have some
-power to reduce the background with respect to the signal.
-Furthermore, these shapes are not the same in the pre-selection 
-+ 0 SFOS region as they are in just the pre-selection region.
-For instance, in the 0 SFOS region, the shape of the efficiencies
-for signal and background are very similar as a function
-of the \MET~threshold, but in the pre-selection stage they are
-very different, with the background efficiency dropping much
-more rapidly than the signal efficiency. This suggests that
-a cut on the \MET~distribution could be very useful 
-in the 1 and 2 SFOS regions but not in the 0 SFOS region.
-Something similar may be true for a cut on $m_{T}^{lll}$.
-On the other hand, a cut on \deltaphi~ could prove useful in all 
-signal regions. The lepton \pt~is frequently used as a useful discriminant
-but in this case it seems to rapidly remove the signal at about the
-same rate as the background, so a tighter cut on the lepton \pt~
-is likely to prove to be not useful. Cuts on \njet~seem to remove a lot of 
-the signal but cut tighter on the background in the pre-selection
-+ 0 SFOS region, which could prove useful.  Most impressive is 
-the cut on \nbjet, which leaves the signal efficiency at almost exactly
-one, while having a large impact on the pre-selection + 0 SFOS region
-where the fake contribution is large.
-
-This type of heuristic study  can be used to obtain insight into
-the distributions that are useful for discriminating 
-between signal and background.  But using these distributions
-alone to determine a final selection is a little haphazard.
-For one, they do not tell us the impact that cutting on multiple
-distributions will have.  These distributions are likely to be 
-at least partially correlated, so that cutting on one distribution might
-enhance or deflate the impact of another cut. 
-And two, it is not at all clear from these distributions
-what is the best choice of cuts. We need a metric that will
-allow us to make decisions about which cuts to choose.
-The metric to use should be one that is 
-related to the final prediction after all selection cuts are applied.
-Thus, the metric cannot be used to make a decision about each 
-cut individually, but instead about some combination of cuts.
-
-To deal with the issues mentioned above, we 
-decided on the final signal region selection using an optimization
-procedure. The optimization takes as input a multi-dimensional 
+The optimization takes as input a multi-dimensional 
 space where each dimension is the selection threshold
 for one of the quantities listed above, plus some others not mentioned.
-The range of the multi-dimensional space that is 
+The range of the multi-dimensional space 
 is restricted so that the 
 predicted signal remains finite i.e. non-zero.
 At an individual point in this space, the optimization computes
@@ -150,12 +37,14 @@ the threshold on \njet, this is manifestly true, as there
 can only be an integer number of observed jets. 
 For other dimensions, such as the threshold on the lepton
 \pt, these quantities are real valued and thus continuous.
-However, looking at \fig\ref{fig:optimization_efficiencies_preselection} 
-and \fig\ref{fig:optimization_efficiencies_0sfos}, the shape
-of the efficiencies tend to change relatively slowly from bin
-to bin. Thus, it should be acceptable to only sample 
+However, as long as 
+%looking at \fig\ref{fig:optimization_efficiencies_preselection} 
+%and \fig\ref{fig:optimization_efficiencies_0sfos}, 
+%the shape of the efficiencies tend to change relatively slowly from bin to bin 
+it should be acceptable to only sample 
 discretely as long as they can capture the shape information of 
-the efficiencies as they do above. Furthermore, 
+the efficiencies. % as they do above. 
+Furthermore, 
 this acknowledges the finite  experimental resolution of these 
 quantities. For example,
 the difference between $\pt > 20~\GeV$ and $\pt > 20.5~\GeV$
@@ -189,19 +78,14 @@ in the 0 SFOS (left), 1 SFOS (middle), and 2 SFOS (right) signal regions.}
 \end{figure}
 
 
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/MET_Et_histratio.png}
-\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/InvariantMassSFOS_histratio.png}
-\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/MET_Et_histratio.png}
-\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/InvariantMassSFOS_histratio.png}
-\caption{Plots of the \MET (left) and $m_{\textrm{SFOS}}$ (right) distributions 
-in the 1 SFOS (top) and 2 SFOS (bottom) regions after pre-selection
-plus the \bee-veto requirement.}
-\label{fig:met_zwindow_optimization}
-\end{figure}
-
+The final selection is presented in \tab\ref{tab:signal_selection}.
+Details of the specific cut thresholds that are chosen can be understood
+by looking closer at some of the quantities used as input to 
+the optimization. For instance, it is observed that
+different \MET~and \z-veto thresholds are chosen for the 1 and 2 SFOS
+regions. This can be understood to come from a correlation between
+these two quantities due to their ability to isolate the $Z\gamma$
+background.
 The $Z\gamma$ background shows up in the low-shoulder of the \z-peak
 in the $m_{\textrm{SFOS}}$ distribution and at low MET. This can be
 seen both for the 1 and 2 SFOS regions in \fig\ref{fig:met_zwindow_optimization}.
@@ -223,17 +107,160 @@ optimization happens to prefer a symmetric
 window of $\pm20$~GeV around the \z-pole.  
 The looser \z-veto then allows for a tighter
 missing $E_{T}$ cut with a threshold of $\MET > 55$~GeV. 
-In the 0 SFOS region there 
-are no SFOS pairs by definition,
-but there is still a peak in the same-sign electron-electron mass 
-distribution due to charge mis-identification.
-The optimization prefers a slightly narrower symmetric window 
-of $\pm15$~GeV around the \z-mass. 
-Further, as already mentioned,
-this background turns out 
-to have a similar missing $E_{T}$ distribution
-as the signal. As a result, cutting on the missing $E_{T}$ in this region 
-offers little to no discriminating power
-between the signal and background so we have chosen not to apply 
-any cut here in order to maximize the signal yield.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/MET_Et_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_1SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/InvariantMassSFOS_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/MET_Et_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/appendix_signal_selection/Nov24Update_FakeSys_KFacSys_LogY_NoRebin/output/jobs/MxM/DataFull_Rates_May13_FakeRatesExactly2Loose_MuonMxMBJetGt0_ElBJetGt0SubtractPC_MxM/PreselectionNov23_15_2SFOS_ChargeAbs1_BVeto85_physics/weight_all/png/InvariantMassSFOS_histratio.png}
+\caption{Plots of the \MET (left) and $m_{\textrm{SFOS}}$ (right) distributions 
+in the 1 SFOS (top) and 2 SFOS (bottom) regions after pre-selection
+plus the \bee-veto requirement.}
+\label{fig:met_zwindow_optimization}
+\end{figure}
+
+The absence of any cut on the \MET~distribution in the 0 SFOS
+region can be better understood by looking at the 
+the efficiency for selection between 
+signal and the background as a function of the \MET~selection threshold.
+This is shown in \fig\ref{fig:met_eff} both after pre-selection
+and in the 0 SFOS region.
+Clearly, the signal efficiency closely follows the background efficiency
+in the 0 SFOS region. Thus, there is no change in the
+signal-to-background ratio when cutting on the \MET~distribution
+in the 0 SFOS region and thus no improvement in the sensitivity.
+On the other hand, there are large shape differences 
+between the signal
+and background efficiencies at pre-selection, with the 
+signal efficiency remaining flatter at low values of the \MET~
+threshold. So, from this one would expect a selection
+on the \MET~threshold to be useful in the 1 and 2 SFOS
+regions which have a similar background composition. And
+indeed, this is what we observe.
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/MET_Et_STVF_Cumulative.eps}
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/MET_Et_STVF_Cumulative.eps}
+\caption{ Signal and background efficiencies for the 
+selection $\MET > X$ as a function of the \MET~selection
+threshold, $X$,  in both the 0 SFOS (left) and pre-selection (right) regions.  }
+\label{fig:met_eff}
+\end{figure}
+
+The threshold for the jet multiplicity cut 
+of $\njet\leq 1$ applied in all signal regions
+is also determined from the optimiztion. One might expect
+that a different value for the threshold, such as a complete
+veto on the presence of jets, would perform better. 
+Indeed, looking at the efficiency for selection on the jet multiplicity
+in \fig\ref{fig:njet_eff} does show a much stronger background
+rejection when applying a veto, in the pre-selection region
+and especially in the 0 SFOS region where there is a larger
+contribution from fakes due to hadronic activity.
+However, the signal rejection of about 40\% oberved in both
+regions is prohibitive. Loosening the selection to the nominal
+threshold of $\njet \leq 1$ instead preserves 90\% of the signal, 
+which is quite precious.  We are still able to remove 
+much of the fake background in the 0 SFOS region by vetoing
+events with \bee-tagged jets as can be seen in \fig\ref{nbjet_eff}.
+%any mention of different operating points
+It is possible that using a \bee-tagging operating point
+with an even higher \bee-tagging efficiency would further 
+improve the sensitivity in the 0 SFOS region.  However,
+the nominal operating point used here is the highest 
+efficiency operating point supported by ATLAS.
+Clearly, there is no advantage gained from using a looser operating point
+as this would only cut less on the background without having an impact
+on the signal.
+
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/NJets_LeftCumulative.eps}
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NJets_LeftCumulative.eps}
+\caption{ Signal and background efficiencies for the selection
+$\njet \leq X$ as a function of the \njet~selection
+threshold, $X$, in both the 0 SFOS (left) and pre-selection (right) regions.  }
+\label{fig:njet_eff}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/NBTaggedJets_LeftCumulative.eps}
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/NBTaggedJets_LeftCumulative.eps}
+\caption{ Signal and background efficiencies 
+for the selection
+$\nbjet \leq X$
+as a function of the \nbjet~selection
+threshold, $X$, in both the 0 SFOS (left) and pre-selection (right) regions.  }
+\label{fig:nbjet_eff}
+\end{figure}
+
+
+The \deltaphi~for the signal is observed to be more back-to-back
+(i.e. closer to $\pi$)
+than that for the background. This is especially true in the 0 SFOS
+region, as can from the efficiencies as a function of the \deltaphi~
+selection threshold in \fig\ref{fig:deltaphi_eff}.
+The selection efficiency for the signal is relatively flat for
+most of the range up to about 
+a threshold of $|\deltaphi|>2.5$ in both the pre-selection and 0 SFOS
+regions.  At this threshold the signal selection efficiency 
+is about 80\%.  The optimization prefers a selection
+around this range for all signal regions.
+The optimization also considered selecting on alternative
+definitions of $\Delta\phi$ that only considered one of the three
+leptons but this was observed to not offer as strong of a separation
+between the signal and background. %figure?
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/DeltaPhiMETSTVF123_Abs_Cumulative.eps}
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/DeltaPhiMETSTVF123_Abs_Cumulative.eps}
+\caption{ Signal and background efficiencies 
+for the selection
+$|\deltaphi| > X$
+as a function of the \deltaphi~selection
+threshold, $X$, in both the 0 SFOS (left) and pre-selection (right) regions.  }
+\label{fig:deltaphi_eff}
+\end{figure}
+
+The efficiencies as a function of the lepton \pt~threshold are shown 
+in \fig\ref{fig:pt_eff}. 
+The signal efficiency is observed to be slightly flatter
+than the background efficiency.
+However, the signal efficiency still falls fairly 
+rapidly as a function of the lepton \pt~ threshold. 
+Thus, a tighter selection on the lepton \pt~is not preferred
+by the optimization. We also considered 
+applying different \pt~thresholds to the leptons
+based on whether their \pt~order and based on other criteria but
+this did not show any increased performance.
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegionsPreselection_0SFOS_Efficiencies/AllLeptonPt_Cumulative.eps}
+\includegraphics[width=0.45\columnwidth]{figures/optimization/SignalRegions_0p5mmZ0_Preselection_Efficiencies/AllLeptonPt_Cumulative.eps}
+\caption{ Signal and background efficiencies 
+for the selection
+Lepton $\pt > X$
+as a function of the \pt~selection
+threshold, $X$, in both the 0 SFOS (left) and pre-selection (right) regions.  }
+\label{fig:pt_eff}
+\end{figure}
+
+Finally, we considered other quantities like the 
+transervse mass of the \MET~and three lepton system:
+\begin{equation}
+m_{T}^{lll} = \sqrt{2p_{T}^{lll}\MET(1-\cos(\Delta\varphi(lll,\MET)))}
+\end{equation}
+as well as vetoes on additional leptons with lower \pt, and various
+di-lepton mass selections.  However, none of these were preferred
+by the optimization.
+
 
