@@ -46,7 +46,7 @@ and systematic uncertainties.
 The different distributions are chosen primarily because 
 of their potential to discriminate between signal and background. 
 From top to bottom and left to right,
-these distributions are: the leading, sub-leading, and minimum lepton \pt~(ordered by their \pt),
+these distributions are: the leading, subleading, and minimum lepton \pt~(ordered by their \pt),
 \MET, \deltaphi, $m_{\textrm{SFOS}}$, \njet, \nbjet, and $N_{\mu}$.
 In general, the signal plus background model is observed to be consistent
 with the data at the pre-selection, at least for those distributions
@@ -140,7 +140,7 @@ listed in \tab\ref{tab:fiducial_selection}. The same generator,
 \vbfnlo, is used for both to remove any dependence on the 
 cross-section or other generator specific effects.
 
-The fiducial cross-sections are calculated also using the selection
+The fiducial cross-sections are calculatd also using the selection
 from the \sec\ref{sec:signal_regions} while weighting
 to the cross-section for the given sample. Recall also 
 from \sec\ref{sec:signal} and \tab\ref{tab:signal_xsec}
@@ -152,7 +152,7 @@ estimates.
 \begin{table}[ht!]
 \centering
 \input{tables/LimitInputs_3l.tex}
-\caption{Correction factors, $C_i$, and fiducial cross-sections derived
+\caption{Correction factors, $C_i$, and fiducial cross-sections dervied
 separately for each signal region. Correction factors are determined
 using \vbfnlo~while fiducial cross-sections are determined
 using \madgraph.}

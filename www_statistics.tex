@@ -18,9 +18,9 @@ from section~\ref{sec:inputs} by the relation:
 \sigma^{\textrm{Observed}} = \mu \sum_{i\in \textrm{Channels}} \sigma^{\textrm{Fiducial}}_i
 \end{equation}
 
-Assuming a counting experiment in each bin $i$, the expectated 
+Assuming a counting experiment in each bin $i$, the expected 
 event count is given by:
-% assuming a simple possion counting experiment with expectation for a given bin/channel, $i$:
+% assuming a simple Poisson counting experiment with expectation for a given bin/channel, $i$:
 \begin{equation}
 %N^{\mathrm{exp}}(\mu,\boldtheta) = N^{\mathrm{exp}}(\mu,\curlyl_0,\Delta_{\curlyl},\thetas,\thetab) = \mu \sum_i \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_i \cdot \varepsilon_i(\thetas) + \sum_{i}\sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab)
 N^{\mathrm{exp}}_i(\mu,\boldtheta) = N^{\mathrm{exp}}_i(\mu,\curlyl_0,\Delta_{\curlyl},\thetas,\thetab) = \mu \cdot \bigg( \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_i \cdot C_i(\thetas) \bigg) + \sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab)
@@ -33,7 +33,7 @@ bin. The
 individual background expectations in a given bin/channel, $i$, are 
 expressed simply by the number of events
 for a given background as $N^{\mathrm{bkg}}_i$. 
-The signal efficiencies and background expecatations are assumed to follow 
+The signal efficiencies and background expectations are assumed to follow 
 probability distributions described by shape parameters determined from 
 dedicated measurements of the background normalizations and systematic 
 uncertainties.  
@@ -41,7 +41,7 @@ The set of correction factor shape parameters are referred to
 as $\thetas$ while the set of normalization and shape parameters on 
 the background expectations are referred to as $\thetab$.
 The integrated luminosity, $\curlyl$, is assumed to follow 
-a Gaussian distribuion with nominal integrated 
+a Gaussian distribution with nominal integrated 
 luminosity, $\curlyl_0$, and width, $\Delta_{\curlyl}$. 
 Collectively, we refer to all of these parameters, except 
 for $\mu$ as the set of nuisance 
@@ -77,15 +77,15 @@ and instead depends only on $\mu$.
 The negative of twice the logarithm of the profile likelihood 
 ratio is used because
 the logarithm is monotonic and typically easier to work with.
-The presence of the nuiscance paramaters are handled in the profiling 
+The presence of the nuisance parameters are handled in the profiling 
 step when constructing the profile likelihood ratio,  which results 
 in a smearing of the profile likelihood ratio contour. 
 During profiling, the systematic uncertainties are
 interpolated using a piecewise linear function for shape uncertainties
 and a piecewise exponential function for the normalization uncertainties
-in order to maintain a normaliztion that is greater than zero.
+in order to maintain a normalization that is greater than zero.
 The denominator is the 
-unconditional maximumum likelihood (ML)
+unconditional maximum likelihood (ML)
 evaluated at the ML estimators $\hat{\mu}$ and $\hat{\boldsymbol{\theta}}$.
 This quantity is a unique constant when specified for a given likelihood
 and set of nuisance parameters.
@@ -107,7 +107,7 @@ is taken as the measurement of the signal strength, while
 the uncertainty on the measurement is taken from the shape of the 
 negative log profile likelihood assuming the behavior in the asymptotic
 limit can be used.  The asymptotic behavior of the profile likelihood 
-is used to evalute the final confidence interval. 
+is used to evaluate the final confidence interval. 
 
 
 \subsection{Testing for Discovery Significance}
@@ -147,7 +147,7 @@ where $\Phi^{-1}$ is the inverse of the Gaussian cumulative distribution
 function.
 In this way, one may refer to $Z\sigma$ significance of a measurement 
 where usually
-$3\sigma$ is considered to constitute 'evidence' while $5\sigma$ constitues
+$3\sigma$ is considered to constitute 'evidence' while $5\sigma$ constitutes
 discovery.
 
 The distribution of $q_0$ is 
@@ -237,7 +237,7 @@ while the observed fiducial cross-section is:
 %\includegraphics[scale=0.25]{figures/statistics/measurement/interval/0sfos.png}
 %\includegraphics[scale=0.25]{figures/statistics/measurement/interval/1sfos.png}
 %\includegraphics[scale=0.25]{figures/statistics/measurement/interval/2sfos.png}
-%\caption{The profile likelihood contours evaluated as a function of the signal strength for the 0 SFOS (left), 1 SFOS (middle), and 2 SFOS (right) channels. The observed (black) and expected (red) contours are shown when considering only statistical unceratinty (dashed line) and when considering both statistical and systematic uncertainties (solid line).  The dotted black lines pinpoint the location of the $1~\sigma$ and $2~\sigma$ total Gaussian uncertainties on the measurement of the signal strength which corresponds to the minimum value of the contour.}
+%\caption{The profile likelihood contours evaluated as a function of the signal strength for the 0 SFOS (left), 1 SFOS (middle), and 2 SFOS (right) channels. The observed (black) and expected (red) contours are shown when considering only statistical uncertainty (dashed line) and when considering both statistical and systematic uncertainties (solid line).  The dotted black lines pinpoint the location of the $1~\sigma$ and $2~\sigma$ total Gaussian uncertainties on the measurement of the signal strength which corresponds to the minimum value of the contour.}
 %\label{fig:stat_measurement_interval_channels}
 %\end{figure}
 
@@ -249,7 +249,7 @@ while the observed fiducial cross-section is:
 the signal strength
 for the combination of all three channels. 
 The observed (black) and expected (red) contours are shown when 
-considering only statistical unceratinty (dashed line) and when considering both statistical and systematic uncertainties (solid line).
+considering only statistical uncertainty (dashed line) and when considering both statistical and systematic uncertainties (solid line).
 The dotted black
 lines pinpoint the location of the $1~\sigma$ and $2~\sigma$ total 
 Gaussian uncertainties

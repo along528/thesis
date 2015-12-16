@@ -152,7 +152,7 @@ threshold, $X$,  in both the 0 SFOS (left) and pre-selection (right) regions.  }
 
 The threshold for the jet multiplicity cut 
 of $\njet\leq 1$ applied in all signal regions
-is also determined from the optimization. One might expect
+is also determined from the optimiztion. One might expect
 that a different value for the threshold, such as a complete
 veto on the presence of jets, would perform better. 
 Indeed, looking at the efficiency for selection on the jet multiplicity
@@ -160,7 +160,7 @@ in \fig\ref{fig:njet_eff} does show a much stronger background
 rejection when applying a veto, in the pre-selection region
 and especially in the 0 SFOS region where there is a larger
 contribution from fakes due to hadronic activity.
-However, the signal rejection of about 40\% observed in both
+However, the signal rejection of about 40\% oberved in both
 regions is prohibitive. Loosening the selection to the nominal
 threshold of $\njet \leq 1$ instead preserves 90\% of the signal, 
 which is quite precious.  We are still able to remove 
@@ -255,7 +255,7 @@ threshold, $X$, in both the 0 SFOS (left) and pre-selection (right) regions.  }
 \end{figure}
 
 Finally, we considered other quantities like the 
-transverse mass of the \MET~and three lepton system:
+transervse mass of the \MET~and three lepton system:
 \begin{equation}
 m_{T}^{lll} = \sqrt{2p_{T}^{lll}\MET(1-\cos(\Delta\varphi(lll,\MET)))}
 \end{equation}
