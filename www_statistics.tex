@@ -27,7 +27,7 @@ N^{\mathrm{exp}}_i(\mu,\boldtheta) = N^{\mathrm{exp}}_i(\mu,\curlyl_0,\Delta_{\c
 \label{eq:poisson_expectation}
 \end{equation}
 where $C_i$ is the correction factor 
-measured in each bin as discussed in section~\ref{sec:signal_efficiency} and 
+measured in each bin as discussed in section~\ref{sec:inputs} and 
 $\sigma^{\mathrm{Fiducial}}_i$ is the fiducial cross-section in each 
 bin. The 
 individual background expectations in a given bin/channel, $i$, are 
@@ -58,7 +58,7 @@ which is a function of the data and the signal strength.
 
 The likelihood used is constructed as follows:
 \begin{equation}
-L(\mu,\boldtheta) = \mathrm{Gaus}(\curlyl_0|\curlyl,\Delta_{\curlyl})~\prod_{i\in\mathrm{Chan}} \mathrm{Pois}(N_i^{obs}|N_i^{exp}(\mu,\boldtheta))~\prod_{j\in\mathrm{Sys}} \mathrm{Gaus}(\theta_j^0|\theta_j,1)
+L(\mu,\boldtheta) = \mathrm{Gaus}(\curlyl;\curlyl_0,\Delta_{\curlyl})~\prod_{i\in\mathrm{Chan}} \mathrm{Pois}(N_i^{obs}|N_i^{exp}(\mu,\boldtheta))~\prod_{j\in\mathrm{Sys}} \mathrm{Gaus}(\theta_j;\theta_j^0,1)
 \label{eq:poisson_likelihood}
 \end{equation}
 using the HistFactory tool developed within ATLAS \cite{Cranmer:1456844}. 
