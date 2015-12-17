@@ -30,11 +30,11 @@ Muon objects are identified by the presence of tracks in both
 the ID and the MS that are shown 
 to match using an extrapolation process through the gap between the
 two sub-detectors. To ensure that the track in the inner detector
-indeed comes from a Muon, strict requirements are placed
+indeed comes from a muon, strict requirements are placed
 on the number of hits in the different sub-components of the inner detector.
 %probably don't want to identify the MCP hit reqs, but I could...
 The track is extrapolated back to the primary vertex and is forced
-to be pointing within the boundaries of the MS and ID
+to point within the boundaries of the MS and ID
 by requiring that $|\eta|<2.5$.
 The muon \pt~ at the primary vertex is chosen to be limited to $\pt > 10$~GeV
 where there is adequate momentum resolution. We are not interested in 
@@ -61,7 +61,7 @@ to the muon objects. The direction of the electron energy
 deposits are also asked to fall within $|\eta| < 2.47$ and outside the 
 transition region between the EM calorimeter barrel and endcap, $1.37 < |\eta| < 1.52$.
 The electron objects are required to be isolated and have additional
-requirements on the track extrapolation the same way as for muon objects.  
+requirements on the track extrapolation, similar to the muon objects.  
 %what about further quality requirements?
 
 
@@ -73,13 +73,14 @@ using the anti-$k_t$ algorithm~\cite{Cacciari:2008gp} with $\Delta R < 0.4$.
 The reconstructed jet objects are required to have a reconstructed
 $\pt>25$~GeV and to have $|\eta|<4.5$ so that
 they are within the boundaries of the calorimeter systems.
-The reconstructed jets are furthermore selected to suppress the likelihood that
-they come from pileup events. This selection is performed by 
+The reconstructed jets are furthermore selected to suppress 
+contamination from pileup events. This selection is performed by 
 requiring that the majority of the
-scalar sum of the \pt~ of the tracks associated with the 
+scalar sum of the \pt~of the tracks associated with the 
 jet are also matched to the primary vertex. This is referred to
-as the so-called ``Jet Vertex Fraction''~\cite{Miller:1206864, ATLAS-CONF-2013-083}
-and is only used with jets with $\pt < 50$~GeV and $|\eta|<2.4$ where
+as the so-called 
+``Jet Vertex Fraction''~\cite{Miller:1206864, ATLAS-CONF-2013-083}
+and is only used with having a $\pt < 50$~GeV and $|\eta|<2.4$, where
 the algorithm is shown to perform well. Jets without any associated
 tracks are always kept. 
 %what about jet calibration?
@@ -91,7 +92,7 @@ because of the relatively long lifetime of the $b$ quark, which can
 result in a decay vertex that is displaced from the original primary vertex.
 This can be taken advantage of to ``tag'' jets as likely coming from
 $b$ quarks. A multivariate $b$-tagging algorithm~\cite{ATLAS-CONF-2014-004}
-is used with working point determined to be 85\% efficient at
+is used with a working point determined to be 85\% efficient at
 identifying $b$-jets. %what about the mis-tag rate?
 $b$-jets are associated with physics processes other than the signal
 and are helpful in identifying background processes.
@@ -107,7 +108,7 @@ the energy deposits from calorimeters cells within $|\eta| < 4.9$
 and then calibrating them based on the the reconstructed
 physics object they are associated with.
 If the association is ambiguous then they are chosen based on the following
-preference (from most preferred to least): electron, photons, 
+preference (from most preferred to least): electrons, photons, 
 hadronically decaying $\tau$-leptons, jets, and muons.
 If the calorimeter deposit is not associated with any physics object
 they are still considered using their own calibration.
@@ -122,11 +123,14 @@ may overlap with each other inside the detector.  This can occur
 because because of the same physics object being reconstructed as different
 objects in the ATLAS detector.  We handle these occurrences using the following
 scheme in order of precedence:
-\begin{itemize}
-	\item Electron-Muon Overlap: If$|\Delta R(e,\mu)| < 0.1$ then the  muon is kept while the electron is thrown away.
-	\item Electron-Jet Overlap: If $|\Delta R(e,j)| < 0.2$ keep the electron and throw away the jet.
-	\item Muon-Jet Overlap: If $|\Delta R(\mu,j)| < 0.2$ keep the muon and throw away the jet
-\end{itemize}
+\begin{enumerate}
+	\item Electron-Muon Overlap: If $|\Delta R(e,\mu)| < 0.1$, 
+	then keep the muon and throw away the electron.
+	\item Electron-Jet Overlap: If $|\Delta R(e,j)| < 0.2$, 
+	then keep the electron and throw away the jet.
+	\item Muon-Jet Overlap: If $|\Delta R(\mu,j)| < 0.2$, 
+	then keep the muon and throw away the jet.
+\end{enumerate}
 For electrons, the direction is taken only from the electron calorimeter
 information.  Muons use the full combined track information while jets
 use the direction taken from the anti-k$_{\mathrm{T}}$  algorithm.
@@ -134,7 +138,9 @@ No momentum smearing or calibration corrections
 are applied to the reconstructed object directions. 
 Using this scheme means that a precedence is set when 
 reconstructed objects overlap such that $\mu > e > j$ where '$>$' should
-be interpreted to mean 'is kept instead of'. The motivation for this scheme
+be interpreted to mean 'is kept instead of'. 
+
+The motivation for this scheme
 is as follows. Muons will frequently radiate photons which then can pair-produce
 to electrons.  If the energy of one of the pair-produced electrons is 
 large enough then this can be reconstructed as well and will likely be collimated

@@ -48,14 +48,14 @@ Since the top quark almost always decays
 into a $W$-boson and a $b$-quark, \ttV~production also results in an intermediate
 state of three vector bosons which ultimately results in a three to four lepton
 final state.
-The $VVV$ and \ttV~processes were generated using \madgraph with the 
+The $VVV$ and \ttV~processes were generated using \madgraph~with the 
 CTEQ6L1 PDF set and hadronized
 using \pythiasix~\cite{PYTHIA} with the AUET2B~\cite{ATL-PHYS-PUB-2011-009} 
 tune.
 
 The second category of backgrounds to consider are those with two 
 prompt leptons and a photon. We will call these the photon backgrounds.
-This background occurs entirely from the di-boson process $Z\gamma$
+The photon backgrounds occur entirely from the di-boson process $Z\gamma$
 where the $Z$ boson decays to two leptons and the photon mimics an electron.
 A photon is measured
 by observing an energy deposit in the electromagnetic calorimeter 
@@ -81,29 +81,34 @@ loop induced processes are generated using the gg2ZZ~\cite{Binoth:2008pr}
 and gg2WW~\cite{Binoth:2006mf} generators with the CT10 PDF set and
 hadronized using JIMMY with the AU2 tunes.
 The DPS
-processes are generated using \pythiaeight with the AU2 
+processes are generated using \pythiaeight~with the AU2 
 tunes and the CTEQ6L1 PDF set. 
 
 The last category of backgrounds are those with prompt leptons plus
-jets that mimic leptons. These are nominally estimated using the data
+jets that mimic leptons, hereby 
+referred to collectively as the fake background. 
+The fake background is nominally estimated using the data
 as described in \sec\ref{sec:bg_fake}. However, some of the contributions
-to this background can be simulated using MC as a cross-check of 
-the estimate from data and for other studies. The main contributions
-to this are the single boson processes ($V+$jets) and \tt~production.
+to this background can be simulated using MC 
+for cross-checks of 
+the estimate from data. The main contributions
+to the fake background
+are the single boson processes ($V+$jets) and \tt~production.
 These are processes with very large cross-sections so
 that even though the probability for a jet mimicking a lepton is small,
 the size of the cross-section means that their contribution is non-negligible.
-The single boson process of $Z+$jets are generated using \sherpa~ with the CT10
-PDF set while the $W+$jets processes are generated using \alpgen~ with
+The single boson $Z+$jets processes are generated using \sherpa~with the CT10
+PDF set while the $W+$jets processes are generated using \alpgen~with
 the CTEQ6L1 PDF set and hadronized using \jimmy~with the AUET2C tunes.
 For the $Z+$jets samples, special care must be taken to remove any overlap 
 between with the $Z\gamma$ simulated samples described earlier.
 Meanwhile, the \tt~processes are generated using the \mcatnlo~\cite{MCatNLO}
 generator with the CT10 PDF set and hadronized in JIMMY.  %what is the tune?
-Finally, this background also has contributions from single top production,
+Finally, the fake background also has contributions from single top production,
 though it is less important. Single top production is simulated separately 
 for the s-channel, t-channel, and $Wt$-channel. The s-channel 
 and $Wt$-channel are generated using \mcatnlo~with the CT10 PDF set and 
-hadronized through \jimmy~ while the t-channel is generated using \madgraph~
-with the CTEQ6L1 PDF set and hadronized using \pythiasix~with the AUET2B tunes.
+hadronized through \jimmy~while the t-channel is generated using 
+\madgraph~with the CTEQ6L1 PDF set and hadronized 
+using \pythiasix~with the AUET2B tunes.
 

@@ -2,12 +2,13 @@
 \label{sec:event_selection}
 
 %rewrite?
-The expected number of signal events in the data is expected
-to be very small compared to the background. %give a number
+The expected number of signal events in the total 2012 LHC 
+dataset is expected to be very small compared to the background. %give a number
 Fortunately, the three lepton signature of the signal allows us to
 quickly throw out many events which do not look like the signal.
-Still, this signature is not so unique that the background
-is small enough to reveal the signal. 
+Still, this signature is not so unique that 
+it removes enough background 
+to reveal the signal. 
 Thus, we must devise a clever way to discriminate 
 between the signal and these backgrounds. We select
 events in two stages: first we start
@@ -18,7 +19,7 @@ referred to as our signal region selection.
 The signal region selection is determined by performing an 
 optimization procedure starting from the pre-selection stage 
 that minimizes the uncertainty
-on the final measurement.  This is described in \sec\ref{sec:signal_yield}.
+on the final measurement.  This is described in \sec\ref{sec:optimization}.
 The signal region selection is further divided into different
 categories that are each used in the final measurement
 and which allows us to specially treat the different backgrounds
@@ -35,7 +36,7 @@ The pre-selection is a broad selection which throws
 away backgrounds that do not at all resemble the signal process.
 It is mainly characterized by requiring the presence of exactly three leptons
 (electron or muon) following the requirements listed in 
-\sec\ref{sec:object_selection}, each with a $\pt$ of at least $20~\GeV$.
+\sec\ref{sec:object_selection}, each with a $\pt$ of at least $20\GeV$.
 In addition, the events are required to be of good quality. This means
 that the events were collected under good conditions during data taking,
 both from the LHC operation and ATLAS detector operation. For instance,
@@ -68,13 +69,14 @@ $e^{\pm}e^{\mp}\mu^{\mp}$, $\mu^{\pm}\mu^{\mp}e^{\pm}$, $\mu^{\pm}\mu^{\mp}e^{\m
 \end{itemize}
 Note that in the 2 SFOS region, one lepton is allowed to belong to both 
 pair combinations.
-Those combinations listed in parentheses are not allowed for the signal based on charge conservation (neglecting charge mis-identification).  
+Those combinations listed in parentheses are not allowed for the signal 
+based on charge conservation (neglecting charge mis-identification).  
 The amount of the $W^{\pm}W^{\mp}W^{\pm}$ signal
 which falls into each category is purely combinatoric.  
 From the above list one can thus see that there are twice as many ways 
 for the signal combinations (again neglecting those in parentheses)
 to fall in the 1 SFOS regions as 
-there to fall in either the 0 SFOS or 2 SFOS regions. 
+there are to fall in either the 0 SFOS or 2 SFOS regions. 
 Absent possible differences in signal efficiencies based on the leptons in each 
 signal region, one should expect branching 
 fractions of 25\%, 50\% and 25\% for the 0, 1, and 2 SFOS signal regions, respectively.
@@ -92,7 +94,7 @@ Opposite-Sign (SFOS) lepton pairs.}
 
 In each signal region, a unique selection is determined by an optimization
 procedure that minimizes the uncertainty on the expected SM measurement. 
-The optimization procedure is described in detail in \sec\ref{sec:signal_yield}.
+The optimization procedure is described in detail in \sec\ref{sec:optimization}.
 The optimization considers many different physical quantities 
 with which to perform a possible selection, comparing different
 thresholds for a given quantity and for different combinations of 
@@ -129,7 +131,7 @@ Further, the signal is
 expected to have negligible contributions
 from heavy flavor jets. As a result, vetoing events with jets
 tagged to come from \bee~ or \bee-hadron decays has
-little affect on the signal expectation. This is true even with 
+little effect on the signal expectation. This is true even with 
 the rate for heavy flavor jet mis-identification for the 
 \bee-tagging algorithms. For the 
 85\% \bee-tagging efficiency operating point described in 
@@ -149,13 +151,19 @@ will not have the same peak, but instead
 will be relatively flat around the region of the $Z$-peak. 
 As a result, removing events within some window around the peak can do a good job
 of removing these backgrounds without having a large effect on the signal.
-In the 0 SFOS region, by definition there are no SFOS pairs that could come 
+For the 1 and 2 SFOS regions, the mass windows
+chosen for the veto are $m_Z-35\GeV < m_{\textrm{SFOS}} < m_Z+20\GeV$
+and $m_Z-20\GeV < m_{\textrm{SFOS}} < m_Z+20\GeV$, respectively.
+The windows are chosen differently based on the preferred window
+from the optimization, described in more detail in \sec\ref{sec:optimization}.
+In the 0 SFOS region, by definition, there are no SFOS pairs that could come 
 from the decay of a \z-boson. 
 However, the effect of electron charge mis-identification,
 discussed in \sec\ref{sec:charge_misid}, means that a 
 peak can show up in the background
 of the $m_{ee}$ distribution for same-sign electron/positron pairs. 
-Thus, a veto can be performed in this distribution as well.
+Thus, a veto is performed in this distribution as well, with 
+a mass window of $m_z-15\GeV < m_{ee} < m_Z+15\GeV$.
 
 
 The presence of neutrinos in the signal mean that the signal should have a 
@@ -163,14 +171,14 @@ relatively large \MET~compared to most of the backgrounds. Thus,
 cutting on the \MET~distribution such that it is large can remove backgrounds
 expected to have small \MET, like $Z\gamma$ production.
 Still, there are some large backgrounds with neutrinos, like $WZ$, 
-and also backgrounds that have contributions to the \MET from objects that have
+and also backgrounds that have contributions to the \MET~from objects that have
 missed reconstruction, like $ZZ$, which can also have a moderate to large \MET.
-Thus, some care must be taken to choose a threshold to cut on the \MET and
+Thus, some care must be taken to choose a threshold to cut on the \MET~and
 different thresholds are chosen for each signal 
 region.
 In the 1 and 2 SFOS regions the selections are $\MET > 45\GeV$
 and $\MET > 55\GeV$, respectively. Meanwhile, in the 0 SFOS region, 
-the \MET selection is kept inclusive.
+the \MET~selection is kept inclusive.
 
 %this description probably belongs in an earlier section
 The magnitude and direction
@@ -208,7 +216,7 @@ being passed through ATLAS reconstruction).
 We define our fiducial region
 based on the optimized signal selection (defined at the reconstruction level)
 but using only truth information. For instance, the reconstructed
-lepton \pt~ requirement of 
+lepton \pt~requirement of 
 $\pt^{\textrm{Reco}} > 20~\GeV$
 is taken into account in the fiducial region selection
 by requiring 
@@ -249,7 +257,7 @@ in \tab\ref{tab:fiducial_selection} looks very similar to that in
 using truth information and that 
 events are removed if $\tau$ leptons are present from the $W$ decays.  
 Thus, the fiducial selection
-does not include the branching fraction to $W\rightarrow\tau\nu$ decay, 
+does not include the branching fraction for $W\rightarrow\tau\nu$ decay, 
 even though there will be some contamination from this process in the final 
 reconstruction level selection. 
 

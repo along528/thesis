@@ -13,7 +13,8 @@ signal region.
 
 The optimization takes as input a multi-dimensional 
 space where each dimension is the selection threshold
-for one of the quantities listed above, plus some others not mentioned.
+for one of the quantities listed in \tab\ref{tab:signal_selection}, 
+plus some others.
 The range of the multi-dimensional space 
 is restricted so that the 
 predicted signal remains finite i.e. non-zero.
@@ -37,7 +38,7 @@ the threshold on \njet, this is manifestly true, as there
 can only be an integer number of observed jets. 
 For other dimensions, such as the threshold on the lepton
 \pt, these quantities are real valued and thus continuous.
-However, as long as 
+However, 
 %looking at \fig\ref{fig:optimization_efficiencies_preselection} 
 %and \fig\ref{fig:optimization_efficiencies_0sfos}, 
 %the shape of the efficiencies tend to change relatively slowly from bin to bin 
@@ -100,7 +101,7 @@ of the \z~ peak. The optimization
 prefers removing this $Z\gamma$ contribution by setting an 
 asymmetric \z-window in the 1 SFOS
 region, with the boundaries being 35~GeV below the \z-pole 
-and 20~GeV above and then keeping the \MET cut a little loose, with a 
+and 20~GeV above and then keeping the \MET~cut a little loose, with a 
 threshold of $\MET > 45$~GeV.  Meanwhile, in the 2 SFOS region,
 the $Z\gamma$ contribution is not as prominent and the 
 optimization happens to prefer a symmetric
@@ -123,7 +124,7 @@ plus the \bee-veto requirement.}
 The absence of any cut on the \MET~distribution in the 0 SFOS
 region can be better understood by looking at the 
 the efficiency for selection between 
-signal and the background as a function of the \MET~selection threshold.
+the signal and the background as a function of the \MET~selection threshold.
 This is shown in \fig\ref{fig:met_eff} both after pre-selection
 and in the 0 SFOS region.
 Clearly, the signal efficiency closely follows the background efficiency
@@ -136,8 +137,8 @@ and background efficiencies at pre-selection, with the
 signal efficiency remaining flatter at low values of the \MET~
 threshold. So, from this one would expect a selection
 on the \MET~threshold to be useful in the 1 and 2 SFOS
-regions which have a similar background composition. And
-indeed, this is what we observe.
+regions which have a similar background composition. 
+Indeed, this is what we observe.
 
 
 \begin{figure}[ht!]
@@ -157,7 +158,7 @@ that a different value for the threshold, such as a complete
 veto on the presence of jets, would perform better. 
 Indeed, looking at the efficiency for selection on the jet multiplicity
 in \fig\ref{fig:njet_eff} does show a much stronger background
-rejection when applying a veto, in the pre-selection region
+rejection when applying a veto in both the pre-selection region
 and especially in the 0 SFOS region where there is a larger
 contribution from fakes due to hadronic activity.
 However, the signal rejection of about 40\% observed in both
@@ -201,11 +202,12 @@ threshold, $X$, in both the 0 SFOS (left) and pre-selection (right) regions.  }
 \end{figure}
 
 
-The \deltaphi~for the signal is observed to be more back-to-back
+The \deltaphi~distribution for the signal is observed to be more back-to-back
 (i.e. closer to $\pi$)
 than that for the background. This is especially true in the 0 SFOS
-region, as can from the efficiencies as a function of the \deltaphi~
-selection threshold in \fig\ref{fig:deltaphi_eff}.
+region, as can be seen from the efficiencies plotted 
+as a function of the \deltaphi~
+selection threshold shown in \fig\ref{fig:deltaphi_eff}.
 The selection efficiency for the signal is relatively flat for
 most of the range up to about 
 a threshold of $|\deltaphi|>2.5$ in both the pre-selection and 0 SFOS
@@ -234,11 +236,11 @@ in \fig\ref{fig:pt_eff}.
 The signal efficiency is observed to be slightly flatter
 than the background efficiency.
 However, the signal efficiency still falls fairly 
-rapidly as a function of the lepton \pt~ threshold. 
+rapidly as a function of the lepton \pt~threshold. 
 Thus, a tighter selection on the lepton \pt~is not preferred
 by the optimization. We also considered 
 applying different \pt~thresholds to the leptons
-based on whether their \pt~order and based on other criteria but
+based on their \pt~order and other criteria, but
 this did not show any increased performance.
 
 
