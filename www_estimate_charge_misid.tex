@@ -405,7 +405,7 @@ This probability is then used as an event by event weight.
 
 Once the weight has been determined, we then artificially flip the charge of one of the electrons/positrons in the event.
 If there is only one electron in the event that will lead the event to fall in the 0 SFOS region, its charge is flipped
-and one proceeds to the next event.  However, if there are multiple electrons in the event, there is an ambiguity that must be resolved
+and one proceeds to the next event.  If there are multiple electrons in the event, however, there is an ambiguity that must be resolved
 about which electron's charge should be flipped. One must then be careful in this case to not introduce any bias.
 We decided to choose a procedure where we pick a single electron from the event at random based on the charge flip rates
 of the individual electrons. Thus, for an individual electron in an event, the probability that it is chosen to have its charge

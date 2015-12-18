@@ -3,7 +3,7 @@
 From the above discussion, one can clearly see that it is
 advantageous to split these signal regions so that the dominant
 backgrounds in each region may be targeted individually.  Furthermore,
-note that while the 1 SFOS region contains more of the signal than the
+note that even though the 1 SFOS region contains more of the signal than the
 0 and 2 SFOS regions, it is the 0 SFOS region which is most likely to
 have the best sensitivity due to the smaller background contribution.
 In \sec\ref{sec:signal_regions} it was already shown
@@ -38,12 +38,11 @@ the threshold on \njet, this is manifestly true, as there
 can only be an integer number of observed jets. 
 For other dimensions, such as the threshold on the lepton
 \pt, these quantities are real valued and thus continuous.
-However, 
 %looking at \fig\ref{fig:optimization_efficiencies_preselection} 
 %and \fig\ref{fig:optimization_efficiencies_0sfos}, 
 %the shape of the efficiencies tend to change relatively slowly from bin to bin 
-it should be acceptable to only sample 
-discretely as long as they can capture the shape information of 
+It should be acceptable to only sample 
+discretely, however,  as long as they can capture the shape information of 
 the efficiencies. % as they do above. 
 Furthermore, 
 this acknowledges the finite  experimental resolution of these 
@@ -57,7 +56,7 @@ function is not smooth and so cannot readily take into account
 derivative information to be used for instance 
 in some sophisticated minimization algorithm.
 Fortunately, the number of points in the sample space after discretizing, 
-while large, is small enough that it can be evaluated in its entirety
+though large, is small enough that it can be evaluated in its entirety
 using a brute force approach. Thus, we choose to evaluate the 
 optimization in the restricted and discretized sample space in order
 to find an optimal choice for the selection.
@@ -102,7 +101,7 @@ prefers removing this $Z\gamma$ contribution by setting an
 asymmetric \z-window in the 1 SFOS
 region, with the boundaries being 35~GeV below the \z-pole 
 and 20~GeV above and then keeping the \MET~cut a little loose, with a 
-threshold of $\MET > 45$~GeV.  Meanwhile, in the 2 SFOS region,
+threshold of $\MET > 45$~GeV.  In the 2 SFOS region, however,
 the $Z\gamma$ contribution is not as prominent and the 
 optimization happens to prefer a symmetric
 window of $\pm20$~GeV around the \z-pole.  
@@ -161,8 +160,8 @@ in \fig\ref{fig:njet_eff} does show a much stronger background
 rejection when applying a veto in both the pre-selection region
 and especially in the 0 SFOS region where there is a larger
 contribution from fakes due to hadronic activity.
-However, the signal rejection of about 40\% observed in both
-regions is prohibitive. Loosening the selection to the nominal
+The signal rejection, however,  of about 40\% observed in both
+regions, is prohibitive. Loosening the selection to the nominal
 threshold of $\njet \leq 1$ instead preserves 90\% of the signal, 
 which is quite precious.  We are still able to remove 
 much of the fake background in the 0 SFOS region by vetoing
@@ -170,8 +169,8 @@ events with \bee-tagged jets as can be seen in \fig\ref{fig:nbjet_eff}.
 %any mention of different operating points
 It is possible that using a \bee-tagging operating point
 with an even higher \bee-tagging efficiency would further 
-improve the sensitivity in the 0 SFOS region.  However,
-the nominal operating point used here is the highest 
+improve the sensitivity in the 0 SFOS region.  
+The nominal operating point used here, however,  is the highest 
 efficiency operating point supported by ATLAS.
 Clearly, there is no advantage gained from using a looser operating point
 as this would only cut less on the background without having an impact
@@ -235,7 +234,7 @@ The efficiencies as a function of the lepton \pt~threshold are shown
 in \fig\ref{fig:pt_eff}. 
 The signal efficiency is observed to be slightly flatter
 than the background efficiency.
-However, the signal efficiency still falls fairly 
+The signal efficiency, however,  still falls fairly 
 rapidly as a function of the lepton \pt~threshold. 
 Thus, a tighter selection on the lepton \pt~is not preferred
 by the optimization. We also considered 
@@ -262,7 +261,7 @@ transverse mass of the \MET~and three lepton system:
 m_{T}^{lll} = \sqrt{2p_{T}^{lll}\MET(1-\cos(\Delta\varphi(lll,\MET)))}
 \end{equation}
 as well as vetoes on additional leptons with lower \pt, and various
-di-lepton mass selections.  However, none of these were preferred
+di-lepton mass selections.  None of these, however, were preferred
 by the optimization.
 
 
