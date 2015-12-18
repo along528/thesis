@@ -13,82 +13,21 @@ MC based background estimates used in the analysis.}
 
 
 
-\subsubsection{$WZ$ Background}
+\subsubsection{$WZ$}
 \label{sec:wzbg}
 
-The $WZ$ background is the most important prompt background 
-to the $WWW$ signal process. Thus, it must be studied carefully.
-The most recent measurements of the $WZ$ process at the LHC
-\cite{Aad:2012twa,Anger:1663539,CMS-PAS-SMP-12-006} 
-show some tension with the current NLO MC predictions for this process, 
-with differences of about 10 to 15\%. 
-Studies of other di-boson processes 
-\cite{Grazzini:2015nwa,Cascioli:2014yka}
-suggest that this could be resolved by 
-moving to a NNLO calculation.
-For the $WZ$ process, however, this type of calculation is not yet available.
-As a result, we instead use the so-called ``2D Sideband'' method
-\cite{Aad:2013izg} to derive a correction
-to the $WZ$ background using the data itself.
+\paragraph{Introduction}
+The $WZ$ process constitute an irreducible background for the $WWW$ final state. Studies of this final state have been performed at the LHC by the ATLAS~\cite{Aad:2012twa,Anger:1663539} and CMS~\cite{CMS-PAS-SMP-12-006} collaborations. They have shown that the measured cross-section is systematically found to be higher than the NLO predictions, by a factor of about $\approx{}10-15\%$. The recent cross-sections calculations at NNLO for the $V\gamma$ processes~\cite{Grazzini:2015nwa} have shown that the expectations are corrected by a large factor compared to the one at NLO. Similar conclusions also apply for the $ZZ$ final state~\cite{Cascioli:2014yka}. However these predictions are not yet available for the $WZ$ process. Therefore the NLO predictions for this background, must be checked from the data. In the following a correction factor to MC predictions will be derived from the data using a 2D sideband method. To simplify the explanations, in this section, the $WZ$ process will be considered as the signal process.
+% It is therefore very important to determine the normalization of this background using data.
 
-The 2D sideband method is able to determine an estimate
-in the data for the process of interest in a signal region
-(not the $WWW$ signal regions)
-while also correcting for background contamination
-as estimated from the data in 
-control regions which are just outside the phase space
-of the signal region along two dimensions.
-These control regions are referred to as sidebands.
-By making assumptions about...
-we may relate the sideband regions to the signal regions.
+The normalization of this process is determined from data using a two-dimensional sideband method (2D sideband method or so-called ABCD method~\cite{Aad:2013izg}). Events are requested to pass the event pre-selection and contain exactly one SFOS lepton pair, and one third lepton from a different flavor. In order to suppress contributions from fake-lepton backgrounds as much as possible, all leptons must satisfy the following transverse momentum requirement: $p_{T}>25~\GeV$. The two dimensions of the method are defined as the invariant mass of the two SFOS leptons on one axis and the isolation of the non-SFOS lepton as the other one. This leads to 4 regions defined as follows:
 
-The signal region used for isolating the $WZ$ process
-is identified starting at pre-selection, with exactly 
-one SFOS lepton pair, and a third lepton with a different
-flavor from the lepton pair.  All three leptons are required
-to have a $\pt > 25\GeV$. Two additional quantities are used
-that function to further isolate the signal and 
-also as the criteria used to distinguish the sidebands, they are 
-the SFOS invariant mass and the isolation. Both track based
-and calorimeter isolation is considered, defined in the same
-way as listed in \sec\ref{sec:object_selection}.
-In the signal region, the SFOS invariant mass is required
-to be within 15\GeV of the \z-mass, the track isolation 
-to be less than 4\% of the track \pt, and the calorimeter
-isolation to be less than 10\% of the calorimeter \et.
-For the sidebands, inverted selections are specified where
-the SFOS invariant mass is required to be at least 25\GeV
-\emph{away} from the \z-mass, the track isolation is
-required to be \emph{more} than 10\% of the track \pt, and
-the calorimeter isolation is required to be \emph{more} than
-15\% of the calorimeter \et.
-Three sideband control regions are defined: one
-where the invariant mass cut is inverted, one where the calorimeter
-and track isolation cuts rare inverted, and one where both invariant
-mass and isolation requirements are inverted.
-
-this might be too much and too little...
-
-
-
-
-
-
-
-The 2D Sideband method isolates the process of interest, in this case
-the $WZ$ process, in a control region, while also attempting
-to estimate the contamination from backgrounds to the process in the control 
-region. processby taking into account
-information from just outside this control region 
-
-
-The normalization of this process is determined from data using a two-dimensional sideband method (2D sideband method or so-called ABCD method~
-). Events are requested to pass the event pre-selection and contain exactly one SFOS lepton pair, and one third lepton from a different flavor. In order to suppress contributions from fake-lepton backgrounds as much as possible, all leptons must satisfy the following transverse momentum requirement: $p_{T}>25~\GeV$. The two dimensions of the method are defined as the invariant mass of the two SFOS leptons on one axis and the isolation of the non-SFOS lepton as the other one. This leads to 4 regions defined as follows:
 \begin{itemize}
 	\item Signal Region (A): Isolated and in Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|<15~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}<0.10$ and $p_{T}^{Iso(R<0.2)}/p_{T}<0.04$.
 	\item Control Region (B): Isolated and off Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|>25~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}<0.10$ and $p_{T}^{Iso(R<0.2)}/p_{T}<0.04$.
 	\item Control Region (C): Non-isolated and in Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|<15~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}>0.15$ and $p_{T}^{Iso(R<0.2)}/p_{T}>0.10$.
 	\item Control Region (D): Non-isolated and off on Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|>25~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}>0.15$ and $p_{T}^{Iso(R<0.2)}/p_{T}>.10$.
+	
 \end{itemize}
 
 
@@ -130,6 +69,7 @@ Where
 \end{itemize}
 The signal leakage $C_X$ is estimated using the signal $WZ$ Monte Carlo, whereas, when computing the measurement central value, the $R^{jet}$ factor is fixed to 1. A systematic uncertainty is associated to this assumption. 
 
+\paragraph{Nominal estimate}
 
 
 Table~\ref{tab:WZ_Nominal_Numbers} summarizes the number of events measured in all 4 regions.
