@@ -32,7 +32,130 @@ As a result, we instead use the so-called ``2D Sideband'' method
 to the $WZ$ background using the data itself.
 
 The 2D sideband method is able to determine an estimate
-in the data for the process of interest in a signal region
+for the process of interest using the data while also correcting
+for background contamination. 
+To do this, first a signal region 
+is chosen which is enriched in the process of interest.
+This signal region should have at least two 
+independent selection requirements which when inverted suppress
+the signal and enhance the backgrounds to that signal.
+Next, by inverting one, the other, or both selection requirements, 
+three different control regions can be formed
+where the signal is suppressed and the backgrounds are enhanced 
+with respect to the signal region. 
+These control regions are referred to as ``sidebands''.
+Furthermore, the three sidebands and the signal region may
+related to each other assuming independence of the two different selection
+requirements such that the relative change in the backgrounds is the same
+when inverting one cut while keeping the other fixed, and vice-versa.
+In so doing, one may solve algebraically for the background contamination 
+in the signal region and subtract it out, resulting in a pure
+estimate of the signal from the data. 
+
+
+In this case, the signal region is chosen to be enhanced in the $WZ$ process.
+The backgrounds to this process are from electroweak contributions (like
+$ZZ$, \ttV, and $VVV$) and from backgrounds with fake leptons.
+The contributions to the signal region are thus parameterized as
+\begin{equation}
+\label{eq:wzparam}
+N^{\textrm{Data}} =  N^{WZ} + N^{\textrm{Fake}} + N^{\textrm{Electroweak}}
+\end{equation}
+These backgrounds include processes without \z-bosons, 
+thus presence of the \z-boson in the signal means that applying a \z-veto of 
+$|m_{\textrm{SFOS}}-m_{\z}|<15\GeV$
+will remove these contributions to the background.
+Also, requiring that the leptons be isolated does a good job of 
+removing the fake background.
+Thus, the same track and calorimeter isolation requirements
+are applied to electrons as muons as in the $WWW$ signal regions
+described in \sec\ref{sec:object_selection}.
+The \z-veto and the isolation requirements are indepently inverted
+\footnote{The thresholds are also slightly shifted so that there 
+is a ``dead'' region between the signal regions and sidebands 
+which is not used by either. This ensures separation
+between all regions.}
+to form the three sidebands.
+The expectation in each sideband can be parameterized
+in the same way as \eqn\eqref{eq:wzparam}, resulting in one
+equation for each region.
+One more equation can be found by assuming that the effect of 
+the isolation cut on the fake background is independent of the \z-veto.
+be indendent of the \z-veto.
+That is to say, it is assumed that:
+\begin{equation}
+\label{eq:wz_constraint}
+R^{\textrm{Fake}}_{\textrm{With \z-veto}} = R^{\textrm{Fake}}_{\textrm{Without \z-veto}}
+\end{equation}
+where 
+\begin{equation}
+R^{\textrm{Fake}}_{A} = 
+\frac{N^{\textrm{Fake}}_{A,\textrm{Isolated}}}
+{N^{\textrm{Fake}}_{A,\textrm{Non-Isolated}}}
+\end{equation}
+and where $N^{Fake}_{A,B}$ is the number of fake background
+events under conditions $A$ and $B$.
+Using this notation we can rewrite \eqn\eqref{eq:wzparam} as:
+\begin{equation}
+\label{eq:wzparam2}
+N^{\textrm{Data}}_{A,B} =  N^{WZ}_{A,B} + N^{\textrm{Fake}}_{A,B} + N^{\textrm{Electroweak}}_{A,B}
+\end{equation}
+This results in five equations: the expectation,
+\eqn\eqref{eq:wzparam2}, from varying the conditions $A$ and $B$ independently.
+and \eqn\eqref{eq:wz_constraint}.
+
+If we can solve the equations above for $N^{WZ}_{A,B}$ in the signal region
+(when $A=\textrm{With \z-veto}$ and $B=\textrm{Isolated}$)
+then we have our estimate. 
+This is 5 equations and 16 unnkowns. The four unknowns, $N^{\textrm{Data}}_{A,B}$,
+are determined using the data directly while 
+the electroweak backgrounds, $N^{\textrm{Electroweak}}_{A,B}$,
+and the $WZ$ contributions in the sidebands, $N^{WZ}_{A,B}$ (
+(when $A=\textrm{With \z-veto}$ and $B=\textrm{Isolated}$ are not both true)
+are determined using $WZ$ MC. This reduces the problem to 5 equations
+and 5 unknowns and so we can solve algebraically for the remaining unkowns
+including the desired value for the $WZ$ estimate in the signal region.
+
+The inputs to the system of equations are summarized in 
+Tables \ref{tab:wz_data}, \ref{tab:wz_ew}, and \ref{tab:wz_wzmc}.
+The measured values in data are shown for each region in \tab\ref{tab:wz_data}, 
+the predicted values for the electroweak backgrounds from MC in 
+\tab\ref{tab:wz_ew}, and the predicted values for the $WZ$ from MC
+\footnote{Note that the $WZ$ MC prediction in the signal region is not used
+expect as a comparison.} in
+\tab\ref{tab:wz_wzmc}.
+The derived values for the remaining unknowns are summarized in 
+\tab\ref{tab:wz_out}. The derived estiamte for the $WZ$ contribution to 
+the signal region is 
+$N^{WZ}_{\textrm{With \z-veto},\textrm{Isolated}}(\textrm{Measured}=537 \pm 35$
+events, where the uncertainty is purely statistical. 
+Compare this to the estimate from MC of 
+$N^{WZ}_{\textrm{With \z-veto},\textrm{Isolated}}(\textrm{MC}=498 \pm 1$ events.
+The ratio of the two can be used to derive a k-factor of
+$1.08\pm0.07$.
+
+...I need to put in tables...
+Systematic uncertainties are also derived on the method...
+
+
+STOP
+
+When applying the 
+The effect of removing hadronic backgrounds 
+
+Electroweak bacgkrounds to the signal ($ZZ$, \ttV, $VVV$) 
+are determined using MC.
+
+
+
+
+It is important that these selections are uncorrelated
+
+quantities used in its definition that can be inverted
+Next, three control regions are defined that
+are composed 
+
+in a signal region
 (not the $WWW$ signal regions)
 while also correcting for background contamination
 as estimated from the data in 
@@ -81,6 +204,7 @@ to estimate the contamination from backgrounds to the process in the control
 region. processby taking into account
 information from just outside this control region 
 
+OLD
 
 The normalization of this process is determined from data using a two-dimensional sideband method (2D sideband method or so-called ABCD method~
 ). Events are requested to pass the event pre-selection and contain exactly one SFOS lepton pair, and one third lepton from a different flavor. In order to suppress contributions from fake-lepton backgrounds as much as possible, all leptons must satisfy the following transverse momentum requirement: $p_{T}>25~\GeV$. The two dimensions of the method are defined as the invariant mass of the two SFOS leptons on one axis and the isolation of the non-SFOS lepton as the other one. This leads to 4 regions defined as follows:
