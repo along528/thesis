@@ -61,8 +61,8 @@ The contributions to the signal region are thus parameterized as
 \label{eq:wzparam}
 N^{\textrm{Data}} =  N^{WZ} + N^{\textrm{Fake}} + N^{\textrm{Electroweak}}
 \end{equation}
-These backgrounds include processes without \z-bosons, 
-thus presence of the \z-boson in the signal means that applying a \z-veto of 
+These backgrounds include processes without \z-bosons.
+Thus, the presence of the \z-boson in the signal means that applying a \z-veto of 
 $|m_{\textrm{SFOS}}-m_{\z}|<15\GeV$
 will remove these contributions to the background.
 Also, requiring that the leptons be isolated does a good job of 
@@ -70,18 +70,19 @@ removing the fake background.
 Thus, the same track and calorimeter isolation requirements
 are applied to electrons as muons as in the $WWW$ signal regions
 described in \sec\ref{sec:object_selection}.
-The \z-veto and the isolation requirements are indepently inverted
-\footnote{The thresholds are also slightly shifted so that there 
-is a ``dead'' region between the signal regions and sidebands 
-which is not used by either. This ensures separation
-between all regions.}
+
+The \z-veto and the isolation requirements are 
+independently inverted\footnote{The thresholds are also slightly shifted 
+so that there is a ``dead'' region between the signal regions and sidebands 
+which is not used by either. This ensures separation between all regions.}
 to form the three sidebands.
+The distribution of $m_{\textrm{SFOS}}$ is shown in
+\fig\ref{fig:wz_sidebands} in both the the isolated and non-isolated regions.
 The expectation in each sideband can be parameterized
 in the same way as \eqn\eqref{eq:wzparam}, resulting in one
 equation for each region.
 One more equation can be found by assuming that the effect of 
 the isolation cut on the fake background is independent of the \z-veto.
-be indendent of the \z-veto.
 That is to say, it is assumed that:
 \begin{equation}
 \label{eq:wz_constraint}
@@ -101,8 +102,22 @@ Using this notation we can rewrite \eqn\eqref{eq:wzparam} as:
 N^{\textrm{Data}}_{A,B} =  N^{WZ}_{A,B} + N^{\textrm{Fake}}_{A,B} + N^{\textrm{Electroweak}}_{A,B}
 \end{equation}
 This results in five equations: the expectation,
-\eqn\eqref{eq:wzparam2}, from varying the conditions $A$ and $B$ independently.
+\eqn\eqref{eq:wzparam2}, from varying the conditions $A$ and $B$ independently,
 and \eqn\eqref{eq:wz_constraint}.
+
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/WZ_CR/2DSideband_WZCR_Isolated}
+\includegraphics[width=0.45\textwidth]{figures/WZ_CR/2DSideband_WZCR_NonIsolated}
+\caption{ Distribution of $m_{\ell\ell}^{SFOS}$ in the isolated and  non-isolated 
+control regions. The agreement between the data and the MC expectation
+is not expected to be perfect, since the MC does not do a good job 
+of modeling the fake background. The 2D sideband method uses the data
+to estimate the fake background.}
+\label{fig:wz_sidebands}
+\end{figure}
 
 If we can solve the equations above for $N^{WZ}_{A,B}$ in the signal region
 (when $A=\textrm{With \z-veto}$ and $B=\textrm{Isolated}$)
@@ -110,229 +125,73 @@ then we have our estimate.
 This is 5 equations and 16 unnkowns. The four unknowns, $N^{\textrm{Data}}_{A,B}$,
 are determined using the data directly while 
 the electroweak backgrounds, $N^{\textrm{Electroweak}}_{A,B}$,
-and the $WZ$ contributions in the sidebands, $N^{WZ}_{A,B}$ (
+and the $WZ$ contributions in the sidebands, $N^{WZ}_{A,B}$ 
 (when $A=\textrm{With \z-veto}$ and $B=\textrm{Isolated}$ are not both true)
 are determined using $WZ$ MC. This reduces the problem to 5 equations
 and 5 unknowns and so we can solve algebraically for the remaining unkowns
 including the desired value for the $WZ$ estimate in the signal region.
 
+\begin{table}
+\centering
+\input{tables/wz/wz_input.tex}
+\caption{All of the inputs used to constrain the system of five equations
+from \eqn\eqref{eq:wzparam} and \eqn\eqref{eq:wz_constraint}.
+The values are derived in the signal region and three sideband regions
+described in the text. $N^{\textrm{Data}}_{A,B}$ are determined directly
+from the data; $N^{\textrm{Electroweak}}_{A,B}$ and $N^{WZ}_{A,B}$ are 
+determined in MC. The value for $N^{WZ}_{\textrm{With \z-veto,Isolated}}$ is
+not used as an input and is instead solved for as the the main
+parameter of interest. Still, the value is determined in MC to be
+$498 \pm 1$.  Only statistical uncertainties are shown.}
+\label{tab:wz_input}
+\end{table}
+
+\begin{table}
+\centering
+\input{tables/wz/wz_output.tex}
+\caption{Outputs from the system of five equations
+from \eqn\eqref{eq:wzparam} and \eqn\eqref{eq:wz_constraint}
+after including the numbers from \tab\ref{tab:wz_input} as input.
+The value for $N^{WZ}_{\textrm{With \z-veto, Isolated}}$ is 
+the value of primary interest.  Only statistical uncertainties are shown.}
+\label{tab:wz_output}
+\end{table}
+
+
 The inputs to the system of equations are summarized in 
-Tables \ref{tab:wz_data}, \ref{tab:wz_ew}, and \ref{tab:wz_wzmc}.
-The measured values in data are shown for each region in \tab\ref{tab:wz_data}, 
-the predicted values for the electroweak backgrounds from MC in 
-\tab\ref{tab:wz_ew}, and the predicted values for the $WZ$ from MC
-\footnote{Note that the $WZ$ MC prediction in the signal region is not used
-expect as a comparison.} in
-\tab\ref{tab:wz_wzmc}.
-The derived values for the remaining unknowns are summarized in 
-\tab\ref{tab:wz_out}. The derived estiamte for the $WZ$ contribution to 
+\tab\ref{tab:wz_input}\footnote{Note that the $WZ$ MC prediction in 
+the signal region is not used expect as a comparison.}.
+The derived values after solving the system of equations are
+summarized in \tab\ref{tab:wz_output}. 
+The derived estiamte for the $WZ$ contribution to 
 the signal region is 
-$N^{WZ}_{\textrm{With \z-veto},\textrm{Isolated}}(\textrm{Measured}=537 \pm 35$
+$537 \pm 35$
 events, where the uncertainty is purely statistical. 
 Compare this to the estimate from MC of 
-$N^{WZ}_{\textrm{With \z-veto},\textrm{Isolated}}(\textrm{MC}=498 \pm 1$ events.
+$498 \pm 1$ events.
 The ratio of the two can be used to derive a k-factor of
-$1.08\pm0.07$.
-
-...I need to put in tables...
-Systematic uncertainties are also derived on the method...
+$1.08\pm0.07\stat$.
 
 
-STOP
+Systematic uncertainties are also derived on the method
+by varying the 
+thresholds used to define the sideband regions, varying the normalization
+of the MC estimates in \tab\ref{tab:wz_input}, and by varying the degree
+of equality in \eqn\eqref{eq:wz_constraint}. The effect of each
+uncertainty is propogated to the estimate of the $WZ$ normalization in
+the signal region and are combined in quadrature. The total systematic
+uncertainty is found to be 5.9\%. 
+The final k-factor is thus $1.08 \pm0.07\stat\pm0.07\syst$.
 
-When applying the 
-The effect of removing hadronic backgrounds 
-
-Electroweak bacgkrounds to the signal ($ZZ$, \ttV, $VVV$) 
-are determined using MC.
-
-
-
-
-It is important that these selections are uncorrelated
-
-quantities used in its definition that can be inverted
-Next, three control regions are defined that
-are composed 
-
-in a signal region
-(not the $WWW$ signal regions)
-while also correcting for background contamination
-as estimated from the data in 
-control regions which are just outside the phase space
-of the signal region along two dimensions.
-These control regions are referred to as sidebands.
-By making assumptions about...
-we may relate the sideband regions to the signal regions.
-
-The signal region used for isolating the $WZ$ process
-is identified starting at pre-selection, with exactly 
-one SFOS lepton pair, and a third lepton with a different
-flavor from the lepton pair.  All three leptons are required
-to have a $\pt > 25\GeV$. Two additional quantities are used
-that function to further isolate the signal and 
-also as the criteria used to distinguish the sidebands, they are 
-the SFOS invariant mass and the isolation. Both track based
-and calorimeter isolation is considered, defined in the same
-way as listed in \sec\ref{sec:object_selection}.
-In the signal region, the SFOS invariant mass is required
-to be within 15\GeV of the \z-mass, the track isolation 
-to be less than 4\% of the track \pt, and the calorimeter
-isolation to be less than 10\% of the calorimeter \et.
-For the sidebands, inverted selections are specified where
-the SFOS invariant mass is required to be at least 25\GeV
-\emph{away} from the \z-mass, the track isolation is
-required to be \emph{more} than 10\% of the track \pt, and
-the calorimeter isolation is required to be \emph{more} than
-15\% of the calorimeter \et.
-Three sideband control regions are defined: one
-where the invariant mass cut is inverted, one where the calorimeter
-and track isolation cuts rare inverted, and one where both invariant
-mass and isolation requirements are inverted.
-
-this might be too much and too little...
-
-
-
-
-
-
-
-The 2D Sideband method isolates the process of interest, in this case
-the $WZ$ process, in a control region, while also attempting
-to estimate the contamination from backgrounds to the process in the control 
-region. processby taking into account
-information from just outside this control region 
-
-OLD
-
-The normalization of this process is determined from data using a two-dimensional sideband method (2D sideband method or so-called ABCD method~
-). Events are requested to pass the event pre-selection and contain exactly one SFOS lepton pair, and one third lepton from a different flavor. In order to suppress contributions from fake-lepton backgrounds as much as possible, all leptons must satisfy the following transverse momentum requirement: $p_{T}>25~\GeV$. The two dimensions of the method are defined as the invariant mass of the two SFOS leptons on one axis and the isolation of the non-SFOS lepton as the other one. This leads to 4 regions defined as follows:
-\begin{itemize}
-	\item Signal Region (A): Isolated and in Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|<15~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}<0.10$ and $p_{T}^{Iso(R<0.2)}/p_{T}<0.04$.
-	\item Control Region (B): Isolated and off Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|>25~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}<0.10$ and $p_{T}^{Iso(R<0.2)}/p_{T}<0.04$.
-	\item Control Region (C): Non-isolated and in Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|<15~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}>0.15$ and $p_{T}^{Iso(R<0.2)}/p_{T}>0.10$.
-	\item Control Region (D): Non-isolated and off on Z-peak $|m_{\ell\ell}^{SFOS}-m_{Z}|>25~\GeV$, $E_{T}^{Iso(R<0.2)}/E_{T}>0.15$ and $p_{T}^{Iso(R<0.2)}/p_{T}>.10$.
-\end{itemize}
-
-
-The 2D-sideband method is based on the following two assumptions:
-\begin{itemize}
-\item The presence of $WZ$ signal events in the three control regions (B,
-  C, and D) is negligible. This allow us to consider all
-  reconstructed leptons falling in one of these regions as coming from a
-  background (non $WZ$)event. The number of events $N^{jet}$ with jet faking leptons can then
-  be extracted by subtracting from the data the contribution from processes containing 
-  3 real leptons ($ZZ$, $ttV$, tri-boson) or 2 real lepton and 1 photon ($Z\gamma$)
-  and noted in the following as $N^{EW}$. These are estimated from Monte Carlo. The total number of
-  observed events in each of these three regions can be expressed as:
-  \begin{align}
-  N_A &= N_A^{WZ}(measured)+N_A^{jet}+N_A^{EW} \\
-  N_B &= N_B^{jet}+N_B^{EW} \\
-  N_C &= N_C^{jet}+N_C^{EW} \\
-  N_D &= N_D^{jet}+N_D^{EW} 
-  \end{align}
-
-\item The ratio of isolated to non-isolated background candidates from
-  jet-fakes in the Z-peak bin ($\frac{N_D^{jet}}{N_C^{jet}}$)
-  is equal to the same ratio computed in the off Z-peak bin ($\frac{N_B^{jet}}{N_A^{jet}}$).
-\end{itemize}
-
-From these equations, the number of $WZ$ events in the signal region A can be calculated as:
-
-\begin{equation}
-N_A^{WZ}(Measured)=(N_A-N_A^{EW})-\frac{1}{R^{jet}} \frac{(N_B-N_B^{EW}-c_B (N_A^{WZ}(MC))) (N_C-N_C^{EW}-c_C (N_A^{WZ}(MC)))}{N_D-N_D^{EW}-c_D (N_A^{WZ}(MC))}
-\label{Equ:NWjet1}
-\end{equation}
-
-Where 
-\begin{itemize}
-\item $R^{jet}=\frac{N^{jet}_B N^{jet}_C}{N^{jet}_A
-  N^{jet}_D}$ is defined to account for the bias on the background correlation between region A-B to C-D. These numbers are estimated from MC simulations, they are obtained from summing together samples containing 2 real leptons and a fake lepton ($Z+$jets, $t\bar{t}$ and $WW$). The MC samples used for these processes are summarized in Tables~\ref{tab:sample_bkg_dibosons},~\ref{tab:sample_bkg_dibosons_gg2DPI}, and~\ref{tab:sample_bkg_Zjets} in Section~\ref{sec:subsection_datasets_MC}.
-\item $C_X=\frac{N_X^{WZ}(MC)}{N_A^{WZ}(MC)}$, X=(B,C,D) is defined to account for the signal leakage. These numbers are estimated from MC simulations.
-\item $N_X^{EW}$, X=(A,B,C,D), is evaluated from MC and defined as the number of events containing 3 real leptons ($ZZ$, $t\bar{t}V$, tri-boson) or 2 real lepton and 1 photon ($Z\gamma$).
-\end{itemize}
-The signal leakage $C_X$ is estimated using the signal $WZ$ Monte Carlo, whereas, when computing the measurement central value, the $R^{jet}$ factor is fixed to 1. A systematic uncertainty is associated to this assumption. 
-
-
-
-Table~\ref{tab:WZ_Nominal_Numbers} summarizes the number of events measured in all 4 regions.
-
-\begin{table}[htp]
-\centering
-\begin{tabular}{c|cccc}
-  \hline
-  Regions & N data events & N EWbkg      & N fakes (MC)    & CX \\
-  \hline
-	    A & $724 \pm 27$ & $172 \pm 3$   & $25 \pm 4$ & $1 \pm 0$ \\ 
-	    B & $67 \pm 8$   & $29 \pm  2$   & $5 \pm 2$ & $0.0639 \pm 0.0007$ \\ 
-	    C & $272 \pm 16$ & $7.7 \pm 0.9$ & $282 \pm 12$ & $0.0018 \pm 0.0001$ \\ 
-	    D & $118 \pm 11$ & $1.9 \pm 0.6$ & $103 \pm 7$ & $0.00019 \pm 0.00003$ \\ 
-  \hline
-\end{tabular}
-\caption{Number of data and MC events recorded in each regions, used for the determination of the $WZ$ normalization using the 2D-sideband method.}
-\label{tab:WZ_Nominal_Numbers}
-\end{table}
-
-In region A the total predicted number of $WZ$ events is $N_A^{WZ}(MC)=498{}\pm 1$, while the measurement with the 2D-sideband method gives $N_A^{WZ}(measured)=537.\pm{}35$ events, this yield a correction factor of $1.08 \pm 0.07$(stat). This normalization factor is found to agree well with the measurements done by the ATLAS and CMS collaborations. 
-The number of fake leptons events can also be evaluated with this method, subtracting the number of EW and $WZ$ events to the total number of data events in region A. Doing so, one find $N^{jet}_{A}(measured)=8. \pm 23.$, to be compared to the MC expectation of $N^{jet}_{A}(MC)=25 \pm 4.$. The error on this number is large, but since the contamination of fake events in this region A is small, the impact on the correction factor is also small.
-% Due to the high contamination of $WZ$ and EW events in region B, the evaluation of the fake component has a large uncertainty. But this high uncertainty is counterbalanced by the small fraction of events expected in th
-% The way the 2d-sideband method is used The number of fake events measured in the data in region A is  $N^{jet}_{A}(measured)=8. \pm 23.$ to be compared with the expectation in MC: $N^{jet}_{A}(MC)=25 \pm 4.$.
-
-Figure~\ref{fig:WZ_CR} shows the $m_{\ell\ell}^{SFOS}$ distribution for the two isolation regions. As it can be seen the backgrounds do not model perfectly the data, especially in the non-isolated region. It is important to notice that the fake backgrounds are here completely determined from Monte Carlo simulations, as well as the $WZ$ normalization.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.45\textwidth]{figures/WZ_CR/2DSideband_WZCR_Isolated}
-\includegraphics[width=0.45\textwidth]{figures/WZ_CR/2DSideband_WZCR_NonIsolated}
-\caption{$WZ$ Control regions. Distribution of the $m_{\ell\ell}^{SFOS}$ in the isolated and anti-isolated CR.}
-\label{fig:WZ_CR}
-\end{figure}  
-
-\paragraph{Closure test and systematic uncertainties}
-
-
-To prove that the 2D-sideband method can determine accurately the $WZ$ normalization, MC closure tests are performed. The MC processes of the two isolations regions showed on Figure~\ref{fig:WZ_CR} are summed up. Two templates are obtained, and they are used as if they were data in region A, B, C and D. These templates are used to generate pseudo-datasets which will serve to recompute the number of $WZ$ events with the 2D-sideband method.
-Once again the NLO prediction in region A gives $N_A^{WZ}(MC)= 498 \pm 1$, using the pseudo-data one find $N_A^{WZ}(measured)=495.\pm{}39$ events. Other tests are performed: 
-
-\begin{itemize}
-\item Scaling up the $WZ$ signal by $20\%$.
-\item Scaling up the fake background by $50\%$.
-\item Scaling up the EW background by $20\%$.
-\end{itemize}
-
-In all these cases the 2D-sideband method allows to retrieve the proper normalization of the $WZ$ signal injected. More information can be found in the Appendix~\ref{appendix:2dsideband}.
-
-
-
-Several sources of systematic effects are investigated. The difference between the number of $WZ$ events measured in region A after varying one variable and the central value reported above is taken into account as a systematic. They are listed below, more details can be found in appendix~\ref{appendix:2dsideband}.
-\begin{itemize}
-\item The isolation cuts are varied to $E_{T}^{Iso(R<0.2)}/E_{T}>0.25$ and $p_{T}^{Iso(R<0.2)}/p_{T}>0.2$, in order to check the impact of this cut on the measured number of events. The total number of $WZ$ events found in this case is: $N_A^{WZ}(measured)=539 \pm 35$, which yield a systematic uncertainty of $0.5\%$ on the normalization factor.
-
-% \item The $p_{T}$ cut on the 3rd lepton is varied by $\pm{}1~\GeV$, the largest deviation found is taken as a systematic on the normalization factor. It is found that the largest difference in the normalization factor is found when varying the lepton $p_{T}$ to $26~\GeV$. In this case the predicted number of events is found to be: $N_A^{WZ}(\mbox{MC})=468{}\pm 1$ while the measured number of events in the data is found to be $N_{\mbox{WZ}}^{\mbox{data}(Ori)} =492 \pm 34$, which yield a ratio of $1.05 \pm 0.07$, or a difference of $2.9\%$ with the nominal normalization factor.
- 
-\item The cut on the $m_{\ell\ell}$ is increased to $35~\GeV$ in the definition of region B and D. The total number of $WZ$ events found in this case is: $N_A^{WZ}(measured)=557. \pm 35$ , which yield a ratio of $1.12 \pm 0.07$, or a difference of $3.7\%$ with the nominal normalization factor.
-
-\item The normalization of the backgrounds taken from MC, which are subtracted, is varied by $20\%$ up and down and the largest difference is taken as another systematic uncertainty. It is found that the largest uncertainty is obtained by varying up the normalization of these backgrounds. In this case one find $N_A^{WZ}(measured)=558 \pm 35$, which gives a ratio of $1.12 \pm 0.07$, or an uncertainty of $3.8\%$ compared to the central prediction.
-
- 
-\item Finally the $R^{jet}$ factor is varied from $R^{jet} =1.$ to the value measured in MC: $R^{jet} =0.61 \pm 0.24$. The uncertainty on this factor is quite large due to the very low statistics available in MC in the isolated control regions. $N_A^{WZ}(measured)=527. \pm 136.$, which gives a correction factor of $1.06 \pm 0.23$. This yield a systematic uncertainty of $2.4\%$ on the normalization factor.
-
-\end{itemize}
-
-All these uncertainties are added in quadrature giving a total systematic uncertainty of $5.9\%$ on the scale factor. The final correction factor on the normalization of the $WZ$ background is therefore: $k_{WZ}=1.08 \pm 0.07^{stat} \pm 0.07^{sys}$.
-
-\paragraph{Validation}
-
-In order to check the consistency of the scale factor determined above, the agreement between the data and the model is checked in a region passing the event pre-Selection cuts and containing exactly two SFOS lepton pairs. Figure~\ref{fig:WZ_2SFOS_CR} show the leading lepton \pt{}, the \MET{}, the invariant mass distribution of the two leading lepton \pt{}, and the jet multiplicity in this region. Table~\ref{tab:presel_2sfos_wzval} show the overall yields predicted by the model and observed on the data. The data agrees very well with the model in this region after using the k-factor presented above.
-
-\begin{table}[ht!]
-\centering
-\input{tables/Preselection_2SFOS_Yields.tex}
-\caption{Expected and observed event yields binned by lepton flavor combination for the following selection: event pre-selection + 2 SFOS. Only the systematic uncertainties on the $WZ$ background due to the k-factor is given. The other uncertainties are only statistical.}
-\label{tab:presel_2sfos_wzval}
-\end{table}
-
+The derived k-factor is applied to the MC estimate in another control
+region enhanced in the $WZ$ process. This control region is determined
+using the pre-selection region as described in \sec\ref{sec:preselection}
+plus an additional requirement that there be 2 SFOS lepton pairs.
+This gives a good test of the $WZ$ normalization in a control region
+which is closer to the $WWW$ signal regions. 
+This comparison is shown in \fig\ref{fig:WZ_2SFOS_CR}. 
+The data is shown to be in good agreement with the corrected $WZ$ MC
+estimate as desired.
 
 \begin{figure}[htp]
 \centering
@@ -340,13 +199,22 @@ In order to check the consistency of the scale factor determined above, the agre
 \includegraphics[width=0.4\textwidth]{figures/WZ_CR/MET_Et_histratio.png}
 \includegraphics[width=0.4\textwidth]{figures/WZ_CR/InvariantMassSFOS_histratio.png}
 \includegraphics[width=0.4\textwidth]{figures/WZ_CR/NJets_histratio.png}
-
 \caption{$WZ$ 2SFOS Control regions. Distribution of leading lepton $p_{T}$, $\MET$, $m_{12}$, and jet multiplicity. The systematic band shows the uncertainty on the WZ k-factor.}
 \label{fig:WZ_2SFOS_CR}
 \end{figure}  
 
+As a further test of the method, a MC estimate which includes the $WZ$ signal as
+well as the Electroweak and fake backgrounds is used as input in place 
+of $N^{\textrm{Data}}_{A,B}$ to see if the the MC estimate for the $WZ$
+contribution in the signal region can be recovered. This is referred to as
+a closure test.  The measured value for the $WZ$ normalization from the 
+closure test is found to be  $495\pm39$, which is indeed consistent with the
+estimate from pure MC of $498\pm1$. The closure test also shows consistent
+results when varying the normalizations of the different compoenents 
+in the MC independently.
 
-\clearpage
+
+
 
 \subsubsection{$ZZ$}
 \label{sec:zzbg}
