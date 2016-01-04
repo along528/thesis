@@ -241,18 +241,38 @@ The uncertainty on the prediction is determined to be
 15\%~\cite{Cascioli:2014yka,Baglio:2013toa,Bierweiler:2013dja}.
 This correction is used instead of determining a correction in the data
 like in \sec\ref{sec:wzbg}.
-STOP
+
+We may check how well the NLO $ZZ\rightarrow llll$ MC prediction and 
+NNLO normalization correction describe the process in the data by looking
+in a four lepton control region. The leptons are required to have
+the same quality requirements as in \sec\ref{sec:object_selection}.
+The leptons are sorted by \pt~with the highest \pt~lepton
+required to have $\pt>25\GeV$, the next two to have
+$\pt>15\GeV$, and the lowest \pt~lepton to have $\pt>10\GeV$.
+From these leptons, two separate SFOS pairs are formed. If there
+is any ambiguity, first an SFOS pair is formed which gives the greatest
+possible di-lepton invariant mass and the remaining leptons form the other pair.
+This is a similar procedure to~\cite{Aad:2014wra}. Finally, 
+to suppress background contamination in the control region,
+the invariant mass of both SFOS pairs are required to be near the \z-mass, 
+with $60<m_{\textrm{SFOS}}<120\GeV$ for both.
+The results of the comparison are summarized for a few different distributions
+in \fig\ref{fig:ZZ_CR} and on the total yield in \tab\ref{tab:ZZ_CR}.
+The expectation is shown to agree well with the observed data within the 
+stated systematic uncertainty on the k-factor of 15\%. 
 
 
-The agreement between data and the model is then checked in a control region, where 2 same flavors opposite sign pairs leptons ($e$ and $\mu$) are requested. The leptons must follow the quality requirements defined in Section~\ref{sec:Object_selection}. The transverse momentum of the leptons should be: $p_{T}^{1}>25~\GeV$, $p_{T}^{2}>15~\GeV$, $p_{T}^{3}>15~\GeV$, and  $p_{T}^{4}>10~\GeV$. The pairing of the leptons follows the algorithm defined in~\cite{Aad:2014wra}. In order to remove any contribution from fake backgrounds, only the events where the two $Z$ bosons are on shell are kept, \textit{ie}: $60<m_{12}<120~\GeV$ and $60<m_{34}<120~\GeV$. Figure~\ref{fig:ZZ_CR}, show the distributions of $m_{12}$, $m_{34}$, $m_{4l}$, and the leptons $p_{T}$ for this selection, while Table~\ref{tab:ZZ_CR} gives the total number of event measured in this CR and the prediction on the different processes in the same region.
-
-The agreement between the data and the MC predictions is very good, for the shape or for the prediction of the total number of events in this control region.
-
-It was also checked whether or not the contribution of $ZZ^{*}$ where the $Z^{*}$ boson is very offshell, $m_{Z^{*}} < 4$~GeV, while the other boson
-has a  mass $m_Z > 4$~GeV has any impact on the signal regions. This was evaluted by looking at the samples with channel numbers
-$181471$ through $181479$ in Table~\ref{tab:sample_bkg_dibosons}.  The contribution from these samples were found to be negligible, with a statistical
-uncertainty compatible with exaxtly 0 events in the individual signal regions. As a result, these samples were not considered any further and are not
-included in the final background  estimate for the signal regions or in the ZZ control regions.
+%%%%Should I say anything about this off shell business? Probably not.
+%It was also checked whether or not the contribution of $ZZ^{*}$ where 
+%the $Z^{*}$ boson is very offshell, $m_{Z^{*}} < 4$~GeV, while the other boson
+%has a  mass $m_Z > 4$~GeV has any impact on the signal regions. This was 
+%evaluted by looking at the samples with channel numbers
+%$181471$ through $181479$ in Table~\ref{tab:sample_bkg_dibosons}.  
+%The contribution from these samples were found to be negligible, with a 
+%statistical uncertainty compatible with exaxtly 0 events in the individual 
+%signal regions. As a result, these samples were not considered any further 
+%and are not included in the final background  estimate for the signal regions 
+%or in the ZZ control regions.
 
 
 \begin{figure}[htp]
@@ -262,7 +282,9 @@ included in the final background  estimate for the signal regions or in the ZZ c
 \includegraphics[width=0.4\textwidth]{figures/ZZ_CR/ZZ_CR_m12.eps}
 \includegraphics[width=0.4\textwidth]{figures/ZZ_CR/ZZ_CR_m34.eps}
 
-\caption{$ZZ\to{}4\ell$ Control regions. Distribution of leptons $p_{T}$, $m_{12}$, $m_{34}$, $m_{4l}$.}
+\caption{$ZZ\rightarrow lll$ control region with two separate SFOS pairs. 
+Distribution are shown for the lepton \pt, the leading di-lepton mass ($m_{12}$), 
+the minimum di-lepton mass ($m_{34}$), and the four lepton mass ($m_{4l}$).}
 \label{fig:ZZ_CR}
 \end{figure}  
 
@@ -281,10 +303,12 @@ triboson and $t\bar{t}+V$ &  $4.1 \pm 0.2$\\
 \hline
 Expected Signal + Background &  $164.0 \pm 0.3$ (stat) $\pm 22.3$(syst)\\ 
 \hline
-Observed Data &  $155 \pm 12$\\ 
+Observed Data &  $155$\\ % \pm 12$\\ 
 \hline
 \end{tabular}
-\caption{Number of data and predicted events in the ZZ CR. The error quoted on the MC samples represents only the statistical error on the MC samples. The systematic error due to theoretical normalization on the $ZZ$ sample is also showed.}
+\caption{Number of data and predicted events in the $ZZ$ control region. 
+The error quoted on the MC samples represents only the statistical error. 
+The systematic error due to the k-factor on the $ZZ$ sample is also shown.}
 \label{tab:ZZ_CR}
 \end{table}
 
