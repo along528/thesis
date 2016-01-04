@@ -316,13 +316,37 @@ The systematic error due to the k-factor on the $ZZ$ sample is also shown.}
 \clearpage
 
 \subsubsection{$Z\gamma$}
+\label{sec:zgammabg}
 
-The $Z\gamma$ process, where the $Z$ boson decays to a pair of leptons ($e$ and $\mu$), is estimated from MC. This proces is obtained using the Sherpa generator. It was found that Sherpa describes accurately the shape and normalization of data in the $7~\TeV$ and $8~\TeV$ datasets~\cite{Aad:2013izg,Auerbach:1631102}. Therefore the normalization of these sample is taken to be the cross-section provided by the Sherpa generator. These processes are contributing to our selection, via the conversion of one photon into a pair of electrons, and then the loss of one of these electrons in the acceptance. 
+The $\z\gamma$ process can produce three leptons and thus fall into the 
+signal regions as described in \sec\ref{sec:www_bg_samples}.
+Measurements of this process within ATLAS
+have shown that this process is well described from MC simulation
+using the \sherpa~generator at both 7 and 8\TeV~\cite{Aad:2013izg,Auerbach:1631102}.
+Thus, no further correction or uncertainty on the normalization is applied.
 
-These effects are expected to be properly described by the simulation, but the agreement between the data and the model is checked in a control region where the events are requested to contains exactly two muons and one electron, and the tri-body invariant mass of this system, should be close to the $Z$-pole mass~\cite{PDG:2014}: $|m_{\mu\mu{}e}-91.19|<15~\GeV$.
-
-Figure~\ref{fig:Zgamma_CR} shows the invariant mass distribution of the 3 leptons, the leptons $p_{T}$, the $\eta$ distribution of the electron, and the jet multiplicity. The normalization in the CR is also checked and is provided in Table~\ref{tab:Zgamma_CR}.
-All the distributions and the event yield show a very good agreement between the data and the model.
+The description of the $\z\gamma$ process is tested in a three lepton control
+region starting from the 
+pre-selection (described in \sec\ref{sec:preselection}) and with the same
+lepton quality requirements as in \sec\ref{sec:object_selection}.
+One of the three leptons should be an electron while the remaining two 
+are required to form a di-muon SFOS pair. For this final state to be produced
+by the $\z\gamma$ process, the electron should always come from 
+pair production off of the photon, $\gamma$, which itself radiates
+off of the initial state \z~boson.  As a result, the invariant mass
+of the di-muon pair coming from the \z-decay will typically be shifted
+slightly below the \z-mass. However, the invariant mass of the three lepton 
+system should restore this shift such that the mass peak is again centered 
+on the \z-mass. Thus, in order to further suppress backgrounds to the 
+$\z\gamma$ process, we also require that the three-lepton invariant
+mass, $m_{\mu\mu e}$, be within 15\GeV of the \z-mass.
+The prediction after this selection is compared to data for a few different
+distributions in \fig\ref{fig:Zgamma_CR} and for the total yield
+in \tab\ref{tab:Zgamma_CR}. The control region is clearly enhanced
+in the $\z\gamma$ process, and furthermore shows very good agreement. 
+This is even true for distributions of the electron kinematics, 
+such as $\eta$ and $\pt$, which suggests that the photon conversion
+mechanism is being well modelled.
 
 \begin{figure}[htp]
 \centering
@@ -331,7 +355,9 @@ All the distributions and the event yield show a very good agreement between the
 \includegraphics[width=0.4\textwidth]{figures/ZG_CR/ElectronEta_histratio.png}
 \includegraphics[width=0.4\textwidth]{figures/ZG_CR/NJets_histratio.png}
 
-\caption{$Z\gamma$ Control region. Distribution of leptons $p_{T}$, invariant mass of the 3leptons, electron $\eta$, and jet multiplicity.}
+\caption{Three lepton $Z\gamma$ control cegion. Distribution are shown for the
+lepton $p_{T}$, three lepton invariant mass ($m_{\mu\mu e}$), electron $\eta$, 
+and jet multiplicity.}
 \label{fig:Zgamma_CR}
 \end{figure}  
 
@@ -339,7 +365,8 @@ All the distributions and the event yield show a very good agreement between the
 \begin{table}[ht!]
 \centering
 \input{tables/ZGammaCR_Yields.tex}
-\caption{Expected and observed event yields for the Z$\gamma$ control region. Only the statistical uncertainties are showed.}
+\caption{Expected and observed event yields for the Z$\gamma$ control region. 
+Only statistical uncertainties are shown.}
 \label{tab:Zgamma_CR}
 \end{table}
 
