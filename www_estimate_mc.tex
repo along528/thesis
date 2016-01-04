@@ -1,7 +1,16 @@
 
-Details of the MC based background estimations are described below.
-Any additional normalizations or uncertainties are summarized
-in Table~\ref{tab:mcnorm}.
+
+Several backgrounds to the signal are simulated purely using MC simulation.
+The details of these processes, like why they function as backgrounds
+to the signal and which MC generators are used in the simulation,
+have already been described in \sec\ref{sec:www_bg_samples}.
+In some cases, corrections and/or uncertainties on 
+the normalization of these simulated samples are applied. 
+The corrections are summarized in \tab\ref{tab:mcnorm} and are described
+in more detail below.
+The peformance of the final description for those simulated backgrounds
+which are most important have been checked in control regions and are 
+also described below.
 
 \begin{table}[htp]
 \centering
@@ -29,8 +38,6 @@ moving to a NNLO calculation.
 For the $WZ$ process, however, this type of calculation is not yet available.
 As a result, we instead use the so-called ``2D Sideband'' method
 \cite{Aad:2013izg} to derive a correction using the data itself.
-This correction is applied to the $WZ$ background MC estimate using
-\powheg~mentioned in \sec\ref{sec:www_bg_samples}.
 
 The 2D sideband method is able to determine an estimate
 for the process of interest using the data while also correcting
@@ -232,8 +239,7 @@ The $ZZ\rightarrow llll$ process has a similar cross-section as
 the $WZ\rightarrow lll\nu$ process but is 
 suppressed by the probability that exactly one lepton is not reconstructed. 
 Still, this probability is large enough that the $ZZ$ background is one of the 
-largest in the 1 and 2 SFOS signal regions.  This background is simulated
-using MC as descrbed in \sec\ref{sec:www_bg_samples}.
+largest in the 1 and 2 SFOS signal regions.  
 Unlike the $WZ$ process, NNLO predictions are available 
 from~\cite{Cascioli:2014yka,Baglio:2013toa,Bierweiler:2013dja}
 that suggest a k-factor of 1.05 on the overall $ZZ$ prediction.
@@ -313,16 +319,15 @@ The systematic error due to the k-factor on the $ZZ$ sample is also shown.}
 \end{table}
 
 
-\clearpage
 
 \subsubsection{$Z\gamma$}
 \label{sec:zgammabg}
 
 The $\z\gamma$ process can produce three leptons and thus fall into the 
-signal regions as described in \sec\ref{sec:www_bg_samples}.
+signal regions.
 Measurements of this process within ATLAS
 have shown that this process is well described from MC simulation
-using the \sherpa~generator at both 7 and 8\TeV~\cite{Aad:2013izg,Auerbach:1631102}.
+using the \sherpa~generator at both 7 and 8~\TeV~\cite{Aad:2013izg,Auerbach:1631102}.
 Thus, no further correction or uncertainty on the normalization is applied.
 
 The description of the $\z\gamma$ process is tested in a three lepton control
@@ -372,30 +377,28 @@ Only statistical uncertainties are shown.}
 
 
 
-\subsubsection{Double parton scattering, $\ttbar + V$, and $VVV$}
-
-\paragraph{DPS}
-\label{sec:bkg_DPS}
-Double parton scattering (DPS) backgrounds are also taken into account in the analysis. To estimate their contribution a list of samples used in the same sign WW analysis~\cite{Aad:2014zda,DPS:Twiki} has been used. The cross section of these processes can not be taken directly from MC, but it must be further studied. Considering the DPS production of $A+B$, where $A$ and $B$ can be products of any single-parton, the cross section can can be factorised as~\cite{Gaunt:2010pi}:
-\begin{equation}
-	\sigma^{DPS}_{(A+B)}=\frac{m}{2}\times{}\frac{\sigma^{S}_{A}\times{}\sigma^{S}_{B}}{\sigma_{eff}}
-\end{equation}	
-
-Where $\sigma^{S}_{(A/B)}$ is the single-parton scattering production cross-section of the process $A/B$, $m$ is a factor which takes the value of 1 when $A=B$ and 2 when $A\ne B$, $\sigma_{eff}$ is the effective cross section of the proton. A measurement of $\sigma_{eff} =15\pm3(stat)^{+5}_{-3}(syst)$ mb for 7~\TeV{} $p-p$ collisions has been recently performed by ATLAS~\cite{Aad:2013bjm}. By factorizing the cross-section in this form, the correlation between the two parton interactions are neglected.
-
-The samples and cross section that have been used in this analysis are given in Table~\ref{tab:sample_bkg_dibosons_gg2DPI}. An uncertainty of $50\%$ is applied on the normalization of these processes. Among these processes the one that can give a tri-lepton final state are: $WZ$, $ZZ$, and $Z\gamma$.
-	
-Their contributions are found to be negligible.
+\subsubsection{Other Monte Carlo Backgrounds}
+\label{sec:otherbg}
 
 
-\paragraph{Other backgrounds}
-The other backgrounds evaluated from MC are the one containing three real leptons: $t\bar{t}+V$, $WWZ$, and $WZZ$.
-The PDF and scale uncertainties for the $t\bar{t}+V$ processes have been evaluated by other member of the ATLAS collaboration~\cite{ttV:Twiki}, and found
-to be about $30\%$ of their normalization. These processes have been recently measured by the ATLAS collaboration~\cite{ATLAS-CONF-2015-032}, and their normalization are found to be consistent with the NLO predictions.
+Backgrounds due to DPS are generated using MC as described
+in \sec\ref{sec:www_bg_samples}. The cross-section of the DPS process
+is calculated assuming that the cross-sections of the two incoming processes
+can be factorized as in \cite{Gaunt:2010pi} using an effective
+proton cross-section measured in ATLAS at 7~\TeV~\cite{Aad:2013bjm}.
+An overall 50\% uncertainty is place on the normalization of these cross-sections.
+This is a conservative estimate of the uncertainty.
+However, the contributions of these processes are found to be negligible.
+%citation on the uncertainty?
 
-An equivalent $30\%$ uncertainty is assigned for the other $VVV$ contributions ($ZWW^{*}$ and $ZZZ^{*}$) that are not coming from our signal.
 
-% Other background contributions are arising from tt¯+V, t+V and VVV processes. They will be estimated
-%  using MC samples and global normalization uncertainties are associated to these MC predictions. An
-%  uncertainty of 30\% is assigned to the tt¯+ V contribution, according to [27]. An uncertainty of 30\% is
-%  also assigned to the VVV contribution.
+The remaining backgrounds evaluated using MC are those containing 
+at least three real leptons but whose cross-sections are small or on 
+the order of the signal process, namely $\ttV$ and $VVV$ processes.
+The theory uncertainties on the $\ttV$ normalization have been found by
+ATLAS to be about 30\% and have been shown to give a 
+consistent prediction~\cite{ATLAS-CONF-2015-032}. 
+%do I also need to cite a twiki for this 30% uncertainty
+%look at this conf note.
+An uncertainty of 30\% is also assigned to the normalization of the 
+$VVV$ samples.
