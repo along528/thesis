@@ -94,84 +94,106 @@ method are provided below.
 
 \subsubsection{Charge Mis-identification Rate Extraction}
 
+The rate of electron charge mis-identification is defined as 
+the probability that an electron has it's charge mis-identified.
+These rates depend highly on the kinematics of the individual electrons.
+In particular, the sensitivity to material dependence described above 
+means that the rate depends on where in the detector the electrons
+pass through. In general, the material density of the ATLAS
+detector increases for high \eta~(i.e. as the electron gets closer to the
+beam pipe). The rate also increases as a function of the electron energy, 
+or \pt. These are the two most important kinematic variables for determining
+the rate\footnote{The material also varies as a function of the azimuthal angle,
+$\phi$, in the detector. However, this is a sub-dominant effect. Furthermore,
+increasing the dimensionality further significantly harms the statistical 
+power of the method. Thus it is ignored.}, and 
+so the rate extraction is binned as a function of both with nine $\eta$ 
+bins ranging from 0 to 2.5 and six \pt~bins ranging from 15 to 120 \GeV~plus
+an additional overflow bin for $\pt>120\GeV$.
 
 
 
+The rates are studied in a region with two electrons passing the object
+selection from \sec\ref{sec:www_object_selection} and that have
+a di-lepton mass within 10~\GeV of the \z mass. No requirements are placed
+on their charge. Two different methods
+are used: one using purely MC and one using the data.
+The method using MC takes $\z\rightarrow ee$ MC simulation 
+and relies on being able to determine the charge of each electron from the 
+\z decay by looking 
+directly from at hard scattering process as provided by the generator.
+This is called ``truth'' information, at which point the processes of radiation
+and pair-production have not occured. It then compares
+these truth electrons to the reconstructed electrons 
+measured after all processes, including those of radiation and pair-production,
+have been simulated and have been reconstructed
+in the detector. The truth electrons and reconstructed electrons
+are matched by asking that they are nearby eachother in $\eta$ and $\phi$.
+The charge of the matched truth and reconstruction electrons 
+are then compared and it is recorded whether or not the charges agree
+in the appropriate $\pt$ and $\eta$ bin. Once all MC events
+have been recorded, the rate per bin may be determined simply 
+by taking the ratio of the number of electrons where the truth and reconstructed
+electron charge disagreed per bin to the total number of electrons per bin. 
 
-
-The electron charge mis-ID rates are measured with data using a
-statistical method based on a likelihood. The method is applied on MC
-samples and the results are compared with the mischarge rate obtained
-using MC truth information. The truth method is applied on \Zee\ MC
-samples
-(\texttt{mc12\_8TeV.147806.Powheg\\Pythia8\_AU2CT10\_Zee.merge.NTUP\_COMMON.e1169\_s1469\_s1470\_r3542\_r3549\_p1562})
-which constitutes a closure test for the likelihood method. Both
-methods use events with two good electrons from a $Z$ boson decay. The
-events are selected with two good electrons defined by our $WWW$
-electron selection with an invariant mass window of ($\mZ - 10\GeV$,
-$\mZ + 10\GeV$) where \mZ\ is the PDG $Z$ pole mass of
-91.19~\GeV~\cite{PDG:2014}. These events are then divided into same
-sign events (SS) and opposite sign events (OS). The mischarge rates
-are measured in 2D bins of $\eta$-\pt. The bin boundaries of \pt\ and
-$\eta$ are listed in Table~\ref{tab:Etbin and Etabin of mis-charge
-  rate}.
-
-\begin{table}[htp]
-\centering
-\begin{tabular}{c|ccccccccc}
-  \hline
-  $|\eta|$ bins & [0, 0.8]   & [0.8, 1.15] & [1.15, 1.6] & [1.6, 1.8]
-  & [1.8, 2.0]\\
-  & [2.0, 2.2]  & [2.2, 2.3]  & [2.3, 2.4] & [2.4, 2.5]  \\
-  \hline
-  \pt\ bins [\GeV] & [15, 30] & [30, 40] & [40, 50] & [50, 60]
-                   & [60, 80] & [80, 120] & [120, 1000]  \\
-  \hline
-\end{tabular}
-\caption{The $\eta$ and \pt\ bins for the measurement of mischarge
-  rate.}
-\label{tab:Etbin and Etabin of mis-charge rate}
-\end{table}
-
-
-
-The truth method is based on the comparison between an electron's true
-charge and its reconstructed charge. We still use the \Zee\ MC samples
-for the truth measurement. We select two good reconstructed electrons
-referred to as ``A'' and ``B'' below with the selection criteria of this
-analysis, and find the two truth electrons (referred to as ``C'' and
-``D''). To match the reconstructed electrons to the true electrons, we
-calculate the $\Delta R = \sqrt{\Delta \eta^2 + \Delta \phi^2}$ of
-AC, BD, AD and BC. If $\Delta R$(AC)+$\Delta R$(BD)$\textless$$\Delta
-R$(AD)+$\Delta R$(BC), electron A matched with C and B matched with D
-otherwise A matched with D and B matched with C. Also, we drop events
-with very large $\Delta R $ , $\pt(truth)$ to avoid incorrect
-match. Then we compare the charge between the reconstructed electron and
-the true electron, counting the number of charge misidentified electrons
-and record their $\eta$ and \pt.
-  
-The likelihood method assumes that for \Zee\ events, the probability
-of reconstructing a pair of same sign electrons is ($\varepsilon_1 +
-\varepsilon_2$) where $\varepsilon_1$ and $\varepsilon_2$ are the
-probabilities of charge misidentification for the two electrons,
-respectively. The charge misID rate is parameterized as a function of
-$\eta$ and \pt, the $\eta$ dependence is particularly important since
-the material distribution (and therefore the conversion rate) is
-strongly dependent on the region of the detector where the electron is
-reconstructed. The charge misID rates ($\eta$,\pt) are measured from
-the total number of events and the number of events with a pair of
-same sign electrons by maximizing the following likelihood function
-constructed from Poisson statistics: 
+The nominal method for extracting the electron charge mis-identification
+rates is instead one that uses the data exclusively. 
+It uses the same selection as in the MC method, with the events
+categorized based on whether the electrons from the \z
+decay are of the same-sign or of opposite-sign.
+However, in this case
+there is no truth information to tell which electron's charge
+has been mis-identified. Instead, we assume that those events in
+the same-sign cateogry are due purely to charge mis-identification
+and attempt to extract the rates by minimizing a likelihood.
+Refer to the rate for an electron in a 
+particular $\pt$ and $\eta$ bin $i$ as $\varepsilon_i$.
+Also, refer to the total number of events observed in data with one electron
+in bin $i$ and the other in bin $j$ as $N_{i,j}$.
+Given the rates, the expected number of same-sign events
+should be approximately $N_{i,j}(\varepsilon_i + \varepsilon_j)$,
+where we have ignored the probability for both electrons to have their
+charges flipped since it should be small. We do
+not know the rates \emph{a priori}, but they should follow 
+a Poisson likelihood given the observed total number of events,
+$N_{i,j}$, and the the observed number of same sign events,
+$N_{i,j}^{\textrm{SS}}$, with the following form:
 \begin{equation}
-    \ln\mathcal{L}(\varepsilon|N_{tot},N_{ss}) =
-    \sum_{i,j}\ln\left[N_{tot}^{i,j}(\varepsilon_{i}+\varepsilon_{j})\right] N_{SS}^{i,j}-N_{tot}^{i,j}(\varepsilon_{i}+\varepsilon_{j})
-    \label{eq:lnL_chargeMisID}
+\curlyl( \varepsilon_i,\varepsilon_j | N_{i,j}^{\textrm{SS}},N_{i,j})
+=
+\frac{(N_{i,j}(\varepsilon_i+\varepsilon_j))^{N^{\textrm{SS}}_{i,j}} e^{-N_{i,j}(\varepsilon_i+\varepsilon_j)}}{N^{\textrm{SS}}_{i,j}!}
 \end{equation}
-where $N_{tot}^{i,j}$ and $N_{SS}^{i,j}$ are the total number of
-candidate events and the number of which have a same-sign electron
-pair, having the first and second lepton in the $i$-th and $j$-th bin
-respectively. The bin index $i,j$ denotes each cell in $\eta$-$p_T$ 2D
-space.
+From this, we may construct a log likelihood which can be minimized
+as a function of $\varepsilon_i$ and $\varepsilon_j$:
+\begin{equation}
+-\ln \curlyl( \varepsilon_i,\varepsilon_j | N_{i,j}^{\textrm{SS}},N_{i,j}) = 
+N_{i,j}(\varepsilon_i+\varepsilon_j)
+- N^{\textrm{SS}}_{i,j} \ln(N_{i,j}(\varepsilon_i+\varepsilon_j))
+\end{equation}
+where the terms that are not dependent on $\varepsilon_i$
+and $\varepsilon_j$ have been dropped.
+Thus, given the data, the values of $\varepsilon_i$ and $\varepsilon_j$
+at the minimum value of the log likelihood are taken as the estimate
+of the rates.
+
+The rates for the two different methods are shown in \fig\ref{}.
+%these should be contour maps.
+The behavior is as follows... 
+
+
+The rates are also determined after subtracting the background. 
+This is done by....
+
+The different rate estimations are summarized in \fig\ref{}.
+%big summary table.
+The systematics on the rates are determined by...
+
+\subsubsection{Di-boson MC Reweighting with Rates}
+
+We reweight the MC in the 0 SFOS region to extract an estimate
+
+\subsubsection{Validation}
+
 
 \subsubsection{Comparison between Likelihood rate and Truth rate}
    The mis-charge rate for $Z\rightarrow ee$ MC sample is measured
