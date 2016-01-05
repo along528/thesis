@@ -1,4 +1,103 @@
 
+%include diagram
+
+High energy electrons\footnote{Throughout this section we use 
+electrons to collectively refer to both electrons and positrons
+unless otherwise specified.} produced from the 
+hard scatter of the proton-proton
+collisions of the LHC
+will frequently radiate photons in the presence of the ATLAS
+detector material. Furthermore, it is also common %how common?
+for high energy photons to decay into an electron-positron pair.
+These two processes are shown as Feynman diagrams 
+separately in \fig\ref{}.
+Chaining these two processes together will cause 
+an electron (positron) to radiate a photon which then produces an
+electron-positron pair, resulting in a three body final state with
+two electrons (positrons) and a positron (electron).
+Often, the energy difference between the products in the final state will
+be large, such that the most of the energy is carried away in only one
+product.  It is thus possible that majority of the energy of the initial
+electron (positron) is carried away in the positron (electron), which
+has an opposite charge.  If the energy imbalance is large enough,
+the other two final state electrons (positrons) may not have enough
+energy to be reconstructed. As a result, the initial electron
+(positron) will instead be measured as a positron (electron), and the 
+charge of initial state electron (positron) will have effectively 
+been mis-identified. 
+
+
+%need to do some research on bethe-bloche.
+The probability of this to occur is non-negligible in the presence of the material 
+from the ATLAS detector. This is due to bethe-bloche...
+While muons are also technically also capable of such a phenomenon, the 
+energies required are too large, according to bethe-bloche.
+Indeed, we observe that the rate of charge mis-identification for muons
+is vanishingly small and so we neglect it. %or should I just say that it should be?
+
+The strong dependence upon the ATLAS material means that care must be
+taken when describing this process. In particular, the material 
+description in MC, while sophisticated, is not perfect. Thus, the use of MC
+for determining the rate of electron charge mis-identification is inherently
+flawed. Instead, it would be better to use the data itself to determine
+a model for these rates. 
+Thus, we extract the rates of electron charge 
+mis-identificatoin using the data and only use the rates determined
+in MC as a cross-check.
+
+The background due to electron charge mis-identification is most important 
+for this analysis
+in the 0 SFOS signal region, described in \sec\ref{sec:signal_regions},
+where it is one of the only mechanisms by which the $WZ$ and $ZZ$ 
+processes enter this region\footnote{The $WZ$ and $ZZ$ processes
+can also enter in the 0 SFOS region if the $Z$ bosons
+decay to $\tau$ leptons which then subsequently decay into 
+either electrons or muons with the proper charge and flavor combination.}.
+Without electron charge mis-identification, these events would fall
+equally in the 1 and 2 SFOS regions.
+As will be seen shortly, the overall rate of electron charge mis-identification
+is quite small (calculate???). 
+Furthermore, it will be seen that the total background in the 0 SFOS region is 
+a good deal smaller than the the 1 and 2 SFOS regions. Thus, the
+migration of events from the 1 and 2 SFOS regions to the 0 SFOS 
+region, resulting from electron charge mis-identification, has
+a larger relative impact on the background in the 0 SFOS 
+region\footnote{There is also a migration from the 0 SFOS to the 1 and 2 SFOS 
+regions, but the relative number of 0 SFOS events to 1 and 2 SFOS
+events before electron mis-identification is so small as to make this
+effect completely negligible.}.
+As a result, we focus only on modelling the background due to electron
+charge mis-identification in the 0 SFOS region and assume that an 
+out of the box estimate of this background from MC is adequate for the 
+1 and 2 SFOS regions.
+
+
+The electron charge mis-identification background is determined
+for the 0 SFOS signal region by first extracting the electron charge
+mis-identification rates using the data as a model
+described below. The extracted
+rates are compared to an alternative method using only MC. 
+The difference between the two is used as a systematic on the
+rates. The rates are then used to reweight the $WZ$ and $ZZ$ MC samples
+on an event-by-event basis 
+according to the probability that electron charge mis-identification
+could cause the event to migrate into the 0 SFOS region. In this way, 
+the full statistics of the MC samples can be utilitized to get a model of
+the behvaior of these processes in the 0 SFOS region, while also taking 
+into account a more accurate material description. Other backgrounds
+due to electron charge mis-identification are assumed to be negligible.
+More details on the methods used to extract the rates and the re-weighting
+method are provided below.
+
+
+
+
+\subsubsection{Charge Mis-identification Rate Extraction}
+
+
+
+
+
 
 The electron charge mis-ID rates are measured with data using a
 statistical method based on a likelihood. The method is applied on MC
@@ -35,7 +134,6 @@ $\eta$ are listed in Table~\ref{tab:Etbin and Etabin of mis-charge
 \end{table}
 
 
-\subsubsection{Truth method and likelihood method}
 
 The truth method is based on the comparison between an electron's true
 charge and its reconstructed charge. We still use the \Zee\ MC samples
