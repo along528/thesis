@@ -138,6 +138,8 @@ electron charge disagreed per bin to the total number of electrons per bin.
 
 The nominal method for extracting the electron charge mis-identification
 rates is instead one that uses the data exclusively. 
+We attempt to subtract backgrounds to the $Z\rightarrow ee$
+process using a method described later.
 It uses the same selection as in the MC method, with the events
 categorized based on whether the electrons from the \z
 decay are of the same-sign or of opposite-sign.
@@ -176,17 +178,98 @@ Thus, given the data, the values of $\varepsilon_i$ and $\varepsilon_j$
 at the minimum value of the log likelihood are taken as the estimate
 of the rates.
 
-The rates for the two different methods are shown in \fig\ref{}.
-%these should be contour maps.
-The behavior is as follows... 
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures/ChargeMisID/Nov5_2015_TruthRates_Plot.eps}
+\includegraphics[width=0.45\columnwidth]{figures/ChargeMisID/Nov5_2015_DataRates_Plot.eps}
+\caption{Electron charge mis-identification rates as a function of
+the electron \pt and $\eta$ extracted using the MC
+truth method (left) and the likelihood method in data (right). }
+\label{fig:chargemisid_rates_contour}
+\end{figure}
+
+The rates for the two different methods are 
+shown in \fig\ref{fig:chargemisid_rates_contour}.
+For low values of \pt and $\eta$, the rate is small enough to be negligible. 
+The rate increases gradually along both dimensions, reaching as much as
+6.7\% in the region $\pt > 120\GeV$ and $2.4 < |\eta| < 2.5$ as measured
+in the data, which corresponds to the highest bin in both dimensions. 
+The rates measured using MC truth information are systematically higher
+than those measured in data, almost by a factor of two. The MC simulation
+tends to overestimate the amount of material (figure?) actually in the
+detector, which could explain this difference.
+
+Some additional alternatives to these two methods are also performed
+in order to better assess the performance of the mehtods
+and to determine systematic uncertainties.
+One alternative is to perform the same likelihood extraction
+as in the data, but using only reconstructed MC. This produces
+similar rates to the truth MC method, suggesting that the differences
+seen between the data likelihood method and the truth MC method
+are not due to the method itself. 
+
+Another method is to extract the rates from the data with the 
+likelihood method but without performing the background
+subtraction mentioned earlier. In the original method, 
+the background subtraction is performed by... 
+...with a template fit like in \fig\ref{fig:chargemisid_fitexample}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/ChargeMisID/Tot_Polynomial_0_2.eps}
+\caption{Plot of the di-lepton invariant mass 
+in the region where one electron has $0 < |\eta_1| < 0.8$
+and the other has $1.15 < |\eta_2|<1.6$. The data (black points)
+are shown in a region where the electron isolation cuts are removed
+and the electron quality requirements are loosened.
+A template from $Z\rightarrow ee$ MC (red line) and a polynomial
+curve (orange line) are used to fit the data. The sum of the fit
+(blue line) is seen to fit the data well.}
+\label{fig:chargemisid_fitexample}
+\end{figure} 
 
 
-The rates are also determined after subtracting the background. 
-This is done by....
+The different methods of rate estimation are compared to extract
+a final systematic. In \fig\ref{fig:ChargeMisID_truthRate_finalFig},
+the two-dimensional rates are unfolded into one-dimension
+with the bins numbered counting from low values of $\eta$ and \pt~to
+high values. The nominal rate is the one shown as black points
+using a likelihood fit in data with background subtraction. The vertical
+bars on the black points show the statistical uncertainty on this method.
+The solid black line shows the same method but without background subtraction.
+These methods follow eachother quite closely, uniformly differing by 
+5-6\% throughout.  The blue curve shows the rates evaluated
+using the MC truth method. As was already mentioned, these tend
+to be larger than the rates in data by about a factor of two. Finally, 
+the red curve shows the rates evaluated using the same likelihood method
+applied to the data, but using only reconstructed MC. This is seen to follow
+closely the MC truth method closely, except in a few bins where the statistics
+are low. The relative difference between the MC truth and MC likelihood methods
+is transported to the nominal estimate in data and used as another systematic.
+The difference between the methods using data and those using MC is not
+used as a systematic since such a difference is expected.
+The systematic uncertainties are combined in quadrature with the statistical
+uncertainty on the nominal estimate to arrive at a final uncertainty on the
+rates, shown as a hashed band.
 
-The different rate estimations are summarized in \fig\ref{}.
-%big summary table.
-The systematics on the rates are determined by...
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_PTvsEta_FinalRateWithSys.png}
+\caption{Summary of electron charge mis-identification rates using
+the likelihood method in data with background subraction (black points) 
+and without background subtraction (black line), the MC truth 
+method (blue line), and the likelihood method in MC (red).
+Systematic uncertainties are extracted as described in the text and are shown
+in the gray hashed band pointing from bottom left to top right. 
+The systematic uncertainties are combined with the statistical uncertainties
+on the black points to arrive at a total uncertainty on the rates, shown 
+in the hashed band pointing from bottom right to top left.}
+\label{fig:ChargeMisID_truthRate_finalFig}
+\end{figure}
+
+
+
 
 \subsubsection{Di-boson MC Reweighting with Rates}
 
@@ -338,17 +421,6 @@ Fig.~\ref{fig:Mee} (right).
  template. The polynomial fit for events with first electron's
  $|\eta|$ between [0,0.8] and second electron's $|\eta|$ between
  [1.15,1.60] is shown in Fig.~\ref{fig:Polynomialac}.
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/ChargeMisID/Tot_Polynomial_0_2.eps}
-\caption{This plot is polynomial fit for events with first electron's
-  $|\eta|$ between [0,0.8] and second electron's $|\eta|$ between
-  [1.15,1.60], red line is the \Zee\ signal component, orange
-  polynomial is the background component from the fit, black solid
-  line is from data sample selected using reversed electron
-  identification and isolation cuts and the blue line is the fit.}
-\label{fig:Polynomialac}
-\end{figure} 
 
 %From Figure.~\ref{fig:Polynomialac}, we can see that the polynomial fit is successful and in this way we can get clean background $ee$ invariant mass histograms for different bins and we use the 4th order polynomial functions obtained here as background templates. 
 Thus we can use template fit to estimate the amount of background in
