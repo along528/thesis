@@ -1,5 +1,128 @@
 
-This background consists of the events with at least one non-prompt lepton denoting the hadrons misidentified as leptons and leptons originating from heavy-flavor decays, such as $b-$meson decays. We refer to these non-prompt leptons as ``fake'' leptons and subsequently refer to prompt leptons as ``real'' leptons. It is estimated using a generalized matrix method \cite{Arguin:1558979,Gillam:2014xua} which is a fully data-driven technique. All leptons are firstly classified as ``loose'' or ``tight'' according to their identification and/or isolation quality. The loose leptons must pass all lepton pre-selection requirements and fail any of the signal selection criteria defined in Tables \ref{tab:eledef} and \ref{tab:muondef}. Once the efficiencies for real and fake preselected leptons to satisfy the tight lepton selections are measured, the number of events with fake lepton background can be predicted. This measurement is done as a function of $\pt$. %and/or \pt\ bin.
+%might try to show that fake estimate can be approximated just
+%by TTL inputs, maybe using a histogram
+%they are produced under ~/analysis/www/scripts/plot/plotDataMxM_Comparisons.py
+
+
+The physics objects reconstructed by the ATLAS detector are selected
+as described in \sec\ref{sec:object_selection} in order to 
+identify ``real'' particles or physics processes produced in the collisions
+of the LHC. Still, this identification is not perfect. A jet,
+for instance, perhaps from a charged pion, could leave a single
+track in the inner detector along with a narrow energy deposit in the
+EM calorimeter; a very similar signature to an electron. Or, 
+a \bee-hadron, could decay into a final state with a high energy muon,
+making it difficult to distinguish from a muon produced in the hard interaction.
+We call these mis-reconstructed objects, ``fake'' objects. 
+In this analysis we are primarily interested in the subset of these 
+which resemble leptons, like those described above; we refer
+to these as ``fake'' leptons.
+
+Fake leptons might be considered physics objects which have 
+``slipped through the cracks''. In particle physics it is 
+never the case that the features describing 
+a given particle are completely separable
+from another, even hypothetically. Instead,
+the characterstic features for a type of particle will 
+overlap with that of other particles. For example, both electrons
+and jets are characterized in part by the presence of calorimeter
+deposits in the EM calorimeter. 
+The calorimeter deposits form a cone 
+pointing back to the collision point, and the radius
+of this cone will follow some distribution. On average,
+the deposit from an electron will have a smaller radius 
+than that of a jet. So, on average the radius of calorimeter
+deposits can be used to distinguish between the two physics
+processes. But the overlap of these two distributions is 
+signifiant enough that using this radius alone
+will give an unsatisfactorily high error rate for identification.
+The error rate can be improved by adding information 
+from the inner detector, and so on, further reducing
+the error rate but never reaching zero.
+So, while rare, the large number of collisions produced by the LHC
+means that the measurement of fake leptons will inevitably occur. 
+Thus, we must take them into account.
+
+The modeling of these fake leptons are in general 
+heavily dependent upon the conditions of the detector. 
+The detector is described in MC simulation using \geant, thus
+it is possible and relatively straightforward 
+to model these processes using MC directly.
+However, in practice, this usually proves to be inadequate.
+While sophisticated, models of the detector are inevitably imperfect.
+Besides that, some of the effects which produce fake leptons 
+are so rare that it may be difficult to generate enough MC
+collisions to obtain adequate statistics.
+The dataset from the LHC, however, has an extremely large sample size
+and uses the detector itself, not a model. Thus, it has all of the 
+information we need. The trick is then how to extract this information
+for the signal regions of interest in an accurate and unbiased way.
+
+
+We choose to use the Generalized Matrix Method~\cite{Gillam:2014xua}, 
+which may estimate from data the contribution of any combination
+fake and real leptons. It has been implemented previously in 
+\cite{Arguin:1558979}. A simpler version of the matrix
+method, which is restricted to the estimaton of events with 
+exactly one fake lepton, 
+was first implemented by ATLAS in \cite{ATLAS-CONF-2010-087}, 
+and variations of the method have been implemented in numerous publications
+by ATLAS ever since (though less often by CMS).
+In essence, the method relese on the definition of two different selections,
+referred to as ``tight'' and ``loose'', defined such that
+``real'' leptons are more likely to pass the ``tight'' selection
+than ``fake'' leptons. If the probability of the ``real'' and 
+``fake'' leptons to pass these selections can be determined (typically
+in control regions), 
+then in principle the easily defined
+``tight'' and ``loose'' selections may be used
+as a proxy
+to extract an estimate of the 
+``real'' and ``fake'' lepton
+contributions in a region of one's choosing.
+The method is described in more detail below.
+
+
+
+\subsubsection{Generalized Matrix Method}
+\label{sec:mxm}
+
+The Generalized Matrix Method allows one to extract from data the expected
+number of events with any combination of fake and real leptons.
+For any given selection, some fraction of the events will have 
+real leptons, fake leptons, or some combination of the two.
+For a selection with exactly one lepton, the lepton 
+can simply be either real or fake.  Suppose one then defines
+two orthogonal single lepton
+selections with in general different combinations of real and fake leptons.
+Furthermore, design one of the selections to be much more likely to have
+real leptons than fake leptons. We will call this the ``tight'' selection.
+We can measure directly the number of events in the data that
+pass this ``tight'' selection and call it $n_T$. Choose the other selection
+to have a different composition of real and fake leptons. Since the 
+``tight'' selection is enriched in real leptons, this can be achieved
+if this other selection has a larger proportion of fake leptons, though
+not necessarily dominated by fake leptons. We will call this the
+``loose'' selection and designate the number of events measured
+in this selection as $n_L$. The number of real leptons that fall in 
+both regions can be called $n_R$. The number of real leptons 
+can be related to the tight selection by the real rate...
+
+equations
+
+this can be extended in general to any number of leptons
+
+we are only interested in those events with exactly three tight leptons
+with at least one fake...
+
+%$n_R$, $n_F$ is the number that pass loose and tight
+
+%start with one category and one lepton and add in bins and more leptons
+
+------------OLD---------
+
+This background consists of the events with at least one non-prompt lepton denoting the hadrons misidentified as leptons and leptons originating from heavy-flavor decays, such as $b-$meson decays. We refer to these non-prompt leptons as ``fake'' leptons and subsequently refer to prompt leptons as ``real'' leptons. It is estimated using a generalized matrix method 
+which is a fully data-driven technique. All leptons are firstly classified as ``loose'' or ``tight'' according to their identification and/or isolation quality. The loose leptons must pass all lepton pre-selection requirements and fail any of the signal selection criteria defined in Tables \ref{tab:eledef} and \ref{tab:muondef}. Once the efficiencies for real and fake preselected leptons to satisfy the tight lepton selections are measured, the number of events with fake lepton background can be predicted. This measurement is done as a function of $\pt$. %and/or \pt\ bin.
 
 
 \tabcolsep=0.11cm
