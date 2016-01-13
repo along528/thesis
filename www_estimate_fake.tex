@@ -109,29 +109,31 @@ in this selection as $n_L$. The total number of real leptons that fall in
 both regions can be called $n_R$. The probability that one of these
 real leptons passes the tight selection is called the 
 real efficiency, or sometimes the real rate, and is denoted by 
-$\varepsilon_r$. Similarly, the total number of fake leptons 
+$\real$. Similarly, the total number of fake leptons 
 that fall in both regions is denoted $n_F$ and the probability 
 that one of these fake leptons passes the tight selection is 
 calle the fake efficiency, or fake rate, and is 
-denoted by $\varepsilon_f$. The condition that
+denoted by $\fake$. The condition that
 more real leptons pass the tight selection can thus be summarized by saying
-that $\varepsilon_r>>\varepsilon_f$ be true.
+that $\real>>\fake$ be true.
 The expected values\footnote{The issue
 of deriving an expected value instead from a measured value
 is an important one which shows how this method can be break down 
 as will be discusssed shortly.} of  $n_T$ and $n_L$,
-denoted $<n_T>$ and $<n_L>$,
+denoted $\langle n_T\rangle$ and $\langle n_L\rangle$,
 can be related to $n_R$ and $n_F$ using these rates via a system of
 equations:
 \begin{align}
   \label{eq:mxm_single}
-  \begin{pmatrix} <n_T> \\ <n_L> \end{pmatrix} 
+  \begin{pmatrix} \langle n_T\rangle \\ \langle n_L\rangle \end{pmatrix} 
   &= 
   \begin{pmatrix}
-  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \real & \fake \\ \realbar & \fakebar
   \end{pmatrix} 
   \begin{pmatrix} n_R \\ n_F \end{pmatrix}
 \end{align}
+where we have introduced the notation $\realbar = 1-\real$
+and $\fakebar =1-\fake$.
 Note that this equation is a function of the measured values of
 $n_R$ and $n_F$ which we are actually seeking to find in terms of the 
 expectations of $n_T$ and $n_L$. Thus, it is in fact more
@@ -140,18 +142,18 @@ useful to solve for $n_R$ and $n_F$ by taking the inverse:
   \label{eq:mxm_single_inverted}
   \begin{pmatrix} n_R \\ n_F \end{pmatrix} 
   &= 
-  \frac{1}{\varepsilon_r-\varepsilon_f}
+  \frac{1}{\real-\fake}
   \begin{pmatrix}
-  1-\varepsilon_f & -\varepsilon_f \\ \varepsilon_r-1 & \varepsilon_r	
+  \fakebar & -\fake \\ -\realbar & \real
   \end{pmatrix} 
-  \begin{pmatrix} <n_T> \\ <n_L> \end{pmatrix}
+  \begin{pmatrix} \langle n_T\rangle \\ \langle n_L\rangle \end{pmatrix}
 \end{align}
 
 So far everything is exact and as long as the condition
-that $\varepsilon_r>>\varepsilon_f$ is true,
+that $\real>>\fake$ is true,
 as it should be by construction, 
 then there is no risk of encountering the singular condition
-when $\varepsilon_r=\varepsilon_f$.
+when $\real=\fake$.
 But in the matrix method, \eqn\eqref{eq:mxm_single_inverted}
 we wish to use the \emph{measured} values of $n_T$
 and $n_T$ to derive an \emph{estimate} of the expectation
@@ -160,13 +162,13 @@ Thus, in a rather \emph{ad hoc} way
 we interpert the equation as follows:
 \begin{align}
   \label{eq:mxm_single_inverted_approx}
-  \begin{pmatrix} <n_R> \\ <n_F> \end{pmatrix} 
+  \begin{pmatrix} \langle n_R\rangle \\ \langle n_F\rangle \end{pmatrix} 
   &\approx
   \begin{pmatrix} \hat{n}_R \\ \hat{n}_F \end{pmatrix} 
   &= 
-  \frac{1}{\varepsilon_r-\varepsilon_f}
+  \frac{1}{\real-\fake}
   \begin{pmatrix}
-  1-\varepsilon_f & -\varepsilon_f \\ \varepsilon_r-1 & \varepsilon_r	
+  \fakebar & -\fake \\ -\realbar & \real
   \end{pmatrix} 
   \begin{pmatrix} n_T \\ n_L \end{pmatrix}
 \end{align}
@@ -187,20 +189,20 @@ of the real and fake lepton contributions to a single lepton
 selection in our data sample, but ultimately we are interested
 in an estimate of 
 the number of fake leptons that fall into our tight selection, call this
-estimate $\hat{n}_{T}'$ and the number of fake leptons
-that are loose, $\hat{n}_{L}'$. 
+estimate $\hat{f}_{T}$ and the number of fake leptons
+that are loose, $\hat{f}_{L}$. 
 This estimate can be solved for then in a straightforward way, by 
 selecting only the estimated component of fakes.
 \begin{align}
-  \begin{pmatrix} \hat{n}_T' \\ \hat{n}_L' \end{pmatrix} 
+  \begin{pmatrix} \hat{f}_T \\ \hat{f}_L \end{pmatrix} 
   &= 
   \begin{pmatrix}
-  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \real & \fake \\ \realbar & \fakebar
   \end{pmatrix} 
   \begin{pmatrix} 0\\ \hat{n}_F \end{pmatrix}
   &=
   \begin{pmatrix}
-  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \real & \fake \\ \realbar & \fakebar
   \end{pmatrix} 
   \begin{pmatrix}
   0 & 0\\ 0 & 1
@@ -212,56 +214,437 @@ gives an expression for the expected number of tight and loose
 selected fake leptons as determined from the rates and the measured
 value of tight and loose leptons:
 \begin{align}
-  \begin{pmatrix} \hat{n}_T' \\ \hat{n}_L' \end{pmatrix} 
+  \label{eq:mxm_final_single}
+  \begin{pmatrix} \hat{f}_T \\ \hat{f}_L \end{pmatrix} 
   &=
   \begin{pmatrix}
-  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \real & \fake \\ \realbar & \fakebar
   \end{pmatrix} 
   \begin{pmatrix}
   0 & 0\\ 0 & 1
   \end{pmatrix} 
-  \frac{1}{\varepsilon_r-\varepsilon_f}
+  \frac{1}{\real-\fake}
   \begin{pmatrix}
-  1-\varepsilon_f & -\varepsilon_f \\ \varepsilon_r-1 & \varepsilon_r	
+  \fakebar & -\fake \\ -\realbar& \real
   \end{pmatrix} 
   \begin{pmatrix} n_T\\ n_L \end{pmatrix}
 \end{align}
 And then we may simply pluck out the estimated number of tight leptons
-from fakes, which is usually of interest. In this case it is:
+from fakes, which is usually of interest:
 \begin{align}
-\hat{n}_T' &= \frac{\varepsilon_f}{\varepsilon_r-\varepsilon_f} \Big( \varepsilon_r(n_T+n_L) - n_T \Big)  \\
-           &= \Big( \frac{\varepsilon_f}{\varepsilon_r-\varepsilon_f} 
-	      (\varepsilon_r - 1)\Big) n_T 
-	      + \Big(\frac{\varepsilon_f}{\varepsilon_r-\varepsilon_f} \varepsilon_r \Big)n_L\\
+  \label{eq:mxm_final_single2}
+  \begin{pmatrix} \hat{f}_T \\ 0 \end{pmatrix} 
+  &=
+  \begin{pmatrix}
+  1 & 0\\ 0 & 0
+  \end{pmatrix} 
+  \begin{pmatrix}
+  \real & \fake \\ \realbar & \fakebar
+  \end{pmatrix} 
+  \begin{pmatrix}
+  0 & 0\\ 0 & 1
+  \end{pmatrix} 
+  \frac{1}{\real-\fake}
+  \begin{pmatrix}
+  \fakebar & -\fake \\ -\realbar& \real
+  \end{pmatrix} 
+  \begin{pmatrix} n_T\\ n_L \end{pmatrix}
+\end{align}
+Evaluating the expression for $\hat{f}_T$ gives:
+\begin{align}
+\hat{f}_T &= \frac{\fake}{\real-\fake} \Big( \real(n_T+n_L) - n_T \Big)  \\
+           &= \Big( \frac{\fake}{\real-\fake} 
+	      -\real\Big) n_T 
+	      + \Big(\frac{\fake}{\real-\fake} \real \Big)n_L\\
            &= w_T~n_T + w_L~n_L
 \end{align}
 where in the last line we have reorganized the coefficients in front
 of $n_T$ and $n_T$ into parameters $w_T$ and $w_L$ which are depedent
-upon the rates. Practically, the final estimate of $\hat{n}_T'$
+upon the rates. Practically, the final estimate of $\hat{f}_T$
 can be determined by looping over each event in data, weighting each event
 using either $w_T$ for those passing the tight selection and
 $w_L$ for those passing the loose selection, and then 
 summing up all of the weighted events.  This is a very useful 
 strategy since it allows one to compute the estimate on the fly
 using a setup similar to the one already processing the data itself. %reword?
-Note that since $\varepsilon_r>>\varepsilon_f$ and $0<\varepsilon_r<1$,
+Note that since $\real>>\fake$ and $0<\real<1$,
 $w_T$ will always be negative. Thus the method will produce negative weights.
 This is not a concern as long as we keep in mind that the sum
 is the only thing that is ultimately of interest.
 However, it is worth noticing that the total estimate can itself
-be negative when $n_T>\varepsilon_r (n_T+n_L)$ or when
-$n_T(1-\varepsilon_r) > \varepsilon_r n_L$. 
-Something else to keep in mind...Must strike a delicate balance
+be negative when $\real n_L< \realbar n_T$.
+Though this can in general be avoided as long as $\real$
+is close to unity and if $n_L$ is
+as large or larger than $n_T$, which should usually be the case
+anyway. In any case, it shows that it is possible to get negative
+results if the proper conditions are not met.
+
+It will prove useful to rewrite \eqn\eqref{eq:mxm_final_single}
+in a more general form:
+\begin{equation}
+\label{eq:mxm_general}
+\hat{F} = \mathbf{\Phi}\mathbf{W}\mathbf{\Phi}^{-1} N
+\end{equation}
+where for the single lepton case
+$N^T=\begin{pmatrix} n_T & n_L\end{pmatrix}$ 
+and 
+$\hat{F}^T=\begin{pmatrix} \hat{f}_T & \hat{f}_L\end{pmatrix}$.\footnote{A 
+superscript $T$ refers to the vector transpose.}
+The quantity $\mathbf{\Phi}$ is the matrix from \eqn\eqref{eq:mxm_single}
+\begin{equation}
+\mathbf{\Phi} = 
+  \begin{pmatrix}
+  \real& \fake\\ \realbar& \fakebar
+  \end{pmatrix} 
+\end{equation}
+and $\mathbf{\Phi}^{-1}$ is its inverse. Finally, $\mathbf{W}$
+is the fake selection matrix which in this case is identified with
+\begin{equation}
+\mathbf{W}=\begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
+\end{equation}
+And if we want only the estimate of the remaining tight leptons
+like in \eqn\eqref{eq:mxm_final_single2}
+then we can do 
+\begin{equation}
+\label{eq:mxm_general_tight}
+\hat{T} = \mathbf{M}\mathbf{\Phi}\mathbf{W}\mathbf{\Phi}^{-1} N
+\end{equation}
+where $\hat{T}^T=\begin{pmatrix} \hat{f}_T & 0 \end{pmatrix}$
+and $\mathbf{M}$ is the tight selection matrix:
+\begin{equation}
+\mathbf{M}=\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}
+\end{equation}
 
 
 
 
+So far we have considered only the rates
+in a single category or bin and for a single lepton. 
+But this process can be extended easily for different bins, 
+the lepton \pt~for instance, with different rates 
+by simply keeping track of each bin using an index. For example,
+in bin $i$, one would measure the rates $\real^i$ and $\fake^i$
+as well as the values $n_T^i$ and $n_L^i$ to arrive at the expectations
+for in bin $i$ of $\hat{f}^i_T$ and $\hat{f}^i_L$.
+Equation\eqref{eq:mxm_general} then becomes 
+$\hat{F}^i = \mathbf{\Phi}^i\mathbf{W}(\mathbf{\Phi}^{-1})^i N^i$.
+One may then sum over all the of the bins to get a total estimate
+if desired.
+
+The matrix method can be also extended to multiple leptons,
+resulting in the generalised matrix method. 
+Consider the three lepton case, which is most relevant to this
+analysis. 
+Equation \eqref{eq:mxm_general_tight} becomes
+\begin{equation}
+\hat{T}^{ijk} = \mathbf{M}\mathbf{\Phi}^{ijk}\mathbf{W}(\mathbf{\Phi}^{-1})^{ijk} N^{ijk}
+\end{equation}
+where each of the three leptons can be in separate bins $i$, $j$, and $k$.
+The matrix $\mathbf{\Phi}^{ijk}$
+can by constructed by taking the Kronecker product (cite) (denoted by $\otimes$)
+of the individual single lepton matrices of rates for each lepton:
+\begin{align}
+  \mathbf{\Phi}^{ijk} &=
+  \begin{pmatrix}
+  \real^i & \fake^i \\ \realbar^i & \fakebar^i
+  \end{pmatrix} 
+  \otimes
+  \begin{pmatrix}
+  \real^j & \fake^j \\ \realbar^j & \fakebar^j
+  \end{pmatrix} 
+  \otimes
+  \begin{pmatrix}
+  \real^k & \fake^k \\ \realbar^k & \fakebar^k
+  \end{pmatrix} \\
+  &=
+  \begin{pmatrix} 
+  \real^i\real^j\real^k  &
+  \real^i\real^j\fake^k  &
+  \real^i\fake^j\real^k  &
+  \real^i\fake^j\fake^k  &
+  \fake^i\real^j\real^k  &
+  \fake^i\real^j\fake^k  &
+  \fake^i\fake^j\real^k  &
+  \fake^i\fake^j\fake^k  \\
+  \real^i\real^j\realbar^k  &
+  \real^i\real^j\fakebar^k  &
+  \real^i\fake^j\realbar^k  &
+  \real^i\fake^j\fakebar^k  &
+  \fake^i\real^j\realbar^k  &
+  \fake^i\real^j\fakebar^k  &
+  \fake^i\fake^j\realbar^k  &
+  \fake^i\fake^j\fakebar^k  \\
+  \real^i\realbar^j\real^k  &
+  \real^i\realbar^j\fake^k  &
+  \real^i\fakebar^j\real^k  &
+  \real^i\fakebar^j\fake^k  &
+  \fake^i\realbar^j\real^k  &
+  \fake^i\realbar^j\fake^k  &
+  \fake^i\fakebar^j\real^k  &
+  \fake^i\fakebar^j\fake^k  \\
+  \real^i\realbar^j\realbar^k  &
+  \real^i\realbar^j\fakebar^k  &
+  \real^i\fakebar^j\realbar^k  &
+  \real^i\fakebar^j\fakebar^k  &
+  \fake^i\realbar^j\realbar^k  &
+  \fake^i\realbar^j\fakebar^k  &
+  \fake^i\fakebar^j\realbar^k  &
+  \fake^i\fakebar^j\fakebar^k  \\
+  \realbar^i\real^j\real^k  &
+  \realbar^i\real^j\fake^k  &
+  \realbar^i\fake^j\real^k  &
+  \realbar^i\fake^j\fake^k  &
+  \fakebar^i\real^j\real^k  &
+  \fakebar^i\real^j\fake^k  &
+  \fakebar^i\fake^j\real^k  &
+  \fakebar^i\fake^j\fakebar^k  \\
+  \realbar^i\real^j\realbar^k  &
+  \realbar^i\real^j\fakebar^k  &
+  \realbar^i\fake^j\realbar^k  &
+  \realbar^i\fake^j\fakebar^k  &
+  \fakebar^i\real^j\realbar^k  &
+  \fakebar^i\real^j\fakebar^k  &
+  \fakebar^i\fake^j\realbar^k  &
+  \fakebar^i\fake^j\fakebar^k  \\
+  \realbar^i\realbar^j\real^k  &
+  \realbar^i\realbar^j\fake^k  &
+  \realbar^i\fakebar^j\real^k  &
+  \realbar^i\fakebar^j\fake^k  &
+  \fakebar^i\realbar^j\real^k  &
+  \fakebar^i\realbar^j\fake^k  &
+  \fakebar^i\fakebar^j\real^k  &
+  \fakebar^i\fakebar^j\fake^k  \\
+  \realbar^i\realbar^j\realbar^k  &
+  \realbar^i\realbar^j\fakebar^k  &
+  \realbar^i\fakebar^j\realbar^k  &
+  \realbar^i\fakebar^j\fakebar^k  &
+  \fakebar^i\realbar^j\realbar^k  &
+  \fakebar^i\realbar^j\fakebar^k  &
+  \fakebar^i\fakebar^j\realbar^k  &
+  \fakebar^i\fakebar^j\fakebar^k  
+  \end{pmatrix} 
+\end{align}
+and we can solve for the inverse.  
+We are only interested in the components with at least one
+fake lepton, thus we construct the matrix $\mathbf{W}$ such that:
+\begin{equation}
+\mathbf{W} = 
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\end{pmatrix}
+\end{equation}
+Furthermore, the vector 
+\begin{equation}
+(N^{ijk})^T=\begin{pmatrix} 
+  n_{TTT}^{ijk}&
+  n_{TTL}^{ijk}&
+  n_{TLT}^{ijk}&
+  n_{TLL}^{ijk}&
+  n_{LTT}^{ijk}&
+  n_{LTL}^{ijk}&
+  n_{LLT}^{ijk}&
+  n_{LLL}^{ijk}
+  \end{pmatrix}
+\end{equation}
+In this case, there is only one configuration that gives 
+three tight leptons thus, the matrix $\mathbf{M}$ is constructed
+to have be an $8x8$ matrix with 1 in the first element and 
+all other elements being zero. This gives 
+
+$(T^{ijk})^T=\begin{pmatrix} 
+  \hat{f}_{TTT}^{ijk}& 0 & 0 & 0 & 0 & 0 & 0 & 0 
+  \end{pmatrix}$
+Putting everything together, we can solve for the estimated
+number of events with three tight leptons 
+coming from three leptons events with at least one fake lepton
+with three leptons in bins $i$,$j$, and $k$:
+\begin{align*}
+\hat{f}^{ijk}_{TTT} = ~& w_{TTT}(i,j,k)~n^{ijk}_{TTT}  \\
+   &+(w_{TTL}(i,j,k)~n^{ijk}_{TTL} + j\leftrightarrow k + i \leftrightarrow k)\\
+   &+(w_{LLT}(i,j,k)~n^{ijk}_{LLT} + j\leftrightarrow k + i \leftrightarrow k) \\
+   &+w_{LLL}(i,k,j)~n^{ijk}_{LLL}
+\end{align*}
+where the terms like $j\leftrightarrow k$ are intended to indicated
+a copy of the first term in parentheses but with the indices 
+switched as shown. Each term has a $w$ function that is a function
+of the three lepton indices. These are the weights
+extracted by the method and they end up taking a simple form:
+\begin{equation}
+w_{TTT}(i,j,k) = 
+-\frac{\real^i\fakebar^i}{\real^i-\fake^i}
+\frac{\real^j\fakebar^j}{\real^j-\fake^j}
+\frac{\real^k\fakebar^k}{\real^k-\fake^k}
+\end{equation}
+\begin{equation}
+w_{TTL}(i,j,k) = 
+\frac{\real^i\fakebar^i}{\real^i-\fake^i}
+\frac{\real^j\fakebar^j}{\real^j-\fake^j}
+\frac{\real^k\fake^k}{\real^k-\fake^k}
+\end{equation}
+\begin{equation}
+w_{LLT}(i,j,k) =  
+- \frac{\real^i\fake^i}{\real^i-\fake^i}
+\frac{\real^j\fake^j}{\real^j-\fake^j}
+\frac{\real^k\fakebar^k}{\real^k-\fake^k}
+\end{equation}
+\begin{equation}
+w_{LLL}(i,j,k) =  
+\frac{\real^i\fake^i}{\real^i-\fake^i}
+\frac{\real^j\fake^j}{\real^j-\fake^j}
+\frac{\real^k\fake^k}{\real^k-\fake^k}
+\end{equation}
+One can see that for the case of zero or two loose leptons present, 
+the magnitude of the weights are always negative (as long
+as $\real > \fake$), while the for one and three loose leptons 
+present, the magnitude is positive. As with the single
+lepton case this is not of a concern as long as we look only 
+take seriously the final expectation and this remains positive.
+However, it might cause some concern to see that 
+the magnitude of these weights decrease the more loose leptons 
+are present, thus the highest magnitude weight
+will in general be $w(i,j,k)_{TTT}$, which is negative!
+Fortunately, in the sum this is balanced by the number of 
+leptons observed, which tends to have the opposite trend.
+As a result, it is those terms with exactly one loose lepton
+observed that end up dominating the entire calculation, which
+has a positive weight. The different terms have been 
+checked using the rates evaluated in \sec\ref{}
+and can be seen in \fig\ref{}.
 
 
-So far we have considered only looked at the rates
-in a single category or bin. The process can be repeated for different
-bins with different rates assuming 
 
+\begin{equation}
+\begin{pmatrix} 
+  \langle n_{TTT}\rangle \\
+  \langle n_{TTL}\rangle \\
+  \langle n_{TLT}\rangle \\
+  \langle n_{TLL}\rangle \\
+  \langle n_{LTT}\rangle \\
+  \langle n_{LTL}\rangle \\
+  \langle n_{LLT}\rangle \\
+  \langle n_{LLL}\rangle
+  \end{pmatrix} 
+  =
+  \begin{pmatrix}
+  \real^i & \fake^i \\ \realbar^i & \fakebar^i
+  \end{pmatrix} 
+  \otimes
+  \begin{pmatrix}
+  \real^j & \fake^j \\ \realbar^j & \fakebar^j
+  \end{pmatrix} 
+  \otimes
+  \begin{pmatrix}
+  \real^k & \fake^k \\ \realbar^k & \fakebar^k
+  \end{pmatrix} 
+  \begin{pmatrix} 
+  n_{RRR}\\
+  n_{RRF}\\
+  n_{RFR}\\
+  n_{RFF}\\
+  n_{FRR}\\
+  n_{FRF}\\
+  n_{FFR}\\
+  n_{FFF}
+  \end{pmatrix}
+\end{equation}
+
+\noindent
+\resizebox{\linewidth}{!}{%
+$\begin{pmatrix} 
+  \langle n_{TTT}\rangle \\
+  \langle n_{TTL}\rangle \\
+  \langle n_{TLT}\rangle \\
+  \langle n_{TLL}\rangle \\
+  \langle n_{LTT}\rangle \\
+  \langle n_{LTL}\rangle \\
+  \langle n_{LLT}\rangle \\
+  \langle n_{LLL}\rangle
+  \end{pmatrix} 
+  =
+  \begin{pmatrix} 
+  \real^i\real^j\real^k  &
+  \real^i\real^j\fake^k  &
+  \real^i\fake^j\real^k  &
+  \real^i\fake^j\fake^k  &
+  \fake^i\real^j\real^k  &
+  \fake^i\real^j\fake^k  &
+  \fake^i\fake^j\real^k  &
+  \fake^i\fake^j\fake^k  \\
+  \real^i\real^j\realbar^k  &
+  \real^i\real^j\fakebar^k  &
+  \real^i\fake^j\realbar^k  &
+  \real^i\fake^j\fakebar^k  &
+  \fake^i\real^j\realbar^k  &
+  \fake^i\real^j\fakebar^k  &
+  \fake^i\fake^j\realbar^k  &
+  \fake^i\fake^j\fakebar^k  \\
+  \real^i\realbar^j\real^k  &
+  \real^i\realbar^j\fake^k  &
+  \real^i\fakebar^j\real^k  &
+  \real^i\fakebar^j\fake^k  &
+  \fake^i\realbar^j\real^k  &
+  \fake^i\realbar^j\fake^k  &
+  \fake^i\fakebar^j\real^k  &
+  \fake^i\fakebar^j\fake^k  \\
+  \real^i\realbar^j\realbar^k  &
+  \real^i\realbar^j\fakebar^k  &
+  \real^i\fakebar^j\realbar^k  &
+  \real^i\fakebar^j\fakebar^k  &
+  \fake^i\realbar^j\realbar^k  &
+  \fake^i\realbar^j\fakebar^k  &
+  \fake^i\fakebar^j\realbar^k  &
+  \fake^i\fakebar^j\fakebar^k  \\
+  \realbar^i\real^j\real^k  &
+  \realbar^i\real^j\fake^k  &
+  \realbar^i\fake^j\real^k  &
+  \realbar^i\fake^j\fake^k  &
+  \fakebar^i\real^j\real^k  &
+  \fakebar^i\real^j\fake^k  &
+  \fakebar^i\fake^j\real^k  &
+  \fakebar^i\fake^j\fakebar^k  \\
+  \realbar^i\real^j\realbar^k  &
+  \realbar^i\real^j\fakebar^k  &
+  \realbar^i\fake^j\realbar^k  &
+  \realbar^i\fake^j\fakebar^k  &
+  \fakebar^i\real^j\realbar^k  &
+  \fakebar^i\real^j\fakebar^k  &
+  \fakebar^i\fake^j\realbar^k  &
+  \fakebar^i\fake^j\fakebar^k  \\
+  \realbar^i\realbar^j\real^k  &
+  \realbar^i\realbar^j\fake^k  &
+  \realbar^i\fakebar^j\real^k  &
+  \realbar^i\fakebar^j\fake^k  &
+  \fakebar^i\realbar^j\real^k  &
+  \fakebar^i\realbar^j\fake^k  &
+  \fakebar^i\fakebar^j\real^k  &
+  \fakebar^i\fakebar^j\fake^k  \\
+  \realbar^i\realbar^j\realbar^k  &
+  \realbar^i\realbar^j\fakebar^k  &
+  \realbar^i\fakebar^j\realbar^k  &
+  \realbar^i\fakebar^j\fakebar^k  &
+  \fakebar^i\realbar^j\realbar^k  &
+  \fakebar^i\realbar^j\fakebar^k  &
+  \fakebar^i\fakebar^j\realbar^k  &
+  \fakebar^i\fakebar^j\fakebar^k  
+  \end{pmatrix} 
+  \begin{pmatrix} 
+  n_{RRR}\\
+  n_{RRF}\\
+  n_{RFR}\\
+  n_{RFF}\\
+  n_{FRR}\\
+  n_{FRF}\\
+  n_{FFR}\\
+  n_{FFF}
+  \end{pmatrix}$%
+} 
 show giant matrix for three lepton case
 
 The number of real leptons 
