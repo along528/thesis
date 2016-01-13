@@ -96,7 +96,8 @@ can simply be either real or fake.  Suppose one then defines
 two orthogonal single lepton
 selections with in general different combinations of real and fake leptons.
 Furthermore, design one of the selections to be much more likely to have
-real leptons than fake leptons. We will call this the ``tight'' selection.
+real leptons than fake leptons, usually taken 
+to be the signal region selection. We will call this the ``tight'' selection.
 We can measure directly the number of events in the data that
 pass this ``tight'' selection and call it $n_T$. Choose the other selection
 to have a different composition of real and fake leptons. Since the 
@@ -104,9 +105,168 @@ to have a different composition of real and fake leptons. Since the
 if this other selection has a larger proportion of fake leptons, though
 not necessarily dominated by fake leptons. We will call this the
 ``loose'' selection and designate the number of events measured
-in this selection as $n_L$. The number of real leptons that fall in 
-both regions can be called $n_R$. The number of real leptons 
+in this selection as $n_L$. The total number of real leptons that fall in 
+both regions can be called $n_R$. The probability that one of these
+real leptons passes the tight selection is called the 
+real efficiency, or sometimes the real rate, and is denoted by 
+$\varepsilon_r$. Similarly, the total number of fake leptons 
+that fall in both regions is denoted $n_F$ and the probability 
+that one of these fake leptons passes the tight selection is 
+calle the fake efficiency, or fake rate, and is 
+denoted by $\varepsilon_f$. The condition that
+more real leptons pass the tight selection can thus be summarized by saying
+that $\varepsilon_r>>\varepsilon_f$ be true.
+The expected values\footnote{The issue
+of deriving an expected value instead from a measured value
+is an important one which shows how this method can be break down 
+as will be discusssed shortly.} of  $n_T$ and $n_L$,
+denoted $<n_T>$ and $<n_L>$,
+can be related to $n_R$ and $n_F$ using these rates via a system of
+equations:
+\begin{align}
+  \label{eq:mxm_single}
+  \begin{pmatrix} <n_T> \\ <n_L> \end{pmatrix} 
+  &= 
+  \begin{pmatrix}
+  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \end{pmatrix} 
+  \begin{pmatrix} n_R \\ n_F \end{pmatrix}
+\end{align}
+Note that this equation is a function of the measured values of
+$n_R$ and $n_F$ which we are actually seeking to find in terms of the 
+expectations of $n_T$ and $n_L$. Thus, it is in fact more
+useful to solve for $n_R$ and $n_F$ by taking the inverse:
+\begin{align}
+  \label{eq:mxm_single_inverted}
+  \begin{pmatrix} n_R \\ n_F \end{pmatrix} 
+  &= 
+  \frac{1}{\varepsilon_r-\varepsilon_f}
+  \begin{pmatrix}
+  1-\varepsilon_f & -\varepsilon_f \\ \varepsilon_r-1 & \varepsilon_r	
+  \end{pmatrix} 
+  \begin{pmatrix} <n_T> \\ <n_L> \end{pmatrix}
+\end{align}
+
+So far everything is exact and as long as the condition
+that $\varepsilon_r>>\varepsilon_f$ is true,
+as it should be by construction, 
+then there is no risk of encountering the singular condition
+when $\varepsilon_r=\varepsilon_f$.
+But in the matrix method, \eqn\eqref{eq:mxm_single_inverted}
+we wish to use the \emph{measured} values of $n_T$
+and $n_T$ to derive an \emph{estimate} of the expectation
+for $n_R$ and $n_F$, denoted $\hat{n}_R$ and $\hat{n}_F$. 
+Thus, in a rather \emph{ad hoc} way 
+we interpert the equation as follows:
+\begin{align}
+  \label{eq:mxm_single_inverted_approx}
+  \begin{pmatrix} <n_R> \\ <n_F> \end{pmatrix} 
+  &\approx
+  \begin{pmatrix} \hat{n}_R \\ \hat{n}_F \end{pmatrix} 
+  &= 
+  \frac{1}{\varepsilon_r-\varepsilon_f}
+  \begin{pmatrix}
+  1-\varepsilon_f & -\varepsilon_f \\ \varepsilon_r-1 & \varepsilon_r	
+  \end{pmatrix} 
+  \begin{pmatrix} n_T \\ n_L \end{pmatrix}
+\end{align}
+This equation solves for the estimators, $\hat{n}_R$ and $\hat{n}_F$,
+as a function of the measured values $n_T$ and $n_L$, as well 
+as the rates. The estimators are in general only approximately equal
+to the expected values, as discussed in \cite{Gillam:2014xua}.
+This approximation can break down, sometimes even giving negative values
+for the estimate.  Though it should be adequate if the number
+of events falling in the ``tight'' and ``loose'' selections are 
+not too small.
+We will assume that the method holds, but these concerns are important
+to keep in mind whenever using this method.
+
+
+We now have a way to approximately solve for the estimate
+of the real and fake lepton contributions to a single lepton 
+selection in our data sample, but ultimately we are interested
+in an estimate of 
+the number of fake leptons that fall into our tight selection, call this
+estimate $\hat{n}_{T}'$ and the number of fake leptons
+that are loose, $\hat{n}_{L}'$. 
+This estimate can be solved for then in a straightforward way, by 
+selecting only the estimated component of fakes.
+\begin{align}
+  \begin{pmatrix} \hat{n}_T' \\ \hat{n}_L' \end{pmatrix} 
+  &= 
+  \begin{pmatrix}
+  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \end{pmatrix} 
+  \begin{pmatrix} 0\\ \hat{n}_F \end{pmatrix}
+  &=
+  \begin{pmatrix}
+  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \end{pmatrix} 
+  \begin{pmatrix}
+  0 & 0\\ 0 & 1
+  \end{pmatrix} 
+  \begin{pmatrix} \hat{n}_R\\ \hat{n}_F \end{pmatrix}
+\end{align}
+Substituting in for equation \eqn\eqref{eq:mxm_single_inverted_approx}
+gives an expression for the expected number of tight and loose
+selected fake leptons as determined from the rates and the measured
+value of tight and loose leptons:
+\begin{align}
+  \begin{pmatrix} \hat{n}_T' \\ \hat{n}_L' \end{pmatrix} 
+  &=
+  \begin{pmatrix}
+  \varepsilon_r & \varepsilon_f \\ 1-\varepsilon_r & 1-\varepsilon_f
+  \end{pmatrix} 
+  \begin{pmatrix}
+  0 & 0\\ 0 & 1
+  \end{pmatrix} 
+  \frac{1}{\varepsilon_r-\varepsilon_f}
+  \begin{pmatrix}
+  1-\varepsilon_f & -\varepsilon_f \\ \varepsilon_r-1 & \varepsilon_r	
+  \end{pmatrix} 
+  \begin{pmatrix} n_T\\ n_L \end{pmatrix}
+\end{align}
+And then we may simply pluck out the estimated number of tight leptons
+from fakes, which is usually of interest. In this case it is:
+\begin{align}
+\hat{n}_T' &= \frac{\varepsilon_f}{\varepsilon_r-\varepsilon_f} \Big( \varepsilon_r(n_T+n_L) - n_T \Big)  \\
+           &= \Big( \frac{\varepsilon_f}{\varepsilon_r-\varepsilon_f} 
+	      (\varepsilon_r - 1)\Big) n_T 
+	      + \Big(\frac{\varepsilon_f}{\varepsilon_r-\varepsilon_f} \varepsilon_r \Big)n_L\\
+           &= w_T~n_T + w_L~n_L
+\end{align}
+where in the last line we have reorganized the coefficients in front
+of $n_T$ and $n_T$ into parameters $w_T$ and $w_L$ which are depedent
+upon the rates. Practically, the final estimate of $\hat{n}_T'$
+can be determined by looping over each event in data, weighting each event
+using either $w_T$ for those passing the tight selection and
+$w_L$ for those passing the loose selection, and then 
+summing up all of the weighted events.  This is a very useful 
+strategy since it allows one to compute the estimate on the fly
+using a setup similar to the one already processing the data itself. %reword?
+Note that since $\varepsilon_r>>\varepsilon_f$ and $0<\varepsilon_r<1$,
+$w_T$ will always be negative. Thus the method will produce negative weights.
+This is not a concern as long as we keep in mind that the sum
+is the only thing that is ultimately of interest.
+However, it is worth noticing that the total estimate can itself
+be negative when $n_T>\varepsilon_r (n_T+n_L)$ or when
+$n_T(1-\varepsilon_r) > \varepsilon_r n_L$. 
+Something else to keep in mind...Must strike a delicate balance
+
+
+
+
+
+
+So far we have considered only looked at the rates
+in a single category or bin. The process can be repeated for different
+bins with different rates assuming 
+
+show giant matrix for three lepton case
+
+The number of real leptons 
 can be related to the tight selection by the real rate...
+
 
 equations
 
