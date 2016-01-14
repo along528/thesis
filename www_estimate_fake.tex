@@ -465,36 +465,43 @@ Putting everything together, we can solve for the estimated
 number of events with three tight leptons 
 coming from three leptons events with at least one fake lepton
 with three leptons in bins $i$,$j$, and $k$:
-\begin{align*}
+\begin{align}
+\begin{split}
+\label{eq:mxm_threeleptons}
 \hat{f}^{ijk}_{TTT} = ~& w_{TTT}(i,j,k)~n^{ijk}_{TTT}  \\
    &+(w_{TTL}(i,j,k)~n^{ijk}_{TTL} + j\leftrightarrow k + i \leftrightarrow k)\\
    &+(w_{LLT}(i,j,k)~n^{ijk}_{LLT} + j\leftrightarrow k + i \leftrightarrow k) \\
    &+w_{LLL}(i,k,j)~n^{ijk}_{LLL}
-\end{align*}
+\end{split}
+\end{align}
 where the terms like $j\leftrightarrow k$ are intended to indicated
 a copy of the first term in parentheses but with the indices 
 switched as shown. Each term has a $w$ function that is a function
 of the three lepton indices. These are the weights
 extracted by the method and they end up taking a simple form:
 \begin{equation}
+\label{eq:mxm_wttt}
 w_{TTT}(i,j,k) = 
 -\frac{\real^i\fakebar^i}{\real^i-\fake^i}
 \frac{\real^j\fakebar^j}{\real^j-\fake^j}
 \frac{\real^k\fakebar^k}{\real^k-\fake^k}
 \end{equation}
 \begin{equation}
+\label{eq:mxm_wttl}
 w_{TTL}(i,j,k) = 
 \frac{\real^i\fakebar^i}{\real^i-\fake^i}
 \frac{\real^j\fakebar^j}{\real^j-\fake^j}
 \frac{\real^k\fake^k}{\real^k-\fake^k}
 \end{equation}
 \begin{equation}
+\label{eq:mxm_wllt}
 w_{LLT}(i,j,k) =  
 - \frac{\real^i\fake^i}{\real^i-\fake^i}
 \frac{\real^j\fake^j}{\real^j-\fake^j}
 \frac{\real^k\fakebar^k}{\real^k-\fake^k}
 \end{equation}
 \begin{equation}
+\label{eq:mxm_wlll}
 w_{LLL}(i,j,k) =  
 \frac{\real^i\fake^i}{\real^i-\fake^i}
 \frac{\real^j\fake^j}{\real^j-\fake^j}
@@ -514,159 +521,62 @@ Fortunately, in the sum this is balanced by the number of
 leptons observed, which tends to have the opposite trend.
 As a result, it is those terms with exactly one loose lepton
 observed that end up dominating the entire calculation, which
-has a positive weight. The different terms have been 
-checked using the rates evaluated in \sec\ref{}
-and can be seen in \fig\ref{}.
+has a positive weight. The generalized matrix method has been 
+checked using the rates evaluated in \sec\ref{} at the pre-selection stage
+and can be seen in \fig\ref{fig:mxm_components}.
+From this it is clear that the TTL 
+term (which also includes the TLT and LTT terms) 
+dominates the calculation,
+though the effects of the negative weights, in particular from the TTT
+term, can clearly be seen in the sum. Also, notice that the contribution
+from terms without three initial leptons is small. This includes contributions
+with greater than three leptons and can be expalined by the rarity of
+processes that produce such high lepton multiplicities.
+Thus one could arrive at a good approximation to the full method
+by just using \eqn\eqref{eq:mxm_threeleptons} along with just the
+weights in \eqn\eqref{eq:mxm_wttt} and \eqref{eq:mxm_wttl}.
+\begin{figure}
+\centering
+\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/LeadingLeptonPt.png}
+\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/SubleadingLeptonPt.png}
+\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/MinimumLeptonPt.png}
+\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/MET_Et_STVF.png}
+\caption{Fake background estimate at preselection broken
+into tight and loose lepton configuration components for the 
+leading (top left), subleading (top right), and minimum lepton \pt~(bottom left)
+as well as the \met~(bottom right). The three lepton TTT (orange dots),
+TTL (pink dots), TLL (blue dots), and LLL (yellow dots) components
+are shown along with any other components (green dots) such as those
+with four leptons initally.  The sum of all these components is also
+shown (black line). (what if I showed the absolute value of these weights?)}
+\label{fig:mxm_components}
+\end{figure}
 
 
+In the analysis, a specialized code is used to evaluate the 
+Generalized Matrix Method
+on all possible combinations of input and output leptons and checks
+to see which leptons pass the final selection. 
+It uses the on-the-fly
+weighting method described above and uses a tensor
+formulation that improves the computational efficiency of the method.
+This is also used described in \cite{Gillam:2014xua}.
+Uncertainties are calculated by propogating through 
+the uncertainties on the rates. 
+Using the standard propogation of uncertaintity, this relies
+on the derivative of the expectation with respect to the rates.
+Fortunately, this can be calculated in a straightforward way,
+though it will not be described here.
+Correlations between different bins are assumed to be negligible and 
+are ignored.  However, since the method relies on calculating multiple
+weights from the same event, there is a correlation in the uncertainty
+if these weights end up falling in the same bin. To handle this 
+correlation the uncertainty for these weights are added linearly 
+as opposed to in quadrature when extracting the final uncertainty 
+on the method. The impact of this is seen to mostly negligible
+with respect to treating them as completely uncorrelated.
 
-\begin{equation}
-\begin{pmatrix} 
-  \langle n_{TTT}\rangle \\
-  \langle n_{TTL}\rangle \\
-  \langle n_{TLT}\rangle \\
-  \langle n_{TLL}\rangle \\
-  \langle n_{LTT}\rangle \\
-  \langle n_{LTL}\rangle \\
-  \langle n_{LLT}\rangle \\
-  \langle n_{LLL}\rangle
-  \end{pmatrix} 
-  =
-  \begin{pmatrix}
-  \real^i & \fake^i \\ \realbar^i & \fakebar^i
-  \end{pmatrix} 
-  \otimes
-  \begin{pmatrix}
-  \real^j & \fake^j \\ \realbar^j & \fakebar^j
-  \end{pmatrix} 
-  \otimes
-  \begin{pmatrix}
-  \real^k & \fake^k \\ \realbar^k & \fakebar^k
-  \end{pmatrix} 
-  \begin{pmatrix} 
-  n_{RRR}\\
-  n_{RRF}\\
-  n_{RFR}\\
-  n_{RFF}\\
-  n_{FRR}\\
-  n_{FRF}\\
-  n_{FFR}\\
-  n_{FFF}
-  \end{pmatrix}
-\end{equation}
-
-\noindent
-\resizebox{\linewidth}{!}{%
-$\begin{pmatrix} 
-  \langle n_{TTT}\rangle \\
-  \langle n_{TTL}\rangle \\
-  \langle n_{TLT}\rangle \\
-  \langle n_{TLL}\rangle \\
-  \langle n_{LTT}\rangle \\
-  \langle n_{LTL}\rangle \\
-  \langle n_{LLT}\rangle \\
-  \langle n_{LLL}\rangle
-  \end{pmatrix} 
-  =
-  \begin{pmatrix} 
-  \real^i\real^j\real^k  &
-  \real^i\real^j\fake^k  &
-  \real^i\fake^j\real^k  &
-  \real^i\fake^j\fake^k  &
-  \fake^i\real^j\real^k  &
-  \fake^i\real^j\fake^k  &
-  \fake^i\fake^j\real^k  &
-  \fake^i\fake^j\fake^k  \\
-  \real^i\real^j\realbar^k  &
-  \real^i\real^j\fakebar^k  &
-  \real^i\fake^j\realbar^k  &
-  \real^i\fake^j\fakebar^k  &
-  \fake^i\real^j\realbar^k  &
-  \fake^i\real^j\fakebar^k  &
-  \fake^i\fake^j\realbar^k  &
-  \fake^i\fake^j\fakebar^k  \\
-  \real^i\realbar^j\real^k  &
-  \real^i\realbar^j\fake^k  &
-  \real^i\fakebar^j\real^k  &
-  \real^i\fakebar^j\fake^k  &
-  \fake^i\realbar^j\real^k  &
-  \fake^i\realbar^j\fake^k  &
-  \fake^i\fakebar^j\real^k  &
-  \fake^i\fakebar^j\fake^k  \\
-  \real^i\realbar^j\realbar^k  &
-  \real^i\realbar^j\fakebar^k  &
-  \real^i\fakebar^j\realbar^k  &
-  \real^i\fakebar^j\fakebar^k  &
-  \fake^i\realbar^j\realbar^k  &
-  \fake^i\realbar^j\fakebar^k  &
-  \fake^i\fakebar^j\realbar^k  &
-  \fake^i\fakebar^j\fakebar^k  \\
-  \realbar^i\real^j\real^k  &
-  \realbar^i\real^j\fake^k  &
-  \realbar^i\fake^j\real^k  &
-  \realbar^i\fake^j\fake^k  &
-  \fakebar^i\real^j\real^k  &
-  \fakebar^i\real^j\fake^k  &
-  \fakebar^i\fake^j\real^k  &
-  \fakebar^i\fake^j\fakebar^k  \\
-  \realbar^i\real^j\realbar^k  &
-  \realbar^i\real^j\fakebar^k  &
-  \realbar^i\fake^j\realbar^k  &
-  \realbar^i\fake^j\fakebar^k  &
-  \fakebar^i\real^j\realbar^k  &
-  \fakebar^i\real^j\fakebar^k  &
-  \fakebar^i\fake^j\realbar^k  &
-  \fakebar^i\fake^j\fakebar^k  \\
-  \realbar^i\realbar^j\real^k  &
-  \realbar^i\realbar^j\fake^k  &
-  \realbar^i\fakebar^j\real^k  &
-  \realbar^i\fakebar^j\fake^k  &
-  \fakebar^i\realbar^j\real^k  &
-  \fakebar^i\realbar^j\fake^k  &
-  \fakebar^i\fakebar^j\real^k  &
-  \fakebar^i\fakebar^j\fake^k  \\
-  \realbar^i\realbar^j\realbar^k  &
-  \realbar^i\realbar^j\fakebar^k  &
-  \realbar^i\fakebar^j\realbar^k  &
-  \realbar^i\fakebar^j\fakebar^k  &
-  \fakebar^i\realbar^j\realbar^k  &
-  \fakebar^i\realbar^j\fakebar^k  &
-  \fakebar^i\fakebar^j\realbar^k  &
-  \fakebar^i\fakebar^j\fakebar^k  
-  \end{pmatrix} 
-  \begin{pmatrix} 
-  n_{RRR}\\
-  n_{RRF}\\
-  n_{RFR}\\
-  n_{RFF}\\
-  n_{FRR}\\
-  n_{FRF}\\
-  n_{FFR}\\
-  n_{FFF}
-  \end{pmatrix}$%
-} 
-show giant matrix for three lepton case
-
-The number of real leptons 
-can be related to the tight selection by the real rate...
-
-
-equations
-
-this can be extended in general to any number of leptons
-
-we are only interested in those events with exactly three tight leptons
-with at least one fake...
-
-%$n_R$, $n_F$ is the number that pass loose and tight
-
-%start with one category and one lepton and add in bins and more leptons
-
-------------OLD---------
-
-This background consists of the events with at least one non-prompt lepton denoting the hadrons misidentified as leptons and leptons originating from heavy-flavor decays, such as $b-$meson decays. We refer to these non-prompt leptons as ``fake'' leptons and subsequently refer to prompt leptons as ``real'' leptons. It is estimated using a generalized matrix method 
-which is a fully data-driven technique. All leptons are firstly classified as ``loose'' or ``tight'' according to their identification and/or isolation quality. The loose leptons must pass all lepton pre-selection requirements and fail any of the signal selection criteria defined in Tables \ref{tab:eledef} and \ref{tab:muondef}. Once the efficiencies for real and fake preselected leptons to satisfy the tight lepton selections are measured, the number of events with fake lepton background can be predicted. This measurement is done as a function of $\pt$. %and/or \pt\ bin.
-
+\subsubsection{Rate Determination}
 
 \tabcolsep=0.11cm
 \begin{table}[ph!]
@@ -752,132 +662,7 @@ which is a fully data-driven technique. All leptons are firstly classified as ``
     \label{tab:muondef}
 \end{table}
 
-\subsubsection{Generalized matrix element method}
 
-The advantage of the matrix method used in this analysis is that an arbitrary number of preselected leptons can be present in the event. In case of single lepton events, the equation relating the number of events with real ($n_R$) and fake ($n_F$) lepton in $\pt$ bin $i$ to the expected number of events with the lepton reconstructed as tight ($n_T$) or loose ($n_L$) can be written as following:
-\begin{align*}
-  \begin{pmatrix} n_T \\ n_L \end{pmatrix} 
-  &= 
-  \begin{pmatrix}
-  \varepsilon_i & \zeta_i \\ 1-\varepsilon_i & 1-\zeta_i
-  \end{pmatrix} 
-  \begin{pmatrix} n_R \\ n_F \end{pmatrix}
-\end{align*}
-where $\varepsilon_i$ and $\zeta_i$ are the real and fake efficiencies measured in $\pt$ bin $i$. Given the measurements of $n_T$ and $n_L$, the expected real and fake contributions can be calculated from the inverted relation:
-\begin{align*}
-  \begin{pmatrix} n_R \\ n_F \end{pmatrix} 
-  &= 
-  \frac{1}{\varepsilon_i-\zeta_i}
-  \begin{pmatrix}
-  1-\zeta_i & -\zeta_i \\ \varepsilon_i-1 & \varepsilon_i	
-  \end{pmatrix} 
-  \begin{pmatrix} n_T \\ n_L \end{pmatrix}
-\end{align*}
-%Take an event selection requiring exactly one baseline lepton, which we additionally require to pass tight quality requirements. We have measured nT and nL, and want n'T the expected number of tight leptons that are fake.
-%The procedure to obtain an estimate for the fake lepton contribution passing the tight requirements $n'_T$ in single lepton events is:
-The procedure to obtain an estimate for the number of fake leptons passing the tight requirements $n'_T$ is:
-\begin{align*}
-  \begin{pmatrix} n'_T \\ n'_L \end{pmatrix} 
-  &= 
-  \begin{pmatrix}
-  \varepsilon_i & \zeta_i \\ 1-\varepsilon_i & 1-\zeta_i
-  \end{pmatrix} 
-  \begin{pmatrix} 0 \\ n_F \end{pmatrix}
-  =  
-  \begin{pmatrix}
-  \varepsilon_i & \zeta_i \\ 1-\varepsilon_i & 1-\zeta_i
-  \end{pmatrix} 
-  \begin{pmatrix}0&0\\0&1\end{pmatrix} 
-  \begin{pmatrix} n_R \\ n_F \end{pmatrix}\\
-  &=
-  \begin{pmatrix}
-  \varepsilon_i & \zeta_i \\ 1-\varepsilon_i & 1-\zeta_i
-  \end{pmatrix} 
-  \begin{pmatrix}0&0\\0&1\end{pmatrix} 
-  \frac{1}{\varepsilon_i-\zeta_i}
-  \begin{pmatrix}
-  1-\zeta_i & -\zeta_i \\ \varepsilon_i-1 & \varepsilon_i	
-  \end{pmatrix} 
-  \begin{pmatrix} n_T \\ n_L \end{pmatrix}
-\end{align*}
-This is typically calculated as a weight $w_i$ for each event where the lepton in \pt\ bin $i$ is either tight ($n_T=1$ and $n_L=0$) or loose ($n_T=0$ and $n_L=1$).
-
-For compactness, it is useful to introduce the following notation where summation convention is implied over repeated indices:
-\begin{align*}
-  r = \begin{pmatrix} n_R \\ n_F \end{pmatrix} , \quad
-  t = \begin{pmatrix} n_T \\ n_L \end{pmatrix} , \quad
-  \phi  = 
-  \begin{pmatrix}
-    \varepsilon_i & \zeta_i \\
-    1-\varepsilon_i & 1-\zeta_i
-  \end{pmatrix} 
-  \quad\Rightarrow
-  \quad
-  t_\beta = {\phi}_\beta^{\ \alpha} r_\alpha
-\end{align*}
-where $\alpha$ takes values corresponding to $R$ or $F$, and similarly $\beta$ for $T$ or $L$. The expected number of tight leptons that are fake is then:
-\begin{align*}
-  t'_\nu = {\phi}_\nu^{\ \mu} \omega_\mu^{\ \beta} {{\phi}^{-1}}_\beta^{\ \alpha} t_\alpha
-\end{align*}
-where $\omega$ represents the selection of only the expected fake component. 
-
-In case of an event with $N$ preselected leptons, the formula can be written in this compacted notation as following:
-\begin{align*}
-  t'_{\nu_1\cdots\nu_N} = \phi_{\nu_1}^{\ \mu_1}\cdots\phi_{\nu_N}^{\ \mu_N}\ \omega_{\mu_1\cdots\mu_N}^{\ \beta_1\cdots\beta_N}\ {\phi^{-1}}_{\beta_1}^{\ \alpha_1}\cdots{\phi^{-1}}_{\beta_N}^{\ \alpha_N} t_{\alpha_1\cdots\alpha_N}.
-\end{align*}
-Each $\phi$ is computed with the efficiencies $\varepsilon$ and $\zeta$ appropriate for the lepton index. The ``real/fake configuration selector'' $\omega$ picks out the sets of indices ${\beta_i}$ corresponding to components one wish to count as fake background. In general, it looks like:
-\begin{align*}
-  \omega_{\mu_1\cdots\mu_N}^{\ \beta_1\cdots\beta_N} = \delta_{\mu_1}^{\ \beta_1}\cdots\delta_{\mu_N}^{\ \beta_N} \ f(\beta_1,\,\ldots,\,\beta_N)
-  % \omega_{\mu_1\cdots\mu_N}^{\ \beta_1\cdots\beta_N} = \delta_{\mu_1}^{\ \beta_1}\cdots\delta_{\mu_N}^{\ \beta_N} \ f(\beta_1,\,\ldots,\,\beta_N,\nu_1,\,\ldots,\,\nu_N)
-\end{align*}
-where $\delta_i^j$ is the Kronecker delta and $f$ is a function of the indices taking values 1 (for a fake combination) and 0 (for a real combination).
-%where the function $f$ takes values 0 or 1 to pick out the sets of indices ${\beta_i}$ that correspond to components we wish to count as fake background. In general it will depend on the output tight/loose configuration being computed, and we choose it such that the number of real leptons (out of the $N$ in the event) in the intermediate configuration $\{\beta\}$ is less than the number of tight leptons in the output configuration $\{\nu\}$.
-
-This method assigns a set of weights for each event with $N$ leptons and a measured tight/loose combination -- one for each output tight/loose configuration separately. Therefore, for each of these matrix method output combinations, different leptons will be defining the event and passing through the signal selections. It is important to stress that the correlations between each configuration must be taken into account.
-%
-%For each event with $N$ leptons and a measured tight/loose combination $\{\alpha\}$, this method hence gives a weight for each output tight/loose combination $\{\nu\}$. Since, for each of these combinations, different leptons will be defining the event, each combination is propagated through the final channel selection and trigger matching procedure separately, with the leptons being treated as tight or loose according to the output of the matrix method. Variables such as invariant mass of $Z$ boson are also computed using the appropriate leptons.
-%
-%For example, if one measures an event with three pre-selected leptons,
-%$e^+e^-\mu^+$, with configuration TLL, then the matrix method will produce
-%the following
-%\begin{align*}
-%  \textrm{\textbf{Input}} \qquad\qquad & \qquad\qquad\textrm{\textbf{Output}} \\
-%  e^+e^-\mu^+, TLL \longrightarrow& \left\{
-%  \begin{array}{ll}
-%    LLL & w_{LLL} \quad e^+_Le^-_L\mu^+_L \quad \textrm{Fails cuts} \\
-%    \cdots & \cdots \\
-%    TTL & w_{TTL} \quad e^+_Te^-_T\mu^+_L \quad \textrm{Fails cuts} \\
-%    TLT & w_{TLT} \quad e^+_Te^-_L\mu^+_T \quad \textrm{Fails cuts} \\
-%    LTT & w_{LTT} \quad e^+_Le^-_T\mu^+_T \quad \textrm{Fails cuts} \\
-%    TTT & w_{TTT} \quad e^+_Te^-_T\mu^+_T \quad \textrm{Exactly 3 leptons with 1SFOS}
-%  \end{array}
-%  \right.
-%\end{align*}
-%Of the possible combinations, only one passes the signal selection cuts,
-%presuming trigger matching, $b$-jet veto and other requirements are also satisfied.
-
-For example, if one measures an event with four preselected leptons,
-$e^+e^-e^+\mu^+$, with configuration TTLL, then the matrix method will produce
-the following:
-\begin{align*}
-  \textrm{\textbf{Input}} \qquad\qquad & \qquad\qquad\textrm{\textbf{Output}} \\
-  e^+e^-e^+\mu^+, TTLL \longrightarrow& \left\{
-  \begin{array}{ll}
-    LLLL & w_{LLLL} \quad e^+_Le^-_Le^+_L\mu^+_L \quad \textrm{Fails cuts} \\
-    \cdots & \cdots \\
-    TTTL & w_{TTTL} \quad e^+_Te^-_Te^+_T\mu^+_L \quad \textrm{Exactly 3 leptons with 2SFOS} \\
-    TTLT & w_{TTLT} \quad e^+_Te^-_Te^+_L\mu^+_T \quad \textrm{Exactly 3 leptons with 1SFOS} \\
-    TLTT & w_{TLTT} \quad e^+_Te^-_Le^+_T\mu^+_T \quad \textrm{Exactly 3 leptons with 0SFOS} \\
-    LTTT & w_{LTTT} \quad e^+_Le^-_Te^+_T\mu^+_T \quad \textrm{Exactly 3 leptons with 1SFOS} \\
-    TTTT & w_{TTTT} \quad e^+_Te^-_Te^+_T\mu^+_T \quad \textrm{Fails cuts}
-  \end{array}
-  \right.
-\end{align*}
-If one presumes that trigger matching and other requirements are satisfied, only four of all possible combinations pass the event pre-selection cuts. In addition, each of these ``sub-events'' falls into specific channel according to the number of same flavor opposite sign (SFOS) pairs.
-
-To propagate uncertainties on the efficiencies, the derivatives of $t'_{\nu_1\cdots\nu_N}$ with respect to $\varepsilon_i$ and $\zeta_i$ for each lepton $i$ need to be calculated. This can be evaluated exactly and efficiently at runtime. Correlations between the real efficiencies $\varepsilon$ measured in different  $\pt$ bins are neglected since the uncertainty on the measurement is small. Correlations between the fake efficiencies $\zeta$ binned in \pt\ are preserved by propagating the systematic variation for each bin separately. Finally, there is a statistical correlation between two output configurations from one input event falling into one signal region which need to be taken into account. Using the previous example, the variance of each sub-event in 1SFOS treated as separately is $w^2_{TTLT}$ and $w^2_{LTTT}$. However, it should be in fact $(w_{TTLT} +w_{TTLT})^2$. %for a signal region 1SFOS
-
-\subsubsection{Real lepton efficiency}
 
 The efficiencies for real preselected leptons to pass the tight requirements are measured in data as a function of the lepton $\pt$. The measurement is performed in data samples enriched with real leptons from $Z\rightarrow l^+l^-$ decay with a standard tag-and-probe method. The tag passes all signal lepton selections and is trigger matched, while the requirement imposed to the probe is to satisfy only the lepton pre-selection cuts. Their invariant mass has to be within $Z$-mass window: $m_{ll}\in[80, 100]$~\GeV{}. If both leptons satisfy the tag requirements, they are alternatively considered as the tag in order to avoid any bias introduced by its selection. The invariant mass for two opposite sign same-flavor leptons is illustrated in Fig. \ref{fig:realEff_CRs}.
 
