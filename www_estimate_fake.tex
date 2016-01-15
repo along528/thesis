@@ -779,6 +779,68 @@ is found in this control
 region it is most likely coming from the $W$ decay.
 In this case, if we measure a second ``probe'' lepton it is most likely
 a jet faking a lepton. Thus, we have found a candidate fake lepton.
+The control regions are formed by requiring the presence
+of one tag lepton passing the tight selection
+plus trigger requirements
+of \sec\ref{sec:event_selection} with a $\pt>40\GeV$ and 
+a probe lepton passing either the loose or tight selection.
+The leptons are required to have the same sign, since
+on average a fake lepton will have equal probably of
+a positive or negative charge, while background processes
+like $WW$,$\ttbar$, and $Z$ production produce opposite-sign lepton
+pairs.  Only muons are used as tag leptons. 
+The reason for this is that the chance of an electron passing tight selection
+to be a jet fake is higher than that for muons. It is also 
+possible for electrons to come from photon conversion 
+while for muons this is very unlikely. Thus, using only muons as tag
+leptons further reduces contamintion from backgrounds in this control
+region. The control region is then split based on whether the probe
+lepton is an electron or a muon in order to determine the electron
+and muon fake rates separately.
+Events with additional leptons are thrown away.
+To suppress contamination from multi-jet background processes
+to the $W\rightarrow l\nu + \textrm{Jets}$ process, like QCD,
+a cut of $\met>10\GeV$ is also applied.
+The fake rate that is determined depends upon the source of fake leptons.
+One way to assess this sensitivity is to consider the number of
+\bee-jets present in the event. We consider two different
+cases regarding the \bee-jet multiplicity: inclusive and exclusive.
+The inclusive case makes no requirement on the number of \bee-jets
+while the exclusive case asks that at least one \bee-jet is present.
+These two different scenarios are ultimately compared in order to assess
+a final systematic on the fake rate. The exclusive case
+is used as the nominal estimate.
+
+The processes contributing to the fake rate are known
+to not be well modeled by MC, as is discussed in \sec\ref{}.
+This is the primary reason for attempting to estimate the fake
+lepton contribution from data in the first place. Thus,
+we do not seek to describe the data using MC.
+However, this control region is also not as pure with sources
+of fake leptons as the real lepton control region is for real leptons.
+In particular, there is a significant contamination from processes
+with real leptons, like $WW$, $\ttbar$, and $Z$ processes as well
+as processes from photon conversion sources, even after the attempts
+at reducing these backgrounds in the control region selection described above.
+These backgrounds can be modeled using MC and so we attempt to subtract the
+MC estimates of these backgrounds from the data before extracting the fake
+rates. In effect, this means that the values of $f_{T}^{i}$ and
+$f_{T}^i$ in \eqn\eqref{eq:fake_rate} are not taken directly from the
+data but are instead corrected by the subtraction
+\begin{equation}
+f_{T/L}^{i} = 
+N^{\textrm{Data},i}_{T/L} 
+- N^{\textrm{Real},i}_{T/L}
+- N^{\textrm{PC},i}_{T/L}
+\end{equation}
+where $N^{\textrm{Data},i}_{T/L}$ is the number of tight or loose
+probe leptons selectied from data in bin $i$ of the fake lepton control region,
+while $N^{\textrm{Real},i}_{T/L}$  and $N^{\textrm{PC},i}_{T/L}$
+are the number of tight or loose probe leptons estimated from MC
+to fall in bin $i$ of the fake lepton control region for real
+lepton and photon conversion background sources, respectively.
+
+
 
 
 
