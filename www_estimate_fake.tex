@@ -811,6 +811,96 @@ These two different scenarios are ultimately compared in order to assess
 a final systematic on the fake rate. The exclusive case
 is used as the nominal estimate.
 
+\begin{figure}[ht!]
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeTightMuonPt.eps}
+}
+%\centering
+%\subfigure{
+%\includegraphics[width=0.3\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeTightMuonPtBJetEq0.eps}
+%}
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeTightMuonPtBJetGt0.eps}
+}
+%\vspace{-1mm}
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeLooseORTightMuonPt.eps}
+}
+%\centering
+%\subfigure{
+%\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeLooseORTightMuonPtBJetEq0.eps}
+%}
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeLooseORTightMuonPtBJetGt0.eps}
+}
+\vspace{-10mm}\caption{Transverse momentum distributions \pt\ of tight probe 
+muons (top) and loose OR tight probe muons (bottom) passing signal 
+selection criteria in the control Same-Sign $\mu-\mu$ control region 
+without any additional requirement on $b$-jets in the event (left) and 
+at least one $b$-jet (right). 
+The amount observed in data (black points) corresponds 
+to $n$ (bottom) and $n_{\textrm{Tight}}$ (top) in Eq.~\ref{eq:fake_rate}. 
+Meanwhile, the contribution determined in MC to come from 
+real leptons (blue line) and from photon conversion (red line) are shown 
+separately; they are not stacked. The real lepton contribution corresponds to 
+$n_{\textrm{Tight}}^{\textrm{Real}}$ (top) and $n^{\textrm{Real}}$ 
+(bottom) and the photon conversion 
+contribution 
+corresponds to $n_{\textrm{Tight}}^{\textrm{PC}}$ (top) 
+and $n^{\textrm{PC}}$ (bottom) in Eq.~\ref{eq:fake_rate}. 
+The photon conversion is 
+observed to be negligible for muons.  }
+\label{fig:fakeEff_CRs_muon}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeTightElectronPt.eps}
+}
+%\centering
+%\subfigure{
+%\includegraphics[width=0.3\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeTightElectronPtBJetEq0.eps}
+%}
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeTightElectronPtBJetGt0.eps}
+}
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeLooseORTightElectronPt.eps}
+}
+%\centering
+%\subfigure{
+%\includegraphics[width=0.3\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeLooseORTightElectronPtBJetEq0.eps}
+%}
+\centering
+\subfigure{
+\includegraphics[width=0.40\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeLooseORTightElectronPtBJetGt0.eps}
+}
+%\vspace{-1mm}
+\vspace{-10mm}\caption{Transverse momentum distributions \pt\ of tight 
+probe electron (top) and loose or tight probe electrons (bottom) passing 
+signal selection criteria in the Same-Sign $e-\mu$ control region 
+without any additional requirement on $b$-jets in the event (left) and 
+at least one $b$-jet (right).
+The amount observed in data (black points) corresponds 
+to $n$ (bottom) and $n_{\textrm{Tight}}$ (top) in Eq.~\ref{eq:fake_rate}. 
+Meanwhile, the contribution determined in MC to come from 
+real leptons (blue line) and from photon conversion (red line) are shown 
+separately; they are not stacked. The real lepton contribution corresponds to 
+$n_{\textrm{Tight}}^{\textrm{Real}}$ (top) and $n^{\textrm{Real}}$ (bottom) 
+and the photon conversion 
+contribution corresponds 
+to $n_{\textrm{Tight}}^{\textrm{PC}}$ (top) 
+and $n^{\textrm{PC}}$ (bottom) in Eq.~\ref{eq:fake_rate}.  }
+\label{fig:fakeEff_CRs_electron}
+\end{figure}
+
 The processes contributing to the fake rate are known
 to not be well modeled by MC, as is discussed in \sec\ref{}.
 This is the primary reason for attempting to estimate the fake
@@ -839,6 +929,58 @@ while $N^{\textrm{Real},i}_{T/L}$  and $N^{\textrm{PC},i}_{T/L}$
 are the number of tight or loose probe leptons estimated from MC
 to fall in bin $i$ of the fake lepton control region for real
 lepton and photon conversion background sources, respectively.
+The separate contributions to these terms are shown as a function
+of the lepton \pt~for split both by whether the lepton
+passes just the tight selection or both the tight and loose selections
+and for the inclusive and exclusive \bee-jet multiplicity categories
+in \fig\ref{fig:fakeEff_CRs_muon} for muons
+and in \fig\ref{fig:fakeEff_CRs_electron} for electrons.
+These are then used to calculate the fake rate as in \eqn\eqref{eq:fake_rate}.
+A detailed breakdown of the numbers going into the fake rate calculation
+are summarized in the exclusive case for 
+electrons in \tab\ref{tab:fakeCR_Yield_Electron_BJetGt0}
+and for muons in \tab\ref{tab:fakeCR_Yield_Muon_BJetGt0}.
+
+
+\begin{table}[ht!]
+\input{tables/YieldTable_BJetGt0Electron.tex}
+\caption{Calculation of fake rate for electrons when $N_{b-jet} > 0$. 
+Goes outside margins!}
+%in the different $p_{T}$ bins used in the final method.
+%The observed data are is dominated by the fake contribution in this control region
+%while the contributions from real leptons and leptons from photon 
+%conversion are computed using MC and shown separately for the individual hard 
+%processes as well as for the sum.  This is shown both when the probe
+%lepton is tight (top) and when it is either loose or tight (bottom). The
+%final rate is computed by taking the ratio of the tight probes in data
+%over all probes after subtracting out the real and photon conversion parts.  
+%In all cases, only statistical uncertainties are shown.  }
+\label{tab:fakeCR_Yield_Electron_BJetGt0}
+\end{table}
+
+\begin{table}[ht!]
+\input{tables/YieldTable_BJetGt0Muon.tex}
+\caption{Calculation of fake rate for muons when $N_{b-jet} > 0$. 
+Goes outside margins!}
+%in the different $p_{T}$ bins used in the final method.
+%The observed data are is dominated by the fake contribution in this control region
+%while the contributions from real leptons and leptons from photon 
+%conversion are computed using MC and shown separately for the individual hard 
+%processes as well as for the sum.  This is shown both when the probe
+%lepton is tight (top) and when it is either loose or tight (bottom). The
+%final rate is computed by taking the ratio of the tight probes in data
+%over all probes after subtracting out the real and photon conversion parts.  
+%In all cases, only statistical uncertainties are shown.  }
+\label{tab:fakeCR_Yield_Muon_BJetGt0}
+\end{table}
+
+
+
+processes going into the background calculation
+
+
+
+
 
 
 
@@ -1119,76 +1261,6 @@ of $\pt$.
 %\end{figure}
 
 
-\begin{figure}[h!]
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeTightMuonPt.eps}
-}
-%\centering
-%\subfigure{
-%\includegraphics[width=0.3\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeTightMuonPtBJetEq0.eps}
-%}
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeTightMuonPtBJetGt0.eps}
-}
-%\vspace{-1mm}
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeLooseORTightMuonPt.eps}
-}
-%\centering
-%\subfigure{
-%\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeLooseORTightMuonPtBJetEq0.eps}
-%}
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeLooseORTightMuonPtBJetGt0.eps}
-}
-\vspace{-10mm}\caption{Transverse momentum distributions \pt\ of tight probe muons (top) and loose OR tight probe muons (bottom) passing signal selection criteria in the control Same-Sign $\mu-\mu$ control region without any additional requirement on $b$-jets in the event (left) and at least one $b$-jet (right). 
-The amount observed in data (black points) corresponds to $n$ (bottom) and $n_{\textrm{Tight}}$ (top) in Eq.~\ref{eq:fakerate}. 
-Meanwhile, the contribution determined in MC to come from real leptons (blue line) and from photon conversion (red line) are shown 
-separately; they are not stacked. The real lepton contribution corresponds to 
-$n_{\textrm{Tight}}^{\textrm{Real}}$ (top) and $n^{\textrm{Real}}$ (bottom) and the photon conversion 
-contribution corresponds to $n_{\textrm{Tight}}^{\textrm{PC}}$ (top) and $n^{\textrm{PC}}$ (bottom) in Eq.~\ref{eq:fakerate}. The photon conversion is 
-observed to be negligible for muons.  }
-\label{fig:fakeEff_CRs_muon}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeTightElectronPt.eps}
-}
-%\centering
-%\subfigure{
-%\includegraphics[width=0.3\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeTightElectronPtBJetEq0.eps}
-%}
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeTightElectronPtBJetGt0.eps}
-}
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeLooseORTightElectronPt.eps}
-}
-%\centering
-%\subfigure{
-%\includegraphics[width=0.3\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeLooseORTightElectronPtBJetEq0.eps}
-%}
-\centering
-\subfigure{
-\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeLooseORTightElectronPtBJetGt0.eps}
-}
-%\vspace{-1mm}
-\vspace{-10mm}\caption{Transverse momentum distributions \pt\ of tight probe electron (top) and loose or tight probe electrons (bottom) passing signal selection criteria in the Same-Sign $e-\mu$ control region without any additional requirement on $b$-jets in the event (left) and at least one $b$-jet (right).
-The amount observed in data (black points) corresponds to $n$ (bottom) and $n_{\textrm{Tight}}$ (top) in Eq.~\ref{eq:fakerate}. 
-Meanwhile, the contribution determined in MC to come from real leptons (blue line) and from photon conversion (red line) are shown 
-separately; they are not stacked. The real lepton contribution corresponds to 
-$n_{\textrm{Tight}}^{\textrm{Real}}$ (top) and $n^{\textrm{Real}}$ (bottom) and the photon conversion 
-contribution corresponds to $n_{\textrm{Tight}}^{\textrm{PC}}$ (top) and $n^{\textrm{PC}}$ (bottom) in Eq.~\ref{eq:fakerate}.  }
-\label{fig:fakeEff_CRs_electron}
-\end{figure}
 
 
 
