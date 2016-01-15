@@ -623,7 +623,7 @@ typically very different for electrons and muons.
 This is in part because
 the loose and tight selections are usually chosen to be different
 by necessity.
-The tight selections are the same as in \sec\ref{sec:object_selection}
+The tight selections are the same as in \sec\ref{sec:www_object_selection}
 for both electrons and muons.  The loose selections, however,
 are similar to the tight selection except that
 the isolation requirements are removed and the object quality 
@@ -658,7 +658,33 @@ The reason for this choice is to allow for the application of the
 tag-and-probe method, which uses one well defined lepton, the
 ``tag'', to identify the process, and another lepton, the ``probe'',
 as the lepton under study. Both of these control regions
-have at least one lepton object. In the control region enhanced
+have at least one lepton object. 
+
+\begin{figure}[ht!]
+\centering
+\subfigure{
+\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/hPtElectronZBosonloosecut_total_new.eps}
+}
+\centering
+\subfigure{
+\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/hPtMuonZBosonloosecut_total_new.eps}
+}
+\vspace{-10mm}\caption{Invariant mass distribution of two opposite charge and same flavor di-lepton invariant mass electrons (left) and muons (right). Update figures!!}
+\label{fig:realEff_CRs}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeTightElectronPt_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeTightMuonPt_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeElectronPt_histratio.png}
+\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeMuonPt_histratio.png}
+\caption{Probe lepton \pt\ distributions in SFOS tag and probe control regions used to derive real rates.  Electron (left) and muon (right) are shown
+when the probe lepton is either tight (top) or no additional selection (besides the pre-selection) is required (bottom)}
+\label{fig:realEff_CRsPt}
+\end{figure}
+
+In the control region enhanced
 in $Z\rightarrow ll$, if one well reconstructed 
 tag lepton passing the tight selection is found then the presence
 of an additional lepton will almost certaintly be the other real
@@ -673,19 +699,86 @@ The control region is formed by a selection where
 the tag lepton passes the same single lepton triggers and trigger
 matching requirements as in \sec\ref{sec:www_event_selection}
 plus an additional probe lepton that forms an SFOS pair with the
-tag that has a di-lepton mass withing 10~\GeV of the \z-mass.
+tag that has a di-lepton mass within 10~\GeV of the \z-mass.
+Two control regions are formed: one from $e^{+}e^{-}$ tag-probe
+pairs for determining the electron real rates and another
+from $\mu^{+}\mu^{-}$ tag-probe pairs for determining the muon
+real rates. The \z-peak in the 
+di-lepton invariant mass distribution for the two control regions
+are shown in \fig\ref{fig:realEff_CRs} comparing the data
+to the model.
+Since the rates are also determined as a function of the lepton
+\pt, the lepton \pt~distributions are shown in 
+\fig\ref{fig:realEff_CRsPt}
+for the data as well as the expectation separately for electrons
+and muons and also split based on whether the probe leptons
+pass just the tight selection 
+(the top row of \fig\ref{fig:realEff_CRsPt})
+or both the loose and tight selections
+(the bottom row of \fig\ref{fig:realEff_CRsPt}).
+The expectation clearly agrees well with the expectation, which is dominated
+by the $Z\rightarrow ll$ process, as expected. The ratio of the 
+candidate real leptons passing just the tight selection 
+over those passing the loose and tight selections 
+determines the real rate according to \eqn\eqref{eq:real_rate}.
+The real rates are shown separately for electrons and muons 
+in \fig\ref{fig:realEff} after adjusting to a coarser binning
+to improve the statistics. 
+It is interesting to note that the real rates
+are uniformly lower for electrons than for muons, but both follow
+the same trend of increasing as a function of the lepton \pt, 
+and are relatively high even for the lowest value of 81\%.
+The rates are calculated both using 
+the data or the MC exclusively and the difference
+is taken as a systematic uncertainty on the nominal estimate
+from the data. 
+The rates and the systematic uncertainties
+are summarized for electrons
+in \tab\ref{tab:realEff_El} and for muons in \tab\ref{tab:realEff_Mu}.
+
+
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/Efficiencies/ElectronRealRates.png}
+\includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/Efficiencies/MuonRealRates.png}
+\caption{Real lepton efficiency as a function of \pt\ and measured in data (red) and MC (blue) for electrons (left) and muons (right).}
+\label{fig:realEff}
+\end{figure}
+
+
+%\tabcolsep=0.11cm
+\begin{table}[ht!]
+\centering
+\input{tables/ElectronRealRates.tex}
+\caption{Measured real efficiencies for electrons including statistical and systematic absolute uncertainties. 
+Systematic is calculated by taking the difference
+between the efficiencies measured in data and MC.  The efficiency measured in data is used as the nominal central value.
+} 
+\label{tab:realEff_El}
+\end{table} 
+
+%\tabcolsep=0.11cm
+\begin{table}[ht!]
+\centering
+\input{tables/MuonRealRates.tex}
+\caption{Measured real efficiencies for muons including statistical and systematic absolute uncertainties.
+Systematic is calculated by taking the difference
+between the efficiencies measured in data and MC.  The efficiency measured in data is used as the nominal central value.
+} 
+\label{tab:realEff_Mu}
+\end{table} 
 
 
 On the other hand, in the 
-$W\rightarrow l\nu + \textrm{Jets}$ control region, there
+$W\rightarrow l\nu + \textrm{Jets}$ control region there
 is only one real lepton being produced by the process.
-If a well reconstructed tag lepton is found in this control 
+If a well reconstructed tag lepton passing the tight selection
+is found in this control 
 region it is most likely coming from the $W$ decay.
 In this case, if we measure a second ``probe'' lepton it is most likely
-a jet faking a lepton. Thus, we have found a
-candidate fake lepton.
-The design of the control regions and the extraction of the rates
-is described in detail separately for the real and fake rates below.
+a jet faking a lepton. Thus, we have found a candidate fake lepton.
 
 
 
