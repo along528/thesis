@@ -578,6 +578,62 @@ with respect to treating them as completely uncorrelated.
 
 \subsubsection{Rate Determination}
 
+The Generalized Matrix Method relies on being able to determine
+the real and fake rates to be used as inputs to the method.
+This is usually done by looking into control regions
+which are designed to be enhanced in sources of real and fake leptons.
+It is important to note that we can never know with certainty 
+whether a lepton is real or fake. Instead we must be clever enough
+to find leptons that we are confident are of the appropriate type.
+One clever trick is to use a method called the tag-and-probe method
+to better identify real or fake leptons in the control regions;
+it will be described shortly.
+Once we have obtained our two separate collections of leptons,
+one we believe to be rich in real leptons and the other in fake leptons,
+we can use these leptons to extract the real and fake rates, respectively.
+The real rate, $\real^i$, in category (or bin) $i$,
+is simply defined as the ratio of tight candidate real leptons
+over the number of tight plus loose candidate real leptons:
+\begin{equation}
+\label{eq:real_rate}
+\real^i = \frac{r_T^i}{r_T^i+r_L^i}
+\end{equation}
+where $r_T^i$ and $r_L^i$ are the number of tight and loose candidate
+real leptons in category $i$, to be 
+distinguished from the $n_T^i$ and $n_L^i$ which
+are the number of candidate and loose real leptons in the signal regions
+and whose origin is unknown.
+Similarly, the fake rate, $\fake^i$, in category $i$ is,
+is defined as the ratio of tight candidate fake leptons over
+the number of tight plus loose candidate fake leptons:
+\begin{equation}
+\label{eq:fake_rate}
+\fake^i = \frac{f_T^i}{f_T^i+f_L^i}
+\end{equation}
+where $f_T^i$ and $f_L^i$ are the number of tight and loose candidate
+fake leptons in category $i$.
+
+The real and fake rates are not universally the same for all leptons, 
+and in fact can vary strongly. Thus, the choice of categories, $i$, is
+an important one. Most important, the rates are 
+typically very different for electrons and muons. Also,
+the control regions which are enhanced in real and fake sources
+of leptons are typically different for electrons and muons.
+Thus, we choose to evaluate the rates separately for both.
+The rates also tend to vary as a function of the lepton kinematics.
+In particular, both the real and fake rates tend to increase
+as a function of the lepton $\pt$.  Thus, we further divide the electron
+and muon categories into subcategories of mutually exclusive bins of
+$\pt$. The number of bins and the bin edges are determined 
+to best capture the shape while also mainiting adequate statistics
+in each category. In practrice it is usually not possible to subdivide
+the \pt~by more than a 3-5 bins. For the same reason, while
+the rates also surely vary according to other kinematic criteria, 
+like $\eta$, it is usually not possible to subdivide in more than
+one kinematic variable and still have good statistics.
+
+
+
 \tabcolsep=0.11cm
 \begin{table}[ph!]
 \begin{center}
