@@ -70,7 +70,7 @@ This can be more clearly seen in the diagram of
 \fig\ref{fig:atlas_wedge}, which shows how the most predominant
 products of the LHC collisions interact with the different
 components of the ATLAS detector.
-Nearest the collision point is the inner detector, designed to 
+Nearest the collision point is the inner detector (ID), designed to 
 measure the paths of charged particles passing through using several
 different subsystems. This 
 is surrounded by a 2 Tesla solenoidal magnetic field which 
@@ -94,8 +94,7 @@ and ultimately leave the detector. The MS is also composed of
 three large superconducting air-core toroid magnets with an 
 average magnetic field of roughly 0.5 Tesla which allows for
 a measurement of the muon momentum. The neutrinos 
-pass through undetected...
-
+pass through undetected.
 
 \begin{figure}[ht!]
 \centering
@@ -109,6 +108,62 @@ interacts with the detector.}
 \label{fig:atlas_wedge}
 \end{figure}
 
+The geometry of the ATLAS detector is defined using a 
+right-handed cylindrical coordinate system with the $x$-axis
+pointing inwards towards the center of the LHC ring, the $y$-axis point
+up, and the $z$-axis pointing along the beamline.
+The $x$ vs $y$ plane, which is perpendicular to the beamline,
+is referred to as the transverse plane and typically 
+defined using cylindrical coordinates with $r$ being the distance
+from the center and $r$ being the azimuthal angle.
+For describing the direction of the particle with respect 
+to the beamline, a quantity called the pseudo-rapidity, $\eta$, is commonly
+used
+\begin{equation}
+\eta = -\ln \tan (\theta/2) 
+\label{eq:pseudorapidity}
+\end{equation}
+which is a function only of the polar angle, $\theta$, which 
+itself is defined
+as the direction of the particle with respect to the positive $z$-axis.
+Changes in the pseudorapidity are 
+invariant under Lorentz transformations along
+the $z$-axis in the limit that the particle is approximately massless. 
+As a result, its distribution is typically flat over
+a wide range of pseudorapidity. At the LHC, most stable particles 
+are produced with energies much larger than their mass, making the 
+massless approximation valid.
+The ATLAS detector has nearly uniform $2\pi$ coverage in $\phi$,
+while in $\eta$ the ID is restricted to $|\eta| < 2.5$,
+the MS to $|\eta| < 2.7$, and the calorimeter systems all the way
+to $|\eta| < 4.9$.
+
+The total momentum of the proton-proton collision in the transverse
+plane is zero. Since the detector has full azimuthal coverage 
+in the transverse plane, we can test this constraint by measuring
+the total momentum from the particles measured in the detector.
+The magnitude of a particle's momentum 
+in the transverse plane is referred to as the 
+transverse momentum, $\pt$.
+Thus, we may refer to this constraint as
+\begin{equation}
+\Bigg| \sum_{i\in\textrm{All Particles}} \vec{p}_{\textrm{T},i} \Bigg| = 0
+\end{equation}
+where the transverse momentum is added vectorially and then
+the magnitude is taken.
+After adding up the $\pt$ of all of the particles to obtain
+the total transverse momentum, 
+any imbalance with respect to this constraint
+is referred to as the
+missing transverse energy, $\met$, and is attributed to the 
+neutrinos produced in the collision. 
+There is no such constraint on the momentum along the $z$-direction
+because the momentum fraction of the partons as taken
+from the PDFs are not known with certainty. This is the case
+even though the momentum along the $z$-direction of the 
+protons from which the partons are taken is, in fact, known.
+Thus there is no way of determining with certainty the 
+momentum of the neutrinos in the $z$-direction.
 
 
 
