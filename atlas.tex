@@ -78,12 +78,13 @@ for a momentum measurement.  Beyond that is the calorimeter system
 which measures the energy deposits of all particles passing 
 through (except for muons and neutrinos) by stopping them in their 
 tracks. The calorimeter system 
-itself is divided up into two components: the electromagnetic (EMCAL)
+itself is divided up into components which fall into two main 
+categories: the electromagnetic (EMCAL)
 and hadronic calorimeter (HCAL) systems.
 The EMCAL is situated in front of the HCAL and is designed
-primarily to stop fundamental particles like electrons and photons
-through ionization (?). The HCAL then is designed to stop
-composite particles like protons and neutrons through (?).
+primarily to stop fundamental particles like electrons and photons. 
+The HCAL then is designed to stop
+composite particles like protons and neutrons through.
 Surrounding the carlorimeter system is the muon spectrometer (MS),
 which is the largest component of the ATLAS detector and the one
 that determines its size. It is designed to measure the 
@@ -179,13 +180,36 @@ momentum of the neutrinos in the $z$-direction.
 to allow a view of the nested sub-components.}
 \label{fig:atlas_calorimeter}
 \end{figure}
+
 The ATLAS calorimeter is designed to measure the energy
 deposits of the products of the LHC collisions which pass through
 it except for muons and neutrinos.  A diagram of the 
 calorimeter system can be seen in \fig\ref{fig:atlas_calorimeter}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.5\textwidth]{figures/atlas/emcal_accordion.png}
+\caption{Photo of three EMCAL sampling layers
+showing the ``accordion'' structure. In the picture, 
+the horizontal directions corresponds to 
+the radial direction when the detector is in position, which is
+the direction the LHC products would follow.}
+\label{fig:atlas_emcal_accordion}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.8\textwidth]{figures/atlas/emcal_barrel_module.eps}
+\caption{ A diagram of one EMCAL barrel module 
+covering $22.5^{\circ}$ in azimuth.}
+\label{fig:atlas_emcal_module}
+\end{figure}
+
 The calorimeter system is split into three main systems, 
 the electromagnetic calorimeter (EMCAL), the 
-hadronic calorimeter (HCAL), and the Forward Calorimeter (FCAL).
+tile hadronic calorimeter (HCAL), the hadronic 
+end-cap calorimeter (HEC), 
+and the Forward Calorimeter (FCAL).
 The EMCAL is a sampling calorimeter that uses lead as the sampling
 medium and liquid Argon (LAr) as
 the active medium from which the charge of the electromagnetic
@@ -198,20 +222,20 @@ using lead plates 1-2~mm thick with an approximately 4~mm
 LAr gap between each sheet and electrodes placed in the middle of
 the gaps.
 The lead sheets are constructed using a unique ``accordion'' structure,
-as seen in the top of \fig\ref{fig:atlas_emcal}. 
+as seen in \fig\ref{fig:atlas_emcal_accordion}. 
 This is to provide a uniform resolution with no gaps
 in the azimuthal direction.
 The EMCAL itself can be split up into a barrel region ranging
-from $0<|\eta|<1.3$ and two endcap regions ranging from 
+from $0<|\eta|<1.3$ and two end-cap regions ranging from 
 $1.5 < |\eta| < 3.2$.
 The thickness of the barrel region has a radiation length, \xzero,
 ranging from $22~\xzero$ to $30~\xzero$
 for $|\eta|<0.8$ and from $24~\xzero$ to $33~\xzero$ for
-$0.8 < |eta| < 1.3$.
-The barrel region is divided into 32 modules, each covering
-$22.5^{\circ}$ in azimuth, which together surround the beamline
+$0.8 < |\eta| < 1.3$.
+The barrel region is divided into individual modules
+which together surround the beamline
 in a cylindrical shape.  A diagram of one such module
-can be seen in the bottom of \fig\ref{fig:atlas_emcal}.
+can be seen in \fig\ref{fig:atlas_emcal_module}.
 From this one can see that each module is segmented in $\eta$
 and $\phi$, as well as into three layers in depth.
 The segmentation is applied to obtain pointing inofrmation, 
@@ -220,8 +244,8 @@ objects in conjunction with measurements from the ID.
 The very fine segmentation in $\eta$ of the first layer
 in depth is important for precision tracking measurements.
 The second layer has a larger depth and thus collects most of the energy.
-There are two identical endcap regions, one on each side of the 
-collision point. Each endcap region consists of two wheels: the 
+There are two identical end-cap regions, one on each side of the 
+collision point. Each end-cap region consists of two wheels: the 
 outer wheel from $1.4756 < |\eta| < 2.5$, with a thickness ranging from
 $24~\xzero$ to $38~\xzero$, and 
 the inner wheel from $2.5 < |\eta| < 3.2$, with a thickness ranging from
@@ -229,34 +253,105 @@ $26~\xzero$ to $36~\xzero$.
 The regions from $1.5 < |\eta|<2.5$ in the inner and outer wheels both
 have three layers, with the first being a finely segmented precision
 layer similar to the barrel regions. Outside this region there 
-are only two layers with coarser segmentation.
-Presamplers...
+are only two layers with a coarser segmentation.
+The EMCAL also consists of a presampler detector with a single layer of LAr in 
+front of the full barrel EMCAL and in front of the end-cap EMCAL calorimeters
+from $1.5 < |\eta| < 1.8$; this aids in the measurement of the energy deposits
+prior to reaching the EMCAL and for a better understanding of the energy deposited
+in the transition region between the barrel and end-caps.
 
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.8\textwidth]{figures/atlas/emcal_accordion.png}
-\includegraphics[width=.8\textwidth]{figures/atlas/emcal_barrel_module.eps}
-\caption{(Top) Photo of three EMCAL sampling layers
-showing the ``accordion'' structure (i'd prefer a sketch) 
-(Bottom) A diagram of one EMCAL barrel module 
-covering $22.5^{\circ}$ in azimuth.}
-\label{fig:altas_emcal}
-
+\includegraphics[width=.6\textwidth]{figures/atlas/hcal_module.eps}
+\caption{ A diagram of one tile HCAL module 
+covering $5.625^{\circ}$ in azimuth. The radial direction when 
+positioned in the detector corresponds to the vertical direction in the
+image.}
+\label{fig:atlas_hcal_module}
 \end{figure}
 
 
-The HCAL...
+The tile HCAL is a steel sampling calorimeter with scintillating tiles used as the 
+active material.
+Steel is chosen as the sampling material since it gives a good
+depth in interaction lengths, $\lambda$, with a maximum depth
+of $7.4~\lambda$, while also having a low cost.
+It is split into a central barrel and two extended barrels 
+which together cover a 
+region from $|\eta|< 1.7$, as can be seen in \fig\ref{fig:atlas_calorimeter}.
+Same as in the EMCAL barrel, the tile HCAL is divided into individual modules
+that surround the collision point in azimuth; a diagram of one such
+module is shown in \fig\ref{fig:atlas_hcal_module}.
+The scintillating tiles alternate periodically with the self-supporting
+steel body and are oriented radially. 
+The scintillation
+light is routed through wavelength-shifting fibers and collected
+at photomultiplier tubes placed at the back of the module.
+This configuration allows for a near uniform coverage in azimuth.  
+In the crack region from $1.2 < |\eta| < 1.6$ between the central barrel 
+and extended barrels, special modules are placed to recover and correct
+for energy losses in this region.
 
-The FCAL...
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=.7\textwidth]{figures/atlas/hec.pdf}
+\caption{ A schematic showing one quadrant of the 
+HEC system in the $R$-$z$ plane. The dashed lines indicate
+the pointing direction achieved by the segmentation of the 
+readouts.  Dimensions are in mm.  }
+\label{fig:atlas_hec}
+\end{figure}
+
+
+The HEC is designed to measure hadronic energy deposits in the 
+end-cap regions from $1.5 < |\eta|< 3.2$. It uses 
+copper plates as the sampling material with LAr gaps
+for the active material. Two separate wheels are formed from
+flat plates of copper alternating with LAr gaps further divided by electrodes for
+collecting the ionization charge from the hadronic shower in the LAr.
+The rear wheel is more coarse than front wheel;
+This can be seen in the schematic of \fig\ref{fig:atlas_hec}.
+The electronics readout is segmented such that pointing information
+can be obtained, as indicated by the dashed lines.
+The maximum radial depth of the HEC is roughly $10~\lambda$.
 
 
 
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=.7\textwidth]{figures/atlas/fcal.eps}
+\caption{ A schematic showing the end-cap of the EMCAL,
+the two HEC modules, and the three FCAL modules, as well
+as additional shielding, in one
+quadrant of the ATLAS detector as viewed 
+in the $R$-$z$ plane.
+The $R$-direction is shown with a larger scale than in the $Z$-direction.
+}
+\label{fig:atlas_fcal}
+\end{figure}
+
+
+The FCAL is in the region of the detector nearest to the beamline, 
+where the radiation flux is highest, covering the range
+from $3.1 < |\eta| < 4.9$. It is split into three cylindrical modules,
+oriented as in \fig\ref{fig:atlas_fcal}, with the first 
+being designed for measuring electromagnetic deposits and the other
+two for hadronic deposits.
+Each FCAL module is constructed from copper plates with roughly ten thousand
+uniformly spaced holes drilled in the direction parallel to the beamline.
+The holes are filled with rods serving as the primary sampling material, 
+with a thin LAr gap surrounding the rods serving as the active material.
+In the first FCAL, optimized for electromagnetic deposits,  
+copper rods are used, while in the second and third FCAL modules, 
+the rods are made from tungsten, which has a higher interaction length.
+The first FCAL has a radiation length of $27.6~\xzero$ and an 
+interaction length of $2.66~\lambda$. Meanwhile, the interaction
+length of the second and third modules is around $3.6~\lambda$.
 
 
 
-
-
+Shielding? Resolution and response?
 
 
 
