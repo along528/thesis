@@ -170,7 +170,97 @@ momentum of the neutrinos in the $z$-direction.
 %be sure to include material description of inner detector
 %from ATLAS JINST paper: figures/atlas/DetectorPaper1.pdf 
 %so that can refer to when discussing charge mis-id
+
 \section{Calorimeters }
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/atlas/calorimeter.eps}
+\caption{Diagram of ATLAS calorimeter system with cut-out portion
+to allow a view of the nested sub-components.}
+\label{fig:atlas_calorimeter}
+\end{figure}
+The ATLAS calorimeter is designed to measure the energy
+deposits of the products of the LHC collisions which pass through
+it except for muons and neutrinos.  A diagram of the 
+calorimeter system can be seen in \fig\ref{fig:atlas_calorimeter}.
+The calorimeter system is split into three main systems, 
+the electromagnetic calorimeter (EMCAL), the 
+hadronic calorimeter (HCAL), and the Forward Calorimeter (FCAL).
+The EMCAL is a sampling calorimeter that uses lead as the sampling
+medium and liquid Argon (LAr) as
+the active medium from which the charge of the electromagnetic
+shower produced by incident particles on the sampling medium
+can be collected.  LAr is used as the active medium 
+because of its radiation hardness and its linear response.
+%as evidenced in \fig\ref{fig:atlas_emcal_response}.
+The lead sampling medium alternates with the active LAr medium
+using lead plates 1-2~mm thick with an approximately 4~mm 
+LAr gap between each sheet and electrodes placed in the middle of
+the gaps.
+The lead sheets are constructed using a unique ``accordion'' structure,
+as seen in the top of \fig\ref{fig:atlas_emcal}. 
+This is to provide a uniform resolution with no gaps
+in the azimuthal direction.
+The EMCAL itself can be split up into a barrel region ranging
+from $0<|\eta|<1.3$ and two endcap regions ranging from 
+$1.5 < |\eta| < 3.2$.
+The thickness of the barrel region has a radiation length, \xzero,
+ranging from $22~\xzero$ to $30~\xzero$
+for $|\eta|<0.8$ and from $24~\xzero$ to $33~\xzero$ for
+$0.8 < |eta| < 1.3$.
+The barrel region is divided into 32 modules, each covering
+$22.5^{\circ}$ in azimuth, which together surround the beamline
+in a cylindrical shape.  A diagram of one such module
+can be seen in the bottom of \fig\ref{fig:atlas_emcal}.
+From this one can see that each module is segmented in $\eta$
+and $\phi$, as well as into three layers in depth.
+The segmentation is applied to obtain pointing inofrmation, 
+which aids in the identification and measurement of electromagnetic
+objects in conjunction with measurements from the ID.
+The very fine segmentation in $\eta$ of the first layer
+in depth is important for precision tracking measurements.
+The second layer has a larger depth and thus collects most of the energy.
+There are two identical endcap regions, one on each side of the 
+collision point. Each endcap region consists of two wheels: the 
+outer wheel from $1.4756 < |\eta| < 2.5$, with a thickness ranging from
+$24~\xzero$ to $38~\xzero$, and 
+the inner wheel from $2.5 < |\eta| < 3.2$, with a thickness ranging from
+$26~\xzero$ to $36~\xzero$.
+The regions from $1.5 < |\eta|<2.5$ in the inner and outer wheels both
+have three layers, with the first being a finely segmented precision
+layer similar to the barrel regions. Outside this region there 
+are only two layers with coarser segmentation.
+Presamplers...
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.8\textwidth]{figures/atlas/emcal_accordion.png}
+\includegraphics[width=.8\textwidth]{figures/atlas/emcal_barrel_module.eps}
+\caption{(Top) Photo of three EMCAL sampling layers
+showing the ``accordion'' structure (i'd prefer a sketch) 
+(Bottom) A diagram of one EMCAL barrel module 
+covering $22.5^{\circ}$ in azimuth.}
+\label{fig:altas_emcal}
+
+\end{figure}
+
+
+The HCAL...
+
+The FCAL...
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Muon Spectrometer}
 %do i want to talk about muon reconstruction?
 %definitely mention muon resolution
