@@ -168,9 +168,156 @@ momentum of the neutrinos in the $z$-direction.
 
 \section{Inner Detector}
 \label{sec:atlas_id}
-%be sure to include material description of inner detector
-%from ATLAS JINST paper: figures/atlas/DetectorPaper1.pdf 
-%so that can refer to when discussing charge mis-id
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/atlas/id_barrel.eps}
+\caption{Diagram of the ATLAS Inner Detector (ID) system showing 
+a wedge of the barrel system.  The three detector systems
+are clearly labeled. The LHC beam pipe runs parrel to the system
+and is shown at the bottom of the diagram.}
+\label{fig:atlas_id_barrel}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/atlas/id_endcap.eps}
+\caption{Diagram of the ATLAS Inner Detector (ID) system showing 
+a wedge of the endcap system as well as a part of the SCT and Pixel
+barrel systems.  The detector systems
+are clearly labeled.  The LHC beam pipe runs parrel to the system
+but is not shown. Trajectories of two charged tracks 
+with a $\pt=10\GeV$ are shown along $\eta=1.4$ and $\eta=2.2$ are shown 
+byt the solid bright red lines.}
+\label{fig:atlas_id_endcap}
+\end{figure}
+
+The inner detector (ID) is the 
+detector system that is closest to the beam pipe and thus
+first system that the products of the LHC collisions encounter
+on their way from the collision point. Its primary role is 
+to measure the trajectory and momentum of charged particles
+through ionization as they pass through the detector.
+It must be capable of measuring these tracks with high precision
+in order to obtain precise momentum measurements and also to be able
+to accurately extrapolate the tracks back to the collision point
+to obtain primary and secondary interaction vertices. In addition,
+since the system is so close to the LHC beam line, it
+must be able to handle the high particle fluxes. This requires that
+the ID must have a very high granularity and fast electronics
+readouts such that the occupancy of the
+detector is small enough to distinguish individual tracks. In addition,
+the detector materials and electronics must be sufficiently radiation
+hard that they can withstand years of LHC exposure time.
+These tough requirements push the limits of available technology and thus
+make the ID the most sophisticated detector system in ATLAS.
+
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/atlas/pixel.eps}
+\caption{A cut-out diagram of the ATLAS pixlel detector showing 
+the arrangement of the pixel modules (green) in three layers of the barrel
+and three layers of one end-cap system. Some of the support structure is
+also shown.}
+\label{fig:atlas_pixel}
+\end{figure}
+
+There are three different detector subsystems within the ID, together
+immersed in a roughly uniform 2 Tesla axial magnetic field: the pixel detector,
+the silicon microstrip (SCT) detector, and the transition radiation
+tracker (TRT). These three detector systems can be seen 
+in the barrel in \fig\ref{fig:atlas_id_barrel} and from an alternate
+view also showing one of the end-caps in \fig\ref{fig:atlas_id_endcap}. 
+The pixel detector
+is composed of more than seventeen hunderd thin doped silicon sensors with 
+dimension $19\times 64~\textrm{mm}^2$. Each sensor has more than forty-six
+thousand readout channels,
+corresponding to the ``pixels'' which give the detector its name. 
+A charged particle passing through an individual pixel can send a signal
+which identifies the location of a charged particle. The combination of 
+several layers can thus be used to form the trajectory of the particle. %sagitta
+Each sensor is attached to a single readout electronic board, which comprises
+one module.
+The modules are arranged into three cylinrical barrel layers and 
+two end-caps each with three disk-shaped layers such that there is uniform
+azimuthal coverage. A cut-out diagram of the pixel detector 
+structure with modules in place in both the barrel and end-caps is shown 
+in \fig\ref{fig:atlas_pixel}. The barrel covers roughly 
+$|\eta|<1.7$ and the two end-caps roughly $1.7<|\eta|<2.5$.
+Test beam measurements show that the 
+spatial resolution of the pixel detector is around $12~\mu\textrm{m}$ in 
+the $R-\phi$ plane and is slightly degraded orthogonal to this plane.
+
+
+
+The SCT uses almost sixteen thousand thin silicon strip sensors, though not of the 
+same type as in the pixel detector. 
+A barrel silicon strip sensor has dimension $6.36\times 6.40~\textrm{cm}^2$
+with 768 readout strips running along the longer dimension. The barrel
+strips are placed in four concentric cylindrical layers, uniformly in azimuth,
+with the strips aligned axially, and covering roughly
+$|\eta|<1.4$, as can be seen in \fig\ref{fig:atlas_id_barrel}.
+In each of the two end-caps the sensors are made to form nine
+disks spaced apart along the axial 
+direction, covering roughly $1.4 < |\eta|<2.5$, 
+seen in \fig\ref{fig:atlas_id_endcap}. The strips are similar
+to the barrel except that they are tapered along the strip direction.
+The sensors are then oriented such that the taper expands radially outward.
+In a test beam, the spatial resolution is found to be about $16~\mu\textrm{m}$
+in the $R-\phi$ plane. Due to the length of the strips, the precision is considerably
+worse in the axial direction for the barrel and the radial direction for 
+the end-caps, with a precision of roughly $580~\mu\textrm{m}$.
+
+
+The TRT uses a fundamentally different technology 
+than the pixel and SCT.
+Drift tubes are used of 4~mm in diameter 
+which are filled with a Xenon-based gas mixture
+and with an anode wire running through the center.
+The advantage of using these tubes is that they can be placed in close
+proximity such that many measurements, around 36,
+can be made on a single charged track. Another important feature
+of the TRT is its ability to identify electrons using transition radiation.
+This is achieved by surrounding the tubes in polypropylene material to induce
+transition radiation from incident electrons and taking advantage
+of the discrimination power of the Xenon-based gas between 
+transition radiation and tracking signals.
+For electrons with $\pt>2\GeV$, usually 7 to 10 hits due to transition
+radiation will be measured.
+The barrel TRT runs from rougly $|\eta|<0.7$ and
+is constructed from 144 cm long straws with two straws aligned
+axially back-to-back. Over fifty-two thousand straws are interleaved
+with polypropylene fibers to form 73 layers of straws surrounding the beampipe with
+a cylindrical symmetry and uniform coverage in azimuth,
+seen in \fig\ref{fig:atlas_id_barrel}.
+In each of the two end-caps, two wheels are formed from over seventy-three
+thousand straw tubes, 37 cm in length, 
+oriented oriented and distributed uniformly in azimuth. 
+The inner wheel is formed from twelve layers and the outer wheel from eight
+layers with 768 straws in each layer, seen in \fig\ref{fig:atlas_id_endcap}.
+The end-caps cover roughly $0.7<|\eta|<2.2$.
+An individual straw has a precision of about $170~\mu\textrm{m}$ along
+its diameter.
+
+
+
+
+efficiency of electron identification?
+
+
+large number of readouts?
+occupancy??
+noise??
+sagitta???
+explain how the b-field is used?
+eta coverage?
+materials?
+electronics?
+more figures?
+
+
 
 \section{Calorimeters }
 \begin{figure}[ht!]
