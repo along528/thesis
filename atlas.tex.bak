@@ -1,27 +1,510 @@
-\chapter{The ATLAS Detector}
-\label{sec:atlas}
 %step through each section of the atlas detector
-%could spend more time on the muon spectometer (like the new EE A-side detectors)
+%could spend more time on the muon spectrometer (like the new EE A-side detectors)
 %and more time on the muon trigger
-%clare put in the minimal detail (no more than 20 pages) while Jeremy had 50 pages
+%Clare put in the minimal detail (no more than 20 pages) while Jeremy had 50 pages
 %I could maybe fit somewhere in between
 
 %need to define Muon Spectrometer (MS)
 %need to define Inner Detector (ID)
-%need to define Electromagnetic Calorimeter (EM)
 %Assumptions:
 %Will describe trigger
 
 
 %I need to define things here like eta, pt, deltaR, etc 
 %I may need to talk about isolation here
-\cite{ATLAS}
+The ATLAS detector~\cite{ATLAS} is designed to measure
+the products of the particle collisions produced by the LHC.
+In particular, the detector seeks to measure those stable 
+(or metastable) particles whose decay lifetime is sufficiently
+long enough to interact with the detector.  This includes
+a variety of fundamental particles (like muons) as well as 
+composite particles (like neutrons). The wide variety of 
+particles to be measured requires the implementation
+of several sub-detector systems that work in tandem 
+to identify and measure the properties of these particles.
+The products of the LHC collisions travel in all directions, 
+thus if there is any hope to measure all of the products of the collision
+the detector must completely surround the collision point. 
+The symmetry of the LHC dictates a cylindrically symmetric
+shape for the ATLAS detector around this point.
+There is another reason to build the detector to enclose
+the collision point, since 
+even with such a detector, the vanishingly small
+cross-section of the neutrinos, which are also products
+of the collision, means that these ghostly particles
+will inevitably go undetected. But there is still hope!
+If all other particles are measured, 
+the presence of the neutrinos can be inferred 
+using momentum constraints, as will be discussed later.  
+In this way, the ATLAS detector is most generally suited
+for measuring the wide variety of processes produced
+by the LHC. 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.9\textwidth]{figures/atlas/detector.jpg}
+\caption{A diagram of the ATLAS detector where the detector has
+been artifically opened up to reveal the LHC beam line and the
+various sub-detector components within. The sub-detector components
+are labelled as such.}
+\label{fig:atlas}
+\end{figure}
+
+A diagram of the ATLAS detector can be seen in \fig\ref{fig:atlas}.
+It has a clearly cylindrical shape with a diameter of 25 meters
+and length of 44 meters. The detector is massive, weighing
+in at roughly 7000 tons; but it is also highly granular, with
+over 100 million electronic channels that are arranged very precisely, 
+in many cases on the order of tens of microns.
+In the ``opened'' view of \fig\ref{fig:atlas}, the proton-proton
+collisions from the LHC occur at the center core of the detector
+and the sub-detector components build up around this point.
+The detectable products of the collision pass outward from the collision
+point through the different components where their energy and momentum
+are measured. The way in which the particles interact with the various
+sub-detector systems helps to identify the types of 
+particles produced.
+This can be more clearly seen in the diagram of 
+\fig\ref{fig:atlas_wedge}, which shows how the most predominant
+products of the LHC collisions interact with the different
+components of the ATLAS detector.
+Nearest the collision point is the inner detector (ID), designed to 
+measure the paths of charged particles passing through using several
+different subsystems. This 
+is surrounded by a 2 Tesla solenoidal magnetic field which 
+bends the trajectory of the charged particles by an amount
+inversely proportional to the particle momentum, thereby allowing
+for a momentum measurement.  Beyond that is the calorimeter system
+which measures the energy deposits of all particles passing 
+through (except for muons and neutrinos) by stopping them in their 
+tracks. The calorimeter system 
+itself is divided up into components which fall into two main 
+categories: the electromagnetic (EMCAL)
+and hadronic calorimeter (HCAL) systems.
+The EMCAL is situated in front of the HCAL and is designed
+primarily to stop fundamental particles like electrons and photons. 
+The HCAL then is designed to stop
+composite particles like protons and neutrons through.
+Surrounding the carlorimeter system is the muon spectrometer (MS),
+which is the largest component of the ATLAS detector and the one
+that determines its size. It is designed to measure the 
+trajectory of muons through ionization as they pass through
+and ultimately leave the detector. The MS is also composed of 
+three large superconducting air-core toroid magnets with an 
+average magnetic field of roughly 0.5 Tesla which allows for
+a measurement of the muon momentum. The neutrinos 
+pass through undetected.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.9\textwidth]{figures/atlas/wedge.jpg}
+\caption{A diagram of one wedge of the ATLAS detector
+as viewed from looking down the beam line. 
+The sub-detector components are shown along with the 
+particles that most predominately come from the collision.
+The paths of the particles indicate how each particle typically 
+interacts with the detector.}
+\label{fig:atlas_wedge}
+\end{figure}
+
+The geometry of the ATLAS detector is defined using a 
+right-handed cylindrical coordinate system with the $x$-axis
+pointing inwards towards the center of the LHC ring, the $y$-axis point
+up, and the $z$-axis pointing along the beamline.
+The $x$ vs $y$ plane, which is perpendicular to the beamline,
+is referred to as the transverse plane and typically 
+defined using cylindrical coordinates with $r$ being the distance
+from the center and $r$ being the azimuthal angle.
+For describing the direction of the particle with respect 
+to the beamline, a quantity called the pseudo-rapidity, $\eta$, is commonly
+used
+\begin{equation}
+\eta = -\ln \tan (\theta/2) 
+\label{eq:pseudorapidity}
+\end{equation}
+which is a function only of the polar angle, $\theta$, which 
+itself is defined
+as the direction of the particle with respect to the positive $z$-axis.
+Changes in the pseudorapidity are 
+invariant under Lorentz transformations along
+the $z$-axis in the limit that the particle is approximately massless. 
+As a result, its distribution is typically flat over
+a wide range of pseudorapidity. At the LHC, most stable particles 
+are produced with energies much larger than their mass, making the 
+massless approximation valid.
+The ATLAS detector has nearly uniform $2\pi$ coverage in $\phi$,
+while in $\eta$ the ID is restricted to $|\eta| < 2.5$,
+the MS to $|\eta| < 2.7$, and the calorimeter systems all the way
+to $|\eta| < 4.9$.
+
+The total momentum of the proton-proton collision in the transverse
+plane is zero. Since the detector has full azimuthal coverage 
+in the transverse plane, we can test this constraint by measuring
+the total momentum from the particles measured in the detector.
+The magnitude of a particle's momentum 
+in the transverse plane is referred to as the 
+transverse momentum, $\pt$.
+Thus, we may refer to this constraint as
+\begin{equation}
+\Bigg| \sum_{i\in\textrm{All Particles}} \vec{p}_{\textrm{T},i} \Bigg| = 0
+\end{equation}
+where the transverse momentum is added vectorially and then
+the magnitude is taken.
+After adding up the $\pt$ of all of the particles to obtain
+the total transverse momentum, 
+any imbalance with respect to this constraint
+is referred to as the
+missing transverse energy, $\met$, and is attributed to the 
+neutrinos produced in the collision. 
+There is no such constraint on the momentum along the $z$-direction
+because the momentum fraction of the partons as taken
+from the PDFs are not known with certainty. This is the case
+even though the momentum along the $z$-direction of the 
+protons from which the partons are taken is, in fact, known.
+Thus there is no way of determining with certainty the 
+momentum of the neutrinos in the $z$-direction.
 
 
-\section{Inner Dector}
+
+\section{Inner Detector}
+\label{sec:atlas_id}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/atlas/id_barrel.eps}
+\caption{Diagram of the ATLAS Inner Detector (ID) system showing 
+a wedge of the barrel system.  The three detector systems
+are clearly labeled. The LHC beam pipe runs parrel to the system
+and is shown at the bottom of the diagram.}
+\label{fig:atlas_id_barrel}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/atlas/id_endcap.eps}
+\caption{Diagram of the ATLAS Inner Detector (ID) system showing 
+a wedge of the endcap system as well as a part of the SCT and Pixel
+barrel systems.  The detector systems
+are clearly labeled.  The LHC beam pipe runs parrel to the system
+but is not shown. Trajectories of two charged tracks 
+with a $\pt=10\GeV$ are shown along $\eta=1.4$ and $\eta=2.2$ are shown 
+byt the solid bright red lines.}
+\label{fig:atlas_id_endcap}
+\end{figure}
+
+The inner detector (ID) is the 
+detector system that is closest to the beam pipe and thus
+first system that the products of the LHC collisions encounter
+on their way from the collision point. Its primary role is 
+to measure the trajectory and momentum of charged particles
+through ionization as they pass through the detector.
+It must be capable of measuring these tracks with high precision
+in order to obtain precise momentum measurements and also to be able
+to accurately extrapolate the tracks back to the collision point
+to obtain primary and secondary interaction vertices. In addition,
+since the system is so close to the LHC beam line, it
+must be able to handle the high particle fluxes. This requires that
+the ID must have a very high granularity and fast electronics
+readouts such that the occupancy of the
+detector is small enough to distinguish individual tracks. In addition,
+the detector materials and electronics must be sufficiently radiation
+hard that they can withstand years of LHC exposure time.
+These tough requirements push the limits of available technology and thus
+make the ID the most sophisticated detector system in ATLAS.
+
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/atlas/pixel.eps}
+\caption{A cut-out diagram of the ATLAS pixlel detector showing 
+the arrangement of the pixel modules (green) in three layers of the barrel
+and three layers of one end-cap system. Some of the support structure is
+also shown.}
+\label{fig:atlas_pixel}
+\end{figure}
+
+There are three different detector subsystems within the ID, together
+immersed in a roughly uniform 2 Tesla axial magnetic field: the pixel detector,
+the silicon microstrip (SCT) detector, and the transition radiation
+tracker (TRT). These three detector systems can be seen 
+in the barrel in \fig\ref{fig:atlas_id_barrel} and from an alternate
+view also showing one of the end-caps in \fig\ref{fig:atlas_id_endcap}. 
+The pixel detector
+is composed of more than seventeen hunderd thin doped silicon sensors with 
+dimension $19\times 64~\textrm{mm}^2$. Each sensor has more than forty-six
+thousand readout channels,
+corresponding to the ``pixels'' which give the detector its name. 
+A charged particle passing through an individual pixel can send a signal
+which identifies the location of a charged particle. The combination of 
+several layers can thus be used to form the trajectory of the particle. %sagitta
+Each sensor is attached to a single readout electronic board, which comprises
+one module.
+The modules are arranged into three cylinrical barrel layers and 
+two end-caps each with three disk-shaped layers such that there is uniform
+azimuthal coverage. A cut-out diagram of the pixel detector 
+structure with modules in place in both the barrel and end-caps is shown 
+in \fig\ref{fig:atlas_pixel}. The barrel covers roughly 
+$|\eta|<1.7$ and the two end-caps roughly $1.7<|\eta|<2.5$.
+Test beam measurements show that the 
+spatial resolution of the pixel detector is around $12~\mu\textrm{m}$ in 
+the $R-\phi$ plane and is slightly degraded orthogonal to this plane.
+
+
+
+The SCT uses almost sixteen thousand thin silicon strip sensors, though not of the 
+same type as in the pixel detector. 
+A barrel silicon strip sensor has dimension $6.36\times 6.40~\textrm{cm}^2$
+with 768 readout strips running along the longer dimension. The barrel
+strips are placed in four concentric cylindrical layers, uniformly in azimuth,
+with the strips aligned axially, and covering roughly
+$|\eta|<1.4$, as can be seen in \fig\ref{fig:atlas_id_barrel}.
+In each of the two end-caps the sensors are made to form nine
+disks spaced apart along the axial 
+direction, covering roughly $1.4 < |\eta|<2.5$, 
+seen in \fig\ref{fig:atlas_id_endcap}. The strips are similar
+to the barrel except that they are tapered along the strip direction.
+The sensors are then oriented such that the taper expands radially outward.
+In a test beam, the spatial resolution is found to be about $16~\mu\textrm{m}$
+in the $R-\phi$ plane. Due to the length of the strips, the precision is considerably
+worse in the axial direction for the barrel and the radial direction for 
+the end-caps, with a precision of roughly $580~\mu\textrm{m}$.
+
+
+The TRT uses a fundamentally different technology 
+than the pixel and SCT.
+Drift tubes are used of 4~mm in diameter 
+which are filled with a Xenon-based gas mixture
+and with an anode wire running through the center.
+The advantage of using these tubes is that they can be placed in close
+proximity such that many measurements, around 36,
+can be made on a single charged track. Another important feature
+of the TRT is its ability to identify electrons using transition radiation.
+This is achieved by surrounding the tubes in polypropylene material to induce
+transition radiation from incident electrons and taking advantage
+of the discrimination power of the Xenon-based gas between 
+transition radiation and tracking signals.
+For electrons with $\pt>2\GeV$, usually 7 to 10 hits due to transition
+radiation will be measured.
+The barrel TRT runs from rougly $|\eta|<0.7$ and
+is constructed from 144 cm long straws with two straws aligned
+axially back-to-back. Over fifty-two thousand straws are interleaved
+with polypropylene fibers to form 73 layers of straws surrounding the beampipe with
+a cylindrical symmetry and uniform coverage in azimuth,
+seen in \fig\ref{fig:atlas_id_barrel}.
+In each of the two end-caps, two wheels are formed from over seventy-three
+thousand straw tubes, 37 cm in length, 
+oriented oriented and distributed uniformly in azimuth. 
+The inner wheel is formed from twelve layers and the outer wheel from eight
+layers with 768 straws in each layer, seen in \fig\ref{fig:atlas_id_endcap}.
+The end-caps cover roughly $0.7<|\eta|<2.2$.
+An individual straw has a precision of about $170~\mu\textrm{m}$ along
+its diameter.
+
+
+
+
+efficiency of electron identification?
+
+
+large number of readouts?
+occupancy??
+noise??
+sagitta???
+explain how the b-field is used?
+eta coverage?
+materials?
+electronics?
+more figures?
+
+
+
 \section{Calorimeters }
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/atlas/calorimeter.eps}
+\caption{Diagram of ATLAS calorimeter system with cut-out portion
+to allow a view of the nested sub-components.}
+\label{fig:atlas_calorimeter}
+\end{figure}
+
+The ATLAS calorimeter is designed to measure the energy
+deposits of the products of the LHC collisions which pass through
+it except for muons and neutrinos.  A diagram of the 
+calorimeter system can be seen in \fig\ref{fig:atlas_calorimeter}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.5\textwidth]{figures/atlas/emcal_accordion.png}
+\caption{Photo of three EMCAL sampling layers
+showing the ``accordion'' structure. In the picture, 
+the horizontal directions corresponds to 
+the radial direction when the detector is in position, which is
+the direction the LHC products would follow.}
+\label{fig:atlas_emcal_accordion}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.8\textwidth]{figures/atlas/emcal_barrel_module.eps}
+\caption{ A diagram of one EMCAL barrel module 
+covering $22.5^{\circ}$ in azimuth.}
+\label{fig:atlas_emcal_module}
+\end{figure}
+
+The calorimeter system is split into three main systems, 
+the electromagnetic calorimeter (EMCAL), the 
+tile hadronic calorimeter (HCAL), the hadronic 
+end-cap calorimeter (HEC), 
+and the Forward Calorimeter (FCAL).
+The EMCAL is a sampling calorimeter that uses lead as the sampling
+medium and liquid Argon (LAr) as
+the active medium from which the charge of the electromagnetic
+shower produced by incident particles on the sampling medium
+can be collected.  LAr is used as the active medium 
+because of its radiation hardness and its linear response.
+%as evidenced in \fig\ref{fig:atlas_emcal_response}.
+The lead sampling medium alternates with the active LAr medium
+using lead plates 1-2~mm thick with an approximately 4~mm 
+LAr gap between each sheet and electrodes placed in the middle of
+the gaps.
+The lead sheets are constructed using a unique ``accordion'' structure,
+as seen in \fig\ref{fig:atlas_emcal_accordion}. 
+This is to provide a uniform resolution with no gaps
+in the azimuthal direction.
+The EMCAL itself can be split up into a barrel region ranging
+from $0<|\eta|<1.3$ and two end-cap regions ranging from 
+$1.5 < |\eta| < 3.2$.
+The thickness of the barrel region has a radiation length, \xzero,
+ranging from $22~\xzero$ to $30~\xzero$
+for $|\eta|<0.8$ and from $24~\xzero$ to $33~\xzero$ for
+$0.8 < |\eta| < 1.3$.
+The barrel region is divided into individual modules
+which together surround the beamline
+in a cylindrical shape.  A diagram of one such module
+can be seen in \fig\ref{fig:atlas_emcal_module}.
+From this one can see that each module is segmented in $\eta$
+and $\phi$, as well as into three layers in depth.
+The segmentation is applied to obtain pointing inofrmation, 
+which aids in the identification and measurement of electromagnetic
+objects in conjunction with measurements from the ID.
+The very fine segmentation in $\eta$ of the first layer
+in depth is important for precision tracking measurements.
+The second layer has a larger depth and thus collects most of the energy.
+There are two identical end-cap regions, one on each side of the 
+collision point. Each end-cap region consists of two wheels: the 
+outer wheel from $1.4756 < |\eta| < 2.5$, with a thickness ranging from
+$24~\xzero$ to $38~\xzero$, and 
+the inner wheel from $2.5 < |\eta| < 3.2$, with a thickness ranging from
+$26~\xzero$ to $36~\xzero$.
+The regions from $1.5 < |\eta|<2.5$ in the inner and outer wheels both
+have three layers, with the first being a finely segmented precision
+layer similar to the barrel regions. Outside this region there 
+are only two layers with a coarser segmentation.
+The EMCAL also consists of a presampler detector with a single layer of LAr in 
+front of the full barrel EMCAL and in front of the end-cap EMCAL calorimeters
+from $1.5 < |\eta| < 1.8$; this aids in the measurement of the energy deposits
+prior to reaching the EMCAL and for a better understanding of the energy deposited
+in the transition region between the barrel and end-caps.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.6\textwidth]{figures/atlas/hcal_module.eps}
+\caption{ A diagram of one tile HCAL module 
+covering $5.625^{\circ}$ in azimuth. The radial direction when 
+positioned in the detector corresponds to the vertical direction in the
+image.}
+\label{fig:atlas_hcal_module}
+\end{figure}
+
+
+The tile HCAL is a steel sampling calorimeter with scintillating tiles used as the 
+active material.
+Steel is chosen as the sampling material since it gives a good
+depth in interaction lengths, $\lambda$, with a maximum depth
+of $7.4~\lambda$, while also having a low cost.
+It is split into a central barrel and two extended barrels 
+which together cover a 
+region from $|\eta|< 1.7$, as can be seen in \fig\ref{fig:atlas_calorimeter}.
+Same as in the EMCAL barrel, the tile HCAL is divided into individual modules
+that surround the collision point in azimuth; a diagram of one such
+module is shown in \fig\ref{fig:atlas_hcal_module}.
+The scintillating tiles alternate periodically with the self-supporting
+steel body and are oriented radially. 
+The scintillation
+light is routed through wavelength-shifting fibers and collected
+at photomultiplier tubes placed at the back of the module.
+This configuration allows for a near uniform coverage in azimuth.  
+In the crack region from $1.2 < |\eta| < 1.6$ between the central barrel 
+and extended barrels, special modules are placed to recover and correct
+for energy losses in this region.
+
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=.7\textwidth]{figures/atlas/hec.pdf}
+\caption{ A schematic showing one quadrant of the 
+HEC system in the $R$-$z$ plane. The dashed lines indicate
+the pointing direction achieved by the segmentation of the 
+readouts.  Dimensions are in mm.  }
+\label{fig:atlas_hec}
+\end{figure}
+
+
+The HEC is designed to measure hadronic energy deposits in the 
+end-cap regions from $1.5 < |\eta|< 3.2$. It uses 
+copper plates as the sampling material with LAr gaps
+for the active material. Two separate wheels are formed from
+flat plates of copper alternating with LAr gaps further divided by electrodes for
+collecting the ionization charge from the hadronic shower in the LAr.
+The rear wheel is more coarse than front wheel;
+This can be seen in the schematic of \fig\ref{fig:atlas_hec}.
+The electronics readout is segmented such that pointing information
+can be obtained, as indicated by the dashed lines.
+The maximum radial depth of the HEC is roughly $10~\lambda$.
+
+
+
+\begin{figure}[ht] 
+\centering
+\includegraphics[width=.7\textwidth]{figures/atlas/fcal.eps}
+\caption{ A schematic showing the end-cap of the EMCAL,
+the two HEC modules, and the three FCAL modules, as well
+as additional shielding, in one
+quadrant of the ATLAS detector as viewed 
+in the $R$-$z$ plane.
+The $R$-direction is shown with a larger scale than in the $Z$-direction.
+}
+\label{fig:atlas_fcal}
+\end{figure}
+
+
+The FCAL is in the region of the detector nearest to the beamline, 
+where the radiation flux is highest, covering the range
+from $3.1 < |\eta| < 4.9$. It is split into three cylindrical modules,
+oriented as in \fig\ref{fig:atlas_fcal}, with the first 
+being designed for measuring electromagnetic deposits and the other
+two for hadronic deposits.
+Each FCAL module is constructed from copper plates with roughly ten thousand
+uniformly spaced holes drilled in the direction parallel to the beamline.
+The holes are filled with rods serving as the primary sampling material, 
+with a thin LAr gap surrounding the rods serving as the active material.
+In the first FCAL, optimized for electromagnetic deposits,  
+copper rods are used, while in the second and third FCAL modules, 
+the rods are made from tungsten, which has a higher interaction length.
+The first FCAL has a radiation length of $27.6~\xzero$ and an 
+interaction length of $2.66~\lambda$. Meanwhile, the interaction
+length of the second and third modules is around $3.6~\lambda$.
+
+
+
+Shielding? Resolution and response?
+
+
+
+
 \section{Muon Spectrometer}
 %do i want to talk about muon reconstruction?
-%definitely mention muon resoltuion
+%definitely mention muon resolution
 \section{Trigger}
 

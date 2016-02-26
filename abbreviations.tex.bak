@@ -3,14 +3,20 @@
   \begin{tabular}{lp{0.15\textwidth}p{0.5\textwidth}}
     aQGC        & \dotfill & anomalous Quartic Gauge Coupling \\
     ATLAS       & \dotfill & A Toroidal LHC ApparatuS \\
-    EM          & \dotfill & Electromagnetic Calorimeter \\
+    DPS         & \dotfill & Double Parton Scattering \\
+    EMCAL       & \dotfill & Electromagnetic Calorimeter \\
+    FCAL        & \dotfill & Forward Calorimeter \\
+    HCAL        & \dotfill & Hadronic Calorimeter \\
+    HEC         & \dotfill & Hadronic End-cap Calorimeter \\
     ID          & \dotfill & Inner Detector \\
+    LAr         & \dotfill & Liquid Argon \\
     LHC         & \dotfill & Large Hadron Collider \\
     LO          & \dotfill & Leading-Order \\
     MC          & \dotfill & Monte Carlo simulation \\
     MS          & \dotfill & Muon Spectrometer \\
     NLO         & \dotfill & Next-To-Leading-Order \\
     QGC         & \dotfill & Quartic Gauge Coupling \\
+    SFOS        & \dotfill & Same-Flavor Opposite-Sign \\
     SM          & \dotfill & Standard Model  \\
     PDF         & \dotfill & Parton Distribution Function \\
 
