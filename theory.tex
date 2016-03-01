@@ -42,7 +42,7 @@ involving the $W$ and $Z$, and the electromagnetic force, involving
 just the photon.
 The $W$ and $Z$ gauge bosons (as well as the quarks and leptons) receive
 their non-zero masses through the process of electroweak symmetry
-breaking. The simplest form of electroweak symmetry breaking 
+breaking (EWSB). The simplest form of EWSB
 introduces an additional 'Higgs' field that
 predicts a single new fundamental scalar boson. This boson is the
 famous Higgs boson which was discovered recently at the LHC, thereby
@@ -60,42 +60,55 @@ The charges describe how (and if) the particles participate in
 different interactions.
 Those fermions with electric charge (all but the neutrinos) 
 participate in the electromagnetic
-interactions. The quarks have color charge, which allows them to 
-participate in QCD interactions. All fermions have EW hyper-charge, 
-which allows them to participate in the EW interactions. %explain better
+interactions. The quarks have color charge (sometimes 
+just called color), which allows them to 
+participate in the QCD interactions. All fermions also participate in 
+the weak interactions. The types of allowed weak interactions are determined
+by a combination of the electric charge as well as the weak isospin
+and weak hypercharge, described later.
+%explain better
 Since all of the particles are fermions, they all have a spin of 1/2.
 The masses of the particles are not predicted by the theory, but 
-are essential for understanding their stability and decay properties,
+are essential for understanding their stability and decay properties
 as well as their kinematic behavior.
-%hyper charge?
-anti-particles? color?
+Each particle also has a corresponding anti-particle with the same mass but
+whose electric charge has opposite sign. The neutrinos, with zero 
+electric charge, could possibly be their own 
+anti-particle (so-called Majorana fermions), but
+this has yet to be confirmed.
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{|llc|c|c|}
+\small
+\begin{tabular}{|lclc|c|c|}
 \hline
-                        & &   & Electric Charge & Mass [MeV]\\
+                        & Generation & Name & Symbol  & Charge & Mass [MeV]\\
 \hline
-\multirow{6}{*}{Quarks}& Up & $u$   &  $~~2/3$    &  $2.3 ^{+0.7}_{-0.5}$    \\
-                       & Down & $d$  &  $-1/3$    &  $4.8^{+0.5}_{-0.3}$    \\
-                       & Charm & $c$   & $~~2/3$     & $1275 \pm 25$     \\
-                       & Strange & $s$   & $-1/3$     & $95 \pm 5$     \\
-                       & Top & $t$   &  $~~2/3$    &  $173210 \pm 874$    \\
-                       & Bottom & $b$   &  $-1/3$    & $4180 \pm 30$     \\
+\multirow{6}{*}{Quarks}& \multirow{2}{*}{First}& Up & $u$   &  $~~2/3$    &  $2.3 ^{+0.7}_{-0.5}$    \\
+                       & & Down & $d$  &  $-1/3$    &  $4.8^{+0.5}_{-0.3}$    \\
+		       \cline{2-6} 
+                       &\multirow{2}{*}{Second}& Charm & $c$   & $~~2/3$     & $1275 \pm 25$     \\
+                       && Strange & $s$   & $-1/3$     & $95 \pm 5$     \\
+		       \cline{2-6} 
+                       &\multirow{2}{*}{Third}& Top & $t$   &  $~~2/3$    &  $173210 \pm 874$    \\
+                       && Bottom & $b$   &  $-1/3$    & $4180 \pm 30$     \\
 \hline
 \hline
-\multirow{6}{*}{Leptons}& Electron & $e$     &  -1    &  $0.510998928 \pm 0.000000011$ \\
-                        & Muon & $\mu$     &   -1   &   $105.6583715 \pm 0.0000035$   \\
-                        & Tau & $\tau$     &   -1   &  $1776.86 \pm 0.12$    \\
-                        & Electron Neutrino & $\nu_e$  & 0    &   $ < 0.002$    \\
-                        & Muon Neutrino & $\nu_{\mu}$  & 0   &  $ < 0.19$    \\
-                        & Tau Neutrino & $\nu_{\tau}$  & 0    &  $< 18.2 $    \\
+\multirow{6}{*}{Leptons}&\multirow{2}{*}{First} &Electron & $e$     &  -1    &  $0.510998928 \pm 0.000000011 $ \\
+                        & & Electron Neutrino & $\nu_e$  & 0    &   $ < 0.002$    \\
+		       \cline{2-6} 
+                        &\multirow{2}{*}{Second} &Muon & $\mu$     &   -1   &   $105.6583715 \pm 0.0000035$   \\
+                        & &Muon Neutrino & $\nu_{\mu}$  & 0   &  $ < 0.19$    \\
+		       \cline{2-6} 
+                        & \multirow{2}{*}{Third}&Tau & $\tau$     &   -1   &  $1776.86 \pm 0.12$    \\
+                        & &Tau Neutrino & $\nu_{\tau}$  & 0    &  $< 18.2 $    \\
 \hline
 \end{tabular}
 \label{tab:theory_fermions}
 \caption{Summary of the electric charge and measured masses of the SM fermions. Mass measurements
 are taken from the Particle Data Group \cite{PDG:2014} and 
 are shown to the best precision available with their measured uncertainties.
+Particles are also organized by their generation.
 The bottom quark mass measurement is shown using the $\overline{\textrm{MS}}$ 
 renormalization scheme.
 The top quark mass uncertainty combines the reported statistical and systematic uncertainties 
@@ -104,11 +117,88 @@ The limits on the electron neutrino and muon neutrino masses are set at a 90\% c
 while the tau neturino limits are set at a 95\% confidence level.}
 \end{table}
 
-\subsection{The Electroweak Theory}
-\subsubsection{Electroweak Symmetry Breaking}
-\subsubsection{The $W$ Boson}
+The quarks and leptons can each be divided up into three ``generations'' composed of pairs
+of particles with identical charges but whose masses increase with each generation.
+The generations are labeled in \tab\ref{tab:theory_fermions}. 
+In the leptonic sector, leptons only interact exclusively with leptons of their own generation.
+However, in the quark sector, while there is a strong preference for the quarks to interact
+within the same generation, it is still possible for quarks to interact with quarks of 
+the other generations. This is described by the CKM matrix... %elaborate
+Even though there are three 
+generations in both the lepton and quark sectors, 
+the quarks and leptons are not observed to interact directly, 
+thus the quark and lepton generations should be thought of as separate.
+
+
+The SM can be written down using a lagrangian of the form
+\begin{equation}
+\curlyl_{\textrm{SM}} = \curlyl_{\textrm{QCD}} + \curlyl_{\textrm{EW}} + \curlyl_{\textrm{EWSB}}
+\end{equation}
+which is gauge invariant or something...
+From this, one can calculate all of the fundamental interactions of the SM.
+As written, the SM lagrangian can be split up into separate terms describing the
+QCD, EW, and EWSB behavior. 
+The EWSB term includes the behavior related to fermion mass generation.
+The details of each term are described in more detail below.
+
+CP violation?
+
 \subsection{Quantum Chromodynamics}
-\subsubsection{Parton Distribution Functions}
+The QCD term in the SM lagrangian can be written as
+\subsection{Parton Distribution Functions}
+\subsection{The Electroweak Theory}
+The EW term in the SM lagrangian can be written as
+\subsection{Electroweak Symmetry Breaking}
+The EWSB term in the SM lagrangian can be written as
+
+
+
+\subsection{The \dubya~Boson}
+Of most interest to the topic of this thesis is the behavior and properties
+of the \dubya~boson, the charged gauge boson of the EW theory.
+The \dubya~was first discovered in 1983 via $p\overline{p}$ collisions
+at SPS Synchroton by looking at its decay to an electron %abbreviation?
+and electron neutrino (cite).
+Its mass has been measured in $p\overline{p}$ collisions at the Tevatron
+and in $e^{+}e^{-}$ collisions at LEP to give a world 
+average of $80.385 \pm 0.015\GeV$~\cite{PDG:2014}.
+More recently, measurements of the mass have also been 
+performed in $pp$ collisions at the LHC have been shown to be consistent
+with \_\_ reported from ATLAS (cite) and \_\_\_ from CMS (cite).
+The width assuming a Breit-Wigner distribution has also been measured 
+at LEP and the Tevatron with an average value 
+of $2.085\pm0.042\GeV$ \cite{PDG:2014}. %what about the LHC ?
+
+refer to isospin and hypercharge?
+lepton universality?
+
+The \dubya~decays into quarks roughly 2/3 of the time. 
+The remaining third of the time the \dubya~decays approximately 
+evenly into each of the three lepton generations.
+The measured branching fractions are summarized in \tab\ref{tab:theory_wdecay}.
+The leptonic decays of the \dubya~result in a charged lepton 
+with the same charge as the parent \dubya~(as dictated by charge conservation)
+and a neutrino (or anti-neutrino if the parent \dubya~has negative charge).
+Thus, the allowed leptonic decays are of the form:
+\begin{align*}
+W^{-} &\rightarrow l^{-} \overline{\nu}_l \\
+W^{+} &\rightarrow l^{+} \nu_l
+\end{align*}
+
+\begin{table}[ht]
+\begin{tabular}{c}
+blah 
+\end{tabular}
+\caption{Measured branching fractions of the \dubya~boson as reported
+by the Particle Data Group \cite{PDG:2014}}
+\label{tab:theory_wdecay}
+\end{table}
+
+maybe show W mass plot from PDG or distribution from ATLAS?
+
+The CKM...
+
+
 \section{Signal}
 \subsection{WWW Signal}
 \subsection{Effective Field Theory}
