@@ -1,5 +1,3 @@
-\chapter{Theory}
-\label{sec:theory}
 
 %Here I need to go through and describe all of the things that are important for the discussion
 %aim for 20 pages
@@ -21,54 +19,100 @@
 % Parton Distribution Function (PDF)
 
 
-We can describe the probability of a given process to be produced by calculating its cross-section, measured in barns ($1~\textrm{barn}=10^{-24}~\textrm{cm}^2$).
+\section{The Standard Model}
 
+The Standard Model (SM) is a theory which describes all of the
+observed matter and interactions in the universe, except for gravity.
+It is built from a quantum field theory where the consitutent particles
+and interactions fit into a non-abelian 
+$\suthree\times\sutwo\times\uone$~gauge symmetry.
+From these symmetries come the matter fermions, split 
+into the quarks and leptons, and the force-carrying bosons
+that mediate their interactions.
+The \suthree~symmetry describes the theory of Quantum Chromodynamics (QCD)
+which explains the interaction of the quarks via the gluons, the
+gauge bosons that mediate the strong force.
+The remaining $\sutwo\times\uone$~symmetry 
+describes the Electroweak (EW) theory which explains
+the interactions of the quarks and leptons via the 
+electroweak gauge bosons that mediate
+the electroweak force: $W$, $Z$, and $\gamma$ (i.e. the photon).
+The EW theory is itself a unified description of the weak force,
+involving the $W$ and $Z$, and the electromagnetic force, involving
+just the photon.
+The $W$ and $Z$ gauge bosons (as well as the quarks and leptons) receive
+their non-zero masses through the process of electroweak symmetry
+breaking. The simplest form of electroweak symmetry breaking 
+introduces an additional 'Higgs' field that
+predicts a single new fundamental scalar boson. This boson is the
+famous Higgs boson which was discovered recently at the LHC, thereby
+confirming this last component of the SM.
+%cite
 
-Since a $W$ boson is too short lived to ever be measured directly, we
-must instead study its decay products. 
-The $W$ boson can decay into two different categories of 
-particles: either
-``leptonically'' into a charged lepton ($\ell$) and a 
-neutrino ($\nu$) or ``hadronically''
-into a pair of quarks.
-Quarks are particles that interact with the Strong force and are 
-usually measured as complicated
-collections of particles called jets.
-The charged leptons include the 
-electrons, $e^{\pm}$, familiar because of their presence in stable matter,
-and the less familiar muons, $\mu^{\pm}$, and taus, $\tau^{\pm}$, 
-which themselves decay before forming stable matter.  
-Muons live long enough to be measured
-in the ATLAS detector while tau leptons do not. Because of this, we 
-only refer to electrons and muons when discussing the charged leptons.
-There are also three different types of neutrinos, named according to which
-charged lepton they pair with 
-during $W$ decay;  these are the electron neutrino ($\nu_e$),
-muon neutrino ($\nu_{\mu}$), and tau neutrino ($\nu_{\tau}$). 
-Neutrinos are peculiar 
-because they are notoriously difficult to measure.  
-As a result, we can only infer their presence after measuring all 
-of the particles in the detector and taking into account
-that the momentum is constrained at the collision point. If the momentum 
-from all of the particles that were measured does not meet this 
-constraint, the imbalance is attributed to the
-presence of neutrinos. We call this ``missing energy''.  Thus, the 
-leptonic $W$  decay channel is measured
-experimentally by the presence of a charged lepton 
-(electron or muon) plus missing energy.
+All of the 
+observed fundamental 
+matter particles in the universe are described by the quark
+and leptons of the SM. Their properties are listed 
+in \tab\ref{tab:theory_fermions}. 
+The particles can be distinguished
+by their charges and their masses.
+The charges describe how (and if) the particles participate in
+different interactions.
+Those fermions with electric charge (all but the neutrinos) 
+participate in the electromagnetic
+interactions. The quarks have color charge, which allows them to 
+participate in QCD interactions. All fermions have EW hyper-charge, 
+which allows them to participate in the EW interactions. %explain better
+Since all of the particles are fermions, they all have a spin of 1/2.
+The masses of the particles are not predicted by the theory, but 
+are essential for understanding their stability and decay properties,
+as well as their kinematic behavior.
+%hyper charge?
+anti-particles? color?
 
+\begin{table}[ht]
+\centering
+\begin{tabular}{|llc|c|c|}
+\hline
+                        & &   & Electric Charge & Mass [MeV]\\
+\hline
+\multirow{6}{*}{Quarks}& Up & $u$   &  $~~2/3$    &  $2.3 ^{+0.7}_{-0.5}$    \\
+                       & Down & $d$  &  $-1/3$    &  $4.8^{+0.5}_{-0.3}$    \\
+                       & Charm & $c$   & $~~2/3$     & $1275 \pm 25$     \\
+                       & Strange & $s$   & $-1/3$     & $95 \pm 5$     \\
+                       & Top & $t$   &  $~~2/3$    &  $173210 \pm 874$    \\
+                       & Bottom & $b$   &  $-1/3$    & $4180 \pm 30$     \\
+\hline
+\hline
+\multirow{6}{*}{Leptons}& Electron & $e$     &  -1    &  $0.510998928 \pm 0.000000011$ \\
+                        & Muon & $\mu$     &   -1   &   $105.6583715 \pm 0.0000035$   \\
+                        & Tau & $\tau$     &   -1   &  $1776.86 \pm 0.12$    \\
+                        & Electron Neutrino & $\nu_e$  & 0    &   $ < 0.002$    \\
+                        & Muon Neutrino & $\nu_{\mu}$  & 0   &  $ < 0.19$    \\
+                        & Tau Neutrino & $\nu_{\tau}$  & 0    &  $< 18.2 $    \\
+\hline
+\end{tabular}
+\label{tab:theory_fermions}
+\caption{Summary of the electric charge and measured masses of the SM fermions. Mass measurements
+are taken from the Particle Data Group \cite{PDG:2014} and 
+are shown to the best precision available with their measured uncertainties.
+The bottom quark mass measurement is shown using the $\overline{\textrm{MS}}$ 
+renormalization scheme.
+The top quark mass uncertainty combines the reported statistical and systematic uncertainties 
+in quadrature.
+The limits on the electron neutrino and muon neutrino masses are set at a 90\% confidence level 
+while the tau neturino limits are set at a 95\% confidence level.}
+\end{table}
 
-
-\section{Standard Model}
 \subsection{The Electroweak Theory}
-\subsection{Electroweak Symmetry Breaking}
-\subsection{The $W$ Boson}
+\subsubsection{Electroweak Symmetry Breaking}
+\subsubsection{The $W$ Boson}
 \subsection{Quantum Chromodynamics}
-\subsection{Parton Distribution Functions}
+\subsubsection{Parton Distribution Functions}
 \section{Signal}
 \subsection{WWW Signal}
 \subsection{Effective Field Theory}
-\subsection{Anomalous Quartic Gauge Couplings}
+\subsubsection{Anomalous Quartic Gauge Couplings}
 %be sure to add a review of measurements
 
 A measurement
@@ -94,7 +138,7 @@ The Lagrangian of the effective field theory is thus:
 \mathcal{L}_{eff} = \mathcal{L}_{SM} + \frac{f_{s0}}{\Lambda^4}\mathcal{L}_{s,0}+\frac{f_{s1}}{\Lambda^4}\mathcal{L}_{s,1}
 \end{equation}
 The choice of the two operators is introduced to benchmark possible
-deviations from the Standard Model. If a significant excess of events is 
+deviations from the SM. If a significant excess of events is 
 observed in the data, the parameterization will be changed, to incorporate 
 more operators, to
 investigate the nature of the observed new physics.
