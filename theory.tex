@@ -24,7 +24,7 @@
 The Standard Model (SM) is a theory which describes all of the
 observed matter and interactions in the universe, except for gravity.
 It is built from a quantum field theory where the consitutent particles
-and interactions fit into a non-abelian 
+and interactions fit into a non-Abelian 
 $\suthree\times\sutwo\times\uone$~gauge symmetry.
 From these symmetries come the matter fermions, split 
 into the quarks and leptons, and the force-carrying bosons
@@ -147,6 +147,7 @@ CP violation?
 The QCD term in the SM lagrangian can be written as
 \subsection{Parton Distribution Functions}
 \subsection{The Electroweak Theory}
+\label{sec:theory_ew}
 The EW term in the SM lagrangian can be written as
 \subsection{Electroweak Symmetry Breaking}
 The EWSB term in the SM lagrangian can be written as
@@ -157,25 +158,27 @@ The EWSB term in the SM lagrangian can be written as
 Of most interest to the topic of this thesis is the behavior and properties
 of the \dubya~boson, the charged gauge boson of the EW theory.
 The \dubya~was first discovered in 1983 via $p\overline{p}$ collisions
-at SPS Synchroton by looking at its decay to an electron %abbreviation?
+at the SPS by looking at its decay to an electron %abbreviation?
 and electron neutrino (cite).
 Its mass has been measured in $p\overline{p}$ collisions at the Tevatron
 and in $e^{+}e^{-}$ collisions at LEP to give a world 
-average of $80.385 \pm 0.015\GeV$~\cite{PDG:2014}.
-More recently, measurements of the mass have also been 
-performed in $pp$ collisions at the LHC have been shown to be consistent
-with \_\_ reported from ATLAS (cite) and \_\_\_ from CMS (cite).
+average of $80.385 \pm 0.015\GeV$~\cite{PDG:2014}, consistent
+with the prediction of the mass from \eqn\eqref{}
+using values for sin2,alpha,Gf of \_\_\_.
+A summary of the \dubya~mass masurements is shown in \fig\ref{fig:theory_wmass}.
 The width assuming a Breit-Wigner distribution has also been measured 
 at LEP and the Tevatron with an average value 
 of $2.085\pm0.042\GeV$ \cite{PDG:2014}. %what about the LHC ?
 
-refer to isospin and hypercharge?
-lepton universality?
+\begin{figure}[ht]
+\centering
+\caption{Summary of \dubya~mass meassurements.}
+\label{fig:theory_wmass}
+\end{figure}
 
-The \dubya~decays into quarks roughly 2/3 of the time. 
-The remaining third of the time the \dubya~decays approximately 
-evenly into each of the three lepton generations.
-The measured branching fractions are summarized in \tab\ref{tab:theory_wdecay}.
+Roughly 1/3 of of the time the \dubya~decays approximately 
+evenly into each of the three lepton generations,
+as expected from lepton universality.
 The leptonic decays of the \dubya~result in a charged lepton 
 with the same charge as the parent \dubya~(as dictated by charge conservation)
 and a neutrino (or anti-neutrino if the parent \dubya~has negative charge).
@@ -184,25 +187,184 @@ Thus, the allowed leptonic decays are of the form:
 W^{-} &\rightarrow l^{-} \overline{\nu}_l \\
 W^{+} &\rightarrow l^{+} \nu_l
 \end{align*}
+The \dubya~decays into quarks the remaining 2/3 of the time with a positively
+(negatively) chared \dubya~decaying into a up-type quark (anti-quark) and 
+and down-type anti-quark (quark) as determined by charge conservation as follows:
+\begin{align*}
+W^{+} &\rightarrow q_u \overline{q}_d \\
+W^{-} &\rightarrow \overline{q}_u q_d
+\end{align*}
+The \dubya~decay prefers decays into quarks/anti-quark pairs of the same generation.
+However, quark universality is partially in the weak charged interactions, with
+a slight mixing of the interactions between the three generations. The 
+degree of mixing is described by the CKM matrix (cite) which has been
+determined experimentally.  In general, this mixing of the three quark 
+generations does not preserve CP symmetry. (define?) Indeed, small CP
+violating effects were first observed in the weak interactions in 1964
+by looking at the properties of kaon decays (cite, confirm wording).
+The measured branching fractions for the \dubya~are 
+summarized in \tab\ref{tab:theory_wdecay}.
 
 \begin{table}[ht]
-\begin{tabular}{c}
-blah 
+\centering
+\begin{tabular}{l|c}
+Decay Mode &  Branching Fraction [\%]\\
+\hline
+$e^+\nu_e$ ($e^-\overline{\nu}_e$) & $10.71 \pm 0.16$ \\
+$\mu^+\nu_{\mu}$ ($\mu^-\overline{\nu}_{\mu}$) & $10.63 \pm 0.15$\\
+$\tau^+\nu_{\tau}$ ($\tau^-\overline{\nu}_{\tau}$) & $11.38 \pm 0.21$\\
+Quarks & $67.41 \pm 0.27$\\
 \end{tabular}
-\caption{Measured branching fractions of the \dubya~boson as reported
-by the Particle Data Group \cite{PDG:2014}}
+\caption{Measured branching fractions of the $\dubya^+$ ($\dubya^-$)~boson 
+as reported by the Particle Data Group \cite{PDG:2014}.  The $W$ decays
+to quarks result in hadronic states which in general prohibit
+one from determining the specific $W$ final state. Thus, only 
+an inclusive branching fraction is listed for the decay to quarks.}
 \label{tab:theory_wdecay}
 \end{table}
 
-maybe show W mass plot from PDG or distribution from ATLAS?
 
-The CKM...
+The cross-section of the production of the \dubya~at colliders
+depends on the initial state (i.e. $pp$ vs $p\overline{p}$) and on the
+collision energy. 
+The cross-section times branching fraction to leptons 
+has been measured at Phenix (RHIC?) (cite), the SPS (cite), the Tevatron
+(cite) and most recently at the LHC at 7~\TeV (cite), 8~\TeV (cite), 
+and 13~\TeV(cite). A summary of these measurements is shown in 
+\fig\ref{fig:theory_wxsec} and is shown to be in good agreement with 
+the predictions.
+
+\begin{figure}[ht]
+\centering
+\caption{Summary of w cross-section measurements.}
+\label{fig:theory_wxsec}
+\end{figure}
+
+Differential distributions?
 
 
-\section{Signal}
-\subsection{WWW Signal}
-\subsection{Effective Field Theory}
-\subsubsection{Anomalous Quartic Gauge Couplings}
+\section{Multi-boson Electroweak production}
+
+
+\begin{figure}[ht]
+\centering
+\caption{Feynman diagrams of TGC and QGC couplings}
+\label{fig:theory_feynman_couplings}
+\end{figure}
+
+The non-Abelian character of the 
+EW theory of \sec\ref{sec:theory_ew} predicts interactions
+between the EW gauge bosons. These interactions are restricted
+to the triple gauge coupling (TGC) interactions ($WWZ$ and $WW\gamma$)
+and the quartic gauge coupling (QGC) interactions ($WWZZ$, $WWZ\gamma$,
+$WW\gamma\gamma$, and $WWWW$). Their feynman diagrams 
+are shown in \fig\ref{fig:theory_feynman_couplings}.
+Neutral interactions that do not include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
+are not allowed because... %look in electroweak book
+
+Measurements sensitive to $WW\gamma\gamma$
+have been performed at LEP (cite), the Tevatron (cite), and the LHC (cite); 
+%mention how they were probed?
+to $WWZ\gamma$ at LEP (cite)
+and the Tevatron (cite); to $ZZ\gamma\gamma$ at LEP (cite); 
+and to $WWWW$ at the LHC. Typically, these studies are performed
+by looking at x final state (more detail). 
+The first measurements sensitive to the $WWWW$ vertex focused on 
+same-sign $WW$ vector boson scattering because...
+
+
+What about TGC measurements?
+
+summary plots? maybe from pdg?
+
+
+\subsection{$WWW$ Production}
+
+\begin{figure}[ht]
+\centering
+\caption{Feynman diagrams for $WWW$ production.}
+\label{fig:theory_feynman_www}
+\end{figure}
+
+In this thesis, we are interested in the inclusive production of three
+$W$ bosons from proton-proton collisions:
+$pp\rightarrow\- \Wp\Wp\Wm+X$ and $pp\rightarrow \Wp\Wm\Wm\allowbreak +X$, 
+where $X$ is intended to refer to the fact that no requirements are 
+placed on additional particles produced in the hard interaction.
+This is sensitive both
+to the $WWWW$ coupling (non-resonant production) 
+and to associated Higgs production (sometimes referred to as
+``Higgsstrahlung'') where the Higgs decays to two
+$W$ bosons (resonant production). 
+The relevant
+tree-level feynman diagrams for this production process are shown in 
+\fig\ref{fig:theory_feynman_www}.
+The Higgs decay results in one $W$ boson being produced off-shell,
+$H\rightarrow WW^*$, making this the leading contribution to off-shell
+production.  
+The resonance from the Higgs can clearly be seen from the 
+distribution of $m_{\Wp\Wm}$ taken from the simulation of production \www~events
+in \fig\ref{fig:mww_higgs}.
+
+%It would be nice to show a plot of the Higgs stuff. maybe I can
+%steal this and make my own later...
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\columnwidth]{figures/2l2j/mWW-parton.pdf}
+\caption{ Invariant mass distribution of two opposite-sign $W$ bosons 
+in \www events generated with VBFNLO at LO. The Higgs mass peak is clearly 
+visible at 126~GeV.}
+\label{fig:mww_higgs}
+\end{figure}
+
+
+
+The cross-section for this process can be computed at 
+next-to-leading-order (NLO) in QCD
+( $O(\alpha_s^2)$ in perturbation theory (?) ). Using 
+the \madgraph~generator finds an inclusive cross-section of 
+\begin{equation}
+\sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb}
+\end{equation}
+where the uncertainty is purely statistical.
+The contribution from resonant production is computed separately
+and found to make up about 64\% of the 
+total inclusive cross-section.
+More details on the determination of the signal cross-section, uncertainties,
+kinematics are presented in \sec\ref{sec:signal}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=.8]{figures/branching_fractions.png}
+\caption{Pie chart showing the different decay modes contributing 
+to the total \xsec for the \www~process. 
+The dotted areas indicate the portion of each decay 
+mode which is due to the production of tau leptons.}
+\label{fig:branching_fractions}
+\end{figure}
+
+Due to the short lifetime of the $W$ boson, each of the $W$ bosons
+in the $WWW$ process will decay before reaching the detector.
+This results in a measurable final state for the $WWW$ production 
+process that includes some combination of leptons 
+and quarks (manifested as jets).  The branching fractions for 
+the $WWW$ process can be determined from the individual $W$ branching fractions
+listed in \tab\ref{tab:theory_wdecay}.  The expected $WWW$ branching
+fractions are thus summarized in the pie chart in \fig\ref{fig:branching_fractions}.
+For this thesis, we are primarily interested in the final state
+where each $W$ boson decays leptonically (the fully-leptonic final state) 
+which has the smallest branching fraction at roughly 3.5\%.
+In fact, since the $\tau$ leptons are also unstable, we choose to 
+omit $W$ decays to $\tau$ leptons from our fully-leptonic
+definition as well. This further reduces the fully-leptonic 
+branching fraction to 0.97\%.  While small, this fully-leptonic final state
+should have smaller backgrounds to the signal than the other 
+decay channels, making it one of the most sensitive channels for studying
+this process.
+
+
+\section{Effective Field Theory}
+\subsection{Anomalous Quartic Gauge Couplings}
 %be sure to add a review of measurements
 
 A measurement
