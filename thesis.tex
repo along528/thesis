@@ -28,12 +28,26 @@
 \hypersetup{backref,  
 pdfpagemode=FullScreen,  
 colorlinks=false}
-
-
+\usepackage[final]{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{}
+\makeatletter
+\def\endfmffile{%
+	\fmfcmd{\p@rcent\space the end.^^J%
+			end.^^J%
+			endinput;}%
+	\if@fmfio
+		\immediate\closeout\@outfmf
+	\fi
+	\ifnum\pdfshellescape=\@ne
+		\immediate\write18{mpost \thefmffile}%
+	\fi}
+\makeatother
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
+%\unitlength = 0.3mm %necessary for feynmp
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

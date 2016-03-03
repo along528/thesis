@@ -266,10 +266,114 @@ Differential distributions?
 \section{Multi-boson Electroweak production}
 
 
+\unitlength = 0.3mm %necessary for feynmp
+
 \begin{figure}[ht]
 \centering
-\caption{Feynman diagrams of TGC and QGC couplings}
-\label{fig:theory_feynman_couplings}
+%\includegraphics[width=.2\textwidth]{figures/template.pdf}
+\vspace{5 mm}
+\begin{fmffile}{feynwwz}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$Z$}{i1}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~
+\begin{fmffile}{feynwwg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$\gamma$}{i1}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+		\end{fmfgraph*}
+
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagrams of TGC couplings}
+\label{fig:theory_feynman_couplings_tgc}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\vspace{5 mm}
+\begin{fmffile}{feynwwww}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feynwwzz}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$Z$}{o1}
+			\fmflabel{$Z$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feynwwzg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$Z$}{o1}
+			\fmflabel{$\gamma$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feynwwgg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$\gamma$}{o1}
+			\fmflabel{$\gamma$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagrams of QGC couplings}
+\label{fig:theory_feynman_couplings_qgc}
 \end{figure}
 
 The non-Abelian character of the 
@@ -278,7 +382,8 @@ between the EW gauge bosons. These interactions are restricted
 to the triple gauge coupling (TGC) interactions ($WWZ$ and $WW\gamma$)
 and the quartic gauge coupling (QGC) interactions ($WWZZ$, $WWZ\gamma$,
 $WW\gamma\gamma$, and $WWWW$). Their feynman diagrams 
-are shown in \fig\ref{fig:theory_feynman_couplings}.
+are shown in \fig\ref{fig:theory_feynman_couplings_tgc}
+and \fig\ref{fig:theory_feynman_couplings_qgc}.
 Neutral interactions that do not include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
 are not allowed because... %look in electroweak book
 
@@ -304,9 +409,74 @@ summary plots? maybe from pdg?
 
 \subsection{$WWW$ Production}
 
+\unitlength = 0.6mm %necessary for feynmp
 \begin{figure}[ht]
 \centering
-\caption{Feynman diagrams for $WWW$ production.}
+\vspace{5 mm}
+\begin{fmffile}{feynwwwprod1}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2,o3}
+
+			\fmf{fermion}{i1,v1}
+			\fmf{fermion}{v1,i2}
+			\fmf{photon}{v1,v2}
+			\fmf{photon}{v2,o1}
+			\fmf{photon}{v2,o2}
+			\fmf{photon}{v2,o3}
+		\end{fmfgraph*}
+\end{fmffile}
+\hspace{6 mm}
+\begin{fmffile}{feynwwwprod2}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2,o3}
+
+			\fmf{fermion}{i1,v1}
+			\fmf{fermion}{v1,i2}
+			\fmf{photon}{v1,v2}
+			\fmf{photon}{v2,o1}
+			\fmf{dashes,label=$H^0$}{v2,v3}
+			\fmf{photon}{v3,o2}
+			\fmf{photon}{v3,o3}
+		\end{fmfgraph*}
+\end{fmffile}
+
+\vspace{6 mm}
+\begin{fmffile}{feynwwwprod3}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2,o3}
+
+			\fmf{fermion}{i1,v1}
+			\fmf{fermion}{v1,v2}
+			\fmf{fermion}{v2,v3}
+			\fmf{fermion}{v3,i2}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v2,o2}
+			\fmf{photon}{v3,o3}
+		\end{fmfgraph*}
+\end{fmffile}
+\hspace{6 mm}
+\begin{fmffile}{feynwwwprod4}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2,o3}
+			\fmf{fermion}{i1,v1}
+			\fmf{fermion}{v1,v2}
+			\fmf{fermion}{v2,i2}
+			\fmf{photon,label=$Z/\gamma^{*}$}{v2,v3}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v3,o2}
+			\fmf{photon}{v3,o3}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{The tree level Feynman diagrams 
+for $WWW$ production. The incoming fermion
+lines in each diagram consist of an
+up-type quark (anti-quark) and down-type anti-quark (quark). The
+outgoing boson lines are all $W$ bosons.}
 \label{fig:theory_feynman_www}
 \end{figure}
 
