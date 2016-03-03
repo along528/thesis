@@ -150,6 +150,126 @@ The QCD term in the SM lagrangian can be written as
 \subsection{The Electroweak Theory}
 \label{sec:theory_ew}
 The EW term in the SM lagrangian can be written as
+
+
+\unitlength = 0.3mm %necessary for feynmp
+
+%\begin{figure}[ht]
+%\centering
+%\vspace{5 mm}
+%\begin{fmffile}{feynwwz}
+%		\begin{fmfgraph*}(80,50)
+%			\fmfleft{i1}
+%			\fmfright{o1,o2}
+%			\fmf{photon}{i1,v1}
+%			\fmf{photon}{v1,o1}
+%			\fmf{photon}{v1,o2}
+%			\fmflabel{$Z$}{i1}
+%			\fmflabel{$W^+$}{o1}
+%			\fmflabel{$W^-$}{o2}
+%		\end{fmfgraph*}
+%\end{fmffile}
+%~~~~~
+%\begin{fmffile}{feynwwg}
+%		\begin{fmfgraph*}(80,50)
+%			\fmfleft{i1}
+%			\fmfright{o1,o2}
+%			\fmf{photon}{i1,v1}
+%			\fmf{photon}{v1,o1}
+%			\fmf{photon}{v1,o2}
+%			\fmflabel{$\gamma$}{i1}
+%			\fmflabel{$W^+$}{o1}
+%			\fmflabel{$W^-$}{o2}
+%		\end{fmfgraph*}
+%\end{fmffile}
+%\vspace{2 mm}
+%\caption{Feynman diagrams of TGC couplings}
+%\label{fig:theory_feynman_couplings_tgc}
+%\end{figure}
+
+\begin{figure}[ht]
+\centering
+\vspace{5 mm}
+\begin{fmffile}{feynwwww}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feynwwzz}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$Z$}{o1}
+			\fmflabel{$Z$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feynwwzg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$Z$}{o1}
+			\fmflabel{$\gamma$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feynwwgg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$\gamma$}{o1}
+			\fmflabel{$\gamma$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagrams of QGC couplings}
+\label{fig:theory_feynman_couplings_qgc}
+\end{figure}
+
+The non-Abelian character of the 
+EW theory of \sec\ref{sec:theory_ew} predicts interactions
+between the EW gauge bosons. These interactions are restricted
+to the triple gauge coupling (TGC) interactions ($WWZ$ and $WW\gamma$)
+and the quartic gauge coupling (QGC) interactions ($WWZZ$, $WWZ\gamma$,
+$WW\gamma\gamma$, and $WWWW$). Of primary interest are the 
+QGC interactions, whose feynman diagrams 
+are shown in \fig\ref{fig:theory_feynman_couplings_qgc}.
+Neutral interactions that do not include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
+are not allowed because... %look in electroweak book
+
+
 \subsection{Electroweak Symmetry Breaking}
 The EWSB term in the SM lagrangian can be written as
 
@@ -263,151 +383,10 @@ at the LHC \cite{ATLAS-CONF-2015-039}.  }
 Differential distributions?
 
 
-\section{Multi-boson Electroweak production}
 
 
-\unitlength = 0.3mm %necessary for feynmp
 
-\begin{figure}[ht]
-\centering
-%\includegraphics[width=.2\textwidth]{figures/template.pdf}
-\vspace{5 mm}
-\begin{fmffile}{feynwwz}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{i1}
-			\fmfright{o1,o2}
-			\fmf{photon}{i1,v1}
-			\fmf{photon}{v1,o1}
-			\fmf{photon}{v1,o2}
-
-			\fmflabel{$Z$}{i1}
-			\fmflabel{$W^+$}{o1}
-			\fmflabel{$W^-$}{o2}
-		\end{fmfgraph*}
-\end{fmffile}
-~~~~~
-\begin{fmffile}{feynwwg}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{i1}
-			\fmfright{o1,o2}
-			\fmf{photon}{i1,v1}
-			\fmf{photon}{v1,o1}
-			\fmf{photon}{v1,o2}
-
-			\fmflabel{$\gamma$}{i1}
-			\fmflabel{$W^+$}{o1}
-			\fmflabel{$W^-$}{o2}
-		\end{fmfgraph*}
-
-\end{fmffile}
-\vspace{2 mm}
-\caption{Feynman diagrams of TGC couplings}
-\label{fig:theory_feynman_couplings_tgc}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\vspace{5 mm}
-\begin{fmffile}{feynwwww}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{i1,i2}
-			\fmfright{o1,o2}
-			\fmf{photon}{i1,v1}
-			\fmf{photon}{i2,v1}
-			\fmf{photon}{v1,o1}
-			\fmf{photon}{v1,o2}
-
-			\fmflabel{$W^+$}{i1}
-			\fmflabel{$W^-$}{i2}
-			\fmflabel{$W^+$}{o1}
-			\fmflabel{$W^-$}{o2}
-		\end{fmfgraph*}
-\end{fmffile}
-~~~~~~~
-\begin{fmffile}{feynwwzz}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{i1,i2}
-			\fmfright{o1,o2}
-			\fmf{photon}{i1,v1}
-			\fmf{photon}{i2,v1}
-			\fmf{photon}{v1,o1}
-			\fmf{photon}{v1,o2}
-
-			\fmflabel{$W^+$}{i1}
-			\fmflabel{$W^-$}{i2}
-			\fmflabel{$Z$}{o1}
-			\fmflabel{$Z$}{o2}
-		\end{fmfgraph*}
-\end{fmffile}
-~~~~~~~
-\begin{fmffile}{feynwwzg}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{i1,i2}
-			\fmfright{o1,o2}
-			\fmf{photon}{i1,v1}
-			\fmf{photon}{i2,v1}
-			\fmf{photon}{v1,o1}
-			\fmf{photon}{v1,o2}
-
-			\fmflabel{$W^+$}{i1}
-			\fmflabel{$W^-$}{i2}
-			\fmflabel{$Z$}{o1}
-			\fmflabel{$\gamma$}{o2}
-		\end{fmfgraph*}
-\end{fmffile}
-~~~~~~~
-\begin{fmffile}{feynwwgg}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{i1,i2}
-			\fmfright{o1,o2}
-			\fmf{photon}{i1,v1}
-			\fmf{photon}{i2,v1}
-			\fmf{photon}{v1,o1}
-			\fmf{photon}{v1,o2}
-
-			\fmflabel{$W^+$}{i1}
-			\fmflabel{$W^-$}{i2}
-			\fmflabel{$\gamma$}{o1}
-			\fmflabel{$\gamma$}{o2}
-		\end{fmfgraph*}
-\end{fmffile}
-\vspace{2 mm}
-\caption{Feynman diagrams of QGC couplings}
-\label{fig:theory_feynman_couplings_qgc}
-\end{figure}
-
-The non-Abelian character of the 
-EW theory of \sec\ref{sec:theory_ew} predicts interactions
-between the EW gauge bosons. These interactions are restricted
-to the triple gauge coupling (TGC) interactions ($WWZ$ and $WW\gamma$)
-and the quartic gauge coupling (QGC) interactions ($WWZZ$, $WWZ\gamma$,
-$WW\gamma\gamma$, and $WWWW$). Their feynman diagrams 
-are shown in \fig\ref{fig:theory_feynman_couplings_tgc}
-and \fig\ref{fig:theory_feynman_couplings_qgc}.
-Neutral interactions that do not include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
-are not allowed because... %look in electroweak book
-
-Measurements sensitive to $WW\gamma\gamma$ have been performed 
-at LEP \cite{Abdallah:2003xn,PhysRevD.70.032005}, 
-the Tevatron \cite{PhysRevD.88.012005}, %is this really the only tevatron measurement??
-and the LHC \cite{PhysRevLett.115.031802,PhysRevD.90.032008,Chatrchyan:2013akv}; 
-%mention how they were probed?
-to $WWZ\gamma$ at LEP~\cite{Achard:2001eg,Abbiendi:1999aa,Abbiendi:2003jh}
-and at the LHC~\cite{PhysRevD.90.032008};
-to $ZZ\gamma\gamma$ at LEP \cite{Achard:2002iz,PhysRevD.70.032005}; 
-and to $WWWW$ at the LHC \cite{PhysRevLett.113.141803,PhysRevLett.114.051801}. 
-Typically, these studies are performed
-by looking at x final state (more detail). 
-The first measurements sensitive to the $WWWW$ vertex focused on 
-same-sign $WW$ vector boson scattering because...
-
-
-What about TGC measurements?
-
-summary plots? maybe from pdg?
-
-
-\subsection{$WWW$ Production}
+\section{$WWW$ Production}
 
 \unitlength = 0.6mm %necessary for feynmp
 \begin{figure}[ht]
@@ -516,9 +495,14 @@ visible at 126~GeV. (make a better plot)}
 
 
 
+
 The cross-section for this process can be computed at 
 next-to-leading-order (NLO) in QCD
-( $O(\alpha_s^2)$ in perturbation theory (?) ). Using 
+( $O(\alpha_s^2)$ in perturbation theory (?) ). 
+(Mention more details of how this is computed like pdfs,
+hadronization, interaction, radiation, decays. Use one of the 
+feynman diagrams)
+Using 
 the \madgraph~generator finds an inclusive cross-section of 
 \begin{equation}
 \sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb}
@@ -557,7 +541,17 @@ definition as well. This further reduces the fully-leptonic
 branching fraction to 0.97\%.  While small, this fully-leptonic final state
 should have smaller backgrounds to the signal than the other 
 decay channels, making it one of the most sensitive channels for studying
-this process.
+this process. The branching fraction when one $W$ boson is allowed
+to decay hadronically is considerably larger, at 21.6\% (or
+9.2\% when excluding decays to $\tau$ leptons). This is 
+referred to as the semi-leptonic decay channel. The presence
+of the two leptons from the other two $W$ decays still allows
+for background discrimination, though not as much as in the fully-leptonic
+channel. As a result, this channel has also been studied, though it 
+is not the focus of this thesis. The remaining channels have
+not been studied. The combination of the fully-leptonic
+and semi-leptonic channels is presented in \sec\ref{sec:measurement}.
+
 
 
 \section{Effective Field Theory}
@@ -596,5 +590,25 @@ investigate the nature of the observed new physics.
 % for investigating the nature of the observed new physics.
 
 
+\section{Status of QGC Measurements and aQGC Limits}
+A variety of measurements sensitive QGC interactions have been
+performed at colliders. In particular, measurements sensitive
+to $WW\gamma\gamma$ have been performed 
+at LEP \cite{Abdallah:2003xn,PhysRevD.70.032005}, 
+the Tevatron \cite{PhysRevD.88.012005}, %is this really the only tevatron measurement??
+and the LHC \cite{PhysRevLett.115.031802,PhysRevD.90.032008,Chatrchyan:2013akv}; 
+%mention how they were probed?
+to $WWZ\gamma$ at LEP~\cite{Achard:2001eg,Abbiendi:1999aa,Abbiendi:2003jh}
+and at the LHC~\cite{PhysRevD.90.032008};
+to $ZZ\gamma\gamma$ at LEP \cite{Achard:2002iz,PhysRevD.70.032005}; 
+and to $WWWW$ at the LHC \cite{PhysRevLett.113.141803,PhysRevLett.114.051801}. 
+Typically, these studies are performed
+by looking at x final state (more detail). 
+The first measurements sensitive to the $WWWW$ vertex focused on 
+same-sign $WW$ vector boson scattering because...
+
+material on limits?
+
+summary plots? maybe from pdg?
 
 
