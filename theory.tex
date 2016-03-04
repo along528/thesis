@@ -222,7 +222,6 @@ and
 \begin{equation}
 B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
 \end{equation}
-
 The coupling constants $g$ and $g'$ describe the strength of the interactions
 of the fermions with the gauge boson fields before EWSB. 
 
@@ -301,19 +300,35 @@ the term
 which can be expanded to 
 \begin{equation}
 \begin{aligned}
--\frac{1}{4} g^2 ( &2 W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}
-                  - 2 W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\
-		  + &4 W_{\mu}^+ W^{-\mu} W^{3}_{\nu}W^{3 \nu}
-		  - 4 W_{\mu}^+ W^{3\mu} W_{\nu}^- W^{3 \nu})
+-\frac{1}{2} g^2 \Big( & W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}
+                  -  W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\
+		  + &2 W_{\mu}^+ W^{-\mu} W^{3}_{\nu}W^{3 \nu}
+		  - 2 W_{\mu}^+ W^{3\mu} W_{\nu}^- W^{3 \nu}\Big)
 \end{aligned}
 \end{equation}
-Upon EWSB this becomes...
-Each of these terms in succession 
-can thus be identified as the quartic gauge coupling
-(QGC) interaction $WWZZ$, $WWZ\gamma$, $WW\gamma\gamma$, and $WWWW$.
+Upon EWSB this becomes
+\begin{equation}
+\begin{aligned}
+&-\frac{1}{2} g^2 \Big(  W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}
+                  -  W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \Big) \\
+&-\sin^2\theta_W g^2 \Big(  W_{\mu}^+ W^{-\mu} A_{\nu} A^{\nu}
+                  -  W_{\mu}^+ A^{\mu} W_{\nu}^- A^{\nu} \Big)\\
+&-\cos^2\theta_W g^2 \Big( W_{\mu}^+ W^{-\mu} Z_{\nu} Z^{\nu}
+                  -  W_{\mu}^+ Z^{\mu} W_{\nu}^- Z^{\nu} \Big)\\
+&-\sin\theta_W\cos\theta_W g^2 \Big( W_{\mu}^+ W^{-\mu} A_{\nu} Z^{\nu}
+                  +W_{\mu}^+W^{-\mu} Z_{\nu} A^{\nu}\\
+		  &\hspace{3cm}- W_{\mu}^+ A^{\mu} W_{\nu}^- Z^{\nu}
+		  - W_{\mu}^+ Z^{\mu} W_{\nu}^- A^{\nu}\Big)\\
+\end{aligned}
+\end{equation}
+where each succesive term in parentheses  
+can thus be identified as one of the quartic gauge coupling
+(QGC) interactions $WWWW$, $WW\gamma\gamma$, $WWZZ$, or $WWZ\gamma$
+whose coupling strengths are given by the constants in front and
 whose feynman diagrams 
 are shown in \fig\ref{fig:theory_feynman_couplings_qgc}.
-Neutral interactions that do not include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
+Neutral interactions that do not 
+include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
 do not appear in the SM EW lagrangian.
 
 
