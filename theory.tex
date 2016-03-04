@@ -45,7 +45,8 @@ their non-zero masses through the process of electroweak symmetry
 breaking (EWSB). The simplest form of EWSB
 introduces an additional 'Higgs' field that
 predicts a single new fundamental scalar boson. This boson is the
-famous Higgs boson which was discovered recently at the LHC, thereby
+famous Higgs boson which was discovered recently at the 
+LHC \cite{Aad20121,Chatrchyan:2012xdj}, thereby
 confirming this last component of the SM.
 %cite
 
@@ -55,7 +56,7 @@ matter particles in the universe are described by the quark
 and leptons of the SM. Their properties are listed 
 in \tab\ref{tab:theory_fermions}. 
 The particles can be distinguished
-by their charges and their masses.
+by their charges and masses.
 The charges describe how (and if) the particles participate in
 different interactions.
 Those fermions with electric charge (all but the neutrinos) 
@@ -65,7 +66,7 @@ just called color), which allows them to
 participate in the QCD interactions. All fermions also participate in 
 the weak interactions. The types of allowed weak interactions are determined
 by a combination of the electric charge as well as the weak isospin
-and weak hypercharge, described later.
+and weak hypercharge, described in \sec\ref{sec:theory_ew}.
 %explain better
 Since all of the particles are fermions, they all have a spin of 1/2.
 The masses of the particles are not predicted by the theory, but 
@@ -76,6 +77,14 @@ whose electric charge has opposite sign. The neutrinos, with zero
 electric charge, could possibly be their own 
 anti-particle (so-called Majorana fermions), but
 this has yet to be confirmed.
+The quarks and leptons can each be divided up into three ``generations'' 
+composed of pairs
+of particles with identical charges but whose masses increase with each generation.
+The generations are labeled in \tab\ref{tab:theory_fermions}. 
+Even though there are three 
+generations in both the lepton and quark sectors, 
+the quarks and leptons are not observed to interact directly, 
+thus the quark and lepton generations should be thought of as separate.
 
 \begin{table}[ht]
 \centering
@@ -112,67 +121,54 @@ are shown to the best precision available with their measured uncertainties.
 Particles are also organized by their generation.
 The bottom quark mass measurement is shown using the $\overline{\textrm{MS}}$ 
 renormalization scheme.
-The top quark mass uncertainty combines the reported statistical and systematic uncertainties 
+The top quark mass uncertainty combines the reported statistical and 
+systematic uncertainties 
 in quadrature.
-The limits on the electron neutrino and muon neutrino masses are set at a 90\% confidence level 
+The limits on the electron neutrino and muon neutrino masses are 
+set at a 90\% confidence level 
 while the tau neturino limits are set at a 95\% confidence level.}
 \end{table}
 
-The quarks and leptons can each be divided up into three ``generations'' composed of pairs
-of particles with identical charges but whose masses increase with each generation.
-The generations are labeled in \tab\ref{tab:theory_fermions}. 
-In the leptonic sector, leptons only interact exclusively with leptons of their own generation.
-However, in the quark sector, while there is a strong preference for the quarks to interact
-within the same generation, it is still possible for quarks to interact with quarks of 
-the other generations. This is described by the CKM matrix... %elaborate
-Even though there are three 
-generations in both the lepton and quark sectors, 
-the quarks and leptons are not observed to interact directly, 
-thus the quark and lepton generations should be thought of as separate.
 
 
 The SM can be written down using a lagrangian of the form
 \begin{equation}
 \curlyl_{\textrm{SM}} = \curlyl_{\textrm{QCD}} + \curlyl_{\textrm{EW}} + \curlyl_{\textrm{EWSB}}
 \end{equation}
-which is gauge invariant or something...
+which statisfies global and local gauge invariance.
 From this, one can calculate all of the fundamental interactions of the SM.
 As written, the SM lagrangian can be split up into separate terms describing the
 QCD, EW, and EWSB behavior. 
-The EWSB term includes the behavior related to fermion mass generation.
 The details of each term are described in more detail below.
 
-CP violation?
 
 \subsection{Quantum Chromodynamics}
 The QCD term in the SM lagrangian can be written as
 \subsection{Parton Distribution Functions}
 \subsection{The Electroweak Theory}
 \label{sec:theory_ew}
-The electroweak (EW) theory of Glasgow, Weinberg, and Salam (cite)
-is a renormalizable (cite t hooft?) 
-is a non-Abelian gauge theory 
+The electroweak (EW) 
+theory of Glasgow, Weinberg, and 
+Salam \cite{glashow:1961tr,Salam:1968rm,weinberg:1967tq}
+is a renormalizable \cite{hooft1971renormalization,Hooft1971167}
+non-Abelian gauge theory 
 that successfully unifies the theories 
-of \uone~electromagnetism and \sutwo~weak.
-It incorporates the charge and parity violating interactions (cite?) 
-of the weak interactions while preserving these symmetries of electromagnetism.
+of the \uone~electromagnetism and \sutwo~weak interactions.
+It incorporates the observed 
+charge conjugation ($C$) 
+and parity ($P$) violating V-A structure of the weak interactions
+\cite{PhysRev.105.1413,Garwin:1957hc,PhysRev.106.1290}
+while simultaenously preserving these symmetries for electromagnetism.
 It explains the presence of the massive EW gauge bosons 
 while maintaining gauge invariance
-using spontaneous symmetry breaking via the Higgs 
-mechanism which recently received confirmation through the discovery of 
-the Higgs boson at the LHC in 2012 (cite). 
-It also includes the CP violating flavor mixing of the 
-charged interactions in the quark sector via the CKM (expand) matrix (cite).
-
-   
-
-V-A
-
-The fermions of the electroweak field theory belong to doublets and singlets...
-Describe R and L in advance
-
-neutral current still has some 
-
+using spontaneous symmetry breaking, described in 
+\sec\ref{sec:theory_ewsb}.
+It also includes the observed CP violating 
+\cite{PhysRevLett.13.138} 
+flavor mixing of the 
+charged interactions in the quark sector via 
+the Caibbo-Kobayashi-Maskawa 
+matrix \cite{Cabibbo:1963yz,Kobayashi:1973fv}.
 
 The EW term in the SM lagrangian can be written as
 \begin{equation}
@@ -192,7 +188,7 @@ are the left-handed fermion isospin doublets and right-handed
 fermion isospin singlets, described in more detail later.
 The gauge fields, $\mathbf{W}_{\mu}$ and $B_{\mu}$, represent the 
 massless EW gauge bosons before EWSB. They are four-vectors of the Lorentz group
-and thus undergo Lorentz transformations as indicated by their Lorentz index $\mu$.
+and thus undergo Lorentz transformations as indicated by their Lorentz index, $\mu$.
 The $\mathbf{W}_{\mu}$ describes two charged gauge bosons and 
 a neutral gauge boson as an isotriplet of 
 vector fields ($W_{\mu}^i$)
@@ -200,17 +196,21 @@ in \sutwo~with generators
 $\boldsymbol{\tau}$\footnote{The generators of \sutwo~are the famous
 Pauli matrices.}.
 The charged gauge bosons are represented by a superposition of the first
-two componentns of the 
+two components of the 
 isotriplet, $W_{\mu}^{\pm}=\sqrt{\frac{1}{2}}\Big(W_{\mu}^1\mp i W_{\mu}^2\Big)$,
 while the neutral gauge boson is represented 
 by the third component, $W_{\mu}^3$.
 The $B_{\mu}$ describes a single neutral gauge boson 
 using a single vector field in \uone~with the generator $Y$, referred
 to as the weak hypercharge.
-By construction, the generator of \uone
-electromagnetism, $Q$ (i.e. the electric charge), is related
-to the generator of the third component of weak \sutwo, $T^3$,
-and the weak hypercharge by $Q=T^3+Y/2$.
+By construction, the weak hypercharge is related to
+the electric charge of \uone~
+electromagnetism, $Q$, 
+and the charge of the third component of weak \sutwo, $T^3$:
+\begin{equation}
+Q=T^3+Y/2
+\label{eq:ewcharges}
+\end{equation}
 The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
 group and the $\gamma^{\mu}$ are the Dirac matrices.
 The kinetic energies are described by the field strength tensors
@@ -225,8 +225,7 @@ B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
 The coupling constants $g$ and $g'$ describe the strength of the interactions
 of the fermions with the gauge boson fields before EWSB. 
 
-Upon EWSB, described in more detail in \sec\ref{},
-the two neutral gauge boson fields, $W_{\mu}^3$ and $B_{\mu}$, 
+Upon EWSB, the two neutral gauge boson fields, $W_{\mu}^3$ and $B_{\mu}$, 
 mix according to the weak mixing angle, $\theta_W$:
 \begin{align}
 A_{\mu} =& \cos\theta_W B_{\mu} + \sin\theta_W W_{\mu}^3 \\
@@ -235,20 +234,67 @@ Z_{\mu} =& -\sin\theta_W B_{\mu} + \cos\theta_W W_{\mu}^3
 where $Z_{\mu}$ corresponds to the massive $Z$ boson field
 and $A_{\mu}$ corresponds to the massless photon field.
 The charged $W$ bosons also receive a mass.
-The masses of the $W$ and $Z$ and related by the weak mixing angle:
+The masses of the $W$ and $Z$ are related by the weak mixing angle
 \begin{equation}
 \frac{M_W}{M_Z} = \cos \theta_W
 \end{equation}
-as are the coupling constants, $g$ and $g'$:
+as are the coupling constants, $g$ and $g'$
 \begin{equation}
 \frac{g'}{g} = \tan\theta_W
 \end{equation}
-The fundamental parameters of the EW theory are not determined \emph{a priori}, 
-but using these relations, the theory can be completely specified
-(excluding fermion masses and CKM mising (described in ...)) after measuring 
-three of the fundamental parameters of the theory.
-What about alpha and G fermi? How to get the W mass? page 56 of Bucksbaum
+The fundamental parameters of the EW theory 
+are not determined \emph{a priori}, 
+but the theory can be completely specified
+after measuring only three.
+%For instance, measurements of the fine-structure constant, $\alpha$;
+%the Fermi constant, $G_F$, and the weak mixing angle can be used to solve
+%for the $W$ mass, $m_W$:
+%\begin{equation}
+%m_{W}^2 = \frac{1}{\sqrt{2}}\frac{\pi\alpha}{ G_F \sin^2\theta_W}
+%\end{equation}
+%Using the most precise measurements of these values 
+%as reported in \tab\ref{tab:ewparams} gives a predicted
+%value of $m_W= $.
+%\begin{table}[ht]
+%\centering
+%\begin{tabular}{lc|rcl}
+%\multicolumn{2}{l|}{Parameter Name} &\multicolumn{3}{l}{Measured Value} \\
+%\hline
+%Fermi constant &  $G_F$ & $1.1663787$&$\pm$&$0.0000006\times10^{-5}\GeV^{-2}$\\
+%Weak mixing angle & $\sin^2\theta_W$ & $0.23126 $&$\pm$&$ 0.00005$\\
+%Fine structure constant & $\alpha$ & $7.2973525664 $&$\pm$&$ 0.0000000017\times 10^{-3}$
+%\end{tabular}
+%\caption{Measured values of EW parameters with uncertainties\cite{PDG:2014}}
+%\label{tab:ewparams}
+%\end{table}
 
+\begin{table}[ht]
+\centering
+\begin{tabular}{llc|ccc}
+  \multicolumn{3}{c|}{Particle} & $Q$ & $Y$ & $T^3$\\
+\hline
+\hline
+\multirow{4}{*}{Quarks} & \multirow{2}{*}{Left-Handed}&  $u_L$   &  2/3  &1/3 & 1/2  \\
+                       &                              &  $d_L$  & -1/3   &1/3& -1/2 \\
+		       \cline{2-6}
+                       &\multirow{2}{*}{Right-Handed}&  $u_R$   & 2/3  & 4/3 & 0 \\
+                       &                             &  $d_R$  & -1/3   &-2/3& 0\\
+\hline
+\hline
+\multirow{4}{*}{Leptons}&\multirow{2}{*}{Left-Handed} &$e_L$     & -1  & -1& 1/2\\
+                        &                             & $\nu_{e,L}$  & 0 &-1&-1/2 \\
+		       \cline{2-6}
+                        &\multirow{2}{*}{Right-Handed} &$e_R$     & -1  & -2& 0\\
+                        &                              & $\nu_{e,R}$  & 0 &0 &0 \\
+\end{tabular}
+\caption{}
+\label{tab:ewcharges}
+\end{table}
+
+The V-A structure of the weak interactions is captured
+by assigning charges to the SM fermions 
+such that they satisfy \eqn\eqref{eq:ewcharges} as listed
+in \tab\ref{tab:ewcharges}.
 Any theory describing the charged weak interactions must incorporate the 
 charge and parity symmetry violations first observed from helicity 
 measurements... (cite)
@@ -443,6 +489,7 @@ do not appear in the SM EW lagrangian.
 
 
 \subsection{Electroweak Symmetry Breaking}
+\label{sec:theory_ewsb}
 The EWSB term in the SM lagrangian can be written as
 
 mention higgs couplings to WW
