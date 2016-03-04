@@ -149,7 +149,174 @@ The QCD term in the SM lagrangian can be written as
 \subsection{Parton Distribution Functions}
 \subsection{The Electroweak Theory}
 \label{sec:theory_ew}
+The electroweak (EW) theory of Glasgow, Weinberg, and Salam (cite)
+is a renormalizable (cite t hooft?) 
+is a non-Abelian gauge theory 
+that successfully unifies the theories 
+of \uone~electromagnetism and \sutwo~weak.
+It incorporates the charge and parity violating interactions (cite?) 
+of the weak interactions while preserving these symmetries of electromagnetism.
+It explains the presence of the massive EW gauge bosons 
+while maintaining gauge invariance
+using spontaneous symmetry breaking via the Higgs 
+mechanism which recently received confirmation through the discovery of 
+the Higgs boson at the LHC in 2012 (cite). 
+It also includes the CP violating flavor mixing of the 
+charged interactions in the quark sector via the CKM (expand) matrix (cite).
+
+   
+
+V-A
+
+The fermions of the electroweak field theory belong to doublets and singlets...
+Describe R and L in advance
+
+neutral current still has some 
+
+
 The EW term in the SM lagrangian can be written as
+\begin{equation}
+\begin{aligned}
+\curlyl_{\textrm{EW}} = &-\frac{1}{4}\textbf{W}_{\mu\nu} \cdot \textbf{W}^{\mu\nu} 
+- \frac{1}{4} B_{\mu\nu} B^{\mu\nu}  \\
+&+\overline{L}\gamma^{\mu}\Big( i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) L \\
+&+ \overline{R} \gamma^{\mu} \Big( i \partial_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) R
+\end{aligned}
+\end{equation}
+where the first two terms describe the kinetic energies and 
+self-interactions of the EW gauge bosons
+and the second two terms describe the fermion kinetic energies
+and their interactions with the EW gauge bosons.
+$L$ and $R$ (and their charge conjugates $\overline{L}$ and $\overline{R}$)
+are the left-handed fermion isospin doublets and right-handed
+fermion isospin singlets, described in more detail later.
+The gauge fields, $\mathbf{W}_{\mu}$ and $B_{\mu}$, represent the 
+massless EW gauge bosons before EWSB. They are four-vectors of the Lorentz group
+and thus undergo Lorentz transformations as indicated by their Lorentz index $\mu$.
+The $\mathbf{W}_{\mu}$ describes two charged gauge bosons and 
+a neutral gauge boson as an isotriplet of 
+vector fields ($W_{\mu}^i$)
+in \sutwo~with generators
+$\boldsymbol{\tau}$\footnote{The generators of \sutwo~are the famous
+Pauli matrices.}.
+The charged gauge bosons are represented by a superposition of the first
+two componentns of the 
+isotriplet, $W_{\mu}^{\pm}=\sqrt{\frac{1}{2}}\Big(W_{\mu}^1\mp i W_{\mu}^2\Big)$,
+while the neutral gauge boson is represented 
+by the third component, $W_{\mu}^3$.
+The $B_{\mu}$ describes a single neutral gauge boson 
+using a single vector field in \uone~with the generator $Y$, referred
+to as the weak hypercharge.
+By construction, the generator of \uone
+electromagnetism, $Q$ (i.e. the electric charge), is related
+to the generator of the third component of weak \sutwo, $T^3$,
+and the weak hypercharge by $Q=T^3+Y/2$.
+The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
+group and the $\gamma^{\mu}$ are the Dirac matrices.
+The kinetic energies are described by the field strength tensors
+\begin{equation}
+\label{eq:wfieldstrength}
+\textbf{W}_{\mu\nu} = \partial_{\mu}\textbf{W}_{\nu} - \partial_{\nu}\textbf{W}_{\mu} - g \textbf{W}_{\mu}\times \textbf{W}_{\nu}
+\end{equation}
+and 
+\begin{equation}
+B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
+\end{equation}
+
+The coupling constants $g$ and $g'$ describe the strength of the interactions
+of the fermions with the gauge boson fields before EWSB. 
+
+Upon EWSB, described in more detail in \sec\ref{},
+the two neutral gauge boson fields, $W_{\mu}^3$ and $B_{\mu}$, 
+mix according to the weak mixing angle, $\theta_W$:
+\begin{align}
+A_{\mu} =& \cos\theta_W B_{\mu} + \sin\theta_W W_{\mu}^3 \\
+Z_{\mu} =& -\sin\theta_W B_{\mu} + \cos\theta_W W_{\mu}^3
+\end{align}
+where $Z_{\mu}$ corresponds to the massive $Z$ boson field
+and $A_{\mu}$ corresponds to the massless photon field.
+The charged $W$ bosons also receive a mass.
+The masses of the $W$ and $Z$ and related by the weak mixing angle:
+\begin{equation}
+\frac{M_W}{M_Z} = \cos \theta_W
+\end{equation}
+as are the coupling constants, $g$ and $g'$:
+\begin{equation}
+\frac{g'}{g} = \tan\theta_W
+\end{equation}
+The fundamental parameters of the EW theory are not determined \emph{a priori}, 
+but using these relations, the theory can be completely specified
+(excluding fermion masses and CKM mising (described in ...)) after measuring 
+three of the fundamental parameters of the theory.
+What about alpha and G fermi? How to get the W mass? page 56 of Bucksbaum
+
+Any theory describing the charged weak interactions must incorporate the 
+charge and parity symmetry violations first observed from helicity 
+measurements... (cite)
+The absence of charged weak interactions involving right-handed
+fermions and left-handed anti-fermions is thus taken into account
+by constructing the left-handed fermion fields as isospin doublets, $L$, 
+which transform under \sutwo~for each lepton and quark generation:
+\begin{equation}
+L = 
+\begin{pmatrix} e_L \\ \nu_{e,L} \end{pmatrix},
+\begin{pmatrix} \mu_L \\ \nu_{\mu,L} \end{pmatrix},
+\begin{pmatrix} \tau_L \\ \nu_{\tau,L} \end{pmatrix},
+\begin{pmatrix} u_L \\ d_{L} \end{pmatrix},
+\begin{pmatrix} c_L \\ s_{L} \end{pmatrix},
+\begin{pmatrix} t_L \\ b_{L} \end{pmatrix}
+\end{equation}
+and the right-handed fermion fiels as isospin singles, $R$, 
+which only transform under \uone:
+\begin{equation}
+R = e_R,~\nu_{e,R},~\mu_R,~\nu_{\mu,R},~\tau_R,~\nu_{\tau,R},~
+    u_R,~d_R,~c_R,~s_R,~t_R,~b_R
+\end{equation}
+where each object is a Dirac field whose helicity is indicated by 
+subscript.
+The interaction term of ... provides interactions between 
+the gauge bosons and the fermions. These are the terms like
+Wqq' and Wlnu... write terms and draw feynman diagrams.
+This gives the theory the observed vector minus axial vector form
+with full parity violation of the charged current interactions 
+and partial parity violation of the neutral current EW interactions
+after EWSB (what about EM?).
+
+relation between Q T3 and Y
+
+
+The non-Abelian character of the 
+EW theory 
+introduces the $-g\textbf{W}_{\mu} \times \textbf{W}_{\nu}$
+term in the \eqref{eq:wfieldstrength}
+which 
+predicts self-interactions
+among the EW gauge bosons. 
+In particular, the Lorentz contraction of the field strength introduces
+the term 
+\begin{equation}
+-\frac{1}{4} g^2 (\textbf{W}_{\mu} \times \textbf{W}_{\nu}) \cdot
+                 (\textbf{W}^{\mu} \times \textbf{W}^{\nu}) 
+\end{equation}
+which can be expanded to 
+\begin{equation}
+\begin{aligned}
+-\frac{1}{4} g^2 ( &2 W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}
+                  - 2 W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\
+		  + &4 W_{\mu}^+ W^{-\mu} W^{3}_{\nu}W^{3 \nu}
+		  - 4 W_{\mu}^+ W^{3\mu} W_{\nu}^- W^{3 \nu})
+\end{aligned}
+\end{equation}
+Upon EWSB this becomes...
+Each of these terms in succession 
+can thus be identified as the quartic gauge coupling
+(QGC) interaction $WWZZ$, $WWZ\gamma$, $WW\gamma\gamma$, and $WWWW$.
+whose feynman diagrams 
+are shown in \fig\ref{fig:theory_feynman_couplings_qgc}.
+Neutral interactions that do not include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
+do not appear in the SM EW lagrangian.
+
+
 
 
 \unitlength = 0.3mm %necessary for feynmp
@@ -258,24 +425,21 @@ The EW term in the SM lagrangian can be written as
 \label{fig:theory_feynman_couplings_qgc}
 \end{figure}
 
-The non-Abelian character of the 
-EW theory of \sec\ref{sec:theory_ew} predicts interactions
-between the EW gauge bosons. These interactions are restricted
-to the triple gauge coupling (TGC) interactions ($WWZ$ and $WW\gamma$)
-and the quartic gauge coupling (QGC) interactions ($WWZZ$, $WWZ\gamma$,
-$WW\gamma\gamma$, and $WWWW$). Of primary interest are the 
-QGC interactions, whose feynman diagrams 
-are shown in \fig\ref{fig:theory_feynman_couplings_qgc}.
-Neutral interactions that do not include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
-are not allowed because... %look in electroweak book
 
 
 \subsection{Electroweak Symmetry Breaking}
 The EWSB term in the SM lagrangian can be written as
 
+mention higgs couplings to WW
+mention higgs mass measurement
+
 
 
 \subsection{The \dubya~Boson}
+
+Can I incoroporate this material into the EW theory section?
+
+
 Of most interest to the topic of this thesis is the behavior and properties
 of the \dubya~boson, the charged gauge boson of the EW theory.
 The \dubya~was first discovered in 1983 via $p\overline{p}$ collisions
@@ -329,6 +493,8 @@ violating effects were first observed in the weak interactions in 1964
 by looking at the properties of kaon decays (cite, confirm wording).
 The measured branching fractions for the \dubya~are 
 summarized in \tab\ref{tab:theory_wdecay}.
+
+maybe show feynman diagrams for W decay?
 
 \begin{table}[ht]
 \centering
