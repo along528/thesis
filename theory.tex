@@ -351,8 +351,8 @@ terms where the charged $W$ and lepton fields are present gives
 \overline{\nu}_{\tau,R} W^-_{\mu} \tau_L \Big)
 \end{aligned}
 \end{equation}
-which corresponds to the Feynman diagram to the left
-in \fig\ref{fig:feyn_wcoupling}. It is this
+which corresponds to the Feynman diagrams at the top
+of \fig\ref{fig:feyn_wcoupling}. It is this
 type of interaction that is responsible for the $W$ decay to leptons.
 In the absence of quark flavor mixing, the interaction terms 
 of the quark sector look similar:
@@ -369,48 +369,82 @@ of the quark sector look similar:
 \overline{b}_{,R} W^-_{\mu} t_L \Big)
 \end{aligned}
 \end{equation}
-These terms correspond to the Feynman diagram to the right
-in \fig\ref{fig:feyn_wcoupling}
+These terms correspond to the Feynman diagrams at the bottom
+of \fig\ref{fig:feyn_wcoupling}.
 Taking into account quark flavor mixing via the CKM matrix
 modifies this picture by adding smaller interaction
 terms between different quark generations and also by slightly reducing
 the strength of the same-generation interactions.
 
 
-\unitlength = 0.3mm %necessary for feynmp
-
+\unitlength = 0.6mm %necessary for feynmp
 \begin{figure}[ht]
 \centering
 \vspace{5 mm}
-\begin{fmffile}{feynwleptons}
+\begin{fmffile}{feynwpleptons}
 		\begin{fmfgraph*}(80,50)
 			\fmfleft{i1}
 			\fmfright{o1,o2}
 			\fmf{photon}{i1,v1}
 			\fmf{fermion}{v1,o1}
 			\fmf{fermion}{o2,v1}
-			\fmflabel{$W$}{i1}
-			\fmflabel{$e,\mu,\tau$}{o1}
-			\fmflabel{$\nu_e,\nu_{\mu},\nu_{\tau}$}{o2}
+			\fmflabel{$W^+$}{i1}
+			%\fmflabel{$e_L,\mu_L,\tau_L$}{o1}
+			%\fmflabel{$\overline{\nu}_{e,R},\overline{\nu}_{\mu,R},\overline{\nu}_{\tau,R}$}{o2}
+			\fmflabel{$e_L$}{o1}
+			\fmflabel{$\overline{\nu}_{e,R}$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
-~~~~~~~~~~~~~~~~~~~~
-\begin{fmffile}{feynwquarks}
+\hspace{6 mm}
+\begin{fmffile}{feynwmleptons}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{fermion}{o1,v1}
+			\fmf{fermion}{v1,o2}
+			\fmflabel{$W^-$}{i1}
+			%\fmflabel{$\overline{e}_R,\overline{\mu}_{R},\overline{\tau}_R$}{o1}
+			%\fmflabel{$\nu_{e,L},\nu_{\mu,L},\nu_{\tau,L}$}{o2}
+			\fmflabel{$\overline{e}_R$}{o1}
+			\fmflabel{$\nu_{e,L}$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\\
+\vspace{15 mm}
+\begin{fmffile}{feynwpquarks}
 		\begin{fmfgraph*}(80,50)
 			\fmfleft{i1}
 			\fmfright{o1,o2}
 			\fmf{photon}{i1,v1}
 			\fmf{fermion}{v1,o1}
 			\fmf{fermion}{o2,v1}
-			\fmflabel{$W$}{i1}
-			\fmflabel{$u,c,t$}{o1}
-			\fmflabel{$d,s,b$}{o2}
+			\fmflabel{$W^+$}{i1}
+			%\fmflabel{$u_L,c_L,t_L$}{o1}
+			%\fmflabel{$\overline{d}_R,\overline{s}_R,\overline{b}_R$}{o2}
+			\fmflabel{$u_L$}{o1}
+			\fmflabel{$\overline{d}_R$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\hspace{6 mm}
+\begin{fmffile}{feynwmquarks}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{fermion}{o1,v1}
+			\fmf{fermion}{v1,o2}
+			\fmflabel{$W^-$}{i1}
+			%\fmflabel{$\overline{u}_R,\overline{c}_R,\overline{t}_R$}{o1}
+			%\fmflabel{$d_L,s_L,b_L$}{o2}
+			\fmflabel{$\overline{u}_R$}{o1}
+			\fmflabel{$d_L$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
 \vspace{2 mm}
-\caption{Feynman diagrams of the $W$ boson coupling to leptons (left)
-and to quarks (right). The charge and helicities of the fields must
-follow those specified in the text. The quark generations can
+\caption{Feynman diagrams of the couplings of the $W$ boson 
+to the first generation of leptons (top) and quarks (bottom).
+The quark generations can
 mix while the lepton generations do not.  }
 \label{fig:feyn_wcoupling}
 \end{figure}
@@ -498,6 +532,7 @@ do not appear in the SM EW lagrangian.
 %\label{fig:theory_feynman_couplings_tgc}
 %\end{figure}
 
+\unitlength = 0.3mm %necessary for feynmp
 \begin{figure}[ht]
 \centering
 \vspace{5 mm}
