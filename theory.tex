@@ -161,9 +161,8 @@ and parity ($P$) violating V-A structure of the weak interactions
 while simultaenously preserving these symmetries for electromagnetism.
 It explains the presence of the massive EW gauge bosons 
 while maintaining gauge invariance
-using spontaneous symmetry breaking, described in 
-\sec\ref{sec:theory_ewsb}.
-It also includes the observed CP violating 
+using spontaneous symmetry breaking
+and includes the observed CP violating 
 \cite{PhysRevLett.13.138} 
 flavor mixing of the 
 charged interactions in the quark sector via 
@@ -226,48 +225,7 @@ B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
 The coupling constants $g$ and $g'$ describe the strength of the interactions
 of the fermions with the gauge boson fields before EWSB. 
 
-Upon EWSB, the two neutral gauge boson fields, $W_{\mu}^3$ and $B_{\mu}$, 
-mix according to the weak mixing angle, $\theta_W$:
-\begin{align}
-A_{\mu} =& \cos\theta_W B_{\mu} + \sin\theta_W W_{\mu}^3 \\
-Z_{\mu} =& -\sin\theta_W B_{\mu} + \cos\theta_W W_{\mu}^3
-\end{align}
-where $Z_{\mu}$ corresponds to the massive $Z$ boson field
-and $A_{\mu}$ corresponds to the massless photon field.
-The charged $W$ bosons also receive a mass.
-The masses of the $W$ and $Z$ are related by the weak mixing angle
-\begin{equation}
-\frac{M_W}{M_Z} = \cos \theta_W
-\end{equation}
-as are the coupling constants, $g$ and $g'$
-\begin{equation}
-\frac{g'}{g} = \tan\theta_W
-\end{equation}
-While the fundamental parameters of the EW theory are related to each other
-by relations
-like those above, they are not determined \emph{a priori} 
-and so must be first determined from experiment.
-%For instance, measurements of the fine-structure constant, $\alpha$;
-%the Fermi constant, $G_F$, and the weak mixing angle can be used to solve
-%for the $W$ mass, $m_W$:
-%\begin{equation}
-%m_{W}^2 = \frac{1}{\sqrt{2}}\frac{\pi\alpha}{ G_F \sin^2\theta_W}
-%\end{equation}
-%Using the most precise measurements of these values 
-%as reported in \tab\ref{tab:ewparams} gives a predicted
-%value of $m_W= $.
-%\begin{table}[ht]
-%\centering
-%\begin{tabular}{lc|rcl}
-%\multicolumn{2}{l|}{Parameter Name} &\multicolumn{3}{l}{Measured Value} \\
-%\hline
-%Fermi constant &  $G_F$ & $1.1663787$&$\pm$&$0.0000006\times10^{-5}\GeV^{-2}$\\
-%Weak mixing angle & $\sin^2\theta_W$ & $0.23126 $&$\pm$&$ 0.00005$\\
-%Fine structure constant & $\alpha$ & $7.2973525664 $&$\pm$&$ 0.0000000017\times 10^{-3}$
-%\end{tabular}
-%\caption{Measured values of EW parameters with uncertainties\cite{PDG:2014}}
-%\label{tab:ewparams}
-%\end{table}
+
 
 \begin{table}[ht]
 \centering
@@ -452,6 +410,200 @@ mix while the lepton generations do not.  }
 \label{fig:feyn_wcoupling}
 \end{figure}
 
+The strength of the weak interactions is supressed by the massive
+nature of the charged and neutral weak bosons. But the EW theory 
+cannot assign masses directly to the gauge bosons without breaking 
+gauge invariance. This is resolved by the introduction of 
+spontaneous symmetry breaking which generates the masses for the 
+gauge bosons by adding new fields (?). The simplest explanation
+is the so-called Higgs (brout-engletrt?) (cite) mechanism.
+The lagrangian for EWSB via the Higgs mechanism is 
+\begin{equation}
+\begin{aligned}
+\curlyl_{\textrm{EWSB}} =& \Big|\Big(i \partial_{\mu} 
+			- g\frac{1}{2} \boldsymbol{\tau}\cdot \textbf{W}_{\mu}
+			- g' \frac{Y}{2} B_{\mu} \Big)\phi\Big|^2 \\
+			&- \Big(\mu^2 \phi^{\dagger} \phi + \lambda (\phi^{\dagger}\phi)^2 \Big) \\
+			&- \Big(G_1 (\overline{L}\phi R  + \overline{R}\phi_c L)
+			      + G_2 (\overline{L}\phi_c R + \overline{R}\phi L \Big)
+\end{aligned}
+\label{eq:lagrangian_ewsb}
+\end{equation}
+where the first line shows the interactions of the newly 
+introduced Higgs field, $\phi$, with the gauge bosons; 
+the second line is the famous ``mexican-hat'' potential 
+of the Higgs field, with parameters $\mu^2 < 0$ and $\lambda>0$, 
+that is responsible for the spontaneous symmetry 
+breaking in the Higgs mechansim;
+and the third line shows the Yukawa (cite) interactions 
+of the Higgs field with the fermions, with couplings $G_1$ and $G_2$,
+that give the fermions their masses.
+Before EWSB, $\phi$, and its conjugate $\phi_c$, 
+are complex isopsin doublets of four scalar fields:
+\begin{equation}
+\phi = \frac{1}{\sqrt{2}}
+\begin{pmatrix} 
+\phi_1 + i \phi_2 \\
+\phi_3 + i \phi_4
+\end{pmatrix}
+,~~~~~
+\phi_c = \frac{1}{\sqrt{2}}
+\begin{pmatrix} 
+-\phi_3 + i \phi_4 \\
+\phi_1 - i \phi_2
+\end{pmatrix}
+\end{equation}
+Upon EWSB, the Higgs fields become
+\begin{equation}
+\phi = \frac{1}{\sqrt{2}}
+\begin{pmatrix} 
+0\\
+v+h
+\end{pmatrix}
+,~~~~~
+\phi_c = \frac{1}{\sqrt{2}}
+\begin{pmatrix} 
+v + h\\
+0
+\end{pmatrix}
+\end{equation}
+where $v=m_h /\sqrt{2 \lambda}$ is the stable minimum of the 
+``mexican-hat'' potential and is a function of the Higgs boson 
+mass, $m_h = 2 \sqrt{- \mu^2}$, and $h$ is the quantum 
+vacuum fluctuations of the Higgs field about this minimum.
+Plugging this into the first line of \eqn\eqref{eq:lagrangian_ewsb}
+results in mass terms
+\begin{equation}
+m_W^2 W_{\mu}^+ W^{-\mu} + \frac{1}{2}m_Z^2 Z_{\mu} Z^{\mu} + \frac{1}{2} m_A^2 A_{\mu} A^{\mu}
+\end{equation}
+where $m_W = \frac{1}{2} vg$, $m_Z=\frac{1}{2} v\sqrt{g^2+g'^2}$, and 
+$m_A=0$.
+The two neutral gauge boson fields, $W_{\mu}^3$ and $B_{\mu}$, 
+now mix according to the weak mixing angle, $\theta_W$, to form two new fields:
+\begin{align}
+A_{\mu} =& \cos\theta_W B_{\mu} + \sin\theta_W W_{\mu}^3 \\
+Z_{\mu} =& -\sin\theta_W B_{\mu} + \cos\theta_W W_{\mu}^3
+\end{align}
+where $Z_{\mu}$ corresponds to the $Z$ boson field
+and $A_{\mu}$ corresponds to the photon field.
+Looking at the values for the mass terms, the $W^{\pm}$ and $Z$ fields
+receive a mass while $A$ is massless.
+The masses of the $W$ and $Z$ can be related by the weak mixing angle
+\begin{equation}
+\frac{M_W}{M_Z} = \cos \theta_W
+\end{equation}
+as can the coupling constants, $g$ and $g'$
+\begin{equation}
+\frac{g'}{g} = \tan\theta_W
+\end{equation}
+While the fundamental parameters of the EW theory are related to each other
+by relations
+like those above, they are not determined \emph{a priori} 
+and so must be first determined from experiment.
+%For instance, measurements of the fine-structure constant, $\alpha$;
+%the Fermi constant, $G_F$, and the weak mixing angle can be used to solve
+%for the $W$ mass, $m_W$:
+%\begin{equation}
+%m_{W}^2 = \frac{1}{\sqrt{2}}\frac{\pi\alpha}{ G_F \sin^2\theta_W}
+%\end{equation}
+%Using the most precise measurements of these values 
+%as reported in \tab\ref{tab:ewparams} gives a predicted
+%value of $m_W= $.
+%\begin{table}[ht]
+%\centering
+%\begin{tabular}{lc|rcl}
+%\multicolumn{2}{l|}{Parameter Name} &\multicolumn{3}{l}{Measured Value} \\
+%\hline
+%Fermi constant &  $G_F$ & $1.1663787$&$\pm$&$0.0000006\times10^{-5}\GeV^{-2}$\\
+%Weak mixing angle & $\sin^2\theta_W$ & $0.23126 $&$\pm$&$ 0.00005$\\
+%Fine structure constant & $\alpha$ & $7.2973525664 $&$\pm$&$ 0.0000000017\times 10^{-3}$
+%\end{tabular}
+%\caption{Measured values of EW parameters with uncertainties\cite{PDG:2014}}
+%\label{tab:ewparams}
+%\end{table}
+
+
+The presence of vacuum fluctuations of the higgs field, $h$, also 
+gives interactions of the Higgs field with the $W$ and $Z$ gauge bosons
+after plugging into the first line of \eqn\eqref{eq:lagrangian_ewsb}.
+The relevant terms look like
+\begin{equation}
+\frac{vg^2}{8} h W^+_{\mu}W^{-\mu} + \frac{g^2}{4} h^2W^{+}_{\mu}W^{-}_{\mu}
++\frac{vg^2}{4 \cos^2\theta_W} h Z_{\mu} Z^{\mu} 
++\frac{g^2}{8\cos^2\theta_W} h^2 Z_{\mu}Z^{\mu}
+\end{equation}
+which can be identified with the Feynman diagrams in \fig\ref{fig:feynman_higgs}.
+
+\unitlength = 0.3mm %necessary for feynmp
+\begin{figure}[ht]
+\centering
+\vspace{5 mm}
+~~~~
+\begin{fmffile}{feynwwh}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{dashes}{v1,o1}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$H$}{o1}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~
+\begin{fmffile}{feynwwhh}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{dashes}{v1,o1}
+			\fmf{dashes}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$H$}{o1}
+			\fmflabel{$H$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~
+\begin{fmffile}{feynzzh}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{dashes}{v1,o1}
+
+			\fmflabel{$Z$}{i1}
+			\fmflabel{$Z$}{i2}
+			\fmflabel{$H$}{o1}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~
+\begin{fmffile}{feynzzhh}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{dashes}{v1,o1}
+			\fmf{dashes}{v1,o2}
+
+			\fmflabel{$Z$}{i1}
+			\fmflabel{$Z$}{i2}
+			\fmflabel{$H$}{o1}
+			\fmflabel{$H$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagrams of the Higgs couplings with the $W$ and $Z$ 
+gauge bosons.}
+\label{fig:feynman_higgs}
+\end{figure}
+
 The non-Abelian character of the 
 EW theory introduces the $-g\textbf{W}_{\mu} \times \textbf{W}_{\nu}$
 term in \eqref{eq:wfieldstrength}
@@ -539,7 +691,7 @@ do not appear in the SM EW lagrangian.
 \begin{figure}[ht]
 \centering
 \vspace{5 mm}
-\begin{fmffile}{feynwwww}
+~~~~~\begin{fmffile}{feynwwww}
 		\begin{fmfgraph*}(80,50)
 			\fmfleft{i1,i2}
 			\fmfright{o1,o2}
@@ -606,15 +758,6 @@ do not appear in the SM EW lagrangian.
 \caption{Feynman diagrams of QGC couplings}
 \label{fig:theory_feynman_couplings_qgc}
 \end{figure}
-
-
-
-\subsection{Electroweak Symmetry Breaking}
-\label{sec:theory_ewsb}
-The EWSB term in the SM lagrangian can be written as
-
-mention higgs couplings to WW
-mention higgs mass measurement
 
 
 
