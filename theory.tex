@@ -309,6 +309,7 @@ terms where the charged $W$ and lepton fields are present gives
 \overline{\tau}_R W_{\mu}^+ \nu_{\tau,L} +
 \overline{\nu}_{\tau,R} W^-_{\mu} \tau_L \Big)
 \end{aligned}
+\label{eq:couplings_wleptons}
 \end{equation}
 which corresponds to the Feynman diagrams at the top
 of \fig\ref{fig:feyn_wcoupling}. It is this
@@ -415,8 +416,10 @@ nature of the charged and neutral weak bosons. But the EW theory
 cannot assign masses directly to the gauge bosons without breaking 
 gauge invariance. This is resolved by the introduction of 
 spontaneous symmetry breaking which generates the masses for the 
-gauge bosons by adding new fields (?). The simplest explanation
-is the so-called Higgs (brout-engletrt?) (cite) mechanism.
+gauge bosons. The simplest theory of this EWSB process 
+is the Brout-Englert-Higgs 
+mechanism  \cite{PhysRevLett.13.321,PhysRevLett.13.508}
+(or the Higgs mechanism for short).
 The lagrangian for EWSB via the Higgs mechanism is 
 \begin{equation}
 \begin{aligned}
@@ -425,17 +428,17 @@ The lagrangian for EWSB via the Higgs mechanism is
 			- g' \frac{Y}{2} B_{\mu} \Big)\phi\Big|^2 \\
 			&- \Big(\mu^2 \phi^{\dagger} \phi + \lambda (\phi^{\dagger}\phi)^2 \Big) \\
 			&- \Big(G_1 (\overline{L}\phi R  + \overline{R}\phi_c L)
-			      + G_2 (\overline{L}\phi_c R + \overline{R}\phi L \Big)
+			      + G_2 (\overline{L}\phi_c R + \overline{R}\phi L) \Big)
 \end{aligned}
 \label{eq:lagrangian_ewsb}
 \end{equation}
 where the first line shows the interactions of the newly 
-introduced Higgs field, $\phi$, with the gauge bosons; 
+introduced scalar Higgs field, $\phi$, with the gauge bosons; 
 the second line is the famous ``mexican-hat'' potential 
 of the Higgs field, with parameters $\mu^2 < 0$ and $\lambda>0$, 
 that is responsible for the spontaneous symmetry 
-breaking in the Higgs mechansim;
-and the third line shows the Yukawa (cite) interactions 
+breaking in the Higgs mechanism;
+and the third line shows the Yukawa interactions 
 of the Higgs field with the fermions, with couplings $G_1$ and $G_2$,
 that give the fermions their masses.
 Before EWSB, $\phi$, and its conjugate $\phi_c$, 
@@ -470,7 +473,7 @@ v + h\\
 where $v=m_h /\sqrt{2 \lambda}$ is the stable minimum of the 
 ``mexican-hat'' potential and is a function of the Higgs boson 
 mass, $m_h = 2 \sqrt{- \mu^2}$, and $h$ is the quantum 
-vacuum fluctuations of the Higgs field about this minimum.
+vacuum fluctuation of the Higgs field about this minimum.
 Plugging this into the first line of \eqn\eqref{eq:lagrangian_ewsb}
 results in mass terms
 \begin{equation}
@@ -496,31 +499,7 @@ as can the coupling constants, $g$ and $g'$
 \begin{equation}
 \frac{g'}{g} = \tan\theta_W
 \end{equation}
-While the fundamental parameters of the EW theory are related to each other
-by relations
-like those above, they are not determined \emph{a priori} 
-and so must be first determined from experiment.
-%For instance, measurements of the fine-structure constant, $\alpha$;
-%the Fermi constant, $G_F$, and the weak mixing angle can be used to solve
-%for the $W$ mass, $m_W$:
-%\begin{equation}
-%m_{W}^2 = \frac{1}{\sqrt{2}}\frac{\pi\alpha}{ G_F \sin^2\theta_W}
-%\end{equation}
-%Using the most precise measurements of these values 
-%as reported in \tab\ref{tab:ewparams} gives a predicted
-%value of $m_W= $.
-%\begin{table}[ht]
-%\centering
-%\begin{tabular}{lc|rcl}
-%\multicolumn{2}{l|}{Parameter Name} &\multicolumn{3}{l}{Measured Value} \\
-%\hline
-%Fermi constant &  $G_F$ & $1.1663787$&$\pm$&$0.0000006\times10^{-5}\GeV^{-2}$\\
-%Weak mixing angle & $\sin^2\theta_W$ & $0.23126 $&$\pm$&$ 0.00005$\\
-%Fine structure constant & $\alpha$ & $7.2973525664 $&$\pm$&$ 0.0000000017\times 10^{-3}$
-%\end{tabular}
-%\caption{Measured values of EW parameters with uncertainties\cite{PDG:2014}}
-%\label{tab:ewparams}
-%\end{table}
+
 
 
 The presence of vacuum fluctuations of the higgs field, $h$, also 
@@ -528,7 +507,7 @@ gives interactions of the Higgs field with the $W$ and $Z$ gauge bosons
 after plugging into the first line of \eqn\eqref{eq:lagrangian_ewsb}.
 The relevant terms look like
 \begin{equation}
-\frac{vg^2}{8} h W^+_{\mu}W^{-\mu} + \frac{g^2}{4} h^2W^{+}_{\mu}W^{-}_{\mu}
+\frac{vg^2}{8} h W^+_{\mu}W^{-\mu} + \frac{g^2}{4} h^2W^{+}_{\mu}W^{-\mu}
 +\frac{vg^2}{4 \cos^2\theta_W} h Z_{\mu} Z^{\mu} 
 +\frac{g^2}{8\cos^2\theta_W} h^2 Z_{\mu}Z^{\mu}
 \end{equation}
@@ -647,7 +626,7 @@ whose coupling strengths are given by the constants in front and
 whose feynman diagrams 
 are shown in \fig\ref{fig:theory_feynman_couplings_qgc}.
 Neutral interactions that do not 
-include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZ$)
+include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZZ$)
 do not appear in the SM EW lagrangian.
 
 
@@ -759,28 +738,27 @@ do not appear in the SM EW lagrangian.
 \label{fig:theory_feynman_couplings_qgc}
 \end{figure}
 
-
-
-\subsection{The \dubya~Boson}
-
-Can I incoroporate this material into the EW theory section?
-
-
-Of most interest to the topic of this thesis is the behavior and properties
-of the \dubya~boson, the charged gauge boson of the EW theory.
-The \dubya~was first discovered in 1983 via $p\overline{p}$ collisions
-at the SPS by looking at its decay to an electron %abbreviation?
-and electron neutrino (cite).
-Its mass has been measured in $p\overline{p}$ collisions at the Tevatron
-and in $e^{+}e^{-}$ collisions at LEP to give a world 
-average of $80.385 \pm 0.015\GeV$~\cite{PDG:2014}, consistent
-with the prediction of the mass from \eqn\eqref{}
-using values for sin2,alpha,Gf of \_\_\_.
-A summary of the \dubya~mass masurements is shown on 
-the right of \fig\ref{fig:theory_w_pdg}.
-The width assuming a Breit-Wigner distribution has also been measured 
-at LEP and the Tevatron as seen in the right of \fig\ref{fig:theory_w_pdg}
-with an average value of $2.085\pm0.042\GeV$ \cite{PDG:2014}.
+%For instance, measurements of the fine-structure constant, $\alpha$;
+%the Fermi constant, $G_F$, and the weak mixing angle can be used to solve
+%for the $W$ mass, $m_W$:
+%\begin{equation}
+%m_{W}^2 = \frac{1}{\sqrt{2}}\frac{\pi\alpha}{ G_F \sin^2\theta_W}
+%\end{equation}
+%Using the most precise measurements of these values 
+%as reported in \tab\ref{tab:ewparams} gives a predicted
+%value of $m_W= $.
+%\begin{table}[ht]
+%\centering
+%\begin{tabular}{lc|rcl}
+%\multicolumn{2}{l|}{Parameter Name} &\multicolumn{3}{l}{Measured Value} \\
+%\hline
+%Fermi constant &  $G_F$ & $1.1663787$&$\pm$&$0.0000006\times10^{-5}\GeV^{-2}$\\
+%Weak mixing angle & $\sin^2\theta_W$ & $0.23126 $&$\pm$&$ 0.00005$\\
+%Fine structure constant & $\alpha$ & $7.2973525664 $&$\pm$&$ 0.0000000017\times 10^{-3}$
+%\end{tabular}
+%\caption{Measured values of EW parameters with uncertainties\cite{PDG:2014}}
+%\label{tab:ewparams}
+%\end{table}
 
 \begin{figure}[ht]
 \centering
@@ -791,36 +769,39 @@ as performed at LEP and the Tevatron~\cite{PDG:2014}.}
 \label{fig:theory_w_pdg}
 \end{figure}
 
+
+While the fundamental parameters of the EW theory are related to each other
+by relations like those above, they are not determined \emph{a priori} 
+and so must be first determined from experiment.
+Of primary interest to the topic of this thesis 
+are the measured parameters related to the behavior and properties
+of the \dubya~and Higgs bosons.
+The \dubya~was first discovered in 1983 via $p\overline{p}$ collisions
+at the SPS by looking at its decay to an electron %abbreviation?
+and electron neutrino \cite{ARNISON1983103}.
+Its mass has been measured in $p\overline{p}$ collisions at the Tevatron
+and in $e^{+}e^{-}$ collisions at LEP to give a world 
+average of $80.385 \pm 0.015\GeV$~\cite{PDG:2014}.
+A summary of the \dubya~mass masurements is shown on 
+the right of \fig\ref{fig:theory_w_pdg}.
+The width assuming a Breit-Wigner distribution has also been measured 
+at LEP and the Tevatron as seen in the right of \fig\ref{fig:theory_w_pdg}
+with an average value of $2.085\pm0.042\GeV$ \cite{PDG:2014}.
 Roughly 1/3 of of the time the \dubya~decays approximately 
 evenly into each of the three lepton generations,
-as expected from lepton universality.
+as expected from the shared coupling of \eqn\eqref{eq:couplings_wleptons}
+(ignoring kinematics).
 The leptonic decays of the \dubya~result in a charged lepton 
 with the same charge as the parent \dubya~(as dictated by charge conservation)
-and a neutrino (or anti-neutrino if the parent \dubya~has negative charge).
+and a neutrino (or anti-neutrino if the parent \dubya~has negative charge),
+as indicated in the top of \fig\ref{fig:feyn_wcoupling}.
 Thus, the allowed leptonic decays are of the form:
-\begin{align*}
-W^{-} &\rightarrow l^{-} \overline{\nu}_l \\
-W^{+} &\rightarrow l^{+} \nu_l
-\end{align*}
 The \dubya~decays into quarks the remaining 2/3 of the time with a positively
 (negatively) chared \dubya~decaying into a up-type quark (anti-quark) and 
-and down-type anti-quark (quark) as determined by charge conservation as follows:
-\begin{align*}
-W^{+} &\rightarrow q_u \overline{q}_d \\
-W^{-} &\rightarrow \overline{q}_u q_d
-\end{align*}
-The \dubya~decay prefers decays into quarks/anti-quark pairs of the same generation.
-However, quark universality is partially in the weak charged interactions, with
-a slight mixing of the interactions between the three generations. The 
-degree of mixing is described by the CKM matrix (cite) which has been
-determined experimentally.  In general, this mixing of the three quark 
-generations does not preserve CP symmetry. (define?) Indeed, small CP
-violating effects were first observed in the weak interactions in 1964
-by looking at the properties of kaon decays (cite, confirm wording).
+and down-type anti-quark (quark),
+like in the bottom of \fig\ref{fig:feyn_wcoupling}.
 The measured branching fractions for the \dubya~are 
 summarized in \tab\ref{tab:theory_wdecay}.
-
-maybe show feynman diagrams for W decay?
 
 \begin{table}[ht]
 \centering
@@ -841,42 +822,57 @@ an inclusive branching fraction is listed for the decay to quarks.}
 \end{table}
 
 
-The cross-section of the production of the \dubya~at colliders
-depends on the initial state (i.e. $pp$ vs $p\overline{p}$) and on the
-collision energy. 
-The cross-section times branching fraction to leptons 
-has been measured thoroughly, with separate measurements performed
-at RHIC~\cite{PhysRevLett.106.062001};
-the SPS~\cite{Albajar1987271,Alitti1992365};
-the Tevatron~\cite{0954-3899-34-12-001,D0-4403-CONF};
-and most recently at the LHC 
-at 7~\TeV~\cite{PhysRevD.85.072004,Chatrchyan:1370079}, 
-8~\TeV~\cite{PhysRevLett.112.191802}, 
-and 13~\TeV~\cite{ATLAS-CONF-2015-039,CMS-PAS-SMP-15-004}. 
-A summary of these measurements is shown in 
-\fig\ref{fig:theory_wxsec} which reveals them to be in good agreement with 
-the predictions.
+%The cross-section of the production of the \dubya~at colliders
+%depends on the initial state (i.e. $pp$ vs $p\overline{p}$) and on the
+%collision energy. 
+%The cross-section times branching fraction to leptons 
+%has been measured thoroughly, with separate measurements performed
+%at RHIC~\cite{PhysRevLett.106.062001};
+%the SPS~\cite{Albajar1987271,Alitti1992365};
+%the Tevatron~\cite{0954-3899-34-12-001,D0-4403-CONF};
+%and most recently at the LHC 
+%at 7~\TeV~\cite{PhysRevD.85.072004,Chatrchyan:1370079}, 
+%8~\TeV~\cite{PhysRevLett.112.191802}, 
+%and 13~\TeV~\cite{ATLAS-CONF-2015-039,CMS-PAS-SMP-15-004}. 
+%A summary of these measurements is shown in 
+%\fig\ref{fig:theory_wxsec} which reveals them to be in good agreement with 
+%the predictions.
 
-\begin{figure}[ht]
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=.8\textwidth]{figures/theory/wxsec.png}
+%\caption{Summary of $W\rightarrow l\nu$ cross-section measurements as 
+%a function of center-of-mass energy, $\sqrt{s}$. 
+%Next-to-next-to-leading-order (NNLO) theoretical
+%predictions are shown for both $pp$ and 
+%$p\overline{p}$ collisions and for $pp$ collisions when split by charge.
+%Experimental measurements are overlayed and taken from measurements
+%at the SPS, RHIC, the Tevatron, and the LHC.  The plot is taken
+%from the ATLAS publication of $W$ and $Z$ cross-section measurements
+%at the LHC \cite{ATLAS-CONF-2015-039}.  }
+%\label{fig:theory_wxsec}
+%\end{figure}
+
+The Higgs boson was discovered in 2012 at the LHC
+jointly by ATLAS \cite{Aad20121} and CMS \cite{Chatrchyan:2012xdj}.
+Combined measurements of the mass between the two experiments 
+show the current value of the Higgs mass to be 
+$m_H = 125.09 \pm 0.21 (\textrm{Stat.}) \pm 0.11 (\textrm{Syst.})\GeV$
+\cite{Aad:2015zhl} as seen in \fig\ref{fig:higgs_mass}.
+Detailed studies of the spin \cite{Aad2013120,Khachatryan:2014kca},
+width \cite{Aad:2015xua,Khachatryan:2014iha},
+and couplings \cite{ATLAS-CONF-2015-044} are all consistent
+with the Higgs boson of the SM.
+
+\begin{figure}
 \centering
-\includegraphics[width=.8\textwidth]{figures/theory/wxsec.png}
-\caption{Summary of $W\rightarrow l\nu$ cross-section measurements as 
-a function of center-of-mass energy, $\sqrt{s}$. 
-Next-to-next-to-leading-order (NNLO) theoretical
-predictions are shown for both $pp$ and 
-$p\overline{p}$ collisions and for $pp$ collisions when split by charge.
-Experimental measurements are overlayed and taken from measurements
-at the SPS, RHIC, the Tevatron, and the LHC.  The plot is taken
-from the ATLAS publication of $W$ and $Z$ cross-section measurements
-at the LHC \cite{ATLAS-CONF-2015-039}.  }
-\label{fig:theory_wxsec}
+\includegraphics[width=.8\textwidth]{figures/theory/higgs_mass.png}
+\caption{Combined ATLAS and CMS 
+measurements of Higgs signal strength
+vs mass in $H\rightarrow \gamma \gamma$ and $H\rightarrow ZZ\rightarrow 4l$
+channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
+\label{fig:higgs_mass}
 \end{figure}
-
-Differential distributions?
-
-
-
-
 
 \section{$WWW$ Production}
 
