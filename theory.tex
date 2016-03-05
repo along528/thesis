@@ -167,7 +167,7 @@ It also includes the observed CP violating
 \cite{PhysRevLett.13.138} 
 flavor mixing of the 
 charged interactions in the quark sector via 
-the Caibbo-Kobayashi-Maskawa 
+the Caibbo-Kobayashi-Maskawa  (CKM)
 matrix \cite{Cabibbo:1963yz,Kobayashi:1973fv}.
 
 The EW term in the SM lagrangian can be written as
@@ -178,12 +178,13 @@ The EW term in the SM lagrangian can be written as
 &+\overline{L}\gamma^{\mu}\Big( i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) L \\
 &+ \overline{R} \gamma^{\mu} \Big( i \partial_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) R
 \end{aligned}
+\label{eq:lagrangian_ew}
 \end{equation}
 where the first two terms describe the kinetic energies and 
 self-interactions of the EW gauge bosons
 and the second two terms describe the fermion kinetic energies
 and their interactions with the EW gauge bosons.
-$L$ and $R$ (and their charge conjugates $\overline{L}$ and $\overline{R}$)
+$L$ and $R$ (and their conjugates $\overline{L}$ and $\overline{R}$)
 are the left-handed fermion isospin doublets and right-handed
 fermion isospin singlets, described in more detail later.
 The gauge fields, $\mathbf{W}_{\mu}$ and $B_{\mu}$, represent the 
@@ -242,10 +243,10 @@ as are the coupling constants, $g$ and $g'$
 \begin{equation}
 \frac{g'}{g} = \tan\theta_W
 \end{equation}
-The fundamental parameters of the EW theory 
-are not determined \emph{a priori}, 
-but the theory can be completely specified
-after measuring only three.
+While the fundamental parameters of the EW theory are related to each other
+by relations
+like those above, they are not determined \emph{a priori} 
+and so must be first determined from experiment.
 %For instance, measurements of the fine-structure constant, $\alpha$;
 %the Fermi constant, $G_F$, and the weak mixing angle can be used to solve
 %for the $W$ mass, $m_W$:
@@ -287,20 +288,23 @@ after measuring only three.
                         &\multirow{2}{*}{Right-Handed} &$e_R$     & -1  & -2& 0\\
                         &                              & $\nu_{e,R}$  & 0 &0 &0 \\
 \end{tabular}
-\caption{}
+\caption{The charges of the SM fermions. The charges are the same
+for each generation, so only the first generation of quarks
+and leptons are shown.  } %what about T?
 \label{tab:ewcharges}
 \end{table}
 
-The V-A structure of the weak interactions is captured
+The V-A structure of the weak interactions
+results in the absence of charged weak interactions involving right-handed
+fermions and left-handed anti-fermions.
+This is captured
 by assigning charges to the SM fermions 
-such that they satisfy \eqn\eqref{eq:ewcharges} as listed
-in \tab\ref{tab:ewcharges}.
-Any theory describing the charged weak interactions must incorporate the 
-charge and parity symmetry violations first observed from helicity 
-measurements... (cite)
-The absence of charged weak interactions involving right-handed
-fermions and left-handed anti-fermions is thus taken into account
-by constructing the left-handed fermion fields as isospin doublets, $L$, 
+as listed in \tab\ref{tab:ewcharges}
+such that they satisfy \eqn\eqref{eq:ewcharges}.
+The charges differ based on the helicity, or ``handedness'',
+of the fermions.
+This specification for the charges results in the 
+left-handed fermion fields being treated as isospin doublets, $L$, 
 which transform under \sutwo~for each lepton and quark generation:
 \begin{equation}
 L = 
@@ -311,34 +315,114 @@ L =
 \begin{pmatrix} c_L \\ s_{L} \end{pmatrix},
 \begin{pmatrix} t_L \\ b_{L} \end{pmatrix}
 \end{equation}
-and the right-handed fermion fiels as isospin singles, $R$, 
+while the right-handed fermion fields are treated as isospin singlets, $R$, 
 which only transform under \uone:
 \begin{equation}
-R = e_R,~\nu_{e,R},~\mu_R,~\nu_{\mu,R},~\tau_R,~\nu_{\tau,R},~
-    u_R,~d_R,~c_R,~s_R,~t_R,~b_R
+R = e_R,~\mu_R,,~\tau_R,~u_R,~d_R,~c_R,~s_R,~t_R,~b_R
 \end{equation}
 where each object is a Dirac field whose helicity is indicated by 
-subscript.
-The interaction term of ... provides interactions between 
-the gauge bosons and the fermions. These are the terms like
-Wqq' and Wlnu... write terms and draw feynman diagrams.
-This gives the theory the observed vector minus axial vector form
-with full parity violation of the charged current interactions 
-and partial parity violation of the neutral current EW interactions
-after EWSB (what about EM?).
+its subscript.
+Note that the right-handed neutrinos are absent.
+This comes from them having zero charge across the board.
+As a result, they do not participate in any of the SM interactions
+and only exist hypothetically as so-called ``sterile'' neutrinos.
+%refer to first observation of missing right-handed neutrinos?
 
-relation between Q T3 and Y
 
+Using this specification of the fermion fields 
+we can derive identify the interactions of the fermions with the 
+charged $W$ boson.  Expanding the term 
+\begin{equation}
+-g \frac{1}{2} \overline{L}\gamma^{\mu}\boldsymbol{\tau} \cdot \textbf{W}_{\mu} L 
+\end{equation}
+from \eqn\eqref{eq:lagrangian_ew}
+and keeping only those
+terms where the charged $W$ and lepton fields are present gives
+\begin{equation}
+\begin{aligned}
+%\overline{u'}_R W_{\mu}^+ d'_L +
+%\overline{d'}_R W^-_{\mu} u'_L +
+\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
+\overline{e}_R W_{\mu}^+ \nu_{e,L} +
+\overline{\nu}_{e,R} W^-_{\mu} e_L \\&+
+\overline{\mu}_R W_{\mu}^+ \nu_{\mu,L} +
+\overline{\nu}_{\mu,R} W^-_{\mu} \mu_L \\&+
+\overline{\tau}_R W_{\mu}^+ \nu_{\tau,L} +
+\overline{\nu}_{\tau,R} W^-_{\mu} \tau_L \Big)
+\end{aligned}
+\end{equation}
+which corresponds to the Feynman diagram to the left
+in \fig\ref{fig:feyn_wcoupling}. It is this
+type of interaction that is responsible for the $W$ decay to leptons.
+In the absence of quark flavor mixing, the interaction terms 
+of the quark sector look similar:
+\begin{equation}
+\begin{aligned}
+%\overline{u'}_R W_{\mu}^+ d'_L +
+%\overline{d'}_R W^-_{\mu} u'_L +
+\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
+\overline{u}_R W_{\mu}^+ d_{L} +
+\overline{d}_{R} W^-_{\mu} u_L \\&+
+\overline{c}_R W_{\mu}^+ s_{L} +
+\overline{s}_{R} W^-_{\mu} c_L \\&+
+\overline{t}_R W_{\mu}^+ b_{L} +
+\overline{b}_{,R} W^-_{\mu} t_L \Big)
+\end{aligned}
+\end{equation}
+These terms correspond to the Feynman diagram to the right
+in \fig\ref{fig:feyn_wcoupling}
+Taking into account quark flavor mixing via the CKM matrix
+modifies this picture by adding smaller interaction
+terms between different quark generations and also by slightly reducing
+the strength of the same-generation interactions.
+
+
+\unitlength = 0.3mm %necessary for feynmp
+
+\begin{figure}[ht]
+\centering
+\vspace{5 mm}
+\begin{fmffile}{feynwleptons}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{fermion}{v1,o1}
+			\fmf{fermion}{o2,v1}
+			\fmflabel{$W$}{i1}
+			\fmflabel{$e,\mu,\tau$}{o1}
+			\fmflabel{$\nu_e,\nu_{\mu},\nu_{\tau}$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~~~~~~~~~~~~~~
+\begin{fmffile}{feynwquarks}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{fermion}{v1,o1}
+			\fmf{fermion}{o2,v1}
+			\fmflabel{$W$}{i1}
+			\fmflabel{$u,c,t$}{o1}
+			\fmflabel{$d,s,b$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagrams of the $W$ boson coupling to leptons (left)
+and to quarks (right). The charge and helicities of the fields must
+follow those specified in the text. The quark generations can
+mix while the lepton generations do not.  }
+\label{fig:feyn_wcoupling}
+\end{figure}
 
 The non-Abelian character of the 
-EW theory 
-introduces the $-g\textbf{W}_{\mu} \times \textbf{W}_{\nu}$
-term in the \eqref{eq:wfieldstrength}
-which 
-predicts self-interactions
+EW theory introduces the $-g\textbf{W}_{\mu} \times \textbf{W}_{\nu}$
+term in \eqref{eq:wfieldstrength}
+which predicts self-interactions
 among the EW gauge bosons. 
-In particular, the Lorentz contraction of the field strength introduces
-the term 
+In particular, the Lorentz contraction of the field strength 
+in \eqn\eqref{eq:lagrangian_ew}
+introduces the term 
 \begin{equation}
 -\frac{1}{4} g^2 (\textbf{W}_{\mu} \times \textbf{W}_{\nu}) \cdot
                  (\textbf{W}^{\mu} \times \textbf{W}^{\nu}) 
@@ -380,7 +464,6 @@ do not appear in the SM EW lagrangian.
 
 
 
-\unitlength = 0.3mm %necessary for feynmp
 
 %\begin{figure}[ht]
 %\centering
