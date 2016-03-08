@@ -996,6 +996,7 @@ Using
 the \madgraph~generator finds an inclusive cross-section of 
 \begin{equation}
 \sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb}
+\label{eq:www_total_xsec}
 \end{equation}
 where the uncertainty is purely statistical.
 The contribution from resonant production is computed separately
@@ -1082,7 +1083,7 @@ with respect to the SM terms. This suppression becomes stronger
 for higher and higher powers. Thus, only the first terms in the summation
 over $n$ are important at low energy.
 
-The list of possible EFT operators to consider is long.  One way 
+The list of possible gauge-invariant EFT operators to consider is long.  One way 
 to shorten the list is to impose certain symmetries. Enforcing the conservation
 of baryon and lepton number restricts 
 us to only even values of $n$:
@@ -1105,43 +1106,59 @@ Then the new physics might first appear at $n=8$, where only aQGC interactions
 occur.
 
 
-\fig\ref{fig:theory_feynman_couplings_qgc}
-\eqn\eqref{eq:lagrangian_qgc}
 
 \subsection{Anomalous Quartic Gauge Couplings}
 %be sure to add a review of measurements
 
-A measurement
-of the production rate can be used to probe the gauge couplings, in
-particular, the process is sensitive to quartic gauge couplings. The
-{\sc VBFNLO } code has implemented a list of higher order operators
-that parameterize the effects of new physics at energy scale beyond
-the reach of current collider experiments.  The effective field theory
+In a linear EFT model where the Higgs field is indeed the mechanism for EWSB, 
+the possible $n=8$ operators \cite{} in \eqn\eqref{eq:lagrangian_eft} can
+be split into three categories: those containing covariant derivatives,
+as in \eqn\eqref{}, of the Higgs field, $\phi$; 
+those containing covariant derivatives of the Higgs field and 
+the field strength tensors, $W_{\mu\nu}$ and $B_{\mu\nu}$, as in \eqn\eqref{};
+or those containing only field strength tensors. In this thesis, we are
+interested only in the first category, which contains two operators:
+\begin{align}
+\curlyo_{S,0} =& \Big[(D_{\mu}\phi)^{\dagger} D_{\nu} \phi\Big] \times \Big[(D^{\mu} \phi)^{\dagger} D^{\nu} \phi \Big] \\
+\curlyo_{S,1} =& \Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big]
+\end{align}
+Which can come from integrating out a new spin-1 resonance...
+Plugging these into \eqn\eqref{eq:lagrangian_eft} (and dropping all other terms
+besides the SM), we get
+\begin{equation}
+\begin{aligned}
+\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} +&
+\frac{f_{S,0}}{\Lambda^4}\Big[(D_{\mu}\phi)^{\dagger} D_{\nu} \phi\Big] \times \Big[(D^{\mu} \phi)^{\dagger} D^{\nu} \phi \Big] \\
++& \frac{f_{S,1}}{\Lambda^4}\Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big]
+\end{aligned}
+\label{eq:lagrangian_aqgc}
+\end{equation}
+where we have introduced the new arbitrary couplings $f_{S,0}$ and $f_{S,1}$.
+Expanding this out we get...
+These modify the SM QGC interactions of \eqn\eqref{eq:lagrangian_qgc}
+and \fig\ref{fig:theory_feynman_couplings_qgc}
+to produce new aQGC interactions $W^+W^-W^+W^-$, $W^+W^-ZZ$, and $ZZZZ$
+that do not depend on the gauge boson momenta (do I care?).
+In this thesis, we are interested only in the fully charged aQGC
+interaction term involving $W^+W^-W^+W^-$, which predicts  
+a new tree level diagram for the $WWW$ production process similar to the SM QGC
+production of this process in \fig\ref{fig:theory_feynman_couplings_qgc}.
+If real, such a modification would enhance the predicted SM 
+total cross-section in \eqn\eqref{eq:www_total_xsec}.
+
+
+
+
+
+All of these preserve CP symmetry.
+
+
+
+The effective field theory
 approach is practical and widely used when there is no compelling
 specific model of new physics beyond the SM, see for example,
 discussions in Refs:~\cite{Hagiwara:1993ck}, \cite{Buchmuller:1985jz}
-and \cite{Eboli:2006wa}.  As a benchmark, we choose two gauge
-invariant dimension-8 operators:
-\begin{equation}
-\mathcal{L}_{s,0} = [(\mathrm{D}_\mu\phi)^\dag\mathrm{D}_\nu \phi]\times [(\mathrm{D}^\mu\phi)^\dag\mathrm{D}^\nu \phi]
-\end{equation}
-\begin{equation}
-\mathcal{L}_{s,1} = [(\mathrm{D}_\mu\phi)^\dag\mathrm{D}^\mu \phi]\times [(\mathrm{D}_\nu\phi)^\dag\mathrm{D}^\nu \phi]
-\end{equation}
-where $\phi$ is the Higgs field doublet, and $\mathrm{D}_\mu$ is the covariant derivative. 
-The Lagrangian of the effective field theory is thus: 
-\begin{equation}
-\mathcal{L}_{eff} = \mathcal{L}_{SM} + \frac{f_{s0}}{\Lambda^4}\mathcal{L}_{s,0}+\frac{f_{s1}}{\Lambda^4}\mathcal{L}_{s,1}
-\end{equation}
-The choice of the two operators is introduced to benchmark possible
-deviations from the SM. If a significant excess of events is 
-observed in the data, the parameterization will be changed, to incorporate 
-more operators, to
-investigate the nature of the observed new physics.
-% Once statistically significant
-% deviation is observed, of course, more operators should be considered
-% for investigating the nature of the observed new physics.
-
+and \cite{Eboli:2006wa}.  
 
 \section{Status of QGC Measurements and aQGC Limits}
 A variety of measurements sensitive QGC interactions have been
