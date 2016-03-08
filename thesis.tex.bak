@@ -17,6 +17,8 @@
 \usepackage{verbatim}
 \usepackage{changepage}
 \usepackage{morefloats}
+\usepackage{pdflscape}
+\usepackage{amssymb}
 \usepackage{slashbox}
 \usepackage{multirow}
 % \usepackage{caption}
@@ -26,25 +28,39 @@
 \hypersetup{backref,  
 pdfpagemode=FullScreen,  
 colorlinks=false}
-
-
+\usepackage[final]{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{}
+\makeatletter
+\def\endfmffile{%
+	\fmfcmd{\p@rcent\space the end.^^J%
+			end.^^J%
+			endinput;}%
+	\if@fmfio
+		\immediate\closeout\@outfmf
+	\fi
+	\ifnum\pdfshellescape=\@ne
+		\immediate\write18{mpost \thefmffile}%
+	\fi}
+\makeatother
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
+%\unitlength = 0.3mm %necessary for feynmp
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %setup commands for the bu thesis style file
 
-\title{\www~production: The Hunt Begins}
+\title{WWW Production at the LHC } %(version 1.2)}
 
-\author{Brian Alexander Long}
+\author{\textbf{Brian Alexander Long}}
 
 % Type of document prepared for this degree:
 %   1 = Master of Science thesis,
-%   2 = Doctor of Philisophy dissertation.
-%   3 = Master of Science thesis and Doctor of Philisophy dissertation.
+%   2 = Doctor of Philosophy dissertation.
+%   3 = Master of Science thesis and Doctor of Philosophy dissertation.
 %   4 = Doctoral Dissertation Prospectus
 \degree=2
 
@@ -161,12 +177,24 @@ colorlinks=false}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % the body of the thesis goes here.
+\chapter{Introduction}
+\label{sec:introduction}
 \input{introduction}
+
+\chapter{Theory}
+\label{sec:theory}
 \input{theory}
-\input{lhc}
+
+\chapter{Collider Physics and The Large Hadron Collider}
+\label{sec:lhc}
+blank
+%\input{lhc}
+
+\chapter{The ATLAS Detector}
+\label{sec:atlas}
 \input{atlas}
+
 \input{www}
-%\input{results}
 \input{conclusions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -200,6 +228,7 @@ colorlinks=false}
 % in the below example
 
 \chapter*{Curriculum Vitae}
+blank
 
 
 \end{document}

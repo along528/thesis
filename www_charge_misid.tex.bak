@@ -27,14 +27,14 @@ charge of initial state electron (positron) will have effectively
 been mis-identified. 
 
 
-%need to do some research on bethe-bloche.
+%need to do some research on Bethe-Bloche.
 The probability of this to occur is non-negligible in the presence of the material 
 from the ATLAS detector. This is due to bremstraahlung...
 Look in 'experimental foundations' and in 'particle detection'
 
 
 While muons are also technically also capable of such a phenomenon, the 
-energies required are too large, according to bethe-bloche.
+energies required are too large, according to Bethe-Bloche.
 Indeed, we observe that the rate of charge mis-identification for muons
 is vanishingly small and so we neglect it. %or should I just say that it should be?
 
@@ -45,7 +45,7 @@ for determining the rate of electron charge mis-identification is inherently
 flawed. Instead, it would be better to use the data itself to determine
 a model for these rates. 
 Thus, we extract the rates of electron charge 
-mis-identificatoin using the data and only use the rates determined
+mis-identification using the data and only use the rates determined
 in MC as a cross-check.
 
 The background due to electron charge mis-identification is most important 
@@ -69,7 +69,7 @@ region\footnote{There is also a migration from the 0 SFOS to the 1 and 2 SFOS
 regions, but the relative number of 0 SFOS events to 1 and 2 SFOS
 events before electron mis-identification is so small as to make this
 effect completely negligible.}.
-As a result, we focus only on modelling the background due to electron
+As a result, we focus only on modeling the background due to electron
 charge mis-identification in the 0 SFOS region and assume that an 
 out of the box estimate of this background from MC is adequate for the 
 1 and 2 SFOS regions.
@@ -81,12 +81,12 @@ mis-identification rates using the data as a model
 described below. The extracted
 rates are compared to an alternative method using only MC. 
 The difference between the two is used as a systematic on the
-rates. The rates are then used to reweight the $WZ$ and $ZZ$ MC samples
+rates. The rates are then used to re-weight the $WZ$ and $ZZ$ MC samples
 on an event-by-event basis 
 according to the probability that electron charge mis-identification
 could cause the event to migrate into the 0 SFOS region. In this way, 
-the full statistics of the MC samples can be utilitized to get a model of
-the behvaior of these processes in the 0 SFOS region, while also taking 
+the full statistics of the MC samples can be utilized to get a model of
+the behavior of these processes in the 0 SFOS region, while also taking 
 into account a more accurate material description. Other backgrounds
 due to electron charge mis-identification are assumed to be negligible.
 More details on the methods used to extract the rates and the re-weighting
@@ -126,12 +126,12 @@ and relies on being able to determine the charge of each electron from the
 \z decay by looking 
 directly from at hard scattering process as provided by the generator.
 This is called ``truth'' information, at which point the processes of radiation
-and pair-production have not occured. It then compares
+and pair-production have not occurred. It then compares
 these truth electrons to the reconstructed electrons 
 measured after all processes, including those of radiation and pair-production,
 have been simulated and have been reconstructed
 in the detector. The truth electrons and reconstructed electrons
-are matched by asking that they are nearby eachother in $\eta$ and $\phi$.
+are matched by asking that they are nearby each other in $\eta$ and $\phi$.
 The charge of the matched truth and reconstruction electrons 
 are then compared and it is recorded whether or not the charges agree
 in the appropriate $\pt$ and $\eta$ bin. Once all MC events
@@ -149,7 +149,7 @@ decay are of the same-sign or of opposite-sign.
 However, in this case
 there is no truth information to tell which electron's charge
 has been mis-identified. Instead, we assume that those events in
-the same-sign cateogry are due purely to charge mis-identification
+the same-sign category are due purely to charge mis-identification
 and attempt to extract the rates by minimizing a likelihood.
 Refer to the rate for an electron in a 
 particular $\pt$ and $\eta$ bin $i$ as $\varepsilon_i$.
@@ -207,7 +207,7 @@ detector, which could explain this difference....
 %might it be that the material description was improved in a later version of the MC?
 %mc12b is known to have a maybe 20-30% lower rate of photon conversions overall
 %according to Jake, I guess because of the material description.
-%could the imporved simulation referred to in one of the papers above
+%could the improved simulation referred to in one of the papers above
 %be for something that was included after mc12b? probably
 %ruiqi used this sample for the MC generation:
 %mc12 8TeV.147806.Powheg Pythia8 AU2CT10 Zee.merge.NTUP COMMON.e1169 s1469 s1470 r3542 r3549 p1562
@@ -233,7 +233,7 @@ detector, which could explain this difference....
 %estimate since it requires a b-layer hit so these are converting early
 
 Some additional alternatives to these two methods are also performed
-in order to better assess the performance of the mehtods
+in order to better assess the performance of the methods
 and to determine systematic uncertainties.
 One alternative is to perform the same likelihood extraction
 as in the data, but using only reconstructed MC. This produces
@@ -270,7 +270,7 @@ high values. The nominal rate is the one shown as black points
 using a likelihood fit in data with background subtraction. The vertical
 bars on the black points show the statistical uncertainty on this method.
 The solid black line shows the same method but without background subtraction.
-These methods follow eachother quite closely, uniformly differing by 
+These methods follow each other quite closely, uniformly differing by 
 5-6\% throughout.  The blue curve shows the rates evaluated
 using the MC truth method. As was already mentioned, these tend
 to be larger than the rates in data by about a factor of two. Finally, 
@@ -290,7 +290,7 @@ rates, shown as a hashed band.
 \centering
 \includegraphics[width=0.9\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_PTvsEta_FinalRateWithSys.png}
 \caption{Summary of electron charge mis-identification rates using
-the likelihood method in data with background subraction (black points) 
+the likelihood method in data with background subtraction (black points) 
 and without background subtraction (black line), the MC truth 
 method (blue line), and the likelihood method in MC (red).
 Systematic uncertainties are extracted as described in the text and are shown
@@ -304,7 +304,7 @@ in the hashed band pointing from bottom right to top left.}
 
 
 
-\subsubsection{Di-boson MC Reweighting}
+\subsubsection{Di-boson MC Re-weighting}
 
 
 The electron charge mis-identification  rates are primarily important for the determination of the $WZ$ and $ZZ$ background contamination in the 0 SFOS region,
@@ -403,7 +403,7 @@ and similarly for the positron.
 
 \subsubsection{Validation}
 This procedure has been validated on the $WZ$ and $ZZ$ samples by comparing 
-the predictions taken directly from MC to the predictions reweighted in the 
+the predictions taken directly from MC to the predictions re-weighted in the 
 0 SFOS signal region using the procedure just described. This is done in 
 Figure~\ref{fig:ChargeMisID_Validation_WZ} for the $WZ$ samples and on 
 Figure~\ref{fig:ChargeMisID_Validation_ZZ} for the $ZZ$ samples. It can be seen 
@@ -414,9 +414,9 @@ be expected from the difference in rates observed at high $\eta$ and
 high $E_{T}$ as seen in Fig.~\ref{fig:ChargeMisID_truthRate_finalFig} and 
 serves as justification for using the data-driven method.
 
-There is no special treamtent of the charge mis-identification contribution to 
+There is no special treatment of the charge mis-identification contribution to 
 other background contributions in the 0 SFOS region or to any contributions to the 
-1 and 2 SFOS signal regions, including diboson processes, as the effect is 
+1 and 2 SFOS signal regions, including di-boson processes, as the effect is 
 expected to be very small.  Any charge mis-identification events are thus 
 taken directly from MC in this case.
 
@@ -431,8 +431,8 @@ taken directly from MC in this case.
  \includegraphics[width=0.4\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_WZ_JetMultiplicity.png}
 
  \caption{Validation of the charge mis-ID rates comparing 
- MC $WZ\rightarrow \ell ee$ ($\ell=e,\mu$) samples reweighted with the 
- charge misID rates measured in the MC $Z\to{}ee$ 
+ MC $WZ\rightarrow \ell ee$ ($\ell=e,\mu$) samples re-weighted with the 
+ charge mis-ID rates measured in the MC $Z\to{}ee$ 
  sample to the original MC predictions. Distribution of 
  lepton $p_{T}$, $\eta$, $\Delta \phi(3l,E_{T}^{Miss})$,\met{}, Same-sign 
  di-electron invariant mass, and jet multiplicity.}
@@ -450,8 +450,8 @@ taken directly from MC in this case.
  \includegraphics[width=0.4\textwidth]{figures/ChargeMisID/Validation_ChargeMisIDRates_ZZ_JetMultiplicity.png}
 
  \caption{Validation of the charge mis-ID rates comparing 
- MC $ZZ\rightarrow \ell \ell ee$ ($\ell=e,\mu$) samples reweighted with the 
- charge misID rates measured in the MC $Z\to{}ee$ 
+ MC $ZZ\rightarrow \ell \ell ee$ ($\ell=e,\mu$) samples re-weighted with the 
+ charge mis-ID rates measured in the MC $Z\to{}ee$ 
  sample to the original MC predictions. Distribution of 
  lepton $p_{T}$, $\eta$, $\Delta \phi(3l,E_{T}^{Miss})$,\met{}, Same-sign 
  di-electron invariant mass, and jet multiplicity.}
