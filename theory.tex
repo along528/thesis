@@ -134,6 +134,7 @@ while the tau neutrino limits are set at a 95\% confidence level.}
 The SM can be written down using a lagrangian of the form
 \begin{equation}
 \curlyl_{\textrm{SM}} = \curlyl_{\textrm{QCD}} + \curlyl_{\textrm{EW}} + \curlyl_{\textrm{EWSB}}
+\label{eq:lagrangian_sm}
 \end{equation}
 which satisfies global and local gauge invariance.
 From this, one can calculate all of the fundamental interactions of the SM.
@@ -619,6 +620,7 @@ Upon EWSB this becomes
 		  &\hspace{3cm}- W_{\mu}^+ A^{\mu} W_{\nu}^- Z^{\nu}
 		  - W_{\mu}^+ Z^{\mu} W_{\nu}^- A^{\nu}\Big)\\
 \end{aligned}
+\label{eq:lagrangian_qgc}
 \end{equation}
 where each successive term in parentheses  
 can thus be identified as one of the quartic gauge coupling
@@ -1043,6 +1045,69 @@ and semi-leptonic channels is presented in \sec\ref{sec:measurement}.
 
 
 \section{Effective Field Theory}
+
+The lagrangian of the SM, summarized by 
+\eqn\eqref{eq:lagrangian_sm},~\eqref{eq:lagrangian_qcd},
+~\eqref{eq:lagrangian_ew}, and~\eqref{eq:lagrangian_ewsb}
+has been very successful at describing the physics observed so far
+from the energy up to the \TeV scale.
+But there is no compelling reason to believe that this will hold 
+for arbitrarily high energies. If history is any guide, the SM is simply
+an approximation of a larger theory whose details only become
+relevant at even higher energies.
+Indeed, the SM leaves important questions unanswered that could be explained
+by the observation of some new phenomena at higher energies. (cite)
+
+One way to make manifest 
+this description of the SM as an approximate theory
+is using an Effective Field Theory (EFT) description of the interaction
+lagrangian (cite). Such a description adds terms to the lagrangian of the SM
+which start small but become increasingly important at higher energies.
+In a general form, the terms might look like this:
+\begin{equation}
+\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_{n=5}^{\infty} \sum_i \frac{c_{n,i}}{\Lambda^{n-4}} \curlyo_{n,i}
+\end{equation}
+where $\lambda$ is some new energy scale relevant to the new
+physics we seek to describe and the $c_{n,i}$ are dimensionless
+couplings.  While the operators of the SM have mass dimension 4, the EFT 
+operators, $\curlyo_{n,i}$, have a mass dimension
+$n>4$ which describe the new interactions between the SM fields at low energy
+due to the new physics model.
+The sum over $i$ is simply to indicate that there are in general multiple 
+possible new operators at a given mass dimension.
+Since the relevant energy scale being probed in this formulation
+is by definition less than the new energy scale, $\Lambda$, the
+presence of $\Lambda^{n-4}$ in the denominator suppresses each new term
+with respect to the SM terms. This suppression becomes stronger 
+for higher and higher powers. Thus, only the first terms in the summation
+over $n$ are important at low energy.
+
+The list of possible EFT operators to consider is long.  One way 
+to shorten the list is to impose certain symmetries. Enforcing the conservation
+of baryon and lepton number restricts 
+us to only even values of $n$:
+\begin{equation}
+\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_i \frac{c_{6,i}}{\Lambda^2} \curlyo_{6,i} + \sum_j \frac{c_{8,j}}{\Lambda^4} \curlyo_{8,j} + \dots
+\label{eq:lagrangian_eft}
+\end{equation}
+where we have truncated the series at $n=8$ since these
+these higher order terms are small.
+The leading $n=6$ terms predict new anomalous triple and quartic 
+gauge coupling (aTGC and aQGC) interactions while the sub-leading $n=8$ terms
+predict only new aQGC interactions. 
+Predictions of aTGC interactions have been studied in detail at 
+LEP, the Tevatron, and the LHC (cite) with no luck.
+But there is still hope!
+It could be that new physics is suppressed in aTGC interactions
+but not in aQGC interactions (for instance, if the aTGC interactions
+first appear at the one loop level but the aQGC interactions appear at tree level).
+Then the new physics might first appear at $n=8$, where only aQGC interactions
+occur.
+
+
+\fig\ref{fig:theory_feynman_couplings_qgc}
+\eqn\eqref{eq:lagrangian_qgc}
+
 \subsection{Anomalous Quartic Gauge Couplings}
 %be sure to add a review of measurements
 
