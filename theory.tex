@@ -173,29 +173,41 @@ matrix \cite{Cabibbo:1963yz,Kobayashi:1973fv}.
 The EW term in the SM lagrangian can be written as
 \begin{equation}
 \begin{aligned}
-\curlyl_{\textrm{EW}} = &-\frac{1}{4}\textbf{W}_{\mu\nu} \cdot \textbf{W}^{\mu\nu} 
-- \frac{1}{4} B_{\mu\nu} B^{\mu\nu}  \\
-&+\overline{L}\gamma^{\mu}\Big( i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) L \\
-&+ \overline{R} \gamma^{\mu} \Big( i \partial_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) R
+\curlyl_{\textrm{EW}} = -\frac{1}{4}\textbf{W}_{\mu\nu} \cdot \textbf{W}^{\mu\nu} 
+- \frac{1}{4} B_{\mu\nu} B^{\mu\nu}  +\overline{\psi}\gamma^{\mu}D_{\mu}\psi
 \end{aligned}
 \label{eq:lagrangian_ew}
 \end{equation}
 where the first two terms describe the kinetic energies and 
 self-interactions of the EW gauge bosons
-and the second two terms describe the fermion kinetic energies
+and the last term describes the fermion kinetic energies
 and their interactions with the EW gauge bosons.
-$L$ and $R$ (and their conjugates $\overline{L}$ and $\overline{R}$)
-are the left-handed fermion isospin doublets and right-handed
-fermion isospin singlets, described in more detail later.
+The kinetic energies are described by the field strength tensors
+\begin{equation}
+\label{eq:wfieldstrength}
+\textbf{W}_{\mu\nu} = \partial_{\mu}\textbf{W}_{\nu} - \partial_{\nu}\textbf{W}_{\mu} - g \textbf{W}_{\mu}\times \textbf{W}_{\nu}
+\end{equation}
+and 
+\begin{equation}
+\label{eq:bfieldstrength}
+B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
+\end{equation}
 The gauge fields, $\mathbf{W}_{\mu}$ and $B_{\mu}$, represent the 
 massless EW gauge bosons before EWSB. They are four-vectors of the Lorentz group
 and thus undergo Lorentz transformations as indicated by their Lorentz index, $\mu$.
+The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
+group and the $\gamma^{\mu}$ are the Dirac matrices.
+The EW covariant deriviative, $D_{\mu}$, is
+\begin{equation}
+D_{\mu} =  i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} 
+\label{eq:ew_covariant_derivative}
+\end{equation}
+The coupling constants $g$ and $g'$ describe the strength of the interactions
+of the fermions with the gauge boson fields before EWSB. 
 The $\mathbf{W}_{\mu}$ describes two charged gauge bosons and 
 a neutral gauge boson as an isotriplet of 
 vector fields ($W_{\mu}^i$)
-in \sutwo~with generators
-$\boldsymbol{\tau}$\footnote{The generators of \sutwo~are the famous
-Pauli matrices.}.
+in \sutwo~with its generators being the famous Pauli matrices, $\boldsymbol{\tau}$.
 The charged gauge bosons are represented by a superposition of the first
 two components of the 
 isotriplet, $W_{\mu}^{\pm}=\sqrt{\frac{1}{2}}\Big(W_{\mu}^1\mp i W_{\mu}^2\Big)$,
@@ -212,46 +224,24 @@ and the charge of the third component of weak \sutwo, $T^3$:
 Q=T^3+Y/2
 \label{eq:ewcharges}
 \end{equation}
-The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
-group and the $\gamma^{\mu}$ are the Dirac matrices.
-The kinetic energies are described by the field strength tensors
+The fermion fields, $\psi$, (and their conjugates, $\overline{\psi}$)
+can be split up into the 
+left-handed fermion isospin doublets, $L$,  and right-handed
+fermion isospin singlets, $R$, which is described in more detail later.
+Putting it all together, we end up with
 \begin{equation}
-\label{eq:wfieldstrength}
-\textbf{W}_{\mu\nu} = \partial_{\mu}\textbf{W}_{\nu} - \partial_{\nu}\textbf{W}_{\mu} - g \textbf{W}_{\mu}\times \textbf{W}_{\nu}
+\begin{aligned}
+\curlyl_{\textrm{EW}} = 
+& -\frac{1}{4}\Big(\partial_{\mu}\textbf{W}_{\nu} - \partial_{\nu}\textbf{W}_{\mu} - g \textbf{W}_{\mu}\times \textbf{W}_{\nu}\Big) \cdot \Big(\partial^{\mu}\textbf{W}^{\nu} - \partial^{\nu}\textbf{W}^{\mu} - g \textbf{W}^{\mu}\times \textbf{W}^{\nu}\Big)  \\
+& -\frac{1}{4}\Big(\partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}\Big) 
+\Big(\partial^{\mu} B^{\nu} - \partial^{\nu} B^{\mu}\Big)\\
+&+\overline{L}\gamma^{\mu}\Big( i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) L \\
+&+ \overline{R} \gamma^{\mu} \Big( i \partial_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) R
+\end{aligned}
+\label{eq:lagrangian_ew_expanded}
 \end{equation}
-and 
-\begin{equation}
-B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
-\end{equation}
-The coupling constants $g$ and $g'$ describe the strength of the interactions
-of the fermions with the gauge boson fields before EWSB. 
 
 
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{llc|ccc}
-  \multicolumn{3}{c|}{Particle} & $Q$ & $Y$ & $T^3$\\
-\hline
-\hline
-\multirow{4}{*}{Quarks} & \multirow{2}{*}{Left-Handed}&  $u_L$   &  2/3  &1/3 & 1/2  \\
-                       &                              &  $d_L$  & -1/3   &1/3& -1/2 \\
-		       \cline{2-6}
-                       &\multirow{2}{*}{Right-Handed}&  $u_R$   & 2/3  & 4/3 & 0 \\
-                       &                             &  $d_R$  & -1/3   &-2/3& 0\\
-\hline
-\hline
-\multirow{4}{*}{Leptons}&\multirow{2}{*}{Left-Handed} &$e_L$     & -1  & -1& 1/2\\
-                        &                             & $\nu_{e,L}$  & 0 &-1&-1/2 \\
-		       \cline{2-6}
-                        &\multirow{2}{*}{Right-Handed} &$e_R$     & -1  & -2& 0\\
-                        &                              & $\nu_{e,R}$  & 0 &0 &0 \\
-\end{tabular}
-\caption{The charges of the SM fermions. The charges are the same
-for each generation, so only the first generation of quarks
-and leptons are shown.  } %what about T?
-\label{tab:ewcharges}
-\end{table}
 
 The V-A structure of the weak interactions
 results in the absence of charged weak interactions involving right-handed
@@ -288,6 +278,30 @@ As a result, they do not participate in any of the SM interactions
 and only exist hypothetically as so-called ``sterile'' neutrinos.
 %refer to first observation of missing right-handed neutrinos?
 
+\begin{table}[ht]
+\centering
+\begin{tabular}{llc|ccc}
+  \multicolumn{3}{c|}{Particle} & $Q$ & $Y$ & $T^3$\\
+\hline
+\hline
+\multirow{4}{*}{Quarks} & \multirow{2}{*}{Left-Handed}&  $u_L$   &  2/3  &1/3 & 1/2  \\
+                       &                              &  $d_L$  & -1/3   &1/3& -1/2 \\
+		       \cline{2-6}
+                       &\multirow{2}{*}{Right-Handed}&  $u_R$   & 2/3  & 4/3 & 0 \\
+                       &                             &  $d_R$  & -1/3   &-2/3& 0\\
+\hline
+\hline
+\multirow{4}{*}{Leptons}&\multirow{2}{*}{Left-Handed} &$e_L$     & -1  & -1& 1/2\\
+                        &                             & $\nu_{e,L}$  & 0 &-1&-1/2 \\
+		       \cline{2-6}
+                        &\multirow{2}{*}{Right-Handed} &$e_R$     & -1  & -2& 0\\
+                        &                              & $\nu_{e,R}$  & 0 &0 &0 \\
+\end{tabular}
+\caption{The charges of the SM fermions. The charges are the same
+for each generation, so only the first generation of quarks
+and leptons are shown.  } %what about T?
+\label{tab:ewcharges}
+\end{table}
 
 Using this specification of the fermion fields 
 we can identify the interactions of the fermions with the 
@@ -295,7 +309,7 @@ charged $W$ boson.  Expanding the term
 \begin{equation}
 -g \frac{1}{2} \overline{L}\gamma^{\mu}\boldsymbol{\tau} \cdot \textbf{W}_{\mu} L 
 \end{equation}
-from \eqn\eqref{eq:lagrangian_ew}
+from \eqn\eqref{eq:lagrangian_ew_expanded}
 and keeping only those
 terms where the charged $W$ and lepton fields are present gives
 \begin{equation}
@@ -425,22 +439,24 @@ mechanism  \cite{PhysRevLett.13.321,PhysRevLett.13.508}
 The lagrangian for EWSB via the Higgs mechanism is 
 \begin{equation}
 \begin{aligned}
-\curlyl_{\textrm{EWSB}} =& \Big|\Big(i \partial_{\mu} 
-			- g\frac{1}{2} \boldsymbol{\tau}\cdot \textbf{W}_{\mu}
-			- g' \frac{Y}{2} B_{\mu} \Big)\phi\Big|^2 \\
-			&- \Big(\mu^2 \phi^{\dagger} \phi + \lambda (\phi^{\dagger}\phi)^2 \Big) \\
+\curlyl_{\textrm{EWSB}} =& \Big|
+		         %\Big(i \partial_{\mu} 
+			%- g\frac{1}{2} \boldsymbol{\tau}\cdot \textbf{W}_{\mu}
+			%- g' \frac{Y}{2} B_{\mu} \Big)
+			D_{\mu}\phi\Big|^2 
+			- \Big(\mu^2 \phi^{\dagger} \phi + \lambda (\phi^{\dagger}\phi)^2 \Big) \\
 			&- \Big(G_1 (\overline{L}\phi R  + \overline{R}\phi_c L)
 			      + G_2 (\overline{L}\phi_c R + \overline{R}\phi L) \Big)
 \end{aligned}
 \label{eq:lagrangian_ewsb}
 \end{equation}
-where the first line shows the interactions of the newly 
+where the first term shows the interactions of the newly 
 introduced scalar Higgs field, $\phi$, with the gauge bosons; 
-the second line is the famous ``mexican-hat'' potential 
+the second term is the famous ``mexican-hat'' potential 
 of the Higgs field, with parameters $\mu^2 < 0$ and $\lambda>0$, 
 that is responsible for the spontaneous symmetry 
 breaking in the Higgs mechanism;
-and the third line shows the Yukawa interactions 
+and the third term shows the Yukawa interactions 
 of the Higgs field with the fermions, with couplings $G_1$ and $G_2$,
 that give the fermions their masses.
 Before EWSB, $\phi$, and its conjugate $\phi_c$, 
@@ -1050,41 +1066,47 @@ and semi-leptonic channels is presented in \sec\ref{sec:measurement}.
 The lagrangian of the SM, summarized by 
 \eqn\eqref{eq:lagrangian_sm},~\eqref{eq:lagrangian_qcd},
 ~\eqref{eq:lagrangian_ew}, and~\eqref{eq:lagrangian_ewsb}
-has been very successful at describing the physics observed so far
-from the energy up to the \TeV scale.
-But there is no compelling reason to believe that this will hold 
-for arbitrarily high energies. If history is any guide, the SM is simply
-an approximation of a larger theory whose details only become
-relevant at even higher energies.
-Indeed, the SM leaves important questions unanswered that could be explained
-by the observation of some new phenomena at higher energies. (cite)
+has so far been very successful. 
+But, as we continue to probe higher energy scales, 
+there is reason to believe that the SM's luck will run out.
+If history is any guide, the SM is simply
+an approximation of a larger theory whose details are not relevant
+relevant at current energies.
+Indeed, the SM leaves important questions unanswered (for example, 
+the hierarchy problem) that could be explained
+by the observation of some new high energy phenomena.  %more detail
 
-One way to make manifest 
-this description of the SM as an approximate theory
-is using an Effective Field Theory (EFT) description of the interaction
-lagrangian (cite). Such a description adds terms to the lagrangian of the SM
-which start small but become increasingly important at higher energies.
-In a general form, the terms might look like this:
+This idea of the SM as an approximate theory
+can be made explicit 
+using an Effective Field Theory (EFT) \cite{Pich:1998xt}
+approach which includes new terms in the lagrangian, in addition to the SM.
+As a function of the energy, these terms start small 
+but become increasingly important at higher and higher energies.
+In general, the new EFT terms might look like this:
 \begin{equation}
 \curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_{n=5}^{\infty} \sum_i \frac{c_{n,i}}{\Lambda^{n-4}} \curlyo_{n,i}
 \end{equation}
-where $\lambda$ is some new energy scale relevant to the new
+where $\Lambda$ is some new energy scale relevant to the new
 physics we seek to describe and the $c_{n,i}$ are dimensionless
 couplings.  While the operators of the SM have mass dimension 4, the EFT 
 operators, $\curlyo_{n,i}$, have a mass dimension
 $n>4$ which describe the new interactions between the SM fields at low energy
 due to the new physics model.
 The sum over $i$ is simply to indicate that there are in general multiple 
-possible new operators at a given mass dimension.
-Since the relevant energy scale being probed in this formulation
-is by definition less than the new energy scale, $\Lambda$, the
-presence of $\Lambda^{n-4}$ in the denominator suppresses each new term
-with respect to the SM terms. This suppression becomes stronger 
-for higher and higher powers. Thus, only the first terms in the summation
+possible new operators for a given mass dimension.
+These EFT operators come from ``integrating out'' the high energy interactions
+between the SM fields and the fields in the new physics model,
+leaving behind contact interactions between the SM fields and factors
+of $\Lambda^{n-4}$ in the denominator.
+These factors of $\Lambda$ suppress the new terms
+with respect to the SM, with the suppression becoming stronger as $n$ grows.
+Thus, only the first terms in the summation
 over $n$ are important at low energy.
 
-The list of possible gauge-invariant EFT operators to consider is long.  One way 
-to shorten the list is to impose certain symmetries. Enforcing the conservation
+The list of possible gauge-invariant EFT operators to 
+consider is long \cite{Hagiwara:1993ck,Buchmuller:1985jz,Eboli:2006wa}
+One way to shorten the list is to impose certain symmetries. 
+Enforcing the conservation
 of baryon and lepton number restricts 
 us to only even values of $n$:
 \begin{equation}
@@ -1097,32 +1119,37 @@ The leading $n=6$ terms predict new anomalous triple and quartic
 gauge coupling (aTGC and aQGC) interactions while the sub-leading $n=8$ terms
 predict only new aQGC interactions. 
 Predictions of aTGC interactions have been studied in detail at 
-LEP, the Tevatron, and the LHC (cite) with no luck.
+LEP, the Tevatron, and the LHC  with no luck \cite{PDG:2014}.
 But there is still hope!
 It could be that new physics is suppressed in aTGC interactions
-but not in aQGC interactions (for instance, if the aTGC interactions
-first appear at the one loop level but the aQGC interactions appear at tree level).
+but not in aQGC interactions. \footnote{For instance, the aTGC interactions
+could first appear at the one loop level while the aQGC 
+interactions appear at tree level.}
 Then the new physics might first appear at $n=8$, where only aQGC interactions
 occur.
 
 
 
-\subsection{Anomalous Quartic Gauge Couplings}
-%be sure to add a review of measurements
+%\subsection{Anomalous Quartic Gauge Couplings}
 
 In a linear EFT model where the Higgs field is indeed the mechanism for EWSB, 
-the possible $n=8$ operators \cite{} in \eqn\eqref{eq:lagrangian_eft} can
+the possible $n=8$ operators 
+in \eqn\eqref{eq:lagrangian_eft} can
 be split into three categories: those containing covariant derivatives,
-as in \eqn\eqref{}, of the Higgs field, $\phi$; 
+as in \eqn\eqref{eq:ew_covariant_derivative}, of the Higgs field, $\phi$; 
 those containing covariant derivatives of the Higgs field and 
-the field strength tensors, $W_{\mu\nu}$ and $B_{\mu\nu}$, as in \eqn\eqref{};
-or those containing only field strength tensors. In this thesis, we are
-interested only in the first category, which contains two operators:
+the field strength tensors, as 
+in \eqn\eqref{eq:wfieldstrength} and \eqref{eq:bfieldstrength};
+or those containing only field strength tensors \cite{Eboli:2006wa,Eboli:2003nq}. 
+All of these operators preserve CP symmetry.
+In this thesis, we are
+interested only in the first category, which is limited to just two operators:
 \begin{align}
 \curlyo_{S,0} =& \Big[(D_{\mu}\phi)^{\dagger} D_{\nu} \phi\Big] \times \Big[(D^{\mu} \phi)^{\dagger} D^{\nu} \phi \Big] \\
 \curlyo_{S,1} =& \Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big]
 \end{align}
-Which can come from integrating out a new spin-1 resonance...
+which could come from integrating out some new 
+vector gauge boson resonance coupling to the EW gauge bosons \cite{Baak:2013fwa}.
 Plugging these into \eqn\eqref{eq:lagrangian_eft} (and dropping all other terms
 besides the SM), we get
 \begin{equation}
@@ -1139,26 +1166,14 @@ These modify the SM QGC interactions of \eqn\eqref{eq:lagrangian_qgc}
 and \fig\ref{fig:theory_feynman_couplings_qgc}
 to produce new aQGC interactions $W^+W^-W^+W^-$, $W^+W^-ZZ$, and $ZZZZ$
 that do not depend on the gauge boson momenta (do I care?).
-In this thesis, we are interested only in the fully charged aQGC
+In this thesis, we are interested only in the aQGC
 interaction term involving $W^+W^-W^+W^-$, which predicts  
 a new tree level diagram for the $WWW$ production process similar to the SM QGC
 production of this process in \fig\ref{fig:theory_feynman_couplings_qgc}.
-If real, such a modification would enhance the predicted SM 
-total cross-section in \eqn\eqref{eq:www_total_xsec}.
+If real, such a modification would enhance the predicted 
+cross-section in \eqn\eqref{eq:www_total_xsec}.
 
-
-
-
-
-All of these preserve CP symmetry.
-
-
-
-The effective field theory
-approach is practical and widely used when there is no compelling
-specific model of new physics beyond the SM, see for example,
-discussions in Refs:~\cite{Hagiwara:1993ck}, \cite{Buchmuller:1985jz}
-and \cite{Eboli:2006wa}.  
+unitarity
 
 \section{Status of QGC Measurements and aQGC Limits}
 A variety of measurements sensitive QGC interactions have been
