@@ -11,6 +11,7 @@
 \usepackage{shorthand}
 \usepackage{graphicx}
 \usepackage{url}
+%\usepackage{tabto}
 %\usepackage[style=numeric,backend=bibtex]{biblatex}
 \usepackage{subfigure}
 \usepackage{mathrsfs}
@@ -25,6 +26,12 @@
 % \usepackage{caption}
 \usepackage{url}
 %\usepackage[hidelinks]{hyperref}
+
+\usepackage{ifthen}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{marvosym}
+
 \usepackage{hyperref}
 \hypersetup{backref,  
 pdfpagemode=FullScreen,  
@@ -44,6 +51,7 @@ colorlinks=false}
 	\fi}
 \makeatother
 
+\usepackage{CVPreamble}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -233,7 +241,7 @@ blank
 % in the below example
 
 \chapter*{Curriculum Vitae}
-blank
 
+\input{AlexLongCV}
 
 \end{document}
