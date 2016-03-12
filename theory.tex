@@ -302,6 +302,20 @@ of the momentum of the proton.
 
 
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.8\textwidth]{figures/theory/mstw.eps}
+\caption{Plot of $xf_i(x,Q^2)$ vs $x$ for the MSTW 2008 NLO PDF sets with 68\% CL 
+eigenvector uncertainties \cite{Martin:2009iq} for two different $Q^2$ scales.
+The peak in the $f_u$ and $f_d$ distributions is due to the valence
+quark requirements in the proton. The sea quark PDF distributions are shown,
+as are is the large gluon PDF, which is scaled down by a factor of 10.  At
+high $Q^2$, the sea quark PDFs become more important, as do the 
+contributon from heavy quarks.}
+\label{fig:pdf_mstw}
+\end{figure}
+
+
 The PDFs are ultimately determined experimentally using fits to the 
 data collected from deep inelastic scattering and hadron
 collider experiments. There is not one perfect way 
@@ -314,10 +328,62 @@ In general, the predictions from different PDFs agree within a few percent.
 Differences can arise, however, in particular at high energy (high $x$)
 where it is difficult to measure.
 This can be seen, for instance, in a comparison I performed
-on the size of NLO to NNLO QCD corrections to the Drell-Yan
-process for different PDFs in \fig\ref{} (cite).%make sure defined earlier
+on the variation of differnt PDF predictions on the charged Drell-Yan process
+seen in \fig\ref{fig:wprime_kfac}.
 Thus, when making predictions, one usually compares multiple
-PDFs following some prescription such as in (cite pdf4lhc).
+PDFs following some prescription such as in \cite{Botje:2011sn}.
+
+
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.45\textwidth]{figures/theory/QCDKFac_Separate_WPLUS.eps}
+\includegraphics[width=.45\textwidth]{figures/theory/QCDKFac_Separate_WMINUS.eps}
+\caption{Plot of variation of NLO to NNLO 
+to charged Drell-Yan production for various PDF sets as a function of the invariant
+mass of the $W$ when it decays leptonically, $m_{l\nu}$, as studied
+for the background estimate in a search for leptonically
+decaying exotic $W'$ bosons \cite{Aad:1746306,Adams:1748664}.%make sure defined earlier
+Several different PDFs are compared: 
+MSTW 2008 \cite{Martin:2009iq} (solid red line), 
+CT10 \cite{guzzi:2011sv} (narrow dashed blue line)), 
+NNPDF 2.3 \cite{Ball:2012cx} (wide dashed purple line),  
+ABM 11 \cite{Alekhin:2012ig} (wide dashed-dotted green line),
+and  HERA 1.5 \cite{Radescu:2011cn} (narrow dashed-dotted orange line).
+Ratios are shown of the various PDFs at NNLO with respect to the CT10
+PDF set at NLO. All PDF sets use a strong coupling constant
+of $\alpha_s = 0.117$. The 90\% CL uncertainty on the MSTW 2008 NNLO 
+PDF set is aslo shown (hashed red band).  }
+\label{fig:wprime_kfac}
+\end{figure}
+
+
+For this thesis, three different PDF sets are compared for the signal 
+process: MSTW 2008 \cite{Martin:2009iq}, CT10 \cite{guzzi:2011sv},  and
+NNPDF 3.0 \cite{Ball:2014uwa}. All PDF sets are evaluated at NLO.
+The MSTW 2008 and CT10 PDF sets are Hessian PDF sets that define
+separate eigenvectors...
+MSTW 08 has been shown to do a good job in general of describing
+the LHC data, except possibly low rapidity lepton asymmetry data (cite),
+which is sensitive to small $x$ ($x\approx 0.1$) valence quarks.
+NNPDF uses a different method, which is split into separate MC sets...
+NNPDF 3.0 is the most up-to-date with data from deep inelastic scattering
+studies in Run-II at HERA, and from recent LHC measurements at ATLAS, CMS, and
+LHCb.
+
+
+
+
+Implicit in the definition of the PDFs are the renormalization and 
+factorization scales, $\mu_R$ and $\mu_F$. These are arbitrary 
+scales which appear in order to remove divergences
+inherent in perturbation theory applied to QCD. Typically, these
+are set to be equal to the scale of the interaction process.\footnote{For 
+example, in Drell-Yan production, a natural scale to choose
+for would be $\mu_R = \mu_F = m_Z$.} This choice of scales
+introduces an inherent uncertainty on the PDF prediction, 
+which is usually tested by varying the two scale choices independtly. 
 
 Renorm and Fac scales 
 
