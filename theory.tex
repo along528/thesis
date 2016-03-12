@@ -229,10 +229,10 @@ This is the property of asymptotic freedom (cite),
 where inside a bound state (low energy), the quarks behave essentially
 as free particles while if in isolation they interact strongly with the 
 vacuum. 
-This has tremendous consequences, namely 
-the breakdown of perturbative QCD at low energy
-and that of of ``color confinement''.
-We are primarily concerned with the latter.
+This has tremendous consequences, since it 
+results in the breakdown of perturbative QCD at low energy
+and since it is believed to be the cause 
+of ``color confinement''.
 The principle of ``color confinement'' states that
 only colorless objects can be observed in nature. Thus, quarks and gluons can
 never be observed directly. Furthermore, hadronic bound states,
@@ -242,46 +242,94 @@ are mesons (for example, the $\pi^0$) and baryons (for example, the neutron),
 although more complex configurations have recently been discovered (cite).
 Any attempt to split up a hadron into its constituent quarks 
 will fail, with the quarks forming new hadrons from quark-antiquark
-pairs created from the vacuum. This process of breaking up a 
-hadron into more hadrons is referred to as ``hadronization''.
+pairs pulled from the vacuum. This cascade of hadrons 
+breaking up into more hadrons is referred to as ``hadronization''.
 At the Large Hadron Collider (LHC), hadronization frequently occurs
 at a high momentum where the resulting objects are Lorentz boosted 
-into highly collimated collections of particles, called jets. 
+into highly collimated collections of hadrons and other particles, called jets. 
 Jets are thus the main observables for probing QCD at the LHC.
+
+Most predictions of QFT phenomena rely on perturbative calculations.
+However, at low energies, the QCD coupling is large enough 
+that the theory is no longer perturbative. Fortunately,
+the energies of the collisions at the LHC are 
+safely within the perturbative regime. 
+LO and NLO...
+
+
 
 
 \subsection{Parton Distribution Functions}
 
-At the LHC, we are studying the properties of proton-proton collisions,
-though it is really 
-The types of studies being performed at the LHC are interested in probing
+Despite color confinement, 
+the constituent quarks and gluons of the hadrons, also known as partons, can still 
+be probed. Indeed, in the high energy proton-proton collisions of the LHC, 
+the partons inside the proton participate
+directly in the interactions under study.  However,
+while the momentum and energy of the protons can be known exactly, 
+this is not true of the partons. Instead, the individual
+parton momenta can only be known with some probability.
+These are governed by the parton distribution functions (PDF),
+$f_i(x,Q^2)$, where $x$ ranges from $0<x<1$ and is the fraction of 
+the parton momentum 
+with respect to the total proton momentum, $Q^2$ is the positive square
+of the momentum transfer in the interaction, and $i$ indexes the parton
+that the PDF refers to.
+For a given $Q^2$, the overall probablity must of course sum to unity, such that
+\begin{equation}
+\sum_i \int \mathrm{d}x~x f_i(x) = 1
+\end{equation}
+where note that the sum over $i$ is taken over all possible partons;
+this includes all quark flavors (though the more massive quarks 
+are less important) as well as the gluons.
+A hadron is characterized by its valence quark 
+composition, which places additional requirements on the PDFs. 
+In the case of the proton, the valence quark composition is identified as
+two up quarks and a down quark.
+This translates to the requirements 
+\begin{align}
+\int \mathrm{dx} (f_u(x,Q^2) - f_{\overline{u}}(x,Q^2) ) &= 2 \\
+\int \mathrm{dx} (f_d(x,Q^2) - f_{\overline{d}}(x,Q^2) ) &= 1 
+\end{align}
+while the other quark flavors are referred to as sea quarks 
+and follow the requirement
+\begin{equation}
+\int \mathrm{dx} (f_i(x,Q^2) - f_{\overline{i}}(x,Q^2) ) = 0, ~~~~~~~~~ i\neq d,u
+\end{equation}
+After these requirements, the remaining momentum fraction of the proton
+comes from the gluon PDF, which in the end typically contributes to most
+of the momentum of the proton.
 
-The studies performed at the LHC are primarily concerned with the 
-interactions of fundamental particles, like the quarks. However, the
-principle of asymptotic freedom, described above, means
-that one we can not collide quarks directly, but instead must
-collide quark bound states. At the LHC, it is protons. 
-Thus, we must understand the structure of the bound state quarks
-inside the proton.
-This structure is described by Parton Distribution Functions (PDF)
 
-This is achieve
 
-DIS?
+The PDFs are ultimately determined experimentally using fits to the 
+data collected from deep inelastic scattering and hadron
+collider experiments. There is not one perfect way 
+to determine the PDFs.  As a result there are many different
+PDF sets available to choose from, with updates being churned
+out regularly by different physics groups. An example of the
+PDFs for one particular PDF set is shown for two different
+$Q^2$ scales in \fig\ref{fig:pdf_mstw}.
+In general, the predictions from different PDFs agree within a few percent.
+Differences can arise, however, in particular at high energy (high $x$)
+where it is difficult to measure.
+This can be seen, for instance, in a comparison I performed
+on the size of NLO to NNLO QCD corrections to the Drell-Yan
+process for different PDFs in \fig\ref{} (cite).%make sure defined earlier
+Thus, when making predictions, one usually compares multiple
+PDFs following some prescription such as in (cite pdf4lhc).
 
-the interactions of the fundamental particles, like quarks that
-are responsible for the interactions being probed. The principle
-of asymptotic freedom, described above, means
+Renorm and Fac scales 
 
-The property of color conk
+NLO and NNLO
 
-Parton Distribution Function (PDF)
+Mention details of different PDF sets? Only need to talk about CT10, MSTW and NNPDF
 
-Include valence quark rules
+%W' pdf comparisons
+%https://cds.cern.ch/record/1498078/files/ATL-COM-PHYS-2012-1771.pdf
+%figure 69 
+%mention parton luminosity drop off
 
-sea quarks
-
-asymptotic freedom
 
 \subsection{The Electroweak Theory}
 \label{sec:theory_ew}
