@@ -250,11 +250,23 @@ into highly collimated collections of hadrons and other particles, called jets.
 Jets are thus the main observables for probing QCD at the LHC.
 
 Most predictions of QFT phenomena rely on perturbative calculations.
-However, at low energies, the QCD coupling is large enough 
-that the theory is no longer perturbative. Fortunately,
-the energies of the collisions at the LHC are 
-safely within the perturbative regime. 
-LO and NLO...
+That is, they can be approximated with simple ``tree-level'' interactions,
+using just one instance of the interactions in \fig\ref{fig:feynman_qcd},
+which involve only one factor of the coupling.  These are referred to as 
+Leading-Order (LO) interactions, which in QCD, involve one power of the
+strong coupling, $\alpha_s$. Combining two interactions 
+is proportional to $\alpha_s^2$ and referred to Next-To-Leading-Order (NLO).
+This can be continuted to Next-To-Next-To-Leading-Order (NNLO), which is 
+proportional to $\alpha_s^3$, and so on \emph{ad infinitum}.
+Such a procedure is only useful if $\alpha_s < 1$ such that higher order
+terms become smaller in magnitude and thus less important. Such a procedure
+is applied not just in QCD calculations, but also in calculations
+of the Electroweak theory like in \sec\ref{sec:theory_ew}.
+%rewrite lagrangian to refer to alpha_s?
+In QCD, however, the growth of $\alpha_s$ at low energies because of asymptotic
+freedom means that eventually $\alpha_s > 1$ and perturbation theory is no longer
+valid. In that case, alternative approaches, like numerical lattice QCD
+calculations must be employed.
 
 
 
@@ -300,6 +312,15 @@ After these requirements, the remaining momentum fraction of the proton
 comes from the gluon PDF, which in the end typically contributes to most
 of the momentum of the proton.
 
+Implicit in the definition of the PDFs are the renormalization and 
+factorization scales, $\mu_R$ and $\mu_F$. These are arbitrary 
+scales which appear in order to remove divergences
+inherent in perturbation theory applied to QCD. Typically, these
+are set to be equal to the scale of the interaction process.\footnote{For 
+example, in Drell-Yan production, a natural scale to choose
+for would be $\mu_R = \mu_F = m_Z$.} This choice of scales
+introduces an inherent uncertainty on the PDF prediction, 
+which is usually tested by varying the two scale choices independtly. 
 
 
 \begin{figure}[ht]
@@ -357,44 +378,31 @@ of $\alpha_s = 0.117$. The 90\% CL uncertainty on the MSTW 2008 NNLO
 PDF set is aslo shown (hashed red band).  }
 \label{fig:wprime_kfac}
 \end{figure}
+%parton luminosity dropoff
 
 
 For this thesis, three different PDF sets are compared for the signal 
 process: MSTW 2008 \cite{Martin:2009iq}, CT10 \cite{guzzi:2011sv},  and
 NNPDF 3.0 \cite{Ball:2014uwa}. All PDF sets are evaluated at NLO.
-The MSTW 2008 and CT10 PDF sets are Hessian PDF sets that define
-separate eigenvectors...
-MSTW 08 has been shown to do a good job in general of describing
-the LHC data, except possibly low rapidity lepton asymmetry data (cite),
-which is sensitive to small $x$ ($x\approx 0.1$) valence quarks.
-NNPDF uses a different method, which is split into separate MC sets...
-NNPDF 3.0 is the most up-to-date with data from deep inelastic scattering
+All three PDF sets include data from deep inelastic scattering studies
+at Run-I at HERA, vector boson production and 
+inclusive jet studies at the Tevatron, as well as data from fixed
+target experiments.
+NNPDF 3.0 is the most up-to-date with additional 
+data from deep inelastic scattering
 studies in Run-II at HERA, and from recent LHC measurements at ATLAS, CMS, and
 LHCb.
+The uncertainties on the MSTW 2008 and CT10 PDF sets are 
+determined using a Hessian approach while the NNPDF 3.0 PDF set uses
+a Monte Carlo approach.
+The Hessian approach splits the different fit directions into 
+(around 30 to 50) orthonormal eigenvectors which can then be varied independently.
+The Monte Carlo approach produces (around 100 to 1000) PDF set replicas
+that are produced from variations on the input data which can then be used
+to calculate distributions for extracting the central value and uncertainties.
+In general, each of the PDF sets are in good agreement with the LHC data.
 
 
-
-
-Implicit in the definition of the PDFs are the renormalization and 
-factorization scales, $\mu_R$ and $\mu_F$. These are arbitrary 
-scales which appear in order to remove divergences
-inherent in perturbation theory applied to QCD. Typically, these
-are set to be equal to the scale of the interaction process.\footnote{For 
-example, in Drell-Yan production, a natural scale to choose
-for would be $\mu_R = \mu_F = m_Z$.} This choice of scales
-introduces an inherent uncertainty on the PDF prediction, 
-which is usually tested by varying the two scale choices independtly. 
-
-Renorm and Fac scales 
-
-NLO and NNLO
-
-Mention details of different PDF sets? Only need to talk about CT10, MSTW and NNPDF
-
-%W' pdf comparisons
-%https://cds.cern.ch/record/1498078/files/ATL-COM-PHYS-2012-1771.pdf
-%figure 69 
-%mention parton luminosity drop off
 
 
 \subsection{The Electroweak Theory}
