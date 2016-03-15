@@ -605,6 +605,9 @@ separated by supporting wedges and then surrounded in a single
 cryostat.
 The resulting field is non-uniform as can be seen on the right
 of \fig\ref{fig:atlas_toroid_magnet}. 
+The field strength in the transverse plane is roughly zero and so is referred
+to as the non-bending plane, while the $\eta$ direction is referred to as the
+bending plane.
 To achieve adequate momentum resolution, the resulting field must be known
 precisely.
 The field is measured in all directions using sensors placed throughout
@@ -624,13 +627,15 @@ momentum mesaurement to have a momentum resoution of
 about 10\% at a momentum of 1~\TeV.
 Given the magentic field strength in the MS, a muon 
 with this momentum is expected to have a sagitta
-of about $500\mu$m. According to \eqn\eqref{eq:sagitta},
+of about $500\mu$m in the bending plane. 
+According to \eqn\eqref{eq:sagitta},
 this then translates into a precision requirement of 
 no more than $50 \mu$m on the sagitta.
 In order to achieve this, MDT chambers are used everywhere 
 in the MS from $|\eta|<2.7$, except in the inner layer of the 
 endcap from $2<|\eta|<2.7$
-where the rates are too high ($>150$ Hz/cm$^2$) and CSCs
+where the rates are too high 
+and CSCs
 are used instead. 
 The MDT system is an arrangement of roughly 1000 MDT chambers composed
 of aluminum drift tubes roughly 30 mm in diameter and a couple meters in length 
@@ -645,7 +650,7 @@ The shape (?) of the electron collection pulse on the wire
 can be used to determine a radial distance away from the wire
 at which the muon passed as in \fig\ref{}. The cylindrical symmetry
 of the tube is useful as the resolution is roughly flat, at around
-$80\mu$m, as a function
+$80\mu$m in the bending plane, as a function
 of the angle of incidence of the muon hitting the tube. 
 It is not possible, however, to determine the direction
 of the muon from just one tube.  For that reason, 
@@ -653,15 +658,52 @@ tubes are arranged together in multi-layers of 3-8 tubes such that
 the trajectory
 can be reconstructed from matching the patter of hits in multiple layers,
 as in \fig\ref{}.
-An chamber is built from 2 multilayers separated by a spacer of ... length
+A chamber is built from 2 multilayers separated by a spacer of ... length
 giving a precision of roughly $35 \mu$m per chamber.
+The long length of the MDTs means that they cannot provide a  useful measurement
+in the non-bending plane.
 An optical alignment system is used to monitor the MDT chambers %alignment between chambers?
 for deformations and the tension of the wires can be adjusted
 to adjust for sag where needed. %technically only in barrel.
+Despite having very good precision, the maximum drift time
+can be as high as 700 ns, which is far too slow for LHC bunch identification.
 
 
-The CSCs..
+The CSC are used in the region of the MS closest to the interaction
+point where the crossing rate of tracks 
+is greater than $150$ Hz/cm$^2$, 
+too high for succesful operation of the MDT chambers.
+The CSCs can handle up to 1000 Hz/cm$^2$
+while maintaining adequate  precision in the bending plane.
+A CSC is a multiwire proportional chamber
+composed of layers of cathode strips sandwhiching 
+a set of anode wires and filled with a non-circulating gas (Ar/CO2).
+The two sets of cathode strips in a layer are separated by 5mm
+with the anode wires running directly between the two sets.
+In each layer the the two sets of cathode strips are segmented in
+orthogonal directions in order to give 
+A signal is induced on the cathode strips due to an avalanche
+of electrons from the ionizing muon collecting on the anode wire.
+The two sets of cathode strips are segmented in orthogonal directions
+providing measurements in both the bending and non-bending planes. 
+A CSC is composed of four layers, each giving separate $\eta$ and
+$\phi$ measurements.
+The resolution in the bending plane is roughly 60 microns
+while the coarser segmentation in the non-bending plane 
+results in a  resoulution of  roughly 5 mm.
+Two disks are formed from the chambers such that the anode wires
+point radially and that there are no gaps in $\phi$, as
+can be seen in \fig\ref{}. The rectangular symmetry 
+results in a degradation of the resolution based on the angle of incidence.
+This is resolved by titling the chambers slightly toward the interaction point.
+Of use in the high occupancy environment, 
+if multiple tracks are present in a CSC in a given event, 
+the signal pulse height can be used to match the tracks.
+The small separation between cathode strips results in a layer
+results in a short electron drift time allowing for a good
+timing resolution of about 7 ns per layer.
 
+optical alignment?
 
 show resolution plot (something about this in 2.2.1)
 
@@ -673,3 +715,4 @@ The fast tracking...
 
 \section{Trigger}
 
+\section{LUCID?}
