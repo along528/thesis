@@ -26,7 +26,7 @@ observed matter and interactions in the universe, except for gravity.
 It is built from a quantum field theory where the constituent particles
 and interactions fit into a non-Abelian 
 $\suthree\times\sutwo\times\uone$~gauge symmetry.
-From these symmetries come the matter fermions, split 
+From these symmetries come the spin-1/2 matter fermions, split 
 into the quarks and leptons, and the force-carrying bosons
 that mediate their interactions.
 The \suthree~symmetry describes the theory of Quantum Chromodynamics (QCD)
@@ -52,9 +52,17 @@ confirming this last component of the SM.
 
 All of the 
 observed fundamental 
-matter particles in the universe are described by the quark
+matter particles in the universe are described by the quarks
 and leptons of the SM. Their properties are listed 
 in \tab\ref{tab:theory_fermions}. 
+The quarks and leptons can each be divided up into three ``generations'' 
+composed of pairs
+of particles with identical charges but whose masses increase with each generation.
+The generations are labeled in \tab\ref{tab:theory_fermions}. 
+Even though there are three 
+generations in both the lepton and quark sectors, 
+there are no observed SM interactions that link the two, 
+thus the quarks and lepton generations should be thought of as separate.
 The particles can be distinguished
 by their charges and masses.
 The charges describe how (and if) the particles participate in
@@ -68,7 +76,6 @@ the weak interactions. The types of allowed weak interactions are determined
 by a combination of the electric charge as well as the weak isospin
 and weak hypercharge, described in \sec\ref{sec:theory_ew}.
 %explain better
-Since all of the particles are fermions, they all have a spin of 1/2.
 The masses of the particles are not predicted by the theory, but 
 are essential for understanding their stability and decay properties
 as well as their kinematic behavior.
@@ -77,21 +84,13 @@ whose electric charge has opposite sign. The neutrinos, with zero
 electric charge, could possibly be their own 
 anti-particle (so-called Majorana fermions), but
 this has yet to be confirmed.
-The quarks and leptons can each be divided up into three ``generations'' 
-composed of pairs
-of particles with identical charges but whose masses increase with each generation.
-The generations are labeled in \tab\ref{tab:theory_fermions}. 
-Even though there are three 
-generations in both the lepton and quark sectors, 
-the quarks and leptons are not observed to interact directly, 
-thus the quark and lepton generations should be thought of as separate.
 
 \begin{table}[ht]
 \centering
 \small
 \begin{tabular}{|lclc|c|c|}
 \hline
-                        & Generation & Name & Symbol  & Charge & Mass [MeV]\\
+                        & Generation & Name & Symbol  & $Q$ & Mass [MeV]\\
 \hline
 \hline
 \multirow{6}{*}{Quarks}& \multirow{2}{*}{First}& Up & $u$   &  $~~2/3$    &  $2.3 ^{+0.7}_{-0.5}$    \\
@@ -115,15 +114,10 @@ thus the quark and lepton generations should be thought of as separate.
 \hline
 \end{tabular}
 \label{tab:theory_fermions}
-\caption{Summary of the electric charge and measured masses of the SM fermions. Mass measurements
+\caption{Summary of the electric charge, $Q$, and masses of the SM fermions. Masses 
 are taken from the Particle Data Group \cite{PDG:2014} and 
-are shown to the best precision available with their measured uncertainties.
+are shown to the best precision available with their uncertainties.
 Particles are also organized by their generation.
-The bottom quark mass measurement is shown using the $\overline{\textrm{MS}}$ 
-renormalization scheme.
-The top quark mass uncertainty combines the reported statistical and 
-systematic uncertainties 
-in quadrature.
 The limits on the electron neutrino and muon neutrino masses are 
 set at a 90\% confidence level 
 while the tau neutrino limits are set at a 95\% confidence level.}
@@ -421,13 +415,7 @@ and parity ($P$) violating V-A structure of the weak interactions
 while simultaneously preserving these symmetries for electromagnetism.
 It explains the presence of the massive EW gauge bosons 
 while maintaining gauge invariance
-using spontaneous symmetry breaking
-and includes the observed CP violating 
-\cite{PhysRevLett.13.138} 
-flavor mixing of the 
-charged interactions in the quark sector via 
-the Cabibbo-Kobayashi-Maskawa  (CKM)
-matrix \cite{Cabibbo:1963yz,Kobayashi:1973fv}.
+using spontaneous symmetry breaking.
 
 The EW term in the SM lagrangian can be written as
 \begin{equation}
@@ -440,7 +428,8 @@ The EW term in the SM lagrangian can be written as
 where the first two terms describe the kinetic energies and 
 self-interactions of the EW gauge bosons
 and the last term describes the fermion kinetic energies
-and their interactions with the EW gauge bosons.
+and their interactions with the EW gauge bosons, 
+with the fermion fields denoted as $\psi$.
 The kinetic energies are described by the field strength tensors
 \begin{equation}
 \label{eq:wfieldstrength}
@@ -533,8 +522,7 @@ its subscript.
 Note that the right-handed neutrinos are absent.
 This comes from them having zero charge across 
 the board in \tab\ref{tab:ewcharges}.
-As a result, they do not participate in any of the SM interactions
-and only exist hypothetically as so-called ``sterile'' neutrinos.
+As a result, they do not participate in any of the SM interactions.
 %refer to first observation of missing right-handed neutrinos?
 
 \begin{table}[ht]
@@ -556,7 +544,7 @@ and only exist hypothetically as so-called ``sterile'' neutrinos.
                         &\multirow{2}{*}{Right-Handed} &$e_R$     & -1  & -2& 0\\
                         &                              & $\nu_{e,R}$  & 0 &0 &0 \\
 \end{tabular}
-\caption{The charges of the SM fermions. The charges are the same
+\caption{The charges of the SM fermions in units of the electric charge, $e$. The charges are the same
 for each generation, so only the first generation of quarks
 and leptons are shown.  } %what about T?
 \label{tab:ewcharges}
@@ -605,10 +593,11 @@ of the quark sector look similar:
 \end{equation}
 These terms correspond to the Feynman diagrams at the bottom
 of \fig\ref{fig:feyn_wcoupling}.
-Taking into account quark flavor mixing via the CKM matrix
-modifies this picture by adding smaller interaction
-terms between different quark generations and also by slightly reducing
-the strength of the same-generation interactions.
+Taking into account quark flavor mixing via the 
+CP violating \cite{PhysRevLett.13.138} Cabibbo-Kobayashi-Maskawa
+matrix \cite{Cabibbo:1963yz,Kobayashi:1973fv}
+modifies this picture so that additional small interaction
+terms appear between different the quark generations.
 It is the presence of these interactions that allow the $W$ 
 to be produced to directly at a hadron collider.
 
@@ -691,7 +680,7 @@ cannot assign masses directly to the gauge bosons without breaking
 gauge invariance. This is resolved by the introduction of 
 spontaneous symmetry breaking which generates the masses for the 
 gauge bosons whilst preserving gauge invariance. 
-The simplest theory of this EWSB process 
+The simplest implementation of this EWSB process 
 is the Brout-Englert-Higgs 
 mechanism  \cite{PhysRevLett.13.321,PhysRevLett.13.508}
 (or the Higgs mechanism for short).
@@ -904,7 +893,7 @@ whose coupling strengths are given by the constants in front and
 whose Feynman diagrams 
 are shown in \fig\ref{fig:theory_feynman_couplings_qgc}.
 Neutral interactions that do not 
-include the \dubya~(like $ZZ\gamma\gamma$ or $ZZZZ$)
+include the \dubya, like $ZZ\gamma\gamma$ or $ZZZZ$,
 do not appear in the SM EW lagrangian.
 
 
@@ -1061,14 +1050,14 @@ Its mass has been measured in $p\overline{p}$ collisions at the Tevatron
 and in $e^{+}e^{-}$ collisions at LEP to give a world 
 average of $80.385 \pm 0.015\GeV$~\cite{PDG:2014}.
 A summary of the \dubya~mass measurements is shown on 
-the right of \fig\ref{fig:theory_w_pdg}.
-The width assuming a Breit-Wigner distribution has also been measured 
+the left of \fig\ref{fig:theory_w_pdg}.
+The \dubya~width, assuming a Breit-Wigner distribution, has also been measured 
 at LEP and the Tevatron as seen in the right of \fig\ref{fig:theory_w_pdg}
 with an average value of $2.085\pm0.042\GeV$ \cite{PDG:2014}.
 Roughly 1/3 of of the time the \dubya~decays approximately 
-evenly into each of the three lepton generations,
-as expected from the shared coupling of \eqn\eqref{eq:couplings_wleptons}
-(ignoring kinematics).
+evenly into each of the three lepton generations (ignoring kinematics),
+as expected lepton universaility,  
+indicated by the shared coupling of \eqn\eqref{eq:couplings_wleptons}.
 The leptonic decays of the \dubya~result in a charged lepton 
 with the same charge as the parent \dubya~(as dictated by charge conservation)
 and a neutrino (or anti-neutrino if the parent \dubya~has negative charge),
@@ -1091,10 +1080,9 @@ $\tau^+\nu_{\tau}$ ($\tau^-\overline{\nu}_{\tau}$) & $11.38 \pm 0.21$\\
 Quarks & $67.41 \pm 0.27$\\
 \end{tabular}
 \caption{Measured branching fractions of the $\dubya^+$ ($\dubya^-$)~boson 
-as reported by the Particle Data Group \cite{PDG:2014}.  The $W$ decays
-to quarks result in hadronic states which in general prohibit
-one from determining the specific $W$ final state. Thus, only 
-an inclusive branching fraction is listed for the decay to quarks.}
+as reported by the Particle Data Group \cite{PDG:2014}. 
+Only the inclusive branching fraction of the $W$ decay to all quark generations
+is reported. }
 \label{tab:theory_wdecay}
 \end{table}
 
@@ -1131,7 +1119,8 @@ an inclusive branching fraction is listed for the decay to quarks.}
 %\end{figure}
 
 The Higgs boson was discovered in 2012 at the LHC
-jointly by ATLAS \cite{Aad20121} and CMS \cite{Chatrchyan:2012xdj}.
+jointly by the ATLAS \cite{Aad20121} and CMS \cite{Chatrchyan:2012xdj}
+collaborations.
 Combined measurements of the mass between the two experiments 
 show the current value of the Higgs mass to be 
 $m_H = 125.09 \pm 0.21 (\textrm{Stat.}) \pm 0.11 (\textrm{Syst.})\GeV$
@@ -1262,13 +1251,11 @@ visible at 126~GeV. (make a better plot)}
 
 
 The cross-section for this process can be computed at 
-next-to-leading-order (NLO) in QCD
-( $O(\alpha_s^2)$ in perturbation theory (?) ). 
+NLO in QCD
 (Mention more details of how this is computed like PDFs,
 hadronization, interaction, radiation, decays. Use one of the 
 Feynman diagrams)
-Using 
-the \madgraph~generator finds an inclusive cross-section of 
+Using the \madgraph~generator finds an inclusive cross-section of 
 \begin{equation}
 \sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb}
 \label{eq:www_total_xsec}
@@ -1301,16 +1288,16 @@ fractions are thus summarized in the pie chart in \fig\ref{fig:branching_fractio
 For this thesis, we are primarily interested in the final state
 where each $W$ boson decays leptonically (the fully-leptonic final state) 
 which has the smallest branching fraction at roughly 3.5\%.
-In fact, since the $\tau$ leptons are also unstable, we choose to 
+In fact, since the $\tau$ leptons have a short lifetime, we choose to 
 omit $W$ decays to $\tau$ leptons from our fully-leptonic
 definition as well. This further reduces the fully-leptonic 
 branching fraction to 0.97\%.  While small, this fully-leptonic final state
-should have smaller backgrounds to the signal than the other 
+should have smaller backgrounds than the other 
 decay channels, making it one of the most sensitive channels for studying
 this process. The branching fraction when one $W$ boson is allowed
 to decay hadronically is considerably larger, at 21.6\% (or
 9.2\% when excluding decays to $\tau$ leptons). This is 
-referred to as the semi-leptonic decay channel. The presence
+referred to as the ``semi-leptonic'' decay channel. The presence
 of the two leptons from the other two $W$ decays still allows
 for background discrimination, though not as much as in the fully-leptonic
 channel. As a result, this channel has also been studied, though it 
@@ -1372,16 +1359,16 @@ us to only even values of $n$:
 \curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_i \frac{c_{6,i}}{\Lambda^2} \curlyo_{6,i} + \sum_j \frac{c_{8,j}}{\Lambda^4} \curlyo_{8,j} + \dots
 \label{eq:lagrangian_eft}
 \end{equation}
-where we have truncated the series at $n=8$ since these
+where we have truncated the series at $n=8$ since 
 these higher order terms are small.
 The leading $n=6$ terms predict new anomalous triple and quartic 
 gauge coupling (aTGC and aQGC) interactions while the sub-leading $n=8$ terms
 predict only new aQGC interactions. 
 Predictions of aTGC interactions have been studied in detail at 
-LEP, the Tevatron, and the LHC  with no luck \cite{PDG:2014}.
+LEP, the Tevatron, and the LHC  but none have been observed\cite{PDG:2014}.
 But there is still hope!
 It could be that new physics is suppressed in aTGC interactions
-but not in aQGC interactions. \footnote{For instance, the aTGC interactions
+but not in aQGC interactions.\footnote{For instance, the aTGC interactions
 could first appear at the one loop level while the aQGC 
 interactions appear at tree level.}
 Then the new physics might first appear at $n=8$, where only aQGC interactions
@@ -1423,8 +1410,8 @@ where we have introduced the new arbitrary couplings $f_{S,0}$ and $f_{S,1}$.
 Expanding this out we get...
 These modify the SM QGC interactions of \eqn\eqref{eq:lagrangian_qgc}
 and \fig\ref{fig:theory_feynman_couplings_qgc}
-to produce new aQGC interactions $W^+W^-W^+W^-$, $W^+W^-ZZ$, and $ZZZZ$
-that do not depend on the gauge boson momenta (do I care?).
+to produce new aQGC interactions $W^+W^-W^+W^-$, $W^+W^-ZZ$, and $ZZZZ$.
+%that do not depend on the gauge boson momenta (do I care?).
 In this thesis, we are interested only in the aQGC
 interaction term involving $W^+W^-W^+W^-$, which predicts  
 a new tree level diagram for the $WWW$ production process similar to the SM QGC
