@@ -666,12 +666,18 @@ A chamber is built from 2 multilayers separated by a spacer of ... length
 giving a precision of roughly $35 \mu$m per chamber.
 The long length of the MDTs means that they cannot provide a  useful measurement
 in the non-bending plane.
+Chambers are arranged in three concentric shells in the barrel 
+at $r = $5 m, 7.5 m, and 10 m and in several rings in the endcap
+at $|z| = $7.4 m, 10.8 m, 14 m, and 21.5 m as in \fig\ref{}.
+In each shell or ring
+the chambers are made to overlap in order to avoid gaps in azimuth.
+Still, there are gaps, in particular around $|\eta|=0$ due to a hole for services
+and due to the feet holding up the detector, seen in \fig\ref{fig:atlas_ms_rphi}.
 An optical alignment system is used to monitor the MDT chambers %alignment between chambers?
 for deformations and the tension of the wires can be adjusted
 to adjust for sag where needed. %technically only in barrel.
 Despite having very good precision, the maximum drift time
 can be as high as 700 ns, which is far too slow for LHC bunch identification.
-3 layers barrel and endcap...
 
 
 The CSC are used in the region of the MS closest to the interaction
@@ -696,9 +702,10 @@ $\phi$ measurements.
 The resolution in the bending plane is roughly 60 microns
 while the coarser segmentation in the non-bending plane 
 results in a  resoulution of  roughly 5 mm.
-Two disks are formed from the chambers such that the anode wires
+Two rings are formed from the chambers such that the anode wires
 point radially and that there are no gaps in $\phi$, as
-can be seen in \fig\ref{}. The rectangular symmetry 
+can be seen in \fig\ref{}. The rings are positioned
+at roughly $|z|=7.5$ m. The rectangular symmetry 
 results in a degradation of the resolution based on the angle of incidence.
 This is resolved by titling the chambers slightly toward the interaction point.
 Of use in the high occupancy environment, 
@@ -712,12 +719,74 @@ optical alignment?
 
 show resolution plot (something about this in 2.2.1)
 
-The fast tracking...
+The fast tracking system in the MS is designed to be able
+to identify muons coming from individual bunch crossings of the LHC
+and to discriminate them based on their position and \pt in the region
+$|\eta|<2.4$. This information
+is then used to trigger on high \pt~muons, as 
+described in \sec\ref{sec:atlas_trigger}.
+The individual bunch crossings of the LHC are designed to 
+be separated by only 25 ns, as described in \sec\ref{sec:lhc}.
+Thus, the system must be able to resolve individual tracks 
+with a time resolution of this size (what exactly is the design req?).
+To distinguish high \pt~muons from straight-track neutral particles 
+or highly curved-track low-momentum charged particles, the 
+system must be able to measure the sagitta of the 
+trajectory in the toroidal magnetic field, though not 
+with the same precision as in the precision tracking system.
+Furthermore, to distinguish individual tracks, position measurements
+must be performed in both the bending and non-bending planes.
+The measurement in the non-bending plane is also used to complement
+the measurements of the bending plane from the MDT chambers.
+In order to achieves this, RPCs are used in the barrel region
+from $|\eta|<1.05$ and TGCs in the endcap from $1.05 < |\eta|<2.4$.
+The layour of the fast tracking system can be seen in the diagram
+in \fig\ref{fig:atlas_muon_fast_tracking}. %use figure 6.27
+The RPCs are parallel electrode-plate detectors which use no wires.
+A single RPC layer consists of 
+resistive plates aligned in parallel and separated by 2 mm 
+with a gas mixture (primarily $\textrm{C}_2\textrm{H}_2\textrm{F}_4$)
+in the gap. An electric field of 4.9 kV/mm is applied between 
+the plates which results in electron avalanches to form in the gas
+along track toward the anode plate.
+This gives a signal pulse time resolution of about 5 ns.
+The pitch of the individual plates is 23 mm in $\eta$ and 35 mm in $\phi$
+A single RPC consists of two layers.  Three concentric shells 
+are formed from the RPCs around the beam line at about $r = $ 6.5, 7.5, and 10 m
+as in \fig\ref{fig:atlas_muon_fast_tracking}.
+The separation between the inner and outer layers 
+allows for a discrimination of muons with $9 < \pt < 35~\GeV$
+while the separation between the inner and middle layers allows for 
+discrimination of low-\pt~muons with $6 < \pt < 9~\GeV$.
+Space resolution...maybe put sqrt(12) formula? look up to be sure.
 
 
+The TGCs are multi-wire proporational chambers, similar to the CSCs.
+In a single TGC layer,the cathodes are separated by 2.8 mm and the wire-to-wire pitch
+is 1.8 mm.  A high voltage of 2900 V is applied to the anode wires
+resulting in a quasi-saturated electron avalanche in the gas 
+mixture (CO2/n-pentane) due to incident tracks.
+The small wire-to-wire pitch and high voltage result in a good 
+timing resolution for the signal pulse. The resulting
+signal pulse resolution is dependent on the angle-of-incidence
+of the incoming track, but still results in a signal width
+within 25 ns for about 99\% of tracks.
+TGC chambers are built from either two are three layers. 
+The TGC chambers are then arranged in rings such that they overlap
+in azimuth to eliminate gaps.
+The TGC rings are arranged as in 
+as in \fig\ref{fig:atlas_muon_fast_tracking}
+with a ring of two-layer TGCs placed in front of the endcap MDT inner
+layer at about $|z|=7$ m, 
+a ring of three-layer TGCs placed in front of the endcap MDT
+middle layer at around $|z|=13 $m, and two rings of 
+two-layer TGCs placed just behind
+the endcap MDT middle layer at around $|z|=14$ m.
+pt resolution and performance?
 
 
 
 \section{Trigger}
+\label{sec:atlas_trigger}
 
 \section{LUCID?}
