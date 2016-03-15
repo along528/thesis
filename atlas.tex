@@ -71,10 +71,9 @@ components of the ATLAS detector.
 Nearest the collision point is the inner detector (ID), designed to 
 measure the paths of charged particles passing through using several
 different subsystems. This 
-is surrounded by a 2 Tesla solenoidal magnetic field which 
-bends the trajectory of the charged particles by an amount
-inversely proportional to the particle momentum, thereby allowing
-for a momentum measurement.  Beyond that is the calorimeter system
+is surrounded by a 2 Tesla solenoidal magnetic field and
+allows for a momentum measurement.
+Beyond that is the calorimeter system
 which measures the energy deposits of all particles passing 
 through (except for muons and neutrinos) by stopping them in their 
 tracks. The calorimeter system 
@@ -136,6 +135,28 @@ The ATLAS detector has nearly uniform $2\pi$ coverage in $\phi$,
 while in $\eta$ the ID is restricted to $|\eta| < 2.5$,
 the MS to $|\eta| < 2.7$, and the calorimeter systems all the way
 to $|\eta| < 4.9$.
+
+The momentum of charged tracks can be measured by measuring how they 
+bend in a magnetic field. The deviation of a trajectory
+from a straight line path is referred to as the 
+sagitta, $s$.\footnote{Technically, the sagitta, $s$, is defined in terms
+of an arc as the distance from the center of the arc to the center of its
+base. It can related to the radius of the arc, $r$, and the half the length
+of the line connecting the two ends of the arc, $l$, by 
+$s=r-\sqrt{r^2-l^2}$.} The sagitta is proportional to the magnetic
+field strength and inversely proportional to the momentum.
+Thus, a straight-line trajectory resembles an infinite-momentum charged
+particle (or a neutral particle of any momentum), while
+a bent trajectory corresponds to a charged particle with a finite momentum.
+As a result, the momentum resolution, $\Delta p$, is related to the 
+precision on the measurement of the sagitta, $\Delta s$ by
+\begin{equation}
+\frac{\Delta p }{p} = \frac{\Delta s}{s}
+\label{eq:sagitta}
+\end{equation}
+This also has the effect that the fraction uncertainty on the momentum
+measurement grows linearly as a function of the momentum.
+
 
 The total momentum of the proton-proton collision in the transverse
 plane is zero. Since the detector has full azimuthal coverage 
@@ -563,7 +584,8 @@ barrel, and the CSCs and TGCs in the endcap.
 \includegraphics[width=.45\textwidth]{figures/atlas/toroid_magnet_field}
 \caption{(\emph{Left}) Diagram of MS toroid magnet geometry (red). The
 tile calorimeter is also shown.
-(\emph{Right}) Predicted field strength of MS magnet system in axial direction
+(\emph{Right}) Predicted field strength of the MS magnet 
+system as a function of $|\eta|$
 for $\phi=0$ (red) and $\phi=\pi/8$ (black).}
 \label{fig:atlas_toroid_magnet}
 \end{figure}
@@ -595,17 +617,56 @@ This results in degraded momentum resolution and poor trigger efficiencies
 in this region.
 
 
-The precision tracking...
-The 
-precisely the momentum of 
-hight \pt~(approximately $>3\GeV$) muons a as they 
-and to quickly and leave the detector and to allow for
-fast identification of highthe muon momentum precisely, down to 
-about 10\% at a \pt~of 1 TeV, 
+The precision tracking system has stringent requirements
+on the precision of the muon trajectory measurement, 
+which come from design goals on the resolution of the muon
+momentum mesaurement to have a momentum resoution of 
+about 10\% at a momentum of 1~\TeV.
+Given the magentic field strength in the MS, a muon 
+with this momentum is expected to have a sagitta
+of about $500\mu$m. According to \eqn\eqref{eq:sagitta},
+this then translates into a precision requirement of 
+no more than $50 \mu$m on the sagitta.
+In order to achieve this, MDT chambers are used everywhere 
+in the MS from $|\eta|<2.7$, except in the inner layer of the 
+endcap from $2<|\eta|<2.7$
+where the rates are too high ($>150$ Hz/cm$^2$) and CSCs
+are used instead. 
+The MDT system is an arrangement of roughly 1000 MDT chambers composed
+of aluminum drift tubes roughly 30 mm in diameter and a couple meters in length 
+filled with a gas mixture
+(Ar/CO2) at a pressure of 3 bar and a high voltage wire (~3000 V)
+running through the center. 
+It was chosen as the main precision muon tracking system
+because of its precision, simplicity and reliability.
+When a muon passes through an MDT
+it ionizes the gas and electrons are collected at the wire.
+The shape (?) of the electron collection pulse on the wire
+can be used to determine a radial distance away from the wire
+at which the muon passed as in \fig\ref{}. The cylindrical symmetry
+of the tube is useful as the resolution is roughly flat, at around
+$80\mu$m, as a function
+of the angle of incidence of the muon hitting the tube. 
+It is not possible, however, to determine the direction
+of the muon from just one tube.  For that reason, 
+tubes are arranged together in multi-layers of 3-8 tubes such that 
+the trajectory
+can be reconstructed from matching the patter of hits in multiple layers,
+as in \fig\ref{}.
+An chamber is built from 2 multilayers separated by a spacer of ... length
+giving a precision of roughly $35 \mu$m per chamber.
+An optical alignment system is used to monitor the MDT chambers %alignment between chambers?
+for deformations and the tension of the wires can be adjusted
+to adjust for sag where needed. %technically only in barrel.
+
+
+The CSCs..
+
+
+show resolution plot (something about this in 2.2.1)
 
 The fast tracking...
 
-show resolution plot.
 
 
 
