@@ -789,4 +789,76 @@ pt resolution and performance?
 \section{Trigger}
 \label{sec:atlas_trigger}
 
+The very small design collision bunch spacing 
+of 25 ns (40.08 MHz) at the LHC combined with the average digitized event size
+of around 1 Megabyte means that to record every collision
+would require a bandwidth of around 40 Terabytes per second, far surpassing
+the capabilities of modern hard-disks. Clearly recording every collision
+is untenable. Fortunately, the type of collisions of interest at the LHC 
+(high \pt~leptons and jets, high \met) are sufficiently rare 
+that most of these collisions can be filtered out. 
+This is accomplished by using a so-called ``triggering'' system, 
+that quickly analyzes course information about the collision
+and only records those collisions deemed interesting.
+This is accomplished in stages. The 40.08 MHz collisions are
+first passed to a custom electronics Level-1 (L1) trigger, designed
+to reduce the rate to below 75 kHz; it then is passed to the 
+relatively simple software based Level-2 (L2) trigger, designed to reduce the rate
+to no more than 3.5 kHz; finally, it is passed to the third stage,
+called the Event Filter (EF), which uses a more complex software-based 
+selection similar to the offline selection, reducing the 
+rate to below 200 Hz. The L2 and EF triggers are referred to together
+as the High-Level Trigger (HLT). This results in a much more reasonable 
+bandwidth for writing the data of about 0.2 Gigabytes per second.
+To achieve these goals requires careful design and also (sometimes difficult)
+choices about what types of collisions to keep.  This is discussed in more
+detail below. 
+
+The L1 trigger system is designed to use reduced granularity information
+from the calorimeter and muon systems and custom electronics
+to make on-the-fly decisions about interesting physics objects.
+The inner detector is not used at L1.
+Information about muons is taken from the coarse muon track measurements of 
+the RPC and TGC components of the MS
+as described in \sec\ref{sec:atlas_ms}. This information is 
+used to build coarse trajectories called roads. The width of the road
+is used to make one of a few possible \pt~cuts on the 
+trajectory in the range of roughly $6<\pt<35~\GeV$. 
+Meanwhile, information from the 
+calorimeters is limited to coarse trigger ``towers'' mostly of dimension
+$0.1 \times 0.1$ in $\Delta\eta \times \Delta\phi$.
+Look-up-tables are used to quickly identify the transverse energy 
+and this is summed using several sliding window algorithms to identify 
+high \pt~electrons and photons, hadronically decaying taus, jets, large \met,
+or large \et. 
+In both the L1 muon and calorimeter triggers, special care is taken
+to account for object multiplicities and to not double count. 
+One important challenge is that the 
+calorimeter signals and muon time of flight are slow enough\footnote{One
+of the rare instances where the speed of light can be considered slow!}
+that the signals from multiple bunch crossings occur in the detector
+simultaneously.  Thus, each signal must be carefully synchronized with 
+the bunch crossing from which it came.  
+This must also account for the latency of the trigger itself, which
+is around 2 $\mu$s.  The information
+from the L1 muon and calorimeter triggers are passed to the Central
+Trigger Processor which makes a decision about whether or not to pass
+the event to the L2 trigger.  It does this by testing 
+a number of possible conditions (for example, is there at least one
+muon with $\pt > 15 \GeV$?) and then taking the logical OR of all of
+these conditions.
+
+
+
+
+
+
+trigger menu.
+mention my triggers.
+
+
+
+
+
+
 \section{LUCID?}
