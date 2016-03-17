@@ -103,82 +103,68 @@ to synchronize with the amplitude and ``surf'' the wave.  The frequency
 of the radio-frequnecy waves thus determines the bunch spacing.
 
 
-The luminosity is
-
-mention why don't use anti-protons at the LHC.
-
-want to describe luminosity
-
-talk about the principles
-
-Bunches 
-
-
-quadropoles and things for focusing
-
-
-Motivation for proton-proton over p-pbar or ee
-burn rate would be too high. (see slides C)
-
-
-
-multiple stages of acceleration
-
-
-
-bunches
-
-emittance?
-
-collisions
-\begin{equation}
-N= L\sigma
-\end{equation}
-
-Units of $L$ are \lumiunits
-For fixed target
-\begin{equation}
-L = N \rho_n t
-\end{equation}
-
-$N$ is the incident rate, $\rho_n$ is the target number
-density, $t$ is the target thickness.
-
-For colliding beam
-\begin{equation}
-L = \frac{N_1 N_2}{A} r_b
-\end{equation}
-where $N_1$ and $N_2$ are the number of protons per bunch, 
-$A$ is the cross-sectional are of the beam, 
-and $r_b$ is the crossing rate
-\begin{equation}
-r_b = n \frac{c}{C}
-\end{equation}
-$n$ is the number of bunches, $C$ is the circumference of the machine
-and $c$ is ...
-
-Or 
+The luminosity, $L$,  can be thought of as the overall intensity of the beam.
+For a colliding beam it may be simply defined as
 \begin{equation}
 L=f \frac{N_b^2}{4\pi\sigma^2} R
 \end{equation}
-where $f$ is the collision frequency, $N_b$ is the number
-of particles in a bunch, $R$ is a geometrical factor
-taking into account the crossing angle and hourglass effect, 
-and $\sigma$ is the transverse size (not cross-section).
-$\sigma^2 = \beta^* \varepsilon_N/ \beta\gamma$
-where $\beta^*$ is the betatron function (want small), 
-$\varepsilon_N$ is the normalized emittance, $\gamma$ is the 
-relativistic gamma factor and proportional to energy, $\beta$ is the 
-relativistic $\beta$.
-LHC design lumi is $10^{34}~\lumiunits$.
+where $f$ is the collision frequency (related to the bunch spacing and thus
+in the MHz radio-frequency range), 
+$N_b$ is the number of particles in a bunch (usually 10-100 billion), 
+$R$ is a  geometrical factor
+taking into account details like the crossing angle of the collision (on the
+order of unity),
+and $\sigma$ is the transverse size of the bunches\footnote{Not to be confused
+with the cross-section in particle physics.} (which 
+is usually on the order of tens of microns).
+Thus, modern colliders typically have luminosities on the order of 
+$10^{30}$ to $10^{34}~\lumiunits$.
+The transverse size of the beam is governed by the relativistic 
+energy of the beam and is carefully tuned in the LHC
+using arrays of focusing magnets. 
+The luminosity of the beam is not constant, but instead steadily decreases
+as a function of time, $t$:
+\begin{equation}
+L(t) = L_0 \tau_L\Big( 1- e^{-t/\tau_L} \Big)
+\end{equation}
+where $L_0$ is the initial luminosity and $\tau_L$ is the lifetime of the 
+beam. The finite lifetime (on the order of hours) comes from gradual 
+degradation of the beam quality, mainly due to the beam collisions themselves.
+As the beam reaches the end of its life, the beam is dumped and a new
+run is started. This process is repeated as many times as possible. The 
+luminosity is then integrated over time as a measure of how many collisions
+were performed (and also how much data was collected).  This can
+then be related to the cross-section for a given process, $\sigma$, to estimate
+how many events from that process, $N$, would have been produced on average:
+\begin{equation}
+N=\sigma \int L~ \textrm{d}t
+\end{equation}
 
-useful life of colliding beams is burn rate
 
-luminosity can be increased by making betastar as small as possible
-and increasing Nb and epsilone proprotionally
+While it is true that the we desire to increase the luminosity as much
+as possible, there is one important subtlety. 
+Limitations on the size of the luminosity do not just
+come from the collider but also come from the detectors in the form of pileup.
+Pileup is the phenomena of multiple collisions occuring during a single
+bunch crossing. Since we are trying to make statements about the 
+physics of collisions and not bunch crossings, we must be able to 
+identify the individual collisions themselves. The typical length of 
+a bunch is usually on the order of tens of centimeters while the number of pileup 
+collisions per bunch crossing is on the order of ten or more. Furthermore, 
+the collisions do not occur inside the detetor, with the decay products
+being measured a few centimeters away (?). Thus, to distinguish individual
+collisions the detector must be able to extrapolate the tracks of the decay
+products back to the collision point with a resolution much less than 
+a centimeter. This process is called vertexing and places strict 
+requirements on the precision of the tracking systems for any detector
+built at a modern collider. An example of the vertexing for a typical
+bunch crossing in ATLAS is shown in \fig\ref{fig:lhc_pileup}.
+Another issue of pileup is that each collision produces thousands of 
+tracks which all contribute to the occupancy of the detector. If the occupancy
+is saturated, the detector may not be able to resolve individual tracks
+and would thus be useless. This is a serious concern for detectors
+at future colliders where problems of pileup will continue to grow.
 
-
-pileup
 
 \section{The LHC Accelerator Complex}
 list the detectors and the different machines
@@ -188,9 +174,13 @@ start with hydrogen
 RF cavities
 design goal of luminosity. luminsoity decays per run
 
+multiple stages of acceleration
 The waves are tuned to a radio-frequency of 400 MHz which sets the bunch spacing .  talk about at the lhc only.
 
 show diagram
+mention why don't use anti-protons at the LHC.
+footnote. Motivation for proton-proton over p-pbar or ee burn rate would be too high. (see slides C)
+pileup plots
 \section{Data Collection}
 
 luminosity. uncertainty?
