@@ -9,18 +9,137 @@
 
 %define these abbreviations here:
 %LHC - Large Hadron Collider
-\cite{lhc}
+The Large Hadron Collider (LHC) \cite{lhc} is
+a 27 km circumference collider ring
+located at CERN approximately 100 m underground on the 
+of French-Swiss border near Geneva, Switzerland.
+Its primary goal is to collide protons at very high energies (
+the TeV scale)  similar to energies just a few trillionths of a second (?)
+after the big bang.  %
+The products of these collisions can 
+be observed
+by several independent but complementary detectors placed at different
+points around the ring in order to probe the mechanism
+for EWSB as well as to test and probe for new physics beyond the SM.
+Since the dynamics of the collisions are governed by quantum mechanical
+processes, the types of collision processes of interest cannot be
+produced on demand, but instead occur at random with some
+probability.
+The probability for these processes is typically very small; thus, they are quite
+rare (quote a number).
+These processes are also short lived, meaning they do not live long
+enough to reach the detector and are instead observed indirectly through their
+decays. Since multiple physics processes can have the same decay 
+signature, it is not possbile to say with certainty that a given 
+collision comes from a specific physics process. Instead, 
+we must count the number of observed collisions for a given signature
+and compare this to the number expected from the 
+quantum mechanical probabilities.  If the observed number differs
+from the expected, then it could simply suggest that the theoretical expectation
+is not well understood or it could suggest the presence of some new physics
+process.
+In order to make an adequate statement, we must be able to count
+enough collisions of the desired signature (say 10 to 1000 depending on the
+signature and its backgrounds) 
+such that the statistical uncertainty is low.  This places a demand
+on the LHC to produce as many collisions as possible, even of these rare
+processes. To accomplish this, the LHC is thus designed to collide
+protons at a maximum frequency of 40 MHz, or 40 million times per second!
+More details about the LHC and collider physics in general are presented
+below.
+
+
 
 \section{Collider Physics}
+
 talk about the principles
 
-luminosity. uncertainty?
+Bunches 
 
+head on vs fixed target (grows linearly vs sqrt)
+
+
+
+Motivation for proton-proton over p-pbar or ee
+burn rate would be too high. (see slides C)
+
+superconducting dipoles. must deal with quenches. trained.
+limit on colliders
+
+quadropoles and things for focusing
+
+multiple stages of acceleration
+
+Accelerate using RF. surfing
+
+Must avoid synchrotron radiation
+
+
+bunches
 
 emittance?
 
 collisions
+\begin{equation}
+N= L\sigma
+\end{equation}
+
+Units of $L$ are \lumiunits
+For fixed target
+\begin{equation}
+L = N \rho_n t
+\end{equation}
+
+$N$ is the incident rate, $\rho_n$ is the target number
+density, $t$ is the target thickness.
+
+For colliding beam
+\begin{equation}
+L = \frac{N_1 N_2}{A} r_b
+\end{equation}
+where $N_1$ and $N_2$ are the number of protons per bunch, 
+$A$ is the cross-sectional are of the beam, 
+and $r_b$ is the crossing rate
+\begin{equation}
+r_b = n \frac{c}{C}
+\end{equation}
+$n$ is the number of bunches, $C$ is the circumference of the machine
+and $c$ is ...
+
+Or 
+\begin{equation}
+L=f \frac{N_b^2}{4\pi\sigma^2} R
+\end{equation}
+where $f$ is the collision frequency, $N_b$ is the number
+of particles in a bunch, $R$ is a geometrical factor
+taking into account the crossing angle and hourglass effect, 
+and $\sigma$ is the transverse size (not cross-section).
+$\sigma^2 = \beta^* \varepsilon_N/ \beta\gamma$
+where $\beta^*$ is the betatron function (want small), 
+$\varepsilon_N$ is the normalized emittance, $\gamma$ is the 
+relativistic gamma factor and proportional to energy, $\beta$ is the 
+relativistic $\beta$.
+LHC design lumi is $10^{34}~\lumiunits$.
+
+useful life of colliding beams is burn rate
+
+luminosity can be increased by making betastar as small as possible
+and increasing Nb and epsilone proprotionally
+
+
 
 \section{The LHC Accelerator Complex}
 list the detectors and the different machines
+dipoles
+van-der-meer scans
+start with hydrogen
+RF cavities
+design goal of luminosity. luminsoity decays per run
+
+
+show diagram
 \section{Data Collection}
+
+luminosity. uncertainty?
+at what luminosity did it actually run?
+include some performance and collection graphs
