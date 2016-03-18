@@ -575,22 +575,22 @@ detector, being the component that determines its overall size.
 %maybe try to explain that... look in book that was taken...
 It is designed to measure and identify muons as they
 pass through the MS and leave the detector.
-It surrounds the beam pipe, as well as the ID and calorimeter systems
+It surrounds the beam pipe, as well as the ID and calorimeter systems,
 using a cylindrical geometry with a barrel and two endcaps. 
 The MS is comprised of several different technologies:
 Muon Drift Tubes (MDT) and Cathode Strip Chambers (CSC) are used as
 precision tracking components for measurements of the muon 
 trajectory, Resistive Plate Chambers (RPC) and 
-Thin Gap Chambers (TGC) are used as fast 
-tracking components primarily for triggering, 
+Thin Gap Chambers (TGC) are used as triggering 
+components with good timing resolution, 
 and a toroidal magnet system is used for bending the muon trajectory 
 in order to extract a momentum measurement.
 A diagram of the MS in the transverse plane is shown in 
 \fig\ref{fig:atlas_ms_rphi} where the MDT chambers and RPCs of the barrel
-are clarly shown along with the barrel and endcap toroids.
+are clearly shown along with the barrel and endcap toroids.
 Another view of the MS in \fig\ref{fig:atlas_ms_rz} is displayed in
 one quadrant along the axial direction which
-also shows the barrel and endcap toroids, along with 
+shows the barrel and endcap toroids, along with 
 the MDT chambers in the barrel and endcap, the RPCs in the
 barrel, and the CSCs and TGCs in the endcap.
 
@@ -599,11 +599,11 @@ barrel, and the CSCs and TGCs in the endcap.
 \centering
 \includegraphics[width=.45\textwidth]{figures/atlas/magnet}
 \includegraphics[width=.45\textwidth]{figures/atlas/toroid_magnet_field}
-\caption{(\emph{Left}) Diagram of MS toroid magnet geometry (red). The
+\caption{(Left) Diagram of MS toroid magnet geometry shown in red. The
 tile calorimeter is also shown.
-(\emph{Right}) Predicted field strength of the MS magnet 
+(Right) Predicted field strength of the MS magnet 
 system as a function of $|\eta|$
-for $\phi=0$ (red) and $\phi=\pi/8$ (black).}
+for $\phi=0$ in red  and $\phi=\pi/8$ in black.}
 \label{fig:atlas_toroid_magnet}
 \end{figure}
 
@@ -614,7 +614,7 @@ roughly 0.5 Tesla in the barrel and 1 Tesla in the endcap.
 The geometry of the MS magnet system is shown 
 on the left of \fig\ref{fig:atlas_toroid_magnet}. In the barrel, 
 eight 25 m long toroidal 
-coils insidein stainlees-steel vacuum enclosures are placed uniformly in 
+coils inside stainlees-steel vacuum enclosures are placed uniformly in 
 azimuth around the barrel. In the two endcaps, 
 each endcap toroid is composed of 
 eight square coils (rotated with respect to the barrel toroids)
@@ -637,60 +637,97 @@ This results in degraded momentum resolution and poor trigger efficiencies
 in this region.
 
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.35\textwidth]{figures/atlas/ms_mdt_tube.eps}
+\includegraphics[width=.55\textwidth]{figures/atlas/ms_mdt_hits.png}
+%ms_mdt_hits taken from http://arxiv.org/pdf/0810.3184.pdf
+\caption{(Left) Cross-section of single MDT tube with muon track
+passing through. Ionized electrons collect on the anode wire
+due to the applied electric field. (Right) Muon track
+reconstructed from array of MDT tubes.}
+\label{fig:atlas_ms_mdt}
+\end{figure}
+
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.8\textwidth]{figures/atlas/ms_mdt_chamber.pdf}
+%ms_mdt_hits taken from http://arxiv.org/pdf/0810.3184.pdf
+\caption{Schematic of a single MDT chamber.}
+\label{fig:atlas_ms_mdt_chamber}
+\end{figure}
+
+%figure taken from http://hedberg.web.cern.ch/hedberg/home/atlas/atlas.html
+
 The precision tracking system has stringent requirements
 on the precision of the muon trajectory measurement, 
 which come from design goals on the resolution of the muon
-momentum mesaurement to have a momentum resoution of 
-about 10\% at a momentum of 1~\TeV.
+transverse momentum mesaurement to be 
+about 10\% at 1~\TeV.
 Given the magentic field strength in the MS, a muon 
 with this momentum is expected to have a sagitta
-of about $500\mu$m in the bending plane. 
+of about $500~\mu$m in the bending plane. 
 According to \eqn\eqref{eq:sagitta},
 this then translates into a precision requirement of 
-no more than $50 \mu$m on the sagitta.
+no more than $50~\mu$m on the sagitta.
 In order to achieve this, MDT chambers are used everywhere 
-in the MS from $|\eta|<2.7$, except in the inner layer of the 
+in the MS from $|\eta|<2.7$ except in the inner layer of the 
 endcap from $2<|\eta|<2.7$
-where the rates are too high 
-and CSCs
-are used instead. 
+where the rates are too high. Here, CSCs are used instead. 
 The MDT system is an arrangement of roughly 1000 MDT chambers composed
 of aluminum drift tubes roughly 30 mm in diameter and a couple meters in length 
 filled with a gas mixture
-(Ar/CO2) at a pressure of 3 bar and a high voltage wire (~3000 V)
+(Ar/CO2) and a high voltage wire (~3000 V)
 running through the center. 
 It was chosen as the main precision muon tracking system
-because of its precision, simplicity and reliability.
+because of its precision, simplicity, and reliability.
 When a muon passes through an MDT
 it ionizes the gas and electrons are collected at the wire.
-The shape (?) of the electron collection pulse on the wire
-can be used to determine a radial distance away from the wire
-at which the muon passed as in \fig\ref{}. The cylindrical symmetry
+The drift-time for the electron signal to collect on the wire
+can be used to determine the radial distance away from the wire
+at which the muon passed such as on the left of \fig\ref{fig:atlas_ms_mdt}. 
+The cylindrical symmetry
 of the tube is useful as the resolution is roughly flat, at around
-$80\mu$m in the bending plane, as a function
+$80~\mu$m in the bending plane, as a function
 of the angle of incidence of the muon hitting the tube. 
 It is not possible, however, to determine the direction
-of the muon from just one tube.  For that reason, 
+of the muon in the bending plane from just one tube.  For that reason, 
 tubes are arranged together in multi-layers of 3-8 tubes such that 
 the trajectory
-can be reconstructed from matching the patter of hits in multiple layers,
-as in \fig\ref{}.
-A chamber is built from 2 multilayers separated by a spacer of ... length
-giving a precision of roughly $35 \mu$m per chamber.
+can be reconstructed from matching the pattern of hits in multiple layers
+to form track segments,
+such as on the right of \fig\ref{fig:atlas_ms_mdt}.
+A chamber is built from 2 multilayers separated by a spacer ranging from
+6 mm to 300 mm wide depending on 
+the chamber, as in \fig\ref{fig:atlas_ms_mdt_chamber}.
+The precision per chamber is roughly $35~\mu$m.
 The long length of the MDTs means that they cannot provide a  useful measurement
 in the non-bending plane.
 Chambers are arranged in three concentric shells in the barrel 
-at $r = $5 m, 7.5 m, and 10 m and in several rings in the endcap
-at $|z| = $7.4 m, 10.8 m, 14 m, and 21.5 m as in \fig\ref{}.
+at $r = $5 m, 7.5 m, and 10 m as in \fig\ref{fig:atlas_ms_rphi} 
+and in several rings in the endcap
+at $|z| = $7.4 m, 10.8 m, 14 m, and 21.5 m as in \fig\ref{fig:atlas_ms_rz}.
 In each shell or ring
 the chambers are made to overlap in order to avoid gaps in azimuth.
+Tracks  are then reconstructed using by interpolating between the 
+track segments of the individual chambers.
 Still, there are gaps, in particular around $|\eta|=0$ due to a hole for services
 and due to the feet holding up the detector, seen in \fig\ref{fig:atlas_ms_rphi}.
 An optical alignment system is used to monitor the MDT chambers %alignment between chambers?
-for deformations and the tension of the wires can be adjusted
-to adjust for sag where needed. %technically only in barrel.
+for deformations. The tension of the wires can also be adjusted
+to account for sag where needed. %technically only in barrel.
 Despite having very good precision, the maximum drift time
 can be as high as 700 ns, which is far too slow for LHC bunch identification.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.7\textwidth]{figures/atlas/ms_csc_disk.eps}
+\caption{Diagram showing the arrangement of the CSCs in the endcap.}
+\label{fig:atlas_ms_csc_disk}
+\end{figure}
 
 
 The CSC are used in the region of the MS closest to the interaction
@@ -700,25 +737,24 @@ too high for succesful operation of the MDT chambers.
 The CSCs can handle up to 1000 Hz/cm$^2$
 while maintaining adequate  precision in the bending plane.
 A CSC is a multiwire proportional chamber
-composed of layers of cathode strips sandwhiching 
-a set of anode wires and filled with a non-circulating gas (Ar/CO2).
-The two sets of cathode strips in a layer are separated by 5mm
-with the anode wires running directly between the two sets.
-In each layer the the two sets of cathode strips are segmented in
-orthogonal directions in order to give 
+composed of planes of cathode strips sandwhiching 
+a row of parallel anode wires and filled with a non-circulating gas (Ar/CO2)
+in the gap.
+The two planes of cathode strips are separated by 5mm
+with the anode wires running directly between the two planes.
 A signal is induced on the cathode strips due to an avalanche
 of electrons from the ionizing muon collecting on the anode wire.
-The two sets of cathode strips are segmented in orthogonal directions
-providing measurements in both the bending and non-bending planes. 
-A CSC is composed of four layers, each giving separate $\eta$ and
+The two planes of cathode strips are segmented in orthogonal directions
+providing measurements in both the bending and non-bending planes of the detector. 
+A CSC is composed of four of these layers, each giving separate $\eta$ and
 $\phi$ measurements.
-The resolution in the bending plane is roughly 60 microns
+The resolution in the bending plane is roughly 60 $\mu$m
 while the coarser segmentation in the non-bending plane 
 results in a  resoulution of  roughly 5 mm.
 Two rings are formed from the chambers such that the anode wires
-point radially and that there are no gaps in $\phi$, as
-can be seen in \fig\ref{}. The rings are positioned
-at roughly $|z|=7.5$ m. The rectangular symmetry 
+point radially such that there are no gaps in $\phi$, as
+can be seen in \fig\ref{fig:atlas_ms_csc_disk}. The rings are positioned
+at roughly $|z|=7.5$ m. The rectangular symmetry of the individual channels
 results in a degradation of the resolution based on the angle of incidence.
 This is resolved by titling the chambers slightly toward the interaction point.
 Of use in the high occupancy environment, 
@@ -728,54 +764,64 @@ The small separation between cathode strips results in a layer
 results in a short electron drift time allowing for a good
 timing resolution of about 7 ns per layer.
 
-optical alignment?
-
-show resolution plot (something about this in 2.2.1)
+optical alignment? Resolution?
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.7\textwidth]{figures/atlas/ms_trigger_layout.eps}
+\caption{Layout of the trigger components for one quadrant
+in the $r-z$ plane. RPC and TGC chambers are cleary labeled. Possible
+muon trajectories are seen for low and high \pt roads formed
+by the trigger algorithm (see \sec\ref{sec:atlas_trigger}).}
+\label{fig:atlas_ms_trigger_layout}
+\end{figure}
 
 The triggering system in the MS is designed to be able
 to identify muons coming from individual bunch crossings of the LHC
-and to discriminate them based on their position and \pt in the region
+and to discriminate them based on their position and \pt~in the region
 $|\eta|<2.4$. This information
 is then used to trigger on high \pt~muons, as 
 described in \sec\ref{sec:atlas_trigger}.
 The individual bunch crossings of the LHC are designed to 
 be separated by only 25 ns, as described in \sec\ref{sec:lhc}.
 Thus, the system must be able to resolve individual tracks 
-with a time resolution of this size (what exactly is the design req?).
+with a time resolution of this size.
+%(what exactly is the design req?).
 To distinguish high \pt~muons from straight-track neutral particles 
-or highly curved-track low-momentum charged particles, the 
+or from curved-track low-momentum charged particles, the 
 system must be able to measure the sagitta of the 
-trajectory in the toroidal magnetic field, though not 
+trajectory in the toroidal magnetic field, though not necessarily
 with the same precision as in the precision tracking system.
 Furthermore, to distinguish individual tracks, position measurements
 must be performed in both the bending and non-bending planes.
 The measurement in the non-bending plane is also used to complement
 the measurements of the bending plane from the MDT chambers.
-In order to achieves this, RPCs are used in the barrel region
+RPCs are used in the barrel region
 from $|\eta|<1.05$ and TGCs in the endcap from $1.05 < |\eta|<2.4$.
 The layout of the triggering system can be seen in the diagram
-in \fig\ref{fig:atlas_muon_fast_tracking}. %use figure 6.27
+in \fig\ref{fig:atlas_ms_trigger_layout}. 
 The RPCs are parallel electrode-plate detectors which use no wires.
 A single RPC layer consists of 
 resistive plates aligned in parallel and separated by 2 mm 
 with a gas mixture (primarily $\textrm{C}_2\textrm{H}_2\textrm{F}_4$)
 in the gap. An electric field of 4.9 kV/mm is applied between 
-the plates which results in electron avalanches to form in the gas
-along track toward the anode plate.
+the plates which results in electron avalanches forming in the gas
+along the track.
 This gives a signal pulse time resolution of about 5 ns.
-The pitch of the individual plates is 23 mm in $\eta$ and 35 mm in $\phi$
-A single RPC consists of two layers.  Three concentric shells 
-are formed from the RPCs around the beam line at about $r = $ 6.5, 7.5, and 10 m
-as in \fig\ref{fig:atlas_muon_fast_tracking}.
+The pitch of the individual plates is 23 mm in $\eta$ and 35 mm in $\phi$.
+A single RPC consists of two such layers.  Three concentric shells 
+are formed from the RPCs around the beam line 
+at about $r = $ 6.5 m, 7.5 m, and 10 m
+as in \fig\ref{fig:atlas_ms_trigger_layout}.
 The separation between the inner and outer layers 
 allows for a discrimination of muons with $9 < \pt < 35~\GeV$
 while the separation between the inner and middle layers allows for 
 discrimination of low-\pt~muons with $6 < \pt < 9~\GeV$.
-Space resolution...maybe put sqrt(12) formula? look up to be sure.
+%Space resolution...maybe put sqrt(12) formula? look up to be sure.
 
 
 The TGCs are multi-wire proporational chambers, similar to the CSCs.
-In a single TGC layer,the cathodes are separated by 2.8 mm and the wire-to-wire pitch
+In a single TGC layer, the cathodes are 
+separated by 2.8 mm and the wire-to-wire pitch
 is 1.8 mm.  A high voltage of 2900 V is applied to the anode wires
 resulting in a quasi-saturated electron avalanche in the gas 
 mixture (CO2/n-pentane) due to incident tracks.
@@ -784,18 +830,18 @@ timing resolution for the signal pulse. The resulting
 signal pulse resolution is dependent on the angle-of-incidence
 of the incoming track, but still results in a signal width
 within 25 ns for about 99\% of tracks.
-TGC chambers are built from either two are three layers. 
+TGC chambers are built from either two or three layers. 
 The TGC chambers are then arranged in rings such that they overlap
 in azimuth to eliminate gaps.
 The TGC rings are arranged as in 
-as in \fig\ref{fig:atlas_muon_fast_tracking}
+as in \fig\ref{fig:atlas_ms_trigger_layout}
 with a ring of two-layer TGCs placed in front of the endcap MDT inner
 layer at about $|z|=7$ m, 
 a ring of three-layer TGCs placed in front of the endcap MDT
 middle layer at around $|z|=13 $m, and two rings of 
 two-layer TGCs placed just behind
 the endcap MDT middle layer at around $|z|=14$ m.
-pt resolution and performance?
+%pt resolution and performance?
 
 
 
