@@ -544,6 +544,7 @@ Shielding? Resolution and response?
 \section{Muon Spectrometer}
 %do i want to talk about muon reconstruction?
 %definitely mention muon resolution
+\label{sec:atlas_ms}
 
 \begin{figure}[ht]
 \centering
@@ -848,21 +849,22 @@ the endcap MDT middle layer at around $|z|=14$ m.
 \section{Trigger}
 \label{sec:atlas_trigger}
 
-The very small design collision bunch spacing 
-of 25 ns (40.08 MHz) at the LHC combined with the average digitized event size
+The very small design bunch spacing 
+of 25 ns (40.08 MHz) at the LHC combined with the average raw digitized event size
 of around 1 Megabyte means that to record every collision
 would require a bandwidth of around 40 Terabytes per second, far surpassing
-the capabilities of modern hard-disks. Clearly recording every collision
-is untenable. Fortunately, the type of collisions of interest at the LHC 
+the capabilities of modern hard-disks. Thus, recording every collision
+is clearly untenable. Fortunately, the type of collisions of interest at the LHC 
 (high \pt~leptons and jets, high \met) are sufficiently rare 
-that most of these collisions can be filtered out. 
+that most collisions can be filtered out before recording. 
 This is accomplished by using a so-called ``triggering'' system, 
-that quickly analyzes course information about the collision
-and only records those collisions deemed interesting.
-This is accomplished in stages. The 40.08 MHz collisions are
+that quickly analyzes coarse information about the collision
+and only records those collisions deemed of interest.
+The trigger is implemented in stages. The 40.08 MHz collisions are
 first passed to a custom electronics Level-1 (L1) trigger, designed
 to reduce the rate to below 75 kHz; it then is passed to the 
-relatively simple software based Level-2 (L2) trigger, designed to reduce the rate
+relatively simple software-based selection in the 
+Level-2 (L2) trigger, designed to reduce the rate
 to no more than 3.5 kHz; finally, it is passed to the third stage,
 called the Event Filter (EF), which uses a more complex software-based 
 selection similar to the offline selection, reducing the 
@@ -874,10 +876,10 @@ choices about what types of collisions to keep.  This is discussed in more
 detail below. 
 
 The L1 trigger system is designed to use reduced granularity information
-from the calorimeter and muon systems and custom electronics
+from the calorimeter and muon systems with custom electronics
 to make on-the-fly decisions about interesting physics objects.
 The inner detector is not used at L1.
-Information about muons is taken from the coarse muon track measurements of 
+Information about muons is taken from the muon track measurements of 
 the RPC and TGC components of the MS
 as described in \sec\ref{sec:atlas_ms}. This information is 
 used to build coarse trajectories called roads. The width of the road
@@ -891,7 +893,7 @@ and this is summed using several sliding window algorithms to identify
 high \pt~electrons and photons, hadronically decaying taus, jets, large \met,
 or large \et. 
 In both the L1 muon and calorimeter triggers, special care is taken
-to account for object multiplicities and to not double count. 
+to account for object multiplicities and to not double count physics objects. 
 One important challenge is that the 
 calorimeter signals and muon time of flight are slow enough\footnote{One
 of the rare instances where the speed of light can be considered slow!}
@@ -915,14 +917,14 @@ total event\footnote{There are some instances of the L2 trigger
 using the full event, but this is used sparingly.}. 
 The L2 trigger runs simplified reconstruction algorithms in the RoIs 
 on a computer processing farm. 
-Once again, a number of  (more detailed) conditions are tested
+A number of  (more detailed) conditions are tested
 to investigate 
 if an interesting physics object really is present in the RoI.
 If so, those conditions which returned a positive result are 
 passed to the EF.
 
 The EF is also run on a processor farm, but runs reconstruction algorithms
-which are very similar to thos run during offline reconstruction.
+which are very similar to those run during offline reconstruction.
 In many cases the EF will run on the full event. The conditions
 that were satisfied in L1 and L2 determine which algorithms and conditions
 are run in the EF.  The list of conditions tested at the EF (and 
@@ -938,7 +940,7 @@ In the end, the trigger menu is an important statement about the physics
 priorities of the collaboration.
 If any of the trigger menu items are satisfied they are finally written to disk.
 
-plots of trigger menu?
+%plots of trigger menu?
 
 trigger performance?
 
@@ -946,18 +948,6 @@ trigger performance?
 
 
 
-more detailed information
-about the RoI and 
-
-
-
-
-
-
-
-
-trigger menu.
-mention my triggers.
 
 
 
