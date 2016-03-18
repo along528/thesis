@@ -126,6 +126,7 @@ The luminosity of the beam is not constant, but instead steadily decreases
 as a function of time, $t$:
 \begin{equation}
 L(t) = L_0 \tau_L\Big( 1- e^{-t/\tau_L} \Big)
+\label{eq:lhc_lumi}
 \end{equation}
 where $L_0$ is the initial luminosity and $\tau_L$ is the lifetime of the 
 beam. The finite lifetime (on the order of hours) comes from gradual 
@@ -167,22 +168,71 @@ at future colliders where problems of pileup will continue to grow.
 
 
 \section{The LHC Accelerator Complex}
-list the detectors and the different machines
-dipoles
-van-der-meer scans
-start with hydrogen
-RF cavities
-design goal of luminosity. luminsoity decays per run
 
-multiple stages of acceleration
-The waves are tuned to a radio-frequency of 400 MHz which sets the bunch spacing .  talk about at the lhc only.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{figures/lhc/complex.jpg}
+\caption{Diagram of the different accelerators in the CERN accelerator
+complex~\cite{lhccomplex}. Those relevant for the LHC are the Linac2, PSB, PS, SPS, and the LHC itself. The ATLAS detector is labeled at the bottom of the LHC ring.}
+\label{eq:lhc_complex}
+\end{figure}
 
-show diagram
+The LHC was designed to provide proton-proton collisions
+at an energy of 14 TeV (7 TeV per beam) 
+and a peak luminosity of $10^{34}~\lumiunits$ with a 25 ns collision
+bunch spacing (400 MHz).
+Protons are collected from hydrogen gas by first stripping away 
+the electron in an electric field. The protons are injected
+into a series of lower energy accelerators before ultimately 
+reaching the LHC to be accelerated to the full energy and 
+begin collisions. The various stages of the LHC accelerator
+complex are shown in \fig\ref{fig:lhc_complex}.
+The protons are accelerated to initially using the LINAC2 linear
+accelerator. Next, the protons pass through the circular
+Proton Synchrotron Booster (PSB), Proton Synchrotron (PS),
+and Super Proton Synchrotron (SPS). Finally, they 
+are split into two beams and injected into the LHC
+travelling in opposite directions. Once in the LHC
+ring they are accelerated to their full energy and then made
+to collide at four points along the ring where detectors
+are positioned to examine the products of the collisions.
+The two general purpose detectors, ATLAS \cite{ATLAS} and CMS \cite{CMS}, 
+are positioned at opposite sides of the ring. 
+Meanwhile, the two specialized detectors, ALICE \cite{ALICE} 
+and LHC-b \cite{LHCB}, are situated at equal points along the ring
+nearest ATLAS.
+The total injection process takes about 4 minutes.
+
+
+
 mention why don't use anti-protons at the LHC.
-footnote. Motivation for proton-proton over p-pbar or ee burn rate would be too high. (see slides C)
-pileup plots
-\section{Data Collection}
 
-luminosity. uncertainty?
-at what luminosity did it actually run?
-include some performance and collection graphs
+footnote. Motivation for proton-proton over p-pbar or ee burn rate would be too high. (see slides C)
+
+
+\section{Data Collection}
+%The LHC ran at a center-of-mass energy\footnote{Reduced from the design energy of 14 TeV.} from 2010 to 2011. 
+In 2012, the LHC operated at a center-of-mass energy of 8 TeV\footnote{Reduced
+from the initial design energy of 14 TeV due to a quenching incident
+in the superconducting dipole magnets in 2008 when running at full energy.}
+with a bunch spacing of 50 ns with 1.6 to 1.7 $\times 10^{11}$ protons
+per bunch, a beam radius of $18.8 \mu$m, and an average peak 
+luminosity of $7.7 \times 10^{33}~\lumiunits$ \cite{Lamont:1709796}.
+The luminosity lifetime, $\tau_L$, corresponding to \eqn\eqref{eq:lhc_lumi},
+ranged from 7 hours to 14 hours during a single run (i.e. the shape
+of the exponential changes) \cite{Hostettler:2013qya}.
+The peak luminosity recorded per day and the total integrated luminosity 
+in 2012 are shown 
+on the left and right, respectively, of \fig\ref{fig:lhc_lumi}.
+The overall delivered integrated luminosity from the LHC
+in 2012 was 23.3 \ifb, while that recorded was 21.7 \ifb. The 
+amount of data recorded that is relevant for this thesis
+and described in \sec\ref{sec:www} is slightly less at 20.3 \ifb.
+
+The pileup conditions during 2012 were such that an average
+of 20.7 collisions occured per bunch crossing. The distribution
+of the average interactions per crossing in 2012 are shown in 
+\fig\ref{fig:lhc_pileup_recorded}.
+show also 7 TeV? mention 7 and 13 TeV runs?
+
+
