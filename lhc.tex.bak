@@ -1,5 +1,3 @@
-\chapter{The Large Hadron Collider}
-\label{sec:lhc}
 
 
 %No more than a few pages
@@ -11,7 +9,307 @@
 
 %define these abbreviations here:
 %LHC - Large Hadron Collider
+The Large Hadron Collider (LHC) \cite{lhc} is
+a 27 km circumference collider ring
+located at CERN approximately 100 m underground on the 
+of French-Swiss border near Geneva, Switzerland.
+Its primary goal is to collide protons at energies on the TeV scale, 
+energies that are so large they can replicate conditions just moments
+after the big bang.
+The products of these collisions can 
+be observed
+by several independent but complementary detectors placed at different
+points around the ring in order to discover the mechanism
+for EWSB as well as possible new physics processes beyond the SM.
+Since the dynamics of the collisions are governed by quantum mechanical
+processes, the types of processes of interest cannot be
+produced on demand, but instead occur at random with some
+probability.
+The probabilities for these physics processes are 
+typically very small and are thus quite
+rare \footnote{ATLAS has been able to measure cross-sections as 
+low as about 1 fb \cite{PhysRevLett.113.141803}, which is roughly
+14 orders of magnitude below the measured inclusive cross-section
+at the LHC \cite{Aad:2014dca}.}.
+Also, these physics processes do not live long
+enough to reach the detector and are instead observed indirectly through their
+decays. Since multiple physics processes can have the same decay 
+signature, it is not possbile to say with certainty that a given 
+collision comes from a specific physics process. Instead, 
+we must count the number of observed collisions for a given signature
+and compare this to the number expected from the 
+quantum mechanical probabilities provided by cross-section
+calculations.  If the observed number differs
+from the expected, then it could simply suggest that the theoretical expectation
+is not well understood.  Or, it could suggest the presence of some new physics
+process beyond the SM.
+In order to make an adequate statement, we must be able to count
+enough collisions of the desired signature 
+such that the statistical uncertainty is low
+(say 10 to 1000 depending on the signature and its backgrounds).  
+This places a demand
+on the LHC to produce as many collisions as possible, even of these rare
+processes. To accomplish this, the LHC is designed to collide
+protons at a maximum frequency of 400 MHz, or 400 million times per second!
+More details about the LHC and collider physics in general are presented
+below.
+
+
 
 \section{Collider Physics}
-\section{The Accelerator Complex}
+\label{sec:lhc_collider_physics}
+
+From the persepective
+of a particle physicsist studying the products of particle collisions, we 
+are interested in collisions produced at the highest possible energies,
+measured by the collision center-of-mass energy, and at the highest possible rates, 
+measured by the luminosity.
+The center-of-mass energy, $E_{\textrm{CM}}$, is the collision energy 
+in the rest frame
+of the collision. For head-on collisions with both beams at the same
+energy, $E$, like at the LHC, this is simply the sum of the energies, 
+or $E_{CM} = 2 E$. So, $E_{\textrm{CM}}$ grows linearly as a function
+of the beam energy. This is in contrast with fixed target experiements
+where $E_{\textrm{CM}} \propto \sqrt{E}$ and thus grows much more slowly. 
+Frequently this is related to the Mandelstam variable,
+$s$, which is the squared magnitude of the Lorentz four-vectors
+of the incoming collision particles $p_1$ and $p_2$, such that
+$s = (p_1+p_2)^2 = E_\textrm{CM}^2$.
+The high beam energies required prefer a circular collider (as opposed
+to a linear collider) so that the particles may be repeatedly 
+accelerated at each cycle using the same hardware.
+In order to accelerate the particles, they must be both stable (if they
+are to hang around long enough to collide) and charged (so
+that they may respond to electromagnetic steering and acceleration).
+This leaves just protons and electrons (and their anti-particles)\footnote{It is also
+possible to collide heavy ions, such as lead. In fact, the LHC does collide
+heavy ions when it is not colliding protons, though that is not the focus of this
+thesis.}.
+To get the particles to very high energies, the particles
+are ultimately accelerated using electromagnetic waves in radio-frequnency cavities.
+The beam is chopped up into ``bunches'' separated at regular intervals
+to synchronize with and ``surf'' the wave amplitude. The frequency
+of the radio-waves thus determines the bunch spacing.
+To bend the particles around the ring at high beam energies 
+requires tremendously strong dipole magnets. 
+Thus, the limiting factor for the energy is ultimately the requirements
+on the dipole magnets, which must be superconducting and at the cutting-edge 
+of current technology.
+
+Upon acceleration, these particles emit synchrotron radiation.
+Too much synchrotron radiation and the beam could lose more energy
+than is practical. 
+Electrons and positrons are fundamental particles and thus provide
+very clean collisions, but their small mass means that they suffer
+from high energy losses due to synchrotron radiation.. 
+This decides the overall radius and size of the collider ring, since a smaller
+ring means tighter turns and thus more acceleration\footnote{In fact, 
+the LHC uses the same tunnel (which was the same size) as 
+the Large Electron-Positron (LEP) Collider and which
+operated from 1989 to 2000 but only up to energies of 209 GeV for the reasons
+described.}.
+Protons and anti-protons, with their larger mass, 
+are much less affected by synchrotron radiation
+and thus can be accelerated to higher energies for a fixed radius 
+circular collider. As a result, these are the particles used
+in modern high energy colliders, with protons-antiprotons collisions
+at the Tevatron and Sp$\overline{\textrm{p}}$S, and proton-proton
+collisions at the LHC.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.7\textwidth]{figures/lhc/instantaneouslumi.png}
+\caption{Instantaneous luminosity as a function of time
+as recorded by ATLAS for several runs in 2010.}
+\label{fig:lhc_inst_lumi}
+\end{figure}
+
+The luminosity, $L$,  can be thought of as the overall intensity of the beam.
+For a colliding beam it may be simply defined as
+\begin{equation}
+L=f \frac{N_b^2}{4\pi\sigma^2} R
+\end{equation}
+where $f$ is the collision frequency (related to the bunch spacing and thus
+in the MHz radio-frequency range), 
+$N_b$ is the number of particles in a bunch (usually 10-100 billion), 
+$R$ is a  geometrical factor
+taking into account details like the crossing angle of the collision (on the
+order of unity),
+and $\sigma$ is the transverse size of the bunches\footnote{Not to be confused
+with the cross-section in particle physics.} (which 
+is usually on the order of tens of microns).
+Thus, modern colliders typically have luminosities on the order of 
+$10^{30}$ to $10^{34}~\lumiunits$ \cite{PDG:2014}.
+The transverse size of the beam is governed by the relativistic 
+energy of the beam and is carefully tuned in the LHC
+using arrays of focusing magnets. 
+The luminosity of the beam is not constant, but instead steadily decreases
+exponentially as a function of time, $t$:
+\begin{equation}
+L(t) = L_0 e^{-t/\tau_L} 
+\label{eq:lhc_lumi}
+\end{equation}
+where $L_0$ is the initial luminosity and $\tau_L$ is the lifetime of the 
+beam. The finite lifetime (on the order of hours) comes from gradual 
+degradation of the beam quality, mainly due to the beam collisions themselves.
+As the beam reaches the end of its 
+life (usually 1/4 to 1/2 of the peak luminosity), the beam is dumped and a new
+run is started. This process is repeated as many times as possible. 
+An example of the insantaneous luminosity in ATLAS can be seen for
+several runs in 2010 in \fig\ref{fig:lhc_inst_lumi}.
+The luminosity is then integrated over time as a measure of how many collisions
+were performed (and also how much data was collected).  This can
+then be related to the cross-section for a given process, $\sigma$, to estimate
+how many events from that process, $N$, would have been produced on average:
+\begin{equation}
+N=\sigma \int L~ \textrm{d}t
+\end{equation}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{figures/lhc/pileup_vertexing.png}
+\caption{An event display 20 pileup interactions in a single bunch crossing. 
+The resulting tracks are shown, along with two high energy muons extrapolated back
+to a single primary vertex. The upper left shows a cross-section of the whole
+detector in the transverse plane, the upper right shows
+the detector viewed along the $r-z$ plane, and 
+the bottom portionis zoomed in to the length of the bunch crossing. 
+The average bunch crossing length at the LHC is around 10 cm \cite{PDG:2014}.  }
+\label{fig:lhc_pileup}
+\end{figure}
+
+While it is true that the we desire to increase the luminosity as much
+as possible, there is one important subtlety. 
+Limitations on the size of the luminosity do not just
+come from the collider but also come from the detectors' ability to 
+handle ``pileup''.
+Pileup is the phenomena of multiple collisions occuring during a single
+bunch crossing. Since we are trying to make statements about the 
+physics of collisions, and not bunch crossings, we must be able to 
+identify the individual collisions themselves. The typical length of 
+a bunch is usually on the order of tens of centimeters while the number of pileup 
+collisions per bunch crossing is on the order of ten or more. Furthermore, 
+the collisions do not occur inside the detetor. Instead, the decay products
+are measured a few centimeters away, where the detector volume starts. 
+Thus, to distinguish individual
+collisions the detector must be able to extrapolate the tracks of the decay
+products back to the collision point with a resolution much less than 
+a centimeter. This process is called vertexing and places strict 
+requirements on the precision of the tracking systems for any detector
+built at a modern collider. An example of the vertexing challenges for a typical
+bunch crossing in ATLAS is shown in \fig\ref{fig:lhc_pileup}.
+Another issue of pileup is that each collision produces thousands of 
+tracks which all contribute to the occupancy of the detector. If the occupancy
+is saturated, the detector may not be able to resolve individual tracks
+and would thus be useless. This is a serious concern for detectors
+at future colliders where problems of pileup will continue to grow.
+
+
+\section{The LHC Accelerator Complex}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.8\textwidth]{figures/lhc/complex.jpg}
+\caption{Diagram of the different accelerators in the CERN accelerator
+complex~\cite{lhccomplex}. Those relevant for the LHC are the LINAC2, 
+PSB, PS, SPS, and the LHC itself. The ATLAS detector is labeled 
+at the bottom of the LHC ring.}
+\label{fig:lhc_complex}
+\end{figure}
+
+The LHC was designed to provide proton-proton collisions
+at an energy of 14 TeV (7 TeV per beam) 
+and a peak luminosity of $10^{34}~\lumiunits$ with a 25 ns collision
+bunch spacing (400 MHz).
+Protons are collected from hydrogen gas by first stripping away 
+the electron in an electric field\footnote{Anti-protons
+can be produced  from the products of 
+particles collisions with a fixed target and
+then trapping them using a process called stochastic cooling. This process
+is much slower than the process for collecting protons. While colliding both 
+protons and antiprotons increases the cross-section
+for many physics processes, the high luminosity requirements on the LHC,
+coupled with the relatively short luminosity lifetime, make it challenging
+to do and still provide adequate integrated luminosity.}.
+The protons are injected
+into a series of lower energy accelerators before ultimately 
+reaching the LHC to be accelerated to the full energy and 
+begin collisions. The various stages of the LHC accelerator
+complex are shown in \fig\ref{fig:lhc_complex}.
+The protons are accelerated initially using the LINAC2 linear
+accelerator. Next, the protons accelerate through the circular
+Proton Synchrotron Booster (PSB), Proton Synchrotron (PS),
+and Super Proton Synchrotron (SPS). Finally, they 
+are split into two beams and injected into the LHC
+travelling in opposite directions. Once in the LHC
+ring they are accelerated to their full energy and then made
+to collide at four points along the ring where detectors
+are positioned to examine the products of the collisions.
+The two general purpose detectors, ATLAS \cite{ATLAS} and CMS \cite{CMS}, 
+are positioned at opposite sides of the ring. 
+Meanwhile, the two specialized detectors, ALICE \cite{ALICE} 
+and LHC-b \cite{LHCB}, are situated at equal points along the ring
+nearest ATLAS.
+The total injection process takes about 4 minutes.
+
+
+
+
 \section{Data Collection}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.9\textwidth]{figures/lhc/peaklumi_multiyear.png}
+\includegraphics[width=.9\textwidth]{figures/lhc/peakmu_multiyear.png}
+\caption{ (Top) The peak luminosity from the LHC as a function of time
+for 2010, 2011, and 2012 data-taking periods and (Bottom)
+the peak number of pileup interactions as a function of time
+as recorded by ATLAS. The peak luminosity and pileup interactions
+have both increased since the LHC began operation in 2010.
+The gaps in recorded values are due to technical stops and long shutdowns
+for maitenance and upgrade work.  }
+\label{fig:lhc_conditions}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.45\textwidth]{figures/lhc/integratedlumi.png}
+\includegraphics[width=.45\textwidth]{figures/lhc/pileup.png}
+\caption{ (Left) The integrated luminosity as a function of time in 2012. The amount
+delivered by the LHC is shown in green while the amount recorded by ATLAS
+is overlayed in yellow. More than 93 \% of the integrated luminosity 
+delivered by the LHC in 2012 was recorded by ATLAS.  
+(Right) The distribution of pileup interactions recorded by ATLAS in 2011 and 2012.  }
+\label{fig:lhc_lumi}
+\end{figure}
+
+%The LHC ran at a center-of-mass energy\footnote{Reduced from the design energy of 14 TeV.} from 2010 to 2011. 
+In 2010 and 2011 the LHC operated at a center-of-mass energy of 7 TeV, while
+in 2012 the LHC operated at a center-of-mass energy of 8 TeV\footnote{This
+was reduced from the initial design energy of 14 TeV due to a quenching incident
+in the superconducting dipole magnets in 2008 when running at full energy.}.
+The peak luminosity and peak pileup versus time during these runs
+are shown in the the top and bottom of \fig\ref{fig:lhc_conditions}, respectively.
+This thesis focuses on the 8 TeV data collected in 2012.
+This run had 
+a bunch spacing of 50 ns, 1.6 to 1.7 $\times 10^{11}$ protons
+per bunch, a beam radius of $18.8 \mu$m, and an average peak 
+luminosity of $7.7 \times 10^{33}~\lumiunits$ \cite{Lamont:1709796}.
+The luminosity lifetime, $\tau_L$, corresponding to \eqn\eqref{eq:lhc_lumi},
+ranged from 7 hours to 14 hours during a single run \cite{Hostettler:2013qya}.
+The total integrated luminosity in 2012 is shown 
+on the left of \fig\ref{fig:lhc_lumi}.
+The overall delivered integrated luminosity from the LHC
+in 2012 was 23.3 \ifb, while that recorded was 21.7 \ifb. The 
+amount of data recorded that is relevant for this thesis
+and described in \sec\ref{sec:www} is slightly less at 20.3 \ifb.
+The pileup conditions during 2012 were such that an average
+of 20.7 collisions occured per bunch crossing. The distribution
+of the average interactions per crossing in 2011 and 2012 are shown on
+the right of \fig\ref{fig:lhc_lumi}. The increase in the average pileup 
+in 2012 is due to the increased peak luminosity.
+
+
+
+

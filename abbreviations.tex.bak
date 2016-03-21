@@ -1,31 +1,47 @@
 \chapter*{List of Symbols}
   %\begin{tabular}{lp{0.75\textwidth}}
+  %no more than 18 per page
   \begin{tabular}{lp{0.15\textwidth}p{0.5\textwidth}}
     aQGC        & \dotfill & anomalous Quartic Gauge Coupling \\
+    aTGC         & \dotfill & anomalous Triple Gauge Coupling \\
     ATLAS       & \dotfill & A Toroidal LHC ApparatuS \\
-    CKM         & \dotfill & Cabibbo-Kobayashi-Maskawa \\
+    CSC         & \dotfill & Cathode Strip Chamber \\
     DPS         & \dotfill & Double Parton Scattering \\
+    ECAL        & \dotfill & Electromagnetic Calorimeter \\
+    EF          & \dotfill & Event Filter \\
     EFT         & \dotfill & Effective Field Theory \\
-    EMCAL       & \dotfill & Electromagnetic Calorimeter \\
     EW          & \dotfill & Electroweak \\
     EWSB        & \dotfill & Electroweak Symmetry Breaking \\
     FCAL        & \dotfill & Forward Calorimeter \\
     HCAL        & \dotfill & Hadronic Calorimeter \\
     HEC         & \dotfill & Hadronic End-cap Calorimeter \\
+    HLT         & \dotfill & High-Level Trigger \\
     ID          & \dotfill & Inner Detector \\
+    L1          & \dotfill & Level-1 \\
+    L2          & \dotfill & Level-2 \\
     LAr         & \dotfill & Liquid Argon \\
     LHC         & \dotfill & Large Hadron Collider \\
     LO          & \dotfill & Leading-Order \\
+  \end{tabular}
+
+  \begin{tabular}{lp{0.15\textwidth}p{0.5\textwidth}}
     MC          & \dotfill & Monte Carlo simulation \\
+    MDT         & \dotfill & Muon Drift Tube \\
     MS          & \dotfill & Muon Spectrometer \\
     NLO         & \dotfill & Next-To-Leading-Order \\
+    NNLO         & \dotfill & Next-To-Next-To-Leading-Order \\
+    PDF         & \dotfill & Parton Distribution Function \\
+    PS          & \dotfill & Proton Synchrotron \\
+    PSB         & \dotfill & Proton Synchrotron Booster \\
     QCD         & \dotfill & Quantum Chromodynamics \\
     QGC         & \dotfill & Quartic Gauge Coupling \\
+    RoI         & \dotfill & Region-of-Interest \\
+    RPC         & \dotfill & Resistive Plate Chambers \\
     SFOS        & \dotfill & Same-Flavor Opposite-Sign \\
     SM          & \dotfill & Standard Model  \\
-    TGC         & \dotfill & Triple Gauge Coupling \\
-    PDF         & \dotfill & Parton Distribution Function \\
-
-
+    SPS         & \dotfill & Super Proton Synchrotron \\
+    TGC         & \dotfill & Thin Gap Chambers \\
 
   \end{tabular}
+
+

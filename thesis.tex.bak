@@ -11,12 +11,14 @@
 \usepackage{shorthand}
 \usepackage{graphicx}
 \usepackage{url}
+%\usepackage{tabto}
+%\usepackage[style=numeric,backend=bibtex]{biblatex}
 \usepackage{subfigure}
 \usepackage{mathrsfs}
 \usepackage{authblk}
 \usepackage{verbatim}
 \usepackage{changepage}
-\usepackage{morefloats}
+%\usepackage{morefloats}
 \usepackage{pdflscape}
 \usepackage{amssymb}
 \usepackage{slashbox}
@@ -24,6 +26,12 @@
 % \usepackage{caption}
 \usepackage{url}
 %\usepackage[hidelinks]{hyperref}
+
+\usepackage{ifthen}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{marvosym}
+
 \usepackage{hyperref}
 \hypersetup{backref,  
 pdfpagemode=FullScreen,  
@@ -43,6 +51,7 @@ colorlinks=false}
 	\fi}
 \makeatother
 
+\usepackage{CVPreamble}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -53,7 +62,7 @@ colorlinks=false}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %setup commands for the bu thesis style file
 
-\title{WWW Production at the LHC } %(version 1.2)}
+\title{WWW Production at the LHC (version 1.3)}
 
 \author{\textbf{Brian Alexander Long}}
 
@@ -127,7 +136,7 @@ colorlinks=false}
 % The copyright page is blank except for the notice at the bottom. You
 % must provide your name in capitals.
 
-%\copyrightpage
+\copyrightpage
 
 % Now include the approval page based on the readers information
 
@@ -187,8 +196,7 @@ colorlinks=false}
 
 \chapter{Collider Physics and The Large Hadron Collider}
 \label{sec:lhc}
-blank
-%\input{lhc}
+\input{lhc}
 
 \chapter{The ATLAS Detector}
 \label{sec:atlas}
@@ -212,7 +220,11 @@ blank
 
 \newpage
 \singlespace
-\bibliographystyle{plain}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{h-physrev}
+%\bibliographystyle{h-elsevier}
+%\bibliographystyle{halpha}
+\bibliographystyle{atlasBibStyleWithTitle}
 \bibliography{www.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -228,7 +240,7 @@ blank
 % in the below example
 
 \chapter*{Curriculum Vitae}
-blank
 
+\input{AlexLongCV}
 
 \end{document}

@@ -1,0 +1,22 @@
+
+\chapter*{List of Journal Abbreviations}
+\begin{center}
+\begin{tabular}{lp{0.15\textwidth}p{0.5\textwidth}}
+AIP Conf. Proc.      & \dotfill & American Institute of Physics Conference Proceedings\\
+Ann. Math. Stat.     & \dotfill & Annals of Mathematical Statistics \\
+Chin. Phys.          & \dotfill & Chinese Physics \\
+Comput. Phys. Commun. & \dotfill & Computer Physics Communications \\
+Eur. Phys. J.        & \dotfill & European Physics Journal \\
+JHEP                 & \dotfill & Journal of High Energy Physics \\
+JINST                & \dotfill & Journal of Instrumentation \\
+JPCS                 & \dotfill & Journal of Physics: Conference Series \\
+New J. Phys.         & \dotfill & New Journal of Physics \\
+Nucl. Instrum. Meth. & \dotfill & Nuclear Instruments and Methods \\
+Nucl. Phys.          & \dotfill & Nuclear Physics \\ 
+Phys. Lett.          & \dotfill & Physical Letters \\
+Phys. Rev.           & \dotfill & Physical Review \\
+Phys. Rev. Lett.     & \dotfill & Physical Review Letters \\
+Prog. Theor. Phys.   & \dotfill & Progress of Theoretical Physics \\
+Z. Phys.             & \dotfill & Zeitschrift f{\"u}r Physik \\
+\end{tabular}
+\end{center}

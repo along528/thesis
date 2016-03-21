@@ -1,0 +1,174 @@
+% Resume 2.0 (2009-04-12)
+% Copyright 2009 Zach Scrivena
+% zachscrivena@gmail.com
+% http://zs.freeshell.org/latexresume/
+%
+% This document is released under the
+% Creative Commons Attribution 3.0 Unported License
+% http://creativecommons.org/licenses/by/3.0/
+
+%%%%%%%%%%%%%%
+%% PREAMBLE %%
+%%%%%%%%%%%%%%
+
+
+\doublespacing
+
+\setlength{\parindent}{0cm}
+%\tabto{0.1\textwidth}
+
+%%%%%%%%%%%%%%%%
+%% NAME BLOCK %%
+%%%%%%%%%%%%%%%%
+
+\section*{Brian Alexander Long}
+
+
+Year of Birth: 1988 \newline
+Contact: \\
+\cvtab{Department of Physics, Boston University}\\
+\cvtab{Metcalf Science Center}\\
+\cvtab{590 Commonwealth Ave}\\
+\cvtab{Boston, MA 02215}
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+
+
+\section*{Education}
+
+\href{http://buphy.bu.edu/}{Boston University}, Boston, Massachusetts \newline
+\cvtab{Ph.D. Candidate in Physics, \datestamp{2010}{09}{10} -- Present}
+%{\small Cumulative GPA of 3.78}
+
+\href{http://www.buphy.bu.edu/}{Boston University}, Boston, Massachusetts \newline
+\cvtab{M.A. in Physics, \datestamp{2015}{09}{25} }
+
+\href{http://www.physics.unc.edu/}{The University of North Carolina}, Chapel Hill, North Carolina \newline
+\cvtab{B.S. in Physics and Astronomy, \datestamp{2006}{09}{15} -- \datestamp{2010}{05}{15}}
+%Cumulative GPA of 3.57}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Research Experience}
+
+\href{http://www.atlas.ch}{{The ATLAS Experiment}, CERN, Meyrin, Switzerland} \newline
+Graduate Research Fellow, High Energy Physics, Boston University, \datestamp{2010}{09}{} -- Present \newline
+Advisor: Prof. John Butler
+{\begin{itemize}
+\item Conducting first search of \textit{WWW} production using the fully leptonic decay channel using data collected at the LHC in 2012.
+\item Performed search for exotic heavy charged gauge bosons in the leptonic decay channel using data collected from the LHC in 2012. Significantly improves limits from previous searches within ATLAS.
+\item Studied the performance of the ATLAS muon trigger system during 
+using data collected at the LHC in 2012.  Demonstrated the robustness of the muon trigger system against pileup.
+\item Performed timing studies of new fast muon trigger algortihm to 
+be used in LHC Run 2.
+\item Participated in upgrades and improvements to the ATLAS muon spectrometer system in preparation for LHC Run 2.  Resulted in finally 
+bringing the ATLAS muon system to the full Technical Design Report specifications. Also helped in first complete test of the Muon Drift Tube (MDT) gas system.
+\item Lead efforts to test custom ASD chips to be used in the MDT 
+technology for future upgrades to the ATLAS muon system.
+\end{itemize}
+}
+
+\href{http://www.tunl.duke.edu}{{Triangle Universities Nuclear Laboratory (TUNL)}, Duke University} \newline
+Undergraduate Research Assistant, \datestamp{2008}{04}{15} -- \datestamp{2010}{05}{15} \newline
+Advisor: Prof. Reyco Henning 
+{\begin{itemize}
+\item Built a muon veto system for a low background dark matter detector installed in the Kimballton Underground Reasearch Facility.
+\item Performed Monte Carlo simulation of cosmogenically activated germanium in High-Purity Germanium detectors.
+\item Developed software for use in low-background gamma spectroscopy analysis.
+\end{itemize}
+}
+
+\href{http://www.cbp.lbl.gov/}{{Center for Beam Physics}, LBNL, Berkeley, California} \newline
+Undergraduate Research Assistant, \datestamp{2009}{06}{15} -- \datestamp{2009}{08}{15} \newline
+Advisor: Dr. Ji Qiang 
+{\begin{itemize}
+\item Developed software for the optimization of beam parameters
+in the design of the photo-injector for the Next Generation Light Source (NGLS) project at LBNL.
+\end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+\section*{Publications}
+
+%necessary to put a blank block in front of citation since first block
+%doesn't do text wrapping
+\begin{enumerate}
+\parshape 2 0cm \linewidth \listindent \dimexpr\linewidth-\listindent\relax
+\item[] The ATLAS Collaboration, \emph{Search for $W^{\pm}W^{\pm}W^{\mp}$ Production in $\textit{pp}$ collisions at $\sqrt{s} = 8$~TeV with the ATLAS detector}, to be submitted to Phys. Lett. B
+\item[] The ATLAS Collaboration, \emph{Search for new particles in events with one lepton and missing transverse momentum in \textit{pp} collisitions at $\sqrt{s} = 8$~TeV with the ATLAS detector},
+JHEP \textbf{09} (2014) 037. \href{https://cds.cern.ch/record/1746306}{https://cds.cern.ch/record/1746306}.
+\item[] The ATLAS Collaboration, \emph{Performance of the ATLAS muon trigger in \textit{pp} collisions at $\sqrt{s} = 8$~TeV}, Eur. Phys. J. \textbf{C75} (2015) 120. \href{https://cds.cern.ch/record/1749694}{https://cds.cern.ch/record/1749694}.
+\item[] The ATLAS Collaboration, \emph{Search for \textit{WZ} resonance in the fully leptonic channel using \textit{pp} collisions at $\sqrt{s} = 8 $~TeV with the ATLAS detector}, Phys. Lett. \textbf{B737} 2014 223-243. \href{https://cds.cern.ch/record/1709746}{https://cds.cern.ch/record/1709746}.
+\item[] Finnerty, P., Henning, R., Long, A., et al., \emph{Low-background gamma counting at the Kimballton Underground Research Facility}, Nucl. Inst. Meth. \textbf{A642} (2011) 65-69. \href{http://arxiv.org/abs/1007.0015}{http://arxiv.org/abs/1007.0015}.
+\item[] Long, A., Qiang, J., \emph{Parallel Optimization of Beam Energy for a Next Generation Lighsource Photoinjector}, Abstract, DOE Journal of Undergraduate Research 2009
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%
+%% Conferences  %%
+%%%%%%%%%%%%%%%%%%
+
+\section*{Conference Experience~\& Citations}
+
+
+
+\begin{enumerate}
+\parshape 2 0cm \linewidth \listindent \dimexpr\linewidth-\listindent\relax
+
+\item[] 2016 Lake Louise Winter Institute, Lake Louise, AB, Canada 
+\item[] 2015 Open Data Science Conference, Boston, MA
+\item[] 2015 American Physical Society April Meeting , Baltimore, MD
+\item[] 2014 Fermilab-CERN Hadron Collider Physics Symposium, Batavia, IL
+\item[] 2009 American Physical Society April Meeting, Denver, Colorado 
+\item[] 2008 APS Division of Nuclear Physics Conference, Oakland, California 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACADEMIC HONORS & AWARDS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Honors~\& Awards}
+
+
+\begin{enumerate}
+\parshape 2 0cm \linewidth \listindent \dimexpr\linewidth-\listindent\relax
+\item[] Outstanding Teaching Fellow \hfill \datestamp{2010}{}{} -- \datestamp{2011}{}{} \newline
+Boston University College of Arts and Sciences outstanding teaching fellow of the year in Physics.
+
+
+\item[] DOE SULI Program Funding Award \hfill \datestamp{2009}{}{}\newline
+{Full funding award for work with Center for Beam Physics at Lawrence-Berkeley National Lab.
+}
+
+
+\item[] APS CEU Full Travel Award \hfill \datestamp{2008}{}{} \newline
+{2008 October Division of Nuclear Physics APS Meeting}
+
+%Dean's list?
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OTHER WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Teaching Experience}
+
+\begin{enumerate}
+\parshape 2 0cm \linewidth \listindent \dimexpr\linewidth-\listindent\relax
+\item[] Teaching Fellow, Department of Physics, Boston University \hfill \datestamp{2010}{09}{} -- \datestamp{2011}{05}{}\newline
+{Teaching assisant for undergraduate physics courses.  Topics covered: Mechanics, Electromagnetism, Thermodynamics, Modern physics.}
+
+\end{enumerate}
+
+
+
