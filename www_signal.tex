@@ -13,10 +13,10 @@
 
 The SM $WWW$ signal processes are implemented in the Monte
 Carlo generator \vbfnlo~\cite{Arnold:2011wj,Arnold:2012xn},
-which can generate partonic events at leading-order (LO) with
+which can generate partonic events at leading-order (LO) in QCD with
 next-to-leading-order (NLO) cross-sections, 
 and in \madgraph~\cite{MadGraph}, which can generate
-partonic events at NLO with NLO cross-sections. 
+partonic events at NLO  with NLO cross-sections. 
 The partonic events are further processed 
 by \pythiaeight~\cite{Sjostrand:2007gs} and \photos~\cite{Golonka:2005pn} 
 to add effects of beam remnant interactions and initial and 
@@ -49,13 +49,13 @@ between $WH\rightarrow WWW(*)$
 and on-shell $WWW$ production at LO, but \madgraph~is not
 able to do this at NLO. As a result, the NLO \madgraph~samples
 are split by on-shell \www~ and $WH\rightarrow WWW(*)$ production.
-Both sets of samples are further split by the \www~charge mode.
+Both sets are further split by the \www~charge mode.
 For each sample, the \xsecs are summarized in \tab\ref{tab:signal_xsec} 
 in their full phase space and in a common fiducial phase space
 defined in \sec\ref{sec:fiducial}.  
 The fiducial \xsecs are observed to be nearly the same
-between the two generators,
-as expected.  This serves as a good check of the understanding of the 
+between the two generators.
+This serves as a good check of the understanding of the 
 signal process. The \madgraph~\xsecs are used throughout the 
 remainder of the analysis.
 
@@ -86,7 +86,7 @@ signal MC generation.}
 for \vbfnlo~and \madgraph~samples. 
 The sum of the inclusive \xsecs are different
 because of the different branching fractions in the two cases. 
-The sum of the fiducial \xsecs, however, are expected to be similar because
+The sum of the fiducial cross-sections, however, are expected to be similar because
 they are computed for the same phase space, as described in \sec...}
 \label{tab:signal_xsec}
 \end{table}
@@ -124,7 +124,7 @@ they are computed for the same phase space, as described in \sec...}
 \caption{The signal cross-sections for different PDFs along with their
 uncertainties are shown on the {\sc MadGraph} $WWW$ signal samples
 for the total $WWW$ phase space and branching fraction for
-for the $W^{+}W^{+}W^{-}$ (top left) and $W^{+}W^{-}W^{-}$ (top right)
+the $W^{+}W^{+}W^{-}$ (top left) and $W^{+}W^{-}W^{-}$ (top right)
 charge modes
 and in the fiducial region for $W^{+}W^{+}W^{-}$ (bottom left) 
 and $W^{+}W^{-}W^{-}$ (bottom right).
@@ -156,13 +156,13 @@ in both the fiducial and total phase space.}
 \label{tab:pdfunc}
 \end{table}
 
-The uncertainty on the PDF is derived for the {\sc MadGraph} 
+The uncertainty due to the choice of PDF is derived for the {\sc MadGraph} 
 cross-sections following a modified version of the pdf4lhc
 \cite{Botje:2011sn} recommendations.  The resulting 
 uncertainty is shown separately for the two different charge modes
 in both the fiducial and the inclusive phase
 space in Table~\ref{tab:pdfunc}.
-The uncertainty is determined by comparing three different PDFs;
+The uncertainty is determined by comparing three different PDFs:
 CT10 NLO~\cite{Lai:2010vv}, MSTW2008 NLO~\cite{Martin:2009iq}, 
 and NNPDF 3.0 NLO~\cite{Ball:2014uwa}. 
 This comparison is presented in Figure~\ref{fig:signal_pdf_unc}.  
@@ -170,7 +170,8 @@ Symmetric 68\% CL uncertainties
 are determined for CT10 NLO and MSTW 2008 NLO using the 68\% CL 
 set provided for MSTW directly and the 90\%CL set for CT10 after
 scaling down by 
-a factor of 1.645. The uncertainty of the NNPDF 3.0 NLO PDF set is 
+a factor of 1.645 in order to approximate a 68 \% CL uncertainty. 
+The uncertainty of the NNPDF 3.0 NLO PDF set is 
 determined by using the standard deviation of the distribution 
 of 101 MC PDFs provided in the PDF set; the nominal value is taken
 from the mean of the same PDFs.  
@@ -188,7 +189,7 @@ The effect of these variations on the cross-sections
 as compared to the nominal
 are shown separately for the two different charge 
 modes in \tab~\ref{tab:scaleVariation}.
-The uncertainty is then determined by taking the maximum 
+The symmetric uncertainty is then determined by taking the maximum 
 variation for each charge mode, 
 namely, 2.62\% for $W^+W^+W^-$ and 2.53\% for $W^-W^+W^-$. 
 
