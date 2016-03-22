@@ -39,10 +39,10 @@ It is mainly characterized by requiring the presence of exactly three leptons
 \sec\ref{sec:object_selection}, each with a $\pt$ of at least $20\GeV$.
 In addition, the events are required to be of good quality. This means
 that the events were collected under good conditions during data taking,
-both from the LHC operation and ATLAS detector operation. For instance,
+both from the LHC and ATLAS detector operation\footnote{For instance,
 during the 2012 data collection, the LAr component of the EM calorimeter
 was known to occasionally produce artificial bursts of noise. These instances
-were tracked and events where this occurred were thrown away. The event is 
+were tracked and events where this occurred were thrown away.}. The event is 
 also required to have a primary vertex with at least three associated tracks.
 Finally, the event is required to pass the single lepton trigger
 requirements listed in \sec\ref{sec:subsection_data} where 
@@ -93,7 +93,8 @@ Opposite-Sign (SFOS) lepton pairs.}
 \end{table}
 
 In each signal region, a unique selection is determined by an optimization
-procedure that minimizes the uncertainty on the expected SM measurement. 
+procedure that minimizes the uncertainty on the expected SM cross-section
+measurement. 
 The optimization procedure is described in detail in \sec\ref{sec:optimization}.
 The optimization considers many different physical quantities 
 with which to perform a possible selection, comparing different
@@ -130,7 +131,7 @@ is applied in all signal regions.
 Further, the signal is 
 expected to have negligible contributions
 from heavy flavor jets. As a result, vetoing events with jets
-tagged to come from \bee~ or \bee-hadron decays has
+tagged to come from \bee-hadron decays has
 little effect on the signal expectation. This is true even with 
 the rate for heavy flavor jet mis-identification for the 
 \bee-tagging algorithms. For the 
@@ -149,21 +150,21 @@ the $Z$-mass ( $m_{Z}=91.1876$~GeV \cite{PDG:2014}).
 The signal, which does not include $Z$-bosons, 
 will not have the same peak, but instead
 will be relatively flat around the region of the $Z$-peak. 
-As a result, removing events within some window around the peak can do a good job
+As a result, removing events within a window around the peak can do a good job
 of removing these backgrounds without having a large effect on the signal.
 For the 1 and 2 SFOS regions, the mass windows
-chosen for the veto are $m_Z-35\GeV < m_{\textrm{SFOS}} < m_Z+20\GeV$
-and $m_Z-20\GeV < m_{\textrm{SFOS}} < m_Z+20\GeV$, respectively.
-The windows are chosen differently based on the preferred window
-from the optimization, described in more detail in \sec\ref{sec:optimization}.
+chosen for the veto are $(m_Z-35\GeV )< m_{\textrm{SFOS}} < (m_Z+20\GeV)$
+and $(m_Z-20\GeV )< m_{\textrm{SFOS}} < (m_Z+20\GeV)$, respectively.
+The windows are chosen differently based on 
+the optimization, described in more detail in \sec\ref{sec:optimization}.
 In the 0 SFOS region, by definition, there are no SFOS pairs that could come 
 from the decay of a \z-boson. 
-The effect of electron charge mis-identification
-,discussed in \sec\ref{sec:charge_misid}, however, means that a 
+The effect of electron charge mis-identification,
+discussed in \sec\ref{sec:charge_misid}, however, means that a 
 peak can show up in the background
 of the $m_{ee}$ distribution for same-sign electron/positron pairs. 
 Thus, a veto is performed in this distribution as well, with 
-a mass window of $m_z-15\GeV < m_{ee} < m_Z+15\GeV$.
+a mass window of $(m_Z-15\GeV) < m_{ee} < (m_Z+15\GeV)$.
 
 
 The presence of neutrinos in the signal mean that the signal should have a 
@@ -179,11 +180,11 @@ region.
 In the 1 SFOS region the selection is  $\MET > 45\GeV$
 and in the 2 SFOS region the selection is $\MET > 55\GeV$;
 in the 0 SFOS region, 
-the \MET~selection is kept inclusive.
+there is no requirement on \MET.
 
 %this description probably belongs in an earlier section
 The magnitude and direction
-of the missing $E_{T}$ may be interpreted as coming from the 
+of the \MET may be interpreted as coming from the 
 vector sum of the neutrinos.  By arguments of 
 symmetry, one could then compare the azimuthal direction 
 of the missing $E_{T}$ to the azimuthal direction of the vector
