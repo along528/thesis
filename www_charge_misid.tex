@@ -38,7 +38,8 @@ energies required are too large, according to Bethe-Bloche.
 Indeed, we observe that the rate of charge mis-identification for muons
 is vanishingly small and so we neglect it. %or should I just say that it should be?
 
-The strong dependence upon the ATLAS material means that care must be
+The strong dependence of charge mis-identification 
+upon the ATLAS material means that care must be
 taken when describing this process. In particular, the material 
 description in MC, while sophisticated, is not perfect. Thus, the use of MC
 for determining the rate of electron charge mis-identification is inherently
@@ -61,7 +62,7 @@ equally in the 1 and 2 SFOS regions.
 As will be seen shortly, the overall rate of electron charge mis-identification
 is quite small (calculate???). 
 Furthermore, it will be seen that the total background in the 0 SFOS region is 
-a good deal smaller than the the 1 and 2 SFOS regions. Thus, the
+a good deal smaller than the 1 and 2 SFOS regions. Thus, the
 migration of events from the 1 and 2 SFOS regions to the 0 SFOS 
 region, resulting from electron charge mis-identification, has
 a larger relative impact on the background in the 0 SFOS 
@@ -77,7 +78,7 @@ out of the box estimate of this background from MC is adequate for the
 
 The electron charge mis-identification background is determined
 for the 0 SFOS signal region by first extracting the electron charge
-mis-identification rates using the data as a model
+mis-identification rates using the data as a model,
 described below. The extracted
 rates are compared to an alternative method using only MC. 
 The difference between the two is used as a systematic on the
@@ -98,7 +99,7 @@ method are provided below.
 \subsubsection{Charge Mis-identification Rate Extraction}
 
 The rate of electron charge mis-identification is defined as 
-the probability that an electron has it's charge mis-identified.
+the probability that an electron has its charge mis-identified.
 These rates depend highly on the kinematics of the individual electrons.
 In particular, the sensitivity to material dependence described above 
 means that the rate depends on where in the detector the electrons
@@ -118,19 +119,19 @@ an additional overflow bin for $\pt>120\GeV$.
 
 The rates are studied in a region with two electrons passing the object
 selection from \sec\ref{sec:www_object_selection} and that have
-a di-lepton mass within 10~\GeV of the \z mass. No requirements are placed
+a di-lepton mass within 10~\GeV~of the \z~mass. No requirements are placed
 on their charge. Two different methods
 are used: one using purely MC and one using the data.
 The method using MC takes $\z\rightarrow ee$ MC simulation 
 and relies on being able to determine the charge of each electron from the 
-\z decay by looking 
-directly from at hard scattering process as provided by the generator.
+\z~decay by looking 
+directly at the hard scattering process as provided by the generator.
 This is called ``truth'' information, at which point the processes of radiation
 and pair-production have not occurred. It then compares
-these truth electrons to the reconstructed electrons 
+these truth electrons to the ``reconstructed'' electrons 
 measured after all processes, including those of radiation and pair-production,
-have been simulated and have been reconstructed
-in the detector. The truth electrons and reconstructed electrons
+have been simulated and reconstructed
+in the detector. The truth and reconstructed electrons
 are matched by asking that they are nearby each other in $\eta$ and $\phi$.
 The charge of the matched truth and reconstruction electrons 
 are then compared and it is recorded whether or not the charges agree
@@ -144,8 +145,8 @@ rates is instead one that uses the data exclusively.
 We attempt to subtract backgrounds to the $Z\rightarrow ee$
 process using a method described later.
 It uses the same selection as in the MC method, with the events
-categorized based on whether the electrons from the \z
-decay are of the same-sign or of opposite-sign.
+categorized based on whether the electrons from the \z~decay 
+are of the same-sign or of opposite-sign.
 However, in this case
 there is no truth information to tell which electron's charge
 has been mis-identified. Instead, we assume that those events in
@@ -193,7 +194,7 @@ truth method (left) and the likelihood method in data (right). }
 
 The rates for the two different methods are 
 shown in \fig\ref{fig:chargemisid_rates_contour}.
-For low values of \pt and $\eta$, the rate is small enough to be negligible. 
+For low values of \pt~and $\eta$, the rate is small enough to be negligible. 
 The rate increases gradually along both dimensions, reaching as much as
 6.7\% in the region $\pt > 120\GeV$ and $2.4 < |\eta| < 2.5$ as measured
 in the data, which corresponds to the highest bin in both dimensions. 
@@ -232,7 +233,7 @@ detector, which could explain this difference....
 %note: the material description shouldn't be affecting our zgamma
 %estimate since it requires a b-layer hit so these are converting early
 
-Some additional alternatives to these two methods are also performed
+Some alternative methods are also performed
 in order to better assess the performance of the methods
 and to determine systematic uncertainties.
 One alternative is to perform the same likelihood extraction
@@ -276,7 +277,7 @@ using the MC truth method. As was already mentioned, these tend
 to be larger than the rates in data by about a factor of two. Finally, 
 the red curve shows the rates evaluated using the same likelihood method
 applied to the data, but using only reconstructed MC. This is seen to follow
-closely the MC truth method closely, except in a few bins where the statistics
+the MC truth method closely, except in a few bins where the statistics
 are low. The relative difference between the MC truth and MC likelihood methods
 is transported to the nominal estimate in data and used as another systematic.
 The difference between the methods using data and those using MC is not
@@ -324,21 +325,20 @@ have at least one electron-positron pair.
 Except for the $WZ\rightarrow \tau^{\pm}\nu~e^{+}e^{-}$ decay channel, 
 decay channels with tau leptons are not considered
 because they are suppressed by the tau branching fraction and are 
-considered to be negligible.
+thus negligible.
 
 The charge mis-identification rates are then applied to these channels on an 
 event-by-event basis as follows.
 For each event that is processed, its decay channel is identified 
 at truth level. Each reconstructed lepton
-is examined  and assigned a rate, or a probability to charge flip, 
+is examined  and assigned a rate, i.e. a probability to charge flip, 
 based on its reconstructed $\pt$ and $\eta$ values.
 The probability for a charge flip to occur in an event is then approximately 
 the sum of rates for the individual electrons:
 \begin{equation}
 p(\textrm{Charge Mis-Identification in Event}) \approx \sum_{i \in \textrm{Electrons}}  \textrm{Rate}(\pt^i,\eta^i) 
 \end{equation}
-Higher order terms where multiple electrons are charge mis-identified is 
-small and considered to be negligible.
+Higher order terms where multiple electrons are charge mis-identified is negligible.
 We are only concerned with the probability that a charge flip results in the 
 event falling into the 0 SFOS region. 
 Consider a step function, $\Theta(e)$, defined for an individual event:
@@ -355,7 +355,7 @@ the event falling in the 0 SFOS region is:
 p(\textrm{Event is classified as 0 SFOS}) \approx \sum_{i \in \textrm{Electrons}}  \textrm{Rate}(\pt^i,\eta^i)\Theta(i) 
 \end{equation}
 Again, we ignore the case where multiple electrons have their charge 
-mis-identified.  This probability is then used as an event by event weight. 
+mis-identified.  This probability is then used as an event-by-event weight. 
 
 
 Once the weight has been determined, we then artificially flip the charge of 
@@ -405,8 +405,8 @@ and similarly for the positron.
 This procedure has been validated on the $WZ$ and $ZZ$ samples by comparing 
 the predictions taken directly from MC to the predictions re-weighted in the 
 0 SFOS signal region using the procedure just described. This is done in 
-Figure~\ref{fig:ChargeMisID_Validation_WZ} for the $WZ$ samples and on 
-Figure~\ref{fig:ChargeMisID_Validation_ZZ} for the $ZZ$ samples. It can be seen 
+\fig\ref{fig:ChargeMisID_Validation_WZ} for the $WZ$ samples and on 
+\fig\ref{fig:ChargeMisID_Validation_ZZ} for the $ZZ$ samples. It can be seen 
 the agreement in the shape looks good for all the distributions. An offset 
 between the two distributions is observed. This difference is covered partially by 
 the systematic uncertainties of the method.  Any remaining difference could 

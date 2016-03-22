@@ -11,7 +11,7 @@ of the LHC. Still, this identification is not perfect. A jet,
 for instance, perhaps from a charged pion, could leave a single
 track in the inner detector along with a narrow energy deposit in the
 EM calorimeter; a very similar signature to an electron. Or, 
-a \bee-hadron, could decay into a final state with a high energy muon,
+a \bee-hadron could decay into a final state with a high energy muon,
 making it difficult to distinguish from a muon produced in the hard interaction.
 We call these mis-reconstructed objects, ``fake'' objects. 
 In this analysis we are primarily interested in the subset of these 
@@ -68,7 +68,7 @@ exactly one fake lepton,
 was first implemented by ATLAS in \cite{ATLAS-CONF-2010-087}, 
 and variations of the method have been implemented in numerous publications
 by ATLAS ever since (though less often by CMS).
-In essence, the method release on the definition of two different selections,
+In essence, the method relies on the definition of two different selections,
 referred to as ``tight'' and ``loose'', defined such that
 ``real'' leptons are more likely to pass the ``tight'' selection
 than ``fake'' leptons. If the probability of the ``real'' and 
@@ -102,8 +102,9 @@ We can measure directly the number of events in the data that
 pass this ``tight'' selection and call it $n_T$. Choose the other selection
 to have a different composition of real and fake leptons. Since the 
 ``tight'' selection is enriched in real leptons, this can be achieved
-if this other selection has a larger proportion of fake leptons, though
-not necessarily dominated by fake leptons. We will call this the
+if this other selection has a larger proportion of fake leptons 
+(it does not necessarily have to be dominated by fake leptons). 
+We will call this the
 ``loose'' selection and designate the number of events measured
 in this selection as $n_L$. The total number of real leptons that fall in 
 both regions can be called $n_R$. The probability that one of these
@@ -132,7 +133,7 @@ equations:
   \end{pmatrix} 
   \begin{pmatrix} n_R \\ n_F \end{pmatrix}
 \end{align}
-where we have introduced the notation $\realbar = 1-\real$
+where I have introduced the notation $\realbar = 1-\real$
 and $\fakebar =1-\fake$.
 Note that this equation is a function of the measured values of
 $n_R$ and $n_F$ which we are actually seeking to find in terms of the 
@@ -186,10 +187,10 @@ to keep in mind whenever using this method.
 
 We now have a way to approximately solve for the estimate
 of the real and fake lepton contributions to a single lepton 
-selection in our data sample, but ultimately we are interested
+selection in our data sample. But, ultimately we are interested
 in an estimate of 
 the number of fake leptons that fall into our tight selection, call this
-estimate $\hat{f}_{T}$ and the number of fake leptons
+estimate $\hat{f}_{T}$, and the number of fake leptons
 that are loose, $\hat{f}_{L}$. 
 This estimate can be solved for then in a straightforward way, by 
 selecting only the estimated component of fakes.
@@ -209,6 +210,7 @@ selecting only the estimated component of fakes.
   \end{pmatrix} 
   \begin{pmatrix} \hat{n}_R\\ \hat{n}_F \end{pmatrix}
 \end{align}
+Solving for $\hat{n}_R$ and $\hat{n}_F$ and then 
 Substituting in for equation \eqn\eqref{eq:mxm_single_inverted_approx}
 gives an expression for the expected number of tight and loose
 selected fake leptons as determined from the rates and the measured
@@ -229,8 +231,8 @@ value of tight and loose leptons:
   \end{pmatrix} 
   \begin{pmatrix} n_T\\ n_L \end{pmatrix}
 \end{align}
-And then we may simply pluck out the estimated number of tight leptons
-from fakes, which is usually of interest:
+Then we may simply pluck out the estimated number of tight leptons
+from fakes, which is usually the quantity of interest:
 \begin{align}
   \label{eq:mxm_final_single2}
   \begin{pmatrix} \hat{f}_T \\ 0 \end{pmatrix} 
@@ -259,7 +261,7 @@ Evaluating the expression for $\hat{f}_T$ gives:
            &= w_T~n_T + w_L~n_L
 \end{align}
 where in the last line we have reorganized the coefficients in front
-of $n_T$ and $n_T$ into parameters $w_T$ and $w_L$ which are dependent
+of $n_T$ and $n_L$ into parameters $w_T$ and $w_L$ which are dependent
 upon the rates. Practically, the final estimate of $\hat{f}_T$
 can be determined by looping over each event in data, weighting each event
 using either $w_T$ for those passing the tight selection and
@@ -454,9 +456,9 @@ Furthermore, the vector
   \end{pmatrix}
 \end{equation}
 In this case, there is only one configuration that gives 
-three tight leptons thus, the matrix $\mathbf{M}$ is constructed
-to have be an $8x8$ matrix with 1 in the first element and 
-all other elements being zero. This gives 
+three tight leptons.  Thus, the matrix $\mathbf{M}$ is constructed
+to be an $8 \times 8$ matrix with 1 in the first element and 
+all other elements being 0. This gives 
 
 $(T^{ijk})^T=\begin{pmatrix} 
   \hat{f}_{TTT}^{ijk}& 0 & 0 & 0 & 0 & 0 & 0 & 0 
@@ -464,7 +466,7 @@ $(T^{ijk})^T=\begin{pmatrix}
 Putting everything together, we can solve for the estimated
 number of events with three tight leptons 
 coming from three leptons events with at least one fake lepton
-with three leptons in bins $i$,$j$, and $k$:
+with three leptons in bins $i$,$j$, and $k$. It can be reduced to the form
 \begin{align}
 \begin{split}
 \label{eq:mxm_threeleptons}
@@ -474,7 +476,7 @@ with three leptons in bins $i$,$j$, and $k$:
    &+w_{LLL}(i,k,j)~n^{ijk}_{LLL}
 \end{split}
 \end{align}
-where the terms like $j\leftrightarrow k$ are intended to indicated
+where the terms like $j\leftrightarrow k$ are intended to indicate
 a copy of the first term in parentheses but with the indices 
 switched as shown. Each term has a $w$ function that is a function
 of the three lepton indices. These are the weights
@@ -509,10 +511,9 @@ w_{LLL}(i,j,k) =
 \end{equation}
 One can see that for the case of zero or two loose leptons present, 
 the magnitude of the weights are always negative (as long
-as $\real > \fake$), while the for one and three loose leptons 
-present, the magnitude is positive. As with the single
-lepton case this is not of a concern as long as we look only 
-take seriously the final expectation and this remains positive.
+as $\real > \fake$), while for those with one or three loose leptons 
+present the magnitude is positive. As with the single
+lepton case, this is not a concern as the sum should remain positive.
 However, it might cause some concern to see that 
 the magnitude of these weights decrease the more loose leptons 
 are present, thus the highest magnitude weight
@@ -573,7 +574,7 @@ weights from the same event, there is a correlation in the uncertainty
 if these weights end up falling in the same bin. To handle this 
 correlation the uncertainty for these weights are added linearly 
 as opposed to in quadrature when extracting the final uncertainty 
-on the method. The impact of this is seen to mostly negligible
+on the method. The impact of this is seen to be mostly negligible
 with respect to treating them as completely uncorrelated.
 
 \subsubsection{Rate Determination}
@@ -603,7 +604,7 @@ real leptons in category $i$, to be
 distinguished from the $n_T^i$ and $n_L^i$ which
 are the number of candidate and loose real leptons in the signal regions
 and whose origin is unknown.
-Similarly, the fake rate, $\fake^i$, in category $i$ is,
+Similarly, the fake rate, $\fake^i$, in category $i$, 
 is defined as the ratio of tight candidate fake leptons over
 the number of tight plus loose candidate fake leptons:
 \begin{equation}
@@ -642,7 +643,7 @@ and muon categories into sub-categories of mutually exclusive bins of
 $\pt$. The number of bins and the bin edges are determined 
 to best capture the shape while also maintaining adequate statistics
 in each category. In practice it is usually not possible to subdivide
-the \pt~by more than a 3-5 bins. For the same reason, while
+the \pt~by more than a few bins. For the same reason, while
 the rates also surely vary according to other kinematic criteria, 
 like $\eta$, it is usually not possible to subdivide in more than
 one kinematic variable and still have good statistics.
@@ -685,7 +686,7 @@ when the probe lepton is either tight (top) or no additional selection (besides 
 \end{figure}
 
 In the control region enhanced
-in $Z\rightarrow ll$, if one well reconstructed 
+in $Z\rightarrow ll$, if one well-reconstructed 
 tag lepton passing the tight selection is found then the presence
 of an additional lepton will almost certainly be the other real
 lepton from the $Z$ decay. Thus, this second ``probe''
@@ -694,7 +695,7 @@ requirement is our candidate real lepton.
 Note that if the probe lepton also passes the tight selection
 then it could also be used as a tag. In fact, ignoring
 this possibility can introduce a bias. Thus, we consider both 
-leptons as tag or probe and candidates.
+leptons as either tag or probe candidates.
 The control region is formed by a selection where 
 the tag lepton passes the same single lepton triggers and trigger
 matching requirements as in \sec\ref{sec:www_event_selection}
@@ -716,7 +717,7 @@ pass just the tight selection
 (the top row of \fig\ref{fig:realEff_CRsPt})
 or both the loose and tight selections
 (the bottom row of \fig\ref{fig:realEff_CRsPt}).
-The expectation clearly agrees well with the expectation, which is dominated
+The data clearly agrees well with the expectation, which is dominated
 by the $Z\rightarrow ll$ process, as expected. The ratio of the 
 candidate real leptons passing just the tight selection 
 over those passing the loose and tight selections 
@@ -728,8 +729,8 @@ It is interesting to note that the real rates
 are uniformly lower for electrons than for muons, but both follow
 the same trend of increasing as a function of the lepton \pt, 
 and are relatively high even for the lowest value of 81\%.
-The rates are calculated both using 
-the data or the MC exclusively and the difference
+The difference between the rates calculated 
+either the data or the MC exclusively 
 is taken as a systematic uncertainty on the nominal estimate
 from the data. 
 The rates and the systematic uncertainties
@@ -930,7 +931,7 @@ are the number of tight or loose probe leptons estimated from MC
 to fall in bin $i$ of the fake lepton control region for real
 lepton and photon conversion background sources, respectively.
 The separate contributions to these terms are shown as a function
-of the lepton \pt~for split both by whether the lepton
+of the lepton \pt~split both by whether the lepton
 passes just the tight selection or both the tight and loose selections
 and for the inclusive and exclusive \bee-jet multiplicity categories
 in \fig\ref{fig:fakeEff_CRs_muon} for muons
