@@ -1,6 +1,6 @@
 
 
-\section{Standard Model Measurement}
+\section{Cross-section Measurement}
 \label{sec:measurement}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d}#1~}
 \newcommand{\boldtheta}{\boldsymbol{\theta}}
@@ -47,7 +47,7 @@ for $\mu$ as the set of nuisance
 parameters, $\boldtheta = (\curlyl_0,\Delta_{\curlyl}, \thetas, \thetab)$. 
 
 The discovery significance is tested using frequentist statistics
-to estimate the degree of compatibility with the background only 
+to estimate the degree of compatibility with the background-only 
 hypothesis~\cite{Cowan:1277304}.
 The measurement and uncertainty are evaluated 
 by using the shape of the profile likelihood ratio~\cite{PDG:2014} 
@@ -66,14 +66,14 @@ constraints with $\pm1\sigma$ uncertainties.
 
 The basic form of the 
 test statistic used for comparing hypotheses is called the profile likelihood 
-ratio, $\lambda(\mu)$ and is defined as:
+ratio, $\lambda(\mu)$, and is defined as:
 \begin{equation}
--2 \ln \lambda(\mu) = -2 \ln \frac{L(\mu,\hat{\hat{\boldsymbol{\theta}}}(\mu))}{L(\hat{\mu},\hat{\boldsymbol{\theta}})}
+-\ln \lambda(\mu) = - \ln \frac{L(\mu,\hat{\hat{\boldsymbol{\theta}}}(\mu))}{L(\hat{\mu},\hat{\boldsymbol{\theta}})}
 \label{eq:profile_likelihood_ratio}
 \end{equation}
 Note that it no longer depends on the nuisance parameters, $\boldsymbol{\theta}$,
 and instead depends only on $\mu$. 
-The negative of twice the logarithm of the profile likelihood 
+The negative of the logarithm of the profile likelihood 
 ratio is used because
 the logarithm is monotonic and typically easier to work with.
 The presence of the nuisance parameters are handled in the profiling 
@@ -95,11 +95,11 @@ $\hat{\hat{\boldsymbol{\theta}}}$, which itself depends on $\mu$.
 Clearly, the profile likelihood ratio runs from $0 < \lambda(\mu) < 1$
 with values close to $0$ showing more agreement with the background 
 only hypothesis and values closer to $1$ showing more agreement with 
-the signal hypothesis, $\mu$. 
+the signal hypothesis.
 When taking the negative log likelihood, the range
 is mapped to the entire positive axis and inverted. This means
 that values close to $0$ are more background-like and larger values 
-are more-signal like.  
+are more signal-like.  
 
 The minimum of the negative log of the profile likelihood 
 is taken as the measurement of the signal strength; 
@@ -125,7 +125,7 @@ q_{0} =
 The test statistic is set to $0$ when $\hat{\mu} < 0$ to enforce
 the notion that an observation which is less than the background
 expectation should not be treated as signal like. The $p$-value in this case
-tells us the degree of incompatibility with the background only hypothesis
+tells us the degree of incompatibility with the background-only hypothesis
 and is defined as:
 \begin{equation}
 p_0=\int^{\infty }_{q_{0,\textrm{obs}}} f(q_0|\mu=0) \Diff{q_0}
@@ -133,9 +133,9 @@ p_0=\int^{\infty }_{q_{0,\textrm{obs}}} f(q_0|\mu=0) \Diff{q_0}
 \end{equation}
 where $q_{0,\textrm{obs}}$ is the observed value of $q_0$ and 
 $f(q_0|\mu=0)$ is the probability density of the test statistic $q_0$ under
-the background only hypothesis which is evaluated using toy MC. %explain?
+the background-only hypothesis which is evaluated using toy MC. %explain?
 By examining the $p$-value one can say what the probability is 
-that the deviation away from the background only hypothesis is due
+that the deviation away from the background-only hypothesis is due
 to chance. A small probability suggests that such a fluctuation is
 unlikely. Frequently one refers to the significance:
 \begin{equation}
@@ -160,7 +160,7 @@ a significance of $0.66 \sigma$.
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.50\columnwidth]{figures/statistics/significance/combination.png}
-\caption{PDF of the background only hypothesis as a function of $q_0$ for 
+\caption{PDF of the background-only hypothesis as a function of $q_0$ for 
 the combination of all three channels. PDFs are determined 
 using toy MC. The solid black line represents the observed 
 value of $q_0$ seen in the data. The shaded area above
@@ -169,7 +169,7 @@ integral of the background hypothesis in the signal-like region.
 The dotted black curve shows a $\chi^2$ distribution for 1 degree of 
 freedom with which 
 it can be seen is a good approximation of the 
-the background only PDF.}
+the background-only PDF.}
 \label{fig:stat_measurement_significance}
 \end{figure}
 
@@ -211,7 +211,7 @@ measurement uncertainty purely
 from statistical effects and then a second time with the 
 systematic uncertainties included
 as nuisance parameters whose errors are constrained to be Gaussian and then 
-profiled out. The contour with systematic uncertainties included represent
+profiled out. The contour with systematic uncertainties included represents
 the total uncertainty and the systematic uncertainty is determined by 
 assuming that
 the total uncertainty is formed from the statistical and systematic 
