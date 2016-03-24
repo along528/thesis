@@ -7,18 +7,29 @@ In many cases, the background processes are either
 more abundant than or of a similar abundance to
 the signal. As a result, they must be well understood if there is any hope
 of distinguishing between the two. The background processes to the signal
-are characterized by having either at least three prompt leptons, meaning they
-come directly from the hard scattering process;  
-two prompt leptons and an isolated photon, which can mimic an electron;
-or two prompt leptons and a jet that mimics a lepton.
-The first two are estimated primarily using MC simulation; the third type
+fall into two general categories: irreducible and reducible. 
+The irreducible backgrounds are those that have the exact same final
+state as the signal. Thus, they 
+are characterized by having either exactly three prompt leptons, meaning they
+come directly from the hard scattering process.
+The reducible backgrounds are those which do not have the exact same
+final state as the signal, but can mimic the signal in some circumstances.
+For our signal, this includes backgrounds with four or more prompt leptons,
+where only three leptons are measured;
+two prompt leptons and an isolated photon, which can mimic an electron,
+referred to as the photon backgrounds;
+or two prompt leptons and a jet that mimics a lepton, referred to as
+the fake backgrounds.
+We treat similarly those backgrounds with three or more prompt leptons,
+hereby referred to as the prompt background.
+The prompt and photon backgrounds 
+are estimated primarily using MC simulation while the fake background
 is estimated using the data itself. 
 This will be described in more detail in \sec\ref{sec:bg_fake}.
 For now, we will focus only on the processes estimated using MC simulation.
 
-The most important backgrounds are those with at least three prompt leptons, 
-hereby referred to as the prompt backgrounds. Of these prompt backgrounds,
-the $WZ$ process is the most important since it has a 
+Of the prompt backgrounds,
+the $WZ$ process is the most important contribution since it has a 
 large cross-section (compared to the signal)
 and results in a final state with exactly three leptons. Another important 
 prompt background is the $ZZ$ process,
@@ -34,7 +45,6 @@ The di-boson processes are produced using the
 \powheg~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,Alioli:2010xd} generator
 with the CT10 NLO PDF set and 
 hadronized through \pythiaeight~using the AU2 tune, same as the signal.
-
 Other prompt backgrounds 
 include tri-boson processes like $ZWW$ and $ZZZ$ 
 (referred to collectively as $VVV$)
@@ -54,8 +64,6 @@ CTEQ6L1 PDF set and hadronized
 using \pythiasix~\cite{PYTHIA} with the AUET2B~\cite{atlas:2011zja} 
 tune.
 
-The second category of backgrounds to consider are those with two 
-prompt leptons and a photon. We will call these the photon backgrounds.
 The photon backgrounds occur entirely from the di-boson process $Z\gamma$
 where the $Z$ boson decays to two leptons and the photon mimics an electron.
 A photon is measured
@@ -63,9 +71,9 @@ by observing an energy deposit in the electromagnetic calorimeter
 without any associated track in the inner detector.
 A photon can mimic an electron
 if it converts into an electron-positron
-pair while still inside the inner detector, thereby leaving a track 
-in the inner detector while still leaving an energy deposit in the 
-calorimeter, the tell-tale sign of an electron.
+pair while still inside the inner detector. This leaves a track 
+in the inner detector plus an energy deposit in the 
+calorimeter, which is the tell-tale sign of an electron.
 The $Z\gamma$ samples were generated with the \sherpa~\cite{sherpa} generator 
 and the CT10 PDF set.  %hadronization? CT10 NLO? Or LO?
 In addition to this process, the $W\gamma$ process behaves similarly 
@@ -85,9 +93,6 @@ The DPS
 processes are generated using \pythiaeight~with the AU2 
 tunes and the CTEQ6L1 PDF set. 
 
-The last category of backgrounds are those with prompt leptons plus
-jets that mimic leptons, hereby 
-referred to collectively as the fake background. 
 The fake background is nominally estimated using the data
 as described in \sec\ref{sec:bg_fake}. Some of the contributions
 to this background, however, can be simulated using MC 
@@ -95,9 +100,11 @@ for cross-checks of
 the estimate from data. The main contributions
 to the fake background
 are the single boson processes ($V+$jets) and \tt~production.
-These are processes with very large cross-sections so
-that even though the probability for a jet mimicking a lepton is small,
-the size of the cross-section means that their contribution is non-negligible.
+The probability for a jet to mimic a lepton is actually quite small
+and thus difficult to capture with adequate statistics using MC. 
+However, these processes also have very large cross-sections.
+Combining the two means that in fact the occurence of a jet mimicking
+a lepton is not rare and thus non-negligible. 
 The single boson $Z+$jets processes are generated using \sherpa~with the CT10
 PDF set; the $W+$jets processes are generated using \alpgen~with
 the CTEQ6L1 PDF set and hadronized using \jimmy~with the AUET2C tunes.
@@ -107,7 +114,10 @@ The \tt~processes are generated using the \mcatnlo~\cite{MCatNLO}
 generator with the CT10 PDF set and hadronized in JIMMY.  %what is the tune?
 Finally, the fake background also has contributions from single top production,
 though it is less important. Single top production is simulated separately 
-for the s-channel, t-channel, and $Wt$-channel. The s-channel 
+for three different production mechanisms, differing in their initial
+and final states, known as
+s-channel ($qb\to q't$), t-channel ($q'\overline{q}\to \overline{b}t$), 
+and $Wt$-channel ($bg \to Wt$). The s-channel 
 and $Wt$-channel are generated using \mcatnlo~with the CT10 PDF set and 
 hadronized through \jimmy~; the t-channel is generated using 
 \madgraph~with the CTEQ6L1 PDF set and hadronized 

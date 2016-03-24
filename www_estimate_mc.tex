@@ -8,7 +8,7 @@ In some cases, corrections and/or uncertainties on
 the normalization of these simulated samples are applied. 
 The corrections are summarized in \tab\ref{tab:mcnorm} and are described
 in more detail below.
-The performance of the final description for those simulated backgrounds
+Those simulated backgrounds
 which are most important have been checked in control regions and are 
 also described below.
 
@@ -36,8 +36,8 @@ Studies of other di-boson processes
 suggest that this could be resolved by 
 moving to a NNLO calculation.
 For the $WZ$ process, however, this type of calculation is not yet available.
-As a result, we instead use the so-called ``2D Sideband'' method
-\cite{Aad:2013izg} to derive a correction using the data itself.
+As a result, we instead use the so-called ``2D Sideband'' method (also known as the 
+``ABCD'' method) \cite{Aad:2013izg} to derive a correction using the data itself.
 
 The 2D sideband method is able to determine an estimate
 for the process of interest using the data while also correcting
@@ -115,10 +115,10 @@ For example, the signal region is when $A=\textrm{With \z-veto}$ and
 $B=\textrm{Isolated}$.
 One more equation can be found by assuming that the effect of 
 the isolation cut on the fake background is independent of the \z-veto.
-That is to say, it is assumed that:
+That is to say:
 \begin{equation}
 \label{eq:wz_constraint}
-R^{\textrm{Fake}}_{\textrm{With \z-veto}} = R^{\textrm{Fake}}_{\textrm{Without \z-veto}}
+\frac{R^{\textrm{Fake}}_{\textrm{With \z-veto}}}{R^{\textrm{Fake}}_{\textrm{Without \z-veto}}} = K
 \end{equation}
 where 
 \begin{equation}
@@ -126,6 +126,7 @@ R^{\textrm{Fake}}_{A} =
 \frac{N^{\textrm{Fake}}_{A,\textrm{Isolated}}}
 {N^{\textrm{Fake}}_{A,\textrm{Non-Isolated}}}
 \end{equation}
+and it is assumed that $K=1$.
 This results in five equations: the expectations,
 \eqn\eqref{eq:wzparam2}, from varying the conditions $A$ and $B$ independently,
 and \eqn\eqref{eq:wz_constraint}.
@@ -190,8 +191,8 @@ $1.08\pm0.07\stat$.
 Systematic uncertainties are also derived on the method
 by varying the 
 thresholds used to define the sideband regions, varying the normalization
-of the MC estimates in \tab\ref{tab:wz_input}, and by varying the degree
-of equality in \eqn\eqref{eq:wz_constraint}. The effect of each
+of the MC estimates in \tab\ref{tab:wz_input}, and by varying $K$ 
+in \eqn\eqref{eq:wz_constraint} to match that observed in MC. The effect of each
 uncertainty is propagated to the estimate of the $WZ$ normalization in
 the signal region and are combined in quadrature. The total systematic
 uncertainty is found to be 5.9\%. 
@@ -202,7 +203,8 @@ region enhanced in the $WZ$ process. This control region is determined
 using the pre-selection region as described in \sec\ref{sec:preselection}
 plus an additional requirement that there be 2 SFOS lepton pairs.
 This gives a good test of the $WZ$ normalization in a control region
-which is closer to the $WWW$ signal regions. 
+which is closer to the $WWW$ signal regions, but where the signal is still
+suppressed since most of the signal region cuts are not applied.
 The comparison is shown in \fig\ref{fig:WZ_2SFOS_CR} where
 the data is shown to be in good agreement with the corrected $WZ$ MC
 estimate, as desired.
@@ -250,7 +252,7 @@ like in \sec\ref{sec:wzbg}.
 
 We may check how well the NLO $ZZ\rightarrow llll$ MC prediction and 
 NNLO normalization correction describe the process in the data by looking
-in a four lepton control region. The leptons are required to have
+in a four lepton control region. The reconstructed leptons are required to have
 the same quality requirements as in \sec\ref{sec:object_selection}.
 The leptons are sorted by \pt~with the highest \pt~lepton
 required to have $\pt>25\GeV$, the next two to have

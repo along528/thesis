@@ -12,13 +12,10 @@ that allows us to identify the particle and reconstruct
 its properties, such as its charge and four-momentum. 
 This reconstruction process does not guarantee
 100\% accuracy either in identifying the particle or measuring its 
-properties. As such, the reconstruction process results in reconstructed
-``physics objects'' that may or may not map accurately 
-to the underlying particle or physics it is trying to describe. That 
-being said, this mapping is usually very successful due to the high quality
-of the detector and the design of the reconstruction algorithms used.
-To maximize the success of reconstruction we look at physics
-objects selected only where the reconstruction is well understood.
+properties.
+This process results in reconstructed ``physics objects''
+which are selected using specific criteria optimized
+for good identification efficiency and measurment resolution.
 The selections used for the physics objects of interest are described below.
 
 %define primary vertex here
@@ -28,48 +25,57 @@ The selections used for the physics objects of interest are described below.
 
 Muon objects are identified by the presence of tracks in both 
 the ID and the MS that are shown 
-to match using an extrapolation process through the gap between the
-two sub-detectors. To ensure that the track in the inner detector
-indeed comes from a muon, strict requirements are placed
+to match using a statistical combination \cite{Hassani:2007cy}. 
+After tight quality requirements, the performance of muon reconstruction
+and identification is like in \cite{Aad:2014rra}.
+To ensure that the track in the inner detector
+indeed comes from a muon, requirements are placed
 on the number of hits in the different sub-components of the inner detector.
 %probably don't want to identify the MCP hit reqs, but I could...
-The track is extrapolated back to the primary vertex and is required
+The track is required to extrapolate back to the primary vertex 
 to point within the boundaries of the MS and ID
 within $|\eta|<2.5$.
-The muon \pt~ at the primary vertex is chosen to be limited to $\pt > 10$~GeV
-where there is adequate momentum resolution. We are not interested in 
+The muon \pt~ at the primary vertex is chosen to be limited to $\pt > 10$~GeV.
+We are not interested in 
 muons coming from jets or other hadronic activity, therefore we
 ask that they be isolated. The isolation of the muon is evaluated
-in two ways: using tracks and using calorimeter deposits.
+in two ways: using tracks and using energy deposits in the calorimeter.
 The isolation determined using tracks is calculated by adding
 up the scalar sum of the \pt~ of all of the tracks (excluding
 the muon track) in a cone of $\Delta R< 0.2$ from the muon track.
 We ask that the isolation from tracks be less than 4\% of the muon \pt.
-The isolation determined using calorimeter deposits is calculated in
-a similar way except that calorimeter deposits are used instead of tracks.
-We then ask that the isolation from calorimeter deposits 
+The isolation determined using the calorimeter is calculated in
+a similar way except that energy deposits are used instead of tracks.
+We then ask that the isolation from the energy deposits 
 be less than 7\% of the muon \pt~when $\pt < 20$~GeV and 
-less than 10\% of the muon \pt~otherwise. Additional requirements
-are placed upon the track extrapolation to ensure that it comes from
-the primary vertex.
+less than 10\% of the muon \pt~otherwise. 
+
+
+
 
 
 The signature for electron objects are that they have a track in the inner
 detector that points to an energy deposit in the EM calorimeter.
-The electron at the primary vertex is expected to have $\pt>10$~GeV, similar
-to the muon objects. The direction of the electron energy 
+Tight quality requirements are placed on the electrons to achieve
+reconstruction and identification performance like in \cite{Aad:1744017}.
+Similar to the muon objects, 
+the electron track is required to extrapolate back to 
+the primary vertex and have a $\pt>10$~GeV.
+The direction of the electron energy 
 deposits are also asked to fall within $|\eta| < 2.47$ and outside the 
-transition region between the EM calorimeter barrel and endcap, $1.37 < |\eta| < 1.52$.
+transition region between the EM calorimeter 
+barrel and endcap, $1.37 < |\eta| < 1.52$.
 The electron objects are required to be isolated and have additional
 requirements on the track extrapolation, similar to the muon objects.  
 %what about further quality requirements?
 
 
 Jet objects are associated with energy deposits in multiple 
-neighboring cells of the EM and hadronic calorimeter systems.
-Jet objects are reconstructed by grouping these cells
+neighboring cells of the electromagnetic and hadronic calorimeter systems.
+They are reconstructed by grouping these cells
 as topological clusters~\cite{Lampl:1099735}
 using the anti-$k_t$ algorithm~\cite{Cacciari:2008gp} with $\Delta R < 0.4$.
+The performance of jet identificaiton in ATLAS is described in \cite{Aad:2016upy}.
 The reconstructed jet objects are required to have 
 $\pt>25$~GeV and $|\eta|<4.5$ so that
 they are within the boundaries of the calorimeter systems.
@@ -90,7 +96,7 @@ to these as $b$-jets. A $b$-jet can frequently be identified
 because of the relatively long lifetime of the $b$ quark, which can 
 result in a decay vertex that is displaced far enough
 from the original primary vertex to be detected.
-This can be taken advantage of to ``tag'' jets as likely coming from
+This can be used to ``tag'' jets as likely coming from
 $b$ quarks. A multivariate $b$-tagging algorithm~\cite{ATLAS-CONF-2014-004}
 is used with a working point determined to be 85\% efficient at
 identifying $b$-jets. %what about the mis-tag rate?
@@ -148,7 +154,7 @@ with the muon.  Since the electron comes from the muon radiation and
 since the reverse process with an electron having pair-produced muons
 is heavily suppressed, the muon is kept preferentially.  The reconstruction
 of overlapping electrons and jets
-would rely on much of the same calorimeter energy deposits.  But the electron
+would rely on much of the same energy deposits in the calorimeter.  But the electron
 reconstruction also relies on matching with a well defined inner detector
 track.  It is thus assumed that if an electron overlaps with a reconstructed
 jet that this is more likely to be the signature of a high energy electron.

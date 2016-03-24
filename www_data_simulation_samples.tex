@@ -3,7 +3,6 @@
 \label{sec:subsection_data}
 
 
-
 This analysis is based on the study of the full proton-proton collision
 data from the LHC in 2012. The amount 
 of data used in this analysis corresponds to 
@@ -13,16 +12,18 @@ following the same methodology as in \cite{Aad:2013ucp}.
 %from Van-der-Meer scans taken throughout 2012.
 %read this citation.
 The data are selected after requiring that at least one
-of a series of the single lepton triggers passed during data taking, 
-specifically, one of the following:
-either an electron trigger 
-requiring at least one isolated
-electron with $\pt>24$~\GeV~, an electron trigger requiring
-at least one (possibly non-isolated) electron 
-with $\pt>60$~\GeV, a muon 
-trigger requiring at least one isolated muon with $\pt>24$~GeV,
-or a muon trigger requiring at least one 
-(possibly non-isolated) muon with $\pt>36$~GeV.
+of four single lepton triggers passed during data taking, 
+specifically:
+\begin{itemize}
+\item[] Either at least one isolated electron with $\pt > 24 \GeV$
+\item[] or at least one electron with $\pt > 60 \GeV$
+\item[] or at least one isolated muon with $\pt > 24 \GeV$
+\item[] or at least one muon with $\pt > 36 \GeV$
+\end{itemize}
+For the isolated lepton triggers, the isolation requirement is evaluated 
+using the scalar sum of the \pt~of all tracks surrounding the lepton 
+(excluding the lepton track itself) in a cone of $\Delta R < 0.2$
+such the sum does not exceed 12\% (10\%) of the muon (electron)  \pt.
 
 
 \subsection{Simulation samples}
@@ -49,7 +50,8 @@ can be applied as in the data.
 This sampling is repeated many times to populate the 
 distribution of possible
 outcomes. Dedicated MC programs are provided by theorists for 
-different processes and to different orders in perturbation theory.
+different processes, to different orders in perturbation theory,
+and interfaced to different PDFs.
 Details of the different processes simulated from MC and their
 treatment are presented below.
 

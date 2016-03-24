@@ -61,21 +61,19 @@ below with the lepton charge combinations
 that fall in each category:
 \begin{itemize}
 \item \textbf{0 SFOS}: $e^{\pm}e^{\pm}\mu^{\mp}$, 
-$\mu^{\pm}\mu^{\pm}e^{\mp}$ ($e^{\pm}e^{\pm}\mu^{\pm}$, 
-$\mu^{\pm}\mu^{\pm}e^{\pm}$, $e^{\pm}e^{\pm}e^{\pm}$, $\mu^{\pm}\mu^{\pm}\mu^{\pm}$)
+$\mu^{\pm}\mu^{\pm}e^{\mp}$ 
 \item \textbf{1 SFOS}: $e^{\pm}e^{\mp}\mu^{\pm}$, 
 $e^{\pm}e^{\mp}\mu^{\mp}$, $\mu^{\pm}\mu^{\mp}e^{\pm}$, $\mu^{\pm}\mu^{\mp}e^{\mp}$
 \item \textbf{2 SFOS}: $e^{\pm}e^{\pm}e^{\mp}$, $\mu^{\pm}\mu^{\pm}\mu^{\mp}$
 \end{itemize}
 Note that in the 2 SFOS region, one lepton is allowed to belong to both 
 pair combinations.
-Those combinations listed in parentheses are not allowed for the signal 
-based on charge conservation (neglecting charge mis-identification).  
+Only charge combinations summing to $\pm 1$ are allowed based on charge
+conservation (neglecting charge mis-identification).  
 The amount of the $W^{\pm}W^{\mp}W^{\pm}$ signal
 which falls into each category is purely combinatoric.  
 From the above list one can thus see that there are twice as many ways 
-for the signal combinations (again neglecting those in parentheses)
-to fall in the 1 SFOS regions as 
+for the signal combinations to fall in the 1 SFOS regions as 
 there are to fall in either the 0 SFOS or 2 SFOS regions. 
 Absent possible differences in signal efficiencies based on the leptons in each 
 signal region, one should expect branching 
@@ -124,14 +122,14 @@ Since the $WWW$ process is a purely EW process, and since
 we are looking only at the fully leptonic channel, the 
 signal is expected to have very little hadronic 
 activity. Any observed hadronic activity should come exclusively
-from the momentum recoil of the $WWW$ system with the incoming
-partons. Thus, the multi-jet contribution to the signal
-should be small. As a result, a selection of $\njet \leq 1$
-is applied in all signal regions.
+from the momentum recoil with the $WWW$ system.
+Thus, the multi-jet contribution to the signal
+should be small and is safe to apply a selection of $\njet \leq 1$
+in all signal regions.
 Further, the signal is 
 expected to have negligible contributions
 from heavy flavor jets. As a result, vetoing events with jets
-tagged to come from \bee-hadron decays has
+tagged to come from \bee-hadron decays also has
 little effect on the signal expectation. This is true even with 
 the rate for heavy flavor jet mis-identification for the 
 \bee-tagging algorithms. For the 
@@ -246,9 +244,11 @@ comparisons between different generators.
 The chosen fiducial region selection 
 is listed in \tab\ref{tab:fiducial_selection}.
 Only prompt leptons (those not originating from hadron decays) are used for 
-lepton selections, and these leptons are dressed with prompt photons 
-within a cone with $\Delta R = 0.1$. Generator-level jets are 
-reconstructed by running the anti-kt algorithm with radius 
+lepton selections, and these the momentum from nearby prompt photons 
+within a cone with $\Delta R = 0.1$ from the lepton are added
+back to the lepton momentum in order to remove the effects of final 
+state radiation. Generator-level jets are 
+reconstructed by running the anti-$k_T$ algorithm with radius 
 parameter $\Delta R = 0.4$ on all final-state particles 
 after the parton showering and hadronization with the exception of prompt 
 leptons, prompt photons, and neutrinos. The \MET~variable is calculated 

@@ -20,11 +20,12 @@ from section~\ref{sec:inputs} by the relation:
 Assuming a counting experiment in each bin $i$, the expected 
 event count is given by:
 % assuming a simple Poisson counting experiment with expectation for a given bin/channel, $i$:
-\begin{equation}
+\begin{align}
 %N^{\mathrm{exp}}(\mu,\boldtheta) = N^{\mathrm{exp}}(\mu,\curlyl_0,\Delta_{\curlyl},\thetas,\thetab) = \mu \sum_i \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_i \cdot \varepsilon_i(\thetas) + \sum_{i}\sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab)
-N^{\mathrm{exp}}_i(\mu,\boldtheta) = N^{\mathrm{exp}}_i(\mu,\curlyl_0,\Delta_{\curlyl},\thetas,\thetab) = \mu \cdot \bigg( \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_i \cdot C_i(\thetas) \bigg) + \sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab)
+N^{\mathrm{exp}}_i(\mu,\boldtheta) &= N^{\mathrm{exp}}_i(\mu,\curlyl_0,\Delta_{\curlyl},\thetas,\thetab) \\
+ &= \mu \cdot \bigg( \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_i \cdot C_i(\thetas) \bigg) + \sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab)
 \label{eq:poisson_expectation}
-\end{equation}
+\end{align}
 where $C_i$ is the correction factor 
 measured in each bin as discussed in section~\ref{sec:inputs} and 
 $\sigma^{\mathrm{Fiducial}}_i$ is the fiducial cross-section in each 
@@ -73,16 +74,6 @@ ratio, $\lambda(\mu)$, and is defined as:
 \end{equation}
 Note that it no longer depends on the nuisance parameters, $\boldsymbol{\theta}$,
 and instead depends only on $\mu$. 
-The negative of the logarithm of the profile likelihood 
-ratio is used because
-the logarithm is monotonic and typically easier to work with.
-The presence of the nuisance parameters are handled in the profiling 
-step when constructing the profile likelihood ratio,  which results 
-in a smearing of the profile likelihood ratio contour. 
-During profiling, the systematic uncertainties are
-interpolated using a piecewise linear function for shape uncertainties
-and a piecewise exponential function for the normalization uncertainties
-in order to maintain a normalization that is greater than zero.
 The denominator is the 
 unconditional maximum likelihood (ML)
 evaluated at the ML estimators $\hat{\mu}$ and $\hat{\boldsymbol{\theta}}$.
@@ -92,6 +83,16 @@ The numerator is the conditional ML which depends on $\mu$ and
 evaluated at 
 the conditional ML estimator for the set of nuisance parameters, 
 $\hat{\hat{\boldsymbol{\theta}}}$, which itself depends on $\mu$.
+The presence of the nuisance parameters are handled in the profiling 
+step when constructing the profile likelihood ratio,  which results 
+in a smearing of the profile likelihood ratio contour. 
+During profiling, the systematic uncertainties are
+interpolated using a piecewise linear function for shape uncertainties
+and a piecewise exponential function for the normalization uncertainties
+in order to maintain a normalization that is greater than zero.
+The negative of the logarithm of the profile likelihood 
+ratio is used because
+the logarithm is monotonic and typically easier to work with.
 Clearly, the profile likelihood ratio runs from $0 < \lambda(\mu) < 1$
 with values close to $0$ showing more agreement with the background 
 only hypothesis and values closer to $1$ showing more agreement with 
@@ -160,8 +161,8 @@ a significance of $0.66 \sigma$.
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.50\columnwidth]{figures/statistics/significance/combination.png}
-\caption{PDF of the background-only hypothesis as a function of $q_0$ for 
-the combination of all three channels. PDFs are determined 
+\caption{Probability distribution of the background-only hypothesis as a function of $q_0$ for 
+the combination of all three channels. The probabilitity distributions are determined 
 using toy MC. The solid black line represents the observed 
 value of $q_0$ seen in the data. The shaded area above
 this line represents the null p-value or the 
@@ -190,8 +191,7 @@ the range of the
 uncertainty for a given number of Gaussian $\sigma$ can be related
 directly 
 to the negative profile log likelihood.  In particular, for 
-a $1\sigma$ uncertainty, where $68.3\%$ of experiments will fall, 
-one expects that 
+a $1\sigma$ uncertainty one expects that 
 $|-\ln \lambda(\mu)| \leq 1/2$.
 %\begin{equation}
 %-2 \ln \lambda(\mu) = s^2
@@ -201,18 +201,18 @@ the minimum
 value, invariance of the likelihood under 
 transformations like $g(\hat{\mu},\hat{\boldsymbol{\theta}})$ where $g$ is some function, 
 means the same conclusion still holds.
-The value of $\mu$ is not forced to be only positive and is 
-left unrestricted. 
+The range of the measured value of $\mu$ is left unrestricted and thus
+allowed to become negative.
 
 The profile likelihood contour is evaluated once without 
 systematic uncertainties included
 as nuisance parameters in order to estimate the size of the 
 measurement uncertainty purely 
-from statistical effects and then a second time with the 
+from statistical effects. It is then then evaluated a second time with the 
 systematic uncertainties included
 as nuisance parameters whose errors are constrained to be Gaussian and then 
 profiled out. The contour with systematic uncertainties included represents
-the total uncertainty and the systematic uncertainty is determined by 
+the total uncertainty. The systematic uncertainty is determined by 
 assuming that
 the total uncertainty is formed from the statistical and systematic 
 uncertainties being added

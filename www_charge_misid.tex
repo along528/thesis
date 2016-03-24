@@ -118,7 +118,7 @@ an additional overflow bin for $\pt>120\GeV$.
 
 
 The rates are studied in a region with two electrons passing the object
-selection from \sec\ref{sec:www_object_selection} and that have
+selection from \sec\ref{sec:object_selection} and that have
 a di-lepton mass within 10~\GeV~of the \z~mass. No requirements are placed
 on their charge. Two different methods
 are used: one using purely MC and one using the data.
@@ -134,16 +134,17 @@ have been simulated and reconstructed
 in the detector. The truth and reconstructed electrons
 are matched by asking that they are nearby each other in $\eta$ and $\phi$.
 The charge of the matched truth and reconstruction electrons 
-are then compared and it is recorded whether or not the charges agree
-in the appropriate $\pt$ and $\eta$ bin. Once all MC events
+are then compared to see if 
+the charges agree
+and tallying  this 
+for the appropriate $\pt$ and $\eta$ bin. Once all MC events
 have been recorded, the rate per bin may be determined simply 
 by taking the ratio of the number of electrons where the truth and reconstructed
 electron charge disagreed per bin to the total number of electrons per bin. 
 
-The nominal method for extracting the electron charge mis-identification
-rates is instead one that uses the data exclusively. 
-We attempt to subtract backgrounds to the $Z\rightarrow ee$
-process using a method described later.
+The method using the data instead is the nominal method used 
+for extracting the electron charge mis-identification
+rates.
 It uses the same selection as in the MC method, with the events
 categorized based on whether the electrons from the \z~decay 
 are of the same-sign or of opposite-sign.
@@ -154,12 +155,13 @@ the same-sign category are due purely to charge mis-identification
 and attempt to extract the rates by minimizing a likelihood.
 Refer to the rate for an electron in a 
 particular $\pt$ and $\eta$ bin $i$ as $\varepsilon_i$.
-Also, refer to the total number of events observed in data with one electron
+Also, refer to the total number of di-electron events observed in data with one electron
 in bin $i$ and the other in bin $j$ as $N_{i,j}$.
 Given the rates, the expected number of same-sign events
 should be approximately $N_{i,j}(\varepsilon_i + \varepsilon_j)$,
-where we have ignored the probability for both electrons to have their
-charges flipped since it should be small. We do
+where we have ignored higher order terms, which account for  
+the probability for both electrons to have their
+charges flipped, since they should be small. We do
 not know the rates \emph{a priori}, but they should follow 
 a Poisson likelihood given the observed total number of events,
 $N_{i,j}$, and the the observed number of same sign events,
@@ -181,6 +183,7 @@ and $\varepsilon_j$ have been dropped.
 Thus, given the data, the values of $\varepsilon_i$ and $\varepsilon_j$
 at the minimum value of the log likelihood are taken as the estimate
 of the rates.
+We attempt to subtract backgrounds to the $Z\rightarrow ee$ process using a method described later.
 
 \begin{figure}[htp]
 \centering
@@ -233,16 +236,15 @@ detector, which could explain this difference....
 %note: the material description shouldn't be affecting our zgamma
 %estimate since it requires a b-layer hit so these are converting early
 
-Some alternative methods are also performed
-in order to better assess the performance of the methods
+Some variations on the method are also performed
+in order to better assess its performance 
 and to determine systematic uncertainties.
-One alternative is to perform the same likelihood extraction
+One variation is to perform the same likelihood extraction
 as in the data, but using only reconstructed MC. This produces
 similar rates to the truth MC method, suggesting that the differences
 seen between the data likelihood method and the truth MC method
 are not due to the method itself. 
-
-Another method is to extract the rates from the data with the 
+Another variation is to extract the rates from the data with the 
 likelihood method but without performing the background
 subtraction mentioned earlier. In the original method, 
 the background subtraction is performed by... 
@@ -263,21 +265,21 @@ curve (orange line) are used to fit the data. The sum of the fit
 \end{figure} 
 
 
-The different methods of rate estimation are compared to extract
+The different variations on  rate estimation are compared to the 
+nominal estimate to extract
 a final systematic. In \fig\ref{fig:ChargeMisID_truthRate_finalFig},
 the two-dimensional rates are unfolded into one-dimension
 with the bins numbered counting from low values of $\eta$ and \pt~to
-high values. The nominal rate is the one shown as black points
-using a likelihood fit in data with background subtraction. The vertical
-bars on the black points show the statistical uncertainty on this method.
-The solid black line shows the same method but without background subtraction.
-These methods follow each other quite closely, uniformly differing by 
-5-6\% throughout.  The blue curve shows the rates evaluated
-using the MC truth method. As was already mentioned, these tend
-to be larger than the rates in data by about a factor of two. Finally, 
+high values. The rates with and without background
+subtraction are seen to agree quite well, only 
+differing by about 5-6\% throughout.  
+The MC truth method tends
+to be larger than the rates in data by about a factor of two,
+as was already mentioned. Finally, 
 the red curve shows the rates evaluated using the same likelihood method
-applied to the data, but using only reconstructed MC. This is seen to follow
-the MC truth method closely, except in a few bins where the statistics
+applied to the data, but using only reconstructed MC. 
+Finally, the variation on the likelihood method using just MC
+is seen to follow the MC truth method closely, except in a few bins where the statistics
 are low. The relative difference between the MC truth and MC likelihood methods
 is transported to the nominal estimate in data and used as another systematic.
 The difference between the methods using data and those using MC is not
@@ -384,7 +386,10 @@ flipping the charge of only one electron/positron is to flip the
 charge of the electron.
 Thus, $\Theta(e^{+}_1)=\Theta(e^{+}_2)=0$ and $\Theta(e^{-}_3)=1$.  The event 
 weight will then be equal to the rate of charge mis-identification 
-for  $e^{-}_3$ and it will have it's charge flipped to be positive.
+for  $e^{-}_3$ and it will have it's charge flipped 
+to be positive\footnote{This results in a final state
+which does not fall into our signal region, since the sum of the
+charge of the three electrons is +3. Thus, it is just for illustration purposes}.
 
 Now consider an example of an event with 
 the decay of $ZZ\rightarrow \mu^{+}\mu^{-}~ e^{+}e^{-}$.
