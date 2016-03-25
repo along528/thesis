@@ -1,3 +1,216 @@
-\section{Systematic Uncertainties}
+\section{Corrections and Systematic Uncertainties}
 \label{sec:systematics}
-blank
+
+The predictions for the signal and background are subject
+to the choices made in building the model described thus
+far in \sec\ref{sec:www}. If we are to believe our predictions
+we must understand how sensitive the predictions are to these choices.
+To that end, we also compute the prediction for numerous variations
+on the nominal prediction. 
+Each one of these variations is called a systematic uncertainty. 
+Each systematic uncertainty is designed to assess the sensitivity
+to a given choice made when building the model. 
+This analysis has almost 50 different systematic
+uncertainties, each of which is varied independently. The size of 
+each systematic uncertainty
+is treated as a separate nuisance parameter
+as input to the statistical model used in the interpretation of the model
+when compared to data, described later in \sec\ref{sec:measurement}.
+
+The systematic uncertainties can be split up into four categories:
+theoretical, methodological, experimental, and luminosity. 
+I will summarize them below, in each case giving the 
+size of the uncertainties in the three signal regions. 
+Some of these variations have 
+been mentioned already in previous sections but will be
+referred to here again for completeness.
+
+\subsection{Theoretical}
+Theoretical uncertainties are those on the signal PDF and 
+on the background cross-section predictions.
+The motivation for the PDF uncertainties has been described
+already in \sec\ref{sec:pdf}. 
+There are several uncertainties evaluated on the signal PDF, all of which
+are described in more detail in \sec\ref{sec:signal}. These
+are the PDF choice, including uncertainties reported by the individual
+PDFs, as well as variations in the renormalization and factorization scales.
+The effect on the signal prediction from these is around 2-3\%.
+
+
+The most important MC backgrounds have uncertainties evaluated on their
+cross-section.  In particular, these are the uncertainties on the 
+normaization of the $WZ$, $ZZ$, $Z\gamma$, $VVV$, $\ttV$, 
+and DPS background predictions
+described in \sec\ref{sec:bg_estimates} and summarized in \tab\ref{tab:mcnorm}.
+Their impact when propogated to the final background prediction
+varies by channel. In general, the uncertainty on the $WZ$ prediction is the 
+largest, contributing about 2.6\% in the 0 SFOS region around around 8-9\%
+in the 1 and 2 SFOS regions.  In the 0 SFOS region, the uncertainty 
+on the $VVV$ prediction contributes about 1.4\% and that on the $ZZ$ prediction
+is about 0.4\%; all others fall below that. 
+In the 1 and 2 SFOS regions the $ZZ$ uncertainty is around 0.6-0.7\%; the
+rest are negligible. 
+
+
+The detailed theoretical uncertainties are summarized for each signal 
+region in tab ...... Three tables? Consolidated?
+
+
+\subsection{Methodological}
+The methodological uncertainties are those due to the data-driven
+modelling of the fake and charge mis-identification backgrounds,
+described in \sec\ref{sec:bg_fake} and \sec\ref{sec:charge_misid},
+respectively.
+The uncertainty on the fake background is the most important
+systematic uncertainty in the analysis, contributing about 60\%
+on the final background prediction in the 0 SFOS signal region.
+The smaller conribution of the fake background in the 1 and 2 SFOS
+regions reduces it in those regions to 5-10\%.
+The uncertainty on the charge mis-identification only impacts the 
+background prediction in the 0 SFOS channel.  The small size
+of this background after the final selection means it only contributes
+about 0.5\% to the uncertainty on the final background prediction in that
+region.
+
+The detailed methodological uncertainties are summarized for each signal 
+region in tab ...... Three tables? Consolidated?
+
+\subsection{Experimental}
+The experimental uncertainties are those on the event and object
+reconstruction for MC predictions.  That includes both the signal
+and background predictions from MC.
+Most of the systematic uncertainties evaluated fall in this category.
+There are systematic uncertainties taking into account variations
+on the identification and reconstruction
+efficiency of electrons and muons; and 
+the momemtum/energy resolution and scale of reconstructed electrons, muons,
+jets, and \MET. In addition, there are uncertainties on the trigger
+efficiencies evaluated in MC, effects of pileup, and jet specific uncertainties
+like those related to \bee-tagging.
+
+The efficiencies for reconstructing and identifying electrons and muons
+are modeled in MC using simulations of the detector. Differences
+between the observed efficiencies in data and MC are corrected by scaling
+the efficiency in MC, applied using event-by-event weights. 
+Uncertainties on these ``scale factors'' are propagated to the event-by-event
+weights.  The impact on the final prediction ends up being relatively
+small, with sub-percent level contributions coming from both the electron
+and muon efficiencies for both the signal and background in all channels.
+
+The momentum and energy measurements for electrons, muons, jets and \MET
+must be assessed for their accuracy and precision, usually referred to
+as scale and resolution, respectively. The scale of the momentum and energy 
+for each object is calibrated using the data and corrected if necessary.
+Uncertainties on these calibrations are propogated separately to each object.
+The corrections and uncertainties on the scale
+from the electrons, muons, and jets propogate to the \MET and a separate
+correction and uncertainty on additional contributions to the \MET
+not associate with these physics objects (so-called ``soft terms'')
+are aslo evaluated. 
+The momentum and energy resolution has also been evaluated using the data
+for electrons, muons, jets and \MET soft-terms.  Uncertainties due to the
+resolution are evaluated by randomly varying the momentum and energy measurements
+using a probability distrubtion whose width is determined by the resolution
+and centered about the calibrated value. These uncertainties on the scale
+and resolution propogate to the final estimate by so-called ``bin migration'',
+whereby the uncertainties on the momentum and energy measurement 
+for a given object might move it across the threshold for some 
+selection cut\footnote{For example, a muon with $\pt = 22 \GeV$ might
+be modified during the systematic uncertainty valuation to have instead
+$\pt = 19 \GeV$. Thus, with a cut of $\pt > 20 \GeV$, the muon would pass the
+cut in the original case but not after variation.}. This can 
+then change the overall event selection efficiency. The size of the uncertainties
+on the signal and background predictions tend to be around 1-2\% for
+all objects and channels.
+
+
+The efficiency for the events to pass the trigger is evaluated for both 
+data and MC.  The efficiencies in MC are corrected to match the data
+and an uncertainty is associated with this correction.  They are applied
+depending on the trigger that was fired and the objects in the event.
+The variations from the uncertainties
+modify the event weights which ultimately has an impact on the final predictions.
+The uncertainty on the signal and background predictions from the trigger
+efficiency end up being only about 0.05-0.07\%  for each channel.
+
+The MC is corrected on an event-by-event basis to match the 
+pileup distribution observed in data. This correction depends on the 
+MC process. Uncertainties on this correction are varied which again
+results in a change in the event-by-event weight for the predictions. The
+size of this uncertainty is around 1\% for signal and backgroun in all channels.
+
+
+Jet specific uncertainties come from variations on the \bee-jet tagging
+and \bee-jet mis-identification as well as uncertainties on the jet-vertex
+fraction calculations, both described in \sec\ref{sec:object_selection}. They
+are also uncertainties related to the construction of jets due to pileup
+and the flavor compostion of the jets. These result in modifications
+to the observed jet multiplicity leading to bin-migration effects 
+for the \bee-veto and jet multiplicity cuts when going to the signal regions.
+The resulting uncertainties are...
+
+The detailed experimental uncertainties are summarized for each signal 
+region in tab ...... Three tables? Consolidated?
+
+\subsection{Luminosity}
+The luminosity delivered by the LHC must be measured in order to determine
+how to scale the MC cross-section
+predictions to extract the number of events as in \eqn\eqref{eq:lhc_nevents}.
+This was described in \sec\ref{sec:subsection_data}. The resuling
+uncertainty on the integrated luminosity scales the overall predictions
+for the MC signal and background predictions. Thus, the uncertainty 
+on the signal prediction in each channel is simply 1.9\%, while the uncertainty
+on the background predictions is less since, at around ...,
+since it is not estimate purely from MC.
+
+
+
+\begin{table}[ht]
+\begin{adjustwidth}{-2cm}{-2cm}
+\input{tables/Sys_Full_0SFOS.tex}
+\caption{All systematic uncertainties in the 0 SFOS signal region.
+Uncertainties are shown in percent where the superscript (subscript) in each cell corresponds to the upper (lower) fluctuation
+of the given systematic.  Systematics are only shown if the contribution is at least 0.05\% in both directions.}
+\label{tab:sys_all_0sfos}
+\end{adjustwidth}
+\end{table}
+
+\begin{table}[ht]
+\begin{adjustwidth}{-2cm}{-2cm}
+\input{tables/Sys_Full_1SFOS.tex}
+\caption{All systematic uncertainties in the 1 SFOS signal region.
+Uncertainties are shown in percent where the superscript (subscript) in each cell corresponds to the upper (lower) fluctuation
+of the given systematic. 
+Systematics are only shown if the contribution is at least 0.05\% in both directions.  }
+\label{tab:sys_all_1sfos}
+\end{adjustwidth}
+\end{table}
+
+\begin{table}[ht]
+\begin{adjustwidth}{-2cm}{-2cm}
+\input{tables/Sys_Full_2SFOS.tex}
+\caption{All systematic uncertainties in the 2 SFOS signal region.
+Uncertainties are shown in percent where the superscript (subscript) in each cell corresponds to the upper (lower) fluctuation
+of the given systematic. 
+Systematics are only shown if the contribution is at least 0.05\% in both directions. }
+\label{tab:sys_all_2sfos}
+\end{adjustwidth}
+\end{table}
+
+
+%\begin{table}[ht]
+%\centering
+%\input{tables/Sys_Full_Summary.tex}
+%\caption{A summary of the expected yields compared to data for all three signal regions.  Statistical uncertainties are shown as a symmetric uncertainty on the central value. Systematic uncertainties are shown as an asymmetric uncertainty and are shown after taking the quadrature sum of all individual uncertainties. In the actual analysis, each systematic uncertainty is treated as an individual nuisance paramter and are NOT added in quadrature.  The presentation here serves only as a demonstration of the overall size of the systematic uncertainties for each source in the individual signal regions.}
+%\label{tab:sys_summary}
+%\end{table}
+
+
+
+
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=0.5\columnwidth]{figures/SFOSSignalRegions.png}
+%\caption{Yields after full selection in the 0, 1 and 2 SFOS regions.  The most important systematic uncertainties are shown, namely from the fake estimates and the uncertainties on the WZ and ZZ k-factors.}
+%\label{fig:sig_yields_nsfos}
+%\end{figure}
