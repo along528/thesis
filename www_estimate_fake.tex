@@ -836,7 +836,88 @@ These two different scenarios are ultimately compared in order to assess
 a final systematic on the fake rate. The exclusive case
 is used as the nominal estimate.
 
-\begin{figure}[ht]
+
+The processes contributing to the fake rate are known
+to not be well modeled by MC, as discussed earlier in \sec\ref{sec:bg_fake}.
+This is the primary reason for attempting to estimate the fake
+lepton contribution from data in the first place. Thus,
+we do not seek to describe the data using MC.
+However, this control region is also not as pure with sources
+of fake leptons as the real lepton control region is for real leptons,
+because the neutrino in the $W\rightarrow l\nu$ control region
+cannot be identified directly.
+In particular, there is a significant contamination from processes
+with real leptons, like $WW$, $\ttbar$, and $Z$ processes as well
+as processes from photon conversion sources, even after the attempts
+at reducing these backgrounds in the control region selection described above.
+These backgrounds can be modeled using MC and so we attempt to subtract the
+MC estimates of these backgrounds from the data before extracting the fake
+rates. In effect, this means that the values of $f_{T}^{i}$ and
+$f_{L}^i$ in \eqn\eqref{eq:fake_rate} are not taken directly from the
+data but are instead corrected by the subtraction
+\begin{equation}
+\label{eq:fake_num_breakdown}
+f_{T/L}^{i} = 
+N^{\textrm{Data},i}_{T/L} 
+- N^{\textrm{Real},i}_{T/L}
+- N^{\textrm{PC},i}_{T/L}
+\end{equation}
+where $N^{\textrm{Data},i}_{T/L}$ is the number of tight or loose
+probe leptons selected from data in bin $i$ of the fake lepton control region,
+while $N^{\textrm{Real},i}_{T/L}$  and $N^{\textrm{PC},i}_{T/L}$
+are the number of tight or loose probe leptons estimated from MC
+to fall in bin $i$ of the fake lepton control region for real
+lepton and photon conversion background sources, respectively.
+The separate contributions to these terms are shown as a function
+of the lepton \pt~for muons in \fig\ref{fig:fakeEff_CRs_muon} and for electrons
+in \fig\ref{fig:fakeEff_CRs_electron}. They are split based on whether the lepton
+passes just the tight selection or both the tight and loose selections
+and also by the inclusive and exclusive \bee-jet multiplicity categories.
+These are then used to calculate the fake rate as in \eqn\eqref{eq:fake_rate}.
+A detailed breakdown of the numbers going into the fake rate calculation
+are summarized in the exclusive \bee-jet mulitiplicity category for 
+electrons in \tab\ref{tab:fakeCR_Yield_Electron_BJetGt0}
+and for muons in \tab\ref{tab:fakeCR_Yield_Muon_BJetGt0}.
+
+
+\begin{table}[ht!]
+%\input{tables/YieldTable_BJetGt0Electron.tex}
+\centering
+\input{tables/YieldTable_BJetGt0Electron_Slim.tex}
+\caption{Calculation of fake rate for electrons when $\nbjet> 0$. }
+%in the different $p_{T}$ bins used in the final method.
+%The observed data are is dominated by the fake contribution in this control region
+%while the contributions from real leptons and leptons from photon 
+%conversion are computed using MC and shown separately for the individual hard 
+%processes as well as for the sum.  This is shown both when the probe
+%lepton is tight (top) and when it is either loose or tight (bottom). The
+%final rate is computed by taking the ratio of the tight probes in data
+%over all probes after subtracting out the real and photon conversion parts.  
+%In all cases, only statistical uncertainties are shown.  }
+\label{tab:fakeCR_Yield_Electron_BJetGt0}
+\end{table}
+
+\begin{table}[ht!]
+%\input{tables/YieldTable_BJetGt0Muon.tex}
+\centering
+\input{tables/YieldTable_BJetGt0Muon_Slim.tex}
+\caption{Calculation of fake rate for muons when $\nbjet > 0$. }
+%in the different $p_{T}$ bins used in the final method.
+%The observed data are is dominated by the fake contribution in this control region
+%while the contributions from real leptons and leptons from photon 
+%conversion are computed using MC and shown separately for the individual hard 
+%processes as well as for the sum.  This is shown both when the probe
+%lepton is tight (top) and when it is either loose or tight (bottom). The
+%final rate is computed by taking the ratio of the tight probes in data
+%over all probes after subtracting out the real and photon conversion parts.  
+%In all cases, only statistical uncertainties are shown.  }
+\label{tab:fakeCR_Yield_Muon_BJetGt0}
+\end{table}
+
+
+
+\newpage
+\begin{figure}[ht!]
 \centering
 \subfigure{
 \includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignMuonMuon/NoStack/ProbeTightMuonPt.eps}
@@ -885,7 +966,7 @@ observed to be negligible for muons.  }
 \label{fig:fakeEff_CRs_muon}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \centering
 \subfigure{
 \includegraphics[width=0.45\columnwidth]{figures/fakes_bkg/CRs/SameSignElectronMuon/NoStack/ProbeTightElectronPt.eps}
@@ -929,90 +1010,86 @@ contribution
 corresponds to $N_T^{\textrm{PC},i}+N_L^{\textrm{PC},i}$ (bottom) 
 and $N_T^{\textrm{PC},i}$ (top) again using the notation 
 in Eq.~\ref{eq:fake_rate}. }
-
-
 \label{fig:fakeEff_CRs_electron}
 \end{figure}
 
-The processes contributing to the fake rate are known
-to not be well modeled by MC, as discussed earlier in \sec\ref{sec:bg_fake}.
-This is the primary reason for attempting to estimate the fake
-lepton contribution from data in the first place. Thus,
-we do not seek to describe the data using MC.
-However, this control region is also not as pure with sources
-of fake leptons as the real lepton control region is for real leptons,
-because the neutrino in the $W\rightarrow l\nu$ control region
-cannot be identified directly.
-In particular, there is a significant contamination from processes
-with real leptons, like $WW$, $\ttbar$, and $Z$ processes as well
-as processes from photon conversion sources, even after the attempts
-at reducing these backgrounds in the control region selection described above.
-These backgrounds can be modeled using MC and so we attempt to subtract the
-MC estimates of these backgrounds from the data before extracting the fake
-rates. In effect, this means that the values of $f_{T}^{i}$ and
-$f_{L}^i$ in \eqn\eqref{eq:fake_rate} are not taken directly from the
-data but are instead corrected by the subtraction
-\begin{equation}
-\label{eq:fake_num_breakdown}
-f_{T/L}^{i} = 
-N^{\textrm{Data},i}_{T/L} 
-- N^{\textrm{Real},i}_{T/L}
-- N^{\textrm{PC},i}_{T/L}
-\end{equation}
-where $N^{\textrm{Data},i}_{T/L}$ is the number of tight or loose
-probe leptons selected from data in bin $i$ of the fake lepton control region,
-while $N^{\textrm{Real},i}_{T/L}$  and $N^{\textrm{PC},i}_{T/L}$
-are the number of tight or loose probe leptons estimated from MC
-to fall in bin $i$ of the fake lepton control region for real
-lepton and photon conversion background sources, respectively.
-The separate contributions to these terms are shown as a function
-of the lepton \pt~for muons in \fig\ref{fig:fakeEff_CRs_muon} and for electrons
-in \fig\ref{fig:fakeEff_CRs_electron}. They are split based on whether the lepton
-passes just the tight selection or both the tight and loose selections
-and also by the inclusive and exclusive \bee-jet multiplicity categories.
-These are then used to calculate the fake rate as in \eqn\eqref{eq:fake_rate}.
-A detailed breakdown of the numbers going into the fake rate calculation
-are summarized in the exclusive \bee-jet mulitiplicity category for 
-electrons in \tab\ref{tab:fakeCR_Yield_Electron_BJetGt0}
-and for muons in \tab\ref{tab:fakeCR_Yield_Muon_BJetGt0}.
 
+\subsubsection{Fake lepton background validation}
+
+%A Monte Carlo closure test of the generalized matrix method is performed.  The fake rates are computed from MC samples in the di-lepton control regions defined in section~\ref{sec:fakecomposition}, and the method is then applied on the most important MC samples contributing to the event pre-selection: $Z$+jets and $t\bar{t}$.  The event pre-selection is used for this test, because the statistics available for the MC samples containing fake leptons in the signal region is too small to be able to draw any conclusion. Figure~\ref{fig:MCFakeRatesClosure}, show the MC fake rates obtained from the CR, while figure~\ref{fig:MCClosureCheckMatrixMethod} show the MC agreement with the MC events re-weighted using the generalized matrix method in the event pre-selection region, for the third-leading lepton $\pt$ and the $\met$ distribution. As it can be seen the shape agreement and the overall normalization are pretty good, showing that the matrix method is performing well.  
+
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/ElFakeRates_MC_topZjets_new.pdf}
+%\includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/MuFakeRates_MC_topZjets_new.pdf}
+%\caption{Distribution of the fake rates obtained from MC samples in the di-lepton control regions. The errors shown here are statistical only. These rates are used to performed a MC closure check of the global matrix method.}
+%\label{fig:MCFakeRatesClosure}
+%\end{figure}
+
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/PtThirdLepSignal_TTT_total_new.pdf}
+%\includegraphics[width=0.42\columnwidth]{figures/ClosureCheck_MatrixMethod/VR_PMET_lepTTT_total_new.pdf}
+%\caption{Distributions of the third leading lepton $\pt$ and $\met$ in the event pre-selection region, for $Z$+jets and $t\bar{t}$, compared to events from these samples re-weighted using the global matrix method and the rates shown in Figure~\ref{fig:MCFakeRatesClosure}. Good agreement is observed}
+%\label{fig:MCClosureCheckMatrixMethod}
+%\end{figure}
+
+
+
+
+The peformance of the fake background estimate is tested in a control region
+designed to be enhanced in this background while being orthogonal to the signal regions
+described in \sec\ref{sec:signal_regions}.
+The control region starts by using the event pre-selection region described 
+in Section~\ref{sec:preselection}. To reduce contamination 
+from the $WZ$ process, we require that there are 0 SFOS 
+lepton pairs present in the event.
+Finally, in order to enforce 
+orthogonality with the signal regions
+we require that $\nbjet \geq 1$. 
+As such it is very close to the 0 SFOS signal region where we are most sensitive.
 
 \begin{table}[ht!]
-%\input{tables/YieldTable_BJetGt0Electron.tex}
-\input{tables/YieldTable_BJetGt0Electron_Slim.tex}
-\caption{Calculation of fake rate for electrons when $\nbjet> 0$. }
-%in the different $p_{T}$ bins used in the final method.
-%The observed data are is dominated by the fake contribution in this control region
-%while the contributions from real leptons and leptons from photon 
-%conversion are computed using MC and shown separately for the individual hard 
-%processes as well as for the sum.  This is shown both when the probe
-%lepton is tight (top) and when it is either loose or tight (bottom). The
-%final rate is computed by taking the ratio of the tight probes in data
-%over all probes after subtracting out the real and photon conversion parts.  
-%In all cases, only statistical uncertainties are shown.  }
-\label{tab:fakeCR_Yield_Electron_BJetGt0}
-\end{table}
-
-\begin{table}[ht!]
-%\input{tables/YieldTable_BJetGt0Muon.tex}
-\input{tables/YieldTable_BJetGt0Muon_Slim.tex}
-\caption{Calculation of fake rate for muons when $\nbjet > 0$. }
-%in the different $p_{T}$ bins used in the final method.
-%The observed data are is dominated by the fake contribution in this control region
-%while the contributions from real leptons and leptons from photon 
-%conversion are computed using MC and shown separately for the individual hard 
-%processes as well as for the sum.  This is shown both when the probe
-%lepton is tight (top) and when it is either loose or tight (bottom). The
-%final rate is computed by taking the ratio of the tight probes in data
-%over all probes after subtracting out the real and photon conversion parts.  
-%In all cases, only statistical uncertainties are shown.  }
-\label{tab:fakeCR_Yield_Muon_BJetGt0}
+\centering
+\input{tables/FakeCR_Yields.tex}
+\caption{Expected and observed yields for the fake lepton control region. Only statistical
+uncertainties are shown.}
+\label{tab:FakeCR}
 \end{table}
 
 
 
-Remaining details of fake rate calculation, estimate and 
-validation...
+
+The total predicted events and observed data in this region are shown in \tab\ref{tab:FakeCR}.
+The control region is clearly dominated by the fake lepton background, with $10.91 \pm 0.73\stat$ 
+fake lepton events predicted out of a total of $14.72 \pm 0.73\stat$. Furthermore, the shapes
+of the predicted and observed kinematic distributions are also shown along with the
+fake lepton background systematic uncertainties in \fig\ref{fig:FakeCR}.  From this, 
+we can see that the data is largely consistent with the prediction. This is true not just
+for the overall normalization, but also for the shapes, though the control region is also 
+limited by the number of statistics available. Since the fake lepton background
+seems to describe the data well in this control region, we have confidence in the method
+and choose to use the estimate also in the signal regions. 
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/Fake_CR/LeadingLeptonPt_histratio.eps}
+\includegraphics[width=0.45\textwidth]{figures/Fake_CR/SubleadingLeptonPt_histratio.eps}
+\includegraphics[width=0.45\textwidth]{figures/Fake_CR/MinimumLeptonPt_histratio.eps}
+\includegraphics[width=0.45\textwidth]{figures/Fake_CR/MET_Et_histratio.eps}
+\includegraphics[width=0.45\textwidth]{figures/Fake_CR/NBTaggedJets_histratio.eps}
+\includegraphics[width=0.45\textwidth]{figures/Fake_CR/NJets_histratio.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/Fake_CR/NMuons_histratio.eps}
+\caption{Distributions in a control region designed to study the data-driven 
+fake lepton background estimate.  }
+\label{fig:FakeCR}
+\end{figure}
+
+
+
+
 
 
 %\input{www_estimate_fake_oldpart}
