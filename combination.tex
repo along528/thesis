@@ -23,20 +23,111 @@ aQGC signal.
 \section{Search for \wwwlljj}
 \label{sec:semilep}
 
-%Mention that using same generator for signal, 
-%same systematics, some differences in background estimation
+Citation??
 
-%total cross-sections
+The semi-leptonic analysis uses a selection that is designed
+to select events from the decay channel \wwwlljj. As such, 
+it requests exactly two leptons and two jets.  The selection is similar
+to the one used the same-sign $WW$ VBF production process of
+\cite{PhysRevLett.113.141803} with the main difference being that
+it requires $|\Delta y(jj)| < 1.5$ and $65 \GeV < m_{jj} < 105 \GeV$
+to separate the $WWW$ signal from the same-sign $WW$ VBF signal as can be
+seen in \fig\ref{fig:signal_semilep}. The selection used is listed in \tab\ref{tab:selection_2l2j}.
+It splits selection into three separate signal regions based on the final
+state lepton flavors: $ee$, $e\mu$, and $e\mu$. The final state leptons
+are required to have the same sign.
 
-%list selection
+\begin{table}[ht]
+\tiny
+\input{tables/combination/selection_2l2j.tex}
+\caption{\label{tab:selection_2l2j} Selection criteria for the signal region and five control regions.}
+\end{table}
 
-%fiducial cross-sections
+\begin{table}[ht!]
+\centering
+\begin{footnotesize}
+\input{tables/combination/fiducial_selection_2l2j.tex}
+\end{footnotesize}
+\caption{Description of fiducial selection for each of the semi-leptonic channels.  }
+\label{tab:fiducial_selection_2l2j}
+\end{table}
 
-%event yields
+The signal is generated using \madgraph~with the same setup as in \sec\ref{sec:signal}.
+Thus, the total cross-section is the same as in \eqn\eqref{eq:total_www_xsec}.
+The fiducial cross-sections are determined in a similar fashion to that in 
+\sec\ref{sec:fiducial} but using the fiducial selection listed in \tab\ref{tab:fiducial_selection_2l2j}.
+The fiducial cross-section is 
+\begin{equation}
+\sigma^{\textrm{Fiducial,Semi-lep}}_{\textrm{Theory}}= 306\pm6.73 ~(\textrm{Stat.}) ~^{+15.3}_{-8.57} ~(\textrm{PDF}) ~\pm 3.05 ~(\textrm{Scale}) ~\textrm{ab} %uncertainty?
+\end{equation}
 
-%c-factors
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figures/combination/dY2j_linear_ratio.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/combination/TwojM_log_ratio.pdf}
+  \end{center}
+  \caption{Comparison of $\Delta Y(jj)$ and $M_{jj}$ distributions between VBFNLO and MadGraph LO events with two same-sign leptons and two jets in the final state. }
+  \label{fig:signal_semilep} 
+\end{figure}
 
-table of fiducial and cfactors
+
+The backround is estimated in a similar way to \sec\ref{sec:bg_estimates}. The $WZ$, 
+$V\gamma$, and other same-sign ($Z$,$WW$,$ZZ$, $\ttV$, etc) backgrounds are predicted
+using MC. The charge mis-identification background is evaluated using a data-driven method
+where the rates are derived in a similar way as in \sec\ref{sec:chargemisd_rates}
+but are instead applied as weights on the data.
+The fake lepton background is also evaluated using the data but uses a form factor method
+instead of the generalized matrix method of \sec\ref{sec:mxm}.
+
+
+\begin{table}[ht!]
+\centering
+\input{tables/combination/yields_2l2j.tex}
+\caption{A summary of the expected yields compared to data for all 
+three signal regions in the semi-leptonic analysis channel.  
+Statistical uncertainties are shown 
+as a symmetric uncertainty on the central value. Systematic uncertainties 
+are shown as an asymmetric uncertainty and are shown
+after taking the quadrature sum of all individual uncertainties. 
+In the actual analysis, each systematic uncertainty is
+treated as an individual nuisance parameter and are NOT added in quadrature.  
+The presentation here serves only as a demonstration
+of the overall size of the systematic uncertainties for each source in the 
+individual signal regions.}
+\label{tab:yields_2l2j}
+\end{table}
+
+\begin{table}[ht!]
+\centering
+\input{tables/combination/sys_2l2j.tex}
+\caption{Categorized systematic uncertainties 
+for signal and background predictions in all three signal regions
+of the semi-leptonic analysis channel.
+All uncertainties are shown as a percentage of the nominal
+prediction.  }
+\label{tab:sys_2l2j}
+\end{table}
+
+\begin{table}[ht!]
+\centering
+\input{tables/combination/LimitInputs_2l2j.tex}
+\caption{Correction factors, $C_i$, and fiducial cross-sections derived
+separately for each signal region in the semi-leptonic analysis channel. 
+Correction factors and  fiducial cross-sections are determined
+using \madgraph.}
+\label{tab:inputs_2l2j}
+\end{table}
+
+The resulting signal and background predictions and overall systematic uncertainties,
+as well as the observed data events,
+are shown for each semi-leptonic signal region in \tab\ref{tab:yields_2l2j}. Systematics
+are determined in the same way as in \sec\ref{sec:systematics} except for the charge
+mis-identification backgrounds and fake backgrounds which evaluate different systematics due
+to the different estimation methods. The systematics for the semi-leptonic
+channel are summarized in \tab\ref{tab:sys_2l2j}. The fiducial cross-sections
+and correction factors (like in \eqn\eqref{eq:cfactor}) are presented in \tab\ref{tab:inputs_2l2j}.
+
+need aqgc inputs in same format as 3l
 
 \section{Combined Cross-section Measurement}
 \label{sec:combined_measurement}
@@ -131,6 +222,8 @@ while the observed fiducial cross-section is:
 \sigma^{\textrm{Total}}_{\textrm{Observed}} = 227.03 ~ ^{+202}_{-198} \stat ~^{+154}_{-160} \syst ~\textrm{fb}
 \end{equation}
 
+Pulls and correlations
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.7]{figures/combination/interval_comb.png}
@@ -142,6 +235,8 @@ lines pinpoint the location of the $1~\sigma$ and $2~\sigma$ total Gaussian unce
 on the measurement of the signal strength which corresponds to the minimum value of the contour.}
 \label{fig:stat_measurement_interval_combination}
 \end{figure}
+
+
 
 
 
