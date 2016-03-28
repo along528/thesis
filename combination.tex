@@ -6,7 +6,8 @@ In fact, one other decay channel for this process has been studied within
 ATLAS. This is the semi-leptonic channel where \wwwlljj. The details of this 
 analysis are beyond the scope of this thesis. We can use the results of this channel,
 however, along with those for the fully-leptonic decay channel, to obtain a stronger measurement
-on the overall SM $WWW$ total cross-section measurement and limits on the aQGC signal reported than
+on the overall SM $WWW$ total cross-section measurement and better 
+limits on the aQGC signal than
 those reported for just the fully-leptonic 
 channel in \sec\ref{sec:measurement} and \sec\ref{sec:aqgc_limit}. 
 
@@ -16,6 +17,7 @@ This will be followed by a statistical combination of the fully-leptonic and sem
 results leading to an improved  
 measurement on the SM $WWW$ total cross-section and limits on the 
 aQGC signal.
+The results of this combination are to be published soon \cite{wwwcomb}.
 
 
 
@@ -23,7 +25,6 @@ aQGC signal.
 \section{Search for \wwwlljj}
 \label{sec:semilep}
 
-Citation??
 
 The semi-leptonic analysis uses a selection that is designed
 to select events from the decay channel \wwwlljj. As such, 
@@ -33,14 +34,36 @@ to the one used the same-sign $WW$ vector boson fusion (VBF) production process 
 it requires $|\Delta y(jj)| < 1.5$ and $65 \GeV < m_{jj} < 105 \GeV$
 to separate the $WWW$ signal from the same-sign $WW$ VBF signal as can be
 seen in \fig\ref{fig:signal_semilep}. The selection used is listed in \tab\ref{tab:selection_2l2j}.
-It splits selection into three separate signal regions based on the final
+It splits the selection into three separate signal regions based on the final
 state lepton flavors: $ee$, $e\mu$, and $e\mu$. The final state leptons
 are required to have the same sign.
 
+%\begin{table}[ht]
+%\tiny
+%\input{tables/combination/selection_2l2j.tex}
+%\caption{\label{tab:selection_2l2j} Selection criteria for the signal region and five control regions.}
+%\end{table}
+
+
 \begin{table}[ht]
-\tiny
-\input{tables/combination/selection_2l2j.tex}
-\caption{\label{tab:selection_2l2j} Selection criteria for the signal region and five control regions.}
+\begin{center}
+\begin{tabular}{|l||c||c||c|}   \hline 
+ & \multicolumn{1}{c||}{$e^\pm e^\pm$} & \multicolumn{1}{c||}{$e^\pm \mu^\pm$}    & \multicolumn{1}{c|}{$\mu^\pm \mu^\pm$}  \\ \hline\hline
+Lepton & \multicolumn{3}{c|}{Exactly two same-electric-charge leptons with $p_T>30$ GeV} \\ \hline
+Jet        & \multicolumn{3}{c|}{At least two jets with $p_T>(20) 30$ GeV and $|\eta|<2.5$} \\ \hline
+$m_{\ell\ell}$        & \multicolumn{3}{c|}{$>40$ GeV}  \\ \hline
+\MET                      & \multicolumn{2}{c||}{~~~~~~~~~~~~~~~~~~~~~$>55$ GeV~~~~~~~~~~~~~~~~~~~~~~~~} & \multicolumn{1}{c|}{-}  \\  \hline
+$m_{jj}$        & \multicolumn{3}{c|}{$65<m_{jj}<105$ GeV}  \\ \hline
+$\Delta \eta_{jj}$        & \multicolumn{3}{c|}{$|\Delta \eta_{jj}|<1.5$}  \\ \hline
+\multirow{2}{*}{$Z$ veto}        & \multicolumn{1}{c||}{$m_{ee}<80$ GeV or}  & \multicolumn{2}{c|}{\multirow{2}{*}{-}}  \\
+                                                  & \multicolumn{1}{c||}{$m_{ee}>110$ GeV}  & \multicolumn{2}{c|}{}  \\ \hline
+Third lepton veto                      & \multicolumn{3}{c|}{No third lepton with $p_T>6$ GeV and $|\eta|<2.5$} \\ \hline
+$b-$jet veto                              & \multicolumn{3}{c|}{No identified $b-$jets with $p_T>25$ GeV and $|\eta|<4.5$} \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Selection criteria for the semi-leptonic channel.}
+\label{tab:selection_2l2j}
 \end{table}
 
 \begin{table}[ht!]
@@ -123,19 +146,22 @@ as well as the observed data events,
 are shown for each semi-leptonic signal region in \tab\ref{tab:yields_2l2j}. Systematics
 are determined in the same way as in \sec\ref{sec:systematics} except for the charge
 mis-identification backgrounds and fake backgrounds which evaluate different systematics due
-to the different estimation methods. The systematics for the semi-leptonic
+to the different estimation methods used. The systematics for the semi-leptonic
 channel are summarized in \tab\ref{tab:sys_2l2j}. The fiducial cross-sections
 and correction factors (like in \eqn\eqref{eq:cfactor}) are presented in \tab\ref{tab:inputs_2l2j}.
 
-need aqgc inputs in same format as 3l
+Semi-leptonic aQGC inputs...
+
+More details can be found in \cite{wwwcomb} once published.
 
 \section{Combined Cross-section Measurement}
 \label{sec:combined_measurement}
 
-The combined cross-section measurement is performed to 
+The cross-section measurement using the combination of the semi-leptonic
+and fully-leptonic analysis channels is performed to 
 measure the total cross-section of the $WWW$ process. 
 The same expectation, likelihood, and profile likelihood
-ratios in \eqn\eqref{eq:poisson_expectation},
+ratios are used as in \eqn\eqref{eq:poisson_expectation},
 \eqn\eqref{eq:poisson_likelihood}, and
 \eqn\eqref{eq:profile_likelihood_ratio}, respectively.
 The same methodology for extracting the measured fiducial
@@ -161,12 +187,12 @@ acceptance in each channel, $A_i$:
 \begin{equation}
 A = \sum_i A_i
 \end{equation}
-where $A_i$ is computed as
+and where $A_i$ is computed as
 \begin{equation}
 A_i = \frac{ \sigma^{\textrm{Fiducial}}_i }{ \sigma^{\textrm{Total}}}
 \end{equation}
-Where again the $\sigma^{\textrm{Fiducial}}_i $ are simply the fiducial
-cross-sections in each channel taken from
+The $\sigma^{\textrm{Fiducial}}_i $ are simply the fiducial
+cross-sections in each channel, $i$,  taken from
 \tab\ref{tab:inputs_3l} and \tab\ref{tab:inputs_2l2j}
 and $\sigma^{\textrm{Total}}$ is the expected total cross-section
 in \eqn\eqref{eq:total_www_xsec}, reprinted here for convenience:
@@ -213,16 +239,16 @@ the background only PDF.}
 The negative log likelihood contour is shown
 for the combination of all six channels in 
 Fig.~\ref{fig:stat_measurement_interval_combination}.
-The expected value and uncertainties for the fiducial cross-section is:
+The expected value and uncertainties for the total cross-section is:
 \begin{equation}
 \sigma^{\textrm{Total}}_{\textrm{Expected}} = 241.47 ~ ^{+232}_{-199} \stat ~^{+152}_{-153}\syst ~\textrm{fb}
 \end{equation}
-while the observed fiducial cross-section is:
+while the observed total cross-section is:
 \begin{equation}
 \sigma^{\textrm{Total}}_{\textrm{Observed}} = 227.03 ~ ^{+202}_{-198} \stat ~^{+154}_{-160} \syst ~\textrm{fb}
 \end{equation}
 
-Pulls and correlations
+%Pulls and correlations
 
 \begin{figure}[ht!]
 \centering
@@ -253,7 +279,7 @@ on the measurement of the signal strength which corresponds to the minimum value
 \begin{table}[h!]
   \begin{center}
   \input{tables/combination/aqgc_1d.tex}
-    \caption{Expected and observed limits on the aQGC Parameters.}
+    \caption{Expected and observed one-dimensional limits on the aQGC Parameters.}
     \label{tab:aqgc_combined_1d}
 
   \end{center}
@@ -276,7 +302,10 @@ while the two-dimensional limts are shown in \fig\ref{fig:aqgc_combined_2d}.
 \includegraphics[width=0.45\textwidth]{figures/combination/Comb300-Lim.png}\\
 \includegraphics[width=0.45\textwidth]{figures/combination/CombUnit-Lim.png}
 \end{center}
-\caption{2D aQGC limits of Unitarized samples with scales 500,1000,2000,3000 and the Un-Unitarized Samples.(top left, top right, mid left, mid right, bottom)}
+\caption{Two-dimensional limits at 95\% CL on the combination for the non-unitarized case (Top Left)
+and three different choices of the unitarization scale, $\Lambda$:
+3~\TeV~(Top Right), 2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).}
+
  \label{fig:aqgc_combined_2d}
  \end{figure}
 
