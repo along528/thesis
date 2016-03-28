@@ -1,0 +1,267 @@
+\section{Event Selection}
+\label{sec:event_selection}
+
+%rewrite?
+The expected number of signal events in the total 2012 LHC 
+dataset is expected to be very small compared to the background. %give a number
+Fortunately, the three lepton signature of the signal allows us to
+quickly throw out many events which do not look like the signal.
+Still, this signature is not so unique that 
+it removes enough background 
+to reveal the signal. 
+Thus, we must devise a clever way to discriminate 
+between the signal and these backgrounds. We select
+events in two stages: first we start
+by selecting events which have the general signature of the signal, 
+this is referred to as the pre-selection stage; we then 
+use more stringent cuts to discriminate between the signal and backgrounds, 
+referred to as our signal region selection.
+The signal region selection is determined by performing an 
+optimization procedure starting from the pre-selection stage 
+that minimizes the uncertainty
+on the final measurement.  This is described in \sec\ref{sec:optimization}.
+The signal region selection is further divided into different
+categories that are each used in the final measurement
+and which allows us to specially treat the different backgrounds
+in each category.  
+The selections used are described in more detail below.
+
+
+
+
+\subsection{Pre-selection}
+\label{sec:preselection}
+
+The pre-selection is a broad selection which throws
+away backgrounds that do not at all resemble the signal process.
+It is mainly characterized by requiring the presence of exactly three leptons
+(electron or muon) following the requirements listed in 
+\sec\ref{sec:object_selection}, each with a $\pt$ of at least $20\GeV$.
+In addition, the events are required to be of good quality. This means
+that the events were collected under good conditions during data taking,
+both from the LHC and ATLAS detector operation\footnote{For instance,
+during the 2012 data collection, the LAr component of the EM calorimeter
+was known to occasionally produce artificial bursts of noise. These instances
+were tracked and events where this occurred were thrown away.}. The event is 
+also required to have a primary vertex with at least three associated tracks.
+Finally, the event is required to pass the single lepton trigger
+requirements listed in \sec\ref{sec:subsection_data} where 
+at least one of the three leptons selected must have caused the trigger to fire.
+
+
+
+\subsection{Signal Region Selection}
+\label{sec:signal_regions}
+The signal regions used in this analysis are separated based on the number of 
+Same-Flavor Opposite-Sign (SFOS) lepton pairs selected in the event.  That is to say,
+the number of lepton pair combinations in the event 
+which could feasibly come from the leptonic decay of a $Z$-boson.
+This results in three separate signal regions listed 
+below with the lepton charge combinations
+that fall in each category:
+\begin{itemize}
+\item \textbf{0 SFOS}: $e^{\pm}e^{\pm}\mu^{\mp}$, 
+$\mu^{\pm}\mu^{\pm}e^{\mp}$ 
+\item \textbf{1 SFOS}: $e^{\pm}e^{\mp}\mu^{\pm}$, 
+$e^{\pm}e^{\mp}\mu^{\mp}$, $\mu^{\pm}\mu^{\mp}e^{\pm}$, $\mu^{\pm}\mu^{\mp}e^{\mp}$
+\item \textbf{2 SFOS}: $e^{\pm}e^{\pm}e^{\mp}$, $\mu^{\pm}\mu^{\pm}\mu^{\mp}$
+\end{itemize}
+Note that in the 2 SFOS region, one lepton is allowed to belong to both 
+pair combinations.
+Only charge combinations summing to $\pm 1$ are allowed based on charge
+conservation (neglecting charge mis-identification).  
+The amount of the $W^{\pm}W^{\mp}W^{\pm}$ signal
+which falls into each category is purely combinatoric.  
+From the above list one can thus see that there are twice as many ways 
+for the signal combinations to fall in the 1 SFOS regions as 
+there are to fall in either the 0 SFOS or 2 SFOS regions. 
+Absent possible differences in signal efficiencies based on the leptons in each 
+signal region, one should expect branching 
+fractions of 25\%, 50\% and 25\% for the 0, 1, and 2 SFOS signal regions, respectively.
+
+
+\begin{table}[ht!]
+\centering
+\begin{small}
+\input{tables/optimized_signal_selection.tex}
+\end{small}
+\caption{Optimized signal selection split by number of Same-Flavor 
+Opposite-Sign (SFOS) lepton pairs.}
+\label{tab:signal_selection}
+\end{table}
+
+In each signal region, a unique selection is determined by an optimization
+procedure that minimizes the uncertainty on the expected SM cross-section
+measurement. 
+The optimization procedure is described in detail in \sec\ref{sec:optimization}.
+The optimization considers many different physical quantities 
+with which to perform a possible selection, comparing different
+thresholds for a given quantity and for different combinations of 
+quantities. After optimization a few different quantities
+are determined to be useful for selection. 
+The final selection determined from the optimization
+is presented in \tab\ref{tab:signal_selection}.
+All cuts are decided from the optimization, and are motivated below.
+
+%other metrics like what?
+
+
+%I would like to show some plots demonstrating the effect of the optimization
+%One way is that I could just show all of the different points evaluated
+%with their uncertainty and signal like I have shown before. 
+%It might be nice to as well overlay some isoforms for different
+%constant selections which could give a nice idea of the effect of diff. selections.
+%But perhaps there are even better ways to visualize the effect of a 
+%multi-dimensional optimization function
+
+
+%It should be said that a more algorithmic way of choosing the type 
+%of quantities to consider could improve this selection. Deep learning...
+
+Since the $WWW$ process is a purely EW process, and since
+we are looking only at the fully leptonic channel, the 
+signal is expected to have very little hadronic 
+activity. Any observed hadronic activity should come exclusively
+from the momentum recoil with the $WWW$ system.
+Thus, the multi-jet contribution to the signal
+should be small and is safe to apply a selection of $\njet \leq 1$
+in all signal regions.
+Further, the signal is 
+expected to have negligible contributions
+from heavy flavor jets. As a result, vetoing events with jets
+tagged to come from \bee-hadron decays also has
+little effect on the signal expectation. This is true even with 
+the rate for heavy flavor jet mis-identification for the 
+\bee-tagging algorithms. For the 
+85\% \bee-tagging efficiency operating point described in 
+\sec\ref{sec:object_selection}, the heavy flavor
+mis-identification rate is measured to be about 1\%. %cite?
+
+
+%should this description be moved earlier
+Some of the backgrounds include the production of \z~bosons.
+The invariant mass of the \z-boson can be reconstructed from the SFOS
+pair coming from the \z-boson decay. 
+This will result in a peak from these backgrounds
+in the invariant mass distribution around 
+the $Z$-mass ( $m_{Z}=91.1876$~GeV \cite{PDG:2014}).
+The signal, which does not include $Z$-bosons, 
+will not have the same peak, but instead
+will be relatively flat around the region of the $Z$-peak. 
+As a result, removing events within a window around the peak can do a good job
+of removing these backgrounds without having a large effect on the signal.
+For the 1 and 2 SFOS regions, the mass windows
+chosen for the veto are $(m_Z-35\GeV )< m_{\textrm{SFOS}} < (m_Z+20\GeV)$
+and $(m_Z-20\GeV )< m_{\textrm{SFOS}} < (m_Z+20\GeV)$, respectively.
+The windows are chosen differently based on 
+the optimization, described in more detail in \sec\ref{sec:optimization}.
+In the 0 SFOS region, by definition, there are no SFOS pairs that could come 
+from the decay of a \z-boson. 
+The effect of electron charge mis-identification,
+discussed in \sec\ref{sec:charge_misid}, however, means that a 
+peak can show up in the background
+of the $m_{ee}$ distribution for same-sign electron/positron pairs. 
+Thus, a veto is performed in this distribution as well, with 
+a mass window of $(m_Z-15\GeV) < m_{ee} < (m_Z+15\GeV)$.
+
+
+The presence of neutrinos in the signal mean that the signal should have a 
+relatively large \MET~compared to most of the backgrounds. Thus, 
+cutting on the \MET~distribution such that it is large can remove backgrounds
+expected to have small \MET, like $Z\gamma$ production.
+Still, there are some large backgrounds with neutrinos, like $WZ$, 
+and also backgrounds that have contributions to the \MET~from objects that have
+missed reconstruction, like $ZZ$, which can also have a moderate to large \MET.
+Thus, some care must be taken to choose a threshold to cut on the \MET~and
+different thresholds are chosen for each signal 
+region.
+In the 1 SFOS region the selection is  $\MET > 45\GeV$
+and in the 2 SFOS region the selection is $\MET > 55\GeV$;
+in the 0 SFOS region, 
+there is no requirement on \MET.
+
+%this description probably belongs in an earlier section
+The magnitude and direction
+of the \MET may be interpreted as coming from the 
+vector sum of the neutrinos.  By arguments of 
+symmetry, one could then compare the azimuthal direction 
+of the missing $E_{T}$ to the azimuthal direction of the vector
+sum of the three charged leptons. When doing so, one finds that 
+in the transverse plane, 
+the direction of the three charged leptons
+tends to be back-to-back with the direction of the 
+three neutrinos (missing $E_{T}$). The
+backgrounds also show this behavior, but it is less pronounced than 
+it is for the signal.  As a result, 
+there is some discriminating power when cutting on the difference 
+in the two angles: 
+\begin{equation}
+\deltaphi = \phi(lll)-\phi(\MET) = \cos^{-1}\frac{ \overrightarrow{p_{T}^{lll}}\cdot\overrightarrow{\MET} }{ p_{T}^{lll}\MET } 
+\end{equation}
+The behavior of this quantity for signal and
+background is similar in all three signal regions.
+As a result, based on the 
+optimization it was chosen to apply the cut
+$|\deltaphi| > 2.5$ everywhere.  
+
+
+
+\subsection{Fiducial Region Selection}
+\label{sec:fiducial}
+
+A fiducial phase space or fiducial region is the 
+region the analysis is sensitive to, defined 
+using purely truth information (generator information before
+being passed through ATLAS reconstruction).
+We define our fiducial region
+based on the optimized signal selection (defined at the reconstruction level)
+but using only truth information. For instance, the reconstructed
+lepton \pt~requirement of 
+$\pt^{\textrm{Reco}} > 20~\GeV$
+is taken into account in the fiducial region selection
+by requiring 
+$\pt^{\textrm{Truth}} > 20~\GeV$.
+By applying this for all cuts in the reconstruction selection
+shown earlier in \tab\ref{tab:signal_selection},
+one may compare the predicted signal yields after reconstruction
+using this selection to the one in the fiducial region selection
+using just truth information. Any differences are then attributed solely
+to effects from reconstruction. 
+The fiducial selections are determined at truth level 
+using Rivet~\cite{Buckley:2010ar}, which allows for 
+comparisons between different generators.
+
+
+\begin{table}[ht!]
+\centering
+\begin{small}
+\input{tables/fiducial_selection.tex}
+\end{small}
+\caption{Fiducial regions based on optimized selection.}
+\label{tab:fiducial_selection}
+\end{table}
+
+The chosen fiducial region selection 
+is listed in \tab\ref{tab:fiducial_selection}.
+Only prompt leptons (those not originating from hadron decays) are used for 
+lepton selections, and these the momentum from nearby prompt photons 
+within a cone with $\Delta R = 0.1$ from the lepton are added
+back to the lepton momentum in order to remove the effects of final 
+state radiation. Generator-level jets are 
+reconstructed by running the anti-$k_T$ algorithm with radius 
+parameter $\Delta R = 0.4$ on all final-state particles 
+after the parton showering and hadronization with the exception of prompt 
+leptons, prompt photons, and neutrinos. The \MET~variable is calculated 
+using all generator-level neutrinos. 
+As can be seen, the selection 
+in \tab\ref{tab:fiducial_selection} looks very similar to that in 
+\tab\ref{tab:signal_selection} except for the object definitions
+using truth information and that 
+events are removed if $\tau$ leptons are present from the $W$ decays.  
+Thus, the fiducial selection
+does not include the branching fraction for $W\rightarrow\tau\nu$ decay, 
+even though there will be some contamination from this process in the final 
+reconstruction level selection. 
+
+
+
