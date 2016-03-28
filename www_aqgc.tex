@@ -1,7 +1,8 @@
-\section{anomalous Quartic Gauge Couplings}
+\section{Anomalous Quartic Gauge Couplings}
 \label{sec:aqgc_limit}
 
-The sensitivity of this analysis to the aQGC signal described in \sec\ref{sec:eft} and 
+The sensitivity of this analysis to the anomalouse quartic gauge coupling
+(aQGC) signal described in \sec\ref{sec:eft} and 
 \sec\ref{sec:aqgc_signal} has also been assessed.  This aQGC signal predicts
 more events than the SM alone. Since the measurement of the SM signal in
 \sec\ref{sec:measurement} was shown to be consistent with the data, this implies
@@ -20,47 +21,74 @@ signal samples as a function of $f_{s,0}$ vs $f_{s,1}$
 were presented in \sec\ref{sec:aqgc_signal}.
 The fiducial cross-sections for these samples were determined using 
 the same selection as in \sec\ref{sec:fiducial} and are shown in 
-\fig\ref{}.
+\fig\ref{fig:aqgc_fiducial_xsec_3l}.
 
-The reconstructed number of events was evaluated for the non-unitarized
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.45\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_ununitarized_noratio.png}
+\includegraphics[width=.45\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_3TeV_noratio.png}
+\includegraphics[width=.45\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_2TeV_noratio.png}
+\includegraphics[width=.45\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_1TeV_noratio.png}
+\includegraphics[width=.45\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_p5TeV_noratio.png}
+\caption{Fiducial cross-section for unitarized and non-unitarized aQGC signal samples as a function of $f_{s,0}$ vs $f_{s,1}$.
+The non-unitarized samples (Top Left) are shown along with the unitarization with 
+four different unitarization scales, $\Lambda$: 3~\TeV~(Top Right),
+2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).
+The total SM cross-section is shown at $f_{s,0}=f_{s,1}=0$ for comparison.}
+\label{fig:aqgc_fiducial_xsec_3l}
+\end{figure}
+
+
+
+The reconstructed number of events were evaluated for the non-unitarized
 aQGC signal samples using the same selection as in \sec\ref{sec:signal_regions}.
 These values can be used in conjuction with the fiducial cross-sections
-to calculate a C-factor according to \eqn\eqref{eq:cfactor} as a function 
-of $f_{s,0}$ and $f_{s,1}$. The C-factors for the non-unitarized signal samples
-are shown for each of the signal regions, along with a comparison to the SM point,
-in \fig\ref{}.
-The C-factor for the SM point is clearly smaller than that for the aQGC
+to calculate a correction-factor according to \eqn\eqref{eq:cfactor} as a function 
+of $f_{s,0}$ and $f_{s,1}$. The correction-factors for the non-unitarized signal samples
+are shown averaged over the three signal regions, along with a comparison to the SM point,
+in \fig\ref{fig:aqgc_cfactor_3l}.
+The correction-factor for the SM point is clearly smaller than that for the aQGC
 points by about 40\%. Dedicated studies show that this is a real effect 
 that ultimately comes from the aQGC samples having a harder \pt~spectrum
 than the SM points and the following two effects:
 \begin{itemize}
 \item The effect of leptonically decaying $\tau$ leptons is not 
 cancelled in \eqn\eqref{eq:cfactor}.
-\item The electron reconstruction efficiency is strongly \pt dependent.
+\item The electron reconstruction efficiency is strongly \pt~dependent.
 \end{itemize}
-Note that the harder \pt spectrum for the aQGC signal samples also 
-increases the fiducial cross-sections, but the impact on the C-factors is more subtle.
-(any more?)
+Note that the harder \pt~spectrum for the aQGC signal samples also 
+increases the fiducial cross-sections, but the impact on the correction-factors is more subtle.
 The unitarized samples should have a softer \pt~spectrum and thus a
-smaller difference between the SM and aQGC C-factors. However,
+smaller difference between the SM and aQGC correction-factors. However,
 reconstructed MC samples were not produced for the unitarized samples.
 Instead, we have chosen to use the 
-C-factor for the non-unitarized averaged over the parameter space for 
+correction-factor for the non-unitarized averaged over the parameter space for 
 both the non-unitarized and unitarized samples.  A systematic uncertainty  
 is used which is the difference between this averaged non-unitarized
-aQGC C-factor and the SM C-factor. This should cover all possible differences
-in the un-unitarized and unitarized C-factors.
+aQGC correction-factor and the SM correction-factor. This should cover all possible differences
+in the un-unitarized and unitarized correction-factors.
 
-Once the C-factors and fiducial cross-sections have been determined,
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.8\textwidth]{figures/aQGC/cfactor_chargesum.png}
+\caption{Correction-factor for non-unitarized aQGC signal samples as a function of $f_{s,0}$ vs $f_{s,1}$.
+The SM correction-factor is shown at $f_{s,0}=f_{s,1}=0$ for comparison.}
+\label{fig:aqgc_cfactor_3l}
+\end{figure}
+
+
+Once the correction-factors and fiducial cross-sections have been determined,
 they can be used to make a prediction on the aQGC signal yield 
 for all points.  To allow for interpolation and extrapolation
 around the discrete aQGC points evaluated in MC, we also 
-fit the predictions using a two-dimensional polynomial of 
+fit the predictions using a two-dimensional second order polynomial of 
 the form:
 \begin{equation}
-poly
+N_{aQGC}\big(f_{s,0},f_{s,1}\big) = w_0 + w_1 f_{s,0}^2 + w_2 f_{s,1}^2
++ w_3 f_{s,0} + w_4  f_{s,1} + w_5 f_{s,0} f_{s,1}
 \end{equation}
-The resulting signal yields and fit functions are shown in \fig\ref{}.
+where $w_0$ through $w_5$ are the six function parameters in the fit.
+%The resulting signal yields and fit functions are shown in \fig\ref{}.
 
 
 
@@ -71,18 +99,9 @@ The fits of the aQGC signal predictions described above plus the background pred
 from \sec\ref{sec:signal_yield} are input into a likelihood function
 in order to extract frequentist 95\% confidence level upper limits on the 
 sensitivity to the aQGC signal as observed in the data.
-The likelihood function used is of the form:
-\begin{equation}
- L(\mu,\theta) = \prod_{i=0}^m \text{Poisson}(N_{data}^i,\psi^i(\mu,\theta)) \times \left( \frac{1}{2\pi} \right)^m e^{-( \theta \cdot C^{-1} \cdot \theta)/2}
- \label{eq:likelihood}
-\end{equation}
-\begin{equation}
- \psi^i(\mu,\theta) = N^i_{sig}(\mu)\times(1+\theta^i) + N^i_{bg} \times(1+\theta^{i+m})
-\end{equation}
- where $\mu$ is the aQGC parameter, $\theta$ are nuisance parameters, and $C$ is 
-the uncertainty matrix defined by $C_{ij} = \sum_k \sigma_{ik} \sigma_{jk}$. (?)
-The limits are determined using the TGClim package \cite{}.
-
+The likelihood function used is of a form similar to \eqn\eqref{eq:poisson_likelihood}
+but are determined using software developed within ATLAS \cite{tgclim} that is different
+from the one used in \sec\ref{sec:measurement}.
 The limits are evaluated either by looking at one aQGC 
 parameter at a time, the so-called ``one-dimensional''
 limits, or by looking at both aQGC parameters simultaneously, the 
@@ -95,7 +114,8 @@ while the two-dimensional limits are presented in
  \begin{table}
    \begin{center}
    \input{tables/aqgc_1d_3l.tex}
-     \caption{Expected and observed limits on the aQGC Parameters.}
+     \caption{Expected and observed one-dimensional limits on the aQGC Parameters.
+     The non-unitarized case is when $\Lambda=\infty$.}
      \label{tab:WWW1D}
 
    \end{center}
@@ -110,9 +130,9 @@ while the two-dimensional limits are presented in
 \includegraphics[width=0.45\textwidth]{figures/aQGC/lll-2000.png}
 \includegraphics[width=0.45\textwidth]{figures/aQGC/lll-1000.png}
 \includegraphics[width=0.45\textwidth]{figures/aQGC/lll-500.png}
-\caption{2D expected limits at 95\% CL for the Un-unitarized case (top left)
+\caption{Two-dimensional expected limits at 95\% CL for the non-unitarized case (Top Left)
 and three different choices of the unitarization scale, $\Lambda$:
-3 TeV (top right), 2 TeV (middle left), 1 TeV (middle right), and 500 GeV (bottom).}
+3~\TeV~(Top Right), 2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).}
 \label{fig:WWW2D}
 \end{figure}  
 
