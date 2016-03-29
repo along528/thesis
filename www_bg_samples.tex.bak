@@ -1,0 +1,125 @@
+\subsubsection{Background samples}
+\label{sec:www_bg_samples}
+
+There are other processes produced in proton-proton collisions at the LHC
+which can mimic the signal processes. These are referred to as background processes.
+In many cases, the background processes are either
+more abundant than or of a similar abundance to
+the signal. As a result, they must be well understood if there is any hope
+of distinguishing between the two. The background processes to the signal
+fall into two general categories: irreducible and reducible. 
+The irreducible backgrounds are those that have the exact same final
+state as the signal. Thus, they 
+are characterized by having either exactly three prompt leptons, meaning they
+come directly from the hard scattering process.
+The reducible backgrounds are those which do not have the exact same
+final state as the signal, but can mimic the signal in some circumstances.
+For our signal, this includes backgrounds with four or more prompt leptons,
+where only three leptons are measured;
+two prompt leptons and an isolated photon, which can mimic an electron,
+referred to as the photon backgrounds;
+or two prompt leptons and a jet that mimics a lepton, referred to as
+the fake backgrounds.
+We treat similarly those backgrounds with three or more prompt leptons,
+hereby referred to as the prompt background.
+The prompt and photon backgrounds 
+are estimated primarily using MC simulation while the fake background
+is estimated using the data itself. 
+This will be described in more detail in \sec\ref{sec:bg_fake}.
+For now, we will focus only on the processes estimated using MC simulation.
+
+Of the prompt backgrounds,
+the $WZ$ process is the most important contribution since it has a 
+large cross-section (compared to the signal)
+and results in a final state with exactly three leptons. Another important 
+prompt background is the $ZZ$ process,
+which has a similar cross-section to the $WZ$ process, but is typically 
+selected when 
+four leptons are produced but one escapes detection.
+Thus, this process is suppressed by the 
+efficiency for not measuring the presence of a lepton. 
+These are collectively referred to as the di-boson processes, sometimes
+indicated as $VV$ where $V = W$ or $Z$\footnote{The $WW$ process is also considered
+but can only produce at most two prompt leptons, making it negligible.}. 
+The di-boson processes are produced using the 
+\powheg~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,Alioli:2010xd} generator
+with the CT10 NLO PDF set and 
+hadronized through \pythiaeight~using the AU2 tune, same as the signal.
+Other prompt backgrounds 
+include tri-boson processes like $ZWW$ and $ZZZ$ 
+(referred to collectively as $VVV$)
+and \ttV~production. Tri-boson processes
+have cross-sections of a similar size to the signal but are suppressed 
+for a similar reason
+as the $ZZ$, since these can produce either four or six lepton final 
+states. 
+The \ttV~production process occurs when a vector
+boson is produced in association with a \tt~pair. 
+Since the top quark almost always decays
+into a $W$-boson and a $b$-quark, \ttV~production also results in 
+three vector bosons which decay into a three or four lepton
+final state.
+The $VVV$ and \ttV~processes were generated using \madgraph~with the 
+CTEQ6L1 PDF set and hadronized
+using \pythiasix~\cite{PYTHIA} with the AUET2B~\cite{atlas:2011zja} 
+tune.
+
+The photon backgrounds occur entirely from the di-boson process $Z\gamma$
+where the $Z$ boson decays to two leptons and the photon mimics an electron.
+A photon is measured
+by observing an energy deposit in the electromagnetic calorimeter 
+without any associated track in the inner detector.
+A photon can mimic an electron
+if it converts into an electron-positron
+pair while still inside the inner detector. This leaves a track 
+in the inner detector plus an energy deposit in the 
+calorimeter, which is the tell-tale sign of an electron.
+The $Z\gamma$ samples were generated with the \sherpa~\cite{sherpa} generator 
+and the CT10 PDF set.  %hadronization? CT10 NLO? Or LO?
+In addition to this process, the $W\gamma$ process behaves similarly 
+but only has one prompt lepton in addition to the photon, so it is negligible.
+Still, we generate it by using
+the \alpgen~\cite{ALPGEN} generator with the CTEQ6L1 PDF set
+and hadronize it using \jimmy~\cite{Jimmy} with the AUET2C~\cite{atlas:2011zja} 
+tune.
+
+Some of the di-boson and tri-boson processes just discussed can also be produced
+through loop induced processes or double parton scattering (DPS).
+The $WW$ and $ZZ$
+loop induced processes are generated using the gg2ZZ~\cite{Binoth:2008pr} 
+and gg2WW~\cite{Binoth:2006mf} generators with the CT10 PDF set and
+hadronized using JIMMY with the AU2 tunes.
+The DPS
+processes are generated using \pythiaeight~with the AU2 
+tunes and the CTEQ6L1 PDF set. 
+
+The fake background is nominally estimated using the data
+as described in \sec\ref{sec:bg_fake}. Some of the contributions
+to this background, however, can be simulated using MC 
+for cross-checks of 
+the estimate from data. The main contributions
+to the fake background
+are the single boson processes ($V+$jets) and \tt~production.
+The probability for a jet to mimic a lepton is actually quite small
+and thus difficult to capture with adequate statistics using MC. 
+However, these processes also have very large cross-sections.
+Combining the two means that in fact the occurence of a jet mimicking
+a lepton is not rare and thus non-negligible. 
+The single boson $Z+$jets processes are generated using \sherpa~with the CT10
+PDF set; the $W+$jets processes are generated using \alpgen~with
+the CTEQ6L1 PDF set and hadronized using \jimmy~with the AUET2C tunes.
+For the $Z+$jets samples, special care must be taken to remove any overlap 
+between with the $Z\gamma$ simulated samples described earlier.
+The \tt~processes are generated using the \mcatnlo~\cite{MCatNLO}
+generator with the CT10 PDF set and hadronized in JIMMY.  %what is the tune?
+Finally, the fake background also has contributions from single top production,
+though it is less important. Single top production is simulated separately 
+for three different production mechanisms, differing in their initial
+and final states, known as
+s-channel ($qb\to q't$), t-channel ($q'\overline{q}\to \overline{b}t$), 
+and $Wt$-channel ($bg \to Wt$). The s-channel 
+and $Wt$-channel are generated using \mcatnlo~with the CT10 PDF set and 
+hadronized through \jimmy~; the t-channel is generated using 
+\madgraph~with the CTEQ6L1 PDF set and hadronized 
+using \pythiasix~with the AUET2B tunes.
+

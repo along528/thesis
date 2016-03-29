@@ -1,33 +1,5 @@
 \subsubsection{Signal Processes}
 \label{sec:signal}
-The signal processes studied in this analysis 
-%\- tells it where to break the line
-are  $pp\rightarrow\- \Wp\Wp\Wm+X$ and $pp\rightarrow \Wp\Wm\Wm\allowbreak +X$, 
-where $X$ is intended to refer to the fact that
-no requirements are placed on additional particles produced in the hard
-interaction.
-The process includes associated Higgs production, 
-or ``Higgsstrahlung'', where a $W$ boson radiates a Higgs boson,
-$pp\rightarrow WH$, and subsequently decays into a $\Wp\Wm$ pair.
-The Higgs decay results in one $W$ boson being produced off-shell,
-$H\rightarrow WW^*$, making this the leading contribution to off-shell
-production.  The resonance from the Higgs can clearly be seen from the 
-distribution of $m_{\Wp\Wm}$ taken from simulation of \www~events
-in \fig\ref{fig:mww_higgs}.
-The \www~process also includes contributions from 
-the $WWWW$ quartic coupling. %and...?
-
-%It would be nice to show a plot of the Higgs stuff. maybe I can
-%steal this and make my own later...
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.5\columnwidth]{figures/2l2j/mWW-parton.pdf}
-\caption{ Invariant mass distribution of two opposite-sign $W$ bosons 
-in \www events generated with VBFNLO at LO. The Higgs mass peak is clearly 
-visible at 126~GeV.}
-
-\label{fig:mww_higgs}
-\end{figure}
 
 
 %%%
@@ -39,51 +11,53 @@ visible at 126~GeV.}
 %correlations of $W$ bosons lepton decay are also available
 %~\cite{Campanario:2008yg}.  
 
-The SM signal processes are implemented in the Monte
+The SM $WWW$ signal processes are implemented in the Monte
 Carlo generator \vbfnlo~\cite{Arnold:2011wj,Arnold:2012xn},
-which can generate partonic events at leading-order (LO) with
+which can generate partonic events at leading-order (LO) in QCD with
 next-to-leading-order (NLO) cross-sections, 
 and in \madgraph~\cite{MadGraph}, which can generate
-partonic events at NLO with NLO cross-sections. 
+partonic events at NLO  with NLO cross-sections. 
 The partonic events are further processed 
 by \pythiaeight~\cite{Sjostrand:2007gs} and \photos~\cite{Golonka:2005pn} 
 to add effects of beam remnant interactions and initial and 
 final state radiation. 
-SM parameters must be provided to the MC generators as input. 
-The most relevant input parameters are listed 
-for the generators in \tab\ref{tab:signal_sm_parameters}.
-The parameters are set in \pythiaeight~ using the ATLAS tune 
-of AU2\cite{ATLAS:2011zja}.
+SM parameters, such as the Higgs mass,
+must be provided to the MC generators as input. 
+The underlying event
+parameters are set in \pythiaeight~ using the ATLAS tune 
+of AU2\cite{atlas:2011zja}.
 The MC generators must also be provided an appropriate PDF.
 The PDF used  in the LO \vbfnlo~generation is
-the LO CTEQ6L1~\cite{Pumplin:2002vw} PDF set 
-while CT10 NLO~\cite{Guzzi:2011sv}
+the LO CTEQ6L1~\cite{Pumplin:2002vw} PDF set;
+CT10 NLO~\cite{guzzi:2011sv}
 is used in the NLO \vbfnlo~cross-section calculation.
 The PDF used in the NLO \madgraph~generation 
 and \xsec~calculation is CTEQ6L1 
-but this is re-weighted to CT10 NLO using a k-factor.
+but this is re-weighted to CT10 NLO using a k-factor of 1.08 to 1.10.
 Since the MC generators are computed to finite order in perturbation
 theory, renormalization and factorization scales must be chosen.
 The renormalization and factorization scales are dynamically
-set to the $WWW$ invariant mass in the \vbfnlo~samples, while they 
+set to the $WWW$ invariant mass in the \vbfnlo~samples; they 
 are set to a fixed scale equal to the $Z$ mass in \madgraph.
 The \vbfnlo~samples are restricted to leptonic decays of the $W$~bosons
-where each lepton has a \pt~of at least 5~\GeV. Meanwhile, the \madgraph~
+where each lepton has a \pt~of at least 5~\GeV. The \madgraph~
 samples include all decays of the $W$~boson, with a requirement 
 that jets have a a \pt~of at least 10~\GeV~ but with no requirement
 on the \pt~of leptons.
+They are compared in a common fiducial phase space,
+described in more detail in \sec\ref{sec:fiducial}.
 The \vbfnlo~ and \madgraph~samples handle interference 
 between $WH\rightarrow WWW(*)$ 
 and on-shell $WWW$ production at LO, but \madgraph~is not
 able to do this at NLO. As a result, the NLO \madgraph~samples
-are split by on-shell \www~ and $WH\rightarrow WWW(*)$ production.
-Both sets of samples are further split by the \www~charge mode.
+are split into sepearate samples of 
+on-shell \www~ and $WH\rightarrow WWW(*)$ production.
+Both sets are further split by the \www~charge mode.
 For each sample, the \xsecs are summarized in \tab\ref{tab:signal_xsec} 
-in their full phase space and in a common fiducial phase space
-defined in \sec\ref{sec:fiducial}.  
+in their full phase space and in the common fiducial phase space.
 The fiducial \xsecs are observed to be nearly the same
-between the two generators,
-as expected.  This serves as a good check of the understanding of the 
+between the two generators.
+This serves as a good check of the understanding of the 
 signal process. The \madgraph~\xsecs are used throughout the 
 remainder of the analysis.
 
@@ -98,13 +72,13 @@ remainder of the analysis.
 
 
 
-\begin{table}[ht]
-\centering
-\input{tables/SignalSMParameters.tex}
-\caption{List of the most relevant SM parameters used as input to the 
-signal MC generation.}
-\label{tab:signal_sm_parameters}
-\end{table}
+%\begin{table}[ht]
+%\centering
+%\input{tables/SignalSMParameters.tex}
+%\caption{List of the most relevant SM parameters used as input to the 
+%signal MC generation.}
+%\label{tab:signal_sm_parameters}
+%\end{table}
 
 
 \begin{table}[ht]
@@ -113,9 +87,10 @@ signal MC generation.}
 \caption{Inclusive and common fiducial cross-sections at NLO 
 for \vbfnlo~and \madgraph~samples. 
 The sum of the inclusive \xsecs are different
-because of the different branching fractions in the two cases. However,
-the sum of the fiducial \xsecs are expected to be similar because
-they are computed for the same phase space, as described in \sec...}
+because of the different branching fractions in the two cases. 
+The sum of the fiducial cross-sections, however, are expected to be similar because
+they are computed for the same phase space, as described in \sec\ref{sec:fiducial}.
+Only statistical uncertainties are shown.}
 \label{tab:signal_xsec}
 \end{table}
 
@@ -152,12 +127,12 @@ they are computed for the same phase space, as described in \sec...}
 \caption{The signal cross-sections for different PDFs along with their
 uncertainties are shown on the {\sc MadGraph} $WWW$ signal samples
 for the total $WWW$ phase space and branching fraction for
-for the $W^{+}W^{+}W^{-}$ (top left) and $W^{+}W^{-}W^{-}$ (top right)
+the $W^{+}W^{+}W^{-}$ (top left) and $W^{+}W^{-}W^{-}$ (top right)
 charge modes
 and in the fiducial region for $W^{+}W^{+}W^{-}$ (bottom left) 
 and $W^{+}W^{-}W^{-}$ (bottom right).
 The bands show the PDF uncertainty for CT10 NLO (solid yellow),
-MSTW 2008 NLO (hashed blue), and NNPDF 3.0 NLO (hashed red) while the
+MSTW 2008 NLO (hashed blue), and NNPDF 3.0 NLO (hashed red). The
 solid line shows the envelope of all uncertainty bands used as the final
 PDF uncertainty estimate. The central value of CT10 NLO is taken as the
 central value of the estimate.
@@ -184,27 +159,31 @@ in both the fiducial and total phase space.}
 \label{tab:pdfunc}
 \end{table}
 
-The uncertainty on the PDF is derived for the {\sc MadGraph} 
+Uncertainties on the signal prediction mainly come from the choice of PDF, 
+the inherent PDF uncertainty, and the renormalization and factorization
+scales, as described in \sec\ref{sec:pdf}.
+The uncertainty due to the choice of PDF is derived for the {\sc MadGraph} 
 cross-sections following a modified version of the pdf4lhc
 \cite{Botje:2011sn} recommendations.  The resulting 
 uncertainty is shown separately for the two different charge modes
 in both the fiducial and the inclusive phase
 space in Table~\ref{tab:pdfunc}.
-The uncertainty is determined by comparing three different PDFs;
+The uncertainty is determined by comparing three different PDFs:
 CT10 NLO~\cite{Lai:2010vv}, MSTW2008 NLO~\cite{Martin:2009iq}, 
 and NNPDF 3.0 NLO~\cite{Ball:2014uwa}. 
-This comparison is presented in Figure~\ref{fig:signal_pdf_unc}.  
+This comparison is presented in \fig\ref{fig:signal_pdf_unc}.  
 Symmetric 68\% CL uncertainties 
 are determined for CT10 NLO and MSTW 2008 NLO using the 68\% CL 
 set provided for MSTW directly and the 90\%CL set for CT10 after
 scaling down by 
-a factor of 1.645. The uncertainty of the NNPDF 3.0 NLO PDF set is 
+a factor of 1.645 in order to approximate a 68 \% CL uncertainty. 
+The uncertainty of the NNPDF 3.0 NLO PDF set is 
 determined by using the standard deviation of the distribution 
-of 101 MC PDFs provided in the PDF set while the nominal value is taken
+of 101 MC PDFs provided in the PDF set; the nominal value is taken
 from the mean of the same PDFs.  
 The CT10 NLO PDF central value is used as the nominal 
-value of the final estimate
-while the final PDF uncertainty on that estimate is
+value of the final estimate.
+The final PDF uncertainty on that estimate is
 taken as the envelope of the uncertainty bands for all three PDF sets.  
 
 
@@ -216,7 +195,7 @@ The effect of these variations on the cross-sections
 as compared to the nominal
 are shown separately for the two different charge 
 modes in \tab~\ref{tab:scaleVariation}.
-The uncertainty is then determined by taking the maximum 
+The symmetric uncertainty is then determined by taking the maximum 
 variation for each charge mode, 
 namely, 2.62\% for $W^+W^+W^-$ and 2.53\% for $W^-W^+W^-$. 
 
@@ -250,10 +229,12 @@ scales for the \Wp\Wp\Wm and \Wm\Wp\Wm  processes. }
 
 The signal cross-sections and uncertainties are thus determined to be 
 \begin{equation}
+\label{eq:total_www_xsec}
 \sigma^{\textrm{Total}}_{\textrm{Theory}}= 241.47\pm0.13 ~(\textrm{Stat.}) ~^{+10.33}_{-6.08} ~(\textrm{PDF}) ~\pm 6.3 ~(\textrm{Scale}) ~\textrm{fb} %uncertainty?
 \end{equation}
 for the inclusive \xsec and
 \begin{equation}
+\label{eq:fiducial_theory}
 \sigma^{\textrm{Fiducial}}_{\textrm{Theory}}= 309.2\pm7.2 ~(\textrm{Stat.}) ~^{+15.05}_{-8.36} ~(\textrm{PDF}) ~\pm 8.0 ~(\textrm{Scale}) ~\textrm{ab} %uncertainty?
 \end{equation}
 for the fiducial cross-section.
@@ -264,8 +245,8 @@ for the fiducial cross-section.
 
 
 \subsubsection{aQGC signal}
-need to update 
-%\input{www_aqgc_signal}
+\label{sec:aqgc_signal}
+\input{www_aqgc_signal}
 
 
 

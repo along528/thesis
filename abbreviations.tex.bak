@@ -30,6 +30,7 @@
     MS          & \dotfill & Muon Spectrometer \\
     NLO         & \dotfill & Next-To-Leading-Order \\
     NNLO         & \dotfill & Next-To-Next-To-Leading-Order \\
+    PC          & \dotfill & Photon Conversion \\
     PDF         & \dotfill & Parton Distribution Function \\
     PS          & \dotfill & Proton Synchrotron \\
     PSB         & \dotfill & Proton Synchrotron Booster \\
@@ -41,6 +42,7 @@
     SM          & \dotfill & Standard Model  \\
     SPS         & \dotfill & Super Proton Synchrotron \\
     TGC         & \dotfill & Thin Gap Chambers \\
+    VBF         & \dotfill & Vector Boson Fusion \\
 
   \end{tabular}
 

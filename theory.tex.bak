@@ -144,15 +144,15 @@ The details of each term are described in more detail below.
 The theory of Quantum Chromodynamics (QCD) is a non-Abelian
 \suthree~gauge theory describing the ``strong'' interactions
 which result in hadronic bound states (for example, the proton). 
-To particpate in QCD a particle must posess color charge. 
-Quarks posess color charge, as do the gluons, which are the gauge boson
+To participate in QCD a particle must possess color charge. 
+Quarks possess color charge, as do the gluons, which are the gauge boson
 mediators of the ``strong'' interactions. The quarks can possess one color charge:
 red, green, or blue
 (for example, there exist red quarks and blue quarks but no red blue quarks).
 The anti-quarks possess anti-color charge (for example, there exist
 anti-red anti-quarks but no red anti-quarks). Thus, there are three colors
 of quarks and three colors of anti-quarks.  
-Colorless objects, meaning those that don't posess color charge, 
+Colorless objects, meaning those that don't possess color charge, 
 can be formed from colored objects either by pairing
 a color with its anti-color (for example, red plus anti-red cancel out) or by 
 combining the three colors or three anti-colors  (for example,
@@ -164,7 +164,7 @@ This results in eight independent
 colored gluons.\footnote{The anti-red red, anti-blue
 blue, and anti-green green configurations are considered colorless.
 From these three configurations, three 
-independent linear combinations can be made, two of which do posess 
+independent linear combinations can be made, two of which do possess 
 color and third
 which does not. This reduces the number of gluons from the naive
 value of nine when considering just the permutations, down to eight
@@ -195,7 +195,7 @@ Because the theory is non-Abelian, the generators obey the commutation relation
 \Big[T_a,T_b\Big] = i f_{abc} T_c
 \end{equation}
 where $f_{abc}$ are the anti-symmetric
-\suthree~structrue constants that are completely determined
+\suthree~structure constants that are completely determined
 by the specification of $T_a$.
 $G_{\mu\nu}^a$ is the gluon field strength
 \begin{equation}
@@ -206,7 +206,7 @@ of the Lorentz
 group and the $\gamma^{\mu}$ are the Dirac matrices.
 Finally, $g_s$ is the strong coupling and $m$ represents
 the quark masses, which are both parameters of the theory that must
-be determined by experiement.
+be determined by experiment.
 The interaction terms among the quarks and gluons result in terms
 like...
 which can be identified with the Feynman diagrams in \fig\ref{fig:feynman_qcd}.
@@ -250,7 +250,7 @@ which involve only one factor of the coupling.  These are referred to as
 Leading-Order (LO) interactions, which in QCD, involve one power of the
 strong coupling, $\alpha_s$. Combining two interactions 
 is proportional to $\alpha_s^2$ and referred to Next-To-Leading-Order (NLO).
-This can be continuted to Next-To-Next-To-Leading-Order (NNLO), which is 
+This can be continued to Next-To-Next-To-Leading-Order (NNLO), which is 
 proportional to $\alpha_s^3$, and so on \emph{ad infinitum}.
 Such a procedure is only useful if $\alpha_s < 1$ such that higher order
 terms become smaller in magnitude and thus less important. Such a procedure
@@ -282,7 +282,7 @@ the parton momentum
 with respect to the total proton momentum, $Q^2$ is the positive square
 of the momentum transfer in the interaction, and $i$ indexes the parton
 that the PDF refers to.
-For a given $Q^2$, the overall probablity must of course sum to unity, such that
+For a given $Q^2$, the overall probability must of course sum to unity, such that
 \begin{equation}
 \sum_i \int \mathrm{d}x~x f_i(x) = 1
 \end{equation}
@@ -315,7 +315,7 @@ are set to be equal to the scale of the interaction process.\footnote{For
 example, in Drell-Yan production, a natural scale to choose
 for would be $\mu_R = \mu_F = m_Z$.} This choice of scales
 introduces an inherent uncertainty on the PDF prediction, 
-which is usually tested by varying the two scale choices independtly. 
+which is usually tested by varying the two scale choices independently. 
 
 
 \begin{figure}[ht]
@@ -327,7 +327,7 @@ The peak in the $f_u$ and $f_d$ distributions is due to the valence
 quark requirements in the proton. The sea quark PDF distributions are shown,
 as are is the large gluon PDF, which is scaled down by a factor of 10.  At
 high $Q^2$, the sea quark PDFs become more important, as do the 
-contributon from heavy quarks.}
+contribution from heavy quarks.}
 \label{fig:pdf_mstw}
 \end{figure}
 
@@ -344,7 +344,7 @@ In general, the predictions from different PDFs agree within a few percent.
 Differences can arise, however, in particular at high energy (high $x$)
 where it is difficult to measure.
 This can be seen, for instance, in a comparison I performed
-on the variation of differnt PDF predictions on the charged Drell-Yan process
+on the variation of different PDF predictions on the charged Drell-Yan process
 seen in \fig\ref{fig:wprime_kfac}.
 Thus, when making predictions, one usually compares multiple
 PDFs following some prescription such as in \cite{Botje:2011sn}.
@@ -370,7 +370,7 @@ and  HERA 1.5 \cite{Radescu:2011cn} (narrow dashed-dotted orange line).
 Ratios are shown of the various PDFs at NNLO with respect to the CT10
 PDF set at NLO. All PDF sets use a strong coupling constant
 of $\alpha_s = 0.117$. The 90\% CL uncertainty on the MSTW 2008 NNLO 
-PDF set is aslo shown (hashed red band).  }
+PDF set is also shown (hashed red band).  }
 \label{fig:wprime_kfac}
 \end{figure}
 %parton luminosity dropoff
@@ -1057,7 +1057,7 @@ at LEP and the Tevatron as seen in the right of \fig\ref{fig:theory_w_pdg}
 with an average value of $2.085\pm0.042\GeV$ \cite{PDG:2014}.
 Roughly 1/3 of of the time the \dubya~decays approximately 
 evenly into each of the three lepton generations (ignoring kinematics),
-as expected lepton universaility,  
+as expected lepton universality,  
 indicated by the shared coupling of \eqn\eqref{eq:couplings_wleptons}.
 The leptonic decays of the \dubya~result in a charged lepton 
 with the same charge as the parent \dubya~(as dictated by charge conservation)
@@ -1142,6 +1142,7 @@ channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
 \end{figure}
 
 \section{$WWW$ Production}
+\label{sec:theory_www_production}
 
 \unitlength = 0.6mm %necessary for feynmp
 \begin{figure}[ht]
@@ -1309,6 +1310,7 @@ and semi-leptonic channels is presented in \sec\ref{sec:measurement}.
 
 
 \section{Effective Field Theory}
+\label{sec:eft}
 
 The lagrangian of the SM, summarized by 
 \eqn\eqref{eq:lagrangian_sm},~\eqref{eq:lagrangian_qcd},
@@ -1420,16 +1422,20 @@ production of this process in \fig\ref{fig:theory_feynman_couplings_qgc}.
 If real, such a modification would enhance the predicted 
 cross-section in \eqn\eqref{eq:www_total_xsec}.
 
-By definition, the EFT approach is expected to break for energies
-greater than $\Lambda$. Thus the issue arises of what energy 
-$\Lambda$ corresponds to.
+%By definition, the EFT approach is expected to break for energies greater than $\Lambda$. Thus the issue arises of what energy $\Lambda$ corresponds to.
 
 Unitarity...
-not UV complete
-effective lagrangian (could be used elsewhere to refer to the eft lagrangian)
-the effect from unitarity violation typically sets in earlier due to the higher exponent in Lambda in the denominator. 
+%not UV complete
+%effective lagrangian (could be used elsewhere to refer to the eft lagrangian)
+%the effect from unitarity violation typically sets in earlier due to the higher exponent in Lambda in the denominator. 
+%
+%Unitarity violation is somehow related to how we can choose Lambda
+\begin{equation}
+f(s) = \Big( 1 + \frac{s}{\Lambda^2} \Big)^{-n}
+\label{eq:form_factor}
+\end{equation}
 
-Unitarity violation is somehow related to how we can choose Lambda
+%look at email from vbfnlo authors. mention that  this is the best we can do
 
 
 \section{Status of QGC Measurements and aQGC Limits}
