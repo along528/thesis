@@ -124,10 +124,11 @@ in the calorimeter without being completely stopped.
 
 
 
-It is possible that the reconstructed electrons, muons, and jets
+It is possible that the reconstructed high \pt~electrons, muons, and jets
 may overlap with each other inside the detector.  This can occur
 because because of the same physics object being reconstructed as different
-objects in the ATLAS detector.  We handle these occurrences using the following
+objects in the ATLAS detector.  
+We handle these occurrences using the following
 scheme in order of precedence:
 \begin{enumerate}
 	\item Electron-Muon Overlap: If $|\Delta R(e,\mu)| < 0.1$, 
@@ -145,20 +146,9 @@ are applied to the reconstructed object directions.
 Using this scheme means that a precedence is set when 
 reconstructed objects overlap such that $\mu > e > j$ where ``$>$'' should
 be interpreted to mean ``is kept instead of''. 
+Note that this is different from the isolation requirements, which
+typically remove lower \pt~objects which are closer to the reconstructed
+track.
 
-The motivation for this scheme
-is as follows. Muons will frequently radiate photons which then can pair-produce
-to electrons.  If the energy of one of the pair-produced electrons is 
-large enough then this can be reconstructed as well and will likely be collimated
-with the muon.  Since the electron comes from the muon radiation and
-since the reverse process with an electron having pair-produced muons
-is heavily suppressed, the muon is kept preferentially.  The reconstruction
-of overlapping electrons and jets
-would rely on much of the same energy deposits in the calorimeter.  But the electron
-reconstruction also relies on matching with a well defined inner detector
-track.  It is thus assumed that if an electron overlaps with a reconstructed
-jet that this is more likely to be the signature of a high energy electron.
-Finally, if a muon overlaps with a jet, the muon could come from a heavy flavor 
-decay. If this occurs, we choose to keep the event and consider only the muon.
 
 
