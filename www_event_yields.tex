@@ -121,35 +121,46 @@ mis-identification.
 
 
 
-\subsection{Correction Factors and Fiducial Cross-sections}
+\subsection{Fiducial Cross-sections and Correction Factors}
 \label{sec:inputs}
 
-The correction factor, $C_i$, is defined for each channel, $i$,
-as the ratio of the number of expected signal events measured
-at the reconstruction level, $N_i^{\textrm{Reco}}$, over the number
-expected from truth information, $N_i^{\textrm{Truth}}$.
+The SM signal predictions at reconstruction level 
+are reported above in \sec\ref{sec:signal_yield}.
+In anticipation of the SM cross-section measurement extraction
+in \sec\ref{sec:measurement} and \sec\ref{sec:combined_measurement}, 
+the number of expected signal events 
+at reconstruction level, $N^{\textrm{Reco}}_i$, in signal region $i$,
+are factorized such that
+\begin{equation}
+N^{\textrm{Reco}}_i = N^{\textrm{Fid}}_i \times C_i
+\end{equation}
+where $N^{\textrm{Fid}}_i$
+is the number of events expected from the fiducial
+level selection of \sec\ref{sec:fiducial} and 
+$C_i$ is the ``correction factor'' which 
+accounts for differences between the fiducial level prediction
+and the reconstruction level prediction.
+In practice, $N^{\textrm{Reco}}_i$ and $N^{\textrm{Fid}}_i$
+are computed explicitly from the signal MC using the selections
+in \tab\ref{tab:signal_selection} and \tab\ref{tab:fiducial_selection},
+respectively.  The correction factor is then derived by the simple rearrangement
 \begin{equation}
 \label{eq:cfactor}
-C_i = \frac{N_i^{\textrm{Reco}}}{N_i^{\textrm{Truth}}}
+C_i = \frac{N_i^{\textrm{Reco}}}{N_i^{\textrm{Fid}}}
 \end{equation}
-$N_i^{\textrm{Reco}}$ 
-is determined using the reconstruction
-level selection described in \sec\ref{sec:signal_regions} and
-listed in \tab\ref{tab:signal_selection};
-$N_i^{\textrm{Truth}}$  is determined using the fiducial
-selection described in \sec\ref{sec:fiducial} and 
-listed in \tab\ref{tab:fiducial_selection}. The same generator, 
-\vbfnlo, is used for both to remove any dependence on the 
-cross-section or other generator specific effects.
+In this thesis, the numbers in the numerator and denominator are both derived for the SM
+signal using the \vbfnlo~generator.
 
-The fiducial cross-sections are calculated also using the selection
-from the \sec\ref{sec:signal_regions} after weighting
-to the cross-section for the given sample. Recall also 
-from \sec\ref{sec:signal} and \tab\ref{tab:signal_xsec}
-that the fiducial cross-sections were generated using
+
+The number of predicted fiducial events, $N^{\textrm{Fid}}_i$,
+can be interpreted as a fiducial cross-section, $\sigma^{\textrm{Fid}}_i$,
+using the LHC integrated luminosity and \eqn\eqref{eq:lhc_nevents}.
+Recall from \sec\ref{sec:signal} and \tab\ref{tab:signal_xsec}
+that the fiducial cross-sections for the SM signal were generated using
 both \madgraph~and \vbfnlo~and were shown to be in good agreement.
 The fiducial cross-sections from \madgraph~are used in the final
 estimates.
+
 
 \begin{table}[ht!]
 \centering
@@ -161,9 +172,9 @@ using \madgraph.}
 \label{tab:inputs_3l}
 \end{table}
 
-The correction factors and fiducial cross-sections are 
-summarized separately for each signal region in 
-\tab\ref{tab:inputs_3l}.
+The values for the correction factors and fiducial cross-sections
+in each signal region of \sec\ref{sec:signal_yield}
+are reported in \tab\ref{tab:inputs_3l}.
 Note that the sum of the fiducial cross-sections
 in each signal region gives the combined fiducial cross-section
 which was reported in \eqn\ref{eq:fiducial_theory} along with 
@@ -171,7 +182,7 @@ PDF and scale uncertainties.
 
 
 
-One important caveat is that the fiducial selection explicitly vetoes
+One important caveat about this framework is that the fiducial selection explicitly vetoes
 for the presence of leptonically decaying $\tau$ leptons coming from the $W$ decay, 
 while for the reconstruction level selection no such veto is applied. 
 This allows for a simple fiducial definition.

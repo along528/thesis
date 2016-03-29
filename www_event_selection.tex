@@ -209,27 +209,14 @@ $|\deltaphi| > 2.5$ everywhere.
 \subsection{Fiducial Region Selection}
 \label{sec:fiducial}
 
-A fiducial phase space or fiducial region is the 
-region the analysis is sensitive to, defined 
-using purely truth information (generator information before
-being passed through ATLAS reconstruction).
-We define our fiducial region
-based on the optimized signal selection (defined at the reconstruction level)
-but using only truth information. For instance, the reconstructed
-lepton \pt~requirement of 
-$\pt^{\textrm{Reco}} > 20~\GeV$
-is taken into account in the fiducial region selection
-by requiring 
-$\pt^{\textrm{Truth}} > 20~\GeV$.
-By applying this for all cuts in the reconstruction selection
-shown earlier in \tab\ref{tab:signal_selection},
-one may compare the predicted signal yields after reconstruction
-using this selection to the one in the fiducial region selection
-using just truth information. Any differences are then attributed solely
-to effects from reconstruction. 
-The fiducial selections are determined at truth level 
-using Rivet~\cite{Buckley:2010ar}, which allows for 
-comparisons between different generators.
+Imposing the reconstruction level selection in \tab\ref{tab:signal_selection}
+implies a reduction in available the phase space with respect to the 
+used to compute the total cross-section in \eqn\eqref{eq:www_total_xsec}.
+This is made explict by re-computing the cross-section in a reduced
+phase space defined at truth level and modeled after the reconstruction
+level selection. This is referred to as the ``fiducial'' phase space
+and the resulting cross-section as the ``fiducial'' cross-section.
+
 
 
 \begin{table}[ht!]
@@ -243,6 +230,9 @@ comparisons between different generators.
 
 The chosen fiducial region selection 
 is listed in \tab\ref{tab:fiducial_selection}.
+The fiducial selections are determined at truth level 
+using Rivet~\cite{Buckley:2010ar}, which allows for 
+comparisons between different generators.
 Only prompt leptons (those not originating from hadron decays) are used for 
 lepton selections, and these the momentum from nearby prompt photons 
 within a cone with $\Delta R = 0.1$ from the lepton are added
