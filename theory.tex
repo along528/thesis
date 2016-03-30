@@ -1155,10 +1155,15 @@ channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
 
 			\fmf{fermion}{i1,v1}
 			\fmf{fermion}{v1,i2}
-			\fmf{photon}{v1,v2}
+			\fmf{photon,label=$W^+$}{v1,v2}
 			\fmf{photon}{v2,o1}
 			\fmf{photon}{v2,o2}
 			\fmf{photon}{v2,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$\overline{q}'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -1169,27 +1174,37 @@ channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
 
 			\fmf{fermion}{i1,v1}
 			\fmf{fermion}{v1,i2}
-			\fmf{photon}{v1,v2}
+			\fmf{photon,label=$W^+$}{v1,v2}
 			\fmf{photon}{v2,o1}
 			\fmf{dashes,label=$H^0$}{v2,v3}
 			\fmf{photon}{v3,o2}
 			\fmf{photon}{v3,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$\overline{q}'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
 
-\vspace{6 mm}
+\vspace{15 mm}
 \begin{fmffile}{feynwwwprod3}
 		\begin{fmfgraph*}(80,50)
 			\fmfleft{i1,i2}
 			\fmfright{o1,o2,o3}
 
 			\fmf{fermion}{i1,v1}
-			\fmf{fermion}{v1,v2}
-			\fmf{fermion}{v2,v3}
+			\fmf{fermion,label=$\overline{q}''$}{v1,v2}
+			\fmf{fermion,label=$q'''$}{v2,v3}
 			\fmf{fermion}{v3,i2}
 			\fmf{photon}{v1,o1}
 			\fmf{photon}{v2,o2}
 			\fmf{photon}{v3,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$\overline{q}'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -1198,20 +1213,29 @@ channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
 			\fmfleft{i1,i2}
 			\fmfright{o1,o2,o3}
 			\fmf{fermion}{i1,v1}
-			\fmf{fermion}{v1,v2}
+			\fmf{fermion,label=$\overline{q}'$}{v1,v2}
 			\fmf{fermion}{v2,i2}
-			\fmf{photon,label=$Z/\gamma^{*}$}{v2,v3}
+			\fmf{photon,label=$Z/\gamma^{*}$,label.side=left}{v2,v3}
 			\fmf{photon}{v1,o1}
 			\fmf{photon}{v3,o2}
 			\fmf{photon}{v3,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$\overline{q}'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
-\vspace{2 mm}
+\vspace{4 mm}
 \caption{The tree level Feynman diagrams 
 for $WWW$ production. The incoming fermion
 lines in each diagram consist of an
 up-type quark (anti-quark) and down-type anti-quark (quark). Unless
-otherwise specified, the curved lines correspond to $W$ bosons.}
+otherwise specified, the curved lines correspond to $W$ bosons.
+In this case, the charge of the initial state quarks is assumed
+to sum to +1, leading to the same in the final state.
+It is also possible for the initial and final states to sum to -1
+via charge conjugation.  }
 \label{fig:theory_feynman_www}
 \end{figure}
 

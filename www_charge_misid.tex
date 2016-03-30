@@ -1,19 +1,56 @@
 
 %include diagram
 
+\unitlength = 0.8mm %necessary for feynmp
+\begin{figure}[ht]
+\centering
+\vspace{5 mm}
+\begin{fmffile}{feynchargemisid}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2,o3}
+			\fmf{fermion}{i1,v1}
+			\fmf{fermion}{v1,o3}
+			\fmf{photon,label=$\gamma$}{v1,v2}
+			\fmf{fermion}{o1,v2}
+			\fmf{fermion}{v2,o2}
+			\fmflabel{$e^-$}{i1}
+			\fmflabel{$e^+$}{o1}
+			\fmflabel{$e^-$}{o2}
+			\fmflabel{$e^-$}{o3}
+			%\fmflabel{$W^+$}{i1}
+			%\fmflabel{$e_L,\mu_L,\tau_L$}{o1}
+			%\fmflabel{$\overline{\nu}_{e,R},\overline{\nu}_{\mu,R},\overline{\nu}_{\tau,R}$}{o2}
+			%\fmflabel{$e_L$}{o1}
+			%\fmflabel{$\overline{\nu}_{e,R}$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagram showing combination of bremsstrahlung and pair-production 
+processes that lead to electron charge mis-identification. In this case, 
+we start with an electron and end with two electrons and a positron. For
+electron charge mis-identification to occur, the positron would have to 
+be the only final state particle that is reconstructed.}
+\label{fig:feyn_chargemisid}
+\end{figure}
+
+
 High energy electrons
 produced from the 
 hard scatter of the proton-proton
 collisions of the LHC
 will frequently radiate photons in the presence of the ATLAS
-detector material. Furthermore, it is also common %how common?
-for high energy photons to decay into an electron-positron pair.
-These two processes are shown as Feynman diagrams 
-separately in \fig\ref{}.
+detector material via bremsstrahlung. 
+Furthermore, it is also common %how common?
+for high energy photons to convert into electron-positron pairs.
 Chaining these two processes together will cause 
 an electron to radiate a photon which then produces an
 electron-positron pair, resulting in a three body final state with
-two electrons and a positron. 
+two electrons and a positron, such as in the Feynman diagram
+of \fig\ref{fig:feyn_chargemisid}.
+For muons, their larger mass suppresses these phenomena
+such that the similar effect for muons is completely negligible.
+
 Often, the energy difference between the products in the final state will
 be large, such that most of the energy is carried away in only one
 product.  It is thus possible that majority of the energy of the initial
@@ -29,16 +66,6 @@ electrons to collectively refer to both electrons and positrons
 unless otherwise specified.
 
 
-%need to do some research on Bethe-Bloche.
-The probability of this to occur is non-negligible in the presence of the material 
-from the ATLAS detector. This is due to bremstraahlung...
-Look in 'experimental foundations' and in 'particle detection'
-
-
-While muons are also technically also capable of such a phenomenon, the 
-energies required are too large, according to Bethe-Bloche.
-Indeed, we observe that the rate of charge mis-identification for muons
-is vanishingly small and so we neglect it. %or should I just say that it should be?
 
 The strong dependence of charge mis-identification 
 upon the ATLAS material means that care must be
