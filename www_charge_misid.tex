@@ -70,13 +70,15 @@ unless otherwise specified.
 The strong dependence of charge mis-identification 
 upon the ATLAS material means that care must be
 taken when describing this process. In particular, the material 
-description in MC, while sophisticated, is not perfect. Thus, the use of MC
-for determining the rate of electron charge mis-identification is inherently
-flawed. Instead, it would be better to use the data itself to determine
-a model for these rates. 
+description in MC, while sophisticated, is not perfect. 
+Thus, it would be better to use the data itself to determine
+a model for these rates where it does not rely on a model of the detector.
 Thus, we extract the rates of electron charge 
 mis-identification using the data and only use the rates determined
 in MC as a cross-check.
+
+
+
 
 The background due to electron charge mis-identification is most important 
 for this analysis
@@ -85,11 +87,12 @@ where it is one of the only mechanisms by which the $WZ$ and $ZZ$
 processes enter this region\footnote{The $WZ$ and $ZZ$ processes
 can also enter in the 0 SFOS region if the $Z$ bosons
 decay to $\tau$ leptons which then subsequently decay into 
-either electrons or muons with the proper charge and flavor combination.}.
+either electrons or muons with the proper charge and flavor combination.
+See \sec\ref{sec:chargemisid_validation}}.
 Without electron charge mis-identification, these events would fall
 equally in the 1 and 2 SFOS regions.
 As will be seen shortly, the overall rate of electron charge mis-identification
-is quite small (calculate???). 
+is quite small. 
 Furthermore, it will be seen that the total background in the 0 SFOS region is 
 a good deal smaller than the 1 and 2 SFOS regions. Thus, the
 migration of events from the 1 and 2 SFOS regions to the 0 SFOS 
@@ -437,6 +440,7 @@ $\frac{\textrm{Rate}(e^{-}_3) }{ \textrm{Rate}(e^{+}_2)+ \textrm{Rate}(e^{-}_3)}
 and similarly for the positron.
 
 \subsubsection{Validation}
+\label{sec:chargemisid_validation}
 This procedure has been validated on the $WZ$ and $ZZ$ samples by comparing 
 the predictions taken directly from MC to the predictions re-weighted in the 
 0 SFOS signal region using the procedure just described. This is done in 
@@ -448,6 +452,35 @@ the systematic uncertainties of the method.  Any remaining difference could
 be expected from the difference in rates observed at high $\eta$ and 
 high $E_{T}$ as seen in Fig.~\ref{fig:ChargeMisID_truthRate_finalFig} and 
 serves as justification for using the data-driven method.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.45\textwidth]{figures/ChargeMisID/preselection_wz_br.png}
+\includegraphics[width=.45\textwidth]{figures/ChargeMisID/0sfos_wz_br.png}
+\caption{Plots of the different branching fractions of the $WZ$ process
+as a function of the leading lepton \pt at pre-selection (left)
+and after also applying a requirement that events have 0 SFOS lepton
+pairs (right). The individual decays of $W$ and $Z$ are split up
+into whether they decay into taus ($\tau$) or into electrons and muons (denoted $l$).
+The taus also subsequently decay. The contributions from $W\to l\nu Z\to ll$ 
+and $W \to \tau \nu Z \to ll$ after applying the 0 SFOS selection
+are due purely to charge mis-identification.}
+\label{fig:chargemisid_wz_br}
+\end{figure}
+
+The proportion of contributions to the $WZ$ background coming from 
+charge mis-identification in the 0 SFOS region is demonstrated in 
+\fig\ref{fig:chargemisid_wz_br}. Here we can see that the 
+large contribution from $WZ$ decaying to electrons and muons (but not taus)
+at pre-selection (see \sec\ref{sec:preselection})
+survives and is non-negligible, even after applying the 0 SFOS cut.
+This can only come from the electron charge being mis-identified.
+It is worth noting, however, that there is also a sizable
+contribution to the 0 SFOS region when the $Z$ decays to taus
+since it is possible to have two leptonically decaying taus that satisify
+the 0 SFOS requirements while correctly identifying the charge.
+
 
 There is no special treatment of the charge mis-identification contribution to 
 other background contributions in the 0 SFOS region or to any contributions to the 
