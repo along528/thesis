@@ -403,7 +403,7 @@ In general, each of the PDF sets are in good agreement with the LHC data.
 \subsection{The Electroweak Theory}
 \label{sec:theory_ew}
 The electroweak (EW) 
-theory of Glasgow, Weinberg, and 
+theory of Glashow, Weinberg, and 
 Salam \cite{glashow:1961tr,Salam:1968rm,weinberg:1967tq}
 is a renormalizable \cite{hooft1971renormalization,Hooft1971167}
 non-Abelian gauge theory 
@@ -1358,6 +1358,7 @@ but become increasingly important at higher and higher energies.
 In general, the new EFT terms might look like this:
 \begin{equation}
 \curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_{n=5}^{\infty} \sum_i \frac{c_{n,i}}{\Lambda^{n-4}} \curlyo_{n,i}
+\label{eq:lagrangian_eft_gen}
 \end{equation}
 where $\Lambda$ is some new energy scale relevant to the new
 physics we seek to describe and the $c_{n,i}$ are dimensionless
@@ -1383,7 +1384,7 @@ Enforcing the conservation
 of baryon and lepton number restricts 
 us to only even values of $n$:
 \begin{equation}
-\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_i \frac{c_{6,i}}{\Lambda^2} \curlyo_{6,i} + \sum_j \frac{c_{8,j}}{\Lambda^4} \curlyo_{8,j} + \dots
+\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_i \frac{c_{i}}{\Lambda^2} \curlyo_{i} + \sum_j \frac{c_{j}}{\Lambda^4} \curlyo_{j} + \dots
 \label{eq:lagrangian_eft}
 \end{equation}
 where we have truncated the series at $n=8$ since 
@@ -1434,6 +1435,8 @@ besides the SM), we get
 \label{eq:lagrangian_aqgc}
 \end{equation}
 where we have introduced the new arbitrary couplings $f_{S,0}$ and $f_{S,1}$.
+Note that the subscript notation for these operators is due to an alternate convention
+from the one used in \eqn\eqref{eq:lagrangian_eft_gen} and \eqn\eqref{eq:lagrangian_eft}.
 Expanding this out we get...
 These modify the SM QGC interactions of \eqn\eqref{eq:lagrangian_qgc}
 and \fig\ref{fig:theory_feynman_couplings_qgc}
@@ -1445,6 +1448,19 @@ a new tree level diagram for the $WWW$ production process similar to the SM QGC
 production of this process in \fig\ref{fig:theory_feynman_couplings_qgc}.
 If real, such a modification would enhance the predicted 
 cross-section in \eqn\eqref{eq:www_total_xsec}.
+
+An alternative set of couplings, $\alpha_4$ and $\alpha_5$, are sometimes also used
+which can be related to $f_{S,0}$ and $f_{S,1}$ via a simple linear transformation \cite{Baak:2013fwa}. 
+For the $WWWW$ vertex this is 
+\begin{equation}
+\begin{aligned}
+\alpha_4 &= \frac{f_{S,0}}{\Lambda^4} \frac{v^4}{8} \\
+\alpha_4 + 2~\alpha_5 &= \frac{f_{S,1}}{\Lambda^4} \frac{v^4}{8}
+\end{aligned}
+\label{eq:alpha45}
+\end{equation}
+where $v = 246 \GeV$ is the Higgs vacuum expectation value \cite{PDG:2014}.
+
 
 %By definition, the EFT approach is expected to break for energies greater than $\Lambda$. Thus the issue arises of what energy $\Lambda$ corresponds to.
 
@@ -1482,7 +1498,8 @@ and to $WWWW$ at the LHC \cite{PhysRevLett.113.141803,PhysRevLett.114.051801}.
 %material on limits?
 
 %summary plots? maybe from PDG?
-
-More details?
+Limits on $f_{S,0}$ vs $f_{S,1}$ and $\alpha_4$ vs $\alpha_5$ aQGC parameters have been
+performed by CMS in \cite{khachatryan:1957133}
+and by ATLAS in \cite{PhysRevLett.113.141803} and \cite{Aad:2016ett}.
 
 
