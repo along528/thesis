@@ -18,6 +18,30 @@
 % anomalous Quartic Gauge Couplings (aQGC)
 % Parton Distribution Function (PDF)
 
+The focus of this thesis is to probe the 
+production of the Standard Model (SM) process with three $W$ bosons
+produced in proton-proton collisions with each decaying leptonically.
+To that end, an introduction to the SM is in order.
+This is presented below with particular
+emphasis on those things which are relevant for the understanding of this
+process, namely Quantum Chromodynamics (QCD) and Parton Distribution
+Functions (PDFs) describing the interactions at a proton-proton 
+collider, and the Electroweak (EW) theory which describes the mechanisms
+of $WWW$ production and decay.
+The SM is well established and has been written about 
+thoroughly since the mid-$20^{\textrm{th}}$ century. 
+So while the $WWW$ process has never been observed, these SM building
+blocks of this process are not new. The descriptions below thus
+rely heavily on those in \cite{commins1983weak}, \cite{halzen2008quark},
+and \cite{cahn2009experimental}.
+
+We also seek to assess our sensitivity to new physics using 
+a contemporary approach to Effective Field Theory (EFT) in the context
+of modifying the SM, with a particular focus on anomalous Quartic
+Gauge Couplings (aQGC). A discussion of this approach is described
+following the description of the SM process.
+
+
 
 \section{The Standard Model}
 
@@ -61,7 +85,7 @@ of particles with identical charges but whose masses increase with each generati
 The generations are labeled in \tab\ref{tab:theory_fermions}. 
 Even though there are three 
 generations in both the lepton and quark sectors, 
-there are no observed SM interactions that link the two, 
+there are no observed direct interactions bewteen the two, 
 thus the quarks and lepton generations should be thought of as separate.
 The particles can be distinguished
 by their charges and masses.
@@ -232,7 +256,8 @@ only colorless objects can be observed in nature. Thus, quarks and gluons can
 never be observed directly. Furthermore, hadronic bound states,
 themselves comprised of colored quarks and gluons, are restricted
 to colorless configurations. The simplest colorless hadronic configurations
-are mesons (for example, the $\pi^0$) and baryons (for example, the neutron),
+are mesons (for example, the $\pi^0$) and baryons (for example, the proton 
+and neutron),
 although more complex configurations have recently been discovered (cite).
 Any attempt to split up a hadron into its constituent quarks 
 will fail, with the quarks forming new hadrons from quark-antiquark
@@ -241,10 +266,10 @@ breaking up into more hadrons is referred to as ``hadronization''.
 At the Large Hadron Collider (LHC), hadronization frequently occurs
 at a high momentum where the resulting objects are Lorentz boosted 
 into highly collimated collections of hadrons and other particles, called jets. 
-Jets are thus the main observables for probing QCD at the LHC.
+Jets are thus one of the main observables for probing QCD at the LHC.
 
 Most predictions of QFT phenomena rely on perturbative calculations.
-That is, they can be approximated with simple ``tree-level'' interactions,
+That is, they can often be approximated with simple ``tree-level'' interactions,
 using just one instance of the interactions in \fig\ref{fig:feynman_qcd},
 which involve only one factor of the coupling.  These are referred to as 
 Leading-Order (LO) interactions, which in QCD, involve one power of the
@@ -255,7 +280,7 @@ proportional to $\alpha_s^3$, and so on \emph{ad infinitum}.
 Such a procedure is only useful if $\alpha_s < 1$ such that higher order
 terms become smaller in magnitude and thus less important. Such a procedure
 is applied not just in QCD calculations, but also in calculations
-of the Electroweak theory like in \sec\ref{sec:theory_ew}.
+of the Electroweak theory as in \sec\ref{sec:theory_ew}.
 %rewrite lagrangian to refer to alpha_s?
 In QCD, however, the growth of $\alpha_s$ at low energies because of asymptotic
 freedom means that eventually $\alpha_s > 1$ and perturbation theory is no longer
@@ -273,25 +298,26 @@ the constituent quarks and gluons of the hadrons, also known as partons, can sti
 be probed. Indeed, in the high energy proton-proton collisions of the LHC, 
 the partons inside the proton participate
 directly in the interactions under study.  However,
-while the momentum and energy of the protons can be known exactly, 
+while the momentum and energy of the protons can be known with
+great precision, 
 this is not true of the partons. Instead, the individual
 parton momenta can only be known with some probability.
 These are governed by the parton distribution functions (PDF),
 $f_i(x,Q^2)$, where $x$ ranges from $0<x<1$ and is the fraction of 
 the parton momentum 
 with respect to the total proton momentum, $Q^2$ is the positive square
-of the momentum transfer in the interaction, and $i$ indexes the parton
+of the characteristic energy in the interaction, and $i$ indexes the parton
 that the PDF refers to.
 For a given $Q^2$, the overall probability must of course sum to unity, such that
 \begin{equation}
-\sum_i \int \mathrm{d}x~x f_i(x) = 1
+\sum_i \int_0^1 \mathrm{d}x~x f_i(x,Q^2) = 1
 \end{equation}
 where note that the sum over $i$ is taken over all possible partons;
-this includes all quark flavors (though the more massive quarks 
+this includes all quark (and anti-quark) flavors (though the more massive quarks 
 are less important) as well as the gluons.
 A hadron is characterized by its valence quark 
 composition, which places additional requirements on the PDFs. 
-In the case of the proton, the valence quark composition is identified as
+In the case of the proton, the valence quark composition is 
 two up quarks and a down quark.
 This translates to the requirements 
 \begin{align}
@@ -321,8 +347,8 @@ which is usually tested by varying the two scale choices independently.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.8\textwidth]{figures/theory/mstw.eps}
-\caption{Plot of $xf_i(x,Q^2)$ vs $x$ for the MSTW 2008 NLO PDF sets with 68\% CL 
-eigenvector uncertainties \cite{Martin:2009iq} for two different $Q^2$ scales.
+\caption{Plot of $xf_i(x,Q^2)$ vs $x$ for the MSTW 2008 NLO PDF sets \cite{Martin:2009iq} with 68\% CL 
+eigenvector uncertainties for two different $Q^2$ scales.
 The peak in the $f_u$ and $f_d$ distributions is due to the valence
 quark requirements in the proton. The sea quark PDF distributions are shown,
 as are is the large gluon PDF, which is scaled down by a factor of 10.  At
@@ -442,28 +468,21 @@ and
 B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
 \end{equation}
 The gauge fields, $\mathbf{W}_{\mu}$ and $B_{\mu}$, represent the 
-massless EW gauge bosons before EWSB. They are four-vectors of the Lorentz group
+massless EW gauge bosons before EWSB.
+They are four-vectors of the Lorentz group
 and thus undergo Lorentz transformations as indicated by their Lorentz index, $\mu$.
-The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
-group and the $\gamma^{\mu}$ are the Dirac matrices.
-The EW covariant derivative, $D_{\mu}$, is
-\begin{equation}
-D_{\mu} =  i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} 
-\label{eq:ew_covariant_derivative}
-\end{equation}
-The coupling constants $g$ and $g'$ describe the strength of the interactions
-of the fermions with the gauge boson fields before EWSB. 
-The $\mathbf{W}_{\mu}$ describes two charged gauge bosons and 
-a neutral gauge boson as an isotriplet of 
-vector fields ($W_{\mu}^i$)
-in \sutwo~with its generators being the famous Pauli matrices, $\boldsymbol{\tau}$.
+The $\mathbf{W}_{\mu} = (W^1_{\mu},W^2_{\mu},W^3_{\mu})$ 
+describe two charged gauge bosons and 
+a neutral gauge boson as a
+a triplet of weak isospin in \sutwo~
+with its generators being the famous Pauli matrices, $\boldsymbol{\tau}$.
 The charged gauge bosons are represented by a superposition of the first
 two components of the 
 isotriplet, $W_{\mu}^{\pm}=\sqrt{\frac{1}{2}}\Big(W_{\mu}^1\mp i W_{\mu}^2\Big)$,
 while the neutral gauge boson is represented 
 by the third component, $W_{\mu}^3$.
-The $B_{\mu}$ describes a single neutral gauge boson 
-using a single vector field in \uone~with the generator $Y$, referred
+The $B_{\mu}$ is a singlet of \uone~and describes a single neutral gauge boson 
+using a single vector field with generator $Y$, referred
 to as the weak hypercharge.
 By construction, the weak hypercharge is related to
 the electric charge of \uone~
@@ -473,6 +492,16 @@ and the charge of the third component of weak \sutwo, $T^3$:
 Q=T^3+Y/2
 \label{eq:ewcharges}
 \end{equation}
+The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
+group and the $\gamma^{\mu}$ are the Dirac matrices.
+The EW covariant derivative, $D_{\mu}$, is
+\begin{equation}
+D_{\mu} =  i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} 
+\label{eq:ew_covariant_derivative}
+\end{equation}
+The coupling constants $g$ and $g'$ describe the strength of the interactions
+of the fermions with the gauge boson fields before EWSB. 
+
 The fermion fields, $\psi$, (and their conjugates, $\overline{\psi}$)
 can be split up into the 
 left-handed fermion isospin doublets, $L$,  and right-handed
@@ -499,7 +528,7 @@ This is captured
 by assigning charges to the SM fermions 
 as listed in \tab\ref{tab:ewcharges}
 such that they satisfy \eqn\eqref{eq:ewcharges}.
-The charges differ based on the helicity, or ``handedness'',
+The charges differ based on the chirality, or ``handedness'',
 of the fermions.
 This specification for the charges results in the 
 left-handed fermion fields being treated as isospin doublets, $L$, 
@@ -518,7 +547,7 @@ which only transform under \uone:
 \begin{equation}
 R = e_R,~\mu_R,,~\tau_R,~u_R,~d_R,~c_R,~s_R,~t_R,~b_R
 \end{equation}
-where each object is a Dirac field whose helicity is indicated by 
+where each object is a Dirac field whose chirality is indicated by 
 its subscript.
 Note that the right-handed neutrinos are absent.
 This comes from them having zero charge across 
@@ -675,8 +704,9 @@ mix while the lepton generations do not.  }
 \label{fig:feyn_wcoupling}
 \end{figure}
 
-The strength of the weak interactions is suppressed by the massive
-nature of the charged and neutral weak bosons. But the EW theory 
+The strength of the weak interactions is suppressed at energies 
+much smaller that the masses of the 
+the charged and neutral weak bosons. But the EW theory 
 cannot assign masses directly to the gauge bosons without breaking 
 gauge invariance. This is resolved by the introduction of 
 spontaneous symmetry breaking which generates the masses for the 
@@ -758,7 +788,7 @@ where $Z_{\mu}$ corresponds to the $Z$ boson field
 and $A_{\mu}$ corresponds to the photon field.
 Looking at the values for the mass terms, the $W^{\pm}$ and $Z$ fields
 receive a mass while $A$ is massless.
-The masses of the $W$ and $Z$ can be related by the weak mixing angle
+At LO, the masses of the $W$ and $Z$ can be related by the weak mixing angle
 \begin{equation}
 \frac{M_W}{M_Z} = \cos \theta_W
 \end{equation}
@@ -769,8 +799,8 @@ as can the coupling constants, $g$ and $g'$
 
 
 
-The presence of vacuum fluctuations of the Higgs field, $h$, also 
-gives interactions of the Higgs field with the $W$ and $Z$ gauge bosons
+The Higgs field, $h$, also 
+has interactions with the $W$ and $Z$ gauge bosons
 after plugging into the first line of \eqn\eqref{eq:lagrangian_ewsb}.
 The relevant terms look like
 \begin{equation}
@@ -1038,14 +1068,14 @@ as performed at LEP and the Tevatron~\cite{PDG:2014}.}
 \end{figure}
 
 
-While the fundamental parameters of the EW theory are related to each other
+While the fundamental parameters of the EW theory are connected to each other
 by relations like those above, they are not determined \emph{a priori} 
 and so must be first determined from experiment.
 Of primary interest to the topic of this thesis 
 are the measured parameters related to the behavior and properties
 of the \dubya~and Higgs bosons.
 The \dubya~was first discovered in 1983 via $p\overline{p}$ collisions
-at the SPS by looking at its decay to an electron %abbreviation?
+at the SPS by observingat its decay to an electron %abbreviation?
 and electron neutrino \cite{ARNISON1983103}.
 Its mass has been measured in $p\overline{p}$ collisions at the Tevatron
 and in $e^{+}e^{-}$ collisions at LEP to give a world 
@@ -1057,7 +1087,7 @@ at LEP and the Tevatron as seen in the right of \fig\ref{fig:theory_w_pdg}
 with an average value of $2.085\pm0.042\GeV$ \cite{PDG:2014}.
 Roughly 1/3 of of the time the \dubya~decays approximately 
 evenly into each of the three lepton generations (ignoring kinematics),
-as expected lepton universality,  
+as expected from lepton universality,  
 indicated by the shared coupling of \eqn\eqref{eq:couplings_wleptons}.
 The leptonic decays of the \dubya~result in a charged lepton 
 with the same charge as the parent \dubya~(as dictated by charge conservation)
@@ -1129,7 +1159,7 @@ $m_H = 125.09 \pm 0.21 (\textrm{Stat.}) \pm 0.11 (\textrm{Syst.})\GeV$
 Detailed studies of the spin \cite{Aad2013120,Khachatryan:2014kca},
 width \cite{Aad:2015xua,Khachatryan:2014iha},
 and couplings \cite{ATLAS-CONF-2015-044} are all consistent
-with the Higgs boson of the SM.
+with the single Higgs boson of the SM.
 
 \begin{figure}
 \centering
@@ -1251,7 +1281,7 @@ the radiation of a Higgs boson off another particle (in this case a $W$ boson). 
 is sometimes referred to as ``Higgsstrahlung'', by analogy 
 with electron Bremsstrahlung where an electron radiates a photon.} where 
 the Higgs decays to two
-$W$ bosons (resonant production). 
+$W$ bosons (resonant, but off-shell, production). 
 The relevant
 tree-level Feynman diagrams for this production process are shown in 
 \fig\ref{fig:theory_feynman_www}.
@@ -1313,7 +1343,7 @@ listed in \tab\ref{tab:theory_wdecay}.  The expected $WWW$ branching
 fractions are thus summarized in the pie chart in \fig\ref{fig:branching_fractions}.
 For this thesis, we are primarily interested in the final state
 where each $W$ boson decays leptonically (the fully-leptonic final state) 
-which has the smallest branching fraction at roughly 3.5\%.
+which has the smallest overall branching fraction at roughly 3.5\%.
 In fact, since the $\tau$ leptons have a short lifetime, we choose to 
 omit $W$ decays to $\tau$ leptons from our fully-leptonic
 definition as well. This further reduces the fully-leptonic 
@@ -1344,9 +1374,9 @@ But, as we continue to probe higher energy scales,
 there is reason to believe that the SM's luck will run out.
 If history is any guide, the SM is simply
 an approximation of a larger theory whose details are not relevant
-relevant at current energies.
+at current energies.
 Indeed, the SM leaves important questions unanswered (for example, 
-the hierarchy problem) that could be explained
+a description of dark matter) that could be explained
 by the observation of some new high energy phenomena.  %more detail
 
 This idea of the SM as an approximate theory
@@ -1374,7 +1404,7 @@ leaving behind contact interactions between the SM fields and factors
 of $\Lambda^{n-4}$ in the denominator.
 These factors of $\Lambda$ suppress the new terms
 with respect to the SM, with the suppression becoming stronger as $n$ grows.
-Thus, only the first terms in the summation
+Thus, typically, only the first terms in the summation
 over $n$ are important at low energy.
 
 The list of possible gauge-invariant EFT operators to 
