@@ -14,7 +14,7 @@ vconnect ("fermion", __v1, __o1);
 vconnect ("fermion", __o2, __v1);
 vlabel ("$W^+$", __i1);
 vlabel ("$u_L$", __o1);
-vlabel ("$\overline {d}_R$", __o2);
+vlabel ("$d_L$", __o2);
 vfreeze;
 vdraw;
 endsubgraph;

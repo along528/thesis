@@ -91,7 +91,7 @@ The particles can be distinguished
 by their charges and masses.
 The charges describe how (and if) the particles participate in
 different interactions.
-Those fermions with electric charge (all but the neutrinos) 
+Those fermions with electric charge 
 participate in the electromagnetic
 interactions. The quarks have color charge (sometimes 
 just called color), which allows them to 
@@ -154,14 +154,61 @@ The SM can be written down using a lagrangian of the form
 \curlyl_{\textrm{SM}} = \curlyl_{\textrm{QCD}} + \curlyl_{\textrm{EW}} + \curlyl_{\textrm{EWSB}}
 \label{eq:lagrangian_sm}
 \end{equation}
-which satisfies global and local gauge invariance.
+which is gauge invariant.
 From this, one can calculate all of the fundamental interactions of the SM.
 As written, the SM lagrangian can be split up into separate terms describing the
-QCD, EW, and EWSB behavior. 
-The details of each term are described in more detail below.
+QCD, EW, and EWSB behavior; they are discussed in \sec\ref{sec:theory_qcd} and
+\sec\ref{sec:theory_ew}.
+The fundamental interactions can be used (like the pieces of a puzzle)
+to build quantum mechanical amplitudes for some process 
+with a given initial and final state. 
+This amplitude, along with phase space considerations, can then be used
+to determine the cross-section, $\sigma$, for the process. The cross-section
+is the observable which we measure.
+
+
+In general there are an infinite number of configurations of the fundamental
+interactions which can be used to describe a given initial and final state where
+each configuration contributes a separate term to the amplitude. 
+Fortunately,
+as long as the coupling parameters of the fundamental interactions are small
+(as is usually the case) then only the simplest terms are important.
+This is the method of perturbation theory.  
+Most predictions of quantum field theory phenomena rely on approximate calculations
+using perturbation theory. Say a given fundamental interaction has a coupling 
+parameter, $0 < \alpha < 1$. The simplest ``tree-level'' interactions
+involve just one factor of the coupling. 
+These are referred to as 
+Leading-Order (LO) interactions.
+Combining two interactions 
+is proportional to $\alpha^2$ and is referred to as Next-To-Leading-Order (NLO).
+This can be continued to Next-To-Next-To-Leading-Order (NNLO), which is 
+proportional to $\alpha^3$, and so on \emph{ad infinitum}.
+Since $0 < \alpha < 1$, terms with higher powers of $\alpha$ are suppressed
+and can be ignored if one is willing to sacrifice some precision. In fact,
+usually the LO prediction is good enough. This applies separately to 
+both the EW and QCD\footnote{Though this can break down for some
+regimes in QCD as descrbed in \sec\ref{sec:theory_qcd}.}
+interactions as well as combinations of the two. 
+
+
+
+That is, they can often be approximated with simple ``tree-level'' interactions,
+using just one instance of the interactions in \fig\ref{fig:feynman_qcd},
+which involve only one factor of the coupling.  
+Such a procedure is only useful if $\alpha_s < 1$ such that higher order
+terms become smaller in magnitude and thus less important. Such a procedure
+is applied not just in QCD calculations, but also in calculations
+of the Electroweak theory as in \sec\ref{sec:theory_ew}.
+%rewrite lagrangian to refer to alpha_s?
+In QCD, however, the growth of $\alpha_s$ at low energies because of asymptotic
+freedom means that eventually $\alpha_s > 1$ and perturbation theory is no longer
+valid. In that case, alternative approaches, like numerical lattice QCD
+calculations must be employed.
 
 
 \subsection{Quantum Chromodynamics}
+\label{sec:theory_qcd}
 
 %Mention Gell-Mann...
 
@@ -195,25 +242,81 @@ value of nine when considering just the permutations, down to eight
 when eliminating the colorless configuration.}
 
 
+\unitlength = 0.4mm %necessary for feynmp
+\begin{figure}[ht]
+\centering
+\vspace{5 mm}
+~~~~~\begin{fmffile}{feynggg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{gluon}{i1,v1}
+			\fmf{gluon}{v1,o1}
+			\fmf{gluon}{v1,o2}
+			\fmflabel{$G$}{i1}
+			\fmflabel{$G$}{o1}
+			\fmflabel{$G$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feyngggg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{gluon}{i1,v1}
+			\fmf{gluon}{i2,v1}
+			\fmf{gluon}{v1,o1}
+			\fmf{gluon}{v1,o2}
+			\fmflabel{$G$}{i1}
+			\fmflabel{$G$}{i2}
+			\fmflabel{$G$}{o1}
+			\fmflabel{$G$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feyngqq}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{gluon}{i1,v1}
+			\fmf{fermion}{v1,o1}
+			\fmf{fermion}{o2,v1}
+			\fmflabel{$G$}{i1}
+			\fmflabel{$q$}{o1}
+			\fmflabel{$q$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagrams of QCD describing the interactions
+between gluon and quark fields. The gluons and quarks can in general
+have different colors.}
+\label{fig:feynman_qcd}
+\end{figure}
+
+
 
 The QCD term in the SM lagrangian can be written as
 \begin{equation}
 \begin{aligned}
 \curlyl_{\textrm{QCD}} = &-\frac{1}{4}G^a_{\mu\nu} G_a^{\mu\nu} 
-                         -g_s \Big( \overline{q}_{\overline{c}} \gamma^{\mu} T_a q_{\overline{c}} \Big) G_{\mu}^a \\
+                         -g_s \Big( \overline{q}_{\overline{c}} \gamma^{\mu} T_a q_{c} \Big) G_{\mu}^a \\
 			 &+\overline{q}_{\overline{c}}\Big( i\gamma^{\mu} \partial_{\mu} - m\Big) q_c
 \end{aligned}
 \label{eq:lagrangian_qcd}
 \end{equation}
-The first two terms describe the kinetic energies of the gluons
-along with the self-interactions of the gluons and their interactions
-with the quarks. The last term describes the
-kinetic energy and masses of the quarks fields.
-where quark fields are represented by $q_c$, with an implied sum over the
+The first term describes the kinetic energies of the gluons
+and their self-interactions while the second term describes the 
+interactions between the the gluons and
+quarks.
+They can be identified with the Feynman diagrams in
+\fig\ref{fig:feynman_qcd}. 
+and the last term describes the
+kinetic energy and masses of the quarks.
+The quark fields are represented by $q_c$, with an implied sum over the
 three different colors, indexed by $c$, and the gluon fields are represented
 by $G_{\mu}^a$, where there is also an implied sum over the eight
 different gluon fields, indexed by $a$. The 
-$T_a$ are the generators of \suthree~, represented by the eight Gell-Mann matrices.
+$T_a$ are the generators of \suthree, represented by the eight Gell-Mann matrices.
 Because the theory is non-Abelian, the generators obey the commutation relation
 \begin{equation}
 \Big[T_a,T_b\Big] = i f_{abc} T_c
@@ -231,10 +334,6 @@ group and the $\gamma^{\mu}$ are the Dirac matrices.
 Finally, $g_s$ is the strong coupling and $m$ represents
 the quark masses, which are both parameters of the theory that must
 be determined by experiment.
-The interaction terms among the quarks and gluons result in terms
-like...
-which can be identified with the Feynman diagrams in \fig\ref{fig:feynman_qcd}.
-
 
 
 The strong coupling parameter, $g_s$, is not constant, but instead
@@ -594,12 +693,12 @@ terms where the charged $W$ and lepton fields are present gives
 %\overline{u'}_R W_{\mu}^+ d'_L +
 %\overline{d'}_R W^-_{\mu} u'_L +
 \frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
-\overline{e}_R W_{\mu}^+ \nu_{e,L} +
-\overline{\nu}_{e,R} W^-_{\mu} e_L \\&+
-\overline{\mu}_R W_{\mu}^+ \nu_{\mu,L} +
-\overline{\nu}_{\mu,R} W^-_{\mu} \mu_L \\&+
-\overline{\tau}_R W_{\mu}^+ \nu_{\tau,L} +
-\overline{\nu}_{\tau,R} W^-_{\mu} \tau_L \Big)
+\overline{e}_L W_{\mu}^+ \nu_{e,L} +
+\overline{\nu}_{e,L} W^-_{\mu} e_L \\&+
+\overline{\mu}_L W_{\mu}^+ \nu_{\mu,L} +
+\overline{\nu}_{\mu,L} W^-_{\mu} \mu_L \\&+
+\overline{\tau}_L W_{\mu}^+ \nu_{\tau,L} +
+\overline{\nu}_{\tau,L} W^-_{\mu} \tau_L \Big)
 \end{aligned}
 \label{eq:couplings_wleptons}
 \end{equation}
@@ -613,12 +712,12 @@ of the quark sector look similar:
 %\overline{u'}_R W_{\mu}^+ d'_L +
 %\overline{d'}_R W^-_{\mu} u'_L +
 \frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
-\overline{u}_R W_{\mu}^+ d_{L} +
-\overline{d}_{R} W^-_{\mu} u_L \\&+
-\overline{c}_R W_{\mu}^+ s_{L} +
-\overline{s}_{R} W^-_{\mu} c_L \\&+
-\overline{t}_R W_{\mu}^+ b_{L} +
-\overline{b}_{,R} W^-_{\mu} t_L \Big)
+\overline{u}_L W_{\mu}^+ d_{L} +
+\overline{d}_{L} W^-_{\mu} u_L \\&+
+\overline{c}_L W_{\mu}^+ s_{L} +
+\overline{s}_{L} W^-_{\mu} c_L \\&+
+\overline{t}_L W_{\mu}^+ b_{L} +
+\overline{b}_{L} W^-_{\mu} t_L \Big)
 \end{aligned}
 \end{equation}
 These terms correspond to the Feynman diagrams at the bottom
@@ -647,7 +746,7 @@ to be produced to directly at a hadron collider.
 			%\fmflabel{$e_L,\mu_L,\tau_L$}{o1}
 			%\fmflabel{$\overline{\nu}_{e,R},\overline{\nu}_{\mu,R},\overline{\nu}_{\tau,R}$}{o2}
 			\fmflabel{$e_L$}{o1}
-			\fmflabel{$\overline{\nu}_{e,R}$}{o2}
+			\fmflabel{$\nu_{e,L}$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -661,7 +760,7 @@ to be produced to directly at a hadron collider.
 			\fmflabel{$W^-$}{i1}
 			%\fmflabel{$\overline{e}_R,\overline{\mu}_{R},\overline{\tau}_R$}{o1}
 			%\fmflabel{$\nu_{e,L},\nu_{\mu,L},\nu_{\tau,L}$}{o2}
-			\fmflabel{$\overline{e}_R$}{o1}
+			\fmflabel{$e_L$}{o1}
 			\fmflabel{$\nu_{e,L}$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
@@ -678,7 +777,7 @@ to be produced to directly at a hadron collider.
 			%\fmflabel{$u_L,c_L,t_L$}{o1}
 			%\fmflabel{$\overline{d}_R,\overline{s}_R,\overline{b}_R$}{o2}
 			\fmflabel{$u_L$}{o1}
-			\fmflabel{$\overline{d}_R$}{o2}
+			\fmflabel{$d_L$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -692,7 +791,7 @@ to be produced to directly at a hadron collider.
 			\fmflabel{$W^-$}{i1}
 			%\fmflabel{$\overline{u}_R,\overline{c}_R,\overline{t}_R$}{o1}
 			%\fmflabel{$d_L,s_L,b_L$}{o2}
-			\fmflabel{$\overline{u}_R$}{o1}
+			\fmflabel{$u_L$}{o1}
 			\fmflabel{$d_L$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}

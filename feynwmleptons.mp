@@ -13,7 +13,7 @@ vconnect ("photon", __i1, __v1);
 vconnect ("fermion", __o1, __v1);
 vconnect ("fermion", __v1, __o2);
 vlabel ("$W^-$", __i1);
-vlabel ("$\overline {e}_R$", __o1);
+vlabel ("$e_L$", __o1);
 vlabel ("$\nu _{e,L}$", __o2);
 vfreeze;
 vdraw;
