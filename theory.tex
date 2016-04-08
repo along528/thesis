@@ -687,7 +687,7 @@ terms where the charged $W$ and lepton fields are present gives
 \begin{aligned}
 %\overline{u'}_R W_{\mu}^+ d'_L +
 %\overline{d'}_R W^-_{\mu} u'_L +
-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
+-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
 \overline{e}_L W_{\mu}^+ \nu_{e,L} +
 \overline{\nu}_{e,L} W^-_{\mu} e_L \\&+
 \overline{\mu}_L W_{\mu}^+ \nu_{\mu,L} +
@@ -706,7 +706,7 @@ of the quark sector look similar:
 \begin{aligned}
 %\overline{u'}_R W_{\mu}^+ d'_L +
 %\overline{d'}_R W^-_{\mu} u'_L +
-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
+-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
 \overline{u}_L W_{\mu}^+ d_{L} +
 \overline{d}_{L} W^-_{\mu} u_L \\&+
 \overline{c}_L W_{\mu}^+ s_{L} +
@@ -1592,21 +1592,29 @@ besides the SM), we get
 where we have introduced the new arbitrary couplings $f_{S,0}$ and $f_{S,1}$.
 Note that the subscript notation for these operators is different 
 from the one used in \eqn\eqref{eq:lagrangian_eft_gen} and \eqn\eqref{eq:lagrangian_eft}.
-Expanding this out we get...
-These modify the SM QGC interactions of \eqn\eqref{eq:lagrangian_qgc}
-and \fig\ref{fig:theory_feynman_couplings_qgc}
-to produce new aQGC interactions $W^+W^-W^+W^-$, $W^+W^-ZZ$, and $ZZZZ$.
-%that do not depend on the gauge boson momenta (do I care?).
-In this thesis, we are interested only in the aQGC
-interaction term involving $W^+W^-W^+W^-$, which predicts  
-a new tree level diagram for the $WWW$ production process similar to the SM QGC
-production of this process in \fig\ref{fig:theory_feynman_couplings_qgc}.
-If real, such a modification would enhance the predicted 
-cross-section in \eqn\eqref{eq:www_total_xsec}.
+Expanding these new terms gives additional quartic interactions between 
+the EW gauge bosons. If we just keep those with interactions between
+the charged EW gauge bosons we get the new interaction terms
+\begin{equation}
+\frac{1}{16} g^4 v^4 \Big(  \frac{f_{S,0}}{\Lambda^4}~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} + \frac{f_{S,1}}{\Lambda^4}~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu} \Big) 
+\end{equation}
+where $v = 246 \GeV$ is the Higgs vacuum expectation value \cite{PDG:2014}.
+These modify the couplings of 
+the charged SM QGC interaction in \eqn\eqref{eq:lagrangian_qgc}
+and \fig\ref{fig:theory_feynman_couplings_qgc}. 
+to obtain the new charged interaction term
+\begin{equation}
+\begin{aligned}
+\frac{g^2}{2}\Bigg[&\Big(1 +  \frac{1}{8} g^2 v^4~ \frac{f_{S,0}}{\Lambda^4} \Big) ~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\&- \Big( 1 - \frac{1}{8} g^2 v^4~\frac{f_{S,1}}{\Lambda^4}\Big) ~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}\Bigg] 
+\end{aligned}
+\end{equation}
+Such a modification enhances the predicted 
+cross-section in \eqn\eqref{eq:www_total_xsec}. This is described in more
+detail later in \sec\ref{sec:aqgc_signal}.
 
 An alternative set of couplings, $\alpha_4$ and $\alpha_5$, are sometimes also used
 which can be related to $f_{S,0}$ and $f_{S,1}$ via a simple linear transformation \cite{Baak:2013fwa}. 
-For the $WWWW$ vertex this is 
+For the charged interaction vertex this is 
 \begin{equation}
 \begin{aligned}
 \alpha_4 &= \frac{f_{S,0}}{\Lambda^4} \frac{v^4}{8} \\
@@ -1614,7 +1622,6 @@ For the $WWWW$ vertex this is
 \end{aligned}
 \label{eq:alpha45}
 \end{equation}
-where $v = 246 \GeV$ is the Higgs vacuum expectation value \cite{PDG:2014}.
 
 
 %By definition, the EFT approach is expected to break for energies greater than $\Lambda$. Thus the issue arises of what energy $\Lambda$ corresponds to.
