@@ -193,20 +193,6 @@ interactions as well as combinations of the two.
 
 
 
-That is, they can often be approximated with simple ``tree-level'' interactions,
-using just one instance of the interactions in \fig\ref{fig:feynman_qcd},
-which involve only one factor of the coupling.  
-Such a procedure is only useful if $\alpha_s < 1$ such that higher order
-terms become smaller in magnitude and thus less important. Such a procedure
-is applied not just in QCD calculations, but also in calculations
-of the Electroweak theory as in \sec\ref{sec:theory_ew}.
-%rewrite lagrangian to refer to alpha_s?
-In QCD, however, the growth of $\alpha_s$ at low energies because of asymptotic
-freedom means that eventually $\alpha_s > 1$ and perturbation theory is no longer
-valid. In that case, alternative approaches, like numerical lattice QCD
-calculations must be employed.
-
-
 \subsection{Quantum Chromodynamics}
 \label{sec:theory_qcd}
 
@@ -384,14 +370,26 @@ great precision,
 this is not true of the partons. Instead, the individual
 parton momenta can only be known with some probability.
 These are governed by the parton distribution functions (PDF),
-$f_i(x,Q^2)$, where $x$ ranges from $0<x<1$ and is the fraction of 
+$f_i(x,~\mu_R^2,~\mu_F^2)$, where $x$ ranges from $0<x<1$ and is the fraction of 
 the parton momentum 
-with respect to the total proton momentum, $Q^2$ is the positive square
-of the characteristic energy in the interaction, and $i$ indexes the parton
-that the PDF refers to.
-For a given $Q^2$, the overall probability must of course sum to unity, such that
+with respect to the total proton momentum, $i$ indexes the parton
+that the PDF refers to, 
+$\mu_R$ is the renormalization scale which is necessary for
+removing divergences inherent in perturbation theory applied to QCD, and 
+$\mu_F$ is the factorization scale which separates the non-peturbative
+regime describing the hadronization from the perturbative regime
+relevant for the partonic hard-scattering cross-section.
+The two scales are both in units of energy 
+and are usually chosen to be equal to the characterstic
+energy in the interaction\footnote{For example, in Drell-Yan production, 
+a natural scale to choose for would be $\mu_R = \mu_F = m_Z$.},
+though this choice does introduce an additional uncertainty which
+is usually tested by varying both scales independently.
+
+The overall probability must of course sum to unity, such that
+tor some given choice of scales, 
 \begin{equation}
-\sum_i \int_0^1 \mathrm{d}x~x f_i(x,Q^2) = 1
+\sum_i \int_0^1 \mathrm{d}x~x f_i(x,~\mu_R^2,~\mu_F^2) = 1
 \end{equation}
 where note that the sum over $i$ is taken over all possible partons;
 this includes all quark (and anti-quark) flavors (though the more massive quarks 
@@ -402,34 +400,38 @@ In the case of the proton, the valence quark composition is
 two up quarks and a down quark.
 This translates to the requirements 
 \begin{align}
-\int \mathrm{dx} (f_u(x,Q^2) - f_{\overline{u}}(x,Q^2) ) &= 2 \\
-\int \mathrm{dx} (f_d(x,Q^2) - f_{\overline{d}}(x,Q^2) ) &= 1 
+\int \mathrm{dx} (f_u(x,~\mu_R^2,~\mu_F^2) - f_{\overline{u}}(x,~\mu_R^2,~\mu_F^2) ) &= 2 \\
+\int \mathrm{dx} (f_d(x,~\mu_R^2,~\mu_F^2) - f_{\overline{d}}(x,~\mu_R^2,~\mu_F^2) ) &= 1 
 \end{align}
 while the other quark flavors are referred to as sea quarks 
 and follow the requirement
 \begin{equation}
-\int \mathrm{dx} (f_i(x,Q^2) - f_{\overline{i}}(x,Q^2) ) = 0, ~~~~~~~~~ i\neq d,u
+\int \mathrm{dx} (f_i(x,~\mu_R^2,~\mu_F^2) - f_{\overline{i}}(x,~\mu_R^2,~\mu_F^2) ) = 0, ~~~~~~~~~ i\neq d,u
 \end{equation}
 After these requirements, the remaining momentum fraction of the proton
 comes from the gluon PDF, which in the end typically contributes to most
 of the momentum of the proton.
 
-Implicit in the definition of the PDFs are the renormalization and 
-factorization scales, $\mu_R$ and $\mu_F$. These are arbitrary 
-scales which appear in order to remove divergences
-inherent in perturbation theory applied to QCD. Typically, these
-are set to be equal to the scale of the interaction process.\footnote{For 
-example, in Drell-Yan production, a natural scale to choose
-for would be $\mu_R = \mu_F = m_Z$.} This choice of scales
-introduces an inherent uncertainty on the PDF prediction, 
-which is usually tested by varying the two scale choices independently. 
+To determine an overall cross-section, 
+the PDFs can then be used along with the partonic cross-section,
+$\hat{\sigma}$.
+In proton-proton scattering, for instance, 
+the PDFs can be convoluted with the partonic
+cross-section, which is also 
+a function of the parton momenta and the renormalzation and factorization
+scales, in order to obtain an overall cross-section of the form
+\begin{equation}
+\sigma = \sum_i \sum_j \int^1_0 \textrm{d}x_1~\textrm{d}x_2~f_i(x_1,~\mu_R^2,~\mu_F^2)~f_j(x_2,~\mu_R^2,~\mu_F^2) ~\hat{\sigma}_{ij}(x_1,~x_2,~\mu_R^2,~\mu_F^2)
+\end{equation}
+where $x_1$ and $x_2$ are the separate momentum fractions of the partons in the 
+the two incoming protons with partons indexed by $i$ and $j$, respectively.
 
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.9\textwidth]{figures/theory/mstw.eps}
 \caption{Plot of $xf_i(x,Q^2)$ vs $x$ for the MSTW 2008 NLO PDF sets \cite{Martin:2009iq} with 68\% CL 
-eigenvector uncertainties for two different $Q^2$ scales.
+eigenvector uncertainties for two different scales, $Q^2=\mu_R^2=\mu_F^2$.
 The peak in the $f_u$ and $f_d$ distributions is due to the valence
 quark requirements in the proton. The sea quark PDF distributions are shown,
 as is the large gluon PDF, which is scaled down by a factor of 10.  At
@@ -446,7 +448,7 @@ to determine the PDFs.  As a result there are many different
 PDF sets available to choose from, with updates being churned
 out regularly by different physics groups. An example of the
 PDFs for one particular PDF set is shown for two different
-$Q^2$ scales in \fig\ref{fig:pdf_mstw}.
+scales, $Q^2=\mu_R^2=\mu_F^2$, in \fig\ref{fig:pdf_mstw}.
 In general, the predictions from different PDFs agree within a few percent.
 Differences can arise, however, in particular at high energy (high $x$)
 where it is difficult to measure.
@@ -498,13 +500,16 @@ studies in Run-II at HERA, and from recent LHC measurements at ATLAS, CMS, and
 LHCb.
 The uncertainties on the MSTW 2008 and CT10 PDF sets are 
 determined using a Hessian approach while the NNPDF 3.0 PDF set uses
-a Monte Carlo approach.
-The Hessian approach splits the different fit directions into 
-(around 30 to 50) orthonormal eigenvectors which can then be varied independently.
-The Monte Carlo approach produces (around 100 to 1000) PDF set replicas
-that are produced from variations on the input data which can then be used
+a Monte Carlo approach as described in \cite{Botje:2011sn}.
+The Hessian approach constructs a likelihood to determine the PDF central 
+value while the uncertainty is taken from a confidence interval
+that is built from an orthonormal representation of the covariance matrix
+at the minimum of the likelihood.
+The Monte Carlo approach produces PDF set replicas
+that captrue variations on the input data which can then be used
 to calculate distributions for extracting the central value and uncertainties.
-In general, each of the PDF sets are in good agreement with the LHC data.
+In general, each of the PDF sets considered are in good agreement with the LHC data.
+
 
 
 
