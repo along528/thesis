@@ -422,6 +422,7 @@ a function of the parton momenta and the renormalzation and factorization
 scales, in order to obtain an overall cross-section of the form
 \begin{equation}
 \sigma = \sum_i \sum_j \int^1_0 \textrm{d}x_1~\textrm{d}x_2~f_i(x_1,~\mu_R^2,~\mu_F^2)~f_j(x_2,~\mu_R^2,~\mu_F^2) ~\hat{\sigma}_{ij}(x_1,~x_2,~\mu_R^2,~\mu_F^2)
+\label{eq:qcd_fac}
 \end{equation}
 where $x_1$ and $x_2$ are the separate momentum fractions of the partons in the 
 the two incoming protons with partons indexed by $i$ and $j$, respectively.
@@ -1372,6 +1373,12 @@ $W$ bosons from proton-proton collisions:
 $pp\rightarrow\- \Wp\Wp\Wm+X$ and $pp\rightarrow \Wp\Wm\Wm\allowbreak +X$, 
 where $X$ is intended to refer to the fact that no requirements are 
 placed on additional particles produced in the hard interaction.
+The feynman diagrams from \fig\ref{fig:theory_feynman_couplings_qgc},
+\fig\ref{fig:feyn_wcoupling}, and \fig\ref{fig:feynman_higgs}, along
+with their associated lagrangian terms, can be used
+to construct the main contributions to the amplitude for this process. 
+The relevant tree-level Feynman diagrams for this production process are shown in 
+\fig\ref{fig:theory_feynman_www}.
 This is sensitive both
 to the $WWWW$ coupling (non-resonant production) 
 and to associated Higgs production\footnote{Associated Higgs production involves
@@ -1380,9 +1387,6 @@ is sometimes referred to as ``Higgsstrahlung'', by analogy
 with electron Bremsstrahlung where an electron radiates a photon.} where 
 the Higgs decays to two
 $W$ bosons (resonant, but off-shell, production). 
-The relevant
-tree-level Feynman diagrams for this production process are shown in 
-\fig\ref{fig:theory_feynman_www}.
 The Higgs decay results in one $W$ boson being produced off-shell,
 $H\rightarrow WW^*$, making this the leading contribution to off-shell
 production.  
@@ -1403,18 +1407,41 @@ visible at 126~GeV. (make a better plot)}
 
 
 
+In principle, the LO partonic cross-section for the exclusive process, 
+$pp\rightarrow\- \Wp\Wp\Wm$ and $pp\rightarrow \Wp\Wm\Wm$, 
+can be computed by constructing the amplitude from the tree-level
+feynman diagrams in \fig\ref{fig:theory_feynman_www}.  
+The LO total cros-section could then be computed
+from this using \eqn\eqref{eq:qcd_fac}, to account for the quarks 
+originating from the incoming protons.
+This could then be continued to higher orders. 
+In reality, however, it is much more complicated. 
+Other effects like initial and final state photon radiation off of the incoming
+and outgoing fermions end up modifying the kinematic behavior and must
+be considered. At a hadron collider, QCD effects like initial and 
+final state gluon radiation using the diagrams in \fig\ref{fig:feynman_qcd}
+occur as well. The effects of asymptotic freedom and color confinement
+described in \sec\ref{sec:theory_qcd} 
+lead to cascades of hadronization from the radiated
+gluons that are referred to as parton showers. This results in an 
+abundance of residual jets and other hadronic activity occuring along
+with the original hard scattering process. 
+This cannot be calculated by hand and is instead simulated
+using Monte Carlo (MC).
 
-The cross-section for this process can be computed at 
-NLO in QCD
-(Mention more details of how this is computed like PDFs,
-hadronization, interaction, radiation, decays. Use one of the 
-Feynman diagrams)
-Using the \madgraph~generator finds an inclusive cross-section of 
+
+The inclusive cross-section for this process is computed at 
+NLO in QCD, after accounting for initial and 
+final state radiation, parton showering, and other effects,
+using the \madgraph~generator. It finds an inclusive cross-section of 
 \begin{equation}
 \sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb}
 \label{eq:www_total_xsec}
 \end{equation}
 where the uncertainty is purely statistical.
+Additional uncertainties
+on the PDF and scale choices increase the uncertainty by only a few
+percent.
 The contribution from resonant production is computed separately
 and found to make up about 64\% of the 
 total inclusive cross-section.
