@@ -1506,7 +1506,7 @@ by the observation of some new high energy phenomena.  %more detail
 
 This idea of the SM as an approximate theory
 can be made explicit 
-using an Effective Field Theory (EFT) \cite{Pich:1998xt}
+using an Effective Field Theory (EFT) \cite{Degrande:2012wf}
 approach which includes new terms in the lagrangian, in addition to the SM.
 As a function of the energy, these terms start small 
 but become increasingly important at higher and higher energies.
@@ -1589,7 +1589,18 @@ besides the SM), we get
 \end{aligned}
 \label{eq:lagrangian_aqgc}
 \end{equation}
-where we have introduced the new arbitrary couplings $f_{S,0}$ and $f_{S,1}$.
+where we have introduced the new arbitrary couplings $f_{S,0}$ 
+and $f_{S,1}$\footnote{An alternative set of couplings, $\alpha_4$ and $\alpha_5$, are sometimes also used
+which can be related to $f_{S,0}$ and $f_{S,1}$ via a simple linear transformation \cite{Baak:2013fwa}. 
+For the charged interaction vertex this is 
+\begin{equation}
+\begin{aligned}
+\alpha_4 &= \frac{f_{S,0}}{\Lambda^4} \frac{v^4}{8} \\
+\alpha_4 + 2~\alpha_5 &= \frac{f_{S,1}}{\Lambda^4} \frac{v^4}{8}
+\end{aligned}
+\label{eq:alpha45}
+\end{equation}
+where $v=246~\GeV$ is the Higgs vacuum expectation value \cite{PDG:2014}.}.
 Note that the subscript notation for these operators is different 
 from the one used in \eqn\eqref{eq:lagrangian_eft_gen} and \eqn\eqref{eq:lagrangian_eft}.
 Expanding these new terms gives additional quartic interactions between 
@@ -1612,36 +1623,63 @@ Such a modification enhances the predicted
 cross-section in \eqn\eqref{eq:www_total_xsec}. This is described in more
 detail later in \sec\ref{sec:aqgc_signal}.
 
-An alternative set of couplings, $\alpha_4$ and $\alpha_5$, are sometimes also used
-which can be related to $f_{S,0}$ and $f_{S,1}$ via a simple linear transformation \cite{Baak:2013fwa}. 
-For the charged interaction vertex this is 
+
+In principle, the EFT is only valid below the energy scale, $\Lambda$, 
+though we cannot know this scale directly as we are only able to probe
+the ratios with the coupling, $f_{S,0}/\Lambda^4$ and $f_{S,1}/\Lambda^4$.
+Above $\Lambda$ the EFT breaks down and can lead to unitarity violation.
+In fact, for the operators with dimension $n=8$ in particular, 
+the strength of the couplings rises
+so rapidly with energy that unitarity violation can occur
+at energies well within the accessible
+range of the LHC.  Thus, as is 
+this limits the applicability of the EFT framework.
+Currently, an effort to reconcile EFT with unitarity is ongoing
+in the theoretical community. 
+One promising method is $k$-matrix unitarization, which introduces
+minimal model dependence, though it is only available for quasi-elastic
+$VV\rightarrow VV$ processes \cite{Kilian:2014zja}. It is not currently
+understood how this applies to $V\rightarrow VVV$ processes 
+relevant for aQGCs from EFT in $WWW$ production. Thus, if we 
+are to employ a unitarized EFT framework an alternative method must
+be used.
+
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/signal_section/Unitarity_check.eps}  
+  \caption{The unitarized and non-unitarized differential cross
+    sections as a function of $\sqrt{s}$ for the EFT prediction
+    with $f_{S,0}/\Lambda^4
+    = 6\times 10^{-7}~\GeV^{-4}$ divided by the SM values. The
+    form factor function from \eqn\eqref{eq:form_factor}
+    with $n=1$ and $\Lambda_{U} =$ 180~\GeV~is
+    used for unitarization.  }
+\label{fig:unitarity_example}
+\end{figure}
+
+
+In order to unitarize the EFT predictions we apply a form factor
+to the aQGC parameters of the form
 \begin{equation}
-\begin{aligned}
-\alpha_4 &= \frac{f_{S,0}}{\Lambda^4} \frac{v^4}{8} \\
-\alpha_4 + 2~\alpha_5 &= \frac{f_{S,1}}{\Lambda^4} \frac{v^4}{8}
-\end{aligned}
-\label{eq:alpha45}
-\end{equation}
-
-
-%By definition, the EFT approach is expected to break for energies greater than $\Lambda$. Thus the issue arises of what energy $\Lambda$ corresponds to.
-
-Unitarity...
-
-mention form factor and k-matrix unitarization schemes, and 
-challenges of comparisons. might even cite pdg complaints about 
-this.
-%not UV complete
-%effective lagrangian (could be used elsewhere to refer to the eft lagrangian)
-%the effect from unitarity violation typically sets in earlier due to the higher exponent in Lambda in the denominator. 
-%
-%Unitarity violation is somehow related to how we can choose Lambda
-\begin{equation}
-f(s) = \Big( 1 + \frac{s}{\Lambda^2} \Big)^{-n}
+f(s) = \frac{1}{\Big( 1 + \frac{s}{\Lambda_U^2} \Big)^{n}}
 \label{eq:form_factor}
 \end{equation}
+according to the approach from \cite{Eboli:2003nq}, 
+where $s$ is the center-of-mass energy squared, $n$ is an arbitrary
+exponent, and $\Lambda_U$ is a new arbitrary energy scale.
+These two new arbitrary parameters, $n$ and $\Lambda_U$, 
+introduce a model dependence into the EFT. The effect of the form
+factor is to reduce the differential cross-section as a
+function of the center of mass energy, which becomes more severe
+for increasing $n$ and decreasing $\Lambda_U$.
+This can be seen as applied to one particular choice of aQGC
+and unitarization parameters in \fig\ref{fig:unitarity_example}.
+The unitarization
+scheme has also been employed recently in \cite{PhysRevLett.115.031802}.
+The choice of unitarization parameters and their impact on the 
+aQGC cross-sections for the $WWW$ process are discussed in more detail
+in \sec\ref{sec:aqgc_signal}.
 
-%look at email from VBFNLO authors. mention that  this is the best we can do
 
 
 \section{Status of QGC Measurements and aQGC Limits}
