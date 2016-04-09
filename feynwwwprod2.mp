@@ -17,7 +17,7 @@ vconnect ("dashes,label=$H^0$", __v2, __v3);
 vconnect ("photon", __v3, __o2);
 vconnect ("photon", __v3, __o3);
 vlabel ("$q$", __i1);
-vlabel ("$\overline {q}'$", __i2);
+vlabel ("$q'$", __i2);
 vlabel ("$W^+$", __o1);
 vlabel ("$W^-$", __o2);
 vlabel ("$W^+$", __o3);

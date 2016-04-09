@@ -23,7 +23,7 @@ testpdflatex:
 	pdflatex  ${BASENAME}
 	#for compiling feynman diagrams
 	#on the first processing of a diagram make needs to be run twice
-	#$(foreach feyn,$(wildcard *.mp),$(MPOST) $(feyn);)
+	$(foreach feyn,$(wildcard *.mp),$(MPOST) $(feyn);)
 	pdflatex  ${BASENAME}
 	bibtex    ${BASENAME}
 	pdflatex  ${BASENAME}

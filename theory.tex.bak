@@ -18,6 +18,30 @@
 % anomalous Quartic Gauge Couplings (aQGC)
 % Parton Distribution Function (PDF)
 
+The focus of this thesis is to probe the 
+production of the Standard Model (SM) process with three $W$ bosons
+produced in proton-proton collisions with each decaying leptonically.
+To that end, an introduction to the SM is in order.
+This is presented below with particular
+emphasis on those things which are relevant for the understanding of this
+process, namely Quantum Chromodynamics (QCD) and Parton Distribution
+Functions (PDFs) describing the interactions at a proton-proton 
+collider, and the Electroweak (EW) theory which describes the mechanisms
+of $WWW$ production and decay.
+The SM is well established and has been written about 
+thoroughly since the mid-$20^{\textrm{th}}$ century. 
+So while the $WWW$ process has never been observed, these SM building
+blocks of this process are not new. The descriptions below thus
+rely heavily on those in \cite{commins1983weak}, \cite{halzen2008quark},
+and \cite{cahn2009experimental}.
+
+We also seek to assess our sensitivity to new physics using 
+a contemporary approach to Effective Field Theory (EFT) in the context
+of modifying the SM, with a particular focus on anomalous Quartic
+Gauge Couplings (aQGC). A discussion of this approach is described
+following the description of the SM process.
+
+
 
 \section{The Standard Model}
 
@@ -61,13 +85,13 @@ of particles with identical charges but whose masses increase with each generati
 The generations are labeled in \tab\ref{tab:theory_fermions}. 
 Even though there are three 
 generations in both the lepton and quark sectors, 
-there are no observed SM interactions that link the two, 
+there are no observed direct interactions bewteen the two, 
 thus the quarks and lepton generations should be thought of as separate.
 The particles can be distinguished
 by their charges and masses.
 The charges describe how (and if) the particles participate in
 different interactions.
-Those fermions with electric charge (all but the neutrinos) 
+Those fermions with electric charge 
 participate in the electromagnetic
 interactions. The quarks have color charge (sometimes 
 just called color), which allows them to 
@@ -130,14 +154,48 @@ The SM can be written down using a lagrangian of the form
 \curlyl_{\textrm{SM}} = \curlyl_{\textrm{QCD}} + \curlyl_{\textrm{EW}} + \curlyl_{\textrm{EWSB}}
 \label{eq:lagrangian_sm}
 \end{equation}
-which satisfies global and local gauge invariance.
+which is gauge invariant.
 From this, one can calculate all of the fundamental interactions of the SM.
 As written, the SM lagrangian can be split up into separate terms describing the
-QCD, EW, and EWSB behavior. 
-The details of each term are described in more detail below.
+QCD, EW, and EWSB behavior; they are discussed in \sec\ref{sec:theory_qcd} and
+\sec\ref{sec:theory_ew}.
+The fundamental interactions can be used (like the pieces of a puzzle)
+to build quantum mechanical amplitudes for some process 
+with a given initial and final state. 
+This amplitude, along with phase space considerations, can then be used
+to determine the cross-section, $\sigma$, for the process. The cross-section
+is the observable which we measure.
+
+
+In general there are an infinite number of configurations of the fundamental
+interactions which can be used to describe a given initial and final state where
+each configuration contributes a separate term to the amplitude. 
+Fortunately,
+as long as the coupling parameters of the fundamental interactions are small
+(as is usually the case) then only the simplest terms are important.
+This is the method of perturbation theory.  
+Most predictions of quantum field theory phenomena rely on approximate calculations
+using perturbation theory. Say a given fundamental interaction has a coupling 
+parameter, $0 < \alpha < 1$. The simplest ``tree-level'' interactions
+involve just one factor of the coupling. 
+These are referred to as 
+Leading-Order (LO) interactions.
+Higher order interactions 
+involving two powers of the coupling, 
+$\alpha^2$ are referred to as Next-To-Leading-Order (NLO).
+This can be continued to Next-To-Next-To-Leading-Order (NNLO), which is 
+proportional to $\alpha^3$, and so on \emph{ad infinitum}.
+Since $0 < \alpha < 1$, terms with higher powers of $\alpha$ are suppressed
+and can be ignored if one is willing to sacrifice some precision. In fact,
+usually the LO prediction is good enough. This applies separately to 
+both the EW and QCD\footnote{Though this can break down for some
+regimes in QCD as descrbed in \sec\ref{sec:theory_qcd}.}
+interactions as well as combinations of the two. 
+
 
 
 \subsection{Quantum Chromodynamics}
+\label{sec:theory_qcd}
 
 %Mention Gell-Mann...
 
@@ -162,13 +220,64 @@ Each gluon possesses one
 color and one anti-color (for example, there exist anti-red blue gluons).
 This results in eight independent 
 colored gluons.\footnote{The anti-red red, anti-blue
-blue, and anti-green green configurations are considered colorless.
-From these three configurations, three 
-independent linear combinations can be made, two of which do possess 
-color and third
+blue, and anti-green green configurations 
+form three independent linear combinations, two of which possess 
+color and a third
 which does not. This reduces the number of gluons from the naive
 value of nine when considering just the permutations, down to eight
 when eliminating the colorless configuration.}
+
+
+\unitlength = 0.4mm %necessary for feynmp
+\begin{figure}[ht]
+\centering
+\vspace{5 mm}
+~~~~~\begin{fmffile}{feynggg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{gluon}{i1,v1}
+			\fmf{gluon}{v1,o1}
+			\fmf{gluon}{v1,o2}
+			\fmflabel{$G$}{i1}
+			\fmflabel{$G$}{o1}
+			\fmflabel{$G$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feyngggg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{gluon}{i1,v1}
+			\fmf{gluon}{i2,v1}
+			\fmf{gluon}{v1,o1}
+			\fmf{gluon}{v1,o2}
+			\fmflabel{$G$}{i1}
+			\fmflabel{$G$}{i2}
+			\fmflabel{$G$}{o1}
+			\fmflabel{$G$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
+\begin{fmffile}{feyngqq}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1}
+			\fmfright{o1,o2}
+			\fmf{gluon}{i1,v1}
+			\fmf{fermion}{v1,o1}
+			\fmf{fermion}{o2,v1}
+			\fmflabel{$G$}{i1}
+			\fmflabel{$q$}{o1}
+			\fmflabel{$q$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+\vspace{2 mm}
+\caption{Feynman diagrams of QCD describing the interactions
+between gluon and quark fields. The gluons and quarks can in general
+have different colors.}
+\label{fig:feynman_qcd}
+\end{figure}
 
 
 
@@ -176,20 +285,24 @@ The QCD term in the SM lagrangian can be written as
 \begin{equation}
 \begin{aligned}
 \curlyl_{\textrm{QCD}} = &-\frac{1}{4}G^a_{\mu\nu} G_a^{\mu\nu} 
-                         -g_s \Big( \overline{q}_{\overline{c}} \gamma^{\mu} T_a q_{\overline{c}} \Big) G_{\mu}^a \\
+                         -g_s \Big( \overline{q}_{\overline{c}} \gamma^{\mu} T_a q_{c} \Big) G_{\mu}^a \\
 			 &+\overline{q}_{\overline{c}}\Big( i\gamma^{\mu} \partial_{\mu} - m\Big) q_c
 \end{aligned}
 \label{eq:lagrangian_qcd}
 \end{equation}
-The first two terms describe the kinetic energies of the gluons
-along with the self-interactions of the gluons and their interactions
-with the quarks. The last term describes the
-kinetic energy and masses of the quarks fields.
-where quark fields are represented by $q_c$, with an implied sum over the
+The first term describes the kinetic energies of the gluons
+and their self-interactions while the second term describes the 
+interactions between the the gluons and
+quarks.
+They can be identified with the Feynman diagrams in
+\fig\ref{fig:feynman_qcd}. 
+and the last term describes the
+kinetic energy and masses of the quarks.
+The quark fields are represented by $q_c$, with an implied sum over the
 three different colors, indexed by $c$, and the gluon fields are represented
 by $G_{\mu}^a$, where there is also an implied sum over the eight
 different gluon fields, indexed by $a$. The 
-$T_a$ are the generators of \suthree~, represented by the eight Gell-Mann matrices.
+$T_a$ are the generators of \suthree, represented by the eight Gell-Mann matrices.
 Because the theory is non-Abelian, the generators obey the commutation relation
 \begin{equation}
 \Big[T_a,T_b\Big] = i f_{abc} T_c
@@ -207,24 +320,24 @@ group and the $\gamma^{\mu}$ are the Dirac matrices.
 Finally, $g_s$ is the strong coupling and $m$ represents
 the quark masses, which are both parameters of the theory that must
 be determined by experiment.
-The interaction terms among the quarks and gluons result in terms
-like...
-which can be identified with the Feynman diagrams in \fig\ref{fig:feynman_qcd}.
-
 
 
 The strong coupling parameter, $g_s$, is not constant, but instead
 changes as a function of the energy of the interaction. The self-interactions
-of the gluons, seen in \fig\ref{fig:feynman_qcd} and the number of 
+of the gluons, seen in \fig\ref{fig:feynman_qcd}, and the number of 
 quark flavors, listed in \tab\ref{tab:theory_fermions},
 results in the peculiar property that $g_s$ decreases with increasing energy 
 (or equivalently, decreasing distance).
-This is the property of asymptotic freedom (cite), 
-where inside a bound state (low energy), the quarks behave essentially
-as free particles while if in isolation they interact strongly with the 
+This is the property of asymptotic freedom \cite{Gross:1973id,Politzer:1973fx}, 
+where when probing a proton or other hadronic bound state at high energy, 
+the quarks behave essentially
+as free particles; while on the other hand, 
+if in isolation at low energy, they do not behave as free
+particles but instead interact strongly with the 
 vacuum. 
-This has tremendous consequences, since it 
-results in the breakdown of perturbative QCD at low energy
+This has tremendous consequences, since the strong
+coupling parameter can grown until perturbative QCD breaks down
+at low energy
 and since it is believed to be the cause 
 of ``color confinement''.
 The principle of ``color confinement'' states that
@@ -232,8 +345,10 @@ only colorless objects can be observed in nature. Thus, quarks and gluons can
 never be observed directly. Furthermore, hadronic bound states,
 themselves comprised of colored quarks and gluons, are restricted
 to colorless configurations. The simplest colorless hadronic configurations
-are mesons (for example, the $\pi^0$) and baryons (for example, the neutron),
-although more complex configurations have recently been discovered (cite).
+are mesons (for example, the $\pi^0$) and baryons (for example, the proton 
+and neutron),
+although more complex configurations have been discovered (most
+recently, the pentaquark at LHCb \cite{Aaij:2015tga}).
 Any attempt to split up a hadron into its constituent quarks 
 will fail, with the quarks forming new hadrons from quark-antiquark
 pairs pulled from the vacuum. This cascade of hadrons 
@@ -241,29 +356,7 @@ breaking up into more hadrons is referred to as ``hadronization''.
 At the Large Hadron Collider (LHC), hadronization frequently occurs
 at a high momentum where the resulting objects are Lorentz boosted 
 into highly collimated collections of hadrons and other particles, called jets. 
-Jets are thus the main observables for probing QCD at the LHC.
-
-Most predictions of QFT phenomena rely on perturbative calculations.
-That is, they can be approximated with simple ``tree-level'' interactions,
-using just one instance of the interactions in \fig\ref{fig:feynman_qcd},
-which involve only one factor of the coupling.  These are referred to as 
-Leading-Order (LO) interactions, which in QCD, involve one power of the
-strong coupling, $\alpha_s$. Combining two interactions 
-is proportional to $\alpha_s^2$ and referred to Next-To-Leading-Order (NLO).
-This can be continued to Next-To-Next-To-Leading-Order (NNLO), which is 
-proportional to $\alpha_s^3$, and so on \emph{ad infinitum}.
-Such a procedure is only useful if $\alpha_s < 1$ such that higher order
-terms become smaller in magnitude and thus less important. Such a procedure
-is applied not just in QCD calculations, but also in calculations
-of the Electroweak theory like in \sec\ref{sec:theory_ew}.
-%rewrite lagrangian to refer to alpha_s?
-In QCD, however, the growth of $\alpha_s$ at low energies because of asymptotic
-freedom means that eventually $\alpha_s > 1$ and perturbation theory is no longer
-valid. In that case, alternative approaches, like numerical lattice QCD
-calculations must be employed.
-
-
-
+Jets are thus one of the main observables for probing QCD at the LHC.
 
 \subsection{Parton Distribution Functions}
 \label{sec:pdf}
@@ -273,59 +366,77 @@ the constituent quarks and gluons of the hadrons, also known as partons, can sti
 be probed. Indeed, in the high energy proton-proton collisions of the LHC, 
 the partons inside the proton participate
 directly in the interactions under study.  However,
-while the momentum and energy of the protons can be known exactly, 
+while the momentum and energy of the protons can be known with
+great precision, 
 this is not true of the partons. Instead, the individual
 parton momenta can only be known with some probability.
 These are governed by the parton distribution functions (PDF),
-$f_i(x,Q^2)$, where $x$ ranges from $0<x<1$ and is the fraction of 
+$f_i(x,~\mu_R^2,~\mu_F^2)$, where $x$ ranges from $0<x<1$ and is the fraction of 
 the parton momentum 
-with respect to the total proton momentum, $Q^2$ is the positive square
-of the momentum transfer in the interaction, and $i$ indexes the parton
-that the PDF refers to.
-For a given $Q^2$, the overall probability must of course sum to unity, such that
+with respect to the total proton momentum, $i$ indexes the parton
+that the PDF refers to, 
+$\mu_R$ is the renormalization scale which is necessary for
+removing divergences inherent in perturbation theory applied to QCD, and 
+$\mu_F$ is the factorization scale which separates the non-peturbative
+regime describing the hadronization from the perturbative regime
+relevant for the partonic hard-scattering cross-section.
+The two scales are both in units of energy 
+and are usually chosen to be equal to the characterstic
+energy in the interaction\footnote{For example, in Drell-Yan production, 
+a natural scale to choose for would be $\mu_R = \mu_F = m_Z$.},
+though this choice does introduce an additional uncertainty which
+is usually tested by varying both scales independently.
+
+The overall probability must of course sum to unity, such that
+tor some given choice of scales, 
 \begin{equation}
-\sum_i \int \mathrm{d}x~x f_i(x) = 1
+\sum_i \int_0^1 \mathrm{d}x~x f_i(x,~\mu_R^2,~\mu_F^2) = 1
 \end{equation}
 where note that the sum over $i$ is taken over all possible partons;
-this includes all quark flavors (though the more massive quarks 
+this includes all quark (and anti-quark) flavors (though the more massive quarks 
 are less important) as well as the gluons.
 A hadron is characterized by its valence quark 
 composition, which places additional requirements on the PDFs. 
-In the case of the proton, the valence quark composition is identified as
+In the case of the proton, the valence quark composition is 
 two up quarks and a down quark.
 This translates to the requirements 
 \begin{align}
-\int \mathrm{dx} (f_u(x,Q^2) - f_{\overline{u}}(x,Q^2) ) &= 2 \\
-\int \mathrm{dx} (f_d(x,Q^2) - f_{\overline{d}}(x,Q^2) ) &= 1 
+\int \mathrm{dx} (f_u(x,~\mu_R^2,~\mu_F^2) - f_{\overline{u}}(x,~\mu_R^2,~\mu_F^2) ) &= 2 \\
+\int \mathrm{dx} (f_d(x,~\mu_R^2,~\mu_F^2) - f_{\overline{d}}(x,~\mu_R^2,~\mu_F^2) ) &= 1 
 \end{align}
 while the other quark flavors are referred to as sea quarks 
 and follow the requirement
 \begin{equation}
-\int \mathrm{dx} (f_i(x,Q^2) - f_{\overline{i}}(x,Q^2) ) = 0, ~~~~~~~~~ i\neq d,u
+\int \mathrm{dx} (f_i(x,~\mu_R^2,~\mu_F^2) - f_{\overline{i}}(x,~\mu_R^2,~\mu_F^2) ) = 0, ~~~~~~~~~ i\neq d,u
 \end{equation}
 After these requirements, the remaining momentum fraction of the proton
 comes from the gluon PDF, which in the end typically contributes to most
 of the momentum of the proton.
 
-Implicit in the definition of the PDFs are the renormalization and 
-factorization scales, $\mu_R$ and $\mu_F$. These are arbitrary 
-scales which appear in order to remove divergences
-inherent in perturbation theory applied to QCD. Typically, these
-are set to be equal to the scale of the interaction process.\footnote{For 
-example, in Drell-Yan production, a natural scale to choose
-for would be $\mu_R = \mu_F = m_Z$.} This choice of scales
-introduces an inherent uncertainty on the PDF prediction, 
-which is usually tested by varying the two scale choices independently. 
+To determine an overall cross-section, 
+the PDFs can then be used along with the partonic cross-section,
+$\hat{\sigma}$.
+In proton-proton scattering, for instance, 
+the PDFs can be convoluted with the partonic
+cross-section, which is also 
+a function of the parton momenta and the renormalzation and factorization
+scales, in order to obtain an overall cross-section of the form
+\begin{equation}
+\sigma = \sum_i \sum_j \int^1_0 \textrm{d}x_1~\textrm{d}x_2~f_i(x_1,~\mu_R^2,~\mu_F^2)~f_j(x_2,~\mu_R^2,~\mu_F^2) ~\hat{\sigma}_{ij}(x_1,~x_2,~\mu_R^2,~\mu_F^2)
+\label{eq:qcd_fac}
+\end{equation}
+where $x_1$ and $x_2$ are the separate momentum fractions of the partons in the 
+the two incoming protons with partons indexed by $i$ and $j$, respectively.
 
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.8\textwidth]{figures/theory/mstw.eps}
-\caption{Plot of $xf_i(x,Q^2)$ vs $x$ for the MSTW 2008 NLO PDF sets with 68\% CL 
-eigenvector uncertainties \cite{Martin:2009iq} for two different $Q^2$ scales.
+\includegraphics[width=.9\textwidth]{figures/theory/mstw.eps}
+\caption{Plot of $xf_i(x,Q^2)$ vs $x$ for the MSTW 2008 NLO PDF sets \cite{Martin:2009iq} with 68\% CL 
+eigenvector uncertainties for two different scales, $Q^2=\mu_R^2=\mu_F^2$.
 The peak in the $f_u$ and $f_d$ distributions is due to the valence
 quark requirements in the proton. The sea quark PDF distributions are shown,
-as are is the large gluon PDF, which is scaled down by a factor of 10.  At
+as is the large gluon PDF, which is scaled down by a factor of 10.  At
 high $Q^2$, the sea quark PDFs become more important, as do the 
 contribution from heavy quarks.}
 \label{fig:pdf_mstw}
@@ -339,7 +450,7 @@ to determine the PDFs.  As a result there are many different
 PDF sets available to choose from, with updates being churned
 out regularly by different physics groups. An example of the
 PDFs for one particular PDF set is shown for two different
-$Q^2$ scales in \fig\ref{fig:pdf_mstw}.
+scales, $Q^2=\mu_R^2=\mu_F^2$, in \fig\ref{fig:pdf_mstw}.
 In general, the predictions from different PDFs agree within a few percent.
 Differences can arise, however, in particular at high energy (high $x$)
 where it is difficult to measure.
@@ -354,13 +465,15 @@ PDFs following some prescription such as in \cite{Botje:2011sn}.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.45\textwidth]{figures/theory/QCDKFac_Separate_WPLUS.eps}
-\includegraphics[width=.45\textwidth]{figures/theory/QCDKFac_Separate_WMINUS.eps}
-\caption{Plot of variation of NLO to NNLO 
-to charged Drell-Yan production for various PDF sets as a function of the invariant
+\includegraphics[width=.48\textwidth]{figures/theory/QCDKFac_Separate_WPLUS.eps}
+\includegraphics[width=.48\textwidth]{figures/theory/QCDKFac_Separate_WMINUS.eps}
+\caption{Plot of 
+$k_{\textrm{QCD}}=\sigma(\textrm{NNLO})/\sigma(\textrm{NLO})$
+for charged Drell-Yan production using various PDF sets 
+as a function of the invariant
 mass of the $W$ when it decays leptonically, $m_{l\nu}$, as studied
 for the background estimate in a search for leptonically
-decaying exotic $W'$ bosons \cite{Aad:1746306,Adams:1748664}.%make sure defined earlier
+decaying exotic $W'$ bosons \cite{Aad:1746306,Adams:1748664}.~
 Several different PDFs are compared: 
 MSTW 2008 \cite{Martin:2009iq} (solid red line), 
 CT10 \cite{guzzi:2011sv} (narrow dashed blue line)), 
@@ -389,13 +502,16 @@ studies in Run-II at HERA, and from recent LHC measurements at ATLAS, CMS, and
 LHCb.
 The uncertainties on the MSTW 2008 and CT10 PDF sets are 
 determined using a Hessian approach while the NNPDF 3.0 PDF set uses
-a Monte Carlo approach.
-The Hessian approach splits the different fit directions into 
-(around 30 to 50) orthonormal eigenvectors which can then be varied independently.
-The Monte Carlo approach produces (around 100 to 1000) PDF set replicas
-that are produced from variations on the input data which can then be used
+a Monte Carlo approach as described in \cite{Botje:2011sn}.
+The Hessian approach constructs a likelihood to determine the PDF central 
+value while the uncertainty is taken from a confidence interval
+that is built from an orthonormal representation of the covariance matrix
+at the minimum of the likelihood.
+The Monte Carlo approach produces PDF set replicas
+that captrue variations on the input data which can then be used
 to calculate distributions for extracting the central value and uncertainties.
-In general, each of the PDF sets are in good agreement with the LHC data.
+In general, each of the PDF sets considered are in good agreement with the LHC data.
+
 
 
 
@@ -403,7 +519,7 @@ In general, each of the PDF sets are in good agreement with the LHC data.
 \subsection{The Electroweak Theory}
 \label{sec:theory_ew}
 The electroweak (EW) 
-theory of Glasgow, Weinberg, and 
+theory of Glashow, Weinberg, and 
 Salam \cite{glashow:1961tr,Salam:1968rm,weinberg:1967tq}
 is a renormalizable \cite{hooft1971renormalization,Hooft1971167}
 non-Abelian gauge theory 
@@ -414,7 +530,7 @@ charge conjugation ($C$)
 and parity ($P$) violating V-A structure of the weak interactions
 \cite{PhysRev.105.1413,Garwin:1957hc,PhysRev.106.1290}
 while simultaneously preserving these symmetries for electromagnetism.
-It explains the presence of the massive EW gauge bosons 
+It also explains the presence of the massive EW gauge bosons 
 while maintaining gauge invariance
 using spontaneous symmetry breaking.
 
@@ -442,28 +558,26 @@ and
 B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
 \end{equation}
 The gauge fields, $\mathbf{W}_{\mu}$ and $B_{\mu}$, represent the 
-massless EW gauge bosons before EWSB. They are four-vectors of the Lorentz group
+massless EW gauge bosons before EWSB.
+They are four-vectors of the Lorentz group
 and thus undergo Lorentz transformations as indicated by their Lorentz index, $\mu$.
-The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
-group and the $\gamma^{\mu}$ are the Dirac matrices.
-The EW covariant derivative, $D_{\mu}$, is
+The $\mathbf{W}_{\mu} = (W^1_{\mu},W^2_{\mu},W^3_{\mu})$ 
+describe two charged gauge bosons and 
+a neutral gauge boson as a
+a triplet of weak isospin in \sutwo~
+with its generators being the famous Pauli matrices, $\boldsymbol{\tau}$,
+with commutation relation:
 \begin{equation}
-D_{\mu} =  i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} 
-\label{eq:ew_covariant_derivative}
+\Big[\tau_a,\tau_b\Big] = i \varepsilon_{abc} \tau_c
 \end{equation}
-The coupling constants $g$ and $g'$ describe the strength of the interactions
-of the fermions with the gauge boson fields before EWSB. 
-The $\mathbf{W}_{\mu}$ describes two charged gauge bosons and 
-a neutral gauge boson as an isotriplet of 
-vector fields ($W_{\mu}^i$)
-in \sutwo~with its generators being the famous Pauli matrices, $\boldsymbol{\tau}$.
+where $\varepsilon_{abc}$ is the Levi-Civita symbol.
 The charged gauge bosons are represented by a superposition of the first
 two components of the 
 isotriplet, $W_{\mu}^{\pm}=\sqrt{\frac{1}{2}}\Big(W_{\mu}^1\mp i W_{\mu}^2\Big)$,
 while the neutral gauge boson is represented 
 by the third component, $W_{\mu}^3$.
-The $B_{\mu}$ describes a single neutral gauge boson 
-using a single vector field in \uone~with the generator $Y$, referred
+The $B_{\mu}$ is a singlet of \uone~and describes a single neutral gauge boson 
+using a single vector field with generator $Y$, referred
 to as the weak hypercharge.
 By construction, the weak hypercharge is related to
 the electric charge of \uone~
@@ -473,6 +587,16 @@ and the charge of the third component of weak \sutwo, $T^3$:
 Q=T^3+Y/2
 \label{eq:ewcharges}
 \end{equation}
+The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
+group and the $\gamma^{\mu}$ are the Dirac matrices.
+The EW covariant derivative, $D_{\mu}$, is
+\begin{equation}
+D_{\mu} =  i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} 
+\label{eq:ew_covariant_derivative}
+\end{equation}
+The coupling constants $g$ and $g'$ describe the strength of the interactions
+of the fermions with the gauge boson fields before EWSB. 
+
 The fermion fields, $\psi$, (and their conjugates, $\overline{\psi}$)
 can be split up into the 
 left-handed fermion isospin doublets, $L$,  and right-handed
@@ -499,7 +623,7 @@ This is captured
 by assigning charges to the SM fermions 
 as listed in \tab\ref{tab:ewcharges}
 such that they satisfy \eqn\eqref{eq:ewcharges}.
-The charges differ based on the helicity, or ``handedness'',
+The charges differ based on the chirality, or ``handedness'',
 of the fermions.
 This specification for the charges results in the 
 left-handed fermion fields being treated as isospin doublets, $L$, 
@@ -518,7 +642,7 @@ which only transform under \uone:
 \begin{equation}
 R = e_R,~\mu_R,,~\tau_R,~u_R,~d_R,~c_R,~s_R,~t_R,~b_R
 \end{equation}
-where each object is a Dirac field whose helicity is indicated by 
+where each object is a Dirac field whose chirality is indicated by 
 its subscript.
 Note that the right-handed neutrinos are absent.
 This comes from them having zero charge across 
@@ -564,13 +688,13 @@ terms where the charged $W$ and lepton fields are present gives
 \begin{aligned}
 %\overline{u'}_R W_{\mu}^+ d'_L +
 %\overline{d'}_R W^-_{\mu} u'_L +
-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
-\overline{e}_R W_{\mu}^+ \nu_{e,L} +
-\overline{\nu}_{e,R} W^-_{\mu} e_L \\&+
-\overline{\mu}_R W_{\mu}^+ \nu_{\mu,L} +
-\overline{\nu}_{\mu,R} W^-_{\mu} \mu_L \\&+
-\overline{\tau}_R W_{\mu}^+ \nu_{\tau,L} +
-\overline{\nu}_{\tau,R} W^-_{\mu} \tau_L \Big)
+-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
+\overline{e}_L W_{\mu}^+ \nu_{e,L} +
+\overline{\nu}_{e,L} W^-_{\mu} e_L \\&+
+\overline{\mu}_L W_{\mu}^+ \nu_{\mu,L} +
+\overline{\nu}_{\mu,L} W^-_{\mu} \mu_L \\&+
+\overline{\tau}_L W_{\mu}^+ \nu_{\tau,L} +
+\overline{\nu}_{\tau,L} W^-_{\mu} \tau_L \Big)
 \end{aligned}
 \label{eq:couplings_wleptons}
 \end{equation}
@@ -583,13 +707,13 @@ of the quark sector look similar:
 \begin{aligned}
 %\overline{u'}_R W_{\mu}^+ d'_L +
 %\overline{d'}_R W^-_{\mu} u'_L +
-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
-\overline{u}_R W_{\mu}^+ d_{L} +
-\overline{d}_{R} W^-_{\mu} u_L \\&+
-\overline{c}_R W_{\mu}^+ s_{L} +
-\overline{s}_{R} W^-_{\mu} c_L \\&+
-\overline{t}_R W_{\mu}^+ b_{L} +
-\overline{b}_{,R} W^-_{\mu} t_L \Big)
+-\frac{g}{\sqrt{2}}\gamma^{\mu}\Big( &
+\overline{u}_L W_{\mu}^+ d_{L} +
+\overline{d}_{L} W^-_{\mu} u_L \\&+
+\overline{c}_L W_{\mu}^+ s_{L} +
+\overline{s}_{L} W^-_{\mu} c_L \\&+
+\overline{t}_L W_{\mu}^+ b_{L} +
+\overline{b}_{L} W^-_{\mu} t_L \Big)
 \end{aligned}
 \end{equation}
 These terms correspond to the Feynman diagrams at the bottom
@@ -598,7 +722,7 @@ Taking into account quark flavor mixing via the
 CP violating \cite{PhysRevLett.13.138} Cabibbo-Kobayashi-Maskawa
 matrix \cite{Cabibbo:1963yz,Kobayashi:1973fv}
 modifies this picture so that additional small interaction
-terms appear between different the quark generations.
+terms appear between the different quark generations.
 It is the presence of these interactions that allow the $W$ 
 to be produced to directly at a hadron collider.
 
@@ -618,7 +742,7 @@ to be produced to directly at a hadron collider.
 			%\fmflabel{$e_L,\mu_L,\tau_L$}{o1}
 			%\fmflabel{$\overline{\nu}_{e,R},\overline{\nu}_{\mu,R},\overline{\nu}_{\tau,R}$}{o2}
 			\fmflabel{$e_L$}{o1}
-			\fmflabel{$\overline{\nu}_{e,R}$}{o2}
+			\fmflabel{$\nu_{e,L}$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -632,7 +756,7 @@ to be produced to directly at a hadron collider.
 			\fmflabel{$W^-$}{i1}
 			%\fmflabel{$\overline{e}_R,\overline{\mu}_{R},\overline{\tau}_R$}{o1}
 			%\fmflabel{$\nu_{e,L},\nu_{\mu,L},\nu_{\tau,L}$}{o2}
-			\fmflabel{$\overline{e}_R$}{o1}
+			\fmflabel{$e_L$}{o1}
 			\fmflabel{$\nu_{e,L}$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
@@ -649,7 +773,7 @@ to be produced to directly at a hadron collider.
 			%\fmflabel{$u_L,c_L,t_L$}{o1}
 			%\fmflabel{$\overline{d}_R,\overline{s}_R,\overline{b}_R$}{o2}
 			\fmflabel{$u_L$}{o1}
-			\fmflabel{$\overline{d}_R$}{o2}
+			\fmflabel{$d_L$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -663,7 +787,7 @@ to be produced to directly at a hadron collider.
 			\fmflabel{$W^-$}{i1}
 			%\fmflabel{$\overline{u}_R,\overline{c}_R,\overline{t}_R$}{o1}
 			%\fmflabel{$d_L,s_L,b_L$}{o2}
-			\fmflabel{$\overline{u}_R$}{o1}
+			\fmflabel{$u_L$}{o1}
 			\fmflabel{$d_L$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
@@ -675,16 +799,16 @@ mix while the lepton generations do not.  }
 \label{fig:feyn_wcoupling}
 \end{figure}
 
-The strength of the weak interactions is suppressed by the massive
-nature of the charged and neutral weak bosons. But the EW theory 
+The strength of the weak interactions is suppressed at energies 
+much smaller that the masses of the 
+the charged and neutral weak bosons. But the EW theory 
 cannot assign masses directly to the gauge bosons without breaking 
 gauge invariance. This is resolved by the introduction of 
 spontaneous symmetry breaking which generates the masses for the 
 gauge bosons whilst preserving gauge invariance. 
 The simplest implementation of this EWSB process 
-is the Brout-Englert-Higgs 
-mechanism  \cite{PhysRevLett.13.321,PhysRevLett.13.508}
-(or the Higgs mechanism for short).
+is the Higgs mechanism
+\cite{PhysRevLett.13.321,PhysRevLett.13.508,PhysRevLett.13.585}.
 The lagrangian for EWSB via the Higgs mechanism is 
 \begin{equation}
 \begin{aligned}
@@ -723,7 +847,8 @@ are complex isospin doublets of four scalar fields:
 \phi_1 - i \phi_2
 \end{pmatrix}
 \end{equation}
-Upon EWSB, the Higgs fields become
+Upon EWSB, we choose $\phi_3=v+h$ and $\phi_1=\phi_2=\phi_4=0$
+such that the Higgs fields become
 \begin{equation}
 \phi = \frac{1}{\sqrt{2}}
 \begin{pmatrix} 
@@ -758,19 +883,24 @@ where $Z_{\mu}$ corresponds to the $Z$ boson field
 and $A_{\mu}$ corresponds to the photon field.
 Looking at the values for the mass terms, the $W^{\pm}$ and $Z$ fields
 receive a mass while $A$ is massless.
-The masses of the $W$ and $Z$ can be related by the weak mixing angle
+The $W^{\pm}$ and $Z$ fields obtain their masses by ``eating''
+the $\phi_1$, $\phi_2$, and $\phi_4$ fields, known as the Goldstone
+bosons, which give the gauge boson fields their longitudinal polarization,
+necessary for any massive field.
+At LO, the masses of the $W$ and $Z$ can be related by the weak mixing angle
 \begin{equation}
 \frac{M_W}{M_Z} = \cos \theta_W
 \end{equation}
-as can the coupling constants, $g$ and $g'$
+where $\theta_w$ is defined by the ratio of the coupling constants
+$g$ and $g'$ such that
 \begin{equation}
 \frac{g'}{g} = \tan\theta_W
 \end{equation}
 
 
 
-The presence of vacuum fluctuations of the Higgs field, $h$, also 
-gives interactions of the Higgs field with the $W$ and $Z$ gauge bosons
+The Higgs field, $h$, also 
+has interactions with the $W$ and $Z$ gauge bosons
 after plugging into the first line of \eqn\eqref{eq:lagrangian_ewsb}.
 The relevant terms look like
 \begin{equation}
@@ -954,6 +1084,22 @@ do not appear in the SM EW lagrangian.
 		\end{fmfgraph*}
 \end{fmffile}
 ~~~~~~~
+\begin{fmffile}{feynwwgg}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i1,i2}
+			\fmfright{o1,o2}
+			\fmf{photon}{i1,v1}
+			\fmf{photon}{i2,v1}
+			\fmf{photon}{v1,o1}
+			\fmf{photon}{v1,o2}
+
+			\fmflabel{$W^+$}{i1}
+			\fmflabel{$W^-$}{i2}
+			\fmflabel{$\gamma$}{o1}
+			\fmflabel{$\gamma$}{o2}
+		\end{fmfgraph*}
+\end{fmffile}
+~~~~~~~
 \begin{fmffile}{feynwwzz}
 		\begin{fmfgraph*}(80,50)
 			\fmfleft{i1,i2}
@@ -985,22 +1131,6 @@ do not appear in the SM EW lagrangian.
 			\fmflabel{$\gamma$}{o2}
 		\end{fmfgraph*}
 \end{fmffile}
-~~~~~~~
-\begin{fmffile}{feynwwgg}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{i1,i2}
-			\fmfright{o1,o2}
-			\fmf{photon}{i1,v1}
-			\fmf{photon}{i2,v1}
-			\fmf{photon}{v1,o1}
-			\fmf{photon}{v1,o2}
-
-			\fmflabel{$W^+$}{i1}
-			\fmflabel{$W^-$}{i2}
-			\fmflabel{$\gamma$}{o1}
-			\fmflabel{$\gamma$}{o2}
-		\end{fmfgraph*}
-\end{fmffile}
 \vspace{2 mm}
 \caption{Feynman diagrams of QGC couplings}
 \label{fig:theory_feynman_couplings_qgc}
@@ -1028,36 +1158,32 @@ do not appear in the SM EW lagrangian.
 %\label{tab:ewparams}
 %\end{table}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.45\textwidth]{figures/theory/wmass_pdg.eps}
-\includegraphics[width=.45\textwidth]{figures/theory/wwidth_pdg.eps}
-\caption{Summary of \dubya~mass (left) and width (right) measurements
-as performed at LEP and the Tevatron~\cite{PDG:2014}.}
-\label{fig:theory_w_pdg}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=.45\textwidth]{figures/theory/wmass_pdg.eps}
+%\includegraphics[width=.45\textwidth]{figures/theory/wwidth_pdg.eps}
+%\caption{Summary of \dubya~mass (left) and width (right) measurements
+%as performed at LEP and the Tevatron~\cite{PDG:2014}.}
+%\label{fig:theory_w_pdg}
+%\end{figure}
 
 
-While the fundamental parameters of the EW theory are related to each other
-by relations like those above, they are not determined \emph{a priori} 
-and so must be first determined from experiment.
+While the fundamental parameters of the EW theory are connected to each other
+by relations like those above, they are not known \emph{a priori} 
+and so must be determined from experiment.
 Of primary interest to the topic of this thesis 
 are the measured parameters related to the behavior and properties
-of the \dubya~and Higgs bosons.
+of the \dubya, $Z$, ~and Higgs bosons.
 The \dubya~was first discovered in 1983 via $p\overline{p}$ collisions
-at the SPS by looking at its decay to an electron %abbreviation?
+at the SPS by observing at its decay to an electron %abbreviation?
 and electron neutrino \cite{ARNISON1983103}.
-Its mass has been measured in $p\overline{p}$ collisions at the Tevatron
-and in $e^{+}e^{-}$ collisions at LEP to give a world 
-average of $80.385 \pm 0.015\GeV$~\cite{PDG:2014}.
-A summary of the \dubya~mass measurements is shown on 
-the left of \fig\ref{fig:theory_w_pdg}.
-The \dubya~width, assuming a Breit-Wigner distribution, has also been measured 
-at LEP and the Tevatron as seen in the right of \fig\ref{fig:theory_w_pdg}
+Its mass has been measured 
+to be $80.385 \pm 0.015\GeV$~\cite{PDG:2014}.
+The \dubya~width, assuming a Breit-Wigner distribution, has also been measured,
 with an average value of $2.085\pm0.042\GeV$ \cite{PDG:2014}.
 Roughly 1/3 of of the time the \dubya~decays approximately 
 evenly into each of the three lepton generations (ignoring kinematics),
-as expected lepton universality,  
+as expected from lepton universality,  
 indicated by the shared coupling of \eqn\eqref{eq:couplings_wleptons}.
 The leptonic decays of the \dubya~result in a charged lepton 
 with the same charge as the parent \dubya~(as dictated by charge conservation)
@@ -1072,18 +1198,27 @@ summarized in \tab\ref{tab:theory_wdecay}.
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{l|c}
-Decay Mode &  Branching Fraction [\%]\\
+\begin{tabular}{c|l||c}
+\multicolumn{2}{c||}{Decay Mode} &  Branching Fraction [\%]\\
 \hline
-$e^+\nu_e$ ($e^-\overline{\nu}_e$) & $10.71 \pm 0.16$ \\
-$\mu^+\nu_{\mu}$ ($\mu^-\overline{\nu}_{\mu}$) & $10.63 \pm 0.15$\\
-$\tau^+\nu_{\tau}$ ($\tau^-\overline{\nu}_{\tau}$) & $11.38 \pm 0.21$\\
-Quarks & $67.41 \pm 0.27$\\
+\hline
+\multirow{4}{*}{$W^+$ ($W^-$)}&$e^+\nu_e$ ($e^-\overline{\nu}_e$) & $10.71 \pm 0.16$ \\
+&$\mu^+\nu_{\mu}$ ($\mu^-\overline{\nu}_{\mu}$) & $10.63 \pm 0.15$\\
+&$\tau^+\nu_{\tau}$ ($\tau^-\overline{\nu}_{\tau}$) & $11.38 \pm 0.21$\\
+&Quarks & $67.41 \pm 0.27$\\
+\hline
+\hline
+\multirow{5}{*}{$Z$}&$e^+e^-$ & $3.363 \pm 0.004$ \\
+&$\mu^+\mu^-$ & $3.366 \pm 0.007$\\
+&$\tau^+\tau^-$ & $3.370 \pm 0.008$\\
+&Invisible & $20.00 \pm 0.06$\\
+&Quarks & $69.91 \pm 0.06$\\
 \end{tabular}
-\caption{Measured branching fractions of the $\dubya^+$ ($\dubya^-$)~boson 
-as reported by the Particle Data Group \cite{PDG:2014}. 
-Only the inclusive branching fraction of the $W$ decay to all quark generations
-is reported. }
+\caption{Measured branching fractions of the \dubya~and $Z$
+bosons as reported by the Particle Data Group \cite{PDG:2014}. 
+Only the inclusive branching fraction of the \dubya~and $Z$ decay to all quark generations is reported. The invisible branching fraction of the $Z$ boson
+comes from the decay of the $Z$ to neutrinos. The branching fractions
+sum to 100\% separately for the $W$ and $Z$ bosons with their uncertainties.}
 \label{tab:theory_wdecay}
 \end{table}
 
@@ -1119,27 +1254,43 @@ is reported. }
 %\label{fig:theory_wxsec}
 %\end{figure}
 
+The $Z$ boson was discovered also at the SPS shortly after the 
+$W$ \cite{ua1zobs}.
+It is one of the most important particles for measurements at the LHC
+as it has a unique decay signature into Same-Flavor Opposite-Sign (SFOS) 
+pairs of fermions (for example, $e^+ e^-$).
+It is mesaured to have
+a mass of $91.1876 \pm 0.0021 \GeV$ and a width of $2.4952 \pm 0.0023 \GeV$.
+The measured branching fractions for the $Z$ are 
+summarized in \tab\ref{tab:theory_wdecay}.
+
+
 The Higgs boson was discovered in 2012 at the LHC
 jointly by the ATLAS \cite{Aad20121} and CMS \cite{Chatrchyan:2012xdj}
 collaborations.
 Combined measurements of the mass between the two experiments 
 show the current value of the Higgs mass to be 
-$m_H = 125.09 \pm 0.21 (\textrm{Stat.}) \pm 0.11 (\textrm{Syst.})\GeV$
-\cite{Aad:2015zhl} as seen in \fig\ref{fig:higgs_mass}.
+$m_H = 125.09\pm0.21(\textrm{Stat.})\pm0.11(\textrm{Syst.})\GeV$
+\cite{Aad:2015zhl}. % as seen in \fig\ref{fig:higgs_mass}.
 Detailed studies of the spin \cite{Aad2013120,Khachatryan:2014kca},
 width \cite{Aad:2015xua,Khachatryan:2014iha},
 and couplings \cite{ATLAS-CONF-2015-044} are all consistent
-with the Higgs boson of the SM.
+with the single Higgs boson of the SM.
+Precision measurements of the Higgs branching fraction have not 
+been performed, though measurements of the Higgs in 
+different decay channels are consistent with 
+the branching fraction to $WW$ being around 20\%, as expected
+for a Higgs boson with the observed mass \cite{PDG:2014,Almeida:2013jfa}.
 
-\begin{figure}
-\centering
-\includegraphics[width=.8\textwidth]{figures/theory/higgs_mass.png}
-\caption{Combined ATLAS and CMS 
-measurements of Higgs signal strength
-vs mass in $H\rightarrow \gamma \gamma$ and $H\rightarrow ZZ\rightarrow 4l$
-channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
-\label{fig:higgs_mass}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=.8\textwidth]{figures/theory/higgs_mass.png}
+%\caption{Combined ATLAS and CMS 
+%measurements of Higgs signal strength
+%vs mass in $H\rightarrow \gamma \gamma$ and $H\rightarrow ZZ\rightarrow 4l$
+%channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
+%\label{fig:higgs_mass}
+%\end{figure}
 
 \section{$WWW$ Production}
 \label{sec:theory_www_production}
@@ -1155,10 +1306,15 @@ channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
 
 			\fmf{fermion}{i1,v1}
 			\fmf{fermion}{v1,i2}
-			\fmf{photon}{v1,v2}
+			\fmf{photon,label=$W^+$}{v1,v2}
 			\fmf{photon}{v2,o1}
 			\fmf{photon}{v2,o2}
 			\fmf{photon}{v2,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$q'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -1169,27 +1325,37 @@ channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
 
 			\fmf{fermion}{i1,v1}
 			\fmf{fermion}{v1,i2}
-			\fmf{photon}{v1,v2}
+			\fmf{photon,label=$W^+$}{v1,v2}
 			\fmf{photon}{v2,o1}
 			\fmf{dashes,label=$H^0$}{v2,v3}
 			\fmf{photon}{v3,o2}
 			\fmf{photon}{v3,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$q'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
 
-\vspace{6 mm}
+\vspace{15 mm}
 \begin{fmffile}{feynwwwprod3}
 		\begin{fmfgraph*}(80,50)
 			\fmfleft{i1,i2}
 			\fmfright{o1,o2,o3}
 
 			\fmf{fermion}{i1,v1}
-			\fmf{fermion}{v1,v2}
-			\fmf{fermion}{v2,v3}
+			\fmf{fermion,label=$q''$}{v1,v2}
+			\fmf{fermion,label=$q'''$}{v2,v3}
 			\fmf{fermion}{v3,i2}
 			\fmf{photon}{v1,o1}
 			\fmf{photon}{v2,o2}
 			\fmf{photon}{v3,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$q'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
 \hspace{6 mm}
@@ -1198,20 +1364,29 @@ channels with 68\%CL likelihood curves \cite{Aad:2015zhl}.}
 			\fmfleft{i1,i2}
 			\fmfright{o1,o2,o3}
 			\fmf{fermion}{i1,v1}
-			\fmf{fermion}{v1,v2}
+			\fmf{fermion,label=$q'$}{v1,v2}
 			\fmf{fermion}{v2,i2}
-			\fmf{photon,label=$Z/\gamma^{*}$}{v2,v3}
+			\fmf{photon,label=$Z/\gamma^{*}$,label.side=left}{v2,v3}
 			\fmf{photon}{v1,o1}
 			\fmf{photon}{v3,o2}
 			\fmf{photon}{v3,o3}
+			\fmflabel{$q$}{i1}
+			\fmflabel{$q'$}{i2}
+			\fmflabel{$W^+$}{o1}
+			\fmflabel{$W^-$}{o2}
+			\fmflabel{$W^+$}{o3}
 		\end{fmfgraph*}
 \end{fmffile}
-\vspace{2 mm}
+\vspace{4 mm}
 \caption{The tree level Feynman diagrams 
 for $WWW$ production. The incoming fermion
 lines in each diagram consist of an
 up-type quark (anti-quark) and down-type anti-quark (quark). Unless
-otherwise specified, the curved lines correspond to $W$ bosons.}
+otherwise specified, the curved lines correspond to $W$ bosons.
+In this case, the charge of the initial state quarks is assumed
+to sum to +1, leading to the same in the final state.
+It is also possible for the initial and final states to sum to -1
+via charge conjugation.  }
 \label{fig:theory_feynman_www}
 \end{figure}
 
@@ -1220,17 +1395,20 @@ $W$ bosons from proton-proton collisions:
 $pp\rightarrow\- \Wp\Wp\Wm+X$ and $pp\rightarrow \Wp\Wm\Wm\allowbreak +X$, 
 where $X$ is intended to refer to the fact that no requirements are 
 placed on additional particles produced in the hard interaction.
+The feynman diagrams from \fig\ref{fig:theory_feynman_couplings_qgc},
+\fig\ref{fig:feyn_wcoupling}, and \fig\ref{fig:feynman_higgs}, along
+with their associated lagrangian terms, can be used
+to construct the main contributions to the amplitude for this process. 
+The relevant tree-level Feynman diagrams for this production process are shown in 
+\fig\ref{fig:theory_feynman_www}.
 This is sensitive both
 to the $WWWW$ coupling (non-resonant production) 
-and to associated Higgs production \footnote{Associated Higgs production involves
+and to associated Higgs production\footnote{Associated Higgs production involves
 the radiation of a Higgs boson off another particle (in this case a $W$ boson). It 
 is sometimes referred to as ``Higgsstrahlung'', by analogy 
 with electron Bremsstrahlung where an electron radiates a photon.} where 
 the Higgs decays to two
-$W$ bosons (resonant production). 
-The relevant
-tree-level Feynman diagrams for this production process are shown in 
-\fig\ref{fig:theory_feynman_www}.
+$W$ bosons (resonant, but off-shell, production). 
 The Higgs decay results in one $W$ boson being produced off-shell,
 $H\rightarrow WW^*$, making this the leading contribution to off-shell
 production.  
@@ -1251,18 +1429,41 @@ visible at 126~GeV. (make a better plot)}
 
 
 
+In principle, the LO partonic cross-section for the exclusive process, 
+$pp\rightarrow\- \Wp\Wp\Wm$ and $pp\rightarrow \Wp\Wm\Wm$, 
+can be computed by constructing the amplitude from the tree-level
+feynman diagrams in \fig\ref{fig:theory_feynman_www}.  
+The LO total cros-section could then be computed
+from this using \eqn\eqref{eq:qcd_fac}, to account for the quarks 
+originating from the incoming protons.
+This could then be continued to higher orders. 
+In reality, however, it is much more complicated. 
+Other effects like initial and final state photon radiation off of the incoming
+and outgoing fermions end up modifying the kinematic behavior and must
+be considered. At a hadron collider, QCD effects like initial and 
+final state gluon radiation using the diagrams in \fig\ref{fig:feynman_qcd}
+occur as well. The effects of asymptotic freedom and color confinement
+described in \sec\ref{sec:theory_qcd} 
+lead to cascades of hadronization from the radiated
+gluons that are referred to as parton showers. This results in an 
+abundance of residual jets and other hadronic activity occuring along
+with the original hard scattering process. 
+This cannot be calculated by hand and is instead simulated
+using Monte Carlo (MC).
 
-The cross-section for this process can be computed at 
-NLO in QCD
-(Mention more details of how this is computed like PDFs,
-hadronization, interaction, radiation, decays. Use one of the 
-Feynman diagrams)
-Using the \madgraph~generator finds an inclusive cross-section of 
+
+The inclusive cross-section for this process is computed at 
+NLO in QCD, after accounting for initial and 
+final state radiation, parton showering, and other effects,
+using the \madgraph~generator. It finds an inclusive cross-section of 
 \begin{equation}
 \sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb}
 \label{eq:www_total_xsec}
 \end{equation}
 where the uncertainty is purely statistical.
+Additional uncertainties
+on the PDF and scale choices increase the uncertainty by only a few
+percent.
 The contribution from resonant production is computed separately
 and found to make up about 64\% of the 
 total inclusive cross-section.
@@ -1286,10 +1487,10 @@ process that includes some combination of leptons
 and quarks (manifested as jets).  The branching fractions for 
 the $WWW$ process can be determined from the individual $W$ branching fractions
 listed in \tab\ref{tab:theory_wdecay}.  The expected $WWW$ branching
-fractions are thus summarized in the pie chart in \fig\ref{fig:branching_fractions}.
+fractions are summarized in the pie chart in \fig\ref{fig:branching_fractions}.
 For this thesis, we are primarily interested in the final state
 where each $W$ boson decays leptonically (the fully-leptonic final state) 
-which has the smallest branching fraction at roughly 3.5\%.
+which has the smallest overall branching fraction at roughly 3.5\%.
 In fact, since the $\tau$ leptons have a short lifetime, we choose to 
 omit $W$ decays to $\tau$ leptons from our fully-leptonic
 definition as well. This further reduces the fully-leptonic 
@@ -1320,20 +1521,21 @@ But, as we continue to probe higher energy scales,
 there is reason to believe that the SM's luck will run out.
 If history is any guide, the SM is simply
 an approximation of a larger theory whose details are not relevant
-relevant at current energies.
+at current energies.
 Indeed, the SM leaves important questions unanswered (for example, 
-the hierarchy problem) that could be explained
+a description of dark matter) that could be explained
 by the observation of some new high energy phenomena.  %more detail
 
 This idea of the SM as an approximate theory
 can be made explicit 
-using an Effective Field Theory (EFT) \cite{Pich:1998xt}
+using an Effective Field Theory (EFT) \cite{Degrande:2012wf}
 approach which includes new terms in the lagrangian, in addition to the SM.
 As a function of the energy, these terms start small 
 but become increasingly important at higher and higher energies.
 In general, the new EFT terms might look like this:
 \begin{equation}
 \curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_{n=5}^{\infty} \sum_i \frac{c_{n,i}}{\Lambda^{n-4}} \curlyo_{n,i}
+\label{eq:lagrangian_eft_gen}
 \end{equation}
 where $\Lambda$ is some new energy scale relevant to the new
 physics we seek to describe and the $c_{n,i}$ are dimensionless
@@ -1349,11 +1551,11 @@ leaving behind contact interactions between the SM fields and factors
 of $\Lambda^{n-4}$ in the denominator.
 These factors of $\Lambda$ suppress the new terms
 with respect to the SM, with the suppression becoming stronger as $n$ grows.
-Thus, only the first terms in the summation
+Thus, typically, only the first terms in the summation
 over $n$ are important at low energy.
 
 The list of possible gauge-invariant EFT operators to 
-consider is long \cite{Hagiwara:1993ck,Buchmuller:1985jz,Eboli:2006wa}
+consider is long \cite{Hagiwara:1993ck,Buchmuller:1985jz,Eboli:2006wa}.
 One way to shorten the list is to impose certain symmetries. 
 Enforcing the conservation
 of baryon and lepton number restricts 
@@ -1368,12 +1570,12 @@ The leading $n=6$ terms predict new anomalous triple and quartic
 gauge coupling (aTGC and aQGC) interactions while the sub-leading $n=8$ terms
 predict only new aQGC interactions. 
 Predictions of aTGC interactions have been studied in detail at 
-LEP, the Tevatron, and the LHC  but none have been observed\cite{PDG:2014}.
+LEP, the Tevatron, and the LHC  but none have been observed~\cite{PDG:2014}.
 But there is still hope!
 It could be that new physics is suppressed in aTGC interactions
-but not in aQGC interactions.\footnote{For instance, the aTGC interactions
+but not in aQGC interactions\footnote{For instance, the aTGC interactions
 could first appear at the one loop level while the aQGC 
-interactions appear at tree level.}
+interactions appear at tree level.}.
 Then the new physics might first appear at $n=8$, where only aQGC interactions
 occur.
 
@@ -1397,7 +1599,7 @@ interested only in the first category, which is limited to just two operators:
 \curlyo_{S,0} =& \Big[(D_{\mu}\phi)^{\dagger} D_{\nu} \phi\Big] \times \Big[(D^{\mu} \phi)^{\dagger} D^{\nu} \phi \Big] \\
 \curlyo_{S,1} =& \Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big]
 \end{align}
-which could come from integrating out some new 
+that could come from integrating out some new 
 vector gauge boson resonance coupling to the EW gauge bosons \cite{Baak:2013fwa}.
 Plugging these into \eqn\eqref{eq:lagrangian_eft} (and dropping all other terms
 besides the SM), we get
@@ -1409,33 +1611,97 @@ besides the SM), we get
 \end{aligned}
 \label{eq:lagrangian_aqgc}
 \end{equation}
-where we have introduced the new arbitrary couplings $f_{S,0}$ and $f_{S,1}$.
-Expanding this out we get...
-These modify the SM QGC interactions of \eqn\eqref{eq:lagrangian_qgc}
-and \fig\ref{fig:theory_feynman_couplings_qgc}
-to produce new aQGC interactions $W^+W^-W^+W^-$, $W^+W^-ZZ$, and $ZZZZ$.
-%that do not depend on the gauge boson momenta (do I care?).
-In this thesis, we are interested only in the aQGC
-interaction term involving $W^+W^-W^+W^-$, which predicts  
-a new tree level diagram for the $WWW$ production process similar to the SM QGC
-production of this process in \fig\ref{fig:theory_feynman_couplings_qgc}.
-If real, such a modification would enhance the predicted 
-cross-section in \eqn\eqref{eq:www_total_xsec}.
-
-%By definition, the EFT approach is expected to break for energies greater than $\Lambda$. Thus the issue arises of what energy $\Lambda$ corresponds to.
-
-Unitarity...
-%not UV complete
-%effective lagrangian (could be used elsewhere to refer to the eft lagrangian)
-%the effect from unitarity violation typically sets in earlier due to the higher exponent in Lambda in the denominator. 
-%
-%Unitarity violation is somehow related to how we can choose Lambda
+where we have introduced the new arbitrary couplings $f_{S,0}$ 
+and $f_{S,1}$\footnote{An alternative set of couplings, $\alpha_4$ and $\alpha_5$, are sometimes also used
+which can be related to $f_{S,0}$ and $f_{S,1}$ via a simple linear transformation \cite{Baak:2013fwa}. 
+For the charged interaction vertex this is 
 \begin{equation}
-f(s) = \Big( 1 + \frac{s}{\Lambda^2} \Big)^{-n}
+\begin{aligned}
+\alpha_4 &= \frac{f_{S,0}}{\Lambda^4} \frac{v^4}{8} \\
+\alpha_4 + 2~\alpha_5 &= \frac{f_{S,1}}{\Lambda^4} \frac{v^4}{8}
+\end{aligned}
+\label{eq:alpha45}
+\end{equation}
+where $v=246~\GeV$ is the Higgs vacuum expectation value \cite{PDG:2014}.}.
+Note that the subscript notation for these operators is different 
+from the one used in \eqn\eqref{eq:lagrangian_eft_gen} and \eqn\eqref{eq:lagrangian_eft}.
+Expanding these new terms gives additional quartic interactions between 
+the EW gauge bosons. If we just keep those with interactions between
+the charged EW gauge bosons we get the new interaction terms
+\begin{equation}
+\frac{1}{16} g^4 v^4 \Big(  \frac{f_{S,0}}{\Lambda^4}~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} + \frac{f_{S,1}}{\Lambda^4}~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu} \Big) 
+\end{equation}
+where $v = 246 \GeV$ is the Higgs vacuum expectation value \cite{PDG:2014}.
+These modify the couplings of 
+the charged SM QGC interaction in \eqn\eqref{eq:lagrangian_qgc}
+and \fig\ref{fig:theory_feynman_couplings_qgc}. 
+to obtain the new charged interaction term
+\begin{equation}
+\begin{aligned}
+\frac{g^2}{2}\Bigg[&\Big(1 +  \frac{1}{8} g^2 v^4~ \frac{f_{S,0}}{\Lambda^4} \Big) ~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\&- \Big( 1 - \frac{1}{8} g^2 v^4~\frac{f_{S,1}}{\Lambda^4}\Big) ~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}\Bigg] 
+\end{aligned}
+\end{equation}
+Such a modification enhances the predicted 
+cross-section in \eqn\eqref{eq:www_total_xsec}. This is described in more
+detail later in \sec\ref{sec:aqgc_signal}.
+
+
+In principle, the EFT is only valid below the energy scale, $\Lambda$, 
+though we cannot know this scale directly as we are only able to probe
+the ratios with the coupling, $f_{S,0}/\Lambda^4$ and $f_{S,1}/\Lambda^4$.
+Above $\Lambda$ the EFT breaks down and can lead to unitarity violation.
+In fact, for the operators with dimension $n=8$ in particular, 
+the strength of the couplings rises
+so rapidly with energy that unitarity violation can occur
+at energies well within the accessible
+range of the LHC.  Thus, as is 
+this limits the applicability of the EFT framework.
+Currently, an effort to reconcile EFT with unitarity is ongoing
+in the theoretical community. 
+One promising method is $k$-matrix unitarization, which introduces
+minimal model dependence, though it is only available for quasi-elastic
+$VV\rightarrow VV$ processes \cite{Kilian:2014zja}. It is not currently
+understood how this applies to $V\rightarrow VVV$ processes 
+relevant for aQGCs from EFT in $WWW$ production. Thus, if we 
+are to employ a unitarized EFT framework an alternative method must
+be used.
+
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/signal_section/Unitarity_check.eps}  
+  \caption{The unitarized and non-unitarized differential cross
+    sections as a function of $\sqrt{s}$ for the EFT prediction
+    with $f_{S,0}/\Lambda^4
+    = 6\times 10^{-7}~\GeV^{-4}$ divided by the SM values. The
+    form factor function from \eqn\eqref{eq:form_factor}
+    with $n=1$ and $\Lambda_{U} =$ 180~\GeV~is
+    used for unitarization.  }
+\label{fig:unitarity_example}
+\end{figure}
+
+
+In order to unitarize the EFT predictions we apply a form factor
+to the aQGC parameters of the form
+\begin{equation}
+f(s) = \frac{1}{\Big( 1 + \frac{s}{\Lambda_U^2} \Big)^{n}}
 \label{eq:form_factor}
 \end{equation}
+according to the approach from \cite{Eboli:2003nq}, 
+where $s$ is the center-of-mass energy squared, $n$ is an arbitrary
+exponent, and $\Lambda_U$ is a new arbitrary energy scale.
+These two new arbitrary parameters, $n$ and $\Lambda_U$, 
+introduce a model dependence into the EFT. The effect of the form
+factor is to reduce the differential cross-section as a
+function of the center of mass energy, which becomes more severe
+for increasing $n$ and decreasing $\Lambda_U$.
+This can be seen as applied to one particular choice of aQGC
+and unitarization parameters in \fig\ref{fig:unitarity_example}.
+The unitarization
+scheme has also been employed recently in \cite{PhysRevLett.115.031802}.
+The choice of unitarization parameters and their impact on the 
+aQGC cross-sections for the $WWW$ process are discussed in more detail
+in \sec\ref{sec:aqgc_signal}.
 
-%look at email from vbfnlo authors. mention that  this is the best we can do
 
 
 \section{Status of QGC Measurements and aQGC Limits}
@@ -1458,7 +1724,8 @@ and to $WWWW$ at the LHC \cite{PhysRevLett.113.141803,PhysRevLett.114.051801}.
 %material on limits?
 
 %summary plots? maybe from PDG?
-
-More details?
-
-
+Non-unitarized limits on the $f_{S,0}$ vs $f_{S,0}$ aQGC 
+parameters have been performed by CMS in \cite{khachatryan:1957133}.
+Limits on $\alpha_4$ vs $\alpha_5$, using the $k$-matrix unitarization
+scheme, have been performed by ATLAS 
+in \cite{PhysRevLett.113.141803} and \cite{Aad:2016ett}.

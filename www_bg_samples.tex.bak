@@ -84,7 +84,12 @@ and hadronize it using \jimmy~\cite{Jimmy} with the AUET2C~\cite{atlas:2011zja}
 tune.
 
 Some of the di-boson and tri-boson processes just discussed can also be produced
-through loop induced processes or double parton scattering (DPS).
+through double parton scattering (DPS).
+DPS is where two independent scatterings occur in a single proton-proton collision.
+The cross-sections for these processes are approximately proportional to the 
+product of the two individual scattering cross-sections but are suppressed
+by the joint probability that both should occur simultaneously.
+Such collisions are rare
 The $WW$ and $ZZ$
 loop induced processes are generated using the gg2ZZ~\cite{Binoth:2008pr} 
 and gg2WW~\cite{Binoth:2006mf} generators with the CT10 PDF set and
@@ -103,7 +108,7 @@ are the single boson processes ($V+$jets) and \tt~production.
 The probability for a jet to mimic a lepton is actually quite small
 and thus difficult to capture with adequate statistics using MC. 
 However, these processes also have very large cross-sections.
-Combining the two means that in fact the occurence of a jet mimicking
+Combining the two means that in fact the occurrence of a jet mimicking
 a lepton is not rare and thus non-negligible. 
 The single boson $Z+$jets processes are generated using \sherpa~with the CT10
 PDF set; the $W+$jets processes are generated using \alpgen~with
