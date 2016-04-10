@@ -4,6 +4,7 @@
 \begin{tabular}{lp{0.15\textwidth}p{0.5\textwidth}}
 AIP Conf. Proc.      & \dotfill & American Institute of Physics Conference Proceedings\\
 Ann. Math. Stat.     & \dotfill & Annals of Mathematical Statistics \\
+Ann. Phys.           & \dotfill & Annals of Physics \\
 Chin. Phys.          & \dotfill & Chinese Physics \\
 Comput. Phys. Commun. & \dotfill & Computer Physics Communications \\
 Eur. Phys. J.        & \dotfill & European Physics Journal \\
@@ -13,6 +14,7 @@ JPCS                 & \dotfill & Journal of Physics: Conference Series \\
 New J. Phys.         & \dotfill & New Journal of Physics \\
 Nucl. Instrum. Meth. & \dotfill & Nuclear Instruments and Methods \\
 Nucl. Phys.          & \dotfill & Nuclear Physics \\ 
+Phil. Mag.           & \dotfill & Philosophical Magazine \\
 Phys. Lett.          & \dotfill & Physical Letters \\
 Phys. Rev.           & \dotfill & Physical Review \\
 Phys. Rev. Lett.     & \dotfill & Physical Review Letters \\
