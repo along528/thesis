@@ -4,14 +4,15 @@
 A more stringent selection must be applied on top of the pre-selection
 in \sec\ref{sec:preselection_yield} in order to obtain any
 sensitivity to the signal.  The best selection, however, is
-not known \emph{a priori}. We try to find the best possible selection
+not known \emph{a priori}. We attempted to find the best possible selection
 by starting from a list of kinematic quantities, chosen based on heuristic
 arguments. These kinematic quantities, along with the signal
 plus background model, are passed into an optimization 
 framework that systematically seeks to simultaneously 
 maximize the predicted signal and the precision on the final measurement.
 
-The optimization framework considers independent permutations of the different
+The optimization framework considers several thousand
+independent permutations of the different
 kinematic quantities, along with variations of the selection thresholds
 on these cuts, to form combinations of selection cuts which could become a final
 selection. For each combination, or operating point,
@@ -25,18 +26,18 @@ the value on the precision is plotted against the expected signal yield.
 With some discretion, we then choose the operating point 
 that maximizes the signal yield and gives the smallest absolute 
 precision on the measurement. 
-The shape of the optimization can be seen in \fig\ref{fig:optimization}.
+%The shape of the optimization can be seen in \fig\ref{fig:optimization}.
 
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
-\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
-\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
-\caption{Signal Yield vs Measurement Uncertainty for optimized points 
-in the 0 SFOS (left), 1 SFOS (middle), and 2 SFOS (right) signal regions.}
-\label{fig:optimization}
-\end{figure}
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
+%\includegraphics[width=0.3\columnwidth]{figures/placeholder.eps}
+%\caption{Signal Yield vs Measurement Uncertainty for optimized points 
+%in the 0 SFOS (left), 1 SFOS (middle), and 2 SFOS (right) signal regions.}
+%\label{fig:optimization}
+%\end{figure}
 
 
 The final selection is presented in \tab\ref{tab:signal_selection}.
