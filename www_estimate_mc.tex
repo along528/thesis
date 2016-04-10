@@ -38,6 +38,7 @@ For the $WZ$ process, however, this type of calculation is not yet available.
 As a result, we instead use the so-called ``2D Sideband'' method (also known as the 
 ``ABCD'' method) \cite{Aad:2013izg} to derive a correction using the data itself.
 
+
 The 2D sideband method is able to determine an estimate
 for the process of interest using the data while also correcting
 for background contamination. 
@@ -70,7 +71,8 @@ The contributions to the signal region are thus parameterized as
 N^{\textrm{Data}} =  N^{WZ} + N^{\textrm{Fake}} + N^{\textrm{Electroweak}}
 \end{equation}
 These backgrounds include processes without \z-bosons.
-Thus, the presence of the \z-boson in the signal means that applying a \z-veto of 
+Thus, the presence of the \z-boson in the signal means that applying a \z
+requirement of 
 $|m_{\textrm{SFOS}}-m_{\z}|<15\GeV$
 will suppress these contributions to the background.
 Also, requiring that the leptons be isolated does a good job of 
@@ -93,7 +95,16 @@ described in \sec\ref{sec:object_selection}.
 %\label{fig:wz_sidebands}
 %\end{figure}
 
-The \z-veto and the isolation requirements are 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.6\textwidth]{figures/abcd.png}
+\label{fig:abcd_diagram}
+\caption{Diagram of the four different regions used in the ABCD method
+as defined from cuts on the 2D plane of isolaton versus the
+$Z$ boson SFOS mass parameter.}
+\end{figure}
+
+The \z~and isolation requirements are 
 independently inverted\footnote{The thresholds are also slightly shifted 
 so that there is a ``dead'' region between the signal regions and sidebands 
 which is not used by either. This ensures separation between all regions.}
@@ -102,7 +113,7 @@ to form the three sidebands.
 %\fig\ref{fig:wz_sidebands} in both the the isolated and non-isolated regions.
 The expectation in each sideband can be parameterized
 in the same way as \eqn\eqref{eq:wzparam}, resulting in one
-equation for each region. By specifying the \z-veto condition
+equation for each region. By specifying the \z boson condition
 as $A$ and the isolation condition as $B$, \eqn\eqref{eq:wzparam}
 can be rewritten as:
 \begin{equation}
@@ -110,14 +121,16 @@ can be rewritten as:
 N^{\textrm{Data}}_{A,B} =  N^{WZ}_{A,B} + N^{\textrm{Fake}}_{A,B} + N^{\textrm{Electroweak}}_{A,B}
 \end{equation}
 representing the four different equations after varying $A$ and $B$ independently.
-For example, the signal region is when $A=\textrm{With \z-veto}$ and
+For example, the signal region is when $A=\textrm{With \z}$ and
 $B=\textrm{Isolated}$.
+The control regions are shown diagramatically in \fig\ref{fig:abcd_diagram}.
 One more equation can be found by assuming that the effect of 
-the isolation cut on the fake background is independent of the \z-veto.
+the isolation cut on the fake background is independent of the \z
+requirement.
 That is to say:
 \begin{equation}
 \label{eq:wz_constraint}
-\frac{R^{\textrm{Fake}}_{\textrm{With \z-veto}}}{R^{\textrm{Fake}}_{\textrm{Without \z-veto}}} = K
+\frac{R^{\textrm{Fake}}_{\textrm{With \z}}}{R^{\textrm{Fake}}_{\textrm{Without \z}}} = K
 \end{equation}
 where 
 \begin{equation}
@@ -134,13 +147,13 @@ and \eqn\eqref{eq:wz_constraint}.
 
 
 If we can solve the equations above for $N^{WZ}_{A,B}$ in the signal region,
-when $A=\textrm{With \z-veto}$ and $B=\textrm{Isolated}$,
+when $A=\textrm{With \z}$ and $B=\textrm{Isolated}$,
 then we have our estimate. 
 There are 5 equations and 16 unknowns. The four unknowns, $N^{\textrm{Data}}_{A,B}$,
 are determined using the data directly while 
 the electroweak backgrounds, $N^{\textrm{Electroweak}}_{A,B}$,
 and the $WZ$ contributions in the sidebands, $N^{WZ}_{A,B}$ 
-(when $A=\textrm{With \z-veto}$ and $B=\textrm{Isolated}$ are not both true)
+(when $A=\textrm{With \z}$ and $B=\textrm{Isolated}$ are not both true)
 are determined using $WZ$ MC. This reduces the problem to 5 equations
 and 5 unknowns. Thus, we can solve algebraically for the remaining unknowns
 including the desired value for the $WZ$ estimate in the signal region.
@@ -153,7 +166,7 @@ from \eqn\eqref{eq:wzparam} and \eqn\eqref{eq:wz_constraint}.
 The values are derived in the signal region and three sideband regions
 described in the text. $N^{\textrm{Data}}_{A,B}$ are determined directly
 from the data; $N^{\textrm{Electroweak}}_{A,B}$ and $N^{WZ}_{A,B}$ are 
-determined in MC. The value for $N^{WZ}_{\textrm{With \z-veto,Isolated}}$ is
+determined in MC. The value for $N^{WZ}_{\textrm{With \z,Isolated}}$ is
 not used as an input and is instead solved for as the the main
 parameter of interest. Still, the value is determined in MC to be
 $498 \pm 1$.  Only statistical uncertainties are shown.}
@@ -166,7 +179,7 @@ $498 \pm 1$.  Only statistical uncertainties are shown.}
 \caption{Outputs from the system of five equations
 from \eqn\eqref{eq:wzparam} and \eqn\eqref{eq:wz_constraint}
 after including the numbers from \tab\ref{tab:wz_input} as input.
-The value for $N^{WZ}_{\textrm{With \z-veto, Isolated}}$ is 
+The value for $N^{WZ}_{\textrm{With \z, Isolated}}$ is 
 the value of primary interest.  Only statistical uncertainties are shown.}
 \label{tab:wz_output}
 \end{table}
