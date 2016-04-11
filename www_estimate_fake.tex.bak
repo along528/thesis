@@ -14,7 +14,7 @@ EM calorimeter; a very similar signature to an electron. Or,
 a \bee-hadron could decay into a final state with a high energy muon,
 making it difficult to distinguish from a muon produced in the hard interaction.
 We call these mis-reconstructed leptons, ``fake'' leptons. 
-By contrast, those leptons that have been correctly identifed are 
+By contrast, those leptons that have been correctly identified are 
 referred to as ``real''.
 
 In particle physics it is 
@@ -59,7 +59,7 @@ We choose to use the Generalized Matrix Method~\cite{Gillam:2014xua},
 which may estimate from data the contribution of any combination
 fake and real leptons. It has been implemented previously in 
 \cite{Arguin:1558979}. Versions of the matrix
-method have been implemented in previous experiments priort to the LHC.
+method have been implemented in previous experiments prior to the LHC.
 The first version to be implemented within ATLAS
 \cite{ATLAS-CONF-2010-087}
 was restricted to the estimation of events with 
@@ -543,36 +543,56 @@ As a result, it is those terms with exactly one loose lepton
 observed that end up dominating the entire calculation, which
 has a positive weight. 
 
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|cr@{}l}
+Matrix Method Term & \multicolumn{3}{c}{Contribution} \\
+\hline
+\hline
+TTT & &-217&.6\\
+TTL & &3074&.8 \\
+TLL & &-1&.2 \\
+LLL & &2&.7 \\ 
+Other & &0&.2 \\
+\hline
+Sum & &2858&.9
+\end{tabular}
+\label{tab:mxm_components}
+\caption{Contribution of individual terms to the overall fake lepton 
+prediction in the fake three lepton pre-selection region. The 
+term called ``Other'' includes events with more than three leptons. }
+\end{table}
+
 The generalized matrix method has been 
 evaluated using the rates described later 
 in \sec\ref{sec:fake_and_real_rates}
-at the pre-selection stage
-and can be seen in \fig\ref{fig:mxm_components}.
+at the pre-selection stage described in \sec\ref{sec:preselection}.
+This is shown in \tab\ref{tab:mxm_components}
+after summing over all bins $i$, $j$, and $k$.
+The prediction is shown separately for each term in 
+\eqn\eqref{eq:mxm_threeleptons}, where for example TTL means
+the sum over the second line using the weights $w_{TTL}(i,j,k)$.
+It also includes all other possible contributions from 
+events with more than three leptons, labelled as ``Other''. 
 From this it is clear that the TTL 
 term (which also includes the TLT and LTT terms) 
 dominates the calculation,
 though the effects of the negative weights, in particular from the TTT
-term, can clearly be seen in the sum. There are also contributions
-from events with more than three leptons, but this is observed to be small.
-Thus one could arrive at a good approximation to this full method
+term, can clearly be seen in the sum. The contributions
+from events with more than three leptons is observed to be small.
+Thus, one could arrive at a good approximation to this full method
 by just using \eqn\eqref{eq:mxm_threeleptons} along with just the
 weights in \eqn\eqref{eq:mxm_wttt} and \eqref{eq:mxm_wttl}.
-\begin{figure}
-\centering
-\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/LeadingLeptonPt.png}
-\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/SubleadingLeptonPt.png}
-\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/MinimumLeptonPt.png}
-\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/MET_Et_STVF.png}
-\caption{Fake background estimate at pre-selection broken
-into tight and loose lepton configuration components for the 
-leading (top left), sub-leading (top right), and minimum lepton \pt~(bottom left)
-as well as the \met~(bottom right). The three lepton TTT (orange dots),
-TTL (pink dots), TLL (blue dots), and LLL (yellow dots) components
-are shown along with any other components (green dots) such as those
-with four leptons initially.  The sum of all these components is also
-shown (black line). (what if I showed the absolute value of these weights?)}
-\label{fig:mxm_components}
-\end{figure}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/LeadingLeptonPt.png}
+%\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/SubleadingLeptonPt.png}
+%\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/MinimumLeptonPt.png}
+%\includegraphics[width=.45\columnwidth]{figures/CompareMxMComponents/ChargeSameSign_PreselCustomRates_Mar19/png/MET_Et_STVF.png}
+%\caption{Fake background estimate at pre-selection broken into tight and loose lepton configuration components for the leading (top left), sub-leading (top right), and minimum lepton \pt~(bottom left) as well as the \met~(bottom right). The three lepton TTT (orange dots), TTL (pink dots), TLL (blue dots), and LLL (yellow dots) components are shown along with any other components (green dots) such as those with four leptons initially.  The sum of all these components is also shown (black line). (what if I showed the absolute value of these weights?)}
+%\label{fig:mxm_components}
+%\end{figure}
 
 
 In the analysis, a specialized code is used to evaluate the 
@@ -595,7 +615,7 @@ weights from the same event, there is a correlation in the uncertainty
 if these weights end up falling in the same bin. To handle this 
 correlation the uncertainty for these weights are added linearly 
 as opposed to in quadrature when extracting the final uncertainty 
-on the method. The effect of treating the correlation on the uncertainy is observed to
+on the method. The effect of treating the correlation on the uncertainty is observed to
 be mostly negligible.
 
 \subsubsection{Rate Determination}
@@ -681,18 +701,18 @@ tag-and-probe method, which uses one well defined lepton, the
 as the lepton under study. Both of these control regions
 have at least one lepton object. 
 
-\begin{figure}[ht!]
-\centering
-\subfigure{
-\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/hPtElectronZBosonloosecut_total_new.eps}
-}
-\centering
-\subfigure{
-\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/hPtMuonZBosonloosecut_total_new.eps}
-}
-\vspace{-10mm}\caption{Invariant mass distribution of two opposite charge and same flavor di-lepton invariant mass electrons (left) and muons (right). Update figures!!}
-\label{fig:realEff_CRs}
-\end{figure}
+%\begin{figure}[ht!]
+%\centering
+%\subfigure{
+%\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/hPtElectronZBosonloosecut_total_new.eps}
+%}
+%\centering
+%\subfigure{
+%\includegraphics[width=0.4\columnwidth]{figures/fakes_bkg/CRs/hPtMuonZBosonloosecut_total_new.eps}
+%}
+%\vspace{-10mm}\caption{Invariant mass distribution of two opposite charge and same flavor di-lepton invariant mass electrons (left) and muons (right). Update figures!!}
+%\label{fig:realEff_CRs}
+%\end{figure}
 
 \begin{figure}[ht!]
 \centering
@@ -725,10 +745,8 @@ tag whose di-lepton mass is within 10~\GeV of the \z-mass.
 Two control regions are formed: one from $e^{+}e^{-}$ tag-probe
 pairs for determining the electron real rates and another
 from $\mu^{+}\mu^{-}$ tag-probe pairs for determining the muon
-real rates. The \z-peak in the 
-di-lepton invariant mass distribution for the two control regions
-are shown in \fig\ref{fig:realEff_CRs} comparing the data
-to the model.
+real rates. 
+%The \z-peak in the di-lepton invariant mass distribution for the two control regions are shown in \fig\ref{fig:realEff_CRs} comparing the data to the model.
 Since the rates are also determined as a function of the lepton
 \pt, the lepton \pt~distributions are shown in 
 \fig\ref{fig:realEff_CRsPt}
@@ -875,7 +893,7 @@ passes just the tight selection or both the tight and loose selections
 and also by the inclusive and exclusive \bee-jet multiplicity categories.
 These are then used to calculate the fake rate as in \eqn\eqref{eq:fake_rate}.
 A detailed breakdown of the numbers going into the fake rate calculation
-are summarized in the exclusive \bee-jet mulitiplicity category for 
+are summarized in the exclusive \bee-jet multiplicity category for 
 electrons in \tab\ref{tab:fakeCR_Yield_Electron_BJetGt0}
 and for muons in \tab\ref{tab:fakeCR_Yield_Muon_BJetGt0}.
 
@@ -1037,7 +1055,7 @@ in Eq.~\ref{eq:fake_rate}. }
 
 
 
-The peformance of the fake background estimate is tested in a control region
+The performance of the fake background estimate is tested in a control region
 designed to be enhanced in this background while being orthogonal to the signal regions
 described in \sec\ref{sec:signal_regions}.
 The control region starts by using the event pre-selection region described 
