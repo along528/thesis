@@ -18,6 +18,8 @@ testlatex:
 	#dvipdf -sPAPERSIZE=a4 -dPDFSETTINGS=/prepress ${BASENAME}
 	dvipdf -sPAPERSIZE=a4 ${BASENAME}
 
+quick:
+	pdflatex  ${BASENAME}
 
 testpdflatex:  
 	pdflatex  ${BASENAME}
