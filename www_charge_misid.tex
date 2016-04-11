@@ -216,7 +216,7 @@ and $\varepsilon_j$ have been dropped.
 Thus, given the data, the values of $\varepsilon_i$ and $\varepsilon_j$
 at the minimum value of the log likelihood are taken as the estimate
 of the rates.
-We attempt to subtract backgrounds to the $Z\rightarrow ee$ process using a method described later.
+Backgrounds to the $Z\rightarrow ee$ process are subtracted using MC.
 
 \begin{figure}[htp]
 \centering
@@ -235,10 +235,9 @@ the rate is small enough to be negligible.
 The rate increases gradually along both dimensions, reaching as much as
 6.7\% in the region $\pt > 120\GeV$ and $2.4 < |\eta| < 2.5$ as measured
 in the data, which corresponds to the highest bin in both dimensions. 
+Still, the average rate is only around 0.01 \% to 0.1 \%.
 The rates measured using MC truth information are systematically higher
-than those measured in data, almost by a factor of two. The MC simulation
-tends to overestimate the amount of material (figure?) actually in the
-detector, which could explain this difference....
+than those measured in data, almost by a factor of two, discussed later.
 %figure 4.45 in jinst?
 %or maybe https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2013-05/
 %or https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2013-03/
@@ -280,23 +279,21 @@ seen between the data likelihood method and the truth MC method
 are not due to the method itself. 
 Another variation is to extract the rates from the data with the 
 likelihood method but without performing the background
-subtraction mentioned earlier. In the original method, 
-the background subtraction is performed by... 
-...with a template fit like in \fig\ref{fig:chargemisid_fitexample}.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.6\textwidth]{figures/ChargeMisID/Tot_Polynomial_0_2.eps}
-\caption{Plot of the di-lepton invariant mass 
-in the region where one electron has $0 < |\eta_1| < 0.8$
-and the other has $1.15 < |\eta_2|<1.6$. The data (black points)
-are shown in a region where the electron isolation cuts are removed
-and the electron quality requirements are loosened.
-A template from $Z\rightarrow ee$ MC (red line) and a polynomial
-curve (orange line) are used to fit the data. The sum of the fit
-(blue line) is seen to fit the data well.}
-\label{fig:chargemisid_fitexample}
-\end{figure} 
+subtraction. 
+%In the original method, the background subtraction is performed by...  ...with a template fit like in \fig\ref{fig:chargemisid_fitexample}.  
+%\begin{figure}[htp]
+%\centering
+%\includegraphics[width=0.6\textwidth]{figures/ChargeMisID/Tot_Polynomial_0_2.eps}
+%\caption{Plot of the di-lepton invariant mass 
+%in the region where one electron has $0 < |\eta_1| < 0.8$
+%and the other has $1.15 < |\eta_2|<1.6$. The data (black points)
+%are shown in a region where the electron isolation cuts are removed
+%and the electron quality requirements are loosened.
+%A template from $Z\rightarrow ee$ MC (red line) and a polynomial
+%curve (orange line) are used to fit the data. The sum of the fit
+%(blue line) is seen to fit the data well.}
+%\label{fig:chargemisid_fitexample}
+%\end{figure} 
 
 
 The different variations on  rate estimation are compared to the 
@@ -307,17 +304,18 @@ with the bins numbered counting from low values of $\eta$ and \pt~to
 high values. The rates with and without background
 subtraction are seen to agree quite well, only 
 differing by about 5-6\% throughout.  
-The MC truth method tends
-to be larger than the rates in data by about a factor of two,
-as was already mentioned. Finally, 
-the red curve shows the rates evaluated using the same likelihood method
+The red curve shows the rates evaluated using the same likelihood method
 applied to the data, but using only reconstructed MC. 
-Finally, the variation on the likelihood method using just MC
+This variation on the likelihood method using just MC
 is seen to follow the MC truth method closely, except in a few bins where the statistics
 are low. The relative difference between the MC truth and MC likelihood methods
 is transported to the nominal estimate in data and used as another systematic.
-The difference between the methods using data and those using MC is not
-used as a systematic since such a difference is expected.
+There is a factor of two difference in the rates evaluated using MC
+and those using data, with the difference persisting regardless of the methods used. 
+This suggests that the difference is coming from the MC itself, motivating the
+use of the data-driven rate evaluation in the first place. 
+As such, the difference between the methods using data and those using MC is not
+used as a systematic.
 The systematic uncertainties are combined in quadrature with the statistical
 uncertainty on the nominal estimate to arrive at a final uncertainty on the
 rates, shown as a hashed band.
@@ -451,7 +449,7 @@ the agreement in the shape looks good for all the distributions. An offset
 between the two distributions is observed. This difference is covered partially by 
 the systematic uncertainties of the method.  Any remaining difference could 
 be expected from the difference in rates observed at high $\eta$ and 
-high $E_{T}$ as seen in Fig.~\ref{fig:ChargeMisID_truthRate_finalFig} and 
+high $E_{T}$ as seen in \fig\ref{fig:ChargeMisID_truthRate_finalFig} and 
 serves as justification for using the data-driven method.
 
 
@@ -460,12 +458,12 @@ serves as justification for using the data-driven method.
 \includegraphics[width=.45\textwidth]{figures/ChargeMisID/preselection_wz_br.png}
 \includegraphics[width=.45\textwidth]{figures/ChargeMisID/0sfos_wz_br.png}
 \caption{Plots of the different branching fractions of the $WZ$ process
-as a function of the leading lepton \pt at pre-selection (left)
+as a function of the leading lepton \pt~at pre-selection (left)
 and after also applying a requirement that events have 0 SFOS lepton
 pairs (right). The individual decays of $W$ and $Z$ are split up
 into whether they decay into taus ($\tau$) or into electrons and muons (denoted $l$).
-The taus also subsequently decay. The contributions from $W\to l\nu Z\to ll$ 
-and $W \to \tau \nu Z \to ll$ after applying the 0 SFOS selection
+The taus also subsequently decay. The contributions from $WZ\to l\nu ll$ 
+and $WZ \to \tau \nu  ll$ after applying the 0 SFOS selection
 are due purely to charge mis-identification.}
 \label{fig:chargemisid_wz_br}
 \end{figure}
