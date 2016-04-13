@@ -6,7 +6,7 @@ to the signal and which MC generators are used in the simulation,
 have already been described in \sec\ref{sec:www_bg_samples}.
 Those simulated backgrounds
 which are most important have been checked in control regions and are 
-also described below.
+described in more detail below.
 In some cases, corrections and/or uncertainties on 
 the normalization of these simulated samples are applied. 
 These are also described below.
@@ -21,10 +21,10 @@ These are also described below.
 
 
 
-\subsubsection{$WZ\rightarrow lll\nu$}
+\subsubsection{$WZ$} 
 \label{sec:wzbg}
 
-The $WZ\rightarrow lll \nu$ background is the most important prompt background 
+The $WZ$ background is the most important prompt background 
 to the $WWW$ signal process. 
 The most recent measurements of the $WZ$ process at the LHC
 \cite{Aad:2012twa,Anger:1663539,CMS-PAS-SMP-12-006} 
@@ -68,17 +68,17 @@ $ZZ$, \ttV, and $VVV$) and from backgrounds with fake leptons.
 The contributions to the signal region are thus parameterized as
 \begin{equation}
 \label{eq:wzparam}
-N^{\textrm{Data}} =  N^{WZ} + N^{\textrm{Fake}} + N^{\textrm{Electroweak}}
+N^{\textrm{Data}} =  N^{WZ} + N^{\textrm{Fake}} + N^{\textrm{Electroweak}}.
 \end{equation}
 These backgrounds include processes without \z-bosons.
-Thus, the presence of the \z-boson in the signal means that applying a \z
-requirement of 
+Thus, the presence of the \z-boson in the signal means that 
+applying a \z~requirement of 
 $|m_{\textrm{SFOS}}-m_{\z}|<15\GeV$
 will suppress these contributions to the background.
 Also, requiring that the leptons be isolated does a good job of 
 suppressing the fake background.
 Thus, the same track and calorimeter isolation requirements
-are applied to electrons and muons as in the $WWW$ signal regions
+are applied to electrons and muons as are applied in the $WWW$ signal regions
 described in \sec\ref{sec:object_selection}.
 
 %%%Do I want to show this figure?
@@ -98,10 +98,10 @@ described in \sec\ref{sec:object_selection}.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.6\textwidth]{figures/abcd.png}
-\label{fig:abcd_diagram}
-\caption{Diagram of the four different regions used in the ABCD method
+\caption{Diagram of the four different regions used in the 2D sideband method
 as defined from cuts on the 2D plane of isolation versus the
 $Z$ boson SFOS mass parameter.}
+\label{fig:abcd_diagram}
 \end{figure}
 
 The \z~and isolation requirements are 
@@ -113,20 +113,20 @@ to form the three sidebands.
 %\fig\ref{fig:wz_sidebands} in both the the isolated and non-isolated regions.
 The expectation in each sideband can be parameterized
 in the same way as \eqn\eqref{eq:wzparam}, resulting in one
-equation for each region. By specifying the \z boson condition
+equation for each region. By specifying the \z~boson condition
 as $A$ and the isolation condition as $B$, \eqn\eqref{eq:wzparam}
-can be rewritten as:
+can be rewritten as
 \begin{equation}
 \label{eq:wzparam2}
-N^{\textrm{Data}}_{A,B} =  N^{WZ}_{A,B} + N^{\textrm{Fake}}_{A,B} + N^{\textrm{Electroweak}}_{A,B}
+N^{\textrm{Data}}_{A,B} =  N^{WZ}_{A,B} + N^{\textrm{Fake}}_{A,B} + N^{\textrm{Electroweak}}_{A,B},
 \end{equation}
 representing the four different equations after varying $A$ and $B$ independently.
-For example, the signal region is when $A=\textrm{With \z}$ and
-$B=\textrm{Isolated}$.
+For example, the signal region is when $A=$``$\textrm{With \z}$'' and
+$B=$``$\textrm{Isolated}$''.
 The control regions are shown diagrammatically in \fig\ref{fig:abcd_diagram}.
 One more equation can be found by assuming that the effect of 
-the isolation cut on the fake background is independent of the \z
-requirement.
+the isolation cut on the fake background is 
+independent of the \z~requirement.
 That is to say:
 \begin{equation}
 \label{eq:wz_constraint}
@@ -139,7 +139,7 @@ R^{\textrm{Fake}}_{A} =
 {N^{\textrm{Fake}}_{A,\textrm{Non-Isolated}}}
 \end{equation}
 and it is assumed that $K=1$.
-This results in five equations: the expectations,
+This results in five equations: the expectations of 
 \eqn\eqref{eq:wzparam2}, from varying the conditions $A$ and $B$ independently,
 and \eqn\eqref{eq:wz_constraint}.
 
@@ -147,13 +147,13 @@ and \eqn\eqref{eq:wz_constraint}.
 
 
 If we can solve the equations above for $N^{WZ}_{A,B}$ in the signal region,
-when $A=\textrm{With \z}$ and $B=\textrm{Isolated}$,
+when $A=$``$\textrm{With \z}$'' and $B=$``$\textrm{Isolated}$'',
 then we have our estimate. 
 There are 5 equations and 16 unknowns. The four unknowns, $N^{\textrm{Data}}_{A,B}$,
-are determined using the data directly while 
+are determined using the data directly, while 
 the electroweak backgrounds, $N^{\textrm{Electroweak}}_{A,B}$,
 and the $WZ$ contributions in the sidebands, $N^{WZ}_{A,B}$ 
-(when $A=\textrm{With \z}$ and $B=\textrm{Isolated}$ are not both true)
+when $A$ is not ``$\textrm{With \z}$'' and $B$ is not ``$\textrm{Isolated}$'',
 are determined using $WZ$ MC. This reduces the problem to 5 equations
 and 5 unknowns. Thus, we can solve algebraically for the remaining unknowns
 including the desired value for the $WZ$ estimate in the signal region.
@@ -220,7 +220,7 @@ This gives a good test of the $WZ$ normalization in a control region
 which is closer to the $WWW$ signal regions, but where the signal is still
 suppressed since most of the signal region cuts are not applied.
 The comparison is shown in \fig\ref{fig:WZ_2SFOS_CR} where
-the data is shown to be in good agreement with the corrected $WZ$ MC
+the data is seen to be in good agreement with the corrected $WZ$ MC
 estimate, as desired.
 
 \begin{figure}[htp]
@@ -230,7 +230,8 @@ estimate, as desired.
 \includegraphics[width=0.495\textwidth]{figures/WZ_CR/InvariantMassSFOS_histratio.png}
 \includegraphics[width=0.495\textwidth]{figures/WZ_CR/NJets_histratio.png}
 \caption{$WZ$ control region with 3 lepton pre-selection plus 2 SFOS requirement. 
-Distributions show leading lepton $p_{T}$, $\MET$, $m_{12}$, and jet multiplicity. 
+Distributions show leading lepton $p_{T}$, $\MET$, leading di-lepton 
+mass ($m_{ll}$), and the jet multiplicity (\njet). 
 The systematic band shows the uncertainty on the $WZ$ k-factor.}
 \label{fig:WZ_2SFOS_CR}
 \end{figure}  
@@ -248,12 +249,13 @@ in the MC independently.
 
 
 
-\subsubsection{$ZZ\rightarrow llll$}
+\subsubsection{$ZZ$}
 \label{sec:zzbg}
 
-The $ZZ\rightarrow llll$ process has a similar cross-section as 
-the $WZ\rightarrow lll\nu$ process but is 
-suppressed by the probability that exactly one lepton is not reconstructed. 
+The $ZZ$ process has a similar cross-section as 
+the $WZ$ process but is 
+suppressed at pre-selection 
+by the probability that exactly one lepton is not reconstructed. 
 Still, this probability is large enough that the $ZZ$ background is one of the 
 largest in the 1 and 2 SFOS signal regions.  
 Unlike the $WZ$ process, NNLO predictions are available 
@@ -264,7 +266,7 @@ The uncertainty on the prediction is determined to be
 This correction is used instead of determining a correction in the data
 like in \sec\ref{sec:wzbg}.
 
-We may check how well the NLO $ZZ\rightarrow llll$ MC prediction and 
+We may check how well the NLO $ZZ$ MC prediction and 
 NNLO normalization correction describe the process in the data by looking
 in a four lepton control region. The reconstructed leptons are required to have
 the same quality requirements as in \sec\ref{sec:object_selection}.
@@ -279,7 +281,7 @@ to suppress background contamination in the control region,
 the invariant mass of both SFOS pairs are required to be near the \z-mass, 
 with $60\GeV<m_{\textrm{SFOS}}<120\GeV$ for both.
 The results of the comparison are summarized for a few different distributions
-in \fig\ref{fig:ZZ_CR} and on the total yield in \tab\ref{tab:ZZ_CR}.
+on the total yield in \tab\ref{tab:ZZ_CR}.
 The expectation is shown to agree well with the observed data within the 
 stated systematic uncertainty on the k-factor of 15\%. 
 
@@ -297,18 +299,17 @@ stated systematic uncertainty on the k-factor of 15\%.
 %or in the ZZ control regions.
 
 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_lep_pt.eps}
-\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_m4l.eps}
-\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_m12.eps}
-\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_m34.eps}
-
-\caption{$ZZ\rightarrow llll$ control region with two separate SFOS pairs. 
-Distributions are shown for the lepton \pt, the leading di-lepton mass ($m_{12}$), 
-the minimum di-lepton mass ($m_{34}$), and the four lepton mass ($m_{4l}$).}
-\label{fig:ZZ_CR}
-\end{figure}  
+%\begin{figure}[htp]
+%\centering
+%\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_lep_pt.eps}
+%\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_m4l.eps}
+%\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_m12.eps}
+%\includegraphics[width=0.495\textwidth]{figures/ZZ_CR/ZZ_CR_m34.eps}
+%\caption{$ZZ$ control region with two separate SFOS pairs. 
+%Distributions are shown for the lepton \pt, the leading di-lepton mass ($m_{12}$), 
+%the minimum di-lepton mass ($m_{34}$), and the four lepton mass ($m_{4l}$).}
+%\label{fig:ZZ_CR}
+%\end{figure}  
 
 \begin{table}[htp]
 \centering
@@ -321,7 +322,7 @@ $ZZ$ &  $156.2 \pm 0.3$(stat) $\pm 22.3$(syst) \\
 % $gg2ZZ$ &	$21.3 \pm 0.2$ \\
 $Z\gamma$ &  $0.0 \pm 0.0$\\ 
 Fake (MC) &  $3.6 \pm 0.2$\\ 
-tri-boson and $t\bar{t}+V$ &  $4.1 \pm 0.2$\\ 
+$VVV$ and $t\bar{t}+V$ &  $4.1 \pm 0.2$\\ 
 \hline
 Expected Signal + Background &  $164.0 \pm 0.3$ (stat) $\pm 22.3$(syst)\\ 
 \hline
@@ -340,8 +341,10 @@ The systematic error due to the k-factor on the $ZZ$ sample is also shown.}
 \subsubsection{$Z\gamma$}
 \label{sec:zgammabg}
 
-The $\z\gamma$ process can produce three leptons and thus falls into the 
-signal regions.
+The $\z\gamma$ process can produce three leptons 
+if the \z~decays to two leptons and the photon, $\gamma$,
+pair produces into an electron-positron pair such that only one in the 
+pair is selected.
 Measurements of this process within ATLAS
 have shown that this process is well described by MC simulation
 using the \sherpa~generator at both 7 and 8~\TeV~\cite{Aad:2013izg,Auerbach:1631102}.
@@ -354,8 +357,8 @@ lepton quality requirements as in \sec\ref{sec:object_selection}.
 One of the three leptons should be an electron while the remaining two 
 are required to form a di-muon SFOS pair. For this final state to be produced
 by the $\z\gamma$ process, the electron should always come from 
-pair production off of the photon, $\gamma$, which itself radiates
-off of the initial state \z~boson.  As a result, the invariant mass
+pair production off of the photon which itself can radiate
+off of the \z~boson.  As a result, the invariant mass
 of the di-muon pair coming from the \z-decay will typically be shifted
 slightly below the \z-mass. However, the invariant mass of the three lepton 
 system should restore this shift such that the mass peak is again centered 
@@ -378,7 +381,7 @@ mechanism is being well modeled.
 \includegraphics[width=0.495\textwidth]{figures/ZG_CR/NJets_histratio.png}
 
 \caption{Three lepton $Z\gamma$ control region. Distribution are shown for the
-lepton $p_{T}$, three lepton invariant mass ($m_{\mu\mu e}$), electron $\eta$, 
+lepton $p_{T}$, three lepton invariant mass ($m_{lll}$), electron $\eta$, 
 and jet multiplicity.}
 \label{fig:Zgamma_CR}
 \end{figure}  
@@ -413,7 +416,7 @@ The remaining backgrounds evaluated using MC are those containing
 at least three real leptons but whose cross-sections are small or on 
 the order of the signal process, namely $\ttV$ and $VVV$ processes.
 The theory uncertainties on the $\ttV$ normalization have been 
-chosen to be 30\% to be consistent with measurements from
+chosen to be 30\% in order to be consistent with measurements from
 ATLAS~\cite{ATLAS-CONF-2015-032}. 
 %do I also need to cite a twiki for this 30% uncertainty
 %look at this conf note.
