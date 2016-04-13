@@ -17,7 +17,7 @@ This will be followed by a statistical combination of the fully-leptonic and sem
 results leading to an improved  
 measurement on the SM $WWW$ total cross-section and limits on the 
 aQGC signal.
-The results of this combination are to be published soon \cite{wwwcomb}.
+The results of this combination are to be published soon in \cite{wwwcomb}.
 
 
 
@@ -29,9 +29,9 @@ The results of this combination are to be published soon \cite{wwwcomb}.
 The semi-leptonic analysis uses a selection that is designed
 to select events from the decay channel \wwwlljj. As such, 
 it requests exactly two leptons and two jets.  The selection is similar
-to the one used the same-sign $WW$ vector boson fusion (VBF) production process of
+to the one used in the same-sign $WW$ vector boson fusion (VBF) production process of
 \cite{PhysRevLett.113.141803} with the main difference being that
-it requires $|\Delta y(jj)| < 1.5$ and $65 \GeV < m_{jj} < 105 \GeV$
+it requires $|\Delta y_{jj}| < 1.5$ and $65 \GeV < m_{jj} < 105 \GeV$
 to separate the $WWW$ signal from the same-sign $WW$ VBF signal as can be
 seen in \fig\ref{fig:signal_semilep}. The selection used is listed in \tab\ref{tab:selection_2l2j}.
 It splits the selection into three separate signal regions based on the final
@@ -50,7 +50,7 @@ are required to have the same sign.
 \begin{tabular}{|l||c||c||c|}   \hline 
  & \multicolumn{1}{c||}{$e^\pm e^\pm$} & \multicolumn{1}{c||}{$e^\pm \mu^\pm$}    & \multicolumn{1}{c|}{$\mu^\pm \mu^\pm$}  \\ \hline\hline
 Lepton & \multicolumn{3}{c|}{Exactly two same-electric-charge leptons with $p_T>30$ GeV} \\ \hline
-Jet        & \multicolumn{3}{c|}{At least two jets with $p_T>(20) 30$ GeV and $|\eta|<2.5$} \\ \hline
+Jet        & \multicolumn{3}{c|}{At least two jets with leading (subleading) $p_T > 30 (20)$  GeV and $|\eta|<2.5$} \\ \hline
 $m_{\ell\ell}$        & \multicolumn{3}{c|}{$>40$ GeV}  \\ \hline
 \MET                      & \multicolumn{2}{c||}{~~~~~~~~~~~~~~~~~~~~~$>55$ GeV~~~~~~~~~~~~~~~~~~~~~~~~} & \multicolumn{1}{c|}{-}  \\  \hline
 $m_{jj}$        & \multicolumn{3}{c|}{$65<m_{jj}<105$ GeV}  \\ \hline
@@ -62,16 +62,14 @@ $b-$jet veto                              & \multicolumn{3}{c|}{No identified $b
 \hline
 \end{tabular}
 \end{center}
-\caption{Selection criteria for the semi-leptonic channel.}
+\caption{Reconstruction-level selection criteria for the semi-leptonic channel.}
 \label{tab:selection_2l2j}
 \end{table}
 
 \begin{table}[ht!]
 \centering
-\begin{footnotesize}
 \input{tables/combination/fiducial_selection_2l2j.tex}
-\end{footnotesize}
-\caption{Description of fiducial selection for each of the semi-leptonic channels.  }
+\caption{Description of fiducial selection for the semi-leptonic channel.  }
 \label{tab:fiducial_selection_2l2j}
 \end{table}
 
@@ -89,7 +87,8 @@ The fiducial cross-section is
     \includegraphics[width=0.495\textwidth]{figures/combination/dY2j_linear_ratio.pdf}
     \includegraphics[width=0.495\textwidth]{figures/combination/TwojM_log_ratio.pdf}
   \end{center}
-  \caption{Comparison of $\Delta Y(jj)$ and $M_{jj}$ distributions between VBFNLO and MadGraph LO events with two same-sign leptons and two jets in the final state. }
+  \caption{Comparison of the difference in the rapidity separation of the leading
+  jets, $|\Delta y_{jj}|$, and the di-jet invariant mass, $m_{jj}$, between VBFNLO and MadGraph LO events with two same-sign leptons and two jets in the final state. }
   \label{fig:signal_semilep} 
 \end{figure}
 
@@ -150,7 +149,7 @@ to the different estimation methods used. The systematics for the semi-leptonic
 channel are summarized in \tab\ref{tab:sys_2l2j}. The fiducial cross-sections
 and correction factors (like in \eqn\eqref{eq:cfactor}) are presented in \tab\ref{tab:inputs_2l2j}.
 
-Semi-leptonic aQGC inputs...
+%Semi-leptonic aQGC inputs...
 
 \begin{figure}[ht]
 \centering
@@ -168,7 +167,7 @@ The total SM cross-section is shown at $f_{s,0}=f_{s,1}=0$ for comparison.}
 \label{fig:2l2j_aqgc_fiducial_xsec}
 \end{figure}
 
-More details can be found in \cite{wwwcomb} once published.
+%More details can be found in \cite{wwwcomb} once published.
 
 \section{Combined Cross-section Measurement}
 \label{sec:combined_measurement}
@@ -195,25 +194,25 @@ while the semi-leptonic channel inputs are taken from
 The combined measurement on the signal strength, $\mu$, is translated
 into a measurement on the total cross-section using the relation
 \begin{equation}
-\sigma^{\textrm{Total}}_{\textrm{Observed}} = \frac{\mu}{A} \sum_{i\in \textrm{Channels}} \sigma^{\textrm{Fiducial}}_i
+\sigma^{\textrm{Total}}_{\textrm{Observed}} = \frac{\mu}{A} \sum_{i\in \textrm{Channels}} \sigma^{\textrm{Fiducial}}_{\textrm{Theory},i}
 \label{eq:sigmatot}
 \end{equation}
 where $A$ is the total acceptance which is the sum of the 
 acceptance in each channel, $A_i$:
 \begin{equation}
-A = \sum_i A_i
+A = \sum_i A_i, 
 \end{equation}
 and where $A_i$ is computed as
 \begin{equation}
-A_i = \frac{ \sigma^{\textrm{Fiducial}}_i }{ \sigma^{\textrm{Total}}}
+A_i = \frac{ \sigma^{\textrm{Fiducial}}_{\textrm{Theory},i} }{ \sigma^{\textrm{Total}}_{\textrm{Theory}}}.
 \end{equation}
-The $\sigma^{\textrm{Fiducial}}_i $ are simply the fiducial
+The $\sigma^{\textrm{Fiducial}}_{\textrm{Theory},i} $ are simply the fiducial
 cross-sections in each channel, $i$,  taken from
 \tab\ref{tab:inputs_3l} and \tab\ref{tab:inputs_2l2j}
-and $\sigma^{\textrm{Total}}$ is the expected total cross-section
+and $\sigma^{\textrm{Total}}_{\textrm{Theory}}$ is the expected total cross-section
 in \eqn\eqref{eq:total_www_xsec}, reprinted here for convenience:
 \begin{equation}
-\sigma^{\textrm{Total}}_{\textrm{Theory}}= 241.47\pm0.13 ~(\textrm{Stat.}) ~^{+10.33}_{-6.08} ~(\textrm{PDF}) ~\pm 6.3 ~(\textrm{Scale}) ~\textrm{fb} %uncertainty?
+\sigma^{\textrm{Total}}_{\textrm{Theory}}= 241.47\pm0.13 ~(\textrm{Stat.}) ~^{+10.33}_{-6.08} ~(\textrm{PDF}) ~\pm 6.3 ~(\textrm{Scale}) ~\textrm{fb} ~.
 \end{equation}
 The acceptance values for both the semi-leptonic and fully-leptonic channels 
 are summarized here in \tab\ref{tab:acceptance}.
@@ -232,17 +231,18 @@ Only statistical uncertainties are shown.}
 
 
 The distribution of $q_0$ is shown 
-in Fig.~\ref{fig:stat_measurement_significance} for the combination.  
+in \fig\ref{fig:stat_measurement_significance} for the combination of the fully-leptonic and
+semi-leptonic channels.
 The observed null p-value 
 is found to be 0.1657 ($0.971~\sigma$) with an 
-expected of 0.152 ($1.026~\sigma$).
+expected value of 0.152 ($1.026~\sigma$).
 
 %this is with reduced systematics. what is the effect of adding or removing more?
 %plot should be redone with a bigger range
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.80\textwidth]{figures/combination/significance.png}
-\caption{PDF of the background only hypothesis as a function of $q_0$ for the combination of all three channels. PDFs are determined 
+\caption{PDF of the background only hypothesis as a function of $q_0$ for the combination of the fully-leptonic and semi-leptonic channels. PDFs are determined 
 using toy MC. The dashed black line represents the expected value of $q_0$ while the solid black line represents the observed value of $q_0$ seen in the data. The shaded area to the right
 of this line represents the null p-value or the 
 integral of the background hypothesis in the signal-like region.
@@ -253,15 +253,15 @@ the background only PDF.}
 \end{figure}
 
 The negative log likelihood contour is shown
-for the combination of all six channels in 
-Fig.~\ref{fig:stat_measurement_interval_combination}.
-The expected value and uncertainties for the total cross-section is:
+for the combination of all fully-leptonic and semi-leptonic channels in 
+\fig\ref{fig:stat_measurement_interval_combination}.
+The expected value and uncertainties for the total cross-section is
 \begin{equation}
-\sigma^{\textrm{Total}}_{\textrm{Expected}} = 241.47 ~ ^{+232}_{-199} \stat ~^{+152}_{-153}\syst ~\textrm{fb}
+\sigma^{\textrm{Total}}_{\textrm{Expected}} = 241.47 ~ ^{+232}_{-199} \stat ~^{+152}_{-153}\syst ~\textrm{fb} ~, 
 \end{equation}
-while the observed total cross-section is:
+while the observed total cross-section is
 \begin{equation}
-\sigma^{\textrm{Total}}_{\textrm{Observed}} = 227.03 ~ ^{+202}_{-198} \stat ~^{+154}_{-160} \syst ~\textrm{fb}
+\sigma^{\textrm{Total}}_{\textrm{Observed}} = 227.03 ~ ^{+202}_{-198} \stat ~^{+154}_{-160} \syst ~\textrm{fb} ~.
 \end{equation}
 
 %Pulls and correlations
@@ -270,7 +270,7 @@ while the observed total cross-section is:
 \centering
 \includegraphics[width=.8\textwidth]{figures/combination/interval_comb.png}
 \caption{The profile likelihood contours evaluated as a function of the signal strength
-for the combination of all three channels. 
+for the combination of the fully-leptonic and semi-leptonic channels. 
 The observed (black) and expected (red) contours are shown when considering only statistical uncertainty (dashed line) and when considering both statistical and systematic uncertainties (solid line).
 The dotted black
 lines pinpoint the location of the $1~\sigma$ and $2~\sigma$ total Gaussian uncertainties
@@ -295,7 +295,7 @@ on the measurement of the signal strength which corresponds to the minimum value
 \begin{table}[h!]
   \begin{center}
   \input{tables/combination/aqgc_1d.tex}
-    \caption{Expected and observed one-dimensional limits on $f_{s,0}$ vs $f_{s,1}$.}
+    \caption{Expected and observed one-dimensional limits on \fszero~and \fsone.}
     \label{tab:aqgc_combined_1d}
 
   \end{center}
@@ -304,7 +304,7 @@ on the measurement of the signal strength which corresponds to the minimum value
 \begin{table}[h!]
   \begin{center}
   \input{tables/combination/aqgc_1d_alpha45.tex}
-    \caption{Expected and observed one-dimensional limits on $\alpha_4$ vs $\alpha_5$.}
+    \caption{Expected and observed one-dimensional limits on $\alpha_4$ and $\alpha_5$.}
     \label{tab:aqgc_combined_1d_alpha45}
 
   \end{center}
@@ -324,14 +324,13 @@ are shown in \tab\ref{tab:aqgc_combined_1d_alpha45}.
 
 \begin{figure}[h!]
 \begin{center}
-
 \includegraphics[width=0.495\textwidth]{figures/combination/Comb500-Lim.png}
 \includegraphics[width=0.495\textwidth]{figures/combination/Comb100-Lim.png}\\
 \includegraphics[width=0.495\textwidth]{figures/combination/Comb200-Lim.png}
 \includegraphics[width=0.495\textwidth]{figures/combination/Comb300-Lim.png}\\
 \includegraphics[width=0.495\textwidth]{figures/combination/CombUnit-Lim.png}
 \end{center}
-\caption{Two-dimensional limits at 95\% CL on the combination for the non-unitarized case (Top Left)
+\caption{Two-dimensional limits at 95\% CL on the combination of the fully-leptonic and semi-leptonic channels for the non-unitarized case (Top Left)
 and three different choices of the unitarization scale, $\Lambda$:
 3~\TeV~(Top Right), 2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).}
 
