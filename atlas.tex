@@ -140,11 +140,11 @@ in order to ensure good coverage.
 The transverse momentum of charged tracks can be determined by measuring how they 
 bend in a magnetic field. The deviation of the trajectory
 from a straight line path is referred to as the 
-sagitta, $s$\footnote{Technically, the sagitta, $s$, is defined in terms
+sagitta\footnote{Technically, the sagitta, $s$, is defined in terms
 of an arc as the distance from the center of the arc to the center of its
 base. It can be related to the radius of the arc, $r$, and half the length
 of the line connecting the two ends of the arc, $l$, by 
-$s=r-\sqrt{r^2-l^2}$.}. The sagitta is proportional to the magnetic
+$s=r-\sqrt{r^2-l^2}$.}, $s$. The sagitta is proportional to the magnetic
 field strength and inversely proportional to the magnitude
 of the particle's momentum in the transverse plane, known
 as the transverse momentum or \pt.
@@ -167,7 +167,7 @@ in the transverse plane, we can test this constraint by measuring
 the total transverse momentum from the particles measured in the detector
 such that
 \begin{equation}
-\Bigg| \sum_{i\in\textrm{All Particles}} \vec{p}_{\textrm{T},i} \Bigg| = 0,
+\Bigg| \sum_{i\in\textrm{All Particles}} \overrightarrow{p_{\textrm{T},i}} \Bigg| = 0,
 \end{equation}
 where the transverse momentum is added vectorialy and then
 the magnitude is taken.
@@ -175,8 +175,16 @@ After adding up the $\pt$ of all of the particles to obtain
 the total transverse momentum, 
 any imbalance with respect to this constraint
 is referred to as the
-missing transverse energy, $\met$, and is attributed to the 
-neutrinos produced in the collision. 
+missing transverse energy
+and is attributed to the 
+neutrinos produced in the collision.
+Thus, it is a vector defined as
+\begin{equation}
+\vecmet = -\Bigg( \sum_{i\in\textrm{All Particles}} \overrightarrow{p_{\textrm{T},i}} \Bigg),
+\label{eq:met}
+\end{equation}
+though usually we are just 
+interested in its magnitude, $\met = |\vecmet|$.
 There is no such constraint on the longitudinal momentum of the partons
 on an event-by-event basis
 as discussed in \sec\ref{sec:pdf}.

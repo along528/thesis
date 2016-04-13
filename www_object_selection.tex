@@ -54,17 +54,17 @@ less than 10\% of the muon \pt~otherwise.
 
 
 
-The signature for electron objects are that they have a track in the inner
+The signature for electron objects is that they have a track in the inner
 detector that points to an energy deposit in the EM calorimeter.
 Tight quality requirements are placed on the electrons to achieve
 reconstruction and identification performance like in \cite{Aad:1744017}.
 Similar to the muon objects, 
 the electron track is required to extrapolate back to 
 the primary vertex and have a $\pt>10$~GeV.
-The direction of the electron energy 
-deposits are also asked to fall within $|\eta| < 2.47$ and outside the 
+We also ask that the direction of the electron energy 
+deposits fall within $|\eta| < 2.47$ and outside the 
 transition region between the EM calorimeter 
-barrel and endcap, $1.37 < |\eta| < 1.52$.
+barrel and endcap of $1.37 < |\eta| < 1.52$.
 The electron objects are required to be isolated and have additional
 requirements on the track extrapolation, similar to the muon objects.  
 %what about further quality requirements?
@@ -108,7 +108,8 @@ $b$-jets are present when looking in the signal regions.
 
 The presence of neutrinos is inferred by a momentum
 imbalance in the transverse plane, referred to as the missing
-transverse energy or $\MET$. The $\MET$ is calculated by 
+transverse energy or $\MET$, defined in \eqn\eqref{eq:met}. 
+The $\MET$ is calculated by 
 adding up all of 
 the energy deposits from calorimeters cells within $|\eta| < 4.9$
 and then calibrating them based on the the reconstructed
@@ -138,7 +139,7 @@ scheme in order of precedence:
 	\item Muon-Jet Overlap: If $|\Delta R(\mu,j)| < 0.2$, 
 	then keep the muon and throw away the jet.
 \end{enumerate}
-The direction is taken from the calorimeter information for electrons,
+The particle direction is taken from the calorimeter information for electrons,
 from the combined track information for muons, and from the anti-$k_{\mathrm{T}}$
 algorithm for jets.
 No momentum smearing or calibration corrections
