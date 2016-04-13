@@ -13,9 +13,9 @@ track in the inner detector along with a narrow energy deposit in the
 EM calorimeter; a very similar signature to an electron. Or, 
 a \bee-hadron could decay into a final state with a high energy muon,
 making it difficult to distinguish from a muon produced in the hard interaction.
-We call these mis-reconstructed leptons, ``fake'' leptons. 
+We call these mis-reconstructed leptons ``fake'' leptons. 
 By contrast, those leptons that have been correctly identified are 
-referred to as ``real''.
+referred to as ``real'' leptons.
 
 In particle physics it is 
 never the case that the features describing 
@@ -43,8 +43,8 @@ Thus, we must take them into account.
 
 The modeling of these fake leptons are in general 
 heavily dependent upon the conditions of the detector. 
-The detector is described in MC simulation using \geant, thus
-it is possible and relatively straightforward 
+The detector is described in MC simulation using \geant~\cite{Agostinelli:2002hh}.
+Thus, it is possible and relatively straightforward 
 to model these processes using MC directly.
 However, in practice, this usually proves to be inadequate
 because some of the effects which produce fake leptons 
@@ -55,8 +55,8 @@ The trick is then how to extract from the data the information we need
 for the signal regions of interest in an accurate and unbiased way.
 
 
-We choose to use the Generalized Matrix Method~\cite{Gillam:2014xua}, 
-which may estimate from data the contribution of any combination
+We choose to do this using the Generalized Matrix Method~\cite{Gillam:2014xua}, 
+which estimates from data the contribution of any combination
 fake and real leptons. It has been implemented previously in 
 \cite{Arguin:1558979}. Versions of the matrix
 method have been implemented in previous experiments prior to the LHC.
@@ -68,15 +68,15 @@ Variations of the method have been implemented in numerous publications
 by ATLAS and CMS ever since. % (though less often by CMS).
 In essence, the method relies on the definition of two different selections,
 referred to as ``tight'' and ``loose'', defined such that
-``real'' leptons are more likely to pass the ``tight'' selection
-than ``fake'' leptons. If the probability of the ``real'' and 
-``fake'' leptons to pass these selections can be determined (typically
+real leptons are more likely to pass the tight selection
+than fake leptons. If the probability of the real and 
+fake leptons to pass these selections can be determined (typically
 in control regions), 
 then in principle the easily defined
-``tight'' and ``loose'' selections may be used
+tight and loose selections may be used
 as a proxy
 to extract an estimate of the 
-``real'' and ``fake'' lepton
+real and fake lepton
 contributions in a region of one's choosing.
 The method is described in more detail below.
 
@@ -97,9 +97,9 @@ Furthermore, design one of the selections to be much more likely to have
 real leptons than fake leptons, usually taken 
 to be the signal region selection. We will call this the ``tight'' selection.
 We can measure directly the number of events in the data that
-pass this ``tight'' selection and call it $n_T$. Choose the other selection
+pass this tight selection and call it $n_T$. Choose the other selection
 to have a different composition of real and fake leptons. Since the 
-``tight'' selection is enriched in real leptons, this can be achieved
+tight selection is enriched in real leptons, this can be achieved
 if this other selection has a larger proportion of fake leptons.
 We will call this the
 ``loose'' selection and designate the number of events measured
@@ -110,7 +110,7 @@ both regions can be called $n_R$. The probability that one of these
 real leptons passes the tight selection is called the 
 real efficiency, or sometimes the real rate, and is denoted by 
 $\real$. Similarly, the total number of fake leptons 
-that fall in both regions is denoted $n_F$ and the probability 
+that fall in both regions is denoted $n_F$. The probability 
 that one of these fake leptons passes the tight selection is 
 called the fake efficiency, or fake rate, and is 
 denoted by $\fake$. The condition that
@@ -132,11 +132,11 @@ equations:
   \begin{pmatrix}
   \real & \fake \\ \realbar & \fakebar
   \end{pmatrix} 
-  \begin{pmatrix} n_R \\ n_F \end{pmatrix}
+  \begin{pmatrix} n_R \\ n_F \end{pmatrix},
 \end{align}
-where I have introduced the notation $\realbar = 1-\real$
+where we have introduced the notation $\realbar = 1-\real$
 and $\fakebar =1-\fake$.
-Note that this equation is a function of the measured values of
+This equation is a function of the measured values of
 $n_R$ and $n_F$ which we are actually seeking to find in terms of the 
 expectations of $n_T$ and $n_L$. Thus, it is in fact more
 useful to solve for $n_R$ and $n_F$ by taking the inverse:
@@ -149,10 +149,10 @@ useful to solve for $n_R$ and $n_F$ by taking the inverse:
   \begin{pmatrix}
   \fakebar & -\fake \\ -\realbar & \real
   \end{pmatrix} 
-  \begin{pmatrix} \langle n_T\rangle \\ \langle n_L\rangle \end{pmatrix}
+  \begin{pmatrix} \langle n_T\rangle \\ \langle n_L\rangle \end{pmatrix}.
 \end{equation}
 
-So far everything is exact and as long as the condition
+So far everything is exact. As long as the condition
 that $\real>>\fake$ is true,
 as it should be by construction, 
 then there is no risk of encountering the singular condition
@@ -160,7 +160,7 @@ when $\real=\fake$.
 But in the matrix method, 
 we wish to use the \emph{measured} values of $n_T$
 and $n_T$ to derive an \emph{estimate} of the expectation
-for $n_R$ and $n_F$, denoted $\hat{n}_R$ and $\hat{n}_F$. 
+for $n_R$ and $n_F$. Call the estimated values $\hat{n}_R$ and $\hat{n}_F$. 
 Thus, in a rather \emph{ad hoc} way 
 we interpret \eqn\eqref{eq:mxm_single_inverted} as follows:
 \begin{equation}
@@ -175,7 +175,7 @@ we interpret \eqn\eqref{eq:mxm_single_inverted} as follows:
   \begin{pmatrix}
   \fakebar & -\fake \\ -\realbar & \real
   \end{pmatrix} 
-  \begin{pmatrix} n_T \\ n_L \end{pmatrix}
+  \begin{pmatrix} n_T \\ n_L \end{pmatrix}.
 \end{equation}
 This equation solves for the estimators, $\hat{n}_R$ and $\hat{n}_F$,
 as a function of the measured values $n_T$ and $n_L$, as well 
@@ -183,22 +183,22 @@ as the rates. The estimators are in general only approximately equal
 to the expected values, as discussed in \cite{Gillam:2014xua}.
 This approximation can break down, sometimes even giving negative values
 for the estimate.  Though it should be adequate if the number
-of events falling in the ``tight'' and ``loose'' selections are 
+of events falling in the tight and loose selections are 
 not too small.
-We will assume that the method holds, but these concerns are important
+We will assume that the approximation holds, but these concerns are important
 to keep in mind whenever using this method.
 
 
 We now have a way to approximately solve for the estimate
 of the real and fake lepton contributions to a single lepton 
-selection in our data sample. But, ultimately we are interested
+selection in our data sample. But ultimately we are interested
 in an estimate of 
 the number of fake leptons that fall into our tight selection, call it
-estimate $\hat{f}_{T}$.
+$\hat{f}_{T}$.
 And in principle we can also solve for the number of fake leptons
 that are loose, $\hat{f}_{L}$, though this is not our focus. 
-These estimates can be solved for then in a straightforward way, by 
-selecting only the estimated component of fakes.
+These estimates can then be solved for in a straightforward way, by 
+selecting only the estimated component of fakes:
 \begin{equation}
   \begin{pmatrix} \hat{f}_T \\ \hat{f}_L \end{pmatrix} 
   %&= 
@@ -215,10 +215,10 @@ selecting only the estimated component of fakes.
   \begin{pmatrix}
   0 & 0\\ 0 & 1
   \end{pmatrix} 
-  \begin{pmatrix} \hat{n}_R\\ \hat{n}_F \end{pmatrix}
+  \begin{pmatrix} \hat{n}_R\\ \hat{n}_F \end{pmatrix}.
 \end{equation}
 Solving for $\hat{n}_R$ and $\hat{n}_F$ and then 
-Substituting in for equation \eqn\eqref{eq:mxm_single_inverted_approx}
+substituting in equation \eqn\eqref{eq:mxm_single_inverted_approx}
 gives an expression for the expected number of tight and loose
 selected fake leptons as determined from the rates and the measured
 value of tight and loose leptons:
@@ -236,7 +236,7 @@ value of tight and loose leptons:
   \begin{pmatrix}
   \fakebar & -\fake \\ -\realbar& \real
   \end{pmatrix} 
-  \begin{pmatrix} n_T\\ n_L \end{pmatrix}
+  \begin{pmatrix} n_T\\ n_L \end{pmatrix}.
 \end{align}
 Then,  since we are only interested in $\hat{f}_T$, 
 we may simply pluck out the estimated number of tight leptons
@@ -258,15 +258,15 @@ from fakes:
   \begin{pmatrix}
   \fakebar & -\fake \\ -\realbar& \real
   \end{pmatrix} 
-  \begin{pmatrix} n_T\\ n_L \end{pmatrix}
+  \begin{pmatrix} n_T\\ n_L \end{pmatrix}.
 \end{align}
-Evaluating the expression for $\hat{f}_T$ gives:
+Evaluating the expression for $\hat{f}_T$ gives
 \begin{align}
 \hat{f}_T &= \frac{\fake}{\real-\fake} \Big( \real(n_T+n_L) - n_T \Big)  \\
            &= \Big( \frac{\fake}{\real-\fake} 
 	      -\real\Big) n_T 
 	      + \Big(\frac{\fake}{\real-\fake} \real \Big)n_L\\
-           &= w_T~n_T + w_L~n_L
+           &= w_T~n_T + w_L~n_L,
 \end{align}
 where in the last line we have reorganized the coefficients in front
 of $n_T$ and $n_L$ into parameters $w_T$ and $w_L$ which are dependent
@@ -280,7 +280,7 @@ summing up all of the weighted events.  This is a very useful
 strategy since it allows one to compute the estimate on the fly
 using a setup similar to the one already used to process the data itself. %reword?
 Note that since $\real>>\fake$ and $0<\real<1$,
-$w_T$ will always be negative. Thus the method will produce negative weights.
+$w_T$ will always be negative. Thus, the method will produce negative weights.
 This is not a concern as long as we keep in mind that the sum
 is the only thing that is ultimately of interest.
 However, it is worth noticing that the total estimate can itself
@@ -297,9 +297,9 @@ It will prove useful to rewrite \eqn\eqref{eq:mxm_final_single}
 in a more general form:
 \begin{equation}
 \label{eq:mxm_general}
-\hat{F} = \mathbf{\Phi}\mathbf{W}\mathbf{\Phi}^{-1} N
+\hat{F} = \mathbf{\Phi}\mathbf{W}\mathbf{\Phi}^{-1} N,
 \end{equation}
-where for the single lepton case
+where for the single lepton case,
 \begin{equation}
 N=\begin{pmatrix} n_T \\ n_L\end{pmatrix}
 \end{equation}
@@ -307,32 +307,32 @@ and
 \begin{equation}
 \hat{F}=\begin{pmatrix} \hat{f}_T \\ \hat{f}_L\end{pmatrix}.
 \end{equation}
-The quantity $\mathbf{\Phi}$ is the matrix from \eqn\eqref{eq:mxm_single}
+The quantity $\mathbf{\Phi}$ is the matrix from \eqn\eqref{eq:mxm_single},
 \begin{equation}
 \mathbf{\Phi} = 
   \begin{pmatrix}
   \real& \fake\\ \realbar& \fakebar
-  \end{pmatrix} 
+  \end{pmatrix} ,
 \end{equation}
 and $\mathbf{\Phi}^{-1}$ is its inverse. Finally, $\mathbf{W}$
 is the fake selection matrix which in this case is identified with
 \begin{equation}
-\mathbf{W}=\begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
+\mathbf{W}=\begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}.
 \end{equation}
-And if we want only the estimate of the remaining tight leptons
+If we want only the estimate of the remaining tight leptons
 like in \eqn\eqref{eq:mxm_final_single2}
 then we can do 
 \begin{equation}
 \label{eq:mxm_general_tight}
-\hat{T} = \mathbf{M}\mathbf{\Phi}\mathbf{W}\mathbf{\Phi}^{-1} N
+\hat{T} = \mathbf{M}\mathbf{\Phi}\mathbf{W}\mathbf{\Phi}^{-1} N,
 \end{equation}
 where 
 \begin{equation}
 \hat{T}=\begin{pmatrix} \hat{f}_T \\ 0 \end{pmatrix}
 \end{equation}
-and $\mathbf{M}$ is the tight selection matrix:
+and $\mathbf{M}$ is the tight selection matrix,
 \begin{equation}
-\mathbf{M}=\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}
+\mathbf{M}=\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}.
 \end{equation}
 
 
@@ -357,7 +357,7 @@ Consider the three lepton case, which is most relevant to this
 analysis. 
 Equation \eqref{eq:mxm_general_tight} becomes
 \begin{equation}
-\hat{T}^{ijk} = \mathbf{M}\mathbf{\Phi}^{ijk}\mathbf{W}(\mathbf{\Phi}^{-1})^{ijk} N^{ijk}
+\hat{T}^{ijk} = \mathbf{M}\mathbf{\Phi}^{ijk}\mathbf{W}(\mathbf{\Phi}^{-1})^{ijk} N^{ijk},
 \end{equation}
 where each of the three leptons can be in separate bins $i$, $j$, and $k$.
 The matrix $\mathbf{\Phi}^{ijk}$
@@ -442,11 +442,11 @@ of the individual single lepton matrices of rates for each lepton:
   \fakebar^i\realbar^j\fakebar^k  &
   \fakebar^i\fakebar^j\realbar^k  &
   \fakebar^i\fakebar^j\fakebar^k  
-  \end{pmatrix} 
+  \end{pmatrix} ,
 \end{align}
 and we can solve for the inverse.  
 We are only interested in the components with at least one
-fake lepton, thus we construct the matrix $\mathbf{W}$ such that:
+fake lepton, thus we construct the matrix $\mathbf{W}$ such that
 \begin{equation}
 \mathbf{W} = 
 \begin{pmatrix}
@@ -458,7 +458,7 @@ fake lepton, thus we construct the matrix $\mathbf{W}$ such that:
 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 Furthermore, we have the vector 
 \begin{equation}
@@ -477,20 +477,20 @@ In this case, there is only one configuration that gives
 three tight leptons.  Thus, the matrix $\mathbf{M}$ is constructed
 to be an $8 \times 8$ matrix with 1 in the first element and 
 all other elements equal to 0. This results in the vector
-$T^{ijk}$ having all elements equal to 0 except for the first,
+$\hat{T}^{ijk}$ having all elements equal to 0 except for the first,
 denoted $\hat{f}_{TTT}^{ijk}$, which is the
 estimate of the number of three lepton events with three tight leptons 
 in bins $i$, $j$, and $k$,
 where at least one lepton is fake.
 Putting everything together, we can solve for 
-$\hat{f}_{TTT}^{ijk}$:
+$\hat{f}_{TTT}^{ijk}$ such that
 \begin{align}
 \begin{split}
 \label{eq:mxm_threeleptons}
 \hat{f}^{ijk}_{TTT} = ~& w_{TTT}(i,j,k)~n^{ijk}_{TTT}  \\
    &+(w_{TTL}(i,j,k)~n^{ijk}_{TTL} + j\leftrightarrow k + i \leftrightarrow k)\\
    &+(w_{LLT}(i,j,k)~n^{ijk}_{LLT} + j\leftrightarrow k + i \leftrightarrow k) \\
-   &+w_{LLL}(i,k,j)~n^{ijk}_{LLL}
+   &+w_{LLL}(i,k,j)~n^{ijk}_{LLL} ,
 \end{split}
 \end{align}
 where the terms like $j\leftrightarrow k$ are intended to indicate
@@ -524,7 +524,7 @@ w_{LLT}(i,j,k) =
 w_{LLL}(i,j,k) =  
 \frac{\real^i\fake^i}{\real^i-\fake^i}
 \frac{\real^j\fake^j}{\real^j-\fake^j}
-\frac{\real^k\fake^k}{\real^k-\fake^k}
+\frac{\real^k\fake^k}{\real^k-\fake^k}.
 \end{equation}
 
 
@@ -559,8 +559,8 @@ Sum & &2858&.9
 \end{tabular}
 \label{tab:mxm_components}
 \caption{Contribution of individual terms to the overall fake lepton 
-prediction in the fake three lepton pre-selection region. The 
-term called ``Other'' includes events with more than three leptons. }
+prediction in the three lepton pre-selection region. The 
+term called ``Other'' includes events with more than three loose leptons. }
 \end{table}
 
 The generalized matrix method has been 
@@ -578,8 +578,8 @@ From this it is clear that the TTL
 term (which also includes the TLT and LTT terms) 
 dominates the calculation,
 though the effects of the negative weights, in particular from the TTT
-term, can clearly be seen in the sum. The contributions
-from events with more than three leptons is observed to be small.
+term, are also important. The contribution
+from events with more than three loose leptons is observed to be small.
 Thus, one could arrive at a good approximation to this full method
 by just using \eqn\eqref{eq:mxm_threeleptons} along with just the
 weights in \eqn\eqref{eq:mxm_wttt} and \eqref{eq:mxm_wttl}.
@@ -602,8 +602,8 @@ to see which leptons pass the final selection.
 It uses the on-the-fly
 weighting method described above and uses a tensor
 formulation that improves the computational efficiency of the method.
-This is also used as described in \cite{Gillam:2014xua}.
-Uncertainties are calculated by propagating through 
+This method is also used in \cite{Gillam:2014xua}.
+Uncertainties on the weights are calculated by propagating through 
 the uncertainties on the rates. 
 Using the standard propagation of uncertainty, this relies
 on the derivative of the expectation with respect to the rates.
@@ -621,7 +621,7 @@ be mostly negligible.
 \subsubsection{Rate Determination}
 \label{sec:fake_and_real_rates}
 
-The Generalized Matrix Method relies on being able to determine
+The Generalized Matrix Method described above relies on being able to determine
 the real and fake rates to be used as inputs to the method.
 This is usually done by looking into control regions
 which are designed to be enhanced in sources of real and fake leptons.
@@ -636,22 +636,23 @@ one we believe to be rich in real leptons and the other in fake leptons,
 we can use these leptons to extract the real and fake rates, respectively.
 The real rate, $\real^i$, in category (or bin) $i$,
 is simply defined as the ratio of tight candidate real leptons
-over the number of tight plus loose candidate real leptons:
+over the number of tight plus loose candidate real leptons,
 \begin{equation}
 \label{eq:real_rate}
-\real^i = \frac{r_T^i}{r_T^i+r_L^i}
+\real^i = \frac{r_T^i}{r_T^i+r_L^i},
 \end{equation}
 where $r_T^i$ and $r_L^i$ are the number of tight and loose candidate
 real leptons in category $i$, to be 
-distinguished from the $n_T^i$ and $n_L^i$ which
-are the number of candidate and loose real leptons in the signal regions
-and whose origin is unknown.
+distinguished from the $n_T^i$ and $n_L^i$ of the previous section,
+which
+are the number of candidate tight and loose real leptons in the signal regions,
+but whose origin is unknown.
 Similarly, the fake rate, $\fake^i$, in category $i$, 
 is defined as the ratio of tight candidate fake leptons over
-the number of tight plus loose candidate fake leptons:
+the number of tight plus loose candidate fake leptons,
 \begin{equation}
 \label{eq:fake_rate}
-\fake^i = \frac{f_T^i}{f_T^i+f_L^i}
+\fake^i = \frac{f_T^i}{f_T^i+f_L^i},
 \end{equation}
 where $f_T^i$ and $f_L^i$ are the number of tight and loose candidate
 fake leptons in category $i$.
@@ -660,7 +661,7 @@ The real and fake rates are not universally the same for all leptons,
 and in fact can vary strongly. Thus, the choice of categories, $i$, is
 an important one. The rates are usually split by lepton
 flavor and also in bins of at least one kinematic quantity.
-The splitting of the categories by flavor is 
+The splitting of the categories by lepton flavor is 
 very important as the rates are 
 typically very different for electrons and muons. 
 This is in part because
@@ -720,8 +721,9 @@ have at least one lepton object.
 \includegraphics[width=0.495\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeTightMuonPt_histratio.png}
 \includegraphics[width=0.495\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeElectronPt_histratio.png}
 \includegraphics[width=0.495\columnwidth]{figures/fakes_bkg/CRs/RealTP/ProbeMuonPt_histratio.png}
-\caption{Probe lepton \pt\ distributions in SFOS tag and probe control regions used to derive real rates.  Electron (left) and muon (right) are shown
-when the probe lepton is either tight (top) or no additional selection (besides the pre-selection) is required (bottom)}
+\caption{Probe lepton \pt\ distributions in SFOS tag and probe control regions used to derive the real rates.  The electron (left) and muon (right) distributions are shown
+when the probe lepton is either tight (top) or 
+tight plus loose (bottom).}
 \label{fig:realEff_CRsPt}
 \end{figure}
 
@@ -741,18 +743,18 @@ the tag lepton passes the same single lepton triggers and trigger
 matching requirements as in \sec\ref{sec:event_selection} are used. 
 We also require the presence of a 
 probe lepton that forms an SFOS pair with the
-tag whose di-lepton mass is within 10~\GeV of the \z-mass.
+tag whose di-lepton mass is within 10~\GeV~of the \z~mass.
 Two control regions are formed: one from $e^{+}e^{-}$ tag-probe
 pairs for determining the electron real rates and another
 from $\mu^{+}\mu^{-}$ tag-probe pairs for determining the muon
 real rates. 
 %The \z-peak in the di-lepton invariant mass distribution for the two control regions are shown in \fig\ref{fig:realEff_CRs} comparing the data to the model.
-Since the rates are also determined as a function of the lepton
+Since the rates are determined as a function of the lepton
 \pt, the lepton \pt~distributions are shown in 
 \fig\ref{fig:realEff_CRsPt}
 for the data as well as the expectation.
-They are show separately for electrons
-and muons and based on whether the probe leptons
+They are shown separately for electrons
+and muons and also based on whether the probe leptons
 pass just the tight selection 
 (the top row of \fig\ref{fig:realEff_CRsPt})
 or both the loose and tight selections
@@ -769,7 +771,7 @@ to improve the statistics.
 It is interesting to note that the real rates
 are uniformly lower for electrons than for muons, but both follow
 the same trend of increasing as a function of the lepton \pt, 
-and are relatively high even for the lowest value of 81\%.
+and are relatively high, with the lowest value being 81\%.
 The difference between the rates calculated 
 either the data or the MC exclusively 
 is taken as a systematic uncertainty on the nominal estimate
@@ -785,7 +787,7 @@ in \tab\ref{tab:realEff_El} and for muons in \tab\ref{tab:realEff_Mu}.
 \centering
 \includegraphics[width=0.495\columnwidth]{figures/fakes_bkg/Efficiencies/ElectronRealRates.png}
 \includegraphics[width=0.495\columnwidth]{figures/fakes_bkg/Efficiencies/MuonRealRates.png}
-\caption{Real lepton efficiency as a function of \pt\ and measured in data (red) and MC (blue) for electrons (left) and muons (right).}
+\caption{Real lepton rates as a function of \pt\ as measured in data (red) and MC (blue) for electrons (left) and muons (right).}
 \label{fig:realEff}
 \end{figure}
 
@@ -794,10 +796,10 @@ in \tab\ref{tab:realEff_El} and for muons in \tab\ref{tab:realEff_Mu}.
 \begin{table}[ht!]
 \centering
 \input{tables/ElectronRealRates.tex}
-\caption{Measured real efficiencies for electrons including statistical and systematic absolute uncertainties. 
-Systematic is calculated by taking the difference
-between the efficiencies measured in data and MC.  The efficiency measured in data is used as the nominal central value.
-} 
+\caption{Measured real rates for electrons including statistical, $\sigma_{stat}$,
+and systematic, $\sigma_{sys}$, absolute uncertainties. 
+The systematic uncertainty is calculated by taking the difference
+between the rates measured in data and MC.  The rates measured in data are used as the nominal central values.  } 
 \label{tab:realEff_El}
 \end{table} 
 
@@ -805,10 +807,10 @@ between the efficiencies measured in data and MC.  The efficiency measured in da
 \begin{table}[ht!]
 \centering
 \input{tables/MuonRealRates.tex}
-\caption{Measured real efficiencies for muons including statistical and systematic absolute uncertainties.
-Systematic is calculated by taking the difference
-between the efficiencies measured in data and MC.  The efficiency measured in data is used as the nominal central value.
-} 
+\caption{Measured real rates for muons including statistical, $\sigma_{stat}$,
+and systematic, $\sigma_{sys}$, absolute uncertainties. 
+The systematic uncertainty is calculated by taking the difference
+between the rates measured in data and MC.  The rates measured in data are used as the nominal central values.  } 
 \label{tab:realEff_Mu}
 \end{table} 
 
@@ -829,7 +831,7 @@ a probe lepton passing either the loose or tight selection.
 The leptons are required to have the same sign, since
 on average a fake lepton will have equal probably of
 a positive or negative charge, while background processes
-like $WW$,$\ttbar$, and $Z$ production produce opposite-sign lepton
+like $WW$, $\ttbar$, and $Z$ production produce opposite-sign lepton
 pairs.  Only muons are used as tag leptons. 
 The reason for this is that the chance of an electron passing tight selection
 to be a jet fake is higher than that for muons. It is also 
@@ -841,7 +843,7 @@ lepton is an electron or a muon in order to determine the electron
 and muon fake rates separately.
 Events with additional leptons are thrown away.
 To suppress contamination from multi-jet background processes
-to the $W\rightarrow l\nu + \textrm{Jets}$ process, like QCD,
+to the $W\rightarrow l\nu + \textrm{jets}$ process, like QCD,
 a cut of $\met>10\GeV$ is also applied.
 
 The fake rate that is determined depends upon the source of fake leptons.
@@ -878,7 +880,7 @@ data but are instead corrected by the subtraction
 f_{T/L}^{i} = 
 N^{\textrm{Data},i}_{T/L} 
 - N^{\textrm{Real},i}_{T/L}
-- N^{\textrm{PC},i}_{T/L}
+- N^{\textrm{PC},i}_{T/L},
 \end{equation}
 where $N^{\textrm{Data},i}_{T/L}$ is the number of tight or loose
 probe leptons selected from data in bin $i$ of the fake lepton control region,
@@ -902,7 +904,7 @@ and for muons in \tab\ref{tab:fakeCR_Yield_Muon_BJetGt0}.
 %\input{tables/YieldTable_BJetGt0Electron.tex}
 \centering
 \input{tables/YieldTable_BJetGt0Electron_Slim.tex}
-\caption{Calculation of fake rate for electrons when $\nbjet> 0$. }
+\caption{Calculation of fake rates, $\varepsilon_f$, for electrons when $\nbjet> 0$. }
 %in the different $p_{T}$ bins used in the final method.
 %The observed data are is dominated by the fake contribution in this control region
 %while the contributions from real leptons and leptons from photon 
@@ -919,7 +921,7 @@ and for muons in \tab\ref{tab:fakeCR_Yield_Muon_BJetGt0}.
 %\input{tables/YieldTable_BJetGt0Muon.tex}
 \centering
 \input{tables/YieldTable_BJetGt0Muon_Slim.tex}
-\caption{Calculation of fake rate for muons when $\nbjet > 0$. }
+\caption{Calculation of fake rates for muons, $\varepsilon_f$, when $\nbjet > 0$. }
 %in the different $p_{T}$ bins used in the final method.
 %The observed data are is dominated by the fake contribution in this control region
 %while the contributions from real leptons and leptons from photon 
@@ -1058,20 +1060,22 @@ in Eq.~\ref{eq:fake_rate}. }
 The performance of the fake background estimate is tested in a control region
 designed to be enhanced in this background while being orthogonal to the signal regions
 described in \sec\ref{sec:signal_regions}.
-The control region starts by using the event pre-selection region described 
-in Section~\ref{sec:preselection}. To reduce contamination 
+The control region selection starts from the event pre-selection region described 
+in \sec\ref{sec:preselection}. To reduce contamination 
 from the $WZ$ process, we require that there are 0 SFOS 
 lepton pairs present in the event.
 Finally, in order to enforce 
 orthogonality with the signal regions
+from \tab\ref{tab:signal_selection}
 we require that $\nbjet \geq 1$. 
-As such it is very close to the 0 SFOS signal region where we are most sensitive.
+As such, it is very close to the 0 SFOS signal region where we are most sensitive.
 
 \begin{table}[ht!]
 \centering
 \input{tables/FakeCR_Yields.tex}
-\caption{Expected and observed yields for the fake lepton control region. Only statistical
-uncertainties are shown.}
+\caption{Expected and observed yields for the fake lepton control region. 
+Statistical uncertainties are shown on all predictions. The systematic
+uncertainty on the fake background estimate is also included.}
 \label{tab:FakeCR}
 \end{table}
 
@@ -1079,8 +1083,10 @@ uncertainties are shown.}
 
 
 The total predicted events and observed data in this region are shown in \tab\ref{tab:FakeCR}.
-The control region is clearly dominated by the fake lepton background, with $10.91 \pm 0.73\stat$ 
-fake lepton events predicted out of a total of $14.72 \pm 0.73\stat$. Furthermore, the shapes
+The control region is clearly dominated by the fake lepton background, with $10.91 \pm 0.73\stat \pm 8.7 \syst$ 
+fake lepton events predicted out of a total of $14.72 \pm 0.73\stat \pm 8.7 \syst$,
+where the systematic uncertainty comes purely from the fake background
+estimate. Furthermore, the shapes
 of the predicted and observed kinematic distributions are also shown along with the
 fake lepton background systematic uncertainties in \fig\ref{fig:FakeCR}.  From this, 
 we can see that the data is largely consistent with the prediction. This is true not just
