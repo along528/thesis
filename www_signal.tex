@@ -12,46 +12,49 @@
 %~\cite{Campanario:2008yg}.  
 
 The SM $WWW$ signal processes are implemented in the Monte
-Carlo generator \vbfnlo~\cite{Arnold:2011wj,Arnold:2012xn},
-which can generate partonic events at leading-order (LO) in QCD with
-next-to-leading-order (NLO) cross-sections, 
+Carlo generator \vbfnlo, described in \cite{Arnold:2011wj}
+and \cite{Arnold:2012xn},
+which can generate partonic events at LO in QCD with
+NLO cross-sections, 
 and in \madgraph~\cite{MadGraph}, which can generate
 partonic events at NLO  with NLO cross-sections. 
 The partonic events are further processed 
 by \pythiaeight~\cite{Sjostrand:2007gs} and \photos~\cite{Golonka:2005pn} 
-to add effects of beam remnant interactions and initial and 
+to add the effects of beam remnant interactions and initial and 
 final state radiation. 
 SM parameters, such as the Higgs mass,
 must be provided to the MC generators as input. 
 The underlying event
-parameters are set in \pythiaeight~ using the ATLAS tune 
-of AU2\cite{atlas:2011zja}.
+parameters are set in \pythiaeight~using the ATLAS tune 
+of AU2~\cite{atlas:2011zja}.
 The MC generators must also be provided an appropriate PDF.
 The PDF used  in the LO \vbfnlo~generation is
-the LO CTEQ6L1~\cite{Pumplin:2002vw} PDF set;
+the LO CTEQ6L1 PDF set~\cite{Pumplin:2002vw};
 CT10 NLO~\cite{guzzi:2011sv}
 is used in the NLO \vbfnlo~cross-section calculation.
 The PDF used in the NLO \madgraph~generation 
-and \xsec~calculation is CTEQ6L1 
-but this is re-weighted to CT10 NLO using a k-factor of 1.08 to 1.10.
-Since the MC generators are computed to finite order in perturbation
-theory, renormalization and factorization scales must be chosen.
+and cross-section calculation is CTEQ6L1 
+but this is re-weighted to CT10 NLO using a k-factor ranging
+from 1.08 to 1.10.
+For the reasons described in \sec\ref{sec:pdf},
+renormalization and factorization scales must be chosen.
 The renormalization and factorization scales are dynamically
 set to the $WWW$ invariant mass in the \vbfnlo~samples; they 
 are set to a fixed scale equal to the $Z$ mass in \madgraph.
 The \vbfnlo~samples are restricted to leptonic decays of the $W$~bosons
-where each lepton has a \pt~of at least 5~\GeV. The \madgraph~
-samples include all decays of the $W$~boson, with a requirement 
+where each lepton has a \pt~of at least 5~\GeV. 
+The \madgraph~samples 
+include all decays of the $W$~boson, with a requirement 
 that jets have a a \pt~of at least 10~\GeV~ but with no requirement
-on the \pt~of leptons.
+on the \pt~of the leptons.
 They are compared in a common fiducial phase space,
 described in more detail in \sec\ref{sec:fiducial}.
-The \vbfnlo~ and \madgraph~samples handle interference 
-between $WH\rightarrow WWW(*)$ 
+The \vbfnlo~and \madgraph~samples handle interference 
+between off-shell $WH\rightarrow WWW(*)$ 
 and on-shell $WWW$ production at LO, but \madgraph~is not
 able to do this at NLO. As a result, the NLO \madgraph~samples
-are split into separate samples of 
-on-shell \www~ and $WH\rightarrow WWW(*)$ production.
+are split into separate samples for the two different production
+mechanisms.
 Both sets are further split by the \www~charge mode.
 For each sample, the \xsecs are summarized in \tab\ref{tab:signal_xsec} 
 in their full phase space and in the common fiducial phase space.
@@ -84,7 +87,7 @@ remainder of the analysis.
 \begin{table}[ht]
 \centering
 \input{ tables/combination/signal_xsec.tex}
-\caption{Inclusive and common fiducial cross-sections at NLO 
+\caption{Inclusive and fiducial cross-sections at NLO 
 for \vbfnlo~and \madgraph~samples. 
 The sum of the inclusive \xsecs are different
 because of the different branching fractions in the two cases. 
@@ -194,9 +197,9 @@ a factor of two.
 The effect of these variations on the cross-sections
 as compared to the nominal
 are shown separately for the two different charge 
-modes in \tab~\ref{tab:scaleVariation}.
+modes in \tab\ref{tab:scaleVariation}.
 The symmetric uncertainty is then determined by taking the maximum 
-variation for each charge mode, 
+variation for each charge mode; 
 namely, 2.62\% for $W^+W^+W^-$ and 2.53\% for $W^-W^+W^-$. 
 
 \begin{table}[ht!]
@@ -222,7 +225,7 @@ namely, 2.62\% for $W^+W^+W^-$ and 2.53\% for $W^-W^+W^-$.
 \hline
 \end{tabular}
 \caption{The relative variation of the NLO cross sections corresponding 
-to different choices of factorization and renormalization 
+to different choices of factorization, $\mu_F$, and renormalization, $\mu_R$,
 scales for the \Wp\Wp\Wm and \Wm\Wp\Wm  processes. }
 \label{tab:scaleVariation}
 \end{table}
