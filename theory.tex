@@ -152,7 +152,7 @@ while the tau neutrino limits are set at a 95\% confidence level.}
 
 The SM can be written down using a lagrangian of the form
 \begin{equation}
-\curlyl_{\textrm{SM}} = \curlyl_{\textrm{QCD}} + \curlyl_{\textrm{EW}} + \curlyl_{\textrm{EWSB}}
+\curlyl_{\textrm{SM}} = \curlyl_{\textrm{QCD}} + \curlyl_{\textrm{EW}} + \curlyl_{\textrm{EWSB}},
 \label{eq:lagrangian_sm}
 \end{equation}
 which is gauge invariant.
@@ -293,7 +293,7 @@ The QCD term in the SM lagrangian can be written as
 \begin{aligned}
 \curlyl_{\textrm{QCD}} = &-\frac{1}{4}G^a_{\mu\nu} G_a^{\mu\nu} 
                          -g_s \Big( \overline{q}_{\overline{c}} \gamma^{\mu} T_a q_{c} \Big) G_{\mu}^a \\
-			 &+\overline{q}_{\overline{c}}\Big( i\gamma^{\mu} \partial_{\mu} - m\Big) q_c
+			 &+\overline{q}_{\overline{c}}\Big( i\gamma^{\mu} \partial_{\mu} - m\Big) q_c .
 \end{aligned}
 \label{eq:lagrangian_qcd}
 \end{equation}
@@ -313,16 +313,16 @@ different gluon fields, indexed by $a$.
 The gluon fields are four-vectors of the Lorentz group
 and thus undergo Lorentz transformations as indicated by their Lorentz index, $\mu$.
 The $T_a$ are the generators of \suthree, represented by the eight Gell-Mann matrices.
-Because the theory is non-Abelian, the generators obey the commutation relation
+Because the theory is non-Abelian, the generators obey the commutation relation,
 \begin{equation}
-\Big[T_a,T_b\Big] = i f_{abc} T_c
+\Big[T_a,T_b\Big] = i f_{abc} T_c,
 \end{equation}
 where $f_{abc}$ are the anti-symmetric
 \suthree~structure constants that are completely determined
 by the specification of $T_a$.
-$G_{\mu\nu}^a$ is the gluon field strength
+$G_{\mu\nu}^a$ is the gluon field strength,
 \begin{equation}
-G_{\mu\nu}^a = \partial_{\mu} G^a_{\nu} - \partial_{\nu} G^a_{\mu} - g_s f_{abc} G_{\mu}^b G_{\nu}^c
+G_{\mu\nu}^a = \partial_{\mu} G^a_{\nu} - \partial_{\nu} G^a_{\mu} - g_s f_{abc} G_{\mu}^b G_{\nu}^c,
 \end{equation}
 where the $\partial_{\mu}$ is the four-dimensional partial derivative 
 of the Lorentz
@@ -402,7 +402,7 @@ is usually tested by varying both scales independently.
 The overall probability must of course sum to unity, such that
 for some given choice of scales, 
 \begin{equation}
-\sum_i \int_0^1 \mathrm{d}x~x f_i(x,~\mu_R^2,~\mu_F^2) = 1
+\sum_i \int_0^1 \mathrm{d}x~x f_i(x,~\mu_R^2,~\mu_F^2) = 1,
 \end{equation}
 where note that the sum over $i$ is taken over all possible partons;
 this includes all quark (and anti-quark) flavors (though the more massive quarks 
@@ -412,14 +412,17 @@ composition, which places additional requirements on the PDFs.
 In the case of the proton, the valence quark composition is 
 charactized by  two up quarks and a down quark.
 This translates into the requirements 
-\begin{align}
-\int \mathrm{dx} (f_u(x,~\mu_R^2,~\mu_F^2) - f_{\overline{u}}(x,~\mu_R^2,~\mu_F^2) ) &= 2 \\
-\int \mathrm{dx} (f_d(x,~\mu_R^2,~\mu_F^2) - f_{\overline{d}}(x,~\mu_R^2,~\mu_F^2) ) &= 1 
-\end{align}
+\begin{equation}
+\int \mathrm{dx} (f_u(x,~\mu_R^2,~\mu_F^2) - f_{\overline{u}}(x,~\mu_R^2,~\mu_F^2) ) = 2 
+\end{equation}
+and
+\begin{equation}
+\int \mathrm{dx} (f_d(x,~\mu_R^2,~\mu_F^2) - f_{\overline{d}}(x,~\mu_R^2,~\mu_F^2) ) = 1,
+\end{equation}
 while the other quark flavors are referred to as sea quarks 
 and follow the requirement
 \begin{equation}
-\int \mathrm{dx} (f_i(x,~\mu_R^2,~\mu_F^2) - f_{\overline{i}}(x,~\mu_R^2,~\mu_F^2) ) = 0, ~~~~~~~~~ i\neq d,u
+\int \mathrm{dx} (f_i(x,~\mu_R^2,~\mu_F^2) - f_{\overline{i}}(x,~\mu_R^2,~\mu_F^2) ) = 0, ~~\textrm{where}~  i\neq d,u.
 \end{equation}
 After these requirements, the remaining momentum fraction of the proton
 comes from the gluon PDF, which in the end typically contributes to most
@@ -435,7 +438,7 @@ cross-section, which is also
 a function of the parton momenta and the renormalization and factorization
 scales, in order to obtain an overall cross-section of the form
 \begin{equation}
-\sigma = \sum_i \sum_j \int^1_0 \textrm{d}x_1~\textrm{d}x_2~f_i(x_1,~\mu_R^2,~\mu_F^2)~f_j(x_2,~\mu_R^2,~\mu_F^2) ~\hat{\sigma}_{ij}(x_1,~x_2,~\mu_R^2,~\mu_F^2)
+\sigma = \sum_i \sum_j \int^1_0 \textrm{d}x_1~\textrm{d}x_2~f_i(x_1,~\mu_R^2,~\mu_F^2)~f_j(x_2,~\mu_R^2,~\mu_F^2) ~\hat{\sigma}_{ij}(x_1,~x_2,~\mu_R^2,~\mu_F^2),
 \label{eq:qcd_fac}
 \end{equation}
 where $x_1$ and $x_2$ are the separate momentum fractions of the partons in the 
@@ -551,7 +554,7 @@ The EW term in the SM lagrangian can be written as
 \begin{equation}
 \begin{aligned}
 \curlyl_{\textrm{EW}} = -\frac{1}{4}\textbf{W}_{\mu\nu} \cdot \textbf{W}^{\mu\nu} 
-- \frac{1}{4} B_{\mu\nu} B^{\mu\nu}  +\overline{\psi}\gamma^{\mu}D_{\mu}\psi
+- \frac{1}{4} B_{\mu\nu} B^{\mu\nu}  +\overline{\psi}\gamma^{\mu}D_{\mu}\psi,
 \end{aligned}
 \label{eq:lagrangian_ew}
 \end{equation}
@@ -560,7 +563,7 @@ self-interactions of the EW gauge bosons
 and the last term describes the fermion kinetic energies
 and their interactions with the EW gauge bosons, 
 with an implied sum over the fermion fields denoted as $\psi$.
-The kinetic energies are described by the field strength tensors
+The kinetic energies are described by the field strength tensors,
 \begin{equation}
 \label{eq:wfieldstrength}
 \textbf{W}_{\mu\nu} = \partial_{\mu}\textbf{W}_{\nu} - \partial_{\nu}\textbf{W}_{\mu} - g \textbf{W}_{\mu}\times \textbf{W}_{\nu}
@@ -568,7 +571,7 @@ The kinetic energies are described by the field strength tensors
 and 
 \begin{equation}
 \label{eq:bfieldstrength}
-B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
+B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}.
 \end{equation}
 The gauge fields, $\mathbf{W}_{\mu}$ and $B_{\mu}$, represent the 
 massless EW gauge bosons before EWSB.
@@ -579,9 +582,9 @@ describe two charged gauge bosons and
 a neutral gauge boson as 
 a triplet of weak isospin in \sutwo~
 with its generators being the famous Pauli matrices, $\boldsymbol{\tau}$,
-following commutation relation
+that follow the commutation relation
 \begin{equation}
-\Big[\tau_a,\tau_b\Big] = i \varepsilon_{abc} \tau_c
+\Big[\tau_a,\tau_b\Big] = i \varepsilon_{abc} \tau_c,
 \end{equation}
 where $\varepsilon_{abc}$ is the Levi-Civita symbol.
 The charged gauge bosons are represented by a superposition of the first
@@ -595,16 +598,16 @@ to as the weak hypercharge.
 By construction, the weak hypercharge is related to
 the electric charge of \uone~
 electromagnetism, $Q$, 
-and the charge of the third component of weak \sutwo, $T^3$:
+and the charge of the third component of weak \sutwo, $T^3$, by 
 \begin{equation}
-Q=T^3+Y/2
+Q=T^3+Y/2.
 \label{eq:ewcharges}
 \end{equation}
 The $\partial_{\mu}$ is the four-dimensional partial derivative of the Lorentz
 group and the $\gamma^{\mu}$ are the Dirac matrices.
 The EW covariant derivative, $D_{\mu}$, is
 \begin{equation}
-D_{\mu} =  i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} 
+D_{\mu} =  i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu}.
 \label{eq:ew_covariant_derivative}
 \end{equation}
 The coupling constants $g$ and $g'$ describe the strength of the interactions
@@ -612,8 +615,8 @@ of the fermions with the gauge boson fields before EWSB.
 
 The fermion fields, $\psi$, (and their conjugates, $\overline{\psi}$)
 can be split up into the 
-left-handed fermion isospin doublets, $L$,  and right-handed
-fermion isospin singlets, $R$, which is described in more detail later.
+left-handed fermion isospin doublets, $L$,  and the right-handed
+fermion isospin singlets, $R$, which are described in more detail below.
 Putting it all together, we end up with
 \begin{equation}
 \begin{aligned}
@@ -622,7 +625,7 @@ Putting it all together, we end up with
 & -\frac{1}{4}\Big(\partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}\Big) 
 \Big(\partial^{\mu} B^{\nu} - \partial^{\nu} B^{\mu}\Big)\\
 &+\overline{L}\gamma^{\mu}\Big( i \partial_{\mu} - g \frac{1}{2} \boldsymbol{\tau} \cdot \textbf{W}_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) L \\
-&+ \overline{R} \gamma^{\mu} \Big( i \partial_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) R
+&+ \overline{R} \gamma^{\mu} \Big( i \partial_{\mu} - g' \frac{Y}{2} B_{\mu} \Big) R.
 \end{aligned}
 \label{eq:lagrangian_ew_expanded}
 \end{equation}
@@ -648,12 +651,12 @@ L =
 \begin{pmatrix} \tau_L \\ \nu_{\tau,L} \end{pmatrix},
 \begin{pmatrix} u_L \\ d_{L} \end{pmatrix},
 \begin{pmatrix} c_L \\ s_{L} \end{pmatrix},
-\begin{pmatrix} t_L \\ b_{L} \end{pmatrix}
+\begin{pmatrix} t_L \\ b_{L} \end{pmatrix}.
 \end{equation}
-while the right-handed fermion fields are treated as isospin singlets, $R$, 
+Meanwhile, the right-handed fermion fields are treated as isospin singlets, $R$, 
 which only transform under \uone:
 \begin{equation}
-R = e_R,~\mu_R,,~\tau_R,~u_R,~d_R,~c_R,~s_R,~t_R,~b_R
+R = e_R,~\mu_R,~\tau_R,~u_R,~d_R,~c_R,~s_R,~t_R,~b_R,
 \end{equation}
 where each object is a Dirac field whose chirality is indicated by 
 its subscript.
@@ -707,7 +710,7 @@ terms where the charged $W$ and lepton fields are present gives
 \overline{\mu}_L W_{\mu}^+ \nu_{\mu,L} +
 \overline{\nu}_{\mu,L} W^-_{\mu} \mu_L \\&+
 \overline{\tau}_L W_{\mu}^+ \nu_{\tau,L} +
-\overline{\nu}_{\tau,L} W^-_{\mu} \tau_L \Big)
+\overline{\nu}_{\tau,L} W^-_{\mu} \tau_L \Big),
 \end{aligned}
 \label{eq:couplings_wleptons}
 \end{equation}
@@ -726,18 +729,18 @@ of the quark sector look similar:
 \overline{c}_L W_{\mu}^+ s_{L} +
 \overline{s}_{L} W^-_{\mu} c_L \\&+
 \overline{t}_L W_{\mu}^+ b_{L} +
-\overline{b}_{L} W^-_{\mu} t_L \Big)
+\overline{b}_{L} W^-_{\mu} t_L \Big).
 \end{aligned}
 \end{equation}
 These terms correspond to the Feynman diagrams at the bottom
-of \fig\ref{fig:feyn_wcoupling}.
+of \fig\ref{fig:feyn_wcoupling} and 
+it is the presence of these interactions that allow the $W$ 
+to be produced directly at a hadron collider.
 Taking into account quark flavor mixing via the 
 CP violating \cite{PhysRevLett.13.138} Cabibbo-Kobayashi-Maskawa
 matrix \cite{Cabibbo:1963yz,Kobayashi:1973fv}
 modifies this picture so that additional small interaction
 terms appear between the different quark generations.
-It is the presence of these interactions that allow the $W$ 
-to be produced to directly at a hadron collider.
 
 
 \unitlength = 0.6mm %necessary for feynmp
@@ -832,7 +835,7 @@ The lagrangian for EWSB via the Higgs mechanism is
 			D_{\mu}\phi\Big|^2 
 			- \Big(\mu^2 \phi^{\dagger} \phi + \lambda (\phi^{\dagger}\phi)^2 \Big) \\
 			&- \Big(G_1 (\overline{L}\phi R  + \overline{R}\phi_c L)
-			      + G_2 (\overline{L}\phi_c R + \overline{R}\phi L) \Big)
+			      + G_2 (\overline{L}\phi_c R + \overline{R}\phi L) \Big),
 \end{aligned}
 \label{eq:lagrangian_ewsb}
 \end{equation}
@@ -845,7 +848,7 @@ breaking in the Higgs mechanism;
 and the third term shows the Yukawa interactions 
 of the Higgs field with the fermions, with couplings $G_1$ and $G_2$,
 that give the fermions their masses.
-Before EWSB, $\phi$, and its conjugate $\phi_c$, 
+Before EWSB, $\phi$ (and its conjugate $\phi_c$)
 are complex isospin doublets of four scalar fields:
 \begin{equation}
 \phi = \frac{1}{\sqrt{2}}
@@ -858,7 +861,7 @@ are complex isospin doublets of four scalar fields:
 \begin{pmatrix} 
 -\phi_3 + i \phi_4 \\
 \phi_1 - i \phi_2
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 Upon EWSB, we choose $\phi_3=v+h$ and $\phi_1=\phi_2=\phi_4=0$
 such that the Higgs fields become
@@ -873,24 +876,24 @@ v+h
 \begin{pmatrix} 
 v + h\\
 0
-\end{pmatrix}
+\end{pmatrix},
 \end{equation}
 where $v=m_h /\sqrt{2 \lambda}$ is the stable minimum of the 
 ``mexican-hat'' potential and is a function of the Higgs boson 
 mass, $m_h = 2 \sqrt{- \mu^2}$, and $h$ is the quantum 
 vacuum fluctuation of the Higgs field about this minimum.
 Plugging this into the first line of \eqn\eqref{eq:lagrangian_ewsb}
-results in mass terms
+results in the mass terms,
 \begin{equation}
-m_W^2 W_{\mu}^+ W^{-\mu} + \frac{1}{2}m_Z^2 Z_{\mu} Z^{\mu} + \frac{1}{2} m_A^2 A_{\mu} A^{\mu}
+m_W^2 W_{\mu}^+ W^{-\mu} + \frac{1}{2}m_Z^2 Z_{\mu} Z^{\mu} + \frac{1}{2} m_A^2 A_{\mu} A^{\mu},
 \end{equation}
 where $m_W = \frac{1}{2} vg$, $m_Z=\frac{1}{2} v\sqrt{g^2+g'^2}$, and 
 $m_A=0$.
 The two neutral gauge boson fields, $W_{\mu}^3$ and $B_{\mu}$, 
-now mix according to the weak mixing angle, $\theta_W$, to form two new fields:
+now mix according to the weak mixing angle, $\theta_W$, to form two new fields,
 \begin{align}
 A_{\mu} =& \cos\theta_W B_{\mu} + \sin\theta_W W_{\mu}^3 \\
-Z_{\mu} =& -\sin\theta_W B_{\mu} + \cos\theta_W W_{\mu}^3
+Z_{\mu} =& -\sin\theta_W B_{\mu} + \cos\theta_W W_{\mu}^3,
 \end{align}
 where $Z_{\mu}$ corresponds to the $Z$ boson field
 and $A_{\mu}$ corresponds to the photon field.
@@ -900,14 +903,14 @@ The $W^{\pm}$ and $Z$ fields obtain their masses by ``eating''
 the $\phi_1$, $\phi_2$, and $\phi_4$ fields, known as the Goldstone
 bosons, which give the gauge boson fields their longitudinal polarization,
 necessary for any massive field.
-At LO, the masses of the $W$ and $Z$ can be related by the weak mixing angle
+At LO, the masses of the $W$ and $Z$ can be related by the weak mixing angle:
 \begin{equation}
-\frac{M_W}{M_Z} = \cos \theta_W
+\frac{M_W}{M_Z} = \cos \theta_W,
 \end{equation}
 where $\theta_w$ is defined by the ratio of the coupling constants
 $g$ and $g'$ such that
 \begin{equation}
-\frac{g'}{g} = \tan\theta_W
+\frac{g'}{g} = \tan\theta_W.
 \end{equation}
 
 
@@ -919,7 +922,7 @@ The relevant terms look like
 \begin{equation}
 \frac{vg^2}{8} h W^+_{\mu}W^{-\mu} + \frac{g^2}{4} h^2W^{+}_{\mu}W^{-\mu}
 +\frac{vg^2}{4 \cos^2\theta_W} h Z_{\mu} Z^{\mu} 
-+\frac{g^2}{8\cos^2\theta_W} h^2 Z_{\mu}Z^{\mu}
++\frac{g^2}{8\cos^2\theta_W} h^2 Z_{\mu}Z^{\mu},
 \end{equation}
 which can be identified with the Feynman diagrams in \fig\ref{fig:feynman_higgs}.
 
@@ -1003,7 +1006,7 @@ in \eqn\eqref{eq:lagrangian_ew}
 introduces the term 
 \begin{equation}
 -\frac{1}{4} g^2 (\textbf{W}_{\mu} \times \textbf{W}_{\nu}) \cdot
-                 (\textbf{W}^{\mu} \times \textbf{W}^{\nu}) 
+                 (\textbf{W}^{\mu} \times \textbf{W}^{\nu}) ,
 \end{equation}
 which can be expanded to 
 \begin{equation}
@@ -1011,7 +1014,7 @@ which can be expanded to
 -\frac{1}{2} g^2 \Big( & W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}
                   -  W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\
 		  + &2 W_{\mu}^+ W^{-\mu} W^{3}_{\nu}W^{3 \nu}
-		  - 2 W_{\mu}^+ W^{3\mu} W_{\nu}^- W^{3 \nu}\Big)
+		  - 2 W_{\mu}^+ W^{3\mu} W_{\nu}^- W^{3 \nu}\Big).
 \end{aligned}
 \end{equation}
 Upon EWSB this becomes
@@ -1026,7 +1029,7 @@ Upon EWSB this becomes
 &-\sin\theta_W\cos\theta_W g^2 \Big( W_{\mu}^+ W^{-\mu} A_{\nu} Z^{\nu}
                   +W_{\mu}^+W^{-\mu} Z_{\nu} A^{\nu}\\
 		  &\hspace{3cm}- W_{\mu}^+ A^{\mu} W_{\nu}^- Z^{\nu}
-		  - W_{\mu}^+ Z^{\mu} W_{\nu}^- A^{\nu}\Big)\\
+		  - W_{\mu}^+ Z^{\mu} W_{\nu}^- A^{\nu}\Big),
 \end{aligned}
 \label{eq:lagrangian_qgc}
 \end{equation}
@@ -1145,7 +1148,7 @@ do not appear in the SM EW lagrangian.
 		\end{fmfgraph*}
 \end{fmffile}
 \vspace{2 mm}
-\caption{Feynman diagrams of QGC couplings}
+\caption{Feynman diagrams of EW QGC couplings}
 \label{fig:theory_feynman_couplings_qgc}
 \end{figure}
 
@@ -1182,7 +1185,7 @@ do not appear in the SM EW lagrangian.
 
 
 While the fundamental parameters of the EW theory are connected to each other
-by relations like those above, they are not known \emph{a priori} 
+by relations like those above, they are not all known \emph{a priori} 
 and so must be determined from experiment.
 Of primary interest to the topic of this thesis 
 are the measured parameters related to the behavior and properties
@@ -1267,7 +1270,7 @@ sum to 100\% separately for the $W$ and $Z$ bosons within their uncertainties.}
 %\label{fig:theory_wxsec}
 %\end{figure}
 
-The $Z$ boson was discovered also at the SPS shortly after the 
+The $Z$ boson was also discovered  at the SPS shortly after the 
 $W$ \cite{ua1zobs}.
 It is one of the most important particles for measurements at the LHC
 as it has a unique decay signature into Same-Flavor Opposite-Sign (SFOS) 
@@ -1282,7 +1285,7 @@ The Higgs boson was discovered in 2012 at the LHC
 jointly by the ATLAS \cite{Aad20121} and CMS \cite{Chatrchyan:2012xdj}
 collaborations.
 Combined measurements of the mass between the two experiments 
-show the current value of the Higgs mass to be 
+show the current measured value of the Higgs mass to be 
 $m_H = 125.09\pm0.21(\textrm{Stat.})\pm0.11(\textrm{Syst.})\GeV$
 \cite{Aad:2015zhl}. % as seen in \fig\ref{fig:higgs_mass}.
 Detailed studies of the spin \cite{Aad2013120,Khachatryan:2014kca},
@@ -1394,10 +1397,9 @@ for a Higgs boson with the observed mass \cite{PDG:2014,Almeida:2013jfa}.
 \caption{The tree level Feynman diagrams 
 for $WWW$ production. The incoming fermion
 lines in each diagram consist of an
-up-type quark (anti-quark) and down-type anti-quark (quark). Unless
-otherwise specified, the curved lines correspond to $W$ bosons.
+up-type quark (anti-quark) and down-type anti-quark (quark). 
 In this case, the charge of the initial state quarks is assumed
-to sum to +1, leading to the same in the final state.
+to sum to +1, leading to the same charge in the final state.
 It is also possible for the initial and final states to sum to -1
 via charge conjugation.  }
 \label{fig:theory_feynman_www}
@@ -1421,12 +1423,12 @@ the radiation of a Higgs boson off another particle (in this case a $W$ boson). 
 is sometimes referred to as ``Higgsstrahlung'', by analogy 
 with electron Bremsstrahlung where an electron radiates a photon.} where 
 the Higgs decays to two
-$W$ bosons (resonant, but off-shell, production). 
+$W$ bosons (resonant production). 
 The Higgs decay results in one $W$ boson being produced off-shell,
 $H\rightarrow WW^*$, making this the leading contribution to off-shell
 production.  
 The resonance from the Higgs can clearly be seen from the 
-distribution of $m_{\Wp\Wm}$ taken from the simulation of production \www~events
+distribution of $m_{\Wp\Wm}$ taken from the simulation of \www~events
 in \fig\ref{fig:mww_higgs}.
 
 %It would be nice to show a plot of the Higgs stuff. maybe I can
@@ -1435,14 +1437,14 @@ in \fig\ref{fig:mww_higgs}.
 \centering
 \includegraphics[width=0.6\textwidth]{figures/2l2j/mWW-parton.pdf}
 \caption{ Invariant mass distribution of two opposite-sign $W$ bosons 
-in \www~events generated with VBFNLO at LO. The Higgs mass peak is clearly 
-visible at 126~GeV.}
+in \www~events at truth level. The Higgs mass peak is clearly 
+visible around 125~GeV.}
 \label{fig:mww_higgs}
 \end{figure}
 
 
 
-In principle, the LO partonic cross-section for the exclusive process, 
+In principle, the LO partonic cross-section for the exclusive processes, 
 $pp\rightarrow\- \Wp\Wp\Wm$ and $pp\rightarrow \Wp\Wm\Wm$, 
 can be computed by constructing the amplitude from the tree-level
 Feynman diagrams in \fig\ref{fig:theory_feynman_www}.  
@@ -1470,7 +1472,7 @@ NLO in QCD, after accounting for initial and
 final state radiation, parton showering, and other effects,
 using the \madgraph~generator. It finds an inclusive cross-section of 
 \begin{equation}
-\sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb}
+\sigma(pp\rightarrow WWW + X) = 241.47 \pm 0.13~\textrm{fb},
 \label{eq:www_total_xsec}
 \end{equation}
 where the uncertainty is purely statistical.
@@ -1519,7 +1521,7 @@ for background discrimination, though not as much as in the fully-leptonic
 channel. As a result, this channel has also been studied, though it 
 is not the focus of this thesis. The remaining channels have
 not been studied. The combination of the fully-leptonic
-and semi-leptonic channels is presented in \sec\ref{sec:measurement}.
+and semi-leptonic channels is presented in Chapter \ref{sec:combination}.
 
 
 
@@ -1547,7 +1549,7 @@ As a function of the energy, these terms start small
 but become increasingly important at higher and higher energies.
 In general, the new EFT terms might look like this:
 \begin{equation}
-\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_{n=5}^{\infty} \sum_i \frac{c_{n,i}}{\Lambda^{n-4}} \curlyo_{n,i}
+\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_{n=5}^{\infty} \sum_i \frac{c_{n,i}}{\Lambda^{n-4}} \curlyo_{n,i},
 \label{eq:lagrangian_eft_gen}
 \end{equation}
 where $\Lambda$ is some new energy scale relevant to the new
@@ -1574,16 +1576,17 @@ Enforcing the conservation
 of baryon and lepton number restricts 
 us to only even values of $n$:
 \begin{equation}
-\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_i \frac{c_{6,i}}{\Lambda^2} \curlyo_{6,i} + \sum_j \frac{c_{8,j}}{\Lambda^4} \curlyo_{8,j} + \dots
+\curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} + \sum_i \frac{c_{6,i}}{\Lambda^2} \curlyo_{6,i} + \sum_j \frac{c_{8,j}}{\Lambda^4} \curlyo_{8,j} + \dots ,
 \label{eq:lagrangian_eft}
 \end{equation}
 where we have truncated the series at $n=8$ since 
 these higher order terms are small.
-The leading $n=6$ terms predict new anomalous triple and quartic 
-gauge coupling (aTGC and aQGC) interactions while the sub-leading $n=8$ terms
+The leading $n=6$ terms predict new anomalous triple gauge coupling
+(aTGC) and anomalous quartic gauge coupling (aQGC)
+interactions, while the sub-leading $n=8$ terms
 predict only new aQGC interactions. 
 Predictions of aTGC interactions have been studied in detail at 
-LEP, the Tevatron, and the LHC  but none have been observed~\cite{PDG:2014}.
+LEP, the Tevatron, and the LHC,  though none have been observed~\cite{PDG:2014}.
 But there is still hope!
 It could be that new physics is suppressed in aTGC interactions
 but not in aQGC interactions\footnote{For instance, the aTGC interactions
@@ -1607,20 +1610,20 @@ in \eqn\eqref{eq:wfieldstrength} and \eqref{eq:bfieldstrength};
 or those containing only field strength tensors \cite{Eboli:2006wa,Eboli:2003nq}. 
 All of these operators preserve CP symmetry.
 In this thesis, we are
-interested only in the first category, which is limited to just two operators:
+interested only in the first category, which is limited to just two operators,
 \begin{align}
 \curlyo_{S,0} =& \Big[(D_{\mu}\phi)^{\dagger} D_{\nu} \phi\Big] \times \Big[(D^{\mu} \phi)^{\dagger} D^{\nu} \phi \Big] \\
-\curlyo_{S,1} =& \Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big]
+\curlyo_{S,1} =& \Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big],
 \end{align}
-that could come from integrating out some new 
+which could come from integrating out some new 
 vector gauge boson resonance coupling to the EW gauge bosons \cite{Baak:2013fwa}.
-Plugging these into \eqn\eqref{eq:lagrangian_eft} (and dropping all other terms
-besides the SM), we get
+Plugging these into \eqn\eqref{eq:lagrangian_eft} and dropping all other terms
+besides the SM, we get
 \begin{equation}
 \begin{aligned}
 \curlyl_{\textrm{EFT}} = \curlyl_{\textrm{SM}} +&
 \frac{f_{S,0}}{\Lambda^4}\Big[(D_{\mu}\phi)^{\dagger} D_{\nu} \phi\Big] \times \Big[(D^{\mu} \phi)^{\dagger} D^{\nu} \phi \Big] \\
-+& \frac{f_{S,1}}{\Lambda^4}\Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big]
++& \frac{f_{S,1}}{\Lambda^4}\Big[(D_{\mu}\phi)^{\dagger} D^{\mu} \phi\Big] \times \Big[(D_{\nu} \phi)^{\dagger} D^{\nu} \phi \Big],
 \end{aligned}
 \label{eq:lagrangian_aqgc}
 \end{equation}
@@ -1631,7 +1634,7 @@ For the charged interaction vertex this is
 \begin{equation}
 \begin{aligned}
 \alpha_4 &= \frac{f_{S,0}}{\Lambda^4} \frac{v^4}{8} \\
-\alpha_4 + 2~\alpha_5 &= \frac{f_{S,1}}{\Lambda^4} \frac{v^4}{8}
+\alpha_4 + 2~\alpha_5 &= \frac{f_{S,1}}{\Lambda^4} \frac{v^4}{8},
 \end{aligned}
 \label{eq:alpha45}
 \end{equation}
@@ -1642,7 +1645,7 @@ Expanding these new terms gives additional quartic interactions between
 the EW gauge bosons. If we just keep those with interactions between
 the charged EW gauge bosons we get the new interaction terms
 \begin{equation}
-\frac{1}{16} g^4 v^4 \Big(  \frac{f_{S,0}}{\Lambda^4}~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} + \frac{f_{S,1}}{\Lambda^4}~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu} \Big) 
+\frac{1}{16} g^4 v^4 \Big(  \frac{f_{S,0}}{\Lambda^4}~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} + \frac{f_{S,1}}{\Lambda^4}~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu} \Big) ,
 \end{equation}
 where $v = 246 \GeV$ is the Higgs vacuum expectation value \cite{PDG:2014}.
 These modify the couplings of 
@@ -1651,7 +1654,7 @@ and \fig\ref{fig:theory_feynman_couplings_qgc}
 to obtain the new charged interaction term
 \begin{equation}
 \begin{aligned}
-\frac{g^2}{2}\Bigg[&\Big(1 +  \frac{1}{8} g^2 v^4~ \frac{f_{S,0}}{\Lambda^4} \Big) ~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\&- \Big( 1 - \frac{1}{8} g^2 v^4~\frac{f_{S,1}}{\Lambda^4}\Big) ~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}\Bigg] 
+\frac{g^2}{2}\Bigg[&\Big(1 +  \frac{1}{8} g^2 v^4~ \frac{f_{S,0}}{\Lambda^4} \Big) ~W_{\mu}^+ W^{+\mu} W_{\nu}^- W^{-\nu} \\&- \Big( 1 - \frac{1}{8} g^2 v^4~\frac{f_{S,1}}{\Lambda^4}\Big) ~W_{\mu}^+ W^{-\mu} W_{\nu}^+W^{-\nu}\Bigg].
 \end{aligned}
 \end{equation}
 Such a modification enhances the predicted 
@@ -1661,7 +1664,7 @@ detail later in \sec\ref{sec:aqgc_signal}.
 
 In principle, the EFT is only valid below the energy scale, $\Lambda$, 
 though we cannot know this scale directly as we are only able to probe
-them as a ratio with the couplings, 
+them in the ratio with the couplings:
 $f_{S,0}/\Lambda^4$ and $f_{S,1}/\Lambda^4$.
 Above $\Lambda$ the EFT breaks down and can lead to unitarity violation.
 In particular, for the operators with dimension $n=8$, 
@@ -1701,7 +1704,7 @@ to the aQGC parameters
 according to the approach from \cite{Eboli:2003nq}.
 The form-factor, $f(s)$, looks like
 \begin{equation}
-f(s) = \frac{1}{\Big( 1 + \frac{s}{\Lambda_U^2} \Big)^{n}}
+f(s) = \frac{1}{\Big( 1 + \frac{s}{\Lambda_U^2} \Big)^{n}},
 \label{eq:form_factor}
 \end{equation}
 where $s$ is the center-of-mass energy squared, $n$ is an arbitrary
