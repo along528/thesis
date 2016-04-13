@@ -15,14 +15,16 @@ The optimization framework considers several thousand
 independent permutations of the different
 kinematic quantities, along with variations of the selection thresholds
 on these cuts, to form combinations of selection cuts which could become a final
-selection. For each combination, or operating point,
+selection. 
+Each combination is referred to as a separate operating point.
+For each operating point
 that is considered, the signal plus background
 model is evaluated to determine the expected yields and systematic
 uncertainties given that selection.  The LHC data is not used in the optimization.  
 The prediction is then plugged into the statistical framework described in
 \sec\ref{sec:measurement} to extract a value on the expected precision
 of the measurement. For each operating point,
-the value on the precision is plotted against the expected signal yield.
+the value of the precision is compared against the expected signal yield.
 With some discretion, we then choose the operating point 
 that maximizes the signal yield and gives the smallest absolute 
 precision on the measurement. 
@@ -42,7 +44,7 @@ precision on the measurement.
 
 The final selection is presented in \tab\ref{tab:signal_selection}.
 Details of the specific cut thresholds that are chosen can be understood
-by looking closer at some of the quantities used as input to 
+by looking more closely at some of the quantities used as input to 
 the optimization. For instance, it is observed that
 different \MET~and \z-veto thresholds are chosen for the 1 and 2 SFOS
 regions. This can be understood to come from a correlation between
@@ -53,7 +55,7 @@ in the $m_{\textrm{SFOS}}$ distribution and at low MET. This can be
 seen both for the 1 and 2 SFOS regions in \fig\ref{fig:met_zwindow_optimization}.
 As a result, the $Z\gamma$ background can be removed either by tuning 
 the \z-mass window used in the veto above, or by removing events with low \met.
-Thus, the optimization shows that there is some correlation 
+Thus, there is some correlation 
 between the \z-veto window and the \met~selection threshold. 
 In the 1 SFOS region, there is a larger 
 contribution from $Z\gamma$ processes than in the 2 SFOS
@@ -83,7 +85,7 @@ plus the \bee-veto requirement.}
 \end{figure}
 
 The absence of any cut on the \MET~distribution in the 0 SFOS
-region can be better understood by looking at the 
+region can be better understood by looking at 
 the efficiency for selection between 
 the signal and the background as a function of the \MET~selection threshold.
 This is shown in \fig\ref{fig:met_eff} both after pre-selection
@@ -220,7 +222,7 @@ threshold, $X$, in both the 0 SFOS (left) and pre-selection (right) regions.  }
 Finally, we considered other quantities like the 
 transverse mass of the \MET~and three lepton system:
 \begin{equation}
-m_{T}^{lll} = \sqrt{2p_{T}^{lll}\MET(1-\cos(\Delta\varphi(lll,\MET)))}
+m_{T}^{lll} = \sqrt{2p_{T}^{lll}\MET(1-\cos(\Delta\varphi(lll,\MET)))},
 \end{equation}
 as well as vetoes on additional leptons with lower \pt, and various
 di-lepton mass selections.  None of these, however, were preferred
