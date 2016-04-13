@@ -30,7 +30,7 @@
 processes that lead to electron charge mis-identification. In this case, 
 we start with an electron and end with two electrons and a positron. For
 electron charge mis-identification to occur, the positron would have to 
-be the only final state particle that is reconstructed.}
+be the only final state particle that is selected.}
 \label{fig:feyn_chargemisid}
 \end{figure}
 
@@ -45,7 +45,7 @@ Furthermore, it is also common %how common?
 for high energy photons to convert into electron-positron pairs.
 Chaining these two processes together will cause 
 an electron to radiate a photon which then produces an
-electron-positron pair, resulting in a three body final state with
+electron-positron pair. Thus, we end up with a three body final state with
 two electrons and a positron, such as in the Feynman diagram
 of \fig\ref{fig:feyn_chargemisid}.
 For muons, their larger mass suppresses these phenomena
@@ -88,7 +88,7 @@ processes enter this region\footnote{The $WZ$ and $ZZ$ processes
 can also enter in the 0 SFOS region if the $Z$ bosons
 decay to $\tau$ leptons which then subsequently decay into 
 either electrons or muons with the proper charge and flavor combination.
-See \sec\ref{sec:chargemisid_validation}}.
+For more, see \sec\ref{sec:chargemisid_validation}.}.
 Without electron charge mis-identification, these events would fall
 equally in the 1 and 2 SFOS regions.
 As will be seen shortly, the overall rate of electron charge mis-identification
@@ -138,12 +138,13 @@ In particular, the sensitivity to material dependence described above
 means that the rate depends on where in the detector the electrons
 pass through. In general, the material density of the ATLAS
 detector increases for high \eta~(i.e. as the electron gets closer to the
-beam pipe), as seen in \sec\ref{sec:atlas_id}. The rate also increases as a function of the electron energy, 
+beam pipe).  %, as seen in \sec\ref{sec:atlas_id}. 
+The rate also increases as a function of the electron energy, 
 or \pt. These are the two most important kinematic variables for determining
 the rate\footnote{The material also varies as a function of the azimuthal angle,
 $\phi$, in the detector. However, this is a sub-dominant effect. Furthermore,
 increasing the dimensionality further significantly harms the statistical 
-power of the method. Thus it is ignored.}, and 
+power of the method. Thus, it is ignored.}, and 
 so the rate extraction is binned as a function of both with nine $\eta$ 
 bins ranging from 0 to 2.5 and six \pt~bins ranging from 15 to 120 \GeV~plus
 an additional overflow bin for $\pt>120\GeV$.
@@ -169,18 +170,18 @@ are matched by asking that they are nearby each other in $\eta$ and $\phi$.
 The charge of the matched truth and reconstruction electrons 
 are then compared to see if 
 the charges agree
-and tallying  this 
+by tallying  this 
 for the appropriate $\pt$ and $\eta$ bin. Once all MC events
 have been recorded, the rate per bin may be determined simply 
 by taking the ratio of the number of electrons where the truth and reconstructed
-electron charge disagreed per bin to the total number of electrons per bin. 
+electron charge disagree per bin to the total number of electrons per bin. 
 
-The method using the data instead is the nominal method used 
+The method using the data instead is the nominal method 
 for extracting the electron charge mis-identification
 rates.
 It uses the same selection as in the MC method, with the events
 categorized based on whether the electrons from the \z~decay 
-are of the same-sign or of opposite-sign.
+are of the same-sign or of the opposite-sign.
 However, in this case
 there is no truth information to tell which electron's charge
 has been mis-identified. Instead, we assume that those events in
@@ -189,34 +190,35 @@ and attempt to extract the rates by minimizing a likelihood.
 Refer to the rate for an electron in a 
 particular $\pt$ and $\eta$ bin $i$ as $\varepsilon_i$.
 Also, refer to the total number of di-electron events observed in data with one electron
-in bin $i$ and the other in bin $j$ as $N_{i,j}$.
-Given the rates, the expected number of same-sign events
+in bin $i$ and the other in bin $j$ as $N_{i,j}$. The values $N_{i,j}$
+are corrected for backgrounds to the $Z\to ee$ process using MC.
+Given the rates and the number of di-electron events, 
+the expected number of same-sign events
 should be approximately $N_{i,j}(\varepsilon_i + \varepsilon_j)$,
-where we have ignored higher order terms, which account for  
+where we have ignored higher order terms that account for  
 the probability for both electrons to have their
-charges flipped, since they should be small. We do
+charges flipped since they should be small. We do
 not know the rates \emph{a priori}, but they should follow 
 a Poisson likelihood given the observed total number of events,
-$N_{i,j}$, and the the observed number of same sign events,
+$N_{i,j}$, and the observed number of same-sign events,
 $N_{i,j}^{\textrm{SS}}$, with the following form:
 \begin{equation}
 \curlyl( \varepsilon_i,\varepsilon_j | N_{i,j}^{\textrm{SS}},N_{i,j})
 =
-\frac{(N_{i,j}(\varepsilon_i+\varepsilon_j))^{N^{\textrm{SS}}_{i,j}} e^{-N_{i,j}(\varepsilon_i+\varepsilon_j)}}{N^{\textrm{SS}}_{i,j}!}
+\frac{(N_{i,j}(\varepsilon_i+\varepsilon_j))^{N^{\textrm{SS}}_{i,j}} e^{-N_{i,j}(\varepsilon_i+\varepsilon_j)}}{N^{\textrm{SS}}_{i,j}!}.
 \end{equation}
 From this, we may construct a log likelihood which can be minimized
 as a function of $\varepsilon_i$ and $\varepsilon_j$:
 \begin{equation}
 -\ln \curlyl( \varepsilon_i,\varepsilon_j | N_{i,j}^{\textrm{SS}},N_{i,j}) = 
 N_{i,j}(\varepsilon_i+\varepsilon_j)
-- N^{\textrm{SS}}_{i,j} \ln(N_{i,j}(\varepsilon_i+\varepsilon_j))
+- N^{\textrm{SS}}_{i,j} \ln(N_{i,j}(\varepsilon_i+\varepsilon_j)),
 \end{equation}
 where the terms that are not dependent on $\varepsilon_i$
 and $\varepsilon_j$ have been dropped.
 Thus, given the data, the values of $\varepsilon_i$ and $\varepsilon_j$
 at the minimum value of the log likelihood are taken as the estimate
 of the rates.
-Backgrounds to the $Z\rightarrow ee$ process are subtracted using MC.
 
 \begin{figure}[htp]
 \centering
@@ -237,7 +239,7 @@ The rate increases gradually along both dimensions, reaching as much as
 in the data, which corresponds to the highest bin in both dimensions. 
 Still, the average rate is only around 0.01 \% to 0.1 \%.
 The rates measured using MC truth information are systematically higher
-than those measured in data, almost by a factor of two, discussed later.
+than those measured in data, almost by a factor of two, which is discussed later.
 %figure 4.45 in jinst?
 %or maybe https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2013-05/
 %or https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2013-03/
@@ -273,10 +275,7 @@ Some variations on the method are also performed
 in order to better assess its performance 
 and to determine systematic uncertainties.
 One variation is to perform the same likelihood extraction
-as in the data, but using only reconstructed MC. This produces
-similar rates to the truth MC method, suggesting that the differences
-seen between the data likelihood method and the truth MC method
-are not due to the method itself. 
+as in the data, but using only reconstructed MC. 
 Another variation is to extract the rates from the data with the 
 likelihood method but without performing the background
 subtraction. 
@@ -305,12 +304,12 @@ high values. The rates with and without background
 subtraction are seen to agree quite well, only 
 differing by about 5-6\% throughout.  
 The red curve shows the rates evaluated using the same likelihood method
-applied to the data, but using only reconstructed MC. 
+applied to the data, but with reconstructed MC instead. 
 This variation on the likelihood method using just MC
 is seen to follow the MC truth method closely, except in a few bins where the statistics
 are low. The relative difference between the MC truth and MC likelihood methods
 is transported to the nominal estimate in data and used as another systematic.
-There is a factor of two difference in the rates evaluated using MC
+There is a factor of two difference between the rates evaluated using MC
 and those using data, with the difference persisting regardless of the methods used. 
 This suggests that the difference is coming from the MC itself, motivating the
 use of the data-driven rate evaluation in the first place. 
@@ -370,7 +369,7 @@ based on its reconstructed $\pt$ and $\eta$ values.
 The probability for a charge flip to occur in an event is then approximately 
 the sum of rates for the individual electrons:
 \begin{equation}
-p(\textrm{Charge Mis-Identification in Event}) \approx \sum_{i \in \textrm{Electrons}}  \textrm{Rate}(\pt^i,\eta^i) 
+p(\textrm{Charge Mis-Identification in Event}) \approx \sum_{i \in \textrm{Electrons}}  \textrm{Rate}(\pt^i,\eta^i) .
 \end{equation}
 Higher order terms where multiple electrons are charge mis-identified is negligible.
 We are only concerned with the probability that a charge flip results in the 
@@ -384,9 +383,9 @@ Consider a step function, $\Theta(e)$, defined for an individual event:
 \end{cases}
 \]
 Then the probability that a charge mis-identification occurs and results in 
-the event falling in the 0 SFOS region is:
+the event falling in the 0 SFOS region is
 \begin{equation}
-p(\textrm{Event is classified as 0 SFOS}) \approx \sum_{i \in \textrm{Electrons}}  \textrm{Rate}(\pt^i,\eta^i)\Theta(i) 
+p(\textrm{Event is classified as 0 SFOS}) \approx \sum_{i \in \textrm{Electrons}}  \textrm{Rate}(\pt^i,\eta^i)\Theta(i) .
 \end{equation}
 Again, we ignore the case where multiple electrons have their charge 
 mis-identified.  This probability is then used as an event-by-event weight. 
@@ -394,7 +393,7 @@ mis-identified.  This probability is then used as an event-by-event weight.
 
 Once the weight has been determined, we then artificially flip the charge of 
 one of the electrons/positrons in the event.
-If there is only one electron in the event that will lead the event 
+If there is only one electron in the event that will cause the event 
 to fall in the 0 SFOS region, its charge is flipped
 and one proceeds to the next event.  However, if there are multiple electrons 
 in the event, there is an ambiguity that must be resolved
@@ -411,14 +410,14 @@ p(\textrm{$e$ has been charge flipped}) = \textrm{Rate}(\pt^e,\eta^e)\Theta(e)~/
 
 Consider an example where the event under consideration comes from the 
 decay $WZ\rightarrow e^{+}\nu e^{+}e^{-}$. Assume all three charged leptons 
-pass reconstruction and are selected then label 
-them as: $e^{+}_1~e^{+}_2e^{-}_3$. In this case,
+are selected and then label 
+them as $e^{+}_1~e^{+}_2e^{-}_3$. In this case,
 the only way that this event could be classified as 0 SFOS when 
 flipping the charge of only one electron/positron is to flip the 
 charge of the electron.
 Thus, $\Theta(e^{+}_1)=\Theta(e^{+}_2)=0$ and $\Theta(e^{-}_3)=1$.  The event 
 weight will then be equal to the rate of charge mis-identification 
-for  $e^{-}_3$ and it will have it's charge flipped 
+for  $e^{-}_3$ and it will have its charge flipped 
 to be positive\footnote{This results in a final state
 which does not fall into our signal region, since the sum of the
 charge of the three electrons is +3. Thus, it is just for illustration purposes}.
@@ -428,7 +427,7 @@ the decay of $ZZ\rightarrow \mu^{+}\mu^{-}~ e^{+}e^{-}$.
 If all four leptons are reconstructed and selected, the event will not 
 be considered at all in the three lepton selection of this analysis, so 
 consider the case where the $\mu^{+}$ is not selected leaving three leptons 
-labeled as: $\mu^{-}_1 e^{+}_2 e^{-}_3$.  The probability for the muon to 
+labeled as $\mu^{-}_1 e^{+}_2 e^{-}_3$.  The probability for the muon to 
 charge flip is negligible which leaves the electron and the positron. Flipping 
 the charge of either one at a time will result in the event being 
 classified as 0 SFOS.  Thus, in
@@ -453,20 +452,6 @@ high $E_{T}$ as seen in \fig\ref{fig:ChargeMisID_truthRate_finalFig} and
 serves as justification for using the data-driven method.
 
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.495\textwidth]{figures/ChargeMisID/preselection_wz_br.png}
-\includegraphics[width=.495\textwidth]{figures/ChargeMisID/0sfos_wz_br.png}
-\caption{Plots of the different branching fractions of the $WZ$ process
-as a function of the leading lepton \pt~at pre-selection (left)
-and after also applying a requirement that events have 0 SFOS lepton
-pairs (right). The individual decays of $W$ and $Z$ are split up
-into whether they decay into taus ($\tau$) or into electrons and muons (denoted $l$).
-The taus also subsequently decay. The contributions from $WZ\to l\nu ll$ 
-and $WZ \to \tau \nu  ll$ after applying the 0 SFOS selection
-are due purely to charge mis-identification.}
-\label{fig:chargemisid_wz_br}
-\end{figure}
 
 The proportion of contributions to the $WZ$ background coming from 
 charge mis-identification in the 0 SFOS region is demonstrated in 
@@ -527,4 +512,18 @@ taken directly from MC in this case.
  \end{figure}
 
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.495\textwidth]{figures/ChargeMisID/preselection_wz_br.png}
+\includegraphics[width=.495\textwidth]{figures/ChargeMisID/0sfos_wz_br.png}
+\caption{Plots of the different branching fractions of the $WZ$ process
+as a function of the leading lepton \pt~at pre-selection (left)
+and after also applying a requirement that events have 0 SFOS lepton
+pairs (right). The individual decays of $W$ and $Z$ are split up
+into whether they decay into taus ($\tau$) or into electrons and muons (denoted $l$).
+The taus also subsequently decay. The contributions from $WZ\to l\nu ll$ 
+and $WZ \to \tau \nu  ll$ after applying the 0 SFOS selection
+are due purely to charge mis-identification.}
+\label{fig:chargemisid_wz_br}
+\end{figure}
 
