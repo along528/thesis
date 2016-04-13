@@ -12,26 +12,25 @@
 The Large Hadron Collider (LHC) \cite{lhc} is
 a 27 km circumference collider ring
 located at CERN approximately 100 m underground on the 
-of French-Swiss border near Geneva, Switzerland.
+French-Swiss border near Geneva, Switzerland.
 Its primary goal is to collide protons at energies on the TeV scale, 
 energies that are so large they can replicate conditions just moments
 after the big bang.
 The products of these collisions can 
 be observed
 by several independent but complementary detectors placed at different
-points around the ring in order to discover the mechanism
-for EWSB as well as possible new physics processes beyond the SM.
-Since the dynamics of the collisions are governed by quantum mechanical
-processes, the types of processes of interest cannot be
+points around the ring. 
+Since the dynamics of the collisions are governed by quantum effects, 
+the types of processes of interest cannot be
 produced on demand, but instead occur at random with some
 probability.
 The probabilities for these physics processes are 
 typically very small and are thus quite
-rare \footnote{ATLAS has been able to measure cross-sections as 
+rare\footnote{ATLAS has been able to measure cross-sections as 
 low as about 1 fb \cite{PhysRevLett.113.141803}, which is roughly
 14 orders of magnitude below the measured inclusive cross-section
 at the LHC \cite{Aad:2014dca}.}.
-Also, these physics processes do not live long
+Also, these physics processes do not last long
 enough to reach the detector and are instead observed indirectly through their
 decays. Since multiple physics processes can have the same decay 
 signature, it is not possible to say with certainty that a given 
@@ -101,7 +100,7 @@ Too much synchrotron radiation and the beam could lose more energy
 than is practical. 
 Electrons and positrons are fundamental particles and thus provide
 very clean collisions, but their small mass means that they suffer
-from high energy losses due to synchrotron radiation.. 
+from high energy losses due to synchrotron radiation.
 This decides the overall radius and size of the collider ring, since a smaller
 ring means tighter turns and thus more acceleration\footnote{In fact, 
 the LHC uses the same tunnel (which was the same size) as 
@@ -112,7 +111,7 @@ Protons and anti-protons, with their larger mass,
 are much less affected by synchrotron radiation
 and thus can be accelerated to higher energies for a fixed radius 
 circular collider. As a result, these are the particles used
-in modern high energy colliders, with protons-antiprotons collisions
+in modern high energy colliders, with proton-antiproton collisions
 at the Tevatron and Sp$\overline{\textrm{p}}$S, and proton-proton
 collisions at the LHC.
 
@@ -128,7 +127,7 @@ as recorded by ATLAS for several runs in 2010.}
 The luminosity, $L$,  can be thought of as the overall intensity of the beam.
 For a colliding beam it may be simply defined as
 \begin{equation}
-L=f \frac{N_b^2}{4\pi\sigma^2} R
+L=f \frac{N_b^2}{4\pi\sigma^2} R,
 \end{equation}
 where $f$ is the collision frequency (related to the bunch spacing and thus
 in the MHz radio-frequency range), 
@@ -136,7 +135,7 @@ $N_b$ is the number of particles in a bunch (usually 10-100 billion),
 $R$ is a  geometrical factor
 taking into account details like the crossing angle of the collision (on the
 order of unity),
-and $\sigma$ is the transverse size of the bunches\footnote{Not to be confused
+and $\sigma$ is the transverse size of the bunch\footnote{Not to be confused
 with the cross-section in particle physics.} (which 
 is usually on the order of tens of microns).
 Thus, modern colliders typically have luminosities on the order of 
@@ -147,7 +146,7 @@ using arrays of focusing magnets.
 The luminosity of the beam is not constant, but instead steadily decreases
 exponentially as a function of time, $t$:
 \begin{equation}
-L(t) = L_0 e^{-t/\tau_L} 
+L(t) = L_0 e^{-t/\tau_L} ,
 \label{eq:lhc_lumi}
 \end{equation}
 where $L_0$ is the initial luminosity and $\tau_L$ is the lifetime of the 
@@ -163,14 +162,14 @@ were performed (and also how much data was collected).  This can
 then be related to the cross-section for a given process, $\sigma$, to estimate
 how many events from that process, $N$, would have been produced on average:
 \begin{equation}
-N=\sigma \int L~ \textrm{d}t
+N=\sigma \int L~ \textrm{d}t .
 \label{eq:lhc_nevents}
 \end{equation}
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=.8\textwidth]{figures/lhc/pileup_vertexing.png}
-\caption{An event display 20 pileup interactions in a single bunch crossing. 
+\caption{An event display of 20 pileup interactions in a single bunch crossing. 
 The resulting tracks are shown, along with two high energy muons extrapolated back
 to a single primary vertex. The upper left shows a cross-section of the whole
 detector in the transverse plane, the upper right shows
@@ -226,7 +225,7 @@ bunch spacing (40 MHz).
 Protons are collected from hydrogen gas by first stripping away 
 the electron in an electric field\footnote{Anti-protons
 can be produced  from the products of 
-particles collisions with a fixed target and
+particle collisions with a fixed target and
 then trapping them using a process called stochastic cooling. This process
 is much slower than the process for collecting protons. While colliding both 
 protons and antiprotons increases the cross-section
@@ -281,7 +280,9 @@ for maintenance and upgrade work.  }
 delivered by the LHC is shown in green while the amount recorded by ATLAS
 is overlayed in yellow. More than 93 \% of the integrated luminosity 
 delivered by the LHC in 2012 was recorded by ATLAS.  
-(Right) The distribution of pileup interactions recorded by ATLAS in 2011 and 2012.  }
+(Right) The distribution of pileup interactions, parameterized
+as the mean number of interactions per crossing, $<\mu>$, 
+recorded by ATLAS in 2011 and 2012.  }
 \label{fig:lhc_lumi}
 \end{figure}
 
@@ -295,7 +296,7 @@ are shown in the the top and bottom of \fig\ref{fig:lhc_conditions}, respectivel
 This thesis focuses on the 8 TeV data collected in 2012.
 This run had 
 a bunch spacing of 50 ns, 1.6 to 1.7 $\times 10^{11}$ protons
-per bunch, a beam radius of $18.8 \mu$m, and an average peak 
+per bunch, a beam radius of $18.8~\mu$m, and an average peak 
 luminosity of $7.7 \times 10^{33}~\lumiunits$ \cite{Lamont:1709796}.
 The luminosity lifetime, $\tau_L$, corresponding to \eqn\eqref{eq:lhc_lumi},
 ranged from 7 hours to 14 hours during a single run \cite{Hostettler:2013qya}.
