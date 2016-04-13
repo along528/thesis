@@ -22,8 +22,14 @@ specifically:
 \end{itemize}
 For the isolated lepton triggers, the isolation requirement is evaluated 
 using the scalar sum of the \pt~of all tracks surrounding the lepton 
-(excluding the lepton track itself) in a cone of $\Delta R < 0.2$
-such the sum does not exceed 12\% (10\%) of the muon (electron)  \pt.
+(excluding the lepton track itself) in a cone whose radius, $\Delta R$,
+is defined as
+\begin{equation}
+\Delta R = \sqrt{\Delta \eta ^2 + \Delta \phi ^2},
+\label{eq:deltar}
+\end{equation}
+such that $\Delta R < 0.2$ 
+and the sum does not exceed 12\% (10\%) of the muon (electron)  \pt.
 
 
 \subsection{Simulation samples}

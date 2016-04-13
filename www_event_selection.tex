@@ -11,9 +11,9 @@ it removes enough background
 to reveal the signal. 
 Thus, we must devise a clever way to discriminate 
 between the signal and these backgrounds. We select
-events in two stages: first we start
+events in two stages: first, we start
 by selecting events which have the general signature of the signal, 
-this is referred to as the pre-selection stage; we then 
+this is referred to as the pre-selection stage; then, we
 use more stringent cuts to discriminate between the signal and backgrounds, 
 referred to as our signal region selection.
 The signal region selection is determined by performing an 
@@ -55,7 +55,7 @@ at least one of the three leptons selected must have caused the trigger to fire.
 The signal regions used in this analysis are separated based on the number of 
 Same-Flavor Opposite-Sign (SFOS) lepton pairs selected in the event.  That is to say,
 the number of lepton pair combinations in the event 
-which could feasibly come from the leptonic decay of a $Z$-boson.
+which could come from the leptonic decay of a $Z$-boson.
 This results in three separate signal regions listed 
 below with the lepton charge combinations
 that fall in each category:
@@ -69,7 +69,8 @@ $e^{\pm}e^{\mp}\mu^{\mp}$, $\mu^{\pm}\mu^{\mp}e^{\pm}$, $\mu^{\pm}\mu^{\mp}e^{\m
 Note that in the 2 SFOS region, one lepton is allowed to belong to both 
 pair combinations.
 Only charge combinations summing to $\pm 1$ are allowed based on charge
-conservation (neglecting charge mis-identification).  
+conservation (neglecting charge mis-identification, described in 
+\sec\ref{sec:charge_misid}).  
 The amount of the $W^{\pm}W^{\mp}W^{\pm}$ signal
 which falls into each category is purely combinatoric.  
 From the above list one can thus see that there are twice as many ways 
@@ -136,14 +137,14 @@ signal is expected to have very little hadronic
 activity. Any observed hadronic activity should come exclusively
 from the momentum recoil with the $WWW$ system.
 Thus, the multi-jet contribution to the signal
-should be small and is safe to apply a selection of $\njet \leq 1$
+should be small and it should be safe to apply a selection of $\njet \leq 1$
 in all signal regions.
 Further, the signal is 
 expected to have negligible contributions
 from heavy flavor jets. As a result, vetoing events with jets
-tagged to come from \bee-hadron decays also has
+tagged to come from \bee-hadron decays also have
 little effect on the signal expectation. This is true even with 
-the rate for heavy flavor jet mis-identification for the 
+a finite rate of heavy flavor jet mis-identification for the 
 \bee-tagging algorithms. For the 
 85\% \bee-tagging efficiency operating point described in 
 \sec\ref{sec:object_selection}, the heavy flavor
@@ -194,8 +195,8 @@ there is no requirement on \MET.
 
 %this description probably belongs in an earlier section
 The magnitude and direction
-of the \MET may be interpreted as coming from the 
-vector sum of the neutrinos.  By arguments of 
+of the \MET~may be interpreted as coming from the 
+vector sum of the neutrinos.  
 When comparing the azimuthal direction 
 of the missing $E_{T}$ to the azimuthal direction of the vector
 sum of the three charged leptons
@@ -222,16 +223,17 @@ $|\deltaphi| > 2.5$ everywhere.
 \label{sec:fiducial}
 
 Imposing the reconstruction level selection in \tab\ref{tab:signal_selection}
-implies a reduction in available the phase space with respect to the 
+implies a reduction in available phase space with respect to the 
+phase space
 used to compute the total cross-section in \eqn\eqref{eq:www_total_xsec}.
 This is made explicit by re-computing the cross-section in a reduced
-phase space defined at truth level and modeled after the reconstruction
+phase space defined at truth level that mimics the reconstruction
 level selection. This is referred to as the ``fiducial'' phase space
 and the resulting cross-section as the ``fiducial'' cross-section.
 
 
 
-\begin{table}[ht!]
+\begin{table}[tb]
 \centering
 \begin{small}
 \input{tables/fiducial_selection.tex}
@@ -246,20 +248,20 @@ The fiducial selections are determined at truth level
 using Rivet~\cite{Buckley:2010ar}, which allows for 
 comparisons between different generators.
 Only prompt leptons (those not originating from hadron decays) are used for 
-lepton selections, and these the momentum from nearby prompt photons 
-within a cone with $\Delta R = 0.1$ from the lepton are added
+lepton selections, where the momentum from nearby prompt photons 
+within a cone of $\Delta R = 0.1$ from the lepton are added
 back to the lepton momentum in order to remove the effects of final 
 state radiation. Generator-level jets are 
 reconstructed by running the anti-$k_T$ algorithm with radius 
 parameter $\Delta R = 0.4$ on all final-state particles 
-after the parton showering and hadronization with the exception of prompt 
+after parton showering and hadronization with the exception of prompt 
 leptons, prompt photons, and neutrinos. The \MET~variable is calculated 
 using all generator-level neutrinos. 
 As can be seen, the selection 
 in \tab\ref{tab:fiducial_selection} looks very similar to that in 
-\tab\ref{tab:signal_selection} except for the object definitions
-using truth information and that 
-events are removed if $\tau$ leptons are present from the $W$ decays.  
+\tab\ref{tab:signal_selection} except that the object definitions
+use truth information and that 
+events are removed if $\tau$ leptons from the $W$ decays are present.
 Thus, the fiducial selection
 does not include the branching fraction for $W\rightarrow\tau\nu$ decay 
 where the $\tau$ decays leptonically. This allows for a simple definition
