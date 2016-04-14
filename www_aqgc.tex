@@ -21,21 +21,31 @@ signal samples as a function of \fszero~vs \fsone
 were presented in \sec\ref{sec:aqgc_signal}.
 The fiducial cross-sections for these samples were determined using 
 the same selection as in \sec\ref{sec:fiducial} and are shown in 
-\fig\ref{fig:aqgc_fiducial_xsec_3l}.
+\fig\ref{fig:aqgc_fiducial_xsec_3l_ununit} for the non-unitarized case and 
+in \fig\ref{fig:aqgc_fiducial_xsec_3l_unit} for the unitarized cases.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=.4\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_ununitarized_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_3TeV_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_2TeV_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_1TeV_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_p5TeV_noratio.png}
-\caption{Fiducial cross-sections for unitarized and non-unitarized aQGC signal samples as a function of \fszero~vs \fsone.
-The non-unitarized samples (Top Left) are shown along with the unitarization with 
-four different unitarization scales, $\Lambda_U$: 3~\TeV~(Top Right),
-2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).
-The fiducial SM cross-section is shown at $\fszero=\fsone=0$ for comparison.}
-\label{fig:aqgc_fiducial_xsec_3l}
+\includegraphics[width=.8\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_ununitarized_noratio.png}
+\caption{Fiducial cross-sections for the non-unitarized aQGC signal samples as a function of \fszero~vs \fsone.
+The fiducial SM cross-section is shown at $\fszero=\fsone=0$ for comparison.
+Regions that are white have not been evaluated.
+}
+\label{fig:aqgc_fiducial_xsec_3l_ununit}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=.495\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_3TeV_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_2TeV_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_1TeV_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_p5TeV_noratio.png}
+\caption{Fiducial cross-sections for unitarized aQGC signal samples as a function of \fszero~vs \fsone.
+Four different unitarization scales, $\Lambda_U$, are shown: 3~\TeV~(Top Left),
+2~\TeV~(Top Right), 1~\TeV~(Bottom Left), and 0.5~\TeV~(Bottom Right).
+The fiducial SM cross-section is shown at $\fszero=\fsone=0$ for comparison.
+Regions that are white have not been evaluated.  }
+\label{fig:aqgc_fiducial_xsec_3l_unit}
 \end{figure}
 
 
@@ -93,22 +103,33 @@ non-unitarized and unitarized scenarios.}
 Once the correction factors and fiducial cross-sections have been determined,
 they can be used to make a prediction on the aQGC signal yield 
 for all points.  To allow for interpolation and extrapolation
-around the discrete aQGC points evaluated in MC, we also 
+around the discrete aQGC points evaluated in MC, we 
 fit the predictions using a two-dimensional second order polynomial of 
-the form:
+the form
 \begin{equation}
 N_{aQGC}\big(f_{s,0},f_{s,1}\big) = w_0 + w_1 f_{s,0}^2 + w_2 f_{s,1}^2
-+ w_3 f_{s,0} + w_4  f_{s,1} + w_5 f_{s,0} f_{s,1}
++ w_3 f_{s,0} + w_4  f_{s,1} + w_5 f_{s,0} f_{s,1},
+\label{eq:aqgc_fit_function}
 \end{equation}
 where $w_0$ through $w_5$ are the six function parameters in the fit.
-%The resulting signal yields and fit functions are shown in \fig\ref{}.
+The resulting signal yield fits are shown in each of the fully-leptonic signal 
+regions for the non-unitarized case in \fig\ref{fig:aqgc_fit_3l_ununit}
+and for the unitarized cases in \fig\ref{fig:aqgc_fit_0sfos_unit}.
+Fits of the unitarized cases are also performed in the 1 and 2 SFOS regions and give similar results. 
+
 
 
 \begin{figure}[tb]
 \centering
-\includegraphics[width=.7\textwidth]{figures/aqgc_fits/0SFOS/3lUnUnit_0SFOS.png}
-\caption{0 SFOS}
-\label{fig:aqgc_fit_0sfos_ununit}
+\includegraphics[width=.495\textwidth]{figures/aqgc_fits/0SFOS/3lUnUnit_0SFOS.png}
+\includegraphics[width=.495\textwidth]{figures/aqgc_fits/1SFOS/3lUnUnit_1SFOS.png}
+\includegraphics[width=.495\textwidth]{figures/aqgc_fits/2SFOS/3lUnUnit_2SFOS.png}
+\caption{Non-unitarized aQGC signal yield predictions in the 0 SFOS (Top Left), 
+1 SFOS (Top Right), and 2 SFOS (Bottom Middle) fully-leptonic signal regions
+as a function of \fszero~and \fsone~using the functional
+form in \eqn\eqref{eq:aqgc_fit_function}. The functional form is shown
+above the plot.}
+\label{fig:aqgc_fit_3l_ununit}
 \end{figure}
 
 \begin{figure}[tb]
@@ -117,42 +138,15 @@ where $w_0$ through $w_5$ are the six function parameters in the fit.
 \includegraphics[width=.495\textwidth]{figures/aqgc_fits/0SFOS/3l2000_0SFOS.png}
 \includegraphics[width=.495\textwidth]{figures/aqgc_fits/0SFOS/3l1000_0SFOS.png}
 \includegraphics[width=.495\textwidth]{figures/aqgc_fits/0SFOS/3l500_0SFOS.png}
-\caption{0 SFOS}
+\caption{Unitarized aQGC signal yield prediction in the 0 SFOS region
+as a function of \fszero~and \fsone~using the functional
+form in \eqn\eqref{eq:aqgc_fit_function}. 
+The predictions are shown with four different unitarization scales, $\Lambda_U$,
+at 3~\TeV~(Top Left),
+2~\TeV~(Top Right), 1~\TeV~(Bottom Left), and 0.5~\TeV~(Bottom Right).
+The functional form is shown
+above the plot.}
 \label{fig:aqgc_fit_0sfos_unit}
-\end{figure}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.7\textwidth]{figures/aqgc_fits/1SFOS/3lUnUnit_1SFOS.png}
-\caption{1 SFOS}
-\label{fig:aqgc_fit_1sfos_ununit}
-\end{figure}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/1SFOS/3l3000_1SFOS.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/1SFOS/3l2000_1SFOS.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/1SFOS/3l1000_1SFOS.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/1SFOS/3l500_1SFOS.png}
-\caption{1 SFOS}
-\label{fig:aqgc_fit_1sfos_unit}
-\end{figure}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.7\textwidth]{figures/aqgc_fits/2SFOS/3lUnUnit_2SFOS.png}
-\caption{2 SFOS}
-\label{fig:aqgc_fit_2sfos_ununit}
-\end{figure}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/2SFOS/3l3000_2SFOS.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/2SFOS/3l2000_2SFOS.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/2SFOS/3l1000_2SFOS.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/2SFOS/3l500_2SFOS.png}
-\caption{2 SFOS}
-\label{fig:aqgc_fit_2sfos_unit}
 \end{figure}
 
 \subsection{Confidence limits}

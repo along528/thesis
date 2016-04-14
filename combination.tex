@@ -50,7 +50,8 @@ are required to have the same sign.
 \begin{tabular}{|l||c||c||c|}   \hline 
  & \multicolumn{1}{c||}{$e^\pm e^\pm$} & \multicolumn{1}{c||}{$e^\pm \mu^\pm$}    & \multicolumn{1}{c|}{$\mu^\pm \mu^\pm$}  \\ \hline\hline
 Lepton & \multicolumn{3}{c|}{Exactly two same-electric-charge leptons with $p_T>30$ GeV} \\ \hline
-Jet        & \multicolumn{3}{c|}{At least two jets with leading (subleading) $p_T > 30 (20)$  GeV and $|\eta|<2.5$} \\ \hline
+Jet        & \multicolumn{3}{c|}{At least two jets with leading (subleading)} \\ 
+           & \multicolumn{3}{c|}{$p_T > 30 (20)$  GeV and $|\eta|<2.5$} \\ \hline
 $m_{\ell\ell}$        & \multicolumn{3}{c|}{$>40$ GeV}  \\ \hline
 \MET                      & \multicolumn{2}{c||}{~~~~~~~~~~~~~~~~~~~~~$>55$ GeV~~~~~~~~~~~~~~~~~~~~~~~~} & \multicolumn{1}{c|}{-}  \\  \hline
 $m_{jj}$        & \multicolumn{3}{c|}{$65<m_{jj}<105$ GeV}  \\ \hline
@@ -149,80 +150,55 @@ to the different estimation methods used. The systematics for the semi-leptonic
 channel are summarized in \tab\ref{tab:sys_2l2j}. The fiducial cross-sections
 and correction factors (like in \eqn\eqref{eq:cfactor}) are presented in \tab\ref{tab:inputs_2l2j}.
 
-%Semi-leptonic aQGC inputs...
 For the study of the aQGC parameters, the fiducial cross-sections
-are shown as a function of \fszero~vs \fsone~for the semi-leptonic channel in 
-\fig\ref{fig:2l2j_aqgc_fiducial_xsec}
-while the averaged correction factors and uncertainties are shown in 
-\tab\ref{tab:aqgc_cfactor_2l2j_summary}.
+and correction-factors are evaluated as a function of 
+\fszero~vs \fsone~in a similar way as was done for the fully-leptonic
+channel in \sec\ref{sec:aqgc_limit}.
+The predicted aQGC signal yields are again fit using the function in 
+\eqn\eqref{eq:aqgc_fit_function} separately for each of the channels in the semi-leptonic region.
+The fits for the three signal regions in the non-unitarized case are shown in 
+\fig\ref{fig:aqgc_fit_2l2j_ununit}. The fits in the $\mu\mu$ channel for the different
+unitarized cases in \fig\ref{fig:aqgc_fit_mumu_unit}. The predicted signal yields
+are similar for the $ee$ and $e\mu$ semi-leptonic signal regions. 
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_ununit_noratio.png}
-\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_3TeV_noratio.png}
-\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_2TeV_noratio.png}
-\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_1TeV_noratio.png}
-\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_p5TeV_noratio.png}
-\caption{Fiducial cross-sections for unitarized and non-unitarized semi-leptonic 
-aQGC signal samples as a function of \fszero~vs \fsone.
-The non-unitarized samples (Top Left) are shown along with the unitarization with 
-four different unitarization scales, $\Lambda_U$: 3~\TeV~(Top Right),
-2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).
-The total SM cross-section is shown at $\fszero=\fsone=0$ for comparison.}
-\label{fig:2l2j_aqgc_fiducial_xsec}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_ununit_noratio.png}
+%\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_3TeV_noratio.png}
+%\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_2TeV_noratio.png}
+%\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_1TeV_noratio.png}
+%\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_p5TeV_noratio.png}
+%\caption{Fiducial cross-sections for unitarized and non-unitarized semi-leptonic 
+%aQGC signal samples as a function of \fszero~vs \fsone.
+%The non-unitarized samples (Top Left) are shown along with the unitarization with 
+%four different unitarization scales, $\Lambda_U$: 3~\TeV~(Top Right),
+%2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).
+%The total SM cross-section is shown at $\fszero=\fsone=0$ for comparison.}
+%\label{fig:2l2j_aqgc_fiducial_xsec}
+%\end{figure}
 
-\begin{table}[htb]
-\centering
-\input{tables/aqgc_cfactor_2l2j.tex}
-\caption{Summary of correction factors in each channel of the semi-leptonic channel 
-averaged over all aQGC points as compared to the similar correction factors on the SM 
-points from \tab\ref{tab:inputs_2l2j}. The difference between the two cases
-is taken as a systematic uncertainty on the aQGC points and applied to both the 
-non-unitarized and unitarized scenarios.}
-\label{tab:aqgc_cfactor_2l2j_summary}
-\end{table}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.7\textwidth]{figures/aqgc_fits/ee/2l2jUnUnit_ee.png}
-\caption{ee}
-\label{fig:aqgc_fit_ee_ununit}
-\end{figure}
+%\begin{table}[htb]
+%\centering
+%\input{tables/aqgc_cfactor_2l2j.tex}
+%\caption{Summary of correction factors in each channel of the semi-leptonic channel 
+%averaged over all aQGC points as compared to the similar correction factors on the SM 
+%points from \tab\ref{tab:inputs_2l2j}. The difference between the two cases
+%is taken as a systematic uncertainty on the aQGC points and applied to both the 
+%non-unitarized and unitarized scenarios.}
+%\label{tab:aqgc_cfactor_2l2j_summary}
+%\end{table}
 
 \begin{figure}[tb]
 \centering
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/ee/2l2j3000_ee.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/ee/2l2j2000_ee.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/ee/2l2j1000_ee.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/ee/2l2j500_ee.png}
-\caption{ee}
-\label{fig:aqgc_fit_ee_unit}
-\end{figure}
-%More details can be found in \cite{wwwcomb} once published.
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.7\textwidth]{figures/aqgc_fits/emu/2l2jUnUnit_emu.png}
-\caption{emu}
-\label{fig:aqgc_fit_emu_ununit}
-\end{figure}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/emu/2l2j3000_emu.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/emu/2l2j2000_emu.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/emu/2l2j1000_emu.png}
-\includegraphics[width=.495\textwidth]{figures/aqgc_fits/emu/2l2j500_emu.png}
-\caption{emu}
-\label{fig:aqgc_fit_emu_unit}
-\end{figure}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[width=.7\textwidth]{figures/aqgc_fits/mumu/2l2jUnUnit_mumu.png}
-\caption{mumu}
-\label{fig:aqgc_fit_mumu_ununit}
+\includegraphics[width=.495\textwidth]{figures/aqgc_fits/ee/2l2jUnUnit_ee.png}
+\includegraphics[width=.495\textwidth]{figures/aqgc_fits/emu/2l2jUnUnit_emu.png}
+\includegraphics[width=.495\textwidth]{figures/aqgc_fits/mumu/2l2jUnUnit_mumu.png}
+\caption{Non-unitarized aQGC signal yield predictions in the $ee$ (Top Left), 
+$e\mu$ (Top Right), and $\mu\mu$ (Bottom Middle) semi-leptonic signal regions
+as a function of \fszero~and \fsone~using the functional
+form in \eqn\eqref{eq:aqgc_fit_function}. The functional form is shown
+above the plot.}
+\label{fig:aqgc_fit_2l2j_ununit}
 \end{figure}
 
 \begin{figure}[tb]
@@ -231,7 +207,15 @@ non-unitarized and unitarized scenarios.}
 \includegraphics[width=.495\textwidth]{figures/aqgc_fits/mumu/2l2j2000_mumu.png}
 \includegraphics[width=.495\textwidth]{figures/aqgc_fits/mumu/2l2j1000_mumu.png}
 \includegraphics[width=.495\textwidth]{figures/aqgc_fits/mumu/2l2j500_mumu.png}
-\caption{mumu}
+\caption{Unitarized aQGC signal yield prediction in the $\mu\mu$ semi-leptonic 
+signal region
+as a function of \fszero~and \fsone~using the functional
+form in \eqn\eqref{eq:aqgc_fit_function}. 
+The predictions are shown with four different unitarization scales, $\Lambda_U$,
+at 3~\TeV~(Top Left),
+2~\TeV~(Top Right), 1~\TeV~(Bottom Left), and 0.5~\TeV~(Bottom Right).
+The functional form is shown
+above the plot.}
 \label{fig:aqgc_fit_mumu_unit}
 \end{figure}
 
