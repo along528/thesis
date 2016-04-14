@@ -11,7 +11,7 @@
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=.9\textwidth]{figures/atlas/detector.jpg}
+\includegraphics[width=.95\textwidth]{figures/atlas/detector.jpg}
 \caption{A diagram of the ATLAS detector where the detector has
 been artificially opened up to reveal the LHC beam line and the
 various sub-detector components within. The sub-detector components
@@ -36,7 +36,7 @@ which builds up around the beam line and surrounds
 the collision point so that most of the collision
 products will pass through it.
 A diagram of the ATLAS detector can be seen in \fig\ref{fig:atlas}.
-Its clydrincal shape is clear with a diameter of 25 meters
+Its cylindrical shape is evident, with a diameter of 25 meters
 and length of 44 meters. The detector is massive, weighing
 in at roughly 7000 tonnes; but it is also highly granular, with
 over 100 million detection elements that are arranged very precisely, 
@@ -67,7 +67,7 @@ itself is divided up into components which fall into two main
 categories: the electromagnetic (ECAL)
 and hadronic calorimeter (HCAL) systems.
 The ECAL is situated in front of the HCAL and is designed
-primarily to absorb and mesasure the energy and position of
+primarily to absorb and measure the energy and position of
 electrons and photons. 
 The HCAL is designed to do the same for
 composite particles like protons and neutrons.
@@ -86,11 +86,11 @@ pass through without interacting.
 \centering
 \includegraphics[width=.9\textwidth]{figures/atlas/wedge.jpg}
 \caption{A diagram of one wedge of the ATLAS detector
-as viewed from looking down the beam line. 
+as viewed from looking down the LHC beam line. 
 The sub-detector components are shown along with the 
 particles that typically come from the collision.
 The paths of the particles are shown to indicate how each particle 
-interact with the detector.}
+interacts with the detector.}
 \label{fig:atlas_wedge}
 \end{figure}
 
@@ -104,15 +104,17 @@ is referred to as the transverse plane. In this plane, positions are
 defined using cylindrical coordinates with $r$ being the distance
 from the beam-line and $\phi$ being the azimuthal angle.
 The ATLAS detector has nearly uniform $2\pi$ 
-coverage in $\phi$\footnote{The ID and calorimeter systems are designed
-to have minimal cracks and roungly uniform coverage in $\phi$. The
+coverage in $\phi$\footnote{While the ID and calorimeter systems are designed
+to have minimal cracks in $\phi$, the
 spatial extent of the MS makes this challenging due to service
-and support structures, thus there are cracks in the $\phi$ coverage in the MS.}.
+and support structures. Thus, there are (somtimes large) 
+cracks in the $\phi$ coverage in the MS.}.
 For describing the direction of the particle with respect 
 to the $z$-axis, a quantity called the rapidity, $y$,
-can be related to the particle energy, $E$, and longitudinal momentum, $p_z$:
+can be related to the particle energy, $E$, and longitudinal momentum, $p_z$, 
+by
 \begin{equation}
-y = \frac{1}{2} \ln \Bigg(\frac{E+p_z}{E-p_z} \Bigg)
+y = \frac{1}{2} \ln \Bigg(\frac{E+p_z}{E-p_z} \Bigg),
 \end{equation}
 whose distribution is invariant under Lorentz boosts in the longitudinal direction.
 This is a useful characteristic as the longitudinal momentum of the
@@ -121,9 +123,10 @@ event-by-event basis, as discussed in \sec\ref{sec:pdf}.
 At the LHC, most stable particles 
 are produced with energies much larger than their mass.
 In this limit, 
-the rapidity can be simplified to a quantity called the pseudo-rapidity, $\eta$:
+the rapidity can be simplified to a quantity called the pseudo-rapidity, $\eta$,
+where
 \begin{equation}
-\eta = -\ln \tan (\theta/2) 
+\eta = -\ln \tan (\theta/2) ,
 \label{eq:pseudorapidity}
 \end{equation}
 which is only a function of the polar angle, $\theta$, 
@@ -137,11 +140,11 @@ in order to ensure good coverage.
 The transverse momentum of charged tracks can be determined by measuring how they 
 bend in a magnetic field. The deviation of the trajectory
 from a straight line path is referred to as the 
-sagitta, $s$.\footnote{Technically, the sagitta, $s$, is defined in terms
+sagitta\footnote{Technically, the sagitta, $s$, is defined in terms
 of an arc as the distance from the center of the arc to the center of its
-base. It can related to the radius of the arc, $r$, and the half the length
+base. It can be related to the radius of the arc, $r$, and half the length
 of the line connecting the two ends of the arc, $l$, by 
-$s=r-\sqrt{r^2-l^2}$.} The sagitta is proportional to the magnetic
+$s=r-\sqrt{r^2-l^2}$.}, $s$. The sagitta is proportional to the magnetic
 field strength and inversely proportional to the magnitude
 of the particle's momentum in the transverse plane, known
 as the transverse momentum or \pt.
@@ -151,20 +154,20 @@ a bent trajectory corresponds to a charged particle with a finite momentum.
 As a result, the transverse momentum resolution, $\Delta p_T$, is related to the 
 precision on the measurement of the sagitta, $\Delta s$ by
 \begin{equation}
-\frac{\Delta p_T }{p_T} = \frac{\Delta s}{s}
+\frac{\Delta p_T }{p_T} = \frac{\Delta s}{s} .
 \label{eq:sagitta}
 \end{equation}
-This also has the effect that the fractional uncertainty on the momentum
+This has the effect that the relative uncertainty on the momentum
 measurement grows linearly as a function of the momentum.
 
 
 The total momentum of the proton-proton collision in the transverse
 plane is nearly zero. Since the detector has nearly full azimuthal coverage 
 in the transverse plane, we can test this constraint by measuring
-the total trasverse momentum from the particles measured in the detector.
-Thus, we may refer to this constraint as
+the total transverse momentum from the particles measured in the detector
+such that
 \begin{equation}
-\Bigg| \sum_{i\in\textrm{All Particles}} \vec{p}_{\textrm{T},i} \Bigg| = 0
+\Bigg| \sum_{i\in\textrm{All Particles}} \overrightarrow{p_{\textrm{T},i}} \Bigg| = 0,
 \end{equation}
 where the transverse momentum is added vectorialy and then
 the magnitude is taken.
@@ -172,15 +175,23 @@ After adding up the $\pt$ of all of the particles to obtain
 the total transverse momentum, 
 any imbalance with respect to this constraint
 is referred to as the
-missing transverse energy, $\met$, and is attributed to the 
-neutrinos produced in the collision. 
+missing transverse energy
+and is attributed to the 
+neutrinos produced in the collision.
+Thus, it is a vector defined as
+\begin{equation}
+\vecmet = -\Bigg( \sum_{i\in\textrm{All Particles}} \overrightarrow{p_{\textrm{T},i}} \Bigg),
+\label{eq:met}
+\end{equation}
+though usually we are just 
+interested in its magnitude, $\met = |\vecmet|$.
 There is no such constraint on the longitudinal momentum of the partons
 on an event-by-event basis
 as discussed in \sec\ref{sec:pdf}.
 This is the case
-even though the momentum along the $z$-direction of the 
-protons from which the partons are taken is, in fact, known.
-Thus there is no direct way of determining with certainty the 
+even though the momentum of the protons along the $z$-direction
+is, in fact, known.
+Thus, there is no direct way of determining with certainty the 
 momentum of the neutrinos in the $z$-direction.
 
 
@@ -188,26 +199,26 @@ momentum of the neutrinos in the $z$-direction.
 \section{Inner Detector}
 \label{sec:atlas_id}
 
-\begin{figure}[ht!]
+\begin{figure}[htb]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/atlas/id_barrel.eps}
-\caption{Diagram of the ATLAS Inner Detector (ID) system showing 
+\includegraphics[width=0.8\textwidth]{figures/atlas/id_barrel.eps}
+\caption{Diagram of the ATLAS Inner Detector (ID) showing 
 a wedge of the barrel system.  The three detector systems
 are clearly labeled. The LHC beam pipe is axial to the system
 and is shown at the bottom of the diagram.}
 \label{fig:atlas_id_barrel}
 \end{figure}
 
-\begin{figure}[ht!]
+\begin{figure}[htb]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/atlas/id_endcap.eps}
-\caption{Diagram of the ATLAS Inner Detector (ID) system showing 
-a wedge of the endcap system as well as a part of the SCT and Pixel
+\includegraphics[width=0.95\textwidth]{figures/atlas/id_endcap.eps}
+\caption{Diagram of the ATLAS Inner Detector (ID) showing 
+a wedge of the end-cap system as well as a part of the SCT and Pixel
 barrel systems.  The detector systems
 are clearly labeled.  The LHC beam pipe is axial to the system
 but is not shown. Trajectories of two charged tracks 
-with a $\pt=10\GeV$ are shown along $\eta=1.4$ and $\eta=2.2$ are shown 
-by the solid bright red lines.}
+with a $\pt=10\GeV$ are shown along $\eta=1.4$ and $\eta=2.2$ as
+indicated by the solid bright red lines.}
 \label{fig:atlas_id_endcap}
 \end{figure}
 
@@ -216,19 +227,21 @@ detector system that is closest to the beam pipe and thus the
 first system that the products of the LHC collisions encounter
 on their way from the collision point. Its primary role is 
 to measure the trajectory and momentum of charged particles
-through ionization as they pass through the detector.
+via ionization as they pass through the detector.
 It must be capable of measuring these tracks with high precision
-in order to obtain precise momentum measurements and also to be able
-to accurately extrapolate the tracks back to the collision point
+in order to obtain precise momentum measurements. It must
+also be able
+to accurately extrapolate the tracks back to the collision point.
+This allows one 
 to obtain primary and secondary interaction vertices with adequate
 resolution for overcoming pileup 
-conditions (see \sec\ref{sec:lhc_collider_physcs}). In addition,
+conditions (see \sec\ref{sec:lhc_collider_physics}). In addition,
 since the system is so close to the LHC beam line, it
 must be able to handle high particle fluxes. This requires that
 the ID must have a very high granularity and fast electronics
 readouts such that the occupancy of the
-detector is small enough to distinguish individual tracks. In addition,
-the detector materials and electronics must be sufficiently radiation
+detector is small enough to distinguish between individual tracks. 
+The detector materials and electronics must also be sufficiently radiation
 hard that they can withstand years of LHC 
 exposure time\footnote{The layer of the pixel detector that is closest
 the beam line is subjected to so much radiation that it is expected to be replaced
@@ -236,13 +249,12 @@ every three years.  Meanwhile, the radiation exposure of the other ID
 components drops off rapidly (already by a factor of 6 for the third
 pixel layer and by over a factor of 200 for the outer TRT) and is 
 expected to survive for the planned lifetime of the detector.}.
-The inner-most barrel layer of the pixel detector 
 These tough requirements push the limits of available technology and thus
 make the ID the most sophisticated detector system in ATLAS.
 
 
 
-\begin{figure}[ht!]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/atlas/pixel.eps}
 \caption{A cut-out diagram of the ATLAS pixel detector showing 
@@ -254,54 +266,57 @@ also shown.}
 
 There are three different detector subsystems within the ID, together
 immersed in a uniform 2 Tesla axial magnetic field: the pixel detector,
-the silicon microstrip (SCT) detector, and the transition radiation
+the silicon microstrip tracker (SCT), and the transition radiation
 tracker (TRT). These three detector systems can be seen 
 in the barrel in \fig\ref{fig:atlas_id_barrel} and from an alternate
 view also showing one of the end-caps in \fig\ref{fig:atlas_id_endcap}. 
 The pixel detector
 is composed of more than seventeen hundred thin doped silicon sensors with 
-dimension $19\times 64~\textrm{mm}^2$. Each sensor has more than forty-six
+dimension $19~\textrm{mm} \times 64~\textrm{mm}$. Each sensor has more than forty-six
 thousand readout elements (with a 
-nominal size of $50 \times 400 \mu\textrm{m}^2$),
+nominal size of $50 ~\mu\textrm{m} \times 400~\mu\textrm{m}$),
 corresponding to the ``pixels'' which give the detector its name. 
 A charged particle passing through an individual pixel produces a signal
-which identifies the location of a charged particle. The combination of 
+which identifies its location. The combination of 
 several layers can thus be used to form the trajectory of the particle. %sagitta
 Each sensor is attached to a single readout electronic board, which comprises
 one module.
 The modules are arranged into three cylindrical barrel layers (at 
 $r = $ 51 mm, 89 mm, and 120 mm)  and 
-two end-caps each with three disk-shaped layers (at $z = $ 500 mm, 580 mm, 
+two end-caps each with three disk-shaped layers (at $|z| = $ 500 mm, 580 mm, 
 and 650 mm) such that there is uniform
 azimuthal coverage. A cut-out diagram of the pixel detector 
 structure with modules in place in both the barrel and end-caps is shown 
 in \fig\ref{fig:atlas_pixel}. The barrel covers roughly 
 $|\eta|<1.7$ and the two end-caps roughly $1.7<|\eta|<2.5$.
-Test beam measurements show that the 
-spatial resolution of the pixel detector is around $12~\mu\textrm{m}$ in 
-the $R-\phi$ plane and is slightly degraded orthogonal to this plane.
+The 
+spatial resolution of the pixel detector is around $10~\mu\textrm{m}$ in 
+the $R-\phi$ plane and $115 ~\mu\textrm{m}$ 
+orthogonal to this plane \cite{ATLAS-CONF-2014-047}.
 
 
 
 The SCT uses almost sixteen thousand thin silicon strip sensors, though not of the 
 same type as in the pixel detector. 
-A barrel silicon strip sensor has dimension $6.36\times 6.40~\textrm{cm}^2$
+A barrel silicon strip sensor 
+has dimension $6.36~\textrm{cm} \times 6.40~\textrm{cm}$
 with 768 readout strips running along the longer dimension. The barrel
 strips are placed in four concentric cylindrical layers, uniformly in azimuth
-(at $r = $300 mm, 370 mm, 440 mm, and 510 mm),
-the strips aligned axially with a strip pitch of 
+(at $r = $300 mm, 370 mm, 440 mm, and 510 mm).
+They are aligned axially with a strip pitch of 
 80 $\mu$m, and covering roughly
 $|\eta|<1.4$, as can be seen in \fig\ref{fig:atlas_id_barrel}.
 In each of the two end-caps the sensors are made to form nine
 disks spaced apart along the axial 
-direction (at $z = $0.85 m, 0.93 m, 1.1 m, 1.3 m, 1.4 m, 
+direction (at $|z| = $0.85 m, 0.93 m, 1.1 m, 1.3 m, 1.4 m, 
 1.8 m, 2.1 m, 2.5 m, and 2.7 m) covering roughly $1.4 < |\eta|<2.5$, 
 as seen in \fig\ref{fig:atlas_id_endcap}. The strips are similar
-to the barrel except that they are tapered along the strip direction.
+to those in the barrel except that they are tapered along the strip direction.
 The sensors are then oriented such that the taper expands radially outward
-with a strip pitch ranging from 60 $\mu$m to 90 $\mu$m as $z$ increases, 
-In a test beam, the spatial resolution is found to be about $16~\mu\textrm{m}$
-in the $R-\phi$ plane. Due to the length of the strips, the precision is considerably
+with a strip pitch ranging from 60 $\mu$m to 90 $\mu$m as $|z|$ increases.
+The spatial resolution is about $17~\mu\textrm{m}$
+in the $R-\phi$ plane \cite{ATLAS-CONF-2014-047}. 
+Due to the length of the strips, the precision is considerably
 worse in the axial direction for the barrel and the radial direction for 
 the end-caps, with a precision of roughly $580~\mu\textrm{m}$.
 
@@ -313,7 +328,7 @@ which are filled with a Xenon-based gas mixture
 and with an anode wire running through the center.
 The tubes can be placed in close
 proximity such that many measurements, around 36,
-can be made on a single charged track. Another important feature
+can be made on a single charged track. An important feature
 of the TRT is its ability to identify electrons using transition radiation.
 The tubes are surrounded in polypropylene material which  induce
 transition radiation from incident highly relativistic charged particles.
@@ -335,29 +350,15 @@ The inner wheel is formed from twelve layers and the outer wheel from eight
 layers of straws spaced 8 mm and 15 mm apart, respectively,  
 with 768 straws per layer, seen in \fig\ref{fig:atlas_id_endcap}.
 The end-caps cover roughly $0.7<|\eta|<2.2$.
-An individual straw has a precision of about $170~\mu\textrm{m}$ along
-its diameter.
+An individual straw has a precision of about $130~\mu\textrm{m}$ along
+its diameter \cite{ATLAS-CONF-2014-047}.
 
 
 
 
-efficiency of electron identification?
-
-
-large number of readouts?
-occupancy??
-noise??
-sagitta???
-explain how the b-field is used?
-eta coverage?
-materials?
-electronics?
-more figures?
-
-
-
+%efficiency of electron identification?  large number of readouts?  occupancy??  noise??  sagitta???  explain how the b-field is used?  eta coverage?  materials?  electronics?  more figures?  
 \section{Calorimeters }
-\begin{figure}[ht!]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/atlas/calorimeter.eps}
 \caption{Diagram of ATLAS calorimeter system with cut-out portion
@@ -368,9 +369,9 @@ to allow a view of the nested sub-components.}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.5\textwidth]{figures/atlas/emcal_accordion.png}
+\includegraphics[width=.7\textwidth]{figures/atlas/emcal_accordion.png}
 \caption{Photo of three ECAL sampling layers
-showing the ``accordion'' structure. In the picture, 
+showing its accordion-like structure. In the picture, 
 the horizontal directions corresponds to 
 the radial direction when the detector is in position, which is
 the direction the LHC products would follow.}
@@ -381,7 +382,8 @@ the direction the LHC products would follow.}
 \centering
 \includegraphics[width=.8\textwidth]{figures/atlas/emcal_barrel_module.eps}
 \caption{ A diagram of one ECAL barrel module 
-covering $22.5^{\circ}$ in azimuth.}
+covering $22.5^{\circ}$ in azimuth. When inside the detector,
+it is oriented as indicated by the axes.}
 \label{fig:atlas_emcal_module}
 \end{figure}
 
@@ -389,14 +391,14 @@ The ATLAS calorimeter is designed to measure the energy
 deposits of the products of the LHC collisions which pass through
 it except for the neutrinos.  A diagram of the 
 calorimeter system can be seen in \fig\ref{fig:atlas_calorimeter}.
-The calorimeter system is split into four main systems, 
+The calorimeter system is split into four main systems:
 the electromagnetic calorimeter (ECAL), the 
 tile hadronic calorimeter (HCAL), the hadronic 
 end-cap calorimeter (HEC), 
 and the Forward Calorimeter (FCAL).
 Each system is optimized to measure either electromagnetic
 or hadronic calorimeter deposits, though there is no
-way to make this exclusive; in general 
+way to make this exclusive; in general,
 electromagnetic and hadronic particles will interact with both.
 The amount of energy incident particles will lose due to electromagnetic
 interactions in a material can be quantified by measuring the material thickness
@@ -406,8 +408,9 @@ thickness in units of interaction length, $\lambda$.
 Those calorimeter systems optimized for measuring electromagnetic 
 energy deposits generally have high radiation length and low interaction
 length. They are then placed in front of the calorimeter systems
-optimized for measuring hadronic energy deposits whichs have high
-interaction lengths but usually also high radiation lengths. 
+optimized for measuring hadronic energy deposits which have high
+interaction lengths, though
+the radiation length is usually also large.
 %material plot
 
 
@@ -419,10 +422,10 @@ can be collected.  LAr is used as the active medium
 because of its radiation hardness and its linear response.
 %as evidenced in \fig\ref{fig:atlas_emcal_response}.
 The lead sampling medium alternates with the active LAr medium
-using lead plates 1-2~mm thick with an approximately 4~mm 
+using lead sheets 1 to 2~mm thick with an approximately 4~mm wide
 LAr gap between each sheet and electrodes placed in the middle of
 the gaps.
-The lead sheets are constructed using a unique ``accordion'' structure,
+The lead sheets are constructed using a unique ``accordion''-like structure,
 as seen in \fig\ref{fig:atlas_emcal_accordion}. 
 This is to provide a uniform resolution with no gaps
 in the azimuthal direction.
@@ -439,11 +442,16 @@ in a cylindrical shape.  A diagram of one such module
 can be seen in \fig\ref{fig:atlas_emcal_module}.
 From this one can see that each module is segmented in $\eta$
 and $\phi$, as well as into three layers in depth.
-The segmentation is applied to obtain pointing information, 
+Segmentation is applied to obtain pointing information, 
 which aids in the identification and measurement of electromagnetic
-objects in conjunction with measurements from the ID.
+objects in conjunction with measurements from the ID,
+and also shape information about the shower, which is useful
+for particle identification\footnote{For instance,
+the fine segmentation can be used to resolve the two
+separate showers separated by a small opening angle in 
+$\pi^0\to\gamma\gamma$ decay.}.
 The very fine segmentation in $\eta$ of the first layer
-in depth is important for precision tracking measurements.
+in depth is important for precision tracking and shape measurements.
 The second layer has a larger depth and thus collects most of the energy.
 There are two identical end-cap regions, one on each side of the 
 collision point. Each end-cap region consists of two wheels: the 
@@ -456,8 +464,8 @@ have three layers, with the first being a finely segmented precision
 layer similar to the barrel regions. Outside this region there 
 are only two layers with a coarser segmentation.
 The ECAL also consists of a pre-sampler detector with a single layer of LAr in 
-front of the full barrel ECAL and in front of the end-cap ECAL calorimeters
-from $1.5 < |\eta| < 1.8$; this aids in the measurement of the energy deposits
+front of the full barrel ECAL and in front of the end-cap ECAL 
+from $1.5 < |\eta| < 1.8$. This aids in the measurement of the energy deposits
 prior to reaching the ECAL and allows 
 for a better understanding of the energy deposited
 in the transition region between the barrel and end-caps.
@@ -483,7 +491,7 @@ It is split into a central barrel and two extended barrels
 which together cover a 
 region from $|\eta|< 1.7$, as can be seen in \fig\ref{fig:atlas_calorimeter}.
 As in the ECAL barrel, the tile HCAL is divided into individual modules
-that surround the collision point in azimuth; a diagram of one such
+that surround the collision point in azimuth. A diagram of one such
 module is shown in \fig\ref{fig:atlas_hcal_module}.
 The scintillating tiles alternate periodically with the self-supporting
 steel body and are oriented radially. 
@@ -495,7 +503,7 @@ In the crack region from $1.2 < |\eta| < 1.6$ between the central barrel
 and extended barrels, special modules are placed to recover and correct
 for energy losses in this region.
 
-\begin{figure}[ht] 
+\begin{figure}[tb] 
 \centering
 \includegraphics[width=.7\textwidth]{figures/atlas/hec.pdf}
 \caption{ A schematic showing one quadrant of the 
@@ -522,11 +530,11 @@ The maximum radial depth of the HEC is roughly $10~\lambda$.
 
 \begin{figure}[ht] 
 \centering
-\includegraphics[width=.7\textwidth]{figures/atlas/fcal.eps}
+\includegraphics[width=.95\textwidth]{figures/atlas/fcal.eps}
 \caption{ A schematic showing the end-cap of the ECAL,
 the two HEC modules, and the three FCAL modules, as well
 as additional shielding, in one
-quadrant of the ATLAS detector as viewed 
+quadrant of the ATLAS detector, as viewed 
 in the $R$-$z$ plane.
 The $R$-direction is shown with a larger scale than in the $Z$-direction.
 }
@@ -545,7 +553,7 @@ uniformly spaced holes drilled in the direction parallel to the beam-line.
 The holes are filled with rods serving as the primary sampling material, 
 with a thin LAr gap surrounding the rods serving as the active material.
 The first FCAL uses copper rods to optimize for electromagnetic deposits
-while the second and third FCAL modules, use tungsten rods
+while the second and third FCAL modules use tungsten rods
 to optimize for hadronic deposits.
 The first FCAL has a radiation length of $27.6~\xzero$ and an 
 interaction length of $2.66~\lambda$. Meanwhile, the interaction
@@ -553,7 +561,7 @@ length of the second and third modules is around $3.6~\lambda$.
 
 
 
-Shielding? Resolution and response?
+%Shielding? Resolution and response?
 
 
 
@@ -565,36 +573,36 @@ Shielding? Resolution and response?
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.8\textwidth]{figures/atlas/ms_rphi}
+\includegraphics[width=.95\textwidth]{figures/atlas/ms_rphi}
 \caption{A cross-section of the MS in the 
 transverse ($r-\phi$) plane viewed from one end of the detector. 
 The MDT chambers, RPCs, and
-barrel and endcap toroids of the MS system are clearly labeled.
+barrel and end-cap toroids of the MS system are clearly labeled.
 The barrel toroid coils extend in to and out of the page while only
-half of the endcap toroid is shown to reveal the ID and calorimeter
+half of the end-cap toroid is shown to reveal the ID and calorimeter
 systems.  The LHC beam pipe runs through the center.}
 \label{fig:atlas_ms_rphi}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.8\textwidth]{figures/atlas/ms_rz}
+\includegraphics[width=.95\textwidth]{figures/atlas/ms_rz}
 \caption{One quadrant of the MS as viewed in the $R-z$ plane. The
 MDT chambers, RPCs, TGCs, CSCs are clearly indicated, as are the 
-the endcap and barrel toroids. Support structues, shielding and the calorimeter
+the end-cap and barrel toroids. Support structures, shielding and the calorimeter
 and ID systems are also drawn. The LHC beam pipe runs from left to right
 along the bottom.}
 \label{fig:atlas_ms_rz}
 \end{figure}
 
 The Muon Spectrometer (MS) is the largest component of the ATLAS
-detector, being the component that determines its overall size. 
+detector and the component that determines its overall size. 
 %The size is determined by the field strength and lever arm...
 %maybe try to explain that... look in book that was taken...
 It is designed to measure and identify muons as they
 pass through the MS and leave the detector.
 It surrounds the beam pipe, as well as the ID and calorimeter systems,
-using a cylindrical geometry with a barrel and two endcaps. 
+using a cylindrical geometry with a barrel and two end-caps. 
 The MS is comprised of several different technologies:
 Muon Drift Tubes (MDT) and Cathode Strip Chambers (CSC) are used as
 precision tracking components for measurements of the muon 
@@ -605,18 +613,18 @@ and a toroidal magnet system is used for bending the muon trajectory
 in order to extract a momentum measurement.
 A diagram of the MS in the transverse plane is shown in 
 \fig\ref{fig:atlas_ms_rphi} where the MDT chambers and RPCs of the barrel
-are clearly shown along with the barrel and endcap toroids.
+are clearly shown along with the barrel and end-cap toroids.
 Another view of the MS in \fig\ref{fig:atlas_ms_rz} is displayed in
 one quadrant along the axial direction which
-shows the barrel and endcap toroids, along with 
-the MDT chambers in the barrel and endcap, the RPCs in the
-barrel, and the CSCs and TGCs in the endcap.
+shows the barrel and end-cap toroids, along with 
+the MDT chambers in the barrel and end-cap, the RPCs in the
+barrel, and the CSCs and TGCs in the end-cap.
 
 %The physics requirements are...
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.45\textwidth]{figures/atlas/magnet}
-\includegraphics[width=.45\textwidth]{figures/atlas/toroid_magnet_field}
+\includegraphics[width=.495\textwidth]{figures/atlas/magnet}
+\includegraphics[width=.495\textwidth]{figures/atlas/toroid_magnet_field}
 \caption{(Left) Diagram of MS toroid magnet geometry shown in red. The
 tile calorimeter is also shown.
 (Right) Predicted field strength of the MS magnet 
@@ -628,13 +636,13 @@ for $\phi=0$ in red  and $\phi=\pi/8$ in black.}
 
 The MS magnet system is composed of several large air-core toroids built
 from superconducting coils which produce a magnetic field of 
-roughly 0.5 Tesla in the barrel and 1 Tesla in the endcap. 
+roughly 0.5 Tesla in the barrel and 1 Tesla in the end-cap. 
 The geometry of the MS magnet system is shown 
 on the left of \fig\ref{fig:atlas_toroid_magnet}. In the barrel, 
 eight 25 m long toroidal 
-coils inside stainlees-steel vacuum enclosures are placed uniformly in 
-azimuth around the barrel. In the two endcaps, 
-each endcap toroid is composed of 
+coils inside stainless-steel vacuum enclosures are placed uniformly in 
+azimuth around the barrel. In the two end-caps, 
+each end-cap toroid is composed of 
 eight square coils (rotated with respect to the barrel toroids)
 separated by supporting wedges and then surrounded in a single 
 cryostat.
@@ -661,7 +669,7 @@ in this region.
 \includegraphics[width=.55\textwidth]{figures/atlas/ms_mdt_hits.png}
 %ms_mdt_hits taken from http://arxiv.org/pdf/0810.3184.pdf
 \caption{(Left) Cross-section of single MDT tube with muon track
-passing through. Ionized electrons collect on the anode wire
+passing through. Ionized electrons (black dots) collect on the anode wire
 due to the applied electric field. (Right) Muon track
 reconstructed from array of MDT tubes.}
 \label{fig:atlas_ms_mdt}
@@ -682,9 +690,9 @@ reconstructed from array of MDT tubes.}
 The precision tracking system has stringent requirements
 on the precision of the muon trajectory measurement, 
 which come from design goals on the resolution of the muon
-transverse momentum mesaurement to be 
+transverse momentum measurement to be 
 about 10\% at 1~\TeV.
-Given the magentic field strength in the MS, a muon 
+Given the magnetic field strength in the MS, a muon 
 with this momentum is expected to have a sagitta
 of about $500~\mu$m in the bending plane. 
 According to \eqn\eqref{eq:sagitta},
@@ -692,32 +700,32 @@ this then translates into a precision requirement of
 no more than $50~\mu$m on the sagitta.
 In order to achieve this, MDT chambers are used everywhere 
 in the MS from $|\eta|<2.7$ except in the inner layer of the 
-endcap from $2<|\eta|<2.7$
+end-cap from $2<|\eta|<2.7$
 where the rates are too high. Here, CSCs are used instead. 
 The MDT system is an arrangement of roughly 1000 MDT chambers composed
 of aluminum drift tubes roughly 30 mm in diameter and a couple meters in length 
 filled with a gas mixture
 (Ar/CO2) and a high voltage wire (~3000 V)
 running through the center. 
-It was chosen as the main precision muon tracking system
+It was chosen as the main muon tracking system
 because of its precision, simplicity, and reliability.
 When a muon passes through an MDT
 it ionizes the gas and electrons are collected at the wire.
 The drift-time for the electron signal to collect on the wire
 can be used to determine the radial distance away from the wire
-at which the muon passed such as on the left of \fig\ref{fig:atlas_ms_mdt}. 
+at which the muon passed, like on the left of \fig\ref{fig:atlas_ms_mdt}. 
 The cylindrical symmetry
 of the tube is useful as the resolution is roughly flat, at around
 $80~\mu$m in the bending plane, as a function
 of the angle of incidence of the muon hitting the tube. 
 It is not possible, however, to determine the direction
 of the muon in the bending plane from just one tube.  For that reason, 
-tubes are arranged together in multi-layers of 3-8 tubes such that 
+tubes are arranged together in multi-layers of 3 to 8 tubes such that 
 the trajectory
 can be reconstructed from matching the pattern of hits in multiple layers
 to form track segments,
 such as on the right of \fig\ref{fig:atlas_ms_mdt}.
-A chamber is built from 2 multilayers separated by a spacer ranging from
+A chamber is built from 2 multi-layers separated by a spacer ranging from
 6 mm to 300 mm wide depending on 
 the chamber, as in \fig\ref{fig:atlas_ms_mdt_chamber}.
 The precision per chamber is roughly $35~\mu$m.
@@ -725,11 +733,11 @@ The long length of the MDTs means that they cannot provide a  useful measurement
 in the non-bending plane.
 Chambers are arranged in three concentric shells in the barrel 
 at $r = $5 m, 7.5 m, and 10 m as in \fig\ref{fig:atlas_ms_rphi} 
-and in several rings in the endcap
+and in several rings in the end-cap
 at $|z| = $7.4 m, 10.8 m, 14 m, and 21.5 m as in \fig\ref{fig:atlas_ms_rz}.
 In each shell or ring
 the chambers are made to overlap in order to avoid gaps in azimuth.
-Tracks  are then reconstructed using by interpolating between the 
+Tracks are then reconstructed by interpolating between the 
 track segments of the individual chambers.
 Still, there are gaps, in particular around $|\eta|=0$ due to a hole for services
 and due to the feet holding up the detector, seen in \fig\ref{fig:atlas_ms_rphi}.
@@ -743,7 +751,7 @@ can be as high as 700 ns, which is far too slow for LHC bunch identification.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.7\textwidth]{figures/atlas/ms_csc_disk.eps}
-\caption{Diagram showing the arrangement of the CSCs in the endcap.}
+\caption{Diagram showing the arrangement of the CSCs in the end-cap.}
 \label{fig:atlas_ms_csc_disk}
 \end{figure}
 
@@ -751,11 +759,11 @@ can be as high as 700 ns, which is far too slow for LHC bunch identification.
 The CSC are used in the region of the MS closest to the interaction
 point where the crossing rate of tracks 
 is greater than $150$ Hz/cm$^2$, 
-too high for succesful operation of the MDT chambers.
+too high for successful operation of the MDT chambers.
 The CSCs can handle up to 1000 Hz/cm$^2$
 while maintaining adequate  precision in the bending plane.
-A CSC is a multiwire proportional chamber
-composed of planes of cathode strips sandwhiching 
+A CSC is a multi-wire proportional chamber
+composed of planes of cathode strips sandwiching 
 a row of parallel anode wires and filled with a non-circulating gas (Ar/CO2)
 in the gap.
 The two planes of cathode strips are separated by 5mm
@@ -768,27 +776,27 @@ A CSC is composed of four of these layers, each giving separate $\eta$ and
 $\phi$ measurements.
 The resolution in the bending plane is roughly 60 $\mu$m
 while the coarser segmentation in the non-bending plane 
-results in a  resoulution of  roughly 5 mm.
+results in a  resolution of  roughly 5 mm.
 Two rings are formed from the chambers such that the anode wires
-point radially such that there are no gaps in $\phi$, as
+point radially and there are no gaps in $\phi$, as
 can be seen in \fig\ref{fig:atlas_ms_csc_disk}. The rings are positioned
 at roughly $|z|=7.5$ m. The rectangular symmetry of the individual channels
 results in a degradation of the resolution based on the angle of incidence.
 This is resolved by titling the chambers slightly toward the interaction point.
-Of use in the high occupancy environment, 
-if multiple tracks are present in a CSC in a given event, 
-the signal pulse height can be used to match the tracks.
-The small separation between cathode strips results in a layer
-results in a short electron drift time allowing for a good
+The signal pulse height can be used to match the tracks
+if multiple tracks are present in a CSC in a given event. This 
+is useful in the high occupancy environment near the beam-line.
+The small separation between cathode strips results in 
+a short electron drift time allowing for a good
 timing resolution of about 7 ns per layer.
 
-optical alignment? Resolution?
-\begin{figure}[ht]
+%optical alignment? Resolution?
+\begin{figure}[tb]
 \centering
-\includegraphics[width=.7\textwidth]{figures/atlas/ms_trigger_layout.eps}
+\includegraphics[width=.95\textwidth]{figures/atlas/ms_trigger_layout.eps}
 \caption{Layout of the trigger components for one quadrant
-in the $r-z$ plane. RPC and TGC chambers are cleary labeled. Possible
-muon trajectories are seen for low and high \pt roads formed
+in the $r-z$ plane. RPC and TGC chambers are clearly labeled. Possible
+muon trajectories are seen for low and high \pt~roads formed
 by the trigger algorithm (see \sec\ref{sec:atlas_trigger}).}
 \label{fig:atlas_ms_trigger_layout}
 \end{figure}
@@ -800,10 +808,10 @@ $|\eta|<2.4$. This information
 is then used to trigger on high \pt~muons, as 
 described in \sec\ref{sec:atlas_trigger}.
 The individual bunch crossings of the LHC are designed to 
-be separated by only 25 ns, as described in \sec\ref{sec:lhc}.
+be separated by only 25 ns, as described in Chapter \ref{sec:lhc}.
 Thus, the system must be able to resolve individual tracks 
 with a time resolution of this size.
-%(what exactly is the design req?).
+%(what exactly is the design reqs?).
 To distinguish high \pt~muons from straight-track neutral particles 
 or from curved-track low-momentum charged particles, the 
 system must be able to measure the sagitta of the 
@@ -814,8 +822,8 @@ must be performed in both the bending and non-bending planes.
 The measurement in the non-bending plane is also used to complement
 the measurements of the bending plane from the MDT chambers.
 RPCs are used in the barrel region
-from $|\eta|<1.05$ and TGCs in the endcap from $1.05 < |\eta|<2.4$.
-The layout of the triggering system can be seen in the diagram
+from $|\eta|<1.05$ and TGCs in the end-cap from $1.05 < |\eta|<2.4$.
+The layout of the MC triggering system can be seen in the diagram
 in \fig\ref{fig:atlas_ms_trigger_layout}. 
 The RPCs are parallel electrode-plate detectors which use no wires.
 A single RPC layer consists of 
@@ -837,7 +845,7 @@ discrimination of low-\pt~muons with $6 < \pt < 9~\GeV$.
 %Space resolution...maybe put sqrt(12) formula? look up to be sure.
 
 
-The TGCs are multi-wire proporational chambers, similar to the CSCs.
+The TGCs are multi-wire proportional chambers, similar to the CSCs.
 In a single TGC layer, the cathodes are 
 separated by 2.8 mm and the wire-to-wire pitch
 is 1.8 mm.  A high voltage of 2900 V is applied to the anode wires
@@ -852,13 +860,13 @@ TGC chambers are built from either two or three layers.
 The TGC chambers are then arranged in rings such that they overlap
 in azimuth to eliminate gaps.
 The TGC rings are arranged as in 
-as in \fig\ref{fig:atlas_ms_trigger_layout}
-with a ring of two-layer TGCs placed in front of the endcap MDT inner
+\fig\ref{fig:atlas_ms_trigger_layout}
+with a ring of two-layer TGCs placed in front of the end-cap MDT inner
 layer at about $|z|=7$ m, 
-a ring of three-layer TGCs placed in front of the endcap MDT
+a ring of three-layer TGCs placed in front of the end-cap MDT
 middle layer at around $|z|=13 $m, and two rings of 
 two-layer TGCs placed just behind
-the endcap MDT middle layer at around $|z|=14$ m.
+the end-cap MDT middle layer at around $|z|=14$ m.
 %pt resolution and performance?
 
 
@@ -867,8 +875,8 @@ the endcap MDT middle layer at around $|z|=14$ m.
 \label{sec:atlas_trigger}
 
 The very small design bunch spacing 
-of 25 ns (40.08 MHz) at the LHC combined with the average raw digitized event size
-of around 1 Megabyte means that to record every collision
+of 25 ns (40.08 MHz) at the LHC, combined with the average raw digitized event size
+of around 1 Megabyte, means that to record every collision
 would require a bandwidth of around 40 Terabytes per second, far surpassing
 the capabilities of modern hard-disks. Thus, recording every collision
 is clearly untenable. Fortunately, the type of collisions of interest at the LHC 
@@ -876,10 +884,10 @@ is clearly untenable. Fortunately, the type of collisions of interest at the LHC
 that most collisions can be filtered out before recording. 
 This is accomplished by using a so-called ``triggering'' system, 
 that quickly analyzes coarse information about the collision
-and only records those collisions deemed of interest.
+and only records those collisions deemed to be of interest.
 The trigger is implemented in stages. The 40.08 MHz collisions are
 first passed to a custom electronics Level-1 (L1) trigger, designed
-to reduce the rate to below 75 kHz; it then is passed to the 
+to reduce the rate to below 75 kHz; it is then  passed to the 
 relatively simple software-based selection in the 
 Level-2 (L2) trigger, designed to reduce the rate
 to no more than 3.5 kHz; finally, it is passed to the third stage,
@@ -906,7 +914,8 @@ Meanwhile, information from the
 calorimeters is limited to coarse trigger ``towers'' mostly of dimension
 $0.1 \times 0.1$ in $\Delta\eta \times \Delta\phi$.
 Look-up-tables are used to quickly identify the transverse energy 
-and this is summed using several sliding window algorithms to identify 
+from the road.
+This is then summed using several sliding window algorithms to identify 
 high \pt~electrons and photons, hadronically decaying taus, jets, large \met,
 or large \et. 
 In both the L1 muon and calorimeter triggers, special care is taken
@@ -934,7 +943,7 @@ total event\footnote{There are some instances of the L2 trigger
 using the full event, but this is used sparingly.}. 
 The L2 trigger runs simplified reconstruction algorithms in the RoIs 
 on a computer processing farm. 
-A number of  (more detailed) conditions are tested
+A number of  more detailed conditions are tested
 to investigate 
 if an interesting physics object really is present in the RoI.
 If so, those conditions which returned a positive result are 
@@ -959,7 +968,7 @@ If any of the trigger menu items are satisfied they are finally written to disk.
 
 %plots of trigger menu?
 
-trigger performance?
+%trigger performance?
 
 
 
@@ -971,4 +980,4 @@ trigger performance?
 
 
 
-\section{LUCID?}
+%\section{LUCID?}

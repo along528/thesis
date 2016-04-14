@@ -8,27 +8,26 @@
 \newcommand{\thetab}{\boldsymbol{\theta}_b}
 
 In this analysis we seek to measure the 
-fiducial cross-section, $\sigma^{\textrm{Observed}}$, for the 
-WWW production process in the fully-leptonic channel (e,$\mu$).
+fiducial cross-section, $\sigma^{\textrm{Fiducial}}_{\textrm{Observed}}$, for the 
+WWW production process in the fully-leptonic channel.
 The observed cross-section is parameterized by looking at the signal
 strength, $\mu$, which is related to the expected fiducial cross-sections
-from section~\ref{sec:inputs} by the relation:
+from section~\ref{sec:inputs} by the relation
 \begin{equation}
-\sigma^{\textrm{Observed}} = \mu \sum_{i\in \textrm{Channels}} \sigma^{\textrm{Fiducial}}_i
+\sigma^{\textrm{Fiducial}}_{\textrm{Observed}} = \mu \sum_{i\in \textrm{Channels}} \sigma^{\textrm{Fiducial}}_{\textrm{Theory},i}~.
 \end{equation}
-
-Assuming a counting experiment in each bin $i$, the expected 
-event count is given by:
+Assuming a counting experiment in each bin, $i$, the expected 
+event count is given by
 % assuming a simple Poisson counting experiment with expectation for a given bin/channel, $i$:
 \begin{align}
 %N^{\mathrm{exp}}(\mu,\boldtheta) = N^{\mathrm{exp}}(\mu,\curlyl_0,\Delta_{\curlyl},\thetas,\thetab) = \mu \sum_i \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_i \cdot \varepsilon_i(\thetas) + \sum_{i}\sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab)
 N^{\mathrm{exp}}_i(\mu,\boldtheta) &= N^{\mathrm{exp}}_i(\mu,\curlyl_0,\Delta_{\curlyl},\thetas,\thetab) \\
- &= \mu \cdot \bigg( \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_i \cdot C_i(\thetas) \bigg) + \sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab)
+ &= \mu \cdot \bigg( \curlyl(\curlyl_0,\Delta_{\curlyl}) \cdot \sigma^{\mathrm{Fiducial}}_{\textrm{Theory},i} \cdot C_i(\thetas) \bigg) + \sum_{\mathrm{bkg}} N_{i}^{\mathrm{bkg}}(\thetab),
 \label{eq:poisson_expectation}
 \end{align}
 where $C_i$ is the correction factor 
 measured in each bin as discussed in section~\ref{sec:inputs} and 
-$\sigma^{\mathrm{Fiducial}}_i$ is the fiducial cross-section in each 
+$\sigma^{\mathrm{Fiducial}}_{\mathrm{Theory},i}$ is the fiducial cross-section in each 
 bin. The 
 individual background expectations in a given bin/channel, $i$, are 
 expressed simply by the number of events
@@ -40,7 +39,8 @@ uncertainties.
 The set of correction factor shape parameters are referred to 
 as $\thetas$; the set of normalization and shape parameters on 
 the background expectations are referred to as $\thetab$.
-The integrated luminosity, $\curlyl$, is assumed to follow 
+The integrated luminosity, $\curlyl$, is assumed to have an uncertainty
+that follows 
 a Gaussian distribution with nominal integrated 
 luminosity, $\curlyl_0$, and width, $\Delta_{\curlyl}$. 
 Collectively, we refer to all of these parameters, except 
@@ -56,20 +56,20 @@ which is a function of the data and the signal strength.
 
 \subsection{Profile Likelihood Ratio}
 
-The likelihood used is constructed as follows:
+The likelihood used is constructed as
 \begin{equation}
 L(\mu,\boldtheta) = \mathrm{Gaus}(\curlyl;\curlyl_0,\Delta_{\curlyl})~\prod_{i\in\mathrm{Chan}} \mathrm{Pois}(N_i^{obs}|N_i^{exp}(\mu,\boldtheta))~\prod_{j\in\mathrm{Sys}} \mathrm{Gaus}(\theta_j;\theta_j^0,1)
 \label{eq:poisson_likelihood}
 \end{equation}
-using the HistFactory tool developed within ATLAS \cite{Cranmer:1456844}. 
+using the HistFactory tool \cite{Cranmer:1456844}. 
 Note that the systematic uncertainties are given Gaussian 
 constraints with $\pm1\sigma$ uncertainties.
 
 The basic form of the 
 test statistic used for comparing hypotheses is called the profile likelihood 
-ratio, $\lambda(\mu)$, and is defined as:
+ratio, $\lambda(\mu)$, and is defined as
 \begin{equation}
--\ln \lambda(\mu) = - \ln \frac{L(\mu,\hat{\hat{\boldsymbol{\theta}}}(\mu))}{L(\hat{\mu},\hat{\boldsymbol{\theta}})}
+-\ln \lambda(\mu) = - \ln \frac{L(\mu,\hat{\hat{\boldsymbol{\theta}}}(\mu))}{L(\hat{\mu},\hat{\boldsymbol{\theta}})}.
 \label{eq:profile_likelihood_ratio}
 \end{equation}
 Note that it no longer depends on the nuisance parameters, $\boldsymbol{\theta}$,
@@ -80,9 +80,9 @@ evaluated at the ML estimators $\hat{\mu}$ and $\hat{\boldsymbol{\theta}}$.
 This quantity is a unique constant when specified for a given likelihood
 and set of nuisance parameters.
 The numerator is the conditional ML which depends on $\mu$ and
-evaluated at 
+is evaluated at 
 the conditional ML estimator for the set of nuisance parameters, 
-$\hat{\hat{\boldsymbol{\theta}}}$, which itself depends on $\mu$.
+$\hat{\hat{\boldsymbol{\theta}}}(\mu)$, which itself depends on $\mu$.
 The presence of the nuisance parameters are handled in the profiling 
 step when constructing the profile likelihood ratio,  which results 
 in a smearing of the profile likelihood ratio contour. 
@@ -120,50 +120,56 @@ q_{0} =
 \begin{cases}
 \hfill -2 \ln \lambda(0),\hfill & \hat{\mu} \geq 0 \\
 0,\hfill & \hat{\mu} < 0
-\end{cases}
+\end{cases}~.
 \label{eq:q0}
 \end{equation}
 The test statistic is set to $0$ when $\hat{\mu} < 0$ to enforce
 the notion that an observation which is less than the background
 expectation should not be treated as signal like. The $p$-value in this case
 tells us the degree of incompatibility with the background-only hypothesis
-and is defined as:
+and is defined as
 \begin{equation}
-p_0=\int^{\infty }_{q_{0,\textrm{obs}}} f(q_0|\mu=0) \Diff{q_0}
+p_0=\int^{\infty }_{q_{0,\textrm{obs}}} f(q_0|\mu=0) \Diff{q_0},
 \label{eq:pvalue}
 \end{equation}
 where $q_{0,\textrm{obs}}$ is the observed value of $q_0$ and 
 $f(q_0|\mu=0)$ is the probability density of the test statistic $q_0$ under
-the background-only hypothesis which is evaluated using toy MC. %explain?
+the background-only hypothesis, which is evaluated using MC. %explain?
 By examining the $p$-value one can say what the probability is 
 that the deviation away from the background-only hypothesis is due
 to chance. A small probability suggests that such a fluctuation is
-unlikely. Frequently one refers to the significance:
+unlikely. Frequently one refers to the significance,
 \begin{equation}
-Z = \Phi^{-1}(1-p_0)
+Z = \Phi^{-1}(1-p_0),
 \label{eq:significance}
 \end{equation}
 where $\Phi^{-1}$ is the inverse of the Gaussian cumulative distribution 
 function.
-In this way, one may refer to $Z\sigma$ significance of a measurement 
-where usually
-$3\sigma$ is considered to constitute 'evidence' and $5\sigma$ constitutes
+In this way, one may refer to the signicance of a measurement
+in units of the standard deviation, $\sigma$, as in a significance
+of $Z\sigma$.
+Usually
+a $3\sigma$ significance 
+is considered to constitute 'evidence' and a $5\sigma$ significance constitutes
 discovery.
 
 The distribution of $q_0$ is 
-shown in Fig.~\ref{fig:stat_measurement_significance} for the combination.  
+shown in \fig\ref{fig:stat_measurement_significance} for the comined
+three signal regions of the fully-leptonic
+channel.  
 The observed null p-value 
-is found to be 0.24 for the combination which corresponds to a significance
+is found to be 0.24 for the fully-leptonic channel combination 
+which corresponds to a significance
 of $0.70 \sigma$.  One may compare to this to an expected 
 p-value of 0.25 corresponding to 
 a significance of $0.66 \sigma$.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.50\columnwidth]{figures/statistics/significance/combination.png}
+\includegraphics[width=0.80\columnwidth]{figures/statistics/significance/combination.png}
 \caption{Probability distribution of the background-only hypothesis as a function of $q_0$ for 
-the combination of all three channels. The probabilitity distributions are determined 
-using toy MC. The solid black line represents the observed 
+the combination of all three channels. The probability distributions are determined 
+using MC. The solid black line represents the observed 
 value of $q_0$ seen in the data. The shaded area above
 this line represents the null p-value or the 
 integral of the background hypothesis in the signal-like region.
@@ -175,12 +181,15 @@ the background-only PDF.}
 \end{figure}
 
 
-\subsection{Measurement and Uncertainty using Profile Likelihood Interval}
+\subsection{Measurement and Uncertainty using the Profile Likelihood Interval}
 
 The measured value of the signal strength is determined by looking 
 at the minimum 
-of the negative log profile likelihood for each channel separately and also 
-for the combination of all channels. The size of the uncertainty on the 
+of the negative log profile likelihood from 
+\eqn\eqref{eq:profile_likelihood_ratio}
+for each fully-leptonic channel separately and also 
+for the combination of all fully-leptonic channels. 
+The size of the uncertainty on the 
 measurement is taken by looking at the shape of the negative log 
 profile likelihood contour which in general should follow a parabolic
 shape centered about the minimum in the asymptotic limit. In this limit,
@@ -208,7 +217,7 @@ The profile likelihood contour is evaluated once without
 systematic uncertainties included
 as nuisance parameters in order to estimate the size of the 
 measurement uncertainty purely 
-from statistical effects. It is then then evaluated a second time with the 
+from statistical effects. It is then evaluated a second time with the 
 systematic uncertainties included
 as nuisance parameters whose errors are constrained to be Gaussian and then 
 profiled out. The contour with systematic uncertainties included represents
@@ -219,16 +228,16 @@ uncertainties being added
 in quadrature.
 %The negative log likelihood contours as well as their uncertainties are shown for the individual channels in
 %Fig.~\ref{fig:stat_measurement_interval_channels} 
-The negative log likelihood contour is 
-for the combination of all three channels in 
-Fig.~\ref{fig:stat_measurement_interval_combination}.
-The expected value and uncertainties for the fiducial cross-section is:
+The negative log likelihood contour is shown
+for the combination of all three fully-leptonic channels in 
+\fig\ref{fig:stat_measurement_interval_combination}.
+The expected value and uncertainties for the fiducial cross-section is
 \begin{equation}
 \sigma^{\textrm{Expected}} = 309.2  ^{+434}_{-338} (\textrm{stat}) ^{+316}_{-342} (\textrm{sys}) \textrm{ab}
 \end{equation}
-and the observed fiducial cross-section is:
+and the observed fiducial cross-section is
 \begin{equation}
-\sigma^{\textrm{Observed:}} = 315.1  ^{+347}_{-334} (\textrm{stat}) ^{+326}_{-348} (\textrm{sys}) \textrm{ab}
+\sigma^{\textrm{Observed:}} = 315.1  ^{+347}_{-334} (\textrm{stat}) ^{+326}_{-348} (\textrm{sys}) \textrm{ab} ~.
 \end{equation}
 
 %\begin{figure}[ht!]
@@ -242,11 +251,11 @@ and the observed fiducial cross-section is:
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{figures/statistics/measurement/interval/combination.png}
+\includegraphics[width=0.8\textwidth]{figures/statistics/measurement/interval/combination.png}
 %\includegraphics[width=0.8\columnwidth]{figures/statistics/measurement/interval/combination.png}
 \caption{The profile likelihood contours evaluated as a function of 
 the signal strength
-for the combination of all three channels. 
+for the combination of all three fully-leptonic channels. 
 The observed (black) and expected (red) contours are shown when 
 considering only statistical uncertainty (dashed line) and when considering both statistical and systematic uncertainties (solid line).
 The dotted black
