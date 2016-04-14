@@ -150,22 +150,38 @@ channel are summarized in \tab\ref{tab:sys_2l2j}. The fiducial cross-sections
 and correction factors (like in \eqn\eqref{eq:cfactor}) are presented in \tab\ref{tab:inputs_2l2j}.
 
 %Semi-leptonic aQGC inputs...
+For the study of the aQGC parameters, the fiducial cross-sections
+are shown as a function of \fszero~vs \fsone~for the semi-leptonic channel in 
+\fig\ref{fig:2l2j_aqgc_fiducial_xsec}
+while the averaged correction factors and uncertainties are shown in 
+\tab\ref{tab:aqgc_cfactor_2l2j_summary}.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.4\textwidth]{figures/aQGC/2l2j_fiducial_ununit_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/2l2j_fiducial_3TeV_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/2l2j_fiducial_2TeV_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/2l2j_fiducial_1TeV_noratio.png}
-\includegraphics[width=.4\textwidth]{figures/aQGC/2l2j_fiducial_p5TeV_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_ununit_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_3TeV_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_2TeV_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_1TeV_noratio.png}
+\includegraphics[width=.495\textwidth]{figures/aQGC/2l2j_fiducial_p5TeV_noratio.png}
 \caption{Fiducial cross-sections for unitarized and non-unitarized semi-leptonic 
-aQGC signal samples as a function of $f_{s,0}$ vs $f_{s,1}$.
+aQGC signal samples as a function of \fszero~vs \fsone.
 The non-unitarized samples (Top Left) are shown along with the unitarization with 
-four different unitarization scales, $\Lambda$: 3~\TeV~(Top Right),
+four different unitarization scales, $\Lambda_U$: 3~\TeV~(Top Right),
 2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).
-The total SM cross-section is shown at $f_{s,0}=f_{s,1}=0$ for comparison.}
+The total SM cross-section is shown at $\fszero=\fsone=0$ for comparison.}
 \label{fig:2l2j_aqgc_fiducial_xsec}
 \end{figure}
+
+\begin{table}[htb]
+\centering
+\input{tables/aqgc_cfactor_2l2j.tex}
+\caption{Summary of correction factors in each channel of the semi-leptonic channel 
+averaged over all aQGC points as compared to the similar correction factors on the SM 
+points from \tab\ref{tab:inputs_2l2j}. The difference between the two cases
+is taken as a systematic uncertainty on the aQGC points and applied to both the 
+non-unitarized and unitarized scenarios.}
+\label{tab:aqgc_cfactor_2l2j_summary}
+\end{table}
 
 %More details can be found in \cite{wwwcomb} once published.
 
@@ -330,8 +346,8 @@ are shown in \tab\ref{tab:aqgc_combined_1d_alpha45}.
 \includegraphics[width=0.495\textwidth]{figures/combination/Comb300-Lim.png}\\
 \includegraphics[width=0.495\textwidth]{figures/combination/CombUnit-Lim.png}
 \end{center}
-\caption{Two-dimensional limits at 95\% CL on the combination of the fully-leptonic and semi-leptonic channels for the non-unitarized case (Top Left)
-and three different choices of the unitarization scale, $\Lambda$:
+\caption{Two-dimensional limits at 95\% CL as a function of \fszero~vs \fsone~on the combination of the fully-leptonic and semi-leptonic channels for the non-unitarized case (Top Left)
+and three different choices of the unitarization scale, $\Lambda_U$:
 3~\TeV~(Top Right), 2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).}
 
  \label{fig:aqgc_combined_2d}

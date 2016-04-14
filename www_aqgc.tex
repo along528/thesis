@@ -32,7 +32,7 @@ the same selection as in \sec\ref{sec:fiducial} and are shown in
 \includegraphics[width=.4\textwidth]{figures/aQGC/fiducial_xsec/www_3l_aqgc_fiducial_p5TeV_noratio.png}
 \caption{Fiducial cross-sections for unitarized and non-unitarized aQGC signal samples as a function of \fszero~vs \fsone.
 The non-unitarized samples (Top Left) are shown along with the unitarization with 
-four different unitarization scales, $\Lambda$: 3~\TeV~(Top Right),
+four different unitarization scales, $\Lambda_U$: 3~\TeV~(Top Right),
 2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).
 The fiducial SM cross-section is shown at $\fszero=\fsone=0$ for comparison.}
 \label{fig:aqgc_fiducial_xsec_3l}
@@ -66,9 +66,11 @@ correction factor for the non-unitarized averaged over the parameter space for
 both the non-unitarized and unitarized samples.  A systematic uncertainty  
 is used which is the difference between this averaged non-unitarized
 aQGC correction factor and the SM correction factor. This should cover all possible differences
-in the un-unitarized and unitarized correction factors.
+in the un-unitarized and unitarized correction factors. 
+The averaged correction factors
+and uncertainties are shown in \tab\ref{tab:aqgc_cfactor_3l_summary}.
 
-\begin{figure}[ht!]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.8\textwidth]{figures/aQGC/cfactor_chargesum.png}
 \caption{Correction factor for non-unitarized aQGC signal samples as a function of \fszero~vs \fsone.
@@ -76,6 +78,17 @@ The SM correction factor is shown at $\fszero=\fsone=0$ for comparison.}
 \label{fig:aqgc_cfactor_3l}
 \end{figure}
 
+
+\begin{table}[htb]
+\centering
+\input{tables/aqgc_cfactor_3l.tex}
+\caption{Summary of correction factors in each channel of the fully-leptonic channel 
+averaged over all aQGC points as compared to the similar correction factors on the SM 
+points from \tab\ref{tab:inputs_3l}. The difference between the two cases
+is taken as a systematic uncertainty on the aQGC points and applied to both the 
+non-unitarized and unitarized scenarios.}
+\label{tab:aqgc_cfactor_3l_summary}
+\end{table}
 
 Once the correction factors and fiducial cross-sections have been determined,
 they can be used to make a prediction on the aQGC signal yield 
@@ -115,7 +128,7 @@ while the two-dimensional limits are presented in
    \begin{center}
    \input{tables/aqgc_1d_3l.tex}
      \caption{Expected and observed one-dimensional limits on \fszero~and \fsone.
-     The non-unitarized case is when $\Lambda=\infty$.}
+     The non-unitarized case is when $\Lambda_U=\infty$.}
      \label{tab:WWW1D}
 
    \end{center}
@@ -125,13 +138,14 @@ while the two-dimensional limits are presented in
   % For now, limits shown here are not calculated with up to date signal/background yields and uncertainties, they will be updated in the future and for observed limits, the observed event number is a sum of MC yields, so they are very close to the expected limits, this issue will be modified too.
 \begin{figure}[htp]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/aQGC/lll-Un-Unit.png}
-\includegraphics[width=0.4\textwidth]{figures/aQGC/lll-3000.png}
-\includegraphics[width=0.4\textwidth]{figures/aQGC/lll-2000.png}
-\includegraphics[width=0.4\textwidth]{figures/aQGC/lll-1000.png}
-\includegraphics[width=0.4\textwidth]{figures/aQGC/lll-500.png}
-\caption{Two-dimensional limits at 95\% CL for the non-unitarized case (Top Left)
-and three different choices of the unitarization scale, $\Lambda$:
+\includegraphics[width=0.495\textwidth]{figures/aQGC/lll-Un-Unit.png}
+\includegraphics[width=0.495\textwidth]{figures/aQGC/lll-3000.png}
+\includegraphics[width=0.495\textwidth]{figures/aQGC/lll-2000.png}
+\includegraphics[width=0.495\textwidth]{figures/aQGC/lll-1000.png}
+\includegraphics[width=0.495\textwidth]{figures/aQGC/lll-500.png}
+\caption{Two-dimensional limits as a function of \fszero~vs \fsone 
+at 95\% CL for the non-unitarized case (Top Left)
+and three different choices of the unitarization scale, $\Lambda_U$:
 3~\TeV~(Top Right), 2~\TeV~(Middle Left), 1~\TeV~(Middle Right), and 0.5~\TeV~(Bottom Center).}
 \label{fig:WWW2D}
 \end{figure}  
